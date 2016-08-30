@@ -10,6 +10,9 @@
 #include "BattleField.hpp"
 #include "ChapterRecord.hpp"
 #include "AnimationLibrary.hpp"
+#include "Constants.hpp"
+#include "DataStore.hpp"
+#include "MoneyItemDefinition.hpp"
 
 USING_NS_CC;
 
@@ -19,6 +22,13 @@ BattleScene::BattleScene(ChapterRecord* record)
     AnimationLibrary::getInstance()->loadBattleAnimationsForCreature(1);
     AnimationLibrary::getInstance()->loadBattleAnimationsForCreature(2);
     
+    DataStore::getInstance()->loadData();
+    CreatureDefinition * def = DataStore::getInstance()->getCreatureDefinition(3);
+    CreatureDefinition * def2 = DataStore::getInstance()->getCreatureDefinition(50508);
+    
+    MoneyItemDefinition * item = (MoneyItemDefinition *)DataStore::getInstance()->getItemDefinition(901);
+    
+    log("Definition of 50508: Ani=%d EX=%d", def2->animationId, def2->initialEX);
     
     _activityQueue = new ActivityQueue();
     
@@ -32,7 +42,7 @@ BattleScene::BattleScene(ChapterRecord* record)
     
     
     _synchronizedTickCount = 0;
-    schedule(CC_SCHEDULE_SELECTOR(BattleScene::takeDeltaTimeTck), 0.02f);
+    schedule(CC_SCHEDULE_SELECTOR(BattleScene::takeDeltaTimeTck), 1.0 / Constants::GAME_FPS);
     
 }
 

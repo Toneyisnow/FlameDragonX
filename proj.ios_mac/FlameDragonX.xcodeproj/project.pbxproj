@@ -19,6 +19,10 @@
 		3C1883581D6BA5840059056E /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C1883571D6BA5840059056E /* OpenGLES.framework */; };
 		3C18835F1D6BABA10059056E /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C18835E1D6BABA10059056E /* libz.1.2.5.dylib */; };
 		3C1883611D6BAC130059056E /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C1883601D6BAC130059056E /* CoreMotion.framework */; };
+		3CA318261D760AD00042B56A /* CreatureData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CA318241D760AD00042B56A /* CreatureData.cpp */; };
+		3CA318291D760C6D0042B56A /* AICreatureData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CA318271D760C6D0042B56A /* AICreatureData.cpp */; };
+		3CA3182C1D760E260042B56A /* DefendItemDefinition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CA3182A1D760E260042B56A /* DefendItemDefinition.cpp */; };
+		3CA3182F1D7613630042B56A /* FDRange.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CA3182D1D7613630042B56A /* FDRange.cpp */; };
 		3CB109651D6D0D06002C4121 /* TouchHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CB109631D6D0D06002C4121 /* TouchHandler.cpp */; };
 		3CB109691D6E0BD1002C4121 /* Ground.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CB109671D6E0BD1002C4121 /* Ground.cpp */; };
 		3CB1096B1D6E5E66002C4121 /* Icons in Resources */ = {isa = PBXBuildFile; fileRef = 3CB1096A1D6E5E66002C4121 /* Icons */; };
@@ -33,6 +37,16 @@
 		3CB109891D74CCAB002C4121 /* FDActivity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CB109871D74CCAB002C4121 /* FDActivity.cpp */; };
 		3CB1098C1D74CE92002C4121 /* CreatureMoveActivity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CB1098A1D74CE92002C4121 /* CreatureMoveActivity.cpp */; };
 		3CB1098F1D74D0CE002C4121 /* ActivityQueue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CB1098D1D74D0CE002C4121 /* ActivityQueue.cpp */; };
+		3CB109931D74ECB1002C4121 /* Constants.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CB109911D74ECB1002C4121 /* Constants.cpp */; };
+		3CB109971D74F33C002C4121 /* MagicDefinition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CB109951D74F33C002C4121 /* MagicDefinition.cpp */; };
+		3CB1099B1D74F3E2002C4121 /* ItemDefinition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CB109991D74F3E2002C4121 /* ItemDefinition.cpp */; };
+		3CB1099E1D74F3FE002C4121 /* UsableItemDefinition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CB1099C1D74F3FE002C4121 /* UsableItemDefinition.cpp */; };
+		3CB109A11D74F41E002C4121 /* AttackItemDefinition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CB1099F1D74F41E002C4121 /* AttackItemDefinition.cpp */; };
+		3CB109A41D74F440002C4121 /* SpecialItemDefinition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CB109A21D74F440002C4121 /* SpecialItemDefinition.cpp */; };
+		3CB109A71D74F46C002C4121 /* MoneyItemDefinition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CB109A51D74F46C002C4121 /* MoneyItemDefinition.cpp */; };
+		3CB109AA1D74F816002C4121 /* CreatureChapterRecord.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CB109A81D74F816002C4121 /* CreatureChapterRecord.cpp */; };
+		3CB109AD1D74FC5E002C4121 /* DataStore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CB109AB1D74FC5E002C4121 /* DataStore.cpp */; };
+		3CB109B01D74FF92002C4121 /* FDNumber.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CB109AE1D74FF92002C4121 /* FDNumber.cpp */; };
 		3CD12EF71D6BB11600CDF793 /* Title_Continue_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CD12EF01D6BB11600CDF793 /* Title_Continue_0.png */; };
 		3CD12EF81D6BB11600CDF793 /* Title_Continue_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CD12EF11D6BB11600CDF793 /* Title_Continue_1.png */; };
 		3CD12EF91D6BB11600CDF793 /* Title_Load_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CD12EF21D6BB11600CDF793 /* Title_Load_0.png */; };
@@ -156,6 +170,14 @@
 		3C1883571D6BA5840059056E /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/OpenGLES.framework; sourceTree = DEVELOPER_DIR; };
 		3C18835E1D6BABA10059056E /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = ../../../../../usr/lib/libz.1.2.5.dylib; sourceTree = "<group>"; };
 		3C1883601D6BAC130059056E /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/CoreMotion.framework; sourceTree = DEVELOPER_DIR; };
+		3CA318241D760AD00042B56A /* CreatureData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CreatureData.cpp; path = Objects/CreatureData.cpp; sourceTree = "<group>"; };
+		3CA318251D760AD00042B56A /* CreatureData.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CreatureData.hpp; path = Objects/CreatureData.hpp; sourceTree = "<group>"; };
+		3CA318271D760C6D0042B56A /* AICreatureData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AICreatureData.cpp; path = Objects/AICreatureData.cpp; sourceTree = "<group>"; };
+		3CA318281D760C6D0042B56A /* AICreatureData.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = AICreatureData.hpp; path = Objects/AICreatureData.hpp; sourceTree = "<group>"; };
+		3CA3182A1D760E260042B56A /* DefendItemDefinition.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DefendItemDefinition.cpp; path = Data/Item/DefendItemDefinition.cpp; sourceTree = "<group>"; };
+		3CA3182B1D760E260042B56A /* DefendItemDefinition.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = DefendItemDefinition.hpp; path = Data/Item/DefendItemDefinition.hpp; sourceTree = "<group>"; };
+		3CA3182D1D7613630042B56A /* FDRange.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FDRange.cpp; path = Common/FDRange.cpp; sourceTree = "<group>"; };
+		3CA3182E1D7613630042B56A /* FDRange.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = FDRange.hpp; path = Common/FDRange.hpp; sourceTree = "<group>"; };
 		3CB109631D6D0D06002C4121 /* TouchHandler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TouchHandler.cpp; path = Battle/TouchHandler.cpp; sourceTree = "<group>"; };
 		3CB109641D6D0D06002C4121 /* TouchHandler.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = TouchHandler.hpp; path = Battle/TouchHandler.hpp; sourceTree = "<group>"; };
 		3CB109671D6E0BD1002C4121 /* Ground.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Ground.cpp; path = Battle/Ground.cpp; sourceTree = "<group>"; };
@@ -183,6 +205,26 @@
 		3CB1098B1D74CE92002C4121 /* CreatureMoveActivity.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CreatureMoveActivity.hpp; path = Activities/CreatureMoveActivity.hpp; sourceTree = "<group>"; };
 		3CB1098D1D74D0CE002C4121 /* ActivityQueue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ActivityQueue.cpp; path = Activities/ActivityQueue.cpp; sourceTree = "<group>"; };
 		3CB1098E1D74D0CE002C4121 /* ActivityQueue.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ActivityQueue.hpp; path = Activities/ActivityQueue.hpp; sourceTree = "<group>"; };
+		3CB109911D74ECB1002C4121 /* Constants.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Constants.cpp; path = Common/Constants.cpp; sourceTree = "<group>"; };
+		3CB109921D74ECB1002C4121 /* Constants.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Constants.hpp; path = Common/Constants.hpp; sourceTree = "<group>"; };
+		3CB109951D74F33C002C4121 /* MagicDefinition.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MagicDefinition.cpp; path = Data/MagicDefinition.cpp; sourceTree = "<group>"; };
+		3CB109961D74F33C002C4121 /* MagicDefinition.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = MagicDefinition.hpp; path = Data/MagicDefinition.hpp; sourceTree = "<group>"; };
+		3CB109991D74F3E2002C4121 /* ItemDefinition.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ItemDefinition.cpp; path = Data/Item/ItemDefinition.cpp; sourceTree = "<group>"; };
+		3CB1099A1D74F3E2002C4121 /* ItemDefinition.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ItemDefinition.hpp; path = Data/Item/ItemDefinition.hpp; sourceTree = "<group>"; };
+		3CB1099C1D74F3FE002C4121 /* UsableItemDefinition.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = UsableItemDefinition.cpp; path = Data/Item/UsableItemDefinition.cpp; sourceTree = "<group>"; };
+		3CB1099D1D74F3FE002C4121 /* UsableItemDefinition.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = UsableItemDefinition.hpp; path = Data/Item/UsableItemDefinition.hpp; sourceTree = "<group>"; };
+		3CB1099F1D74F41E002C4121 /* AttackItemDefinition.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AttackItemDefinition.cpp; path = Data/Item/AttackItemDefinition.cpp; sourceTree = "<group>"; };
+		3CB109A01D74F41E002C4121 /* AttackItemDefinition.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = AttackItemDefinition.hpp; path = Data/Item/AttackItemDefinition.hpp; sourceTree = "<group>"; };
+		3CB109A21D74F440002C4121 /* SpecialItemDefinition.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SpecialItemDefinition.cpp; path = Data/Item/SpecialItemDefinition.cpp; sourceTree = "<group>"; };
+		3CB109A31D74F440002C4121 /* SpecialItemDefinition.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = SpecialItemDefinition.hpp; path = Data/Item/SpecialItemDefinition.hpp; sourceTree = "<group>"; };
+		3CB109A51D74F46C002C4121 /* MoneyItemDefinition.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MoneyItemDefinition.cpp; path = Data/Item/MoneyItemDefinition.cpp; sourceTree = "<group>"; };
+		3CB109A61D74F46C002C4121 /* MoneyItemDefinition.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = MoneyItemDefinition.hpp; path = Data/Item/MoneyItemDefinition.hpp; sourceTree = "<group>"; };
+		3CB109A81D74F816002C4121 /* CreatureChapterRecord.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CreatureChapterRecord.cpp; path = Records/CreatureChapterRecord.cpp; sourceTree = "<group>"; };
+		3CB109A91D74F816002C4121 /* CreatureChapterRecord.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CreatureChapterRecord.hpp; path = Records/CreatureChapterRecord.hpp; sourceTree = "<group>"; };
+		3CB109AB1D74FC5E002C4121 /* DataStore.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DataStore.cpp; path = Data/DataStore.cpp; sourceTree = "<group>"; };
+		3CB109AC1D74FC5E002C4121 /* DataStore.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = DataStore.hpp; path = Data/DataStore.hpp; sourceTree = "<group>"; };
+		3CB109AE1D74FF92002C4121 /* FDNumber.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FDNumber.cpp; path = Common/FDNumber.cpp; sourceTree = "<group>"; };
+		3CB109AF1D74FF92002C4121 /* FDNumber.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = FDNumber.hpp; path = Common/FDNumber.hpp; sourceTree = "<group>"; };
 		3CD12EF01D6BB11600CDF793 /* Title_Continue_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Title_Continue_0.png; path = Title/Title_Continue_0.png; sourceTree = "<group>"; };
 		3CD12EF11D6BB11600CDF793 /* Title_Continue_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Title_Continue_1.png; path = Title/Title_Continue_1.png; sourceTree = "<group>"; };
 		3CD12EF21D6BB11600CDF793 /* Title_Load_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Title_Load_0.png; path = Title/Title_Load_0.png; sourceTree = "<group>"; };
@@ -407,6 +449,10 @@
 				3CB109711D6E6BC3002C4121 /* Creature.hpp */,
 				3CB109731D6E6FD6002C4121 /* Friend.cpp */,
 				3CB109741D6E6FD6002C4121 /* Friend.hpp */,
+				3CA318241D760AD00042B56A /* CreatureData.cpp */,
+				3CA318251D760AD00042B56A /* CreatureData.hpp */,
+				3CA318271D760C6D0042B56A /* AICreatureData.cpp */,
+				3CA318281D760C6D0042B56A /* AICreatureData.hpp */,
 			);
 			name = Objects;
 			sourceTree = "<group>";
@@ -439,6 +485,25 @@
 			name = Activities;
 			sourceTree = "<group>";
 		};
+		3CB109981D74F3BE002C4121 /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				3CB109991D74F3E2002C4121 /* ItemDefinition.cpp */,
+				3CB1099A1D74F3E2002C4121 /* ItemDefinition.hpp */,
+				3CB1099C1D74F3FE002C4121 /* UsableItemDefinition.cpp */,
+				3CB1099D1D74F3FE002C4121 /* UsableItemDefinition.hpp */,
+				3CB1099F1D74F41E002C4121 /* AttackItemDefinition.cpp */,
+				3CB109A01D74F41E002C4121 /* AttackItemDefinition.hpp */,
+				3CA3182A1D760E260042B56A /* DefendItemDefinition.cpp */,
+				3CA3182B1D760E260042B56A /* DefendItemDefinition.hpp */,
+				3CB109A21D74F440002C4121 /* SpecialItemDefinition.cpp */,
+				3CB109A31D74F440002C4121 /* SpecialItemDefinition.hpp */,
+				3CB109A51D74F46C002C4121 /* MoneyItemDefinition.cpp */,
+				3CB109A61D74F46C002C4121 /* MoneyItemDefinition.hpp */,
+			);
+			name = Item;
+			sourceTree = "<group>";
+		};
 		3CD12EFF1D6BB24200CDF793 /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -448,6 +513,12 @@
 				3CD12F1F1D6D051200CDF793 /* StringUtil.hpp */,
 				3CD12F211D6D058000CDF793 /* TextFileReader.cpp */,
 				3CD12F221D6D058000CDF793 /* TextFileReader.hpp */,
+				3CB109911D74ECB1002C4121 /* Constants.cpp */,
+				3CB109921D74ECB1002C4121 /* Constants.hpp */,
+				3CB109AE1D74FF92002C4121 /* FDNumber.cpp */,
+				3CB109AF1D74FF92002C4121 /* FDNumber.hpp */,
+				3CA3182D1D7613630042B56A /* FDRange.cpp */,
+				3CA3182E1D7613630042B56A /* FDRange.hpp */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -468,6 +539,8 @@
 				3CD12F181D6CE7F200CDF793 /* CreatureRecord.hpp */,
 				3CD12F1A1D6D033800CDF793 /* BattleRecord.cpp */,
 				3CD12F1B1D6D033800CDF793 /* BattleRecord.hpp */,
+				3CB109A81D74F816002C4121 /* CreatureChapterRecord.cpp */,
+				3CB109A91D74F816002C4121 /* CreatureChapterRecord.hpp */,
 			);
 			name = Records;
 			sourceTree = "<group>";
@@ -475,8 +548,13 @@
 		3CD12F131D6CE74100CDF793 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				3CB109981D74F3BE002C4121 /* Item */,
 				3CB109801D6F74BC002C4121 /* CreatureDefinition.cpp */,
 				3CB109811D6F74BC002C4121 /* CreatureDefinition.hpp */,
+				3CB109951D74F33C002C4121 /* MagicDefinition.cpp */,
+				3CB109961D74F33C002C4121 /* MagicDefinition.hpp */,
+				3CB109AB1D74FC5E002C4121 /* DataStore.cpp */,
+				3CB109AC1D74FC5E002C4121 /* DataStore.hpp */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -739,22 +817,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CB109A71D74F46C002C4121 /* MoneyItemDefinition.cpp in Sources */,
 				3CB109721D6E6BC3002C4121 /* Creature.cpp in Sources */,
 				3CD12F1C1D6D033800CDF793 /* BattleRecord.cpp in Sources */,
 				3CD12F191D6CE7F200CDF793 /* CreatureRecord.cpp in Sources */,
 				3CB109751D6E6FD6002C4121 /* Friend.cpp in Sources */,
 				3CB109651D6D0D06002C4121 /* TouchHandler.cpp in Sources */,
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
+				3CA3182F1D7613630042B56A /* FDRange.cpp in Sources */,
 				46880B8A19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */,
+				3CB109931D74ECB1002C4121 /* Constants.cpp in Sources */,
+				3CB109A41D74F440002C4121 /* SpecialItemDefinition.cpp in Sources */,
 				3CD12F291D6D065800CDF793 /* BattleField.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				3CB109821D6F74BC002C4121 /* CreatureDefinition.cpp in Sources */,
+				3CB109971D74F33C002C4121 /* MagicDefinition.cpp in Sources */,
+				3CB1099E1D74F3FE002C4121 /* UsableItemDefinition.cpp in Sources */,
+				3CB109AD1D74FC5E002C4121 /* DataStore.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				3CB109891D74CCAB002C4121 /* FDActivity.cpp in Sources */,
+				3CB109A11D74F41E002C4121 /* AttackItemDefinition.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				3CB1097F1D6F69AC002C4121 /* FDAnimate.cpp in Sources */,
 				3CD12F071D6BC86B00CDF793 /* FDScreen.cpp in Sources */,
 				3CD12F161D6CE77800CDF793 /* ChapterRecord.cpp in Sources */,
+				3CA3182C1D760E260042B56A /* DefendItemDefinition.cpp in Sources */,
 				3CD12F2A1D6D065800CDF793 /* BattleScene.cpp in Sources */,
 				3CB1097C1D6F6635002C4121 /* SlideAnimation.cpp in Sources */,
 				3CD12F231D6D058000CDF793 /* TextFileReader.cpp in Sources */,
@@ -763,10 +850,15 @@
 				3CB109791D6F6489002C4121 /* FDFrame.cpp in Sources */,
 				3C18834E1D6BA1490059056E /* TitleLayer.cpp in Sources */,
 				3CD12F201D6D051200CDF793 /* StringUtil.cpp in Sources */,
+				3CB109B01D74FF92002C4121 /* FDNumber.cpp in Sources */,
 				3CB109851D6F7626002C4121 /* AnimationLibrary.cpp in Sources */,
+				3CB109AA1D74F816002C4121 /* CreatureChapterRecord.cpp in Sources */,
+				3CA318291D760C6D0042B56A /* AICreatureData.cpp in Sources */,
+				3CB1099B1D74F3E2002C4121 /* ItemDefinition.cpp in Sources */,
 				3CB1098C1D74CE92002C4121 /* CreatureMoveActivity.cpp in Sources */,
 				3C18834B1D6BA0970059056E /* SceneCreator.cpp in Sources */,
 				3CB109691D6E0BD1002C4121 /* Ground.cpp in Sources */,
+				3CA318261D760AD00042B56A /* CreatureData.cpp in Sources */,
 				3CD12F021D6BB26500CDF793 /* ResourceManager.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

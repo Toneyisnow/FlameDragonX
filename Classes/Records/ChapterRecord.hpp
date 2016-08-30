@@ -10,7 +10,7 @@
 #define ChapterRecord_hpp
 
 #include "cocos2d.h"
-#include "CreatureRecord.hpp"
+#include "CreatureChapterRecord.hpp"
 
 USING_NS_CC;
 
@@ -21,7 +21,7 @@ private:
     int _chapterId;
     int _money;
     
-    Vector<CreatureRecord> *_friendRecordList;
+    Vector<CreatureChapterRecord> *_friendRecordList;
     
 public:
     

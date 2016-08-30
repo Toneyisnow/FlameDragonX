@@ -21,8 +21,6 @@ class CreatureMoveActivity : public FDActivity
 {
 private:
     
-    const float DEFAULT_SPEED = 0.6f;
-    
     BattleField * _battleField;
     
     Creature * _creature;

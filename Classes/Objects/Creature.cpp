@@ -28,9 +28,9 @@ Creature::~Creature()
 void Creature::initWithDefinition(int identity, int creatureId)
 {
     
-    CreatureDefinition * definition = new CreatureDefinition(creatureId);
+    // CreatureDefinition * definition = new CreatureDefinition(creatureId);
     
-    SlideAnimation * animation = AnimationLibrary::getInstance()->getIdleAnimation(definition->getAnimationId());
+    SlideAnimation * animation = AnimationLibrary::getInstance()->getIdleAnimation(1);
     _animator->setAnimation(animation);
 }
 

@@ -29,7 +29,8 @@ void FDActivity::takeTick(int synchronizedTick)
         _isInitialized = true;
         return;
     }
-    else
+    
+    if (!_hasFinished)
     {
         this->internalTick(synchronizedTick);
     }

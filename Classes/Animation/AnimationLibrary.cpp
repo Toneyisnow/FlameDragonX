@@ -7,6 +7,7 @@
 //
 
 #include "AnimationLibrary.hpp"
+#include "Constants.hpp"
 
 AnimationLibrary * AnimationLibrary::_instance = nullptr;
 
@@ -35,7 +36,7 @@ AnimationLibrary::~AnimationLibrary()
 void AnimationLibrary::loadBattleAnimationsForCreature(int creatureAniId)
 {
     // Load Idle Animation
-    SlideAnimation *idleAnimation = new SlideAnimation(12, true, true);
+    SlideAnimation *idleAnimation = new SlideAnimation(Constants::TickPerFrame_IdleAnimation, true, true);
     idleAnimation->appendFrame(filenameForBattleFieldAnimation(creatureAniId, 1));
     idleAnimation->appendFrame(filenameForBattleFieldAnimation(creatureAniId, 2));
     idleAnimation->appendFrame(filenameForBattleFieldAnimation(creatureAniId, 3));
@@ -55,7 +56,7 @@ void AnimationLibrary::loadBattleAnimationsForCreature(int creatureAniId)
 
 void AnimationLibrary::loadWalkAnimationForCreature(int creatureAniId, Direction direction, int centerImageId)
 {
-    SlideAnimation *walkAnimation = new SlideAnimation(8, true, true);
+    SlideAnimation *walkAnimation = new SlideAnimation(Constants::TickPerFrame_MoveAnimation, true, true);
     walkAnimation->appendFrame(filenameForBattleFieldAnimation(creatureAniId, centerImageId - 1));
     walkAnimation->appendFrame(filenameForBattleFieldAnimation(creatureAniId, centerImageId));
     walkAnimation->appendFrame(filenameForBattleFieldAnimation(creatureAniId, centerImageId + 1));

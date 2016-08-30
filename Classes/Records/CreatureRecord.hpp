@@ -11,6 +11,7 @@
 
 #include <stdio.h>
 #include "cocos2d.h"
+#include "CreatureData.hpp"
 
 USING_NS_CC;
 
@@ -22,10 +23,13 @@ private:
     int definitionId;
     int creatureType;
     
-    ////  CreatureData *data;
+    CreatureData * _data;
+    
     Point location;
     
 public:
+    
+    //// static CreatureBattleRecord * createByChapterRecord(CreatureChapterRecord * record);
     
     
 };

@@ -8,13 +8,14 @@
 
 #include "CreatureMoveActivity.hpp"
 #include "BattleField.hpp"
+#include "Constants.hpp"
 
 CreatureMoveActivity::CreatureMoveActivity(BattleField * field, Creature * creature, Vec2 toPosition)
 {
     this->_battleField = field;
     this->_creature = creature;
     this->_targetLocation = _battleField->convertPositionToLocation(toPosition);
-    this->_speed = DEFAULT_SPEED;
+    this->_speed = Constants::DEFAULT_MOVE_SPEED;
     
 }
 

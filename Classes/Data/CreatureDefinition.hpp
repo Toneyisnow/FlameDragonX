@@ -10,6 +10,8 @@
 #define CreatureDefinition_hpp
 
 #include "cocos2d.h"
+#include "TextFileReader.hpp"
+#include "FDNumber.hpp"
 
 USING_NS_CC;
 
@@ -17,17 +19,25 @@ class CreatureDefinition : public Ref
 {
 private:
     
-    int _definitionId;
-    int _animationId;
     
 public:
     
-    CreatureDefinition(int defId);
+    static CreatureDefinition * readFromFile(TextFileReader * reader);
+    static CreatureDefinition * readBaseInfoFromFile(TextFileReader * reader);
+    static CreatureDefinition * readFromFile(TextFileReader * reader, Map<int, CreatureDefinition *> * dict);
+
+    CreatureDefinition();
     
-    int getDefinitionId();
-    int getAnimationId();
+    int definitionId;
+    int animationId;
+    int race;
+    int occupation;
+    int initialLevel;
+    int initialAP, initialDP, initialDX, initialMV, initialEX;
+    int initialHP, initialMP;
     
-    
+    Vector<FDNumber *> * initialItemList;
+    Vector<FDNumber *> * initialMagicList;
     
 };
 #endif /* CreatureDefinition_hpp */
