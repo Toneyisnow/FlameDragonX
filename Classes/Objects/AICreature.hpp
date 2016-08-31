@@ -10,7 +10,7 @@
 #define AICreatureData_hpp
 
 #include "cocos2d.h"
-#include "CreatureData.hpp"
+#include "Creature.hpp"
 
 typedef enum AIType {
     AIType_Aggressive,
@@ -23,19 +23,20 @@ typedef enum AIType {
 } AIType;
 
 
-class AICreatureData : public cocos2d::Ref
+class AICreature : public Creature
 {
 private:
-    
-public:
-    
-    CreatureData * creatureData;
     
     int dropItemId;
     
     AIType aiType;
     
     //// void aiParameter;
+    
+public:
+    
+    
+    
 };
 
 

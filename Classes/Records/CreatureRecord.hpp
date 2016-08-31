@@ -25,7 +25,7 @@ private:
     
     CreatureData * _data;
     
-    Point location;
+    /// Point location;
     
 public:
     

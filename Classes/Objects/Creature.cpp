@@ -10,6 +10,7 @@
 #include "SlideAnimation.hpp"
 #include "CreatureDefinition.hpp"
 #include "AnimationLibrary.hpp"
+#include "DataStore.hpp"
 
 Creature::Creature(CreatureType type)
 {
@@ -18,17 +19,37 @@ Creature::Creature(CreatureType type)
     this->_gestureStatus = GestureStatus_Idle;
     // this->initialize();
     
+    
 }
 
 Creature::~Creature()
 {
-    
+    _data->release();
 }
 
 void Creature::initWithDefinition(int identity, int creatureId)
 {
+    this->_identifier = identity;
+    _definition = DataStore::getInstance()->getCreatureDefinition(creatureId);
     
-    // CreatureDefinition * definition = new CreatureDefinition(creatureId);
+    _data = new CreatureData();
+    _data->level = _definition->initialLevel;
+    _data->ap = _definition->initialAP;
+    _data->dp = _definition->initialDP;
+    _data->dx = _definition->initialDX;
+    _data->mv = _definition->initialMV;
+    _data->ex = _definition->initialEX;
+    
+    _data->hpCurrent = _data->hpMax = _definition->initialHP;
+    _data->mpCurrent = _data->mpMax = _definition->initialMP;
+    
+    for (int m = 0; m < _definition->initialItemList->size(); m++) {
+        _data->itemList->pushBack(_definition->initialItemList->at(m));
+    }
+    for (int m = 0; m < _definition->initialMagicList->size(); m++) {
+        _data->magicList->pushBack(_definition->initialMagicList->at(m));
+    }
+    
     
     SlideAnimation * animation = AnimationLibrary::getInstance()->getIdleAnimation(1);
     _animator->setAnimation(animation);

@@ -12,6 +12,7 @@
 #include "cocos2d.h"
 #include "AttackItemDefinition.hpp"
 #include "DefendItemDefinition.hpp"
+#include "FDNumber.hpp"
 
 class CreatureData : public cocos2d::Ref
 {
@@ -37,6 +38,8 @@ public:
     int statusFrozen;
     int statusProhibited;
 
+    Vector<FDNumber *> * itemList;
+    Vector<FDNumber *> * magicList;
     
     CreatureData();
     ~CreatureData();

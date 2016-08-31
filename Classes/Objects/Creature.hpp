@@ -12,6 +12,8 @@
 #include "cocos2d.h"
 #include "BattleObject.hpp"
 #include "CreatureDefinition.hpp"
+#include "CreatureData.hpp"
+
 
 typedef enum CreatureType
 {
@@ -37,6 +39,7 @@ private:
     int _identifier;
     int _creatureId;
     CreatureDefinition * _definition;
+    CreatureData * _data;
     
     CreatureType _creatureType;
     GestureStatus _gestureStatus;

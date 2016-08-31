@@ -20,7 +20,7 @@
 		3C18835F1D6BABA10059056E /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C18835E1D6BABA10059056E /* libz.1.2.5.dylib */; };
 		3C1883611D6BAC130059056E /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C1883601D6BAC130059056E /* CoreMotion.framework */; };
 		3CA318261D760AD00042B56A /* CreatureData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CA318241D760AD00042B56A /* CreatureData.cpp */; };
-		3CA318291D760C6D0042B56A /* AICreatureData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CA318271D760C6D0042B56A /* AICreatureData.cpp */; };
+		3CA318291D760C6D0042B56A /* AICreature.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CA318271D760C6D0042B56A /* AICreature.cpp */; };
 		3CA3182C1D760E260042B56A /* DefendItemDefinition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CA3182A1D760E260042B56A /* DefendItemDefinition.cpp */; };
 		3CA3182F1D7613630042B56A /* FDRange.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CA3182D1D7613630042B56A /* FDRange.cpp */; };
 		3CB109651D6D0D06002C4121 /* TouchHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CB109631D6D0D06002C4121 /* TouchHandler.cpp */; };
@@ -172,8 +172,8 @@
 		3C1883601D6BAC130059056E /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/CoreMotion.framework; sourceTree = DEVELOPER_DIR; };
 		3CA318241D760AD00042B56A /* CreatureData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CreatureData.cpp; path = Objects/CreatureData.cpp; sourceTree = "<group>"; };
 		3CA318251D760AD00042B56A /* CreatureData.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CreatureData.hpp; path = Objects/CreatureData.hpp; sourceTree = "<group>"; };
-		3CA318271D760C6D0042B56A /* AICreatureData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AICreatureData.cpp; path = Objects/AICreatureData.cpp; sourceTree = "<group>"; };
-		3CA318281D760C6D0042B56A /* AICreatureData.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = AICreatureData.hpp; path = Objects/AICreatureData.hpp; sourceTree = "<group>"; };
+		3CA318271D760C6D0042B56A /* AICreature.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AICreature.cpp; path = Objects/AICreature.cpp; sourceTree = "<group>"; };
+		3CA318281D760C6D0042B56A /* AICreature.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = AICreature.hpp; path = Objects/AICreature.hpp; sourceTree = "<group>"; };
 		3CA3182A1D760E260042B56A /* DefendItemDefinition.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DefendItemDefinition.cpp; path = Data/Item/DefendItemDefinition.cpp; sourceTree = "<group>"; };
 		3CA3182B1D760E260042B56A /* DefendItemDefinition.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = DefendItemDefinition.hpp; path = Data/Item/DefendItemDefinition.hpp; sourceTree = "<group>"; };
 		3CA3182D1D7613630042B56A /* FDRange.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FDRange.cpp; path = Common/FDRange.cpp; sourceTree = "<group>"; };
@@ -451,8 +451,8 @@
 				3CB109741D6E6FD6002C4121 /* Friend.hpp */,
 				3CA318241D760AD00042B56A /* CreatureData.cpp */,
 				3CA318251D760AD00042B56A /* CreatureData.hpp */,
-				3CA318271D760C6D0042B56A /* AICreatureData.cpp */,
-				3CA318281D760C6D0042B56A /* AICreatureData.hpp */,
+				3CA318271D760C6D0042B56A /* AICreature.cpp */,
+				3CA318281D760C6D0042B56A /* AICreature.hpp */,
 			);
 			name = Objects;
 			sourceTree = "<group>";
@@ -853,7 +853,7 @@
 				3CB109B01D74FF92002C4121 /* FDNumber.cpp in Sources */,
 				3CB109851D6F7626002C4121 /* AnimationLibrary.cpp in Sources */,
 				3CB109AA1D74F816002C4121 /* CreatureChapterRecord.cpp in Sources */,
-				3CA318291D760C6D0042B56A /* AICreatureData.cpp in Sources */,
+				3CA318291D760C6D0042B56A /* AICreature.cpp in Sources */,
 				3CB1099B1D74F3E2002C4121 /* ItemDefinition.cpp in Sources */,
 				3CB1098C1D74CE92002C4121 /* CreatureMoveActivity.cpp in Sources */,
 				3C18834B1D6BA0970059056E /* SceneCreator.cpp in Sources */,

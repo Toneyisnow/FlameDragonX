@@ -30,6 +30,9 @@ BattleScene::BattleScene(ChapterRecord* record)
     
     log("Definition of 50508: Ani=%d EX=%d", def2->animationId, def2->initialEX);
     
+    //// UserDefault::getInstance()->setIntegerForKey(<#const char *key#>, <#int value#>)
+   
+    
     _activityQueue = new ActivityQueue();
     
     _battleField = new BattleField(this, record->getChapterId());
