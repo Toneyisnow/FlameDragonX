@@ -19,8 +19,8 @@ USING_NS_CC;
 BattleScene::BattleScene(ChapterRecord* record)
 {
     // Load Resources
-    AnimationLibrary::getInstance()->loadBattleAnimationsForCreature(1);
-    AnimationLibrary::getInstance()->loadBattleAnimationsForCreature(2);
+    AnimationLibrary::getInstance()->preloadBattleAnimationsForCreature(1);
+    AnimationLibrary::getInstance()->preloadBattleAnimationsForCreature(2);
     
     DataStore::getInstance()->loadData();
     CreatureDefinition * def = DataStore::getInstance()->getCreatureDefinition(3);

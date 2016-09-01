@@ -24,8 +24,10 @@ private:
     
     
     std::string filenameForBattleFieldAnimation(int creatureAniId, int index);
-    void loadWalkAnimationForCreature(int creatureAniId, Direction direction, int centerImageId);
-
+    //// void loadWalkAnimationForCreature(int creatureAniId, Direction direction, int centerImageId);
+    void loadIdleAnimation(int creatureAniId);
+    void loadWalkAnimation(int creatureAniId, Direction direction);
+    
     
 public:
     
@@ -34,7 +36,9 @@ public:
     
     static AnimationLibrary * getInstance();
     
-    void loadBattleAnimationsForCreature(int creatureAniId);
+    void preloadBattleAnimationsForCreature(int creatureAniId);
+    
+    
     
     SlideAnimation * getIdleAnimation(int creatureAniId);
     SlideAnimation * getWalkAnimation(int creatureAniId, Direction direction);

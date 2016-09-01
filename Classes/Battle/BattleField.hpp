@@ -49,7 +49,6 @@ private:
     
     // Private Methods
     
-    void addCreature(Creature * creature, Vec2 position);
     
     
     
@@ -83,6 +82,7 @@ public:
     void activityMoveCreature(Vec2 position, Vec2 target);
     void activityMoveCreatureWithMenu(Vec2 position, Vec2 target);
     
+    void addCreature(Creature * creature, Vec2 position);
     
 };
 

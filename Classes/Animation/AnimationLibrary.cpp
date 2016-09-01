@@ -33,7 +33,18 @@ AnimationLibrary::~AnimationLibrary()
     delete _slideAnimationDictionary;
 }
 
-void AnimationLibrary::loadBattleAnimationsForCreature(int creatureAniId)
+void AnimationLibrary::preloadBattleAnimationsForCreature(int creatureAniId)
+{
+    this->loadIdleAnimation(creatureAniId);
+    
+    // Load Walk Animation
+    this->loadWalkAnimation(creatureAniId, DirectionLeft);
+    this->loadWalkAnimation(creatureAniId, DirectionUp);
+    this->loadWalkAnimation(creatureAniId, DirectionRight);
+    this->loadWalkAnimation(creatureAniId, DirectionDown);
+}
+
+void AnimationLibrary::loadIdleAnimation(int creatureAniId)
 {
     // Load Idle Animation
     SlideAnimation *idleAnimation = new SlideAnimation(Constants::TickPerFrame_IdleAnimation, true, true);
@@ -45,17 +56,29 @@ void AnimationLibrary::loadBattleAnimationsForCreature(int creatureAniId)
     std::string key = StringUtils::format("Idle-%03d", creatureAniId);
     _slideAnimationDictionary->insert(key, idleAnimation);
     idleAnimation->release();
-    
-    // Load Walk Animation
-    this->loadWalkAnimationForCreature(creatureAniId, DirectionLeft, 5);
-    this->loadWalkAnimationForCreature(creatureAniId, DirectionUp, 8);
-    this->loadWalkAnimationForCreature(creatureAniId, DirectionRight, 11);
-    this->loadWalkAnimationForCreature(creatureAniId, DirectionDown, 2);
-    
 }
 
-void AnimationLibrary::loadWalkAnimationForCreature(int creatureAniId, Direction direction, int centerImageId)
+void AnimationLibrary::loadWalkAnimation(int creatureAniId, Direction direction)
 {
+    int centerImageId;
+    switch (direction) {
+        case DirectionLeft:
+            centerImageId = 5;
+            break;
+        case DirectionUp:
+            centerImageId = 8;
+            break;
+        case DirectionRight:
+            centerImageId = 11;
+            break;
+        case DirectionDown:
+            centerImageId = 2;
+            break;
+            
+        default:
+            break;
+    }
+    
     SlideAnimation *walkAnimation = new SlideAnimation(Constants::TickPerFrame_MoveAnimation, true, true);
     walkAnimation->appendFrame(filenameForBattleFieldAnimation(creatureAniId, centerImageId - 1));
     walkAnimation->appendFrame(filenameForBattleFieldAnimation(creatureAniId, centerImageId));
@@ -66,15 +89,28 @@ void AnimationLibrary::loadWalkAnimationForCreature(int creatureAniId, Direction
     walkAnimation->release();
 }
 
+
 SlideAnimation * AnimationLibrary::getIdleAnimation(int creatureAniId)
 {
     std::string key = StringUtils::format("Idle-%03d", creatureAniId);
+    
+    if (_slideAnimationDictionary->at(key) == nullptr)
+    {
+        this->loadIdleAnimation(creatureAniId);
+    }
+    
     return _slideAnimationDictionary->at(key);
 }
 
 SlideAnimation * AnimationLibrary::getWalkAnimation(int creatureAniId, Direction direction)
 {
     std::string key = StringUtils::format("Walk-%02d-%03d", direction, creatureAniId);
+    
+    if (_slideAnimationDictionary->at(key) == nullptr)
+    {
+        this->loadWalkAnimation(creatureAniId, direction);
+    }
+
     return _slideAnimationDictionary->at(key);
 }
 

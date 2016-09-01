@@ -51,7 +51,7 @@ void Creature::initWithDefinition(int identity, int creatureId)
     }
     
     
-    SlideAnimation * animation = AnimationLibrary::getInstance()->getIdleAnimation(1);
+    SlideAnimation * animation = AnimationLibrary::getInstance()->getIdleAnimation(_definition->animationId);
     _animator->setAnimation(animation);
 }
 
@@ -70,7 +70,7 @@ void Creature::setGesture(GestureStatus gesture)
     
     this->_gestureStatus = gesture;
     SlideAnimation * animation;
-    int animationId = 1;
+    int animationId = _definition->animationId;
     
     switch (gesture) {
         case GestureStatus_Idle:

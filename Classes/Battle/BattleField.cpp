@@ -11,6 +11,7 @@
 #include "TextFileReader.hpp"
 #include "AnimationLibrary.hpp"
 #include "CreatureMoveActivity.hpp"
+#include "BatchActivity.hpp"
 #include "BattleScene.hpp"
 
 USING_NS_CC;
@@ -80,14 +81,43 @@ void BattleField::initWithChapter(int chapterId)
     
     
     Creature * creature = new Creature(CreatureType_Friend);
-    creature->initWithDefinition(1, 1);
+    creature->initWithDefinition(3, 3);
     this->addCreature(creature, Vec2(3, 24));
     Creature * creature2 = new Creature(CreatureType_Friend);
     creature2->initWithDefinition(2, 2);
-    this->addCreature(creature2, Vec2(2, 2));
+    this->addCreature(creature2, Vec2(2, 22));
     
-    this->activityMoveCreature(Vec2(3, 24), Vec2(3, 2));
-    this->activityMoveCreature(Vec2(3, 24), Vec2(10, 2));
+    Creature * enemy1 = new Creature(CreatureType_Enemy);
+    enemy1->initWithDefinition(101, 50101);
+    this->addCreature(enemy1, Vec2(10, 18));
+    Creature * enemy2 = new Creature(CreatureType_Enemy);
+    enemy2->initWithDefinition(102, 50102);
+    this->addCreature(enemy2, Vec2(12, 17));
+    
+    Creature * enemy3 = new Creature(CreatureType_Enemy);
+    enemy3->initWithDefinition(201, 50103);
+    this->addCreature(enemy3, Vec2(10, 8));
+    
+    BatchActivity * bacth = new BatchActivity();
+    Creature * c3 = this->getCreatureAt(3, 24);
+    CreatureMoveActivity * activity = new CreatureMoveActivity(this, c3);
+    activity->appendPosition(8, 24);
+    activity->appendPosition(8, 20);
+    
+    Creature * c2 = this->getCreatureAt(2, 22);
+    CreatureMoveActivity * activity2 = new CreatureMoveActivity(this, c2);
+    activity2->appendPosition(8, 22);
+    activity2->appendPosition(8, 10);
+    
+    bacth->addActivity(activity);
+    bacth->addActivity(activity2);
+    
+    _battleScene->getActivityQueue()->pushBackActivity(bacth);
+    activity2->release();
+    
+    
+    //this->activityMoveCreature(Vec2(3, 24), Vec2(3, 2));
+    //this->activityMoveCreature(Vec2(3, 24), Vec2(10, 2));
     
     //// creature->setGesture(GestureStatus_WalkingLeft);
     
@@ -234,7 +264,7 @@ void BattleField::addCreature(Creature * creature, Vec2 position)
 void BattleField::activityMoveCreature(Vec2 position, Vec2 target)
 {
     Creature * creature = this->getCreatureAt(position.x , position.y);
-    CreatureMoveActivity * activity = new CreatureMoveActivity(this, creature, target);
+    CreatureMoveActivity * activity = new CreatureMoveActivity(this, creature);
     
     _battleScene->getActivityQueue()->pushBackActivity(activity);
     activity->release();

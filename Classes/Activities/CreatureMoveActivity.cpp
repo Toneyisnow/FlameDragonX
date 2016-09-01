@@ -2,70 +2,66 @@
 //  CreatureMoveActivity.cpp
 //  FlameDragonX
 //
-//  Created by SuiYi on 8/29/16.
+//  Created by SuiYi on 9/1/16.
 //
 //
 
 #include "CreatureMoveActivity.hpp"
-#include "BattleField.hpp"
-#include "Constants.hpp"
 
-CreatureMoveActivity::CreatureMoveActivity(BattleField * field, Creature * creature, Vec2 toPosition)
+CreatureMoveActivity::CreatureMoveActivity(BattleField * field, Creature * creature)
 {
-    this->_battleField = field;
+    this->_field = field;
     this->_creature = creature;
-    this->_targetLocation = _battleField->convertPositionToLocation(toPosition);
-    this->_speed = Constants::DEFAULT_MOVE_SPEED;
+}
+
+CreatureMoveActivity::CreatureMoveActivity(BattleField * field, Creature * creature, Vec2 pos1)
+{
+    SimpleMoveActivity * activity1 = new SimpleMoveActivity(field, creature, pos1);
+    this->appendActivity(activity1);
+    activity1->release();
+}
+
+CreatureMoveActivity::CreatureMoveActivity(BattleField * field, Creature * creature, Vec2 pos1, Vec2 pos2)
+{
+    SimpleMoveActivity * activity1 = new SimpleMoveActivity(field, creature, pos1);
+    this->appendActivity(activity1);
+    activity1->release();
+    SimpleMoveActivity * activity2 = new SimpleMoveActivity(field, creature, pos2);
+    this->appendActivity(activity2);
+    activity2->release();
+}
+
+CreatureMoveActivity::CreatureMoveActivity(BattleField * field, Creature * creature, Vec2 pos1, Vec2 pos2, Vec2 pos3)
+{
+    SimpleMoveActivity * activity1 = new SimpleMoveActivity(field, creature, pos1);
+    this->appendActivity(activity1);
+    activity1->release();
+    SimpleMoveActivity * activity2 = new SimpleMoveActivity(field, creature, pos2);
+    this->appendActivity(activity2);
+    activity2->release();
+    SimpleMoveActivity * activity3 = new SimpleMoveActivity(field, creature, pos3);
+    this->appendActivity(activity3);
+    activity3->release();
+}
+
+CreatureMoveActivity::CreatureMoveActivity(BattleField * field, Creature * creature, Vec2 pos1, Vec2 pos2, Vec2 pos3, Vec2 pos4)
+{
     
 }
 
-void CreatureMoveActivity::initialize()
+CreatureMoveActivity::CreatureMoveActivity(BattleField * field, Creature * creature, Vec2 pos1, Vec2 pos2, Vec2 pos3, Vec2 pos4, Vec2 pos5)
 {
-    Vec2 original = _creature->getSprite()->getPosition();
     
-    if (original.x < _targetLocation.x) {
-        // Moving right
-        this->_creature->setGesture(GestureStatus_WalkingRight);
-        deltaX = 1;
-        deltaY = 0;
-    }
-    else if (original.x > _targetLocation.x) {
-        // Moving left
-        this->_creature->setGesture(GestureStatus_WalkingLeft);
-        deltaX = -1;
-        deltaY = 0;
-    }
-    else if (original.y < _targetLocation.y) {
-        // Moving up
-        this->_creature->setGesture(GestureStatus_WalkingUp);
-        deltaX = 0;
-        deltaY = 1;
-    }
-    else if (original.y > _targetLocation.y) {
-        // Moving down
-        this->_creature->setGesture(GestureStatus_WalkingDown);
-        deltaX = 0;
-        deltaY = -1;
-    }
 }
 
-void CreatureMoveActivity::internalTick(int synchronizeTick)
+void CreatureMoveActivity::appendPosition(int posX, int posY)
 {
-    Vec2 current = this->_creature->getSprite()->getPosition();
-    
-    float resultX = current.x + deltaX * _speed;
-    float resultY = current.y + deltaY * _speed;
-    
-    if ((resultX - _targetLocation.x) * (current.x - _targetLocation.x) < 0
-        || (resultY - _targetLocation.y) * (current.y - _targetLocation.y) < 0
-        || (resultX == _targetLocation.x && resultY == _targetLocation.y)) {
-        
-        _hasFinished = true;
-        resultX = _targetLocation.x;
-        resultY = _targetLocation.y;
-        
-        this->_creature->setGesture(GestureStatus_Idle);
-    }
-    
-    this->_creature->getSprite()->setPosition(Vec2(resultX, resultY));
+    this->appendPosition(Vec2(posX, posY));
+}
+
+void CreatureMoveActivity::appendPosition(Vec2 position)
+{
+    SimpleMoveActivity * activity = new SimpleMoveActivity(_field, _creature, position);
+    this->appendActivity(activity);
+    activity->release();
 }

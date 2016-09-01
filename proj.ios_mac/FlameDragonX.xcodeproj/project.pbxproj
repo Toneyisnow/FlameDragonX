@@ -19,6 +19,11 @@
 		3C1883581D6BA5840059056E /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C1883571D6BA5840059056E /* OpenGLES.framework */; };
 		3C18835F1D6BABA10059056E /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C18835E1D6BABA10059056E /* libz.1.2.5.dylib */; };
 		3C1883611D6BAC130059056E /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C1883601D6BAC130059056E /* CoreMotion.framework */; };
+		3C8D68181D78EA2F00CC3616 /* CombinedActivity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C8D68161D78EA2F00CC3616 /* CombinedActivity.cpp */; };
+		3C8D681B1D78EAAE00CC3616 /* FieldActivity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C8D68191D78EAAE00CC3616 /* FieldActivity.cpp */; };
+		3C8D681E1D78EB3B00CC3616 /* GlobalActivity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C8D681C1D78EB3B00CC3616 /* GlobalActivity.cpp */; };
+		3C8D68211D78EEC900CC3616 /* BatchActivity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C8D681F1D78EEC900CC3616 /* BatchActivity.cpp */; };
+		3C8D68241D78F24300CC3616 /* CreatureMoveActivity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C8D68221D78F24300CC3616 /* CreatureMoveActivity.cpp */; };
 		3CA318261D760AD00042B56A /* CreatureData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CA318241D760AD00042B56A /* CreatureData.cpp */; };
 		3CA318291D760C6D0042B56A /* AICreature.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CA318271D760C6D0042B56A /* AICreature.cpp */; };
 		3CA3182C1D760E260042B56A /* DefendItemDefinition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CA3182A1D760E260042B56A /* DefendItemDefinition.cpp */; };
@@ -35,7 +40,7 @@
 		3CB109821D6F74BC002C4121 /* CreatureDefinition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CB109801D6F74BC002C4121 /* CreatureDefinition.cpp */; };
 		3CB109851D6F7626002C4121 /* AnimationLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CB109831D6F7626002C4121 /* AnimationLibrary.cpp */; };
 		3CB109891D74CCAB002C4121 /* FDActivity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CB109871D74CCAB002C4121 /* FDActivity.cpp */; };
-		3CB1098C1D74CE92002C4121 /* CreatureMoveActivity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CB1098A1D74CE92002C4121 /* CreatureMoveActivity.cpp */; };
+		3CB1098C1D74CE92002C4121 /* SimpleMoveActivity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CB1098A1D74CE92002C4121 /* SimpleMoveActivity.cpp */; };
 		3CB1098F1D74D0CE002C4121 /* ActivityQueue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CB1098D1D74D0CE002C4121 /* ActivityQueue.cpp */; };
 		3CB109931D74ECB1002C4121 /* Constants.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CB109911D74ECB1002C4121 /* Constants.cpp */; };
 		3CB109971D74F33C002C4121 /* MagicDefinition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CB109951D74F33C002C4121 /* MagicDefinition.cpp */; };
@@ -170,6 +175,16 @@
 		3C1883571D6BA5840059056E /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/OpenGLES.framework; sourceTree = DEVELOPER_DIR; };
 		3C18835E1D6BABA10059056E /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = ../../../../../usr/lib/libz.1.2.5.dylib; sourceTree = "<group>"; };
 		3C1883601D6BAC130059056E /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/CoreMotion.framework; sourceTree = DEVELOPER_DIR; };
+		3C8D68161D78EA2F00CC3616 /* CombinedActivity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CombinedActivity.cpp; path = Activities/CombinedActivity.cpp; sourceTree = "<group>"; };
+		3C8D68171D78EA2F00CC3616 /* CombinedActivity.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CombinedActivity.hpp; path = Activities/CombinedActivity.hpp; sourceTree = "<group>"; };
+		3C8D68191D78EAAE00CC3616 /* FieldActivity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FieldActivity.cpp; path = Activities/FieldActivity.cpp; sourceTree = "<group>"; };
+		3C8D681A1D78EAAE00CC3616 /* FieldActivity.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = FieldActivity.hpp; path = Activities/FieldActivity.hpp; sourceTree = "<group>"; };
+		3C8D681C1D78EB3B00CC3616 /* GlobalActivity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GlobalActivity.cpp; path = Activities/GlobalActivity.cpp; sourceTree = "<group>"; };
+		3C8D681D1D78EB3B00CC3616 /* GlobalActivity.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = GlobalActivity.hpp; path = Activities/GlobalActivity.hpp; sourceTree = "<group>"; };
+		3C8D681F1D78EEC900CC3616 /* BatchActivity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BatchActivity.cpp; path = Activities/BatchActivity.cpp; sourceTree = "<group>"; };
+		3C8D68201D78EEC900CC3616 /* BatchActivity.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = BatchActivity.hpp; path = Activities/BatchActivity.hpp; sourceTree = "<group>"; };
+		3C8D68221D78F24300CC3616 /* CreatureMoveActivity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CreatureMoveActivity.cpp; path = Activities/CreatureMoveActivity.cpp; sourceTree = "<group>"; };
+		3C8D68231D78F24300CC3616 /* CreatureMoveActivity.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CreatureMoveActivity.hpp; path = Activities/CreatureMoveActivity.hpp; sourceTree = "<group>"; };
 		3CA318241D760AD00042B56A /* CreatureData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CreatureData.cpp; path = Objects/CreatureData.cpp; sourceTree = "<group>"; };
 		3CA318251D760AD00042B56A /* CreatureData.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CreatureData.hpp; path = Objects/CreatureData.hpp; sourceTree = "<group>"; };
 		3CA318271D760C6D0042B56A /* AICreature.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AICreature.cpp; path = Objects/AICreature.cpp; sourceTree = "<group>"; };
@@ -201,8 +216,8 @@
 		3CB109841D6F7626002C4121 /* AnimationLibrary.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = AnimationLibrary.hpp; path = Animation/AnimationLibrary.hpp; sourceTree = "<group>"; };
 		3CB109871D74CCAB002C4121 /* FDActivity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FDActivity.cpp; path = Activities/FDActivity.cpp; sourceTree = "<group>"; };
 		3CB109881D74CCAB002C4121 /* FDActivity.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = FDActivity.hpp; path = Activities/FDActivity.hpp; sourceTree = "<group>"; };
-		3CB1098A1D74CE92002C4121 /* CreatureMoveActivity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CreatureMoveActivity.cpp; path = Activities/CreatureMoveActivity.cpp; sourceTree = "<group>"; };
-		3CB1098B1D74CE92002C4121 /* CreatureMoveActivity.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CreatureMoveActivity.hpp; path = Activities/CreatureMoveActivity.hpp; sourceTree = "<group>"; };
+		3CB1098A1D74CE92002C4121 /* SimpleMoveActivity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SimpleMoveActivity.cpp; path = Activities/SimpleMoveActivity.cpp; sourceTree = "<group>"; };
+		3CB1098B1D74CE92002C4121 /* SimpleMoveActivity.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = SimpleMoveActivity.hpp; path = Activities/SimpleMoveActivity.hpp; sourceTree = "<group>"; };
 		3CB1098D1D74D0CE002C4121 /* ActivityQueue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ActivityQueue.cpp; path = Activities/ActivityQueue.cpp; sourceTree = "<group>"; };
 		3CB1098E1D74D0CE002C4121 /* ActivityQueue.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ActivityQueue.hpp; path = Activities/ActivityQueue.hpp; sourceTree = "<group>"; };
 		3CB109911D74ECB1002C4121 /* Constants.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Constants.cpp; path = Common/Constants.cpp; sourceTree = "<group>"; };
@@ -477,10 +492,20 @@
 			children = (
 				3CB109871D74CCAB002C4121 /* FDActivity.cpp */,
 				3CB109881D74CCAB002C4121 /* FDActivity.hpp */,
-				3CB1098A1D74CE92002C4121 /* CreatureMoveActivity.cpp */,
-				3CB1098B1D74CE92002C4121 /* CreatureMoveActivity.hpp */,
+				3CB1098A1D74CE92002C4121 /* SimpleMoveActivity.cpp */,
+				3CB1098B1D74CE92002C4121 /* SimpleMoveActivity.hpp */,
 				3CB1098D1D74D0CE002C4121 /* ActivityQueue.cpp */,
 				3CB1098E1D74D0CE002C4121 /* ActivityQueue.hpp */,
+				3C8D68161D78EA2F00CC3616 /* CombinedActivity.cpp */,
+				3C8D68171D78EA2F00CC3616 /* CombinedActivity.hpp */,
+				3C8D681F1D78EEC900CC3616 /* BatchActivity.cpp */,
+				3C8D68201D78EEC900CC3616 /* BatchActivity.hpp */,
+				3C8D68191D78EAAE00CC3616 /* FieldActivity.cpp */,
+				3C8D681A1D78EAAE00CC3616 /* FieldActivity.hpp */,
+				3C8D681C1D78EB3B00CC3616 /* GlobalActivity.cpp */,
+				3C8D681D1D78EB3B00CC3616 /* GlobalActivity.hpp */,
+				3C8D68221D78F24300CC3616 /* CreatureMoveActivity.cpp */,
+				3C8D68231D78F24300CC3616 /* CreatureMoveActivity.hpp */,
 			);
 			name = Activities;
 			sourceTree = "<group>";
@@ -818,6 +843,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3CB109A71D74F46C002C4121 /* MoneyItemDefinition.cpp in Sources */,
+				3C8D68211D78EEC900CC3616 /* BatchActivity.cpp in Sources */,
+				3C8D681E1D78EB3B00CC3616 /* GlobalActivity.cpp in Sources */,
 				3CB109721D6E6BC3002C4121 /* Creature.cpp in Sources */,
 				3CD12F1C1D6D033800CDF793 /* BattleRecord.cpp in Sources */,
 				3CD12F191D6CE7F200CDF793 /* CreatureRecord.cpp in Sources */,
@@ -829,6 +856,7 @@
 				3CB109931D74ECB1002C4121 /* Constants.cpp in Sources */,
 				3CB109A41D74F440002C4121 /* SpecialItemDefinition.cpp in Sources */,
 				3CD12F291D6D065800CDF793 /* BattleField.cpp in Sources */,
+				3C8D681B1D78EAAE00CC3616 /* FieldActivity.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				3CB109821D6F74BC002C4121 /* CreatureDefinition.cpp in Sources */,
 				3CB109971D74F33C002C4121 /* MagicDefinition.cpp in Sources */,
@@ -848,14 +876,16 @@
 				3CB1098F1D74D0CE002C4121 /* ActivityQueue.cpp in Sources */,
 				3CB1096F1D6E6B8F002C4121 /* BattleObject.cpp in Sources */,
 				3CB109791D6F6489002C4121 /* FDFrame.cpp in Sources */,
+				3C8D68181D78EA2F00CC3616 /* CombinedActivity.cpp in Sources */,
 				3C18834E1D6BA1490059056E /* TitleLayer.cpp in Sources */,
 				3CD12F201D6D051200CDF793 /* StringUtil.cpp in Sources */,
 				3CB109B01D74FF92002C4121 /* FDNumber.cpp in Sources */,
 				3CB109851D6F7626002C4121 /* AnimationLibrary.cpp in Sources */,
 				3CB109AA1D74F816002C4121 /* CreatureChapterRecord.cpp in Sources */,
+				3C8D68241D78F24300CC3616 /* CreatureMoveActivity.cpp in Sources */,
 				3CA318291D760C6D0042B56A /* AICreature.cpp in Sources */,
 				3CB1099B1D74F3E2002C4121 /* ItemDefinition.cpp in Sources */,
-				3CB1098C1D74CE92002C4121 /* CreatureMoveActivity.cpp in Sources */,
+				3CB1098C1D74CE92002C4121 /* SimpleMoveActivity.cpp in Sources */,
 				3C18834B1D6BA0970059056E /* SceneCreator.cpp in Sources */,
 				3CB109691D6E0BD1002C4121 /* Ground.cpp in Sources */,
 				3CA318261D760AD00042B56A /* CreatureData.cpp in Sources */,

@@ -2,7 +2,7 @@
 //  CreatureMoveActivity.hpp
 //  FlameDragonX
 //
-//  Created by SuiYi on 8/29/16.
+//  Created by SuiYi on 9/1/16.
 //
 //
 
@@ -10,32 +10,33 @@
 #define CreatureMoveActivity_hpp
 
 #include "cocos2d.h"
-#include "FDActivity.hpp"
 #include "Creature.hpp"
+#include "CombinedActivity.hpp"
+#include "SimpleMoveActivity.hpp"
 
 class BattleField;
 
 USING_NS_CC;
 
-class CreatureMoveActivity : public FDActivity
+class CreatureMoveActivity : public CombinedActivity
 {
 private:
     
-    BattleField * _battleField;
-    
+    BattleField * _field;
     Creature * _creature;
-    Vec2 _targetLocation;
-    
-    float _speed;
-    int deltaX;
-    int deltaY;
     
 public:
     
-    CreatureMoveActivity(BattleField * field, Creature * creature, Vec2 toPosition);
+    CreatureMoveActivity(BattleField * field, Creature * creature);
+    CreatureMoveActivity(BattleField * field, Creature * creature, Vec2 pos1);
+    CreatureMoveActivity(BattleField * field, Creature * creature, Vec2 pos1, Vec2 pos2);
+    CreatureMoveActivity(BattleField * field, Creature * creature, Vec2 pos1, Vec2 pos2, Vec2 pos3);
+    CreatureMoveActivity(BattleField * field, Creature * creature, Vec2 pos1, Vec2 pos2, Vec2 pos3, Vec2 pos4);
+    CreatureMoveActivity(BattleField * field, Creature * creature, Vec2 pos1, Vec2 pos2, Vec2 pos3, Vec2 pos4, Vec2 pos5);
     
-    void initialize();
-    void internalTick(int synchronizeTick);
-
+    void appendPosition(Vec2 position);
+    void appendPosition(int posX, int posY);
+    
 };
 #endif /* CreatureMoveActivity_hpp */
+

@@ -72,11 +72,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/Battle/BattleField.cpp"
-            timestampString = "494198993.210568"
+            timestampString = "494466920.334597"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
             landmarkName = "BattleField::initWithChapter(int chapterId)"
             landmarkType = "5">
          </BreakpointContent>
@@ -104,11 +104,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/Animation/AnimationLibrary.cpp"
-            timestampString = "494207563.882148"
+            timestampString = "494461837.785902"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
             landmarkName = "AnimationLibrary::getIdleAnimation(int creatureAniId)"
             landmarkType = "5">
          </BreakpointContent>
@@ -119,28 +119,12 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "../Classes/Animation/AnimationLibrary.cpp"
-            timestampString = "494207563.882148"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
-            landmarkName = "AnimationLibrary::loadBattleAnimationsForCreature(int creatureAniId)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "../Classes/Battle/BattleField.cpp"
-            timestampString = "494200501.70935"
+            timestampString = "494466920.334597"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "213"
-            endingLineNumber = "213"
+            startingLineNumber = "243"
+            endingLineNumber = "243"
             landmarkName = "BattleField::addCreature(Creature * creature, Vec2 position)"
             landmarkType = "5">
          </BreakpointContent>
@@ -168,11 +152,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/Battle/BattleField.cpp"
-            timestampString = "494200501.70935"
+            timestampString = "494466920.334597"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "236"
-            endingLineNumber = "236"
+            startingLineNumber = "266"
+            endingLineNumber = "266"
             landmarkName = "BattleField::activityMoveCreature(Vec2 position, Vec2 target)"
             landmarkType = "5">
          </BreakpointContent>
@@ -180,15 +164,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/Battle/BattleField.cpp"
-            timestampString = "494200501.70935"
+            timestampString = "494466920.334597"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "177"
-            endingLineNumber = "177"
+            startingLineNumber = "207"
+            endingLineNumber = "207"
             landmarkName = "BattleField::getCreatureAt(int x, int y)"
             landmarkType = "5">
          </BreakpointContent>
@@ -200,13 +184,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/Activities/CreatureMoveActivity.cpp"
-            timestampString = "494207563.882148"
+            timestampString = "494466629.131076"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
-            landmarkName = "CreatureMoveActivity::internalTick(int synchronizeTick)"
-            landmarkType = "5">
+            startingLineNumber = "112"
+            endingLineNumber = "112">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -216,13 +198,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/Activities/CreatureMoveActivity.cpp"
-            timestampString = "494207563.882148"
+            timestampString = "494466629.131076"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
-            landmarkName = "CreatureMoveActivity::initialize()"
-            landmarkType = "5">
+            startingLineNumber = "82"
+            endingLineNumber = "82">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -248,13 +228,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/Activities/CreatureMoveActivity.cpp"
-            timestampString = "494207563.882148"
+            timestampString = "494466629.131076"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
-            landmarkName = "CreatureMoveActivity::internalTick(int synchronizeTick)"
-            landmarkType = "5">
+            startingLineNumber = "113"
+            endingLineNumber = "113">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -334,6 +312,22 @@
             startingLineNumber = "29"
             endingLineNumber = "29"
             landmarkName = "BattleScene::BattleScene(ChapterRecord* record)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../Classes/Animation/AnimationLibrary.cpp"
+            timestampString = "494461837.785902"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
+            landmarkName = "AnimationLibrary::getIdleAnimation(int creatureAniId)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
