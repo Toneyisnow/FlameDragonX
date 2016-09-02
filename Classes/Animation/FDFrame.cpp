@@ -25,7 +25,17 @@ FDFrame::FDFrame(std::string filename, Vec2 offset, int tickCount)
     
     this->_texture = Director::getInstance()->getTextureCache()->addImage(filename);
     this->_offset = offset;
+    this->_opacity = -1;
     this->_tickCount = tickCount;
+}
+
+FDFrame::FDFrame(std::string filename, float opacity)
+{
+    
+    this->_texture = Director::getInstance()->getTextureCache()->addImage(filename);
+    this->_offset = Vec2(0, 0);
+    this->_opacity = _opacity;
+    this->_tickCount = 0;
 }
 
 FDFrame::~FDFrame()
@@ -58,4 +68,7 @@ void FDFrame::renderFrame(Sprite * sprite)
 {
     sprite->setTexture(_texture);
     
+    if (_opacity >= 0) {
+        sprite->setOpacity(_opacity);
+    }
 }

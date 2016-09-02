@@ -79,8 +79,8 @@ public:
     Vec2 convertPositionToLocation(Vec2 pos);
     Vec2 convertLocationToPosition(Vec2 loc);
     
-    void activityMoveCreature(Vec2 position, Vec2 target);
-    void activityMoveCreatureWithMenu(Vec2 position, Vec2 target);
+    //void activityMoveCreature(Vec2 position, Vec2 target);
+    //void activityMoveCreatureWithMenu(Vec2 position, Vec2 target);
     
     void addCreature(Creature * creature, Vec2 position);
     

@@ -116,29 +116,7 @@ void BattleField::initWithChapter(int chapterId)
     activity2->release();
     
     
-    //this->activityMoveCreature(Vec2(3, 24), Vec2(3, 2));
-    //this->activityMoveCreature(Vec2(3, 24), Vec2(10, 2));
     
-    //// creature->setGesture(GestureStatus_WalkingLeft);
-    
-    /*
-    Texture2D * texture = Director::getInstance()->getTextureCache()->addImage("Icons/001/Icon-001-02.png");
-    sprite->setTexture(texture);
-    */
-    // image->get
-    /*
-    //Sprite * test = Sprite::create("Icons/001/Icon-001-02.png");
-    Sprite * test = Sprite::create();
-    test->setTexture("Icons/001/Icon-001-02.png");
-    
-    Vec2 location = this->convertPositionToLocation(Vec2(24, 24));
-    test->setPosition(location);
-    _groundImage->addChild(test, 10);
-    Sprite * test2 = Sprite::create("Icons/001/Icon-001-02.png");
-    Vec2 location2 = this->convertPositionToLocation(Vec2(1, 1));
-    test2->setPosition(location2);
-    _groundImage->addChild(test2, 10);
-     */
 }
 
 Vec2 BattleField::getFieldPositionOnScreen()
@@ -258,21 +236,6 @@ void BattleField::addCreature(Creature * creature, Vec2 position)
         default:
             break;
     }
-}
-
-
-void BattleField::activityMoveCreature(Vec2 position, Vec2 target)
-{
-    Creature * creature = this->getCreatureAt(position.x , position.y);
-    CreatureMoveActivity * activity = new CreatureMoveActivity(this, creature);
-    
-    _battleScene->getActivityQueue()->pushBackActivity(activity);
-    activity->release();
-}
-
-void BattleField::activityMoveCreatureWithMenu(Vec2 position, Vec2 target)
-{
-    
 }
 
 void BattleField::takeTick(int synchronizedTick)

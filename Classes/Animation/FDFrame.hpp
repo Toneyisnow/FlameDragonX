@@ -19,6 +19,8 @@ private:
     
     Texture2D * _texture;
     Vec2 _offset;
+    float _opacity;
+    
     int _tickCount;
     
     Texture2D * getTexture();
@@ -29,6 +31,7 @@ public:
     FDFrame(std::string filename);
     FDFrame(std::string filename, int tickCount);
     FDFrame(std::string filename, Vec2 offset, int tickCount);
+    FDFrame(std::string filename, float opacity);
     ~FDFrame();
     
     void setTickCount(int count);

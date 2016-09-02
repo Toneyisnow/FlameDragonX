@@ -24,6 +24,8 @@
 		3C8D681E1D78EB3B00CC3616 /* GlobalActivity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C8D681C1D78EB3B00CC3616 /* GlobalActivity.cpp */; };
 		3C8D68211D78EEC900CC3616 /* BatchActivity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C8D681F1D78EEC900CC3616 /* BatchActivity.cpp */; };
 		3C8D68241D78F24300CC3616 /* CreatureMoveActivity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C8D68221D78F24300CC3616 /* CreatureMoveActivity.cpp */; };
+		3C8D68271D78F92300CC3616 /* ScopeIndicator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C8D68251D78F92300CC3616 /* ScopeIndicator.cpp */; };
+		3C8D68291D78FB8000CC3616 /* Others in Resources */ = {isa = PBXBuildFile; fileRef = 3C8D68281D78FB8000CC3616 /* Others */; };
 		3CA318261D760AD00042B56A /* CreatureData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CA318241D760AD00042B56A /* CreatureData.cpp */; };
 		3CA318291D760C6D0042B56A /* AICreature.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CA318271D760C6D0042B56A /* AICreature.cpp */; };
 		3CA3182C1D760E260042B56A /* DefendItemDefinition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CA3182A1D760E260042B56A /* DefendItemDefinition.cpp */; };
@@ -185,6 +187,9 @@
 		3C8D68201D78EEC900CC3616 /* BatchActivity.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = BatchActivity.hpp; path = Activities/BatchActivity.hpp; sourceTree = "<group>"; };
 		3C8D68221D78F24300CC3616 /* CreatureMoveActivity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CreatureMoveActivity.cpp; path = Activities/CreatureMoveActivity.cpp; sourceTree = "<group>"; };
 		3C8D68231D78F24300CC3616 /* CreatureMoveActivity.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CreatureMoveActivity.hpp; path = Activities/CreatureMoveActivity.hpp; sourceTree = "<group>"; };
+		3C8D68251D78F92300CC3616 /* ScopeIndicator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ScopeIndicator.cpp; path = Objects/ScopeIndicator.cpp; sourceTree = "<group>"; };
+		3C8D68261D78F92300CC3616 /* ScopeIndicator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ScopeIndicator.hpp; path = Objects/ScopeIndicator.hpp; sourceTree = "<group>"; };
+		3C8D68281D78FB8000CC3616 /* Others */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Others; sourceTree = "<group>"; };
 		3CA318241D760AD00042B56A /* CreatureData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CreatureData.cpp; path = Objects/CreatureData.cpp; sourceTree = "<group>"; };
 		3CA318251D760AD00042B56A /* CreatureData.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CreatureData.hpp; path = Objects/CreatureData.hpp; sourceTree = "<group>"; };
 		3CA318271D760C6D0042B56A /* AICreature.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AICreature.cpp; path = Objects/AICreature.cpp; sourceTree = "<group>"; };
@@ -468,6 +473,8 @@
 				3CA318251D760AD00042B56A /* CreatureData.hpp */,
 				3CA318271D760C6D0042B56A /* AICreature.cpp */,
 				3CA318281D760C6D0042B56A /* AICreature.hpp */,
+				3C8D68251D78F92300CC3616 /* ScopeIndicator.cpp */,
+				3C8D68261D78F92300CC3616 /* ScopeIndicator.hpp */,
 			);
 			name = Objects;
 			sourceTree = "<group>";
@@ -602,6 +609,7 @@
 		46880B7519C43A67006E1F66 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3C8D68281D78FB8000CC3616 /* Others */,
 				3CB1096A1D6E5E66002C4121 /* Icons */,
 				3CD12F2D1D6D074800CDF793 /* Data */,
 				3CD12F2B1D6D073F00CDF793 /* Maps */,
@@ -789,6 +797,7 @@
 				3CB1096B1D6E5E66002C4121 /* Icons in Resources */,
 				5087E78117EB970100C73F5D /* Icon-120.png in Resources */,
 				5087E78617EB970100C73F5D /* Icon-76.png in Resources */,
+				3C8D68291D78FB8000CC3616 /* Others in Resources */,
 				5087E77F17EB970100C73F5D /* Default@2x.png in Resources */,
 				50EF629917ECD46A001EB2F8 /* Icon-100.png in Resources */,
 				3CD12EF71D6BB11600CDF793 /* Title_Continue_0.png in Resources */,
@@ -874,6 +883,7 @@
 				3CB1097C1D6F6635002C4121 /* SlideAnimation.cpp in Sources */,
 				3CD12F231D6D058000CDF793 /* TextFileReader.cpp in Sources */,
 				3CB1098F1D74D0CE002C4121 /* ActivityQueue.cpp in Sources */,
+				3C8D68271D78F92300CC3616 /* ScopeIndicator.cpp in Sources */,
 				3CB1096F1D6E6B8F002C4121 /* BattleObject.cpp in Sources */,
 				3CB109791D6F6489002C4121 /* FDFrame.cpp in Sources */,
 				3C8D68181D78EA2F00CC3616 /* CombinedActivity.cpp in Sources */,

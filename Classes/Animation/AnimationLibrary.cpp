@@ -89,6 +89,17 @@ void AnimationLibrary::loadWalkAnimation(int creatureAniId, Direction direction)
     walkAnimation->release();
 }
 
+void AnimationLibrary::loadScopeIndicatorAnimation()
+{
+    std::string key = "ScopeIndicator";
+    
+    SlideAnimation *animation = new SlideAnimation(Constants::TickPerFrame_IdleAnimation, true, true);
+    std::string filename = "Others/WhiteBlock.png";
+    
+    FDFrame *frame = new FDFrame(filename, 40);
+    animation->appendFrame(frame);
+    frame->release();
+}
 
 SlideAnimation * AnimationLibrary::getIdleAnimation(int creatureAniId)
 {
@@ -113,6 +124,18 @@ SlideAnimation * AnimationLibrary::getWalkAnimation(int creatureAniId, Direction
 
     return _slideAnimationDictionary->at(key);
 }
+
+SlideAnimation * AnimationLibrary::getScopeIndicatorAnimation()
+{
+    std::string key = "ScopeIndicator";
+    if (_slideAnimationDictionary->at(key) == nullptr)
+    {
+        this->loadScopeIndicatorAnimation();
+    }
+    
+    return _slideAnimationDictionary->at(key);
+}
+
 
 std::string AnimationLibrary::filenameForBattleFieldAnimation(int creatureAniId, int index)
 {

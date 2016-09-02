@@ -27,6 +27,7 @@ private:
     //// void loadWalkAnimationForCreature(int creatureAniId, Direction direction, int centerImageId);
     void loadIdleAnimation(int creatureAniId);
     void loadWalkAnimation(int creatureAniId, Direction direction);
+    void loadScopeIndicatorAnimation();
     
     
 public:
@@ -42,7 +43,7 @@ public:
     
     SlideAnimation * getIdleAnimation(int creatureAniId);
     SlideAnimation * getWalkAnimation(int creatureAniId, Direction direction);
-    
+    SlideAnimation * getScopeIndicatorAnimation();
     
 };
 #endif /* AnimationLibrary_hpp */
