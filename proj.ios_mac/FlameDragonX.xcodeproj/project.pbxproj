@@ -26,6 +26,14 @@
 		3C8D68241D78F24300CC3616 /* CreatureMoveActivity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C8D68221D78F24300CC3616 /* CreatureMoveActivity.cpp */; };
 		3C8D68271D78F92300CC3616 /* ScopeIndicator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C8D68251D78F92300CC3616 /* ScopeIndicator.cpp */; };
 		3C8D68291D78FB8000CC3616 /* Others in Resources */ = {isa = PBXBuildFile; fileRef = 3C8D68281D78FB8000CC3616 /* Others */; };
+		3C8D682F1D79F4A900CC3616 /* FDEvent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C8D682D1D79F4A900CC3616 /* FDEvent.cpp */; };
+		3C8D68321D79F4E600CC3616 /* EventCondition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C8D68301D79F4E600CC3616 /* EventCondition.cpp */; };
+		3C8D68351D79F52500CC3616 /* EventHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C8D68331D79F52500CC3616 /* EventHandler.cpp */; };
+		3C8D68381D79F54900CC3616 /* EventLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C8D68361D79F54900CC3616 /* EventLoader.cpp */; };
+		3C8D683B1D79F56E00CC3616 /* EventLoaderFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C8D68391D79F56E00CC3616 /* EventLoaderFactory.cpp */; };
+		3C8D683E1D79F5BB00CC3616 /* EventChapter1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C8D683C1D79F5BB00CC3616 /* EventChapter1.cpp */; };
+		3C8D68411D7A095E00CC3616 /* EventChapterCommon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C8D683F1D7A095E00CC3616 /* EventChapterCommon.cpp */; };
+		3C8D68441D7A09C200CC3616 /* EventMethod.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C8D68421D7A09C200CC3616 /* EventMethod.cpp */; };
 		3CA318261D760AD00042B56A /* CreatureData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CA318241D760AD00042B56A /* CreatureData.cpp */; };
 		3CA318291D760C6D0042B56A /* AICreature.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CA318271D760C6D0042B56A /* AICreature.cpp */; };
 		3CA3182C1D760E260042B56A /* DefendItemDefinition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CA3182A1D760E260042B56A /* DefendItemDefinition.cpp */; };
@@ -190,6 +198,22 @@
 		3C8D68251D78F92300CC3616 /* ScopeIndicator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ScopeIndicator.cpp; path = Objects/ScopeIndicator.cpp; sourceTree = "<group>"; };
 		3C8D68261D78F92300CC3616 /* ScopeIndicator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ScopeIndicator.hpp; path = Objects/ScopeIndicator.hpp; sourceTree = "<group>"; };
 		3C8D68281D78FB8000CC3616 /* Others */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Others; sourceTree = "<group>"; };
+		3C8D682D1D79F4A900CC3616 /* FDEvent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FDEvent.cpp; path = Battle/Events/FDEvent.cpp; sourceTree = "<group>"; };
+		3C8D682E1D79F4A900CC3616 /* FDEvent.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = FDEvent.hpp; path = Battle/Events/FDEvent.hpp; sourceTree = "<group>"; };
+		3C8D68301D79F4E600CC3616 /* EventCondition.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EventCondition.cpp; path = Battle/Events/Condition/EventCondition.cpp; sourceTree = "<group>"; };
+		3C8D68311D79F4E600CC3616 /* EventCondition.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = EventCondition.hpp; path = Battle/Events/Condition/EventCondition.hpp; sourceTree = "<group>"; };
+		3C8D68331D79F52500CC3616 /* EventHandler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EventHandler.cpp; path = Battle/Events/EventHandler.cpp; sourceTree = "<group>"; };
+		3C8D68341D79F52500CC3616 /* EventHandler.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = EventHandler.hpp; path = Battle/Events/EventHandler.hpp; sourceTree = "<group>"; };
+		3C8D68361D79F54900CC3616 /* EventLoader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EventLoader.cpp; path = Battle/Events/EventLoader.cpp; sourceTree = "<group>"; };
+		3C8D68371D79F54900CC3616 /* EventLoader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = EventLoader.hpp; path = Battle/Events/EventLoader.hpp; sourceTree = "<group>"; };
+		3C8D68391D79F56E00CC3616 /* EventLoaderFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EventLoaderFactory.cpp; path = Battle/Events/EventLoaderFactory.cpp; sourceTree = "<group>"; };
+		3C8D683A1D79F56E00CC3616 /* EventLoaderFactory.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = EventLoaderFactory.hpp; path = Battle/Events/EventLoaderFactory.hpp; sourceTree = "<group>"; };
+		3C8D683C1D79F5BB00CC3616 /* EventChapter1.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EventChapter1.cpp; path = Battle/Events/Chapter/EventChapter1.cpp; sourceTree = "<group>"; };
+		3C8D683D1D79F5BB00CC3616 /* EventChapter1.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = EventChapter1.hpp; path = Battle/Events/Chapter/EventChapter1.hpp; sourceTree = "<group>"; };
+		3C8D683F1D7A095E00CC3616 /* EventChapterCommon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EventChapterCommon.cpp; path = Battle/Events/Chapter/EventChapterCommon.cpp; sourceTree = "<group>"; };
+		3C8D68401D7A095E00CC3616 /* EventChapterCommon.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = EventChapterCommon.hpp; path = Battle/Events/Chapter/EventChapterCommon.hpp; sourceTree = "<group>"; };
+		3C8D68421D7A09C200CC3616 /* EventMethod.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EventMethod.cpp; path = Battle/EventMethod.cpp; sourceTree = "<group>"; };
+		3C8D68431D7A09C200CC3616 /* EventMethod.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = EventMethod.hpp; path = Battle/EventMethod.hpp; sourceTree = "<group>"; };
 		3CA318241D760AD00042B56A /* CreatureData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CreatureData.cpp; path = Objects/CreatureData.cpp; sourceTree = "<group>"; };
 		3CA318251D760AD00042B56A /* CreatureData.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CreatureData.hpp; path = Objects/CreatureData.hpp; sourceTree = "<group>"; };
 		3CA318271D760C6D0042B56A /* AICreature.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AICreature.cpp; path = Objects/AICreature.cpp; sourceTree = "<group>"; };
@@ -460,6 +484,45 @@
 			name = Title;
 			sourceTree = "<group>";
 		};
+		3C8D682A1D79F46200CC3616 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				3C8D682C1D79F49400CC3616 /* Chapter */,
+				3C8D682B1D79F48D00CC3616 /* Condition */,
+				3C8D682D1D79F4A900CC3616 /* FDEvent.cpp */,
+				3C8D682E1D79F4A900CC3616 /* FDEvent.hpp */,
+				3C8D68331D79F52500CC3616 /* EventHandler.cpp */,
+				3C8D68341D79F52500CC3616 /* EventHandler.hpp */,
+				3C8D68361D79F54900CC3616 /* EventLoader.cpp */,
+				3C8D68371D79F54900CC3616 /* EventLoader.hpp */,
+				3C8D68391D79F56E00CC3616 /* EventLoaderFactory.cpp */,
+				3C8D683A1D79F56E00CC3616 /* EventLoaderFactory.hpp */,
+				3C8D68421D7A09C200CC3616 /* EventMethod.cpp */,
+				3C8D68431D7A09C200CC3616 /* EventMethod.hpp */,
+			);
+			name = Events;
+			sourceTree = "<group>";
+		};
+		3C8D682B1D79F48D00CC3616 /* Condition */ = {
+			isa = PBXGroup;
+			children = (
+				3C8D68301D79F4E600CC3616 /* EventCondition.cpp */,
+				3C8D68311D79F4E600CC3616 /* EventCondition.hpp */,
+			);
+			name = Condition;
+			sourceTree = "<group>";
+		};
+		3C8D682C1D79F49400CC3616 /* Chapter */ = {
+			isa = PBXGroup;
+			children = (
+				3C8D683C1D79F5BB00CC3616 /* EventChapter1.cpp */,
+				3C8D683D1D79F5BB00CC3616 /* EventChapter1.hpp */,
+				3C8D683F1D7A095E00CC3616 /* EventChapterCommon.cpp */,
+				3C8D68401D7A095E00CC3616 /* EventChapterCommon.hpp */,
+			);
+			name = Chapter;
+			sourceTree = "<group>";
+		};
 		3CB1096C1D6E6B68002C4121 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
@@ -594,6 +657,7 @@
 		3CD12F241D6D060300CDF793 /* Battle */ = {
 			isa = PBXGroup;
 			children = (
+				3C8D682A1D79F46200CC3616 /* Events */,
 				3CD12F261D6D065800CDF793 /* BattleField.cpp */,
 				3CD12F271D6D065800CDF793 /* BattleField.hpp */,
 				3CD12F281D6D065800CDF793 /* BattleScene.cpp */,
@@ -852,6 +916,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3CB109A71D74F46C002C4121 /* MoneyItemDefinition.cpp in Sources */,
+				3C8D68411D7A095E00CC3616 /* EventChapterCommon.cpp in Sources */,
+				3C8D683E1D79F5BB00CC3616 /* EventChapter1.cpp in Sources */,
 				3C8D68211D78EEC900CC3616 /* BatchActivity.cpp in Sources */,
 				3C8D681E1D78EB3B00CC3616 /* GlobalActivity.cpp in Sources */,
 				3CB109721D6E6BC3002C4121 /* Creature.cpp in Sources */,
@@ -867,18 +933,23 @@
 				3CD12F291D6D065800CDF793 /* BattleField.cpp in Sources */,
 				3C8D681B1D78EAAE00CC3616 /* FieldActivity.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
+				3C8D68321D79F4E600CC3616 /* EventCondition.cpp in Sources */,
 				3CB109821D6F74BC002C4121 /* CreatureDefinition.cpp in Sources */,
 				3CB109971D74F33C002C4121 /* MagicDefinition.cpp in Sources */,
 				3CB1099E1D74F3FE002C4121 /* UsableItemDefinition.cpp in Sources */,
 				3CB109AD1D74FC5E002C4121 /* DataStore.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
+				3C8D683B1D79F56E00CC3616 /* EventLoaderFactory.cpp in Sources */,
 				3CB109891D74CCAB002C4121 /* FDActivity.cpp in Sources */,
 				3CB109A11D74F41E002C4121 /* AttackItemDefinition.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				3CB1097F1D6F69AC002C4121 /* FDAnimate.cpp in Sources */,
 				3CD12F071D6BC86B00CDF793 /* FDScreen.cpp in Sources */,
+				3C8D68441D7A09C200CC3616 /* EventMethod.cpp in Sources */,
 				3CD12F161D6CE77800CDF793 /* ChapterRecord.cpp in Sources */,
 				3CA3182C1D760E260042B56A /* DefendItemDefinition.cpp in Sources */,
+				3C8D68351D79F52500CC3616 /* EventHandler.cpp in Sources */,
+				3C8D682F1D79F4A900CC3616 /* FDEvent.cpp in Sources */,
 				3CD12F2A1D6D065800CDF793 /* BattleScene.cpp in Sources */,
 				3CB1097C1D6F6635002C4121 /* SlideAnimation.cpp in Sources */,
 				3CD12F231D6D058000CDF793 /* TextFileReader.cpp in Sources */,
@@ -893,6 +964,7 @@
 				3CB109851D6F7626002C4121 /* AnimationLibrary.cpp in Sources */,
 				3CB109AA1D74F816002C4121 /* CreatureChapterRecord.cpp in Sources */,
 				3C8D68241D78F24300CC3616 /* CreatureMoveActivity.cpp in Sources */,
+				3C8D68381D79F54900CC3616 /* EventLoader.cpp in Sources */,
 				3CA318291D760C6D0042B56A /* AICreature.cpp in Sources */,
 				3CB1099B1D74F3E2002C4121 /* ItemDefinition.cpp in Sources */,
 				3CB1098C1D74CE92002C4121 /* SimpleMoveActivity.cpp in Sources */,

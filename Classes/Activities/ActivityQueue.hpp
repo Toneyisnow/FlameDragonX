@@ -23,6 +23,8 @@ private:
     
     FDActivity * _currentActivity;
     
+    int _appendToIndex;
+    
 public:
     
     ActivityQueue();
@@ -30,6 +32,8 @@ public:
     
     void pushBackActivity(FDActivity * activity);
     void insertActivity(FDActivity * activity);
+    void appendActivity(FDActivity * activity);
+    
     
     void takeTick(int synchronizedTick);
     

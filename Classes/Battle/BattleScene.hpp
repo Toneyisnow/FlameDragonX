@@ -15,6 +15,7 @@
 #include "BattleField.hpp"
 #include "FDActivity.hpp"
 #include "ActivityQueue.hpp"
+#include "EventHandler.hpp"
 
 class BattleScene : public cocos2d::Scene
 {
@@ -27,7 +28,7 @@ private:
     
     
     ActivityQueue * _activityQueue;
-    
+    EventHandler * _eventHandler;
     
     
     void takeDeltaTimeTck(float dt);
@@ -47,6 +48,9 @@ public:
     // static BattleScene* loadByBattleRecord(BattleRecord* record);
     
     // BattleScene();
+  
+    void testCallMethod(std::function<void(int)> callback);
+    void testCallBack(int num);
     
 };
 

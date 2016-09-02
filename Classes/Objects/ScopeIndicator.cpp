@@ -10,5 +10,5 @@
 
 ScopeIndicator::ScopeIndicator()
 {
-    _animation = 
+    _animation = nullptr;
 }

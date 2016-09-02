@@ -14,14 +14,6 @@ CreatureMoveActivity::CreatureMoveActivity(BattleField * field, Creature * creat
     this->_creature = creature;
 }
 
-CreatureMoveActivity::CreatureMoveActivity(BattleField * field, Creature * creature, Vec2 pos1)
-{
-    SimpleMoveActivity * activity1 = new SimpleMoveActivity(field, creature, pos1);
-    this->appendActivity(activity1);
-    activity1->release();
-}
-
-
 
 void CreatureMoveActivity::appendPosition(int posX, int posY)
 {

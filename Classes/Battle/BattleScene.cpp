@@ -23,16 +23,6 @@ BattleScene::BattleScene(ChapterRecord* record)
     AnimationLibrary::getInstance()->preloadBattleAnimationsForCreature(2);
     
     DataStore::getInstance()->loadData();
-    CreatureDefinition * def = DataStore::getInstance()->getCreatureDefinition(3);
-    CreatureDefinition * def2 = DataStore::getInstance()->getCreatureDefinition(50508);
-    
-    MoneyItemDefinition * item = (MoneyItemDefinition *)DataStore::getInstance()->getItemDefinition(901);
-    
-    log("Definition of 50508: Ani=%d EX=%d", def2->animationId, def2->initialEX);
-    
-    //// UserDefault::getInstance()->setIntegerForKey(<#const char *key#>, <#int value#>)
-   
-    
     _activityQueue = new ActivityQueue();
     
     _battleField = new BattleField(this, record->getChapterId());
@@ -42,10 +32,33 @@ BattleScene::BattleScene(ChapterRecord* record)
     
     //layer->initWithChapter(record->getChapterId());
     
+    _eventHandler = new EventHandler(this);
+    _eventHandler->initFromDefinition(record->getChapterId());
+    
     
     
     _synchronizedTickCount = 0;
     schedule(CC_SCHEDULE_SELECTOR(BattleScene::takeDeltaTimeTck), 1.0 / Constants::GAME_FPS);
+    
+    
+    
+    //////// Test Functions
+    
+    CreatureDefinition * def = DataStore::getInstance()->getCreatureDefinition(3);
+    CreatureDefinition * def2 = DataStore::getInstance()->getCreatureDefinition(50508);
+    
+    MoneyItemDefinition * item = (MoneyItemDefinition *)DataStore::getInstance()->getItemDefinition(901);
+    
+    log("Definition of 50508: Ani=%d EX=%d", def2->animationId, def2->initialEX);
+    
+    //// UserDefault::getInstance()->setIntegerForKey(<#const char *key#>, <#int value#>)
+    
+    auto type = &BattleScene::testCallBack;
+    // std::function<void(int)> method = std::bind(&BattleScene::testCallBack, this, std::placeholders::_1);
+    std::function<void(int)> method = std::bind(type, this, std::placeholders::_1);
+    testCallMethod(method);
+    
+    
     
 }
 
@@ -89,3 +102,12 @@ void BattleScene::takeTick(int synchronizedTick)
     
 }
 
+void BattleScene::testCallMethod(std::function<void(int)> callback)
+{
+    callback(4);
+}
+
+void BattleScene::testCallBack(int num)
+{
+    log("Called to here %d", num);
+}
