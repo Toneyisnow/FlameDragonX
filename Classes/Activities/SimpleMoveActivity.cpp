@@ -10,12 +10,12 @@
 #include "BattleField.hpp"
 #include "Constants.hpp"
 
-SimpleMoveActivity::SimpleMoveActivity(BattleField * field, BattleObject * object, Vec2 toPosition)
+SimpleMoveActivity::SimpleMoveActivity(BattleField * field, BattleObject * object, Vec2 toPosition, float speed)
 : FieldActivity(field)
 {
     this->_object = object;
     this->_targetLocation = _battleField->convertPositionToLocation(toPosition);
-    this->_speed = Constants::DEFAULT_MOVE_SPEED;
+    this->_speed = speed;
     
 }
 

@@ -28,7 +28,7 @@ private:
     
 public:
     
-    SimpleMoveActivity(BattleField * field, BattleObject * object, Vec2 toPosition);
+    SimpleMoveActivity(BattleField * field, BattleObject * object, Vec2 toPosition, float speed);
     
     void initialize();
     void internalTick(int synchronizeTick);

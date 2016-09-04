@@ -7,6 +7,7 @@
 //
 
 #include "CreatureMoveActivity.hpp"
+#include "Constants.hpp"
 
 CreatureMoveActivity * CreatureMoveActivity::create(BattleField * field, Creature * creature, RoutePoint * route)
 {
@@ -33,7 +34,7 @@ void CreatureMoveActivity::appendPosition(int posX, int posY)
 
 void CreatureMoveActivity::appendPosition(Vec2 position)
 {
-    SimpleMoveActivity * activity = new SimpleMoveActivity(_field, _creature, position);
+    SimpleMoveActivity * activity = new SimpleMoveActivity(_field, _creature, position, Constants::CREATURE_MOVE_SPEED);
     this->appendActivity(activity);
     activity->release();
 }

@@ -71,6 +71,7 @@ public:
     
     Creature * getCreatureAt(int x, int y);
     Creature * getCreatureById(int creatureId);
+    Vec2 getObjectPosition(BattleObject * obj);
     
     Vector<Creature *> * getFriendList();
     Vector<Creature *> * getEnemyList();

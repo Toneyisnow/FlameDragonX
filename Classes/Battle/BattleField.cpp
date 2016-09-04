@@ -13,6 +13,7 @@
 #include "CreatureMoveActivity.hpp"
 #include "BatchActivity.hpp"
 #include "BattleScene.hpp"
+#include "CursorMoveActivity.hpp"
 
 USING_NS_CC;
 
@@ -218,6 +219,17 @@ Creature * BattleField::getCreatureById(int creatureId)
     return nullptr;
 }
 
+Vec2 BattleField::getObjectPosition(BattleObject * obj)
+{
+    if (obj == nullptr)
+    {
+        return Vec2 (-1, -1);
+    }
+    
+    Vec2 location = obj->getSprite()->getPosition();
+    return convertLocationToPosition(location);
+}
+
 Vec2 BattleField::convertPositionToLocation(Vec2 pos)
 {
     float locX = (pos.x - 1) * _displayBlockSize + _displayBlockSize / 2;
@@ -293,6 +305,11 @@ void BattleField::onClickedAt(Vec2 location)
         return;
     }
     
-    Vec2 unitLocation = convertPositionToLocation(position);
-    _cursor->getSprite()->setPosition(unitLocation);
+    //// Vec2 unitLocation = convertPositionToLocation(position);
+    
+    /// _cursor->getSprite()->setPosition(unitLocation);
+    
+    CursorMoveActivity * activity = CursorMoveActivity::create(this, _cursor, position);
+    _battleScene->getActivityQueue()->appendActivity(activity);
+    
 }

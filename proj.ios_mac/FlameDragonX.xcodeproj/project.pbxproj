@@ -40,6 +40,7 @@
 		3C8D68501D7AA90A00CC3616 /* CreatureDeadActivity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C8D684E1D7AA90A00CC3616 /* CreatureDeadActivity.cpp */; };
 		3C8D68531D7AAC2F00CC3616 /* TalkActivity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C8D68511D7AAC2F00CC3616 /* TalkActivity.cpp */; };
 		3C8D68561D7BF5F500CC3616 /* Cursor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C8D68541D7BF5F500CC3616 /* Cursor.cpp */; };
+		3C8D68591D7C038700CC3616 /* CursorMoveActivity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C8D68571D7C038700CC3616 /* CursorMoveActivity.cpp */; };
 		3CA318261D760AD00042B56A /* CreatureData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CA318241D760AD00042B56A /* CreatureData.cpp */; };
 		3CA318291D760C6D0042B56A /* AICreature.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CA318271D760C6D0042B56A /* AICreature.cpp */; };
 		3CA3182C1D760E260042B56A /* DefendItemDefinition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CA3182A1D760E260042B56A /* DefendItemDefinition.cpp */; };
@@ -232,6 +233,8 @@
 		3C8D68521D7AAC2F00CC3616 /* TalkActivity.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = TalkActivity.hpp; path = Activities/TalkActivity.hpp; sourceTree = "<group>"; };
 		3C8D68541D7BF5F500CC3616 /* Cursor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Cursor.cpp; path = Objects/Cursor.cpp; sourceTree = "<group>"; };
 		3C8D68551D7BF5F500CC3616 /* Cursor.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Cursor.hpp; path = Objects/Cursor.hpp; sourceTree = "<group>"; };
+		3C8D68571D7C038700CC3616 /* CursorMoveActivity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CursorMoveActivity.cpp; path = Activities/CursorMoveActivity.cpp; sourceTree = "<group>"; };
+		3C8D68581D7C038700CC3616 /* CursorMoveActivity.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CursorMoveActivity.hpp; path = Activities/CursorMoveActivity.hpp; sourceTree = "<group>"; };
 		3CA318241D760AD00042B56A /* CreatureData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CreatureData.cpp; path = Objects/CreatureData.cpp; sourceTree = "<group>"; };
 		3CA318251D760AD00042B56A /* CreatureData.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CreatureData.hpp; path = Objects/CreatureData.hpp; sourceTree = "<group>"; };
 		3CA318271D760C6D0042B56A /* AICreature.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AICreature.cpp; path = Objects/AICreature.cpp; sourceTree = "<group>"; };
@@ -598,6 +601,8 @@
 				3C8D681A1D78EAAE00CC3616 /* FieldActivity.hpp */,
 				3C8D681C1D78EB3B00CC3616 /* GlobalActivity.cpp */,
 				3C8D681D1D78EB3B00CC3616 /* GlobalActivity.hpp */,
+				3C8D68571D7C038700CC3616 /* CursorMoveActivity.cpp */,
+				3C8D68581D7C038700CC3616 /* CursorMoveActivity.hpp */,
 				3C8D68221D78F24300CC3616 /* CreatureMoveActivity.cpp */,
 				3C8D68231D78F24300CC3616 /* CreatureMoveActivity.hpp */,
 				3C8D684E1D7AA90A00CC3616 /* CreatureDeadActivity.cpp */,
@@ -991,6 +996,7 @@
 				3CB1097C1D6F6635002C4121 /* SlideAnimation.cpp in Sources */,
 				3CD12F231D6D058000CDF793 /* TextFileReader.cpp in Sources */,
 				3C8D684D1D7A44BE00CC3616 /* CallbackActivity.cpp in Sources */,
+				3C8D68591D7C038700CC3616 /* CursorMoveActivity.cpp in Sources */,
 				3CB1098F1D74D0CE002C4121 /* ActivityQueue.cpp in Sources */,
 				3C8D68271D78F92300CC3616 /* ScopeIndicator.cpp in Sources */,
 				3C8D68471D7A3AD500CC3616 /* RoutePoint.cpp in Sources */,
