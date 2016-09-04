@@ -13,12 +13,15 @@
 #include "FDEvent.hpp"
 
 class BattleScene;
+class EventHandler;
 
 class EventLoader : public cocos2d::Ref
 {
 private:
     
     BattleScene * _battleScene;
+    EventHandler * _eventHandler;
+    
     int _generatedEventId;
     
 public:
@@ -26,7 +29,7 @@ public:
     EventLoader();
     ~EventLoader();
     
-    void initWithScene(BattleScene * scene);
+    void initWithScene(BattleScene * scene, EventHandler * eventHandler);
     
     virtual void loadEvents();
     

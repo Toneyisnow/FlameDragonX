@@ -16,6 +16,8 @@
 #include "FDActivity.hpp"
 #include "ActivityQueue.hpp"
 #include "EventHandler.hpp"
+#include "RoutePoint.hpp"
+#include "CallbackActivity.hpp"
 
 class BattleScene : public cocos2d::Scene
 {
@@ -25,11 +27,11 @@ private:
     int _synchronizedTickCount;
     
     BattleField *_battleField;
-    
-    
     ActivityQueue * _activityQueue;
     EventHandler * _eventHandler;
     
+    int _turnNumber;
+    CreatureType _currentTurnType;
     
     void takeDeltaTimeTck(float dt);
     void takeTick(int synchronizedTick);
@@ -49,6 +51,24 @@ public:
     
     // BattleScene();
   
+    int getTurnNumber();
+    int getCurrentTurnType();
+    
+    // Activity Methods
+    void moveAndOpenMenu(Creature * creature, RoutePoint * route);
+    void showMenu(int menuIndex);
+    void attackTo(Creature * creature, Creature * target);
+    void magicTo(Creature * creature, Vector<Creature *> * creatureList);
+    void useItem(Creature * creature, int itemIndex, Creature * target);
+    void waiveTurn(Creature * creature);
+    void creatureEndTurn(int creatureId);
+    void startTurn();
+    void takeAIMove();
+    void takeAIAction(int creatureId);
+    
+    CallbackActivity * createFunctionActivity(void(BattleScene::* callBackFunction)());
+    CallbackActivity * createFunctionActivity(void(BattleScene::* callBackFunction)(int), int intParameter);
+                                                           
     void testCallMethod(std::function<void(int)> callback);
     void testCallBack(int num);
     

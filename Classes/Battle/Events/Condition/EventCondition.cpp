@@ -7,3 +7,13 @@
 //
 
 #include "EventCondition.hpp"
+
+EventType EventCondition::getEventType()
+{
+    return _type;
+}
+
+bool EventCondition::isMatch(BattleScene * scene)
+{
+    return false;
+}

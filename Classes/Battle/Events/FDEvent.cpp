@@ -23,7 +23,7 @@ FDEvent::~FDEvent()
     this->_method->release();
 }
 
-void FDEvent::initWithCondition(EventCondition * cond, EventMethod * method)
+void FDEvent::initWithCondition(EventCondition * cond, CallbackMethod * method)
 {
     _isActivated = true;
     this->_condition = cond;
@@ -53,11 +53,16 @@ int FDEvent::getEventId()
     return _eventId;
 }
 
+EventType FDEvent::getType()
+{
+    return _condition->getEventType();
+}
+
 void FDEvent::doAction()
 {
     _isActivated = false;
     
-    this->_method->doMethod();
+    this->_method->execute();
 }
 
 void FDEvent::deactivate()

@@ -13,6 +13,7 @@
 #include "Creature.hpp"
 #include "CombinedActivity.hpp"
 #include "SimpleMoveActivity.hpp"
+#include "RoutePoint.hpp"
 
 class BattleField;
 
@@ -26,6 +27,8 @@ private:
     Creature * _creature;
     
 public:
+    
+    static CreatureMoveActivity * create(BattleField * field, Creature * creature, RoutePoint * route);
     
     CreatureMoveActivity(BattleField * field, Creature * creature);
     

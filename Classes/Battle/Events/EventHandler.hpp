@@ -32,7 +32,9 @@ public:
     ~EventHandler();
     
     void initFromDefinition(int chapterId);
-    void isNotified();
+    
+    void notifyTurnEvents();
+    void notifyTriggeredEvents();
     
     void addEvent(FDEvent * event);
     void deactiveEvent(int eventId);

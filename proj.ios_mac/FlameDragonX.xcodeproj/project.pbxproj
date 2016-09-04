@@ -34,6 +34,11 @@
 		3C8D683E1D79F5BB00CC3616 /* EventChapter1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C8D683C1D79F5BB00CC3616 /* EventChapter1.cpp */; };
 		3C8D68411D7A095E00CC3616 /* EventChapterCommon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C8D683F1D7A095E00CC3616 /* EventChapterCommon.cpp */; };
 		3C8D68441D7A09C200CC3616 /* EventMethod.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C8D68421D7A09C200CC3616 /* EventMethod.cpp */; };
+		3C8D68471D7A3AD500CC3616 /* RoutePoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C8D68451D7A3AD500CC3616 /* RoutePoint.cpp */; };
+		3C8D684A1D7A3FA800CC3616 /* CallbackMethod.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C8D68481D7A3FA800CC3616 /* CallbackMethod.cpp */; };
+		3C8D684D1D7A44BE00CC3616 /* CallbackActivity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C8D684B1D7A44BE00CC3616 /* CallbackActivity.cpp */; };
+		3C8D68501D7AA90A00CC3616 /* CreatureDeadActivity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C8D684E1D7AA90A00CC3616 /* CreatureDeadActivity.cpp */; };
+		3C8D68531D7AAC2F00CC3616 /* TalkActivity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C8D68511D7AAC2F00CC3616 /* TalkActivity.cpp */; };
 		3CA318261D760AD00042B56A /* CreatureData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CA318241D760AD00042B56A /* CreatureData.cpp */; };
 		3CA318291D760C6D0042B56A /* AICreature.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CA318271D760C6D0042B56A /* AICreature.cpp */; };
 		3CA3182C1D760E260042B56A /* DefendItemDefinition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CA3182A1D760E260042B56A /* DefendItemDefinition.cpp */; };
@@ -214,6 +219,16 @@
 		3C8D68401D7A095E00CC3616 /* EventChapterCommon.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = EventChapterCommon.hpp; path = Battle/Events/Chapter/EventChapterCommon.hpp; sourceTree = "<group>"; };
 		3C8D68421D7A09C200CC3616 /* EventMethod.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EventMethod.cpp; path = Battle/EventMethod.cpp; sourceTree = "<group>"; };
 		3C8D68431D7A09C200CC3616 /* EventMethod.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = EventMethod.hpp; path = Battle/EventMethod.hpp; sourceTree = "<group>"; };
+		3C8D68451D7A3AD500CC3616 /* RoutePoint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RoutePoint.cpp; path = Objects/RoutePoint.cpp; sourceTree = "<group>"; };
+		3C8D68461D7A3AD500CC3616 /* RoutePoint.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = RoutePoint.hpp; path = Objects/RoutePoint.hpp; sourceTree = "<group>"; };
+		3C8D68481D7A3FA800CC3616 /* CallbackMethod.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CallbackMethod.cpp; path = Common/CallbackMethod.cpp; sourceTree = "<group>"; };
+		3C8D68491D7A3FA800CC3616 /* CallbackMethod.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CallbackMethod.hpp; path = Common/CallbackMethod.hpp; sourceTree = "<group>"; };
+		3C8D684B1D7A44BE00CC3616 /* CallbackActivity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CallbackActivity.cpp; path = Activities/CallbackActivity.cpp; sourceTree = "<group>"; };
+		3C8D684C1D7A44BE00CC3616 /* CallbackActivity.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CallbackActivity.hpp; path = Activities/CallbackActivity.hpp; sourceTree = "<group>"; };
+		3C8D684E1D7AA90A00CC3616 /* CreatureDeadActivity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CreatureDeadActivity.cpp; path = Activities/CreatureDeadActivity.cpp; sourceTree = "<group>"; };
+		3C8D684F1D7AA90A00CC3616 /* CreatureDeadActivity.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CreatureDeadActivity.hpp; path = Activities/CreatureDeadActivity.hpp; sourceTree = "<group>"; };
+		3C8D68511D7AAC2F00CC3616 /* TalkActivity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TalkActivity.cpp; path = Activities/TalkActivity.cpp; sourceTree = "<group>"; };
+		3C8D68521D7AAC2F00CC3616 /* TalkActivity.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = TalkActivity.hpp; path = Activities/TalkActivity.hpp; sourceTree = "<group>"; };
 		3CA318241D760AD00042B56A /* CreatureData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CreatureData.cpp; path = Objects/CreatureData.cpp; sourceTree = "<group>"; };
 		3CA318251D760AD00042B56A /* CreatureData.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CreatureData.hpp; path = Objects/CreatureData.hpp; sourceTree = "<group>"; };
 		3CA318271D760C6D0042B56A /* AICreature.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AICreature.cpp; path = Objects/AICreature.cpp; sourceTree = "<group>"; };
@@ -538,6 +553,8 @@
 				3CA318281D760C6D0042B56A /* AICreature.hpp */,
 				3C8D68251D78F92300CC3616 /* ScopeIndicator.cpp */,
 				3C8D68261D78F92300CC3616 /* ScopeIndicator.hpp */,
+				3C8D68451D7A3AD500CC3616 /* RoutePoint.cpp */,
+				3C8D68461D7A3AD500CC3616 /* RoutePoint.hpp */,
 			);
 			name = Objects;
 			sourceTree = "<group>";
@@ -564,6 +581,8 @@
 				3CB109881D74CCAB002C4121 /* FDActivity.hpp */,
 				3CB1098A1D74CE92002C4121 /* SimpleMoveActivity.cpp */,
 				3CB1098B1D74CE92002C4121 /* SimpleMoveActivity.hpp */,
+				3C8D684B1D7A44BE00CC3616 /* CallbackActivity.cpp */,
+				3C8D684C1D7A44BE00CC3616 /* CallbackActivity.hpp */,
 				3CB1098D1D74D0CE002C4121 /* ActivityQueue.cpp */,
 				3CB1098E1D74D0CE002C4121 /* ActivityQueue.hpp */,
 				3C8D68161D78EA2F00CC3616 /* CombinedActivity.cpp */,
@@ -576,6 +595,10 @@
 				3C8D681D1D78EB3B00CC3616 /* GlobalActivity.hpp */,
 				3C8D68221D78F24300CC3616 /* CreatureMoveActivity.cpp */,
 				3C8D68231D78F24300CC3616 /* CreatureMoveActivity.hpp */,
+				3C8D684E1D7AA90A00CC3616 /* CreatureDeadActivity.cpp */,
+				3C8D684F1D7AA90A00CC3616 /* CreatureDeadActivity.hpp */,
+				3C8D68511D7AAC2F00CC3616 /* TalkActivity.cpp */,
+				3C8D68521D7AAC2F00CC3616 /* TalkActivity.hpp */,
 			);
 			name = Activities;
 			sourceTree = "<group>";
@@ -614,6 +637,8 @@
 				3CB109AF1D74FF92002C4121 /* FDNumber.hpp */,
 				3CA3182D1D7613630042B56A /* FDRange.cpp */,
 				3CA3182E1D7613630042B56A /* FDRange.hpp */,
+				3C8D68481D7A3FA800CC3616 /* CallbackMethod.cpp */,
+				3C8D68491D7A3FA800CC3616 /* CallbackMethod.hpp */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -802,6 +827,11 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0500;
+				TargetAttributes = {
+					1D6058900D05DD3D006BFB54 = {
+						DevelopmentTeam = 83PS926N7G;
+					};
+				};
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "FlameDragonX" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -917,9 +947,11 @@
 			files = (
 				3CB109A71D74F46C002C4121 /* MoneyItemDefinition.cpp in Sources */,
 				3C8D68411D7A095E00CC3616 /* EventChapterCommon.cpp in Sources */,
+				3C8D684A1D7A3FA800CC3616 /* CallbackMethod.cpp in Sources */,
 				3C8D683E1D79F5BB00CC3616 /* EventChapter1.cpp in Sources */,
 				3C8D68211D78EEC900CC3616 /* BatchActivity.cpp in Sources */,
 				3C8D681E1D78EB3B00CC3616 /* GlobalActivity.cpp in Sources */,
+				3C8D68531D7AAC2F00CC3616 /* TalkActivity.cpp in Sources */,
 				3CB109721D6E6BC3002C4121 /* Creature.cpp in Sources */,
 				3CD12F1C1D6D033800CDF793 /* BattleRecord.cpp in Sources */,
 				3CD12F191D6CE7F200CDF793 /* CreatureRecord.cpp in Sources */,
@@ -953,8 +985,11 @@
 				3CD12F2A1D6D065800CDF793 /* BattleScene.cpp in Sources */,
 				3CB1097C1D6F6635002C4121 /* SlideAnimation.cpp in Sources */,
 				3CD12F231D6D058000CDF793 /* TextFileReader.cpp in Sources */,
+				3C8D684D1D7A44BE00CC3616 /* CallbackActivity.cpp in Sources */,
 				3CB1098F1D74D0CE002C4121 /* ActivityQueue.cpp in Sources */,
 				3C8D68271D78F92300CC3616 /* ScopeIndicator.cpp in Sources */,
+				3C8D68471D7A3AD500CC3616 /* RoutePoint.cpp in Sources */,
+				3C8D68501D7AA90A00CC3616 /* CreatureDeadActivity.cpp in Sources */,
 				3CB1096F1D6E6B8F002C4121 /* BattleObject.cpp in Sources */,
 				3CB109791D6F6489002C4121 /* FDFrame.cpp in Sources */,
 				3C8D68181D78EA2F00CC3616 /* CombinedActivity.cpp in Sources */,
@@ -1006,6 +1041,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
 				ENABLE_BITCODE = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1020,15 +1056,16 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = ios/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_LDFLAGS = (
 					"$(_COCOS_LIB_IOS_BEGIN)",
 					"$(_COCOS_LIB_IOS_END)",
 				);
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				STRIP_PNG_TEXT = NO;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(_COCOS_HEADER_IOS_BEGIN) $(_COCOS_HEADER_IOS_END)";
 				VALID_ARCHS = "arm64 armv7";
 			};
@@ -1039,6 +1076,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
 				ENABLE_BITCODE = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
@@ -1051,15 +1089,16 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = ios/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_LDFLAGS = (
 					"$(_COCOS_LIB_IOS_BEGIN)",
 					"$(_COCOS_LIB_IOS_END)",
 				);
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				STRIP_PNG_TEXT = NO;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(_COCOS_HEADER_IOS_BEGIN) $(_COCOS_HEADER_IOS_END)";
 				VALID_ARCHS = "arm64 armv7";
 			};

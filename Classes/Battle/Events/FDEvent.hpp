@@ -11,7 +11,7 @@
 
 #include "cocos2d.h"
 #include "EventCondition.hpp"
-#include "EventMethod.hpp"
+#include "CallbackMethod.hpp"
 
 class BattleScene;
 
@@ -19,14 +19,15 @@ USING_NS_CC;
 
 class FDEvent : public cocos2d::Ref
 {
-private:
+protected:
     
+    EventType _type;
     int _eventId;
     bool _isActivated;
     
     EventCondition * _condition;
     
-    EventMethod * _method;
+    CallbackMethod * _method;
     
     Vector<FDEvent *> * _dependenEvents;
     
@@ -36,7 +37,9 @@ public:
     ~FDEvent();
     
     int getEventId();
-    void initWithCondition(EventCondition * cond, EventMethod * method);
+    EventType getType();
+    
+    void initWithCondition(EventCondition * cond, CallbackMethod * method);
     
     bool isTriggered(BattleScene * scene);
     

@@ -28,7 +28,7 @@ EventHandler::~EventHandler()
 void EventHandler::initFromDefinition(int chapterId)
 {
     _eventLoader = EventLoaderFactory::getEventLoader(chapterId);
-    _eventLoader->initWithScene(this->_battleScene);
+    _eventLoader->initWithScene(this->_battleScene, this);
     _eventLoader->loadEvents();
     
     _eventLoader->retain();
@@ -85,16 +85,28 @@ void EventHandler::setDependentEvent(int eventId, int dependOnEventId)
     }
 }
 
-void EventHandler::isNotified()
+void EventHandler::notifyTurnEvents()
 {
     for (int i= 0; i < this->_eventList->size(); i++)
     {
         FDEvent * event = this->_eventList->at(i);
-        if (event->isTriggered(_battleScene))
+        if (event->getType() == EventTypeTurn && event->isTriggered(_battleScene))
         {
             log("Event is triggered.");
             event->doAction();
         }
-        
+    }
+}
+
+void EventHandler::notifyTriggeredEvents()
+{
+    for (int i= 0; i < this->_eventList->size(); i++)
+    {
+        FDEvent * event = this->_eventList->at(i);
+        if (event->getType() == EventTypeTriggered && event->isTriggered(_battleScene))
+        {
+            log("Event is triggered.");
+            event->doAction();
+        }
     }
 }

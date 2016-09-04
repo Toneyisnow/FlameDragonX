@@ -52,8 +52,12 @@ public:
     
     void initWithDefinition(int identity, int creatureId);
     
+    int getId();
+    
     CreatureType getType();
     void setGesture(GestureStatus gesture);
+    
+    bool isDead();
     
 };
 

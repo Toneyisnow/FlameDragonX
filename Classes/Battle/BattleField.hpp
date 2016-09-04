@@ -69,6 +69,7 @@ public:
     Ground * groundAt(int x, int y);
     
     Creature * getCreatureAt(int x, int y);
+    Creature * getCreatureById(int creatureId);
     
     Vector<Creature *> * getFriendList();
     Vector<Creature *> * getEnemyList();

@@ -12,16 +12,28 @@
 
 #include "cocos2d.h"
 
+
+typedef enum EventType
+{
+    EventTypeTurn,
+    EventTypeTriggered
+} EventType;
+
+
 class BattleScene;
 
 class EventCondition : public cocos2d::Ref
 {
-private:
+protected:
+    
+    EventType _type;
+    
     
 public:
     
-    
+    EventType getEventType();
     bool isMatch(BattleScene * scene);
+    
     
 };
 

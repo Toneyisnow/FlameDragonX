@@ -200,6 +200,19 @@ Creature * BattleField::getCreatureAt(int x, int y)
     return nullptr;
 }
 
+Creature * BattleField::getCreatureById(int creatureId)
+{
+    for(Vector<Creature *>::iterator it = _friendList->begin(); it != _friendList->end(); it++)
+    {
+        Creature * creature = *it;
+        if (creature->getId() == creatureId) {
+            return creature;
+        }
+    }
+    
+    return nullptr;
+}
+
 Vec2 BattleField::convertPositionToLocation(Vec2 pos)
 {
     float locX = (pos.x - 1) * _displayBlockSize + _displayBlockSize / 2;

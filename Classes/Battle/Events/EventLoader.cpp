@@ -7,6 +7,7 @@
 //
 
 #include "EventLoader.hpp"
+#include "EventHandler.hpp"
 
 EventLoader::EventLoader()
 {
@@ -18,9 +19,16 @@ EventLoader::~EventLoader()
     
 }
 
-void EventLoader::initWithScene(BattleScene * scene)
+void EventLoader::loadEvents()
+{
+    
+}
+
+void EventLoader::initWithScene(BattleScene * scene, EventHandler * handler)
 {
     this->_battleScene = scene;
+    this->_eventHandler = handler;
+    
     _generatedEventId = 0;
 }
 
@@ -28,9 +36,13 @@ int EventLoader::loadSingleEvent(EventCondition * condition, void(EventLoader::*
 {
     std::function<void()> callback = std::bind(callBackMethod, this);
     
-    EventMethod * method = new EventMethod(callback);
+    CallbackMethod * method = new CallbackMethod(callback);
     FDEvent * event = new FDEvent(++_generatedEventId);
     event->initWithCondition(condition, method);
     
+    _eventHandler->addEvent(event);
+    
+    method->release();
+    event->release();
     return event->getEventId();
 }

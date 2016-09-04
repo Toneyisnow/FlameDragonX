@@ -8,6 +8,17 @@
 
 #include "CreatureMoveActivity.hpp"
 
+CreatureMoveActivity * CreatureMoveActivity::create(BattleField * field, Creature * creature, RoutePoint * route)
+{
+    CreatureMoveActivity * activity = new CreatureMoveActivity(field, creature);
+    
+    activity->appendPosition(0, 0);
+    
+    activity->autorelease();
+    
+    return activity;
+}
+
 CreatureMoveActivity::CreatureMoveActivity(BattleField * field, Creature * creature)
 {
     this->_field = field;

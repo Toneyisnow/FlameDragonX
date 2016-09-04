@@ -27,6 +27,11 @@ Creature::~Creature()
     _data->release();
 }
 
+int Creature::getId()
+{
+    return _identifier;
+}
+
 void Creature::initWithDefinition(int identity, int creatureId)
 {
     this->_identifier = identity;
@@ -97,4 +102,9 @@ void Creature::setGesture(GestureStatus gesture)
         default:
             break;
     }
+}
+
+bool Creature::isDead()
+{
+    return (_data->hpCurrent <= 0);
 }
