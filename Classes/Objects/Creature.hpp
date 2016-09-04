@@ -55,7 +55,11 @@ public:
     int getId();
     
     CreatureType getType();
+    
+    // Deprecated
     void setGesture(GestureStatus gesture);
+    
+    void setDirection(Direction direction);
     
     bool isDead();
     

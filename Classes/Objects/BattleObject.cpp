@@ -35,3 +35,8 @@ Sprite* BattleObject::getSprite()
 {
     return _baseSprite;
 }
+
+void BattleObject::setDirection(Direction direction)
+{
+    _direction = direction;
+}

@@ -74,6 +74,10 @@ void BattleField::initWithChapter(int chapterId)
     // Init Metrix
     this->initGroundMetrix(chapterId);
     
+    // Init Objects
+    this->_cursor = new Cursor();
+    addObject(_cursor, Vec2(0, 0), BattleObjectOrder_Indicator);
+    
     // Init Creatures
     this->_friendList = new Vector<Creature *>();
     this->_enemyList = new Vector<Creature *>();
@@ -82,7 +86,7 @@ void BattleField::initWithChapter(int chapterId)
     
     Creature * creature = new Creature(CreatureType_Friend);
     creature->initWithDefinition(3, 3);
-    this->addCreature(creature, Vec2(3, 24));
+    this->addCreature(creature, Vec2(2, 24));
     Creature * creature2 = new Creature(CreatureType_Friend);
     creature2->initWithDefinition(2, 2);
     this->addCreature(creature2, Vec2(2, 22));
@@ -98,8 +102,9 @@ void BattleField::initWithChapter(int chapterId)
     enemy3->initWithDefinition(201, 50103);
     this->addCreature(enemy3, Vec2(10, 8));
     
+    
     BatchActivity * bacth = new BatchActivity();
-    Creature * c3 = this->getCreatureAt(3, 24);
+    Creature * c3 = this->getCreatureAt(2, 24);
     CreatureMoveActivity * activity = new CreatureMoveActivity(this, c3);
     activity->appendPosition(8, 24);
     activity->appendPosition(8, 20);
@@ -107,7 +112,7 @@ void BattleField::initWithChapter(int chapterId)
     Creature * c2 = this->getCreatureAt(2, 22);
     CreatureMoveActivity * activity2 = new CreatureMoveActivity(this, c2);
     activity2->appendPosition(8, 22);
-    activity2->appendPosition(8, 10);
+    activity2->appendPosition(8, 16);
     
     bacth->addActivity(activity);
     bacth->addActivity(activity2);
@@ -223,17 +228,26 @@ Vec2 BattleField::convertPositionToLocation(Vec2 pos)
 
 Vec2 BattleField::convertLocationToPosition(Vec2 loc)
 {
-    int posX = loc.x / _displayBlockSize + 1;
-    int posY = _fieldHeight - loc.y / _displayBlockSize + 1;
+    int posX = int(loc.x / _displayBlockSize) + 1;
+    int posY = _fieldHeight - int(loc.y / _displayBlockSize);
+    /// int posY = _fieldHeight - int(loc.y / _displayBlockSize) + 1;
+    
+    /// int posX = int(loc.x / BLOCK_SIZE) + 1;
+    /// int posY = _fieldHeight - int(loc.y / BLOCK_SIZE);
     
     return Vec2(posX, posY);
 }
 
-void BattleField::addCreature(Creature * creature, Vec2 position)
+void BattleField::addObject(BattleObject * obj, Vec2 position, int zOrder)
 {
     Vec2 location = this->convertPositionToLocation(position);
-    creature->getSprite()->setPosition(location);
-    _groundImage->addChild(creature->getSprite(), BattleObjectOrder_Creature);
+    obj->getSprite()->setPosition(location);
+    _groundImage->addChild(obj->getSprite(), zOrder);
+}
+
+void BattleField::addCreature(Creature * creature, Vec2 position)
+{
+    addObject(creature, position, BattleObjectOrder_Creature);
     
      switch(creature->getType())
     {
@@ -270,4 +284,15 @@ void BattleField::takeTick(int synchronizedTick)
         Creature * creature = *it;
         creature->takeTick(synchronizedTick);
     }
+}
+
+void BattleField::onClickedAt(Vec2 location)
+{
+    Vec2 position = convertLocationToPosition(location);
+    if (position.x <= 0 || position.y <= 0 || position.x > _fieldWidth || position.y > _fieldHeight) {
+        return;
+    }
+    
+    Vec2 unitLocation = convertPositionToLocation(position);
+    _cursor->getSprite()->setPosition(unitLocation);
 }

@@ -10,10 +10,10 @@
 #include "BattleField.hpp"
 #include "Constants.hpp"
 
-SimpleMoveActivity::SimpleMoveActivity(BattleField * field, Creature * creature, Vec2 toPosition)
+SimpleMoveActivity::SimpleMoveActivity(BattleField * field, BattleObject * object, Vec2 toPosition)
 : FieldActivity(field)
 {
-    this->_creature = creature;
+    this->_object = object;
     this->_targetLocation = _battleField->convertPositionToLocation(toPosition);
     this->_speed = Constants::DEFAULT_MOVE_SPEED;
     
@@ -21,29 +21,29 @@ SimpleMoveActivity::SimpleMoveActivity(BattleField * field, Creature * creature,
 
 void SimpleMoveActivity::initialize()
 {
-    Vec2 original = _creature->getSprite()->getPosition();
+    Vec2 original = _object->getSprite()->getPosition();
     
     if (original.x < _targetLocation.x) {
         // Moving right
-        this->_creature->setGesture(GestureStatus_WalkingRight);
+        this->_object->setDirection(DirectionRight);
         deltaX = 1;
         deltaY = 0;
     }
     else if (original.x > _targetLocation.x) {
         // Moving left
-        this->_creature->setGesture(GestureStatus_WalkingLeft);
+        this->_object->setDirection(DirectionLeft);
         deltaX = -1;
         deltaY = 0;
     }
     else if (original.y < _targetLocation.y) {
         // Moving up
-        this->_creature->setGesture(GestureStatus_WalkingUp);
+        this->_object->setDirection(DirectionUp);
         deltaX = 0;
         deltaY = 1;
     }
     else if (original.y > _targetLocation.y) {
         // Moving down
-        this->_creature->setGesture(GestureStatus_WalkingDown);
+        this->_object->setDirection(DirectionDown);
         deltaX = 0;
         deltaY = -1;
     }
@@ -51,7 +51,7 @@ void SimpleMoveActivity::initialize()
 
 void SimpleMoveActivity::internalTick(int synchronizeTick)
 {
-    Vec2 current = this->_creature->getSprite()->getPosition();
+    Vec2 current = _object->getSprite()->getPosition();
     
     float resultX = current.x + deltaX * _speed;
     float resultY = current.y + deltaY * _speed;
@@ -64,8 +64,8 @@ void SimpleMoveActivity::internalTick(int synchronizeTick)
         resultX = _targetLocation.x;
         resultY = _targetLocation.y;
         
-        this->_creature->setGesture(GestureStatus_Idle);
+        _object->setDirection(DirectionNone);
     }
     
-    this->_creature->getSprite()->setPosition(Vec2(resultX, resultY));
+    _object->getSprite()->setPosition(Vec2(resultX, resultY));
 }

@@ -12,6 +12,7 @@
 #include <stdio.h>
 #include "cocos2d.h"
 #include "FDAnimate.hpp"
+#include "Constants.hpp"
 
 USING_NS_CC;
 
@@ -33,6 +34,8 @@ protected:
     
     FDAnimate * _animator;
     
+    Direction _direction;
+    
 public:
     
     BattleObject();
@@ -43,6 +46,8 @@ public:
     void initialize();
     
     void takeTick(int synchronizedTick);
+    
+    virtual void setDirection(Direction direction);
     
 };
 

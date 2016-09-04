@@ -10,7 +10,7 @@
 #define SimpleMoveActivity_hpp
 
 #include "cocos2d.h"
-#include "Creature.hpp"
+#include "BattleObject.hpp"
 #include "FieldActivity.hpp"
 
 USING_NS_CC;
@@ -19,7 +19,7 @@ class SimpleMoveActivity : public FieldActivity
 {
 private:
     
-    Creature * _creature;
+    BattleObject * _object;
     Vec2 _targetLocation;
     
     float _speed;
@@ -28,7 +28,7 @@ private:
     
 public:
     
-    SimpleMoveActivity(BattleField * field, Creature * creature, Vec2 toPosition);
+    SimpleMoveActivity(BattleField * field, BattleObject * object, Vec2 toPosition);
     
     void initialize();
     void internalTick(int synchronizeTick);

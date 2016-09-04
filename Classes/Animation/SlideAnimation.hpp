@@ -11,17 +11,9 @@
 
 #include "cocos2d.h"
 #include "FDFrame.hpp"
+#include "Constants.hpp"
 
 // USING_NS_CC;
-
-typedef enum Direction
-{
-    DirectionUp = 0,
-    DirectionDown = 1,
-    DirectionLeft = 2,
-    DirectionRight = 3
-} Direction;
-
 
 class SlideAnimation : public cocos2d::Ref
 {

@@ -13,6 +13,7 @@
 #include "TouchHandler.hpp"
 #include "Ground.hpp"
 #include "Creature.hpp"
+#include "Cursor.hpp"
 
 class BattleScene;
 
@@ -41,7 +42,7 @@ private:
     
     void initGroundMetrix(int chapterId);
     
-    
+    Cursor * _cursor;
     Vector<Creature *> * _friendList;
     Vector<Creature *> * _enemyList;
     Vector<Creature *> * _npcList;
@@ -84,6 +85,9 @@ public:
     //void activityMoveCreatureWithMenu(Vec2 position, Vec2 target);
     
     void addCreature(Creature * creature, Vec2 position);
+    void addObject(BattleObject * obj, Vec2 position, int zOrder);
+    
+    void onClickedAt(Vec2 location);
     
 };
 

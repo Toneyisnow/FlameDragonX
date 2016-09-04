@@ -12,6 +12,17 @@
 #include <stdio.h>
 #include "cocos2d.h"
 
+
+typedef enum Direction
+{
+    DirectionNone = 0,
+    DirectionUp = 1,
+    DirectionDown = 2,
+    DirectionLeft = 3,
+    DirectionRight = 4
+} Direction;
+
+
 class Constants : public cocos2d::Ref
 {
 public:

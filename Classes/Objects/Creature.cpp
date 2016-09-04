@@ -66,6 +66,31 @@ CreatureType Creature::getType()
     return _creatureType;
 }
 
+void Creature::setDirection(Direction direction)
+{
+    if (_direction == direction)
+    {
+        return;
+    }
+    
+    BattleObject::setDirection(direction);
+    SlideAnimation * animation;
+    int animationId = _definition->animationId;
+    
+    if (direction == DirectionNone)
+    {
+        animation = AnimationLibrary::getInstance()->getIdleAnimation(animationId);
+        _animator->setAnimation(animation);
+    }
+    else
+    {
+        animation = AnimationLibrary::getInstance()->getWalkAnimation(animationId, direction);
+        _animator->setAnimation(animation);
+    }
+}
+
+
+// Deprecated
 void Creature::setGesture(GestureStatus gesture)
 {
     if (this->_gestureStatus == gesture)

@@ -38,9 +38,19 @@ bool TouchHandler::onTouchBegan(Touch* touch, Event* event)
 
 void TouchHandler::onTouchEnded(Touch* touch, Event* event)
 {
-    Point fieldPosition = _field->getFieldPositionOnScreen();
+    Vec2 fieldPosition = _field->getFieldPositionOnScreen();
     log("%f, %f", fieldPosition.x, fieldPosition.y);
     
+    if (!_hasTouchMoved) {
+        
+        Vec2 p = touch->getLocation();
+        
+        float scale = _field->getDisplayScale();
+        Vec2 positionOnField = Vec2((p.x - fieldPosition.x ) / scale, (p.y - fieldPosition.y) / scale);
+        log("Position on Field: %f, %f", positionOnField.x, positionOnField.y);
+    
+        _field->onClickedAt(positionOnField);
+    }
 }
 
 void TouchHandler::onTouchMoved(Touch* touch, Event* event)
