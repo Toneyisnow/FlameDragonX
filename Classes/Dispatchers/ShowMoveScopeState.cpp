@@ -46,7 +46,6 @@ void ShowMoveScopeState::onEnterState()
     ScopeIndicator * i4 = new ScopeIndicator();
     _battleField->addObject(i4, Vec2(position.x - 1, position.y));
     i4->release();
-    
 }
 
 void ShowMoveScopeState::onExitState()

@@ -55,7 +55,7 @@ public:
     
     Sprite * getSprite();
     
-    void initialize();
+    void initialize(std::string filename);
     
     void takeTick(int synchronizedTick);
     

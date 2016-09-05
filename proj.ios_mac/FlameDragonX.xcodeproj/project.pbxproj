@@ -94,6 +94,8 @@
 		3CE63B211D7D3C4B00C2C76B /* ShowMoveScopeState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63B1F1D7D3C4B00C2C76B /* ShowMoveScopeState.cpp */; };
 		3CE63B241D7D40D000C2C76B /* SystemMenuState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63B221D7D40D000C2C76B /* SystemMenuState.cpp */; };
 		3CE63B271D7D59D400C2C76B /* CommonHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63B251D7D59D400C2C76B /* CommonHelper.cpp */; };
+		3CE63B2A1D7D5DDD00C2C76B /* OffsetFrame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63B281D7D5DDD00C2C76B /* OffsetFrame.cpp */; };
+		3CE63B2D1D7D5DF900C2C76B /* TransparencyFrame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63B2B1D7D5DF900C2C76B /* TransparencyFrame.cpp */; };
 		3EACC98F19EE6D4300EB3C5E /* res in Resources */ = {isa = PBXBuildFile; fileRef = 3EACC98E19EE6D4300EB3C5E /* res */; };
 		3EACC99019EE6D4300EB3C5E /* res in Resources */ = {isa = PBXBuildFile; fileRef = 3EACC98E19EE6D4300EB3C5E /* res */; };
 		46880B7B19C43A67006E1F66 /* CloseNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 46880B7619C43A67006E1F66 /* CloseNormal.png */; };
@@ -338,6 +340,10 @@
 		3CE63B231D7D40D000C2C76B /* SystemMenuState.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = SystemMenuState.hpp; path = Dispatchers/SystemMenuState.hpp; sourceTree = "<group>"; };
 		3CE63B251D7D59D400C2C76B /* CommonHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CommonHelper.cpp; path = Common/CommonHelper.cpp; sourceTree = "<group>"; };
 		3CE63B261D7D59D400C2C76B /* CommonHelper.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CommonHelper.hpp; path = Common/CommonHelper.hpp; sourceTree = "<group>"; };
+		3CE63B281D7D5DDD00C2C76B /* OffsetFrame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = OffsetFrame.cpp; path = Animation/OffsetFrame.cpp; sourceTree = "<group>"; };
+		3CE63B291D7D5DDD00C2C76B /* OffsetFrame.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = OffsetFrame.hpp; path = Animation/OffsetFrame.hpp; sourceTree = "<group>"; };
+		3CE63B2B1D7D5DF900C2C76B /* TransparencyFrame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TransparencyFrame.cpp; path = Animation/TransparencyFrame.cpp; sourceTree = "<group>"; };
+		3CE63B2C1D7D5DF900C2C76B /* TransparencyFrame.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = TransparencyFrame.hpp; path = Animation/TransparencyFrame.hpp; sourceTree = "<group>"; };
 		3EACC98E19EE6D4300EB3C5E /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; path = res; sourceTree = "<group>"; };
 		46880B7619C43A67006E1F66 /* CloseNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseNormal.png; sourceTree = "<group>"; };
 		46880B7719C43A67006E1F66 /* CloseSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseSelected.png; sourceTree = "<group>"; };
@@ -618,6 +624,10 @@
 				3CB1097E1D6F69AC002C4121 /* FDAnimate.hpp */,
 				3CB109831D6F7626002C4121 /* AnimationLibrary.cpp */,
 				3CB109841D6F7626002C4121 /* AnimationLibrary.hpp */,
+				3CE63B281D7D5DDD00C2C76B /* OffsetFrame.cpp */,
+				3CE63B291D7D5DDD00C2C76B /* OffsetFrame.hpp */,
+				3CE63B2B1D7D5DF900C2C76B /* TransparencyFrame.cpp */,
+				3CE63B2C1D7D5DF900C2C76B /* TransparencyFrame.hpp */,
 			);
 			name = Animation;
 			sourceTree = "<group>";
@@ -1051,11 +1061,13 @@
 				3C8D68471D7A3AD500CC3616 /* RoutePoint.cpp in Sources */,
 				3C8D68501D7AA90A00CC3616 /* CreatureDeadActivity.cpp in Sources */,
 				3CB1096F1D6E6B8F002C4121 /* BattleObject.cpp in Sources */,
+				3CE63B2D1D7D5DF900C2C76B /* TransparencyFrame.cpp in Sources */,
 				3CB109791D6F6489002C4121 /* FDFrame.cpp in Sources */,
 				3C8D68181D78EA2F00CC3616 /* CombinedActivity.cpp in Sources */,
 				3C18834E1D6BA1490059056E /* TitleLayer.cpp in Sources */,
 				3CD12F201D6D051200CDF793 /* StringUtil.cpp in Sources */,
 				3CB109B01D74FF92002C4121 /* FDNumber.cpp in Sources */,
+				3CE63B2A1D7D5DDD00C2C76B /* OffsetFrame.cpp in Sources */,
 				3CB109851D6F7626002C4121 /* AnimationLibrary.cpp in Sources */,
 				3CB109AA1D74F816002C4121 /* CreatureChapterRecord.cpp in Sources */,
 				3C8D68241D78F24300CC3616 /* CreatureMoveActivity.cpp in Sources */,

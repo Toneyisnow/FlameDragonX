@@ -8,11 +8,13 @@
 
 #include "ScopeIndicator.hpp"
 #include "StringUtil.hpp"
+#include "AnimationLibrary.hpp"
 
 ScopeIndicator::ScopeIndicator()
 : BattleObject(BattleObject_ScopeIndicator)
 {
-    _animation = nullptr;
-    _baseSprite = Sprite::create("Others/WhiteBlock.png");
+    initialize("Others/WhiteBlock.png");
 
+    SlideAnimation * animation = AnimationLibrary::getInstance()->getScopeIndicatorAnimation();
+    _animator->setAnimation(animation);
 }

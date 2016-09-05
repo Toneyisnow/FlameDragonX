@@ -13,7 +13,7 @@ Cursor::Cursor()
 : BattleObject(BattleObject_Cursor)
 {
     _cursorSize = 1;
-    _baseSprite = Sprite::create(StringUtil::format("Others/Cursor-%02d.png", _cursorSize));
+    initialize(StringUtil::format("Others/Cursor-%02d.png", _cursorSize));
     
 }
 

@@ -8,6 +8,28 @@
 
 #include "CallbackMethod.hpp"
 
+
+
+/*
+ bool TimerTargetSelector::initWithSelector(Scheduler* scheduler, SEL_SCHEDULE selector, Ref* target, float seconds, unsigned int repeat, float delay)
+ {
+ _scheduler = scheduler;
+ _target = target;
+ _selector = selector;
+ setupTimerWithInterval(seconds, repeat, delay);
+ return true;
+ }
+ 
+ void TimerTargetSelector::trigger(float dt)
+ {
+ if (_target && _selector)
+ {
+ (_target->*_selector)(dt);
+ }
+ }
+ 
+ */
+
 CallbackMethod::CallbackMethod(std::function<void()> method)
 {
     this->_method0 = method;

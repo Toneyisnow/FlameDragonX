@@ -368,6 +368,12 @@ void BattleField::removeObject(BattleObject * obj)
 
 void BattleField::takeTick(int synchronizedTick)
 {
+    for(Vector<BattleObject *>::iterator it = _battleObjectList->begin(); it != _battleObjectList->end(); it++)
+    {
+        BattleObject * obj = *it;
+        obj->takeTick(synchronizedTick);
+    }
+    
     for(Vector<Creature *>::iterator it = _friendList->begin(); it != _friendList->end(); it++)
     {
         Creature * creature = *it;

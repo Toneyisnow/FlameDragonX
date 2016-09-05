@@ -11,13 +11,13 @@
 FDAnimate::FDAnimate(Sprite * sprite)
 {
     this->_sprite = sprite;
+    
     this->_animation = nullptr;
     this->_currentTick = 0;
 }
 
 FDAnimate::~FDAnimate()
 {
-    
 }
 
 void FDAnimate::setAnimation(SlideAnimation *ani)

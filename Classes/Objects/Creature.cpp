@@ -20,13 +20,15 @@ Creature::Creature(CreatureType type)
     this->_gestureStatus = GestureStatus_Idle;
     // this->initialize();
     
-    
+    initialize("Others/WhiteBlock.png");
 }
 
 Creature::~Creature()
 {
     _data->release();
 }
+
+
 
 int Creature::getId()
 {

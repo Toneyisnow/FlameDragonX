@@ -8,6 +8,7 @@
 
 #include "AnimationLibrary.hpp"
 #include "Constants.hpp"
+#include "TransparencyFrame.hpp"
 
 AnimationLibrary * AnimationLibrary::_instance = nullptr;
 
@@ -94,11 +95,18 @@ void AnimationLibrary::loadScopeIndicatorAnimation()
     std::string key = "ScopeIndicator";
     
     SlideAnimation *animation = new SlideAnimation(Constants::TickPerFrame_IdleAnimation, true, true);
-    std::string filename = "Others/WhiteBlock.png";
     
-    FDFrame *frame = new FDFrame(filename, 40);
-    animation->appendFrame(frame);
-    frame->release();
+    animation->appendFrame(TransparencyFrame::create(40));
+    animation->appendFrame(TransparencyFrame::create(60));
+    animation->appendFrame(TransparencyFrame::create(80));
+    animation->appendFrame(TransparencyFrame::create(100));
+    animation->appendFrame(TransparencyFrame::create(120));
+    animation->appendFrame(TransparencyFrame::create(100));
+    animation->appendFrame(TransparencyFrame::create(80));
+    animation->appendFrame(TransparencyFrame::create(60));
+    
+    _slideAnimationDictionary->insert(key, animation);
+    animation->release();
 }
 
 SlideAnimation * AnimationLibrary::getIdleAnimation(int creatureAniId)

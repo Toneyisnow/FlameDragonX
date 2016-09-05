@@ -17,7 +17,7 @@ class ScopeIndicator : public BattleObject
 {
 private:
     
-    SlideAnimation * _animation;
+    // SlideAnimation * _animation;
     
     
     

@@ -11,8 +11,6 @@
 BattleObject::BattleObject(BattleObjectType type)
 {
     _objectType = type;
-    _baseSprite = Sprite::create("Icons/001/Icon-001-02.png");
-    _animator = new FDAnimate(_baseSprite);
 
 }
 
@@ -26,8 +24,10 @@ BattleObjectType BattleObject::getObjectType()
     return _objectType;
 }
 
-void BattleObject::initialize()
+void BattleObject::initialize(std::string filename)
 {
+    _baseSprite = Sprite::create(filename);
+    _animator = new FDAnimate(_baseSprite);
 }
 
 
