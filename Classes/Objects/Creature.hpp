@@ -61,6 +61,8 @@ public:
     
     void setDirection(Direction direction);
     
+    bool isVisible();
+    
     bool isDead();
     
 };

@@ -41,6 +41,9 @@
 		3C8D68531D7AAC2F00CC3616 /* TalkActivity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C8D68511D7AAC2F00CC3616 /* TalkActivity.cpp */; };
 		3C8D68561D7BF5F500CC3616 /* Cursor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C8D68541D7BF5F500CC3616 /* Cursor.cpp */; };
 		3C8D68591D7C038700CC3616 /* CursorMoveActivity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C8D68571D7C038700CC3616 /* CursorMoveActivity.cpp */; };
+		3C8D685D1D7C0D9500CC3616 /* StateDispatcher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C8D685B1D7C0D9500CC3616 /* StateDispatcher.cpp */; };
+		3C8D68601D7D304700CC3616 /* ActionState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C8D685E1D7D304700CC3616 /* ActionState.cpp */; };
+		3C8D68631D7D30A000CC3616 /* StateSession.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C8D68611D7D30A000CC3616 /* StateSession.cpp */; };
 		3CA318261D760AD00042B56A /* CreatureData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CA318241D760AD00042B56A /* CreatureData.cpp */; };
 		3CA318291D760C6D0042B56A /* AICreature.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CA318271D760C6D0042B56A /* AICreature.cpp */; };
 		3CA3182C1D760E260042B56A /* DefendItemDefinition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CA3182A1D760E260042B56A /* DefendItemDefinition.cpp */; };
@@ -87,6 +90,10 @@
 		3CD12F2A1D6D065800CDF793 /* BattleScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CD12F281D6D065800CDF793 /* BattleScene.cpp */; };
 		3CD12F2C1D6D073F00CDF793 /* Maps in Resources */ = {isa = PBXBuildFile; fileRef = 3CD12F2B1D6D073F00CDF793 /* Maps */; };
 		3CD12F2E1D6D074800CDF793 /* Data in Resources */ = {isa = PBXBuildFile; fileRef = 3CD12F2D1D6D074800CDF793 /* Data */; };
+		3CE63B1D1D7D337100C2C76B /* IdleState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63B1B1D7D337100C2C76B /* IdleState.cpp */; };
+		3CE63B211D7D3C4B00C2C76B /* ShowMoveScopeState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63B1F1D7D3C4B00C2C76B /* ShowMoveScopeState.cpp */; };
+		3CE63B241D7D40D000C2C76B /* SystemMenuState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63B221D7D40D000C2C76B /* SystemMenuState.cpp */; };
+		3CE63B271D7D59D400C2C76B /* CommonHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63B251D7D59D400C2C76B /* CommonHelper.cpp */; };
 		3EACC98F19EE6D4300EB3C5E /* res in Resources */ = {isa = PBXBuildFile; fileRef = 3EACC98E19EE6D4300EB3C5E /* res */; };
 		3EACC99019EE6D4300EB3C5E /* res in Resources */ = {isa = PBXBuildFile; fileRef = 3EACC98E19EE6D4300EB3C5E /* res */; };
 		46880B7B19C43A67006E1F66 /* CloseNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 46880B7619C43A67006E1F66 /* CloseNormal.png */; };
@@ -235,6 +242,12 @@
 		3C8D68551D7BF5F500CC3616 /* Cursor.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Cursor.hpp; path = Objects/Cursor.hpp; sourceTree = "<group>"; };
 		3C8D68571D7C038700CC3616 /* CursorMoveActivity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CursorMoveActivity.cpp; path = Activities/CursorMoveActivity.cpp; sourceTree = "<group>"; };
 		3C8D68581D7C038700CC3616 /* CursorMoveActivity.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CursorMoveActivity.hpp; path = Activities/CursorMoveActivity.hpp; sourceTree = "<group>"; };
+		3C8D685B1D7C0D9500CC3616 /* StateDispatcher.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StateDispatcher.cpp; path = Dispatchers/StateDispatcher.cpp; sourceTree = "<group>"; };
+		3C8D685C1D7C0D9500CC3616 /* StateDispatcher.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = StateDispatcher.hpp; path = Dispatchers/StateDispatcher.hpp; sourceTree = "<group>"; };
+		3C8D685E1D7D304700CC3616 /* ActionState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ActionState.cpp; path = Dispatchers/ActionState.cpp; sourceTree = "<group>"; };
+		3C8D685F1D7D304700CC3616 /* ActionState.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ActionState.hpp; path = Dispatchers/ActionState.hpp; sourceTree = "<group>"; };
+		3C8D68611D7D30A000CC3616 /* StateSession.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StateSession.cpp; path = Dispatchers/StateSession.cpp; sourceTree = "<group>"; };
+		3C8D68621D7D30A000CC3616 /* StateSession.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = StateSession.hpp; path = Dispatchers/StateSession.hpp; sourceTree = "<group>"; };
 		3CA318241D760AD00042B56A /* CreatureData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CreatureData.cpp; path = Objects/CreatureData.cpp; sourceTree = "<group>"; };
 		3CA318251D760AD00042B56A /* CreatureData.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CreatureData.hpp; path = Objects/CreatureData.hpp; sourceTree = "<group>"; };
 		3CA318271D760C6D0042B56A /* AICreature.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AICreature.cpp; path = Objects/AICreature.cpp; sourceTree = "<group>"; };
@@ -317,6 +330,14 @@
 		3CD12F281D6D065800CDF793 /* BattleScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BattleScene.cpp; path = Battle/BattleScene.cpp; sourceTree = "<group>"; };
 		3CD12F2B1D6D073F00CDF793 /* Maps */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Maps; sourceTree = "<group>"; };
 		3CD12F2D1D6D074800CDF793 /* Data */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Data; sourceTree = "<group>"; };
+		3CE63B1B1D7D337100C2C76B /* IdleState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IdleState.cpp; path = Dispatchers/IdleState.cpp; sourceTree = "<group>"; };
+		3CE63B1C1D7D337100C2C76B /* IdleState.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = IdleState.hpp; path = Dispatchers/IdleState.hpp; sourceTree = "<group>"; };
+		3CE63B1F1D7D3C4B00C2C76B /* ShowMoveScopeState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ShowMoveScopeState.cpp; path = Dispatchers/ShowMoveScopeState.cpp; sourceTree = "<group>"; };
+		3CE63B201D7D3C4B00C2C76B /* ShowMoveScopeState.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ShowMoveScopeState.hpp; path = Dispatchers/ShowMoveScopeState.hpp; sourceTree = "<group>"; };
+		3CE63B221D7D40D000C2C76B /* SystemMenuState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SystemMenuState.cpp; path = Dispatchers/SystemMenuState.cpp; sourceTree = "<group>"; };
+		3CE63B231D7D40D000C2C76B /* SystemMenuState.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = SystemMenuState.hpp; path = Dispatchers/SystemMenuState.hpp; sourceTree = "<group>"; };
+		3CE63B251D7D59D400C2C76B /* CommonHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CommonHelper.cpp; path = Common/CommonHelper.cpp; sourceTree = "<group>"; };
+		3CE63B261D7D59D400C2C76B /* CommonHelper.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CommonHelper.hpp; path = Common/CommonHelper.hpp; sourceTree = "<group>"; };
 		3EACC98E19EE6D4300EB3C5E /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; path = res; sourceTree = "<group>"; };
 		46880B7619C43A67006E1F66 /* CloseNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseNormal.png; sourceTree = "<group>"; };
 		46880B7719C43A67006E1F66 /* CloseSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseSelected.png; sourceTree = "<group>"; };
@@ -544,6 +565,25 @@
 			name = Chapter;
 			sourceTree = "<group>";
 		};
+		3C8D685A1D7C0D0400CC3616 /* Dispatchers */ = {
+			isa = PBXGroup;
+			children = (
+				3C8D685B1D7C0D9500CC3616 /* StateDispatcher.cpp */,
+				3C8D685C1D7C0D9500CC3616 /* StateDispatcher.hpp */,
+				3C8D685E1D7D304700CC3616 /* ActionState.cpp */,
+				3C8D685F1D7D304700CC3616 /* ActionState.hpp */,
+				3C8D68611D7D30A000CC3616 /* StateSession.cpp */,
+				3C8D68621D7D30A000CC3616 /* StateSession.hpp */,
+				3CE63B1B1D7D337100C2C76B /* IdleState.cpp */,
+				3CE63B1C1D7D337100C2C76B /* IdleState.hpp */,
+				3CE63B1F1D7D3C4B00C2C76B /* ShowMoveScopeState.cpp */,
+				3CE63B201D7D3C4B00C2C76B /* ShowMoveScopeState.hpp */,
+				3CE63B221D7D40D000C2C76B /* SystemMenuState.cpp */,
+				3CE63B231D7D40D000C2C76B /* SystemMenuState.hpp */,
+			);
+			name = Dispatchers;
+			sourceTree = "<group>";
+		};
 		3CB1096C1D6E6B68002C4121 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
@@ -649,6 +689,8 @@
 				3CA3182E1D7613630042B56A /* FDRange.hpp */,
 				3C8D68481D7A3FA800CC3616 /* CallbackMethod.cpp */,
 				3C8D68491D7A3FA800CC3616 /* CallbackMethod.hpp */,
+				3CE63B251D7D59D400C2C76B /* CommonHelper.cpp */,
+				3CE63B261D7D59D400C2C76B /* CommonHelper.hpp */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -729,6 +771,7 @@
 				3CB109861D74CC93002C4121 /* Activities */,
 				3CB109761D6F6470002C4121 /* Animation */,
 				3CB1096C1D6E6B68002C4121 /* Objects */,
+				3C8D685A1D7C0D0400CC3616 /* Dispatchers */,
 				3CD12EFF1D6BB24200CDF793 /* Common */,
 				3CD12F131D6CE74100CDF793 /* Data */,
 				3CD12F121D6CE73A00CDF793 /* Records */,
@@ -964,10 +1007,14 @@
 				3C8D68531D7AAC2F00CC3616 /* TalkActivity.cpp in Sources */,
 				3CB109721D6E6BC3002C4121 /* Creature.cpp in Sources */,
 				3CD12F1C1D6D033800CDF793 /* BattleRecord.cpp in Sources */,
+				3CE63B241D7D40D000C2C76B /* SystemMenuState.cpp in Sources */,
 				3CD12F191D6CE7F200CDF793 /* CreatureRecord.cpp in Sources */,
 				3CB109751D6E6FD6002C4121 /* Friend.cpp in Sources */,
 				3CB109651D6D0D06002C4121 /* TouchHandler.cpp in Sources */,
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
+				3CE63B1D1D7D337100C2C76B /* IdleState.cpp in Sources */,
+				3CE63B211D7D3C4B00C2C76B /* ShowMoveScopeState.cpp in Sources */,
+				3C8D68601D7D304700CC3616 /* ActionState.cpp in Sources */,
 				3CA3182F1D7613630042B56A /* FDRange.cpp in Sources */,
 				46880B8A19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */,
 				3CB109931D74ECB1002C4121 /* Constants.cpp in Sources */,
@@ -985,7 +1032,9 @@
 				3CB109891D74CCAB002C4121 /* FDActivity.cpp in Sources */,
 				3CB109A11D74F41E002C4121 /* AttackItemDefinition.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
+				3C8D68631D7D30A000CC3616 /* StateSession.cpp in Sources */,
 				3CB1097F1D6F69AC002C4121 /* FDAnimate.cpp in Sources */,
+				3C8D685D1D7C0D9500CC3616 /* StateDispatcher.cpp in Sources */,
 				3CD12F071D6BC86B00CDF793 /* FDScreen.cpp in Sources */,
 				3C8D68441D7A09C200CC3616 /* EventMethod.cpp in Sources */,
 				3CD12F161D6CE77800CDF793 /* ChapterRecord.cpp in Sources */,
@@ -1015,6 +1064,7 @@
 				3CB1099B1D74F3E2002C4121 /* ItemDefinition.cpp in Sources */,
 				3CB1098C1D74CE92002C4121 /* SimpleMoveActivity.cpp in Sources */,
 				3C8D68561D7BF5F500CC3616 /* Cursor.cpp in Sources */,
+				3CE63B271D7D59D400C2C76B /* CommonHelper.cpp in Sources */,
 				3C18834B1D6BA0970059056E /* SceneCreator.cpp in Sources */,
 				3CB109691D6E0BD1002C4121 /* Ground.cpp in Sources */,
 				3CA318261D760AD00042B56A /* CreatureData.cpp in Sources */,

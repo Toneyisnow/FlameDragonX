@@ -24,19 +24,30 @@ BattleField::BattleField()
     
 }
 
-BattleField::BattleField(BattleScene * scene, int chapterId)
+BattleField::BattleField(BattleScene * scene)
 {
     this->_battleScene = scene;
-    
-    this->initWithChapter(chapterId);
+}
+
+BattleScene * BattleField::getBattleScene()
+{
+    return _battleScene;
 }
 
 BattleField::~BattleField()
 {
+    _touchHandler->release();
+    _stateDispatcher->release();
     
     if (_groundMetrix != nullptr)
     {
         _groundMetrix->clear();
+    }
+    
+    if (_battleObjectList != nullptr)
+    {
+        _battleObjectList->clear();
+        delete _battleObjectList;
     }
     
     if (_friendList != nullptr)
@@ -72,17 +83,24 @@ void BattleField::initWithChapter(int chapterId)
     // Adding controls to map
     _touchHandler = new TouchHandler(this);
     
+    // State Dispatcher
+    _stateDispatcher = new StateDispatcher(_battleScene);
+    
     // Init Metrix
     this->initGroundMetrix(chapterId);
     
     // Init Objects
-    this->_cursor = new Cursor();
-    addObject(_cursor, Vec2(0, 0), BattleObjectOrder_Indicator);
+    this->_battleObjectList = new Vector<BattleObject *>();
     
     // Init Creatures
     this->_friendList = new Vector<Creature *>();
     this->_enemyList = new Vector<Creature *>();
     this->_npcList = new Vector<Creature *>();
+    
+    this->_cursor = new Cursor();
+    addObject(_cursor, Vec2(0, 0));
+    
+    
     
     
     Creature * creature = new Creature(CreatureType_Friend);
@@ -230,6 +248,21 @@ Vec2 BattleField::getObjectPosition(BattleObject * obj)
     return convertLocationToPosition(location);
 }
 
+void BattleField::setObjectPosition(BattleObject * obj, Vec2 position)
+{
+    if (obj == nullptr)
+    {
+        return;
+    }
+
+    obj->getSprite()->setPosition(convertPositionToLocation(position));
+}
+
+bool BattleField::isInteractiveBusy()
+{
+    return false;
+}
+
 Vec2 BattleField::convertPositionToLocation(Vec2 pos)
 {
     float locX = (pos.x - 1) * _displayBlockSize + _displayBlockSize / 2;
@@ -250,18 +283,45 @@ Vec2 BattleField::convertLocationToPosition(Vec2 loc)
     return Vec2(posX, posY);
 }
 
-void BattleField::addObject(BattleObject * obj, Vec2 position, int zOrder)
+void BattleField::sendObjectToGround(BattleObject * obj, Vec2 position)
 {
+    int zOrder;
+    switch (obj->getObjectType()) {
+        case BattleObject_ScopeIndicator:
+        case BattleObject_Cursor:
+            zOrder = BattleObjectOrder_Indicator;
+            break;
+        case BattleObject_Creature:
+            zOrder = BattleObjectOrder_Creature;
+            break;
+        case BattleObject_MenuItem:
+            zOrder = BattleObjectOrder_Menu;
+            break;
+        case BattleObject_Treasure:
+            zOrder = BattleObjectOrder_OnGround;
+            break;
+            
+        default:
+            break;
+    }
+    
+    
     Vec2 location = this->convertPositionToLocation(position);
     obj->getSprite()->setPosition(location);
     _groundImage->addChild(obj->getSprite(), zOrder);
 }
 
+void BattleField::addObject(BattleObject * obj, Vec2 position)
+{
+    sendObjectToGround(obj, position);
+    _battleObjectList->pushBack(obj);
+}
+
 void BattleField::addCreature(Creature * creature, Vec2 position)
 {
-    addObject(creature, position, BattleObjectOrder_Creature);
+    sendObjectToGround(creature, position);
     
-     switch(creature->getType())
+    switch(creature->getType())
     {
         case CreatureType_Friend:
             this->_friendList->pushBack(creature);
@@ -275,6 +335,35 @@ void BattleField::addCreature(Creature * creature, Vec2 position)
         default:
             break;
     }
+}
+
+void BattleField::removeObject(BattleObject * obj)
+{
+    if (obj->getObjectType() == BattleObject_Creature)
+    {
+        Creature * creature = (Creature *)obj;
+        switch(creature->getType())
+        {
+            case CreatureType_Friend:
+                this->_friendList->eraseObject(creature);
+                break;
+            case CreatureType_Enemy:
+                this->_enemyList->eraseObject(creature);
+                break;
+            case CreatureType_Npc:
+                this->_npcList->eraseObject(creature);
+                break;
+            default:
+                break;
+        }
+    }
+    else
+    {
+        this->_battleObjectList->eraseObject(obj);
+    }
+    
+    _groundImage->removeChild(obj->getSprite(), false);
+    
 }
 
 void BattleField::takeTick(int synchronizedTick)
@@ -301,15 +390,49 @@ void BattleField::takeTick(int synchronizedTick)
 void BattleField::onClickedAt(Vec2 location)
 {
     Vec2 position = convertLocationToPosition(location);
-    if (position.x <= 0 || position.y <= 0 || position.x > _fieldWidth || position.y > _fieldHeight) {
+    if (position.x < 0 || position.y < 0 || position.x > _fieldWidth + 1 || position.y > _fieldHeight + 1)
+    {
         return;
     }
     
-    //// Vec2 unitLocation = convertPositionToLocation(position);
+    _stateDispatcher->handleClickAt(position);
     
-    /// _cursor->getSprite()->setPosition(unitLocation);
-    
+}
+
+void BattleField::setCursorTo(Vec2 position)
+{
+    Vec2 unitLocation = convertPositionToLocation(position);
+    _cursor->getSprite()->setPosition(unitLocation);
+}
+
+void BattleField::moveCursorTo(Vec2 position)
+{
     CursorMoveActivity * activity = CursorMoveActivity::create(this, _cursor, position);
     _battleScene->getActivityQueue()->appendActivity(activity);
+}
+
+Vec2 BattleField::getCursorPosition()
+{
+    return getObjectPosition(_cursor);
+}
+
+void BattleField::showMenuAt(int menuId, Vec2 position)
+{
     
+}
+
+void BattleField::closeMenu()
+{
+    
+}
+
+void BattleField::removeAllIndicators()
+{
+    for (int i = (int)_battleObjectList->size() - 1; i >= 0 ; i--) {
+        BattleObject * obj = _battleObjectList->at(i);
+        if (obj->getObjectType() == BattleObject_ScopeIndicator)
+        {
+            removeObject(obj);
+        }
+    }
 }

@@ -8,8 +8,9 @@
 
 #include "BattleObject.hpp"
 
-BattleObject::BattleObject()
+BattleObject::BattleObject(BattleObjectType type)
 {
+    _objectType = type;
     _baseSprite = Sprite::create("Icons/001/Icon-001-02.png");
     _animator = new FDAnimate(_baseSprite);
 
@@ -20,6 +21,10 @@ BattleObject::~BattleObject()
     _animator->release();
 }
 
+BattleObjectType BattleObject::getObjectType()
+{
+    return _objectType;
+}
 
 void BattleObject::initialize()
 {

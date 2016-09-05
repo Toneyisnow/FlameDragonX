@@ -13,6 +13,7 @@
 #include "DataStore.hpp"
 
 Creature::Creature(CreatureType type)
+: BattleObject(BattleObject_Creature)
 {
     this->_creatureType = type;
     
@@ -127,6 +128,11 @@ void Creature::setGesture(GestureStatus gesture)
         default:
             break;
     }
+}
+
+bool Creature::isVisible()
+{
+    return true;
 }
 
 bool Creature::isDead()

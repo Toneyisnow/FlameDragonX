@@ -14,6 +14,7 @@
 #include "Ground.hpp"
 #include "Creature.hpp"
 #include "Cursor.hpp"
+#include "StateDispatcher.hpp"
 
 class BattleScene;
 
@@ -35,29 +36,33 @@ private:
     Vector<Ground *> * _groundMetrix;
     
     TouchHandler * _touchHandler;
+    StateDispatcher * _stateDispatcher;
     
     int _fieldWidth;
     int _fieldHeight;
     int _treasureCount;
     
-    void initGroundMetrix(int chapterId);
     
     Cursor * _cursor;
     Vector<Creature *> * _friendList;
     Vector<Creature *> * _enemyList;
     Vector<Creature *> * _npcList;
-    
+    Vector<BattleObject *> * _battleObjectList;
     
     // Private Methods
     
+    void initGroundMetrix(int chapterId);
     
+    void sendObjectToGround(BattleObject * obj, Vec2 position);
     
     
 public:
     
     BattleField();
-    BattleField(BattleScene * scene, int chapterId);
+    BattleField(BattleScene * scene);
     ~BattleField();
+    
+    BattleScene * getBattleScene();
     
     void initWithChapter(int chapterId);
     
@@ -72,6 +77,7 @@ public:
     Creature * getCreatureAt(int x, int y);
     Creature * getCreatureById(int creatureId);
     Vec2 getObjectPosition(BattleObject * obj);
+    void setObjectPosition(BattleObject * obj, Vec2 position);
     
     Vector<Creature *> * getFriendList();
     Vector<Creature *> * getEnemyList();
@@ -86,9 +92,21 @@ public:
     //void activityMoveCreatureWithMenu(Vec2 position, Vec2 target);
     
     void addCreature(Creature * creature, Vec2 position);
-    void addObject(BattleObject * obj, Vec2 position, int zOrder);
+    void addObject(BattleObject * obj, Vec2 position);
+    void removeObject(BattleObject * obj);
     
     void onClickedAt(Vec2 location);
+    
+    void setCursorTo(Vec2 position);
+    void moveCursorTo(Vec2 position);
+    Vec2 getCursorPosition();
+    
+    bool isInteractiveBusy();
+    
+    void showMenuAt(int menuId, Vec2 position);
+    void closeMenu();
+    
+    void removeAllIndicators();
     
 };
 

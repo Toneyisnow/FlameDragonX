@@ -25,10 +25,20 @@ typedef enum BattleObjectOrder
     BattleObjectOrder_FocusCreature = 50
 } BattleObjectOrder;
 
+typedef enum BattleObjectType
+{
+    BattleObject_ScopeIndicator,
+    BattleObject_Cursor,
+    BattleObject_Treasure,
+    BattleObject_MenuItem,
+    BattleObject_Creature
+} BattleObjectType;
 
 class BattleObject : public cocos2d::Ref
 {
 protected:
+    
+    BattleObjectType _objectType;
     
     Sprite * _baseSprite;
     
@@ -38,8 +48,10 @@ protected:
     
 public:
     
-    BattleObject();
+    BattleObject(BattleObjectType type);
     ~BattleObject();
+    
+    BattleObjectType getObjectType();
     
     Sprite * getSprite();
     

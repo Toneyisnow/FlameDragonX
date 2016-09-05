@@ -25,7 +25,8 @@ BattleScene::BattleScene(ChapterRecord* record)
     DataStore::getInstance()->loadData();
     _activityQueue = new ActivityQueue();
     
-    _battleField = new BattleField(this, record->getChapterId());
+    _battleField = new BattleField(this);
+    _battleField->initWithChapter(record->getChapterId());
     
     // add layer as a child to scene
     this->addChild(_battleField);
