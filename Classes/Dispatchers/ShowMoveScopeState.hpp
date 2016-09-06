@@ -11,14 +11,21 @@
 
 #include "cocos2d.h"
 #include "ActionState.hpp"
+#include "MoveScopeResolver.hpp"
+
+
 class BattleScene;
 
 class ShowMoveScopeState : public ActionState
 {
 private:
     
+    MoveScopeResolver * _resolver;
     
 public:
+    
+    ShowMoveScopeState();
+    ~ShowMoveScopeState();
     
     static ShowMoveScopeState * create(BattleScene * scene, StateSession * session);
     

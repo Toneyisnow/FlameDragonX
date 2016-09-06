@@ -96,6 +96,8 @@
 		3CE63B271D7D59D400C2C76B /* CommonHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63B251D7D59D400C2C76B /* CommonHelper.cpp */; };
 		3CE63B2A1D7D5DDD00C2C76B /* OffsetFrame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63B281D7D5DDD00C2C76B /* OffsetFrame.cpp */; };
 		3CE63B2D1D7D5DF900C2C76B /* TransparencyFrame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63B2B1D7D5DF900C2C76B /* TransparencyFrame.cpp */; };
+		3CE63B311D7E7E4300C2C76B /* MoveScopeResolver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63B2F1D7E7E4300C2C76B /* MoveScopeResolver.cpp */; };
+		3CE63B341D7E9BEA00C2C76B /* FDPoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63B321D7E9BEA00C2C76B /* FDPoint.cpp */; };
 		3EACC98F19EE6D4300EB3C5E /* res in Resources */ = {isa = PBXBuildFile; fileRef = 3EACC98E19EE6D4300EB3C5E /* res */; };
 		3EACC99019EE6D4300EB3C5E /* res in Resources */ = {isa = PBXBuildFile; fileRef = 3EACC98E19EE6D4300EB3C5E /* res */; };
 		46880B7B19C43A67006E1F66 /* CloseNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 46880B7619C43A67006E1F66 /* CloseNormal.png */; };
@@ -344,6 +346,10 @@
 		3CE63B291D7D5DDD00C2C76B /* OffsetFrame.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = OffsetFrame.hpp; path = Animation/OffsetFrame.hpp; sourceTree = "<group>"; };
 		3CE63B2B1D7D5DF900C2C76B /* TransparencyFrame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TransparencyFrame.cpp; path = Animation/TransparencyFrame.cpp; sourceTree = "<group>"; };
 		3CE63B2C1D7D5DF900C2C76B /* TransparencyFrame.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = TransparencyFrame.hpp; path = Animation/TransparencyFrame.hpp; sourceTree = "<group>"; };
+		3CE63B2F1D7E7E4300C2C76B /* MoveScopeResolver.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MoveScopeResolver.cpp; path = Algorithms/MoveScopeResolver.cpp; sourceTree = "<group>"; };
+		3CE63B301D7E7E4300C2C76B /* MoveScopeResolver.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = MoveScopeResolver.hpp; path = Algorithms/MoveScopeResolver.hpp; sourceTree = "<group>"; };
+		3CE63B321D7E9BEA00C2C76B /* FDPoint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FDPoint.cpp; path = Common/FDPoint.cpp; sourceTree = "<group>"; };
+		3CE63B331D7E9BEA00C2C76B /* FDPoint.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = FDPoint.hpp; path = Common/FDPoint.hpp; sourceTree = "<group>"; };
 		3EACC98E19EE6D4300EB3C5E /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; path = res; sourceTree = "<group>"; };
 		46880B7619C43A67006E1F66 /* CloseNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseNormal.png; sourceTree = "<group>"; };
 		46880B7719C43A67006E1F66 /* CloseSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseSelected.png; sourceTree = "<group>"; };
@@ -701,6 +707,8 @@
 				3C8D68491D7A3FA800CC3616 /* CallbackMethod.hpp */,
 				3CE63B251D7D59D400C2C76B /* CommonHelper.cpp */,
 				3CE63B261D7D59D400C2C76B /* CommonHelper.hpp */,
+				3CE63B321D7E9BEA00C2C76B /* FDPoint.cpp */,
+				3CE63B331D7E9BEA00C2C76B /* FDPoint.hpp */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -757,6 +765,15 @@
 			name = Battle;
 			sourceTree = "<group>";
 		};
+		3CE63B2E1D7E7E1400C2C76B /* Algorithms */ = {
+			isa = PBXGroup;
+			children = (
+				3CE63B2F1D7E7E4300C2C76B /* MoveScopeResolver.cpp */,
+				3CE63B301D7E7E4300C2C76B /* MoveScopeResolver.hpp */,
+			);
+			name = Algorithms;
+			sourceTree = "<group>";
+		};
 		46880B7519C43A67006E1F66 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -779,6 +796,7 @@
 			isa = PBXGroup;
 			children = (
 				3CB109861D74CC93002C4121 /* Activities */,
+				3CE63B2E1D7E7E1400C2C76B /* Algorithms */,
 				3CB109761D6F6470002C4121 /* Animation */,
 				3CB1096C1D6E6B68002C4121 /* Objects */,
 				3C8D685A1D7C0D0400CC3616 /* Dispatchers */,
@@ -1039,6 +1057,7 @@
 				3CB109AD1D74FC5E002C4121 /* DataStore.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				3C8D683B1D79F56E00CC3616 /* EventLoaderFactory.cpp in Sources */,
+				3CE63B311D7E7E4300C2C76B /* MoveScopeResolver.cpp in Sources */,
 				3CB109891D74CCAB002C4121 /* FDActivity.cpp in Sources */,
 				3CB109A11D74F41E002C4121 /* AttackItemDefinition.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
@@ -1070,6 +1089,7 @@
 				3CE63B2A1D7D5DDD00C2C76B /* OffsetFrame.cpp in Sources */,
 				3CB109851D6F7626002C4121 /* AnimationLibrary.cpp in Sources */,
 				3CB109AA1D74F816002C4121 /* CreatureChapterRecord.cpp in Sources */,
+				3CE63B341D7E9BEA00C2C76B /* FDPoint.cpp in Sources */,
 				3C8D68241D78F24300CC3616 /* CreatureMoveActivity.cpp in Sources */,
 				3C8D68381D79F54900CC3616 /* EventLoader.cpp in Sources */,
 				3CA318291D760C6D0042B56A /* AICreature.cpp in Sources */,

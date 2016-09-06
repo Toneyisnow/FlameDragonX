@@ -72,6 +72,8 @@ public:
     
     float getDisplayScale();
     
+    Size getFieldSize();
+    
     Ground * groundAt(int x, int y);
     
     Creature * getCreatureAt(int x, int y);

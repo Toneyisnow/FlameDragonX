@@ -28,6 +28,10 @@ Creature::~Creature()
     _data->release();
 }
 
+CreatureData * Creature::creatureData()
+{
+    return _data;
+}
 
 
 int Creature::getId()

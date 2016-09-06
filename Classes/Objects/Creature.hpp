@@ -54,6 +54,9 @@ public:
     
     int getId();
     
+    
+    CreatureData * creatureData();
+    
     CreatureType getType();
     
     // Deprecated

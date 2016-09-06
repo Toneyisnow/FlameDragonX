@@ -158,6 +158,11 @@ Size BattleField::getFieldSizeOnScreen()
     return _groundImage->getBoundingBox().size;
 }
 
+Size BattleField::getFieldSize()
+{
+    return Size(_fieldWidth, _fieldHeight);
+}
+
 float BattleField::getDisplayScale()
 {
     return _displayScale;
@@ -235,6 +240,21 @@ Creature * BattleField::getCreatureById(int creatureId)
     }
     
     return nullptr;
+}
+
+Vector<Creature *> * BattleField::getFriendList()
+{
+    return _friendList;
+}
+
+Vector<Creature *> * BattleField::getEnemyList()
+{
+    return _enemyList;
+}
+
+Vector<Creature *> * BattleField::getNPCList()
+{
+    return _npcList;
 }
 
 Vec2 BattleField::getObjectPosition(BattleObject * obj)

@@ -10,6 +10,7 @@
 #include "BattleField.hpp"
 #include "Creature.hpp"
 #include "ScopeIndicator.hpp"
+#include "FDPoint.hpp"
 
 ShowMoveScopeState * ShowMoveScopeState::create(BattleScene * scene, StateSession * session)
 {
@@ -21,6 +22,17 @@ ShowMoveScopeState * ShowMoveScopeState::create(BattleScene * scene, StateSessio
     
     return state;
 }
+
+ShowMoveScopeState::ShowMoveScopeState()
+{
+    
+}
+
+ShowMoveScopeState::~ShowMoveScopeState()
+{
+    
+}
+
 
 void ShowMoveScopeState::onEnterState()
 {
@@ -34,18 +46,20 @@ void ShowMoveScopeState::onEnterState()
     
     _battleField->setObjectPosition(creature, position);
     
-    ScopeIndicator * i1 = new ScopeIndicator();
-    _battleField->addObject(i1, Vec2(position.x, position.y + 1));
-    i1->release();
-    ScopeIndicator * i2 = new ScopeIndicator();
-    _battleField->addObject(i2, Vec2(position.x, position.y - 1));
-    i2->release();
-    ScopeIndicator * i3 = new ScopeIndicator();
-    _battleField->addObject(i3, Vec2(position.x + 1, position.y));
-    i3->release();
-    ScopeIndicator * i4 = new ScopeIndicator();
-    _battleField->addObject(i4, Vec2(position.x - 1, position.y));
-    i4->release();
+    if (_resolver == nullptr)
+    {
+        _resolver = new MoveScopeResolver(_battleField, creature);
+        _resolver->calculate();
+    }
+    
+    Vector<FDPoint *> resultPositions = _resolver->getResults();
+    for (int i = 0; i < resultPositions.size(); i++)
+    {
+        Vec2 pos = resultPositions.at(i)->getValue();
+        ScopeIndicator * i1 = new ScopeIndicator();
+        _battleField->addObject(i1, pos);
+        i1->release();
+    }
 }
 
 void ShowMoveScopeState::onExitState()

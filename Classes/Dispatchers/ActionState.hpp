@@ -30,7 +30,7 @@ public:
     ActionState();
     ~ActionState();
     
-    void initWithSession(BattleScene * scene, StateSession * session);
+    virtual void initWithSession(BattleScene * scene, StateSession * session);
     
     virtual void onEnterState();
     virtual void onExitState();
