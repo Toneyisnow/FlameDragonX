@@ -98,6 +98,9 @@
 		3CE63B2D1D7D5DF900C2C76B /* TransparencyFrame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63B2B1D7D5DF900C2C76B /* TransparencyFrame.cpp */; };
 		3CE63B311D7E7E4300C2C76B /* MoveScopeResolver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63B2F1D7E7E4300C2C76B /* MoveScopeResolver.cpp */; };
 		3CE63B341D7E9BEA00C2C76B /* FDPoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63B321D7E9BEA00C2C76B /* FDPoint.cpp */; };
+		3CE63B371D7F33D900C2C76B /* MenuCursor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63B351D7F33D900C2C76B /* MenuCursor.cpp */; };
+		3CE63B391D7F40FB00C2C76B /* Menu in Resources */ = {isa = PBXBuildFile; fileRef = 3CE63B381D7F40FB00C2C76B /* Menu */; };
+		3CE63B3C1D7F8F6200C2C76B /* PointMap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63B3A1D7F8F6200C2C76B /* PointMap.cpp */; };
 		3EACC98F19EE6D4300EB3C5E /* res in Resources */ = {isa = PBXBuildFile; fileRef = 3EACC98E19EE6D4300EB3C5E /* res */; };
 		3EACC99019EE6D4300EB3C5E /* res in Resources */ = {isa = PBXBuildFile; fileRef = 3EACC98E19EE6D4300EB3C5E /* res */; };
 		46880B7B19C43A67006E1F66 /* CloseNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 46880B7619C43A67006E1F66 /* CloseNormal.png */; };
@@ -350,6 +353,11 @@
 		3CE63B301D7E7E4300C2C76B /* MoveScopeResolver.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = MoveScopeResolver.hpp; path = Algorithms/MoveScopeResolver.hpp; sourceTree = "<group>"; };
 		3CE63B321D7E9BEA00C2C76B /* FDPoint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FDPoint.cpp; path = Common/FDPoint.cpp; sourceTree = "<group>"; };
 		3CE63B331D7E9BEA00C2C76B /* FDPoint.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = FDPoint.hpp; path = Common/FDPoint.hpp; sourceTree = "<group>"; };
+		3CE63B351D7F33D900C2C76B /* MenuCursor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MenuCursor.cpp; path = Objects/MenuCursor.cpp; sourceTree = "<group>"; };
+		3CE63B361D7F33D900C2C76B /* MenuCursor.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = MenuCursor.hpp; path = Objects/MenuCursor.hpp; sourceTree = "<group>"; };
+		3CE63B381D7F40FB00C2C76B /* Menu */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Menu; sourceTree = "<group>"; };
+		3CE63B3A1D7F8F6200C2C76B /* PointMap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PointMap.cpp; path = Common/PointMap.cpp; sourceTree = "<group>"; };
+		3CE63B3B1D7F8F6200C2C76B /* PointMap.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = PointMap.hpp; path = Common/PointMap.hpp; sourceTree = "<group>"; };
 		3EACC98E19EE6D4300EB3C5E /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; path = res; sourceTree = "<group>"; };
 		46880B7619C43A67006E1F66 /* CloseNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseNormal.png; sourceTree = "<group>"; };
 		46880B7719C43A67006E1F66 /* CloseSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseSelected.png; sourceTree = "<group>"; };
@@ -615,6 +623,8 @@
 				3C8D68461D7A3AD500CC3616 /* RoutePoint.hpp */,
 				3C8D68541D7BF5F500CC3616 /* Cursor.cpp */,
 				3C8D68551D7BF5F500CC3616 /* Cursor.hpp */,
+				3CE63B351D7F33D900C2C76B /* MenuCursor.cpp */,
+				3CE63B361D7F33D900C2C76B /* MenuCursor.hpp */,
 			);
 			name = Objects;
 			sourceTree = "<group>";
@@ -709,6 +719,8 @@
 				3CE63B261D7D59D400C2C76B /* CommonHelper.hpp */,
 				3CE63B321D7E9BEA00C2C76B /* FDPoint.cpp */,
 				3CE63B331D7E9BEA00C2C76B /* FDPoint.hpp */,
+				3CE63B3A1D7F8F6200C2C76B /* PointMap.cpp */,
+				3CE63B3B1D7F8F6200C2C76B /* PointMap.hpp */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -781,6 +793,7 @@
 				3CB1096A1D6E5E66002C4121 /* Icons */,
 				3CD12F2D1D6D074800CDF793 /* Data */,
 				3CD12F2B1D6D073F00CDF793 /* Maps */,
+				3CE63B381D7F40FB00C2C76B /* Menu */,
 				3C1883621D6BB0C10059056E /* Title */,
 				521A8EA819F11F5000D177D7 /* fonts */,
 				3EACC98E19EE6D4300EB3C5E /* res */,
@@ -973,6 +986,7 @@
 				5087E78117EB970100C73F5D /* Icon-120.png in Resources */,
 				5087E78617EB970100C73F5D /* Icon-76.png in Resources */,
 				3C8D68291D78FB8000CC3616 /* Others in Resources */,
+				3CE63B391D7F40FB00C2C76B /* Menu in Resources */,
 				5087E77F17EB970100C73F5D /* Default@2x.png in Resources */,
 				50EF629917ECD46A001EB2F8 /* Icon-100.png in Resources */,
 				3CD12EF71D6BB11600CDF793 /* Title_Continue_0.png in Resources */,
@@ -1044,6 +1058,7 @@
 				3CE63B211D7D3C4B00C2C76B /* ShowMoveScopeState.cpp in Sources */,
 				3C8D68601D7D304700CC3616 /* ActionState.cpp in Sources */,
 				3CA3182F1D7613630042B56A /* FDRange.cpp in Sources */,
+				3CE63B3C1D7F8F6200C2C76B /* PointMap.cpp in Sources */,
 				46880B8A19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */,
 				3CB109931D74ECB1002C4121 /* Constants.cpp in Sources */,
 				3CB109A41D74F440002C4121 /* SpecialItemDefinition.cpp in Sources */,
@@ -1096,6 +1111,7 @@
 				3CB1099B1D74F3E2002C4121 /* ItemDefinition.cpp in Sources */,
 				3CB1098C1D74CE92002C4121 /* SimpleMoveActivity.cpp in Sources */,
 				3C8D68561D7BF5F500CC3616 /* Cursor.cpp in Sources */,
+				3CE63B371D7F33D900C2C76B /* MenuCursor.cpp in Sources */,
 				3CE63B271D7D59D400C2C76B /* CommonHelper.cpp in Sources */,
 				3C18834B1D6BA0970059056E /* SceneCreator.cpp in Sources */,
 				3CB109691D6E0BD1002C4121 /* Ground.cpp in Sources */,

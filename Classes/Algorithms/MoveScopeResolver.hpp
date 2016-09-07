@@ -14,6 +14,7 @@
 #include "Creature.hpp"
 #include "RoutePoint.hpp"
 #include "FDPoint.hpp"
+#include "PointMap.hpp"
 
 USING_NS_CC;
 
@@ -36,9 +37,11 @@ private:
     Creature * _creature;
     Vec2 _originPosition;
     
+    PointMap<Creature *> * _zocPositions;
     //// Map<Vec2, Creature *> * _zocPositions;
     Vector<MoveScopePoint *> * _movePoints;
     //// Map<Vec2, FDPoint *> * _scopeResults;
+    PointMap<FDPoint *> * _scopeResults;
     
     void walkDirection(MoveScopePoint * movePoint, int directionX, int directionY);
     

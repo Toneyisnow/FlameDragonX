@@ -125,13 +125,13 @@ void BattleField::initWithChapter(int chapterId)
     BatchActivity * bacth = new BatchActivity();
     Creature * c3 = this->getCreatureAt(2, 24);
     CreatureMoveActivity * activity = new CreatureMoveActivity(this, c3);
-    activity->appendPosition(8, 24);
-    activity->appendPosition(8, 20);
+    activity->appendPosition(4, 24);
+    activity->appendPosition(4, 20);
     
     Creature * c2 = this->getCreatureAt(2, 22);
     CreatureMoveActivity * activity2 = new CreatureMoveActivity(this, c2);
-    activity2->appendPosition(8, 22);
-    activity2->appendPosition(8, 16);
+    activity2->appendPosition(5, 22);
+    activity2->appendPosition(5 , 19);
     
     bacth->addActivity(activity);
     bacth->addActivity(activity2);
@@ -314,7 +314,7 @@ void BattleField::sendObjectToGround(BattleObject * obj, Vec2 position)
         case BattleObject_Creature:
             zOrder = BattleObjectOrder_Creature;
             break;
-        case BattleObject_MenuItem:
+        case BattleObject_Menu:
             zOrder = BattleObjectOrder_Menu;
             break;
         case BattleObject_Treasure:
@@ -434,7 +434,7 @@ void BattleField::setCursorTo(Vec2 position)
 void BattleField::moveCursorTo(Vec2 position)
 {
     CursorMoveActivity * activity = CursorMoveActivity::create(this, _cursor, position);
-    _battleScene->getActivityQueue()->appendActivity(activity);
+    _battleScene->getActivityQueue()->insertSingleActivity(activity);
 }
 
 Vec2 BattleField::getCursorPosition()
@@ -444,12 +444,54 @@ Vec2 BattleField::getCursorPosition()
 
 void BattleField::showMenuAt(int menuId, Vec2 position)
 {
+    Creature * creature = getCreatureAt(position.x, position.y);
+    int menuItemIds[4] = { menuId * 10, menuId * 10 + 1, menuId * 10 + 2, menuId * 10 + 3};
+    
+    for (int menuItemId : menuItemIds)
+    {
+        MenuCursor * menu = new MenuCursor(menuItemId);
+        menu->sendToField(this, position);
+        
+    }
+    
+    /*
+    CGPoint menuPos[4];
+    menuPos[0] = CGPointMake(pos.x-1, pos.y);
+    menuPos[1] = CGPointMake(pos.x, pos.y-1);
+    menuPos[2] = CGPointMake(pos.x+1, pos.y);
+    menuPos[3] = CGPointMake(pos.x, pos.y+1);
+    */
     
 }
 
 void BattleField::closeMenu()
 {
     
+}
+
+void BattleField::setActiveMenuCursor(MenuCursor * selected)
+{
+    for (BattleObject * object : *_battleObjectList) {
+        if (object->getObjectType() == BattleObject_Menu)
+        {
+            MenuCursor * cursor = (MenuCursor *)object;
+            cursor->setSelected(false);
+        }
+    }
+    
+    selected->setSelected(true);
+}
+
+BattleObject * BattleField::getObjectByPosition(BattleObjectType type, Vec2 position)
+{
+    for (BattleObject * object : *_battleObjectList) {
+        if (object->getObjectType() == type && getObjectPosition(object) == position)
+        {
+            return object;
+        }
+    }
+    
+    return nullptr;
 }
 
 void BattleField::removeAllIndicators()

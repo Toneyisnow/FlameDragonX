@@ -17,6 +17,7 @@
 #include "CallbackActivity.hpp"
 #include "TalkActivity.hpp"
 #include "CreatureDeadActivity.hpp"
+#include "PointMap.hpp"
 
 USING_NS_CC;
 
@@ -62,8 +63,15 @@ BattleScene::BattleScene(ChapterRecord* record)
     std::function<void(int)> method = std::bind(fund, this, std::placeholders::_1);
     testCallMethod(method);
     
+    PointMap<FDPoint *> * map = new PointMap<FDPoint *>();
+    map->insert(Vec2(1, 2), FDPoint::create(Vec2(4, 4)));
+    map->insert(Vec2(3, 2), FDPoint::create(Vec2(4, 4)));
     
-    
+    if (map->containsKey(Vec2(1, 2)))
+    {
+        FDPoint * result = map->at(Vec2(1, 2));
+        log("Result %f %f", result->getValue().x, result->getValue().y);
+    }
 }
 
 BattleScene::BattleScene(BattleRecord * battleRecord)

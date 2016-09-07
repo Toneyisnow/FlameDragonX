@@ -109,6 +109,18 @@ void AnimationLibrary::loadScopeIndicatorAnimation()
     animation->release();
 }
 
+void AnimationLibrary::loadMenuAnimation(int menuItemId)
+{
+    std::string key = StringUtils::format("Menu-%d", menuItemId);
+    SlideAnimation *animation = new SlideAnimation(Constants::TickPerFrame_IdleAnimation, true, true);
+    
+    animation->appendFrame(StringUtils::format("Menu-%03d-1.png", menuItemId));
+    animation->appendFrame(StringUtils::format("Menu-%03d-2.png", menuItemId));
+    
+    _slideAnimationDictionary->insert(key, animation);
+    animation->release();
+}
+
 SlideAnimation * AnimationLibrary::getIdleAnimation(int creatureAniId)
 {
     std::string key = StringUtils::format("Idle-%03d", creatureAniId);
@@ -144,6 +156,16 @@ SlideAnimation * AnimationLibrary::getScopeIndicatorAnimation()
     return _slideAnimationDictionary->at(key);
 }
 
+SlideAnimation * AnimationLibrary::getMenuAnimation(int menuItemId)
+{
+    std::string key = StringUtils::format("Menu-%d", menuItemId);
+    if (_slideAnimationDictionary->at(key) == nullptr)
+    {
+        this->loadMenuAnimation(menuItemId);
+    }
+    
+    return _slideAnimationDictionary->at(key);
+}
 
 std::string AnimationLibrary::filenameForBattleFieldAnimation(int creatureAniId, int index)
 {

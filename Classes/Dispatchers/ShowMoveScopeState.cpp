@@ -46,11 +46,8 @@ void ShowMoveScopeState::onEnterState()
     
     _battleField->setObjectPosition(creature, position);
     
-    if (_resolver == nullptr)
-    {
-        _resolver = new MoveScopeResolver(_battleField, creature);
-        _resolver->calculate();
-    }
+    _resolver = new MoveScopeResolver(_battleField, creature);
+    _resolver->calculate();
     
     Vector<FDPoint *> resultPositions = _resolver->getResults();
     for (int i = 0; i < resultPositions.size(); i++)

@@ -15,6 +15,7 @@
 #include "Creature.hpp"
 #include "Cursor.hpp"
 #include "StateDispatcher.hpp"
+#include "MenuCursor.hpp"
 
 class BattleScene;
 
@@ -80,6 +81,7 @@ public:
     Creature * getCreatureById(int creatureId);
     Vec2 getObjectPosition(BattleObject * obj);
     void setObjectPosition(BattleObject * obj, Vec2 position);
+    BattleObject * getObjectByPosition(BattleObjectType type, Vec2 position);
     
     Vector<Creature *> * getFriendList();
     Vector<Creature *> * getEnemyList();
@@ -107,6 +109,7 @@ public:
     
     void showMenuAt(int menuId, Vec2 position);
     void closeMenu();
+    void setActiveMenuCursor(MenuCursor * menuCursor);
     
     void removeAllIndicators();
     

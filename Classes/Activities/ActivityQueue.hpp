@@ -19,7 +19,8 @@ class ActivityQueue : public cocos2d::Ref
 {
 private:
     
-    Vector<FDActivity *> * _activitiList;
+    Vector<FDActivity *> * _queuedActivityList;
+    Vector<FDActivity *> * _singleActivityList;
     
     FDActivity * _currentActivity;
     
@@ -32,8 +33,9 @@ public:
     
     void pushBackActivity(FDActivity * activity);
     void insertActivity(FDActivity * activity);
-    void appendActivity(FDActivity * activity);
     
+    void appendActivity(FDActivity * activity);
+    void insertSingleActivity(FDActivity * activity);
     
     void takeTick(int synchronizedTick);
     

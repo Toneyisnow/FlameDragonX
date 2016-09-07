@@ -30,7 +30,7 @@ typedef enum BattleObjectType
     BattleObject_ScopeIndicator,
     BattleObject_Cursor,
     BattleObject_Treasure,
-    BattleObject_MenuItem,
+    BattleObject_Menu,
     BattleObject_Creature
 } BattleObjectType;
 

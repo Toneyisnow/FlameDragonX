@@ -10,43 +10,53 @@
 
 ActivityQueue::ActivityQueue()
 {
-    this->_activitiList = new Vector<FDActivity *>();
+    this->_queuedActivityList = new Vector<FDActivity *>();
+    this->_singleActivityList = new Vector<FDActivity *>();
+    
     _currentActivity = nullptr;
     _appendToIndex = 0;
 }
 
 ActivityQueue::~ActivityQueue()
 {
-    this->_activitiList->clear();
-    delete this->_activitiList;
+    this->_queuedActivityList->clear();
+    delete this->_queuedActivityList;
+    
+    this->_singleActivityList->clear();
+    delete this->_singleActivityList;
 }
 
 void ActivityQueue::pushBackActivity(FDActivity * activity)
 {
-    this->_activitiList->pushBack(activity);
+    this->_queuedActivityList->pushBack(activity);
 }
 
 void ActivityQueue::insertActivity(FDActivity * activity)
 {
-    this->_activitiList->insert(0, activity);
+    this->_queuedActivityList->insert(0, activity);
 }
 
 void ActivityQueue::appendActivity(FDActivity * activity)
 {
-    this->_activitiList->insert(_appendToIndex, activity);
+    this->_queuedActivityList->insert(_appendToIndex, activity);
+}
+
+void ActivityQueue::insertSingleActivity(FDActivity * activity)
+{
+    this->_singleActivityList->insert(0, activity);
 }
 
 void ActivityQueue::takeTick(int synchronizedTick)
 {
     if (_currentActivity == nullptr)
     {
-        if (this->_activitiList->size() > 0)
+        if (this->_queuedActivityList->size() > 0)
         {
-            _currentActivity = this->_activitiList->at(0);
+            _currentActivity = this->_queuedActivityList->at(0);
             _currentActivity->retain();
             _appendToIndex = 0;
             
-            this->_activitiList->erase(0);
+            this->_queuedActivityList->erase(0);
         }
     }
     
@@ -63,4 +73,11 @@ void ActivityQueue::takeTick(int synchronizedTick)
         _appendToIndex = 0;
     }
     
+    for (FDActivity * activity :  *(this->_singleActivityList)) {
+        activity->takeTick(synchronizedTick);
+        
+        if (activity->hasFinished()) {
+            this->_singleActivityList->eraseObject(activity);
+        }
+    }
 }
