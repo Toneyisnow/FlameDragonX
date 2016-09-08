@@ -12,6 +12,7 @@
 #include <stdio.h>
 #include "cocos2d.h"
 
+typedef unsigned char FDBYTE;
 
 typedef enum Direction
 {

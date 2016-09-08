@@ -13,7 +13,7 @@
 #include "FDFrame.hpp"
 #include "Constants.hpp"
 
-// USING_NS_CC;
+USING_NS_CC;
 
 class SlideAnimation : public cocos2d::Ref
 {
@@ -33,6 +33,7 @@ public:
     
     void appendFrame(FDFrame * frame);
     void appendFrame(std::string filename);
+    void appendFrame(Texture2D * texture);
     
     int getFrameCount();
     FDFrame * frameAt(int index);

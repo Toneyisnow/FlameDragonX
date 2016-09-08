@@ -19,10 +19,23 @@ FDFrame::FDFrame(std::string filename)
 
 }
 
+FDFrame::FDFrame(Texture2D * texture)
+: FDFrame(texture, 0)
+{
+
+}
+
 FDFrame::FDFrame(std::string filename, int tickCount)
 {
     // Director::getInstance()->getTextureCache()->image
     this->_texture = Director::getInstance()->getTextureCache()->addImage(filename);
+    this->_texture->retain();
+    this->_tickCount = tickCount;
+}
+
+FDFrame::FDFrame(Texture2D * texture, int tickCount)
+{
+    this->_texture = texture;
     this->_texture->retain();
     this->_tickCount = tickCount;
 }

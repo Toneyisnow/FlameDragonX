@@ -38,12 +38,16 @@ void SlideAnimation::appendFrame(FDFrame * frame)
 void SlideAnimation::appendFrame(std::string filename)
 {
     FDFrame * frame = new FDFrame(filename);
-    
     this->appendFrame(frame);
-    
     frame->release();
 }
 
+void SlideAnimation::appendFrame(Texture2D * texture)
+{
+    FDFrame * frame = new FDFrame(texture);
+    this->appendFrame(frame);
+    frame->release();
+}
 
 int SlideAnimation::getFrameCount()
 {

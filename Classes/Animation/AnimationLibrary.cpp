@@ -9,6 +9,7 @@
 #include "AnimationLibrary.hpp"
 #include "Constants.hpp"
 #include "TransparencyFrame.hpp"
+#include "TextureComposer.hpp"
 
 AnimationLibrary * AnimationLibrary::_instance = nullptr;
 
@@ -45,16 +46,31 @@ void AnimationLibrary::preloadBattleAnimationsForCreature(int creatureAniId)
     this->loadWalkAnimation(creatureAniId, DirectionDown);
 }
 
-void AnimationLibrary::loadIdleAnimation(int creatureAniId)
+void AnimationLibrary::loadIdleAnimation(int creatureAniId, bool greyOut)
 {
     // Load Idle Animation
     SlideAnimation *idleAnimation = new SlideAnimation(Constants::TickPerFrame_IdleAnimation, true, true);
-    idleAnimation->appendFrame(filenameForBattleFieldAnimation(creatureAniId, 1));
-    idleAnimation->appendFrame(filenameForBattleFieldAnimation(creatureAniId, 2));
-    idleAnimation->appendFrame(filenameForBattleFieldAnimation(creatureAniId, 3));
-    idleAnimation->appendFrame(filenameForBattleFieldAnimation(creatureAniId, 2));
-    
-    std::string key = StringUtils::format("Idle-%03d", creatureAniId);
+	
+	int indexes = {1, 2, 3, 2};
+	
+	if (!greyOut)
+	{
+		for (int i = 0; i < 4; i++)
+		{
+			idleAnimation->appendFrame(filenameForBattleFieldAnimation(creatureAniId, index[i]));
+		}
+	}
+	else
+	{
+		for (int i = 0; i < 4; i++)
+		{
+			Texture2D * texture = TextureComposer::composeGreyoutTexture(filenameForBattleFieldAnimation(creatureAniId, index[i]));
+			idleAnimation->appendFrame(texture);
+		}
+	}
+	
+	
+    std::string key = StringUtils::format("Idle-%03d-%d", creatureAniId, greyOut);
     _slideAnimationDictionary->insert(key, idleAnimation);
     idleAnimation->release();
 }

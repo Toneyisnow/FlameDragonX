@@ -27,6 +27,8 @@ public:
     FDFrame();
     FDFrame(std::string filename);
     FDFrame(std::string filename, int tickCount);
+    FDFrame(Texture2D * texture);
+    FDFrame(Texture2D * texture, int tickCount);
     ~FDFrame();
     
     void setTickCount(int count);
