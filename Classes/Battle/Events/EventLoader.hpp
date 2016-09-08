@@ -33,9 +33,9 @@ public:
     
     virtual void loadEvents();
     
-    int loadSingleEvent(EventCondition * condition, void(EventLoader::* callBackMethod)() );
+    int loadSingleEvent(EventCondition * condition, CallbackMethod * method);
     
-    void loadTurnEvent(int turnNumber, int type, void * callBackMethod);
+    void loadTurnEvent(int turnNumber, int type, CallbackMethod * method);
     
     
 };

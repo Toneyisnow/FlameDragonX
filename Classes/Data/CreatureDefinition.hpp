@@ -39,5 +39,9 @@ public:
     Vector<FDNumber *> * initialItemList;
     Vector<FDNumber *> * initialMagicList;
     
+    
+    bool canFly();
+    bool isKnight();
+    
 };
 #endif /* CreatureDefinition_hpp */

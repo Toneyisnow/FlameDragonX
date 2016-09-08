@@ -47,6 +47,11 @@ Ground::Ground(GroundType type, int aPoint, int dPoint)
     this->_defensePoint = dPoint;
 }
 
+GroundType Ground::getType()
+{
+    return _groundType;
+}
+
 int Ground::getAttackPoint()
 {
     return _attackPoint;

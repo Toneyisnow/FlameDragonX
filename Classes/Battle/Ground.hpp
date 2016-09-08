@@ -36,6 +36,7 @@ public:
     static Ground * createGround(GroundType type);
     Ground(GroundType type, int aPoint, int dPoint);
     
+    GroundType getType();
     int getAttackPoint();
     int getDefensePoint();
 };

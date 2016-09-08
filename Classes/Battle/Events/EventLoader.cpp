@@ -32,11 +32,8 @@ void EventLoader::initWithScene(BattleScene * scene, EventHandler * handler)
     _generatedEventId = 0;
 }
 
-int EventLoader::loadSingleEvent(EventCondition * condition, void(EventLoader::* callBackMethod)() )
+int EventLoader::loadSingleEvent(EventCondition * condition, CallbackMethod * method)
 {
-    std::function<void()> callback = std::bind(callBackMethod, this);
-    
-    CallbackMethod * method = new CallbackMethod(callback);
     FDEvent * event = new FDEvent(++_generatedEventId);
     event->initWithCondition(condition, method);
     

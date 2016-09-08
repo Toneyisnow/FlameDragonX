@@ -8,18 +8,17 @@
 
 #include "CallbackActivity.hpp"
 
+CallbackActivity * CallbackActivity::create(CallbackMethod * method)
+{
+    CallbackActivity * activity = new CallbackActivity(method);
+    activity->autorelease();
+    return activity;
+}
+
 CallbackActivity::CallbackActivity(CallbackMethod * method)
 {
     this->_method = method;
     this->_method->retain();
-}
-
-CallbackActivity::CallbackActivity(CallbackMethod * method, int parameter)
-{
-    this->_method = method;
-    this->_method->retain();
-    
-    _intParameter1 = parameter;
 }
 
 CallbackActivity::~CallbackActivity()
@@ -30,16 +29,7 @@ CallbackActivity::~CallbackActivity()
 
 void CallbackActivity::internalTick(int synchronizeTick)
 {
-    if (this->_method->parameterCount() == 0)
-    {
-        this->_method->execute();
-    }
-    
-    if (this->_method->parameterCount() == 1)
-    {
-        this->_method->execute(_intParameter1);
-    }
-    
+    this->_method->execute();
     
     _hasFinished = true;
 }

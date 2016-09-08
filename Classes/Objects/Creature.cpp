@@ -33,6 +33,11 @@ CreatureData * Creature::creatureData()
     return _data;
 }
 
+CreatureDefinition * Creature::getDefinition()
+{
+    return _definition;
+}
+
 
 int Creature::getId()
 {

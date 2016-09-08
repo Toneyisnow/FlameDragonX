@@ -121,8 +121,13 @@ void MoveScopeResolver::walkDirection(MoveScopePoint * lastPoint, int directionX
         }
         
         // Calculate according to map and creature
-        moveLeft -= 1;
+        int moveCount = getMoveCount(currentPos);
+        if (moveCount < 0)
+        {
+            return;
+        }
         
+        moveLeft -= moveCount;
         if (moveLeft < 0)
         {
             return;
@@ -135,15 +140,15 @@ void MoveScopeResolver::walkDirection(MoveScopePoint * lastPoint, int directionX
         }
         
         // Add valid position to the result
-        log("Adding Point: (%d, %d)", (int)currentPos.x, (int)currentPos.y);
         if (!_scopeResults->containsKey(currentPos))
         {
+            log("Adding Point: (%d, %d)", (int)currentPos.x, (int)currentPos.y);
             _scopeResults->insert(currentPos, FDPoint::create(lastPosition));
-        }
         
-        if (moveLeft > 0)
-        {
-            _movePoints->pushBack(MoveScopePoint::create(currentPos, moveLeft));
+            if (moveLeft > 0)
+            {
+                _movePoints->pushBack(MoveScopePoint::create(currentPos, moveLeft));
+            }
         }
     }
 }
@@ -174,4 +179,65 @@ RoutePoint * MoveScopeResolver::getRoutePoint(Vec2 point)
         route->insertPoint(position);
         nextPoint = _scopeResults->at(position);
     }
+    
+    route->autorelease();
+    return route;
+}
+
+int MoveScopeResolver::getMoveCount(Vec2 position)
+{
+    Ground * ground = _field->groundAt(position.x, position.y);
+    if (ground == nullptr)
+    {
+        return -1;
+    }
+    
+    CreatureDefinition * creatureDef = _creature->getDefinition();
+    
+    if (creatureDef->canFly())
+    {
+        switch (ground->getType()) {
+            case GroundTypeGround:
+            case GroundTypeChasm:
+            case GroundTypeMarsh:
+            case GroundTypeBlackForest:
+            case GroundTypeForest:
+                return 1;
+            case GroundTypeGap:
+                return -1;
+            default:
+                break;
+        }
+    }
+    else
+    {
+        switch (ground->getType()) {
+            case GroundTypeGround:
+                return 1;
+            case GroundTypeChasm:
+            case GroundTypeGap:
+                return -1;
+            case GroundTypeMarsh:
+                if (creatureDef->isKnight()) {
+                    return 3;
+                }
+                else
+                {
+                    return 2;
+                }
+            case GroundTypeBlackForest:
+            case GroundTypeForest:
+                if (creatureDef->isKnight()) {
+                    return 2;
+                }
+                else
+                {
+                    return 1;
+                }
+            default:
+                break;
+        }
+    }
+    
+    return -1;
 }

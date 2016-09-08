@@ -44,6 +44,7 @@ private:
     PointMap<FDPoint *> * _scopeResults;
     
     void walkDirection(MoveScopePoint * movePoint, int directionX, int directionY);
+    int getMoveCount(Vec2 position);
     
 public:
   

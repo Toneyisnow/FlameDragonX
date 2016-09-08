@@ -21,12 +21,10 @@ private:
     
     CallbackMethod * _method;
     
-    int _intParameter1;
-    
 public:
     
+    static CallbackActivity * create(CallbackMethod * _method);
     CallbackActivity(CallbackMethod * _method);
-    CallbackActivity(CallbackMethod * _method, int parameter);
     ~CallbackActivity();
     
     void internalTick(int synchronizeTick);

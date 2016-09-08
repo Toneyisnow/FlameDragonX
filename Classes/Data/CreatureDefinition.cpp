@@ -130,3 +130,29 @@ CreatureDefinition::CreatureDefinition()
 {
     
 }
+
+bool CreatureDefinition::canFly()
+{
+    if (occupation == 133 || occupation == 171) {
+        return true;
+    }
+        
+    if (race == 6 && definitionId != 24) {
+        return true;
+    }
+        
+    if (race == 5) {
+        return true;
+    }
+        
+    if (race == 9 && occupation == 999) {
+        return true;
+    }
+        
+    return false;
+}
+
+bool CreatureDefinition::isKnight()
+{
+    return (occupation == 131 || occupation == 132);
+}

@@ -56,6 +56,7 @@ public:
     
     
     CreatureData * creatureData();
+    CreatureDefinition * getDefinition();
     
     CreatureType getType();
     

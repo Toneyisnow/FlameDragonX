@@ -8,7 +8,7 @@
 
 #include "CallbackMethod.hpp"
 
-
+USING_NS_CC;
 
 /*
  bool TimerTargetSelector::initWithSelector(Scheduler* scheduler, SEL_SCHEDULE selector, Ref* target, float seconds, unsigned int repeat, float delay)
@@ -30,46 +30,85 @@
  
  */
 
-CallbackMethod::CallbackMethod(std::function<void()> method)
+CallbackMethod::CallbackMethod(Ref* target)
 {
-    this->_method0 = method;
-    this->_method1 = nullptr;
+    this->_target = target;
+    this->_target->retain();
+    this->_selector0 = nullptr;
+    this->_selector1 = nullptr;
+    this->_selector2 = nullptr;
+    
+    _paramObject = nullptr;
 }
 
-CallbackMethod::CallbackMethod(std::function<void(int)> method)
+CallbackMethod * CallbackMethod::create(Ref* target, SEL_CALLBACK0 selector)
 {
-    this->_method0 = nullptr;
-    this->_method1 = method;
-    
+    CallbackMethod * method = new CallbackMethod(target, selector);
+    method->autorelease();
+    return method;
+}
+CallbackMethod * CallbackMethod::create(Ref* target, SEL_CALLBACK1 selector, int param)
+{
+    CallbackMethod * method = new CallbackMethod(target, selector, param);
+    method->autorelease();
+    return method;
 }
 
-int CallbackMethod::parameterCount()
+CallbackMethod * CallbackMethod::create(Ref* target, SEL_CALLBACK2 selector, Ref* param)
 {
-    if (this->_method0 != nullptr)
-    {
-        return 0;
-    }
+    CallbackMethod * method = new CallbackMethod(target, selector, param);
+    method->autorelease();
+    return method;
+}
+
+CallbackMethod::CallbackMethod(Ref* target, SEL_CALLBACK0 selector)
+: CallbackMethod(target)
+{
+    this->_selector0 = selector;
+}
+
+CallbackMethod::CallbackMethod(Ref* target, SEL_CALLBACK1 selector, int param)
+: CallbackMethod(target)
+{
+    this->_selector1 = selector;
+    _paramInt = param;
+}
+
+CallbackMethod::CallbackMethod(Ref* target, SEL_CALLBACK2 selector, Ref * parameter)
+: CallbackMethod(target)
+{
+    this->_selector2 = selector;
+    _paramObject = parameter;
+    _paramObject->retain();
+}
+
+CallbackMethod::~CallbackMethod()
+{
+    this->_target->release();
     
-    if (this->_method1 != nullptr)
+    if(_paramObject != nullptr)
     {
-        return 1;
+        _paramObject->release();
     }
-    
-    return 0;
 }
 
 void CallbackMethod::execute()
 {
-    if (this->_method0 != nullptr)
+    if (_target == nullptr)
     {
-        this->_method0();
+        return;
     }
-}
-
-void CallbackMethod::execute(int val)
-{
-    if (this->_method1 != nullptr)
+    
+    if (_selector0 != nullptr)
     {
-        this->_method1(val);
+        (_target->*_selector0)();
+    }
+    else if (_selector1 != nullptr)
+    {
+        (_target->*_selector1)(_paramInt);
+    }
+    else if (_selector2 != nullptr)
+    {
+        (_target->*_selector2)(_paramObject);
     }
 }

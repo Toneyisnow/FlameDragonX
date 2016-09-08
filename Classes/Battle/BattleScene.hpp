@@ -36,6 +36,12 @@ private:
     void takeDeltaTimeTck(float dt);
     void takeTick(int synchronizedTick);
     
+    void appendMethodToActivity(SEL_CALLBACK0 selector);
+    void appendMethodToActivity(SEL_CALLBACK1 selector, int value);
+    void appendMethodToActivity(SEL_CALLBACK2 selector, Ref* parameter);
+    
+    
+    
 public:
     
     BattleScene(ChapterRecord * chapterRecord);
@@ -66,11 +72,13 @@ public:
     void takeAIMove();
     void takeAIAction(int creatureId);
     
-    CallbackActivity * createFunctionActivity(void(BattleScene::* callBackFunction)());
-    CallbackActivity * createFunctionActivity(void(BattleScene::* callBackFunction)(int), int intParameter);
+    //// CallbackActivity * createFunctionActivity(void(BattleScene::* callBackFunction)());
+    //// CallbackActivity * createFunctionActivity(void(BattleScene::* callBackFunction)(int), int intParameter);
                                                            
     void testCallMethod(std::function<void(int)> callback);
-    void testCallBack(int num);
+    void testCallBack0();
+    void testCallBack1(int num);
+    void testCallBack2(Ref* val);
     
 };
 

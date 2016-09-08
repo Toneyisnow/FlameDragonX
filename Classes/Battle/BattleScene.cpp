@@ -54,9 +54,16 @@ BattleScene::BattleScene(ChapterRecord* record)
     
     log("Definition of 50508: Ani=%d EX=%d", def2->animationId, def2->initialEX);
     
-    //// UserDefault::getInstance()->setIntegerForKey(<#const char *key#>, <#int value#>)
     
-    auto type = &BattleScene::testCallBack;
+    CallbackMethod * me = new CallbackMethod(this, CALLBACK0_SELECTOR(BattleScene::testCallBack0));
+    me->execute();
+    
+    CallbackMethod * me1 = new CallbackMethod(this, CALLBACK1_SELECTOR(BattleScene::testCallBack1), 5);
+    me1->execute();
+    
+    CallbackMethod * me2 = new CallbackMethod(this, CALLBACK2_SELECTOR(BattleScene::testCallBack2), def);
+    me2->execute();
+    
     
     auto fund = &BattleScene::showMenu;
     // std::function<void(int)> method = std::bind(&BattleScene::testCallBack, this, std::placeholders::_1);
@@ -133,8 +140,6 @@ void BattleScene::moveAndOpenMenu(Creature * creature, RoutePoint * route)
     CreatureMoveActivity * moveActivity = CreatureMoveActivity::create(_battleField, creature, route);
     this->_activityQueue->appendActivity(moveActivity);
     
-    CallbackActivity * showMenu = createFunctionActivity(&BattleScene::showMenu, 1);
-    this->_activityQueue->appendActivity(showMenu);
     
 }
 
@@ -166,8 +171,7 @@ void BattleScene::attackTo(Creature * creature, Creature * target)
     _eventHandler->notifyTriggeredEvents();
     
     // End Turn
-    CallbackActivity * endTurn = createFunctionActivity(&BattleScene::creatureEndTurn, creature->getId());
-    _activityQueue->appendActivity(endTurn);
+    this->appendMethodToActivity(CALLBACK1_SELECTOR(BattleScene::creatureEndTurn), creature->getId());
 
 }
 
@@ -186,8 +190,7 @@ void BattleScene::magicTo(Creature * creature, Vector<Creature *> * creatureList
     _eventHandler->notifyTriggeredEvents();
     
     // End Turn
-    CallbackActivity * endTurn = createFunctionActivity(&BattleScene::creatureEndTurn, creature->getId());
-    _activityQueue->appendActivity(endTurn);
+    this->appendMethodToActivity(CALLBACK1_SELECTOR(BattleScene::creatureEndTurn), creature->getId());
 
 }
 void BattleScene::useItem(Creature * creature, int itemIndex, Creature * target)
@@ -202,9 +205,7 @@ void BattleScene::useItem(Creature * creature, int itemIndex, Creature * target)
     _activityQueue->appendActivity(talk);
     
     // End Turn
-    CallbackActivity * endTurn = createFunctionActivity(&BattleScene::creatureEndTurn, creature->getId());
-    _activityQueue->appendActivity(endTurn);
-
+    this->appendMethodToActivity(CALLBACK1_SELECTOR(BattleScene::creatureEndTurn), creature->getId());
 }
 
 void BattleScene::waiveTurn(Creature * creature)
@@ -216,8 +217,7 @@ void BattleScene::waiveTurn(Creature * creature)
     _eventHandler->notifyTriggeredEvents();
     
     // End Turn
-    CallbackActivity * endTurn = createFunctionActivity(&BattleScene::creatureEndTurn, creature->getId());
-    _activityQueue->appendActivity(endTurn);
+    this->appendMethodToActivity(CALLBACK1_SELECTOR(BattleScene::creatureEndTurn), creature->getId());
 
 }
 
@@ -227,8 +227,7 @@ void BattleScene::creatureEndTurn(int creatureId)
     
     if (_currentTurnType == CreatureType_Enemy || _currentTurnType == CreatureType_Npc)
     {
-        CallbackActivity * aiMove = createFunctionActivity(&BattleScene::takeAIMove);
-        _activityQueue->appendActivity(aiMove);
+        this->appendMethodToActivity(CALLBACK0_SELECTOR(BattleScene::takeAIMove));
     }
     
 }
@@ -270,8 +269,7 @@ void BattleScene::startTurn()
     }
     else
     {
-        CallbackActivity * aiMove = createFunctionActivity(&BattleScene::takeAIMove);
-        _activityQueue->appendActivity(aiMove);
+        this->appendMethodToActivity(CALLBACK0_SELECTOR(BattleScene::takeAIMove));
     }
 }
 
@@ -287,14 +285,12 @@ void BattleScene::takeAIMove()
         CreatureMoveActivity * activity = nullptr;
     
         //
-        CallbackActivity * aiAction = createFunctionActivity(&BattleScene::takeAIAction, target->getId());
-        _activityQueue->appendActivity(aiAction);
+        this->appendMethodToActivity(CALLBACK1_SELECTOR(BattleScene::takeAIAction), target->getId());
     }
     else
     {
         // Start Next Turn
-        CallbackActivity * startTurn = createFunctionActivity(&BattleScene::startTurn);
-        _activityQueue->appendActivity(startTurn);
+        this->appendMethodToActivity(CALLBACK0_SELECTOR(BattleScene::startTurn));
     }
 }
 void BattleScene::takeAIAction(int creatureId)
@@ -305,28 +301,22 @@ void BattleScene::takeAIAction(int creatureId)
     
 }
 
-CallbackActivity * BattleScene::createFunctionActivity(void(BattleScene::* callBackFunction)())
+void BattleScene::appendMethodToActivity(SEL_CALLBACK0 selector)
 {
-    std::function<void(int)> callback = std::bind(callBackFunction, this);
-    CallbackMethod * method = new CallbackMethod(callback);
-    CallbackActivity * call = new CallbackActivity(method);
-    
-    method->release();
-    call->autorelease();
-    
-    return call;
+    CallbackActivity * callback = CallbackActivity::create(CallbackMethod::create(this, selector));
+    _activityQueue->appendActivity(callback);
 }
 
-CallbackActivity * BattleScene::createFunctionActivity(void(BattleScene::* callBackFunction)(int), int intParameter)
+void BattleScene::appendMethodToActivity(SEL_CALLBACK1 selector, int value)
 {
-    std::function<void(int)> callback = std::bind(callBackFunction, this, std::placeholders::_1);
-    CallbackMethod * method = new CallbackMethod(callback);
-    CallbackActivity * call = new CallbackActivity(method, intParameter);
-    
-    method->release();
-    call->autorelease();
-    
-    return call;
+    CallbackActivity * callback = CallbackActivity::create(CallbackMethod::create(this, selector, value));
+    _activityQueue->appendActivity(callback);
+}
+
+void BattleScene::appendMethodToActivity(SEL_CALLBACK2 selector, Ref* parameter)
+{
+    CallbackActivity * callback = CallbackActivity::create(CallbackMethod::create(this, selector, parameter));
+    _activityQueue->appendActivity(callback);
 }
 
 
@@ -335,7 +325,17 @@ void BattleScene::testCallMethod(std::function<void(int)> callback)
     callback(4);
 }
 
-void BattleScene::testCallBack(int num)
+void BattleScene::testCallBack2(Ref* val)
+{
+    log("Called to here with object.");
+}
+
+void BattleScene::testCallBack1(int num)
 {
     log("Called to here %d", num);
+}
+
+void BattleScene::testCallBack0()
+{
+    log("Called to here");
 }
