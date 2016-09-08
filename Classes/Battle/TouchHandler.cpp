@@ -11,6 +11,47 @@
 
 TouchHandler::TouchHandler(BattleField * field)
 {
+	/*
+	
+	Multi touch
+	
+	- application:application didFinishLaunchingWithOptions:launchOptions 
+{
+     // Override point for customization after application launch.
+    // Add the view controller’s view to the window and display.
+    window = initWithFrame: bounds]];
+    EAGLView \**glView = [EAGLView viewWithFrame: [window bounds]
+    pixelFormat: kEAGLColorFormatRGBA8
+    depthFormat: GL\_DEPTH\_COMPONENT16\_OES
+    preserveBackbuffer: NO
+    sharegroup: nil
+    multiSampling: NO
+    numberOfSamples: 0 ];
+[_glView setMultipleTouchEnabled:YES]; // enable multi-touch here![]() It’s at about line 37
+// …
+return YES;
+
+
+auto listener = EventListenerTouchAllAtOnce::create();
+listener->onTouchesBegan = [&](const std::vector<Touch*>& touches, Event* evt){ log("onTouchesBegan"); 
+
+auto last = touches.back();
+ // check if last touch point is in which button }; 
+
+listener->onTouchesCancelled = [&](const std::vector<Touch*>& touches, Event* evt){ log("onTouchesCancelled"); }; 
+listener->onTouchesEnded = [&](const std::vector<Touch*>& touches, Event* evt){ log("onTouchesEnded"); }; 
+listener->onTouchesMoved = [&](const std::vector<Touch*>& touches, Event* evt){ log("onTouchesMoved"); }; 
+
+getEventDispatcher()->addEventListenerWithFixedPriority(listener, 1);
+
+
+	
+	
+	
+	*/
+	
+	
+	
     auto touchListener = EventListenerTouchOneByOne::create();
     
     touchListener->onTouchBegan = CC_CALLBACK_2(TouchHandler::onTouchBegan, this);
