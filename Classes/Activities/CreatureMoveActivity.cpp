@@ -13,8 +13,12 @@ CreatureMoveActivity * CreatureMoveActivity::create(BattleField * field, Creatur
 {
     CreatureMoveActivity * activity = new CreatureMoveActivity(field, creature);
     
-    activity->appendPosition(0, 0);
-    
+	for(int i = 0; i < route->getCount(); i++)
+	{
+		Vec2 point = route->pointAt(i);
+		activity->appendPosition(point.x, point.y);
+    }
+	
     activity->autorelease();
     
     return activity;
