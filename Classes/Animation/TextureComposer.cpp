@@ -1,4 +1,5 @@
 #include "TextureComposer.hpp"
+#include "Constants.hpp"
 
 USING_NS_CC;
 Texture2D * TextureComposer::composeGreyoutTexture(std::string filename)
@@ -13,7 +14,7 @@ Texture2D * TextureComposer::composeGreyoutTexture(std::string filename)
 		return nullptr;
 	}
 	
-	FDBYTE * data = image->getData();
+	FDBYTE* data = image->getData();
 	FDBYTE* updateddata = new unsigned char[width * height * 4];
 	
 	for (int i = 0; i < width; i++)
