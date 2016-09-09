@@ -35,7 +35,7 @@ public:
     
     constexpr static const float CREATURE_MOVE_SPEED = 0.6f;
     constexpr static const float CURSOR_MOVE_SPEED = 2.5f;
-    constexpr static const float MENU_MOVE_SPEED = 1.6f;
+    constexpr static const float MENU_MOVE_SPEED = 3.0f;
     
     
     static const int LEVEL_COUNT = 30;

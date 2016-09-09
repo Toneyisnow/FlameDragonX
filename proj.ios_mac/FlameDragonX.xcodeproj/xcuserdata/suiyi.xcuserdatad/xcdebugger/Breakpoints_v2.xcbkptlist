@@ -72,11 +72,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/Battle/BattleField.cpp"
-            timestampString = "494753758.954779"
+            timestampString = "495094946.270183"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
             landmarkName = "BattleField::initWithChapter(int chapterId)"
             landmarkType = "5">
          </BreakpointContent>
@@ -134,11 +134,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/Battle/BattleField.cpp"
-            timestampString = "494924046.423532"
+            timestampString = "495094946.270183"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "214"
-            endingLineNumber = "214"
+            startingLineNumber = "215"
+            endingLineNumber = "215"
             landmarkName = "BattleField::getCreatureAt(int x, int y)"
             landmarkType = "5">
          </BreakpointContent>
@@ -178,11 +178,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/Activities/ActivityQueue.cpp"
-            timestampString = "494924046.423532"
+            timestampString = "495096617.792805"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
             landmarkName = "ActivityQueue::takeTick(int synchronizedTick)"
             landmarkType = "5">
          </BreakpointContent>
@@ -304,11 +304,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/Battle/BattleField.cpp"
-            timestampString = "494924046.423532"
+            timestampString = "495094946.270183"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "295"
-            endingLineNumber = "295"
+            startingLineNumber = "296"
+            endingLineNumber = "296"
             landmarkName = "BattleField::convertLocationToPosition(Vec2 loc)"
             landmarkType = "5">
          </BreakpointContent>
@@ -320,11 +320,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/Battle/BattleField.cpp"
-            timestampString = "494753758.954779"
+            timestampString = "495094946.270183"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "126"
-            endingLineNumber = "126"
+            startingLineNumber = "127"
+            endingLineNumber = "127"
             landmarkName = "BattleField::initWithChapter(int chapterId)"
             landmarkType = "5">
          </BreakpointContent>
@@ -368,11 +368,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/Dispatchers/StateDispatcher.cpp"
-            timestampString = "494753565.283668"
+            timestampString = "495096214.633592"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
             landmarkName = "StateDispatcher::handleClickAt(Vec2 position)"
             landmarkType = "5">
          </BreakpointContent>
@@ -416,11 +416,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/Algorithms/MoveScopeResolver.cpp"
-            timestampString = "494927342.594592"
+            timestampString = "495097750.130242"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "109"
-            endingLineNumber = "109"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
             landmarkName = "MoveScopeResolver::walkDirection(MoveScopePoint * lastPoint, int directionX, int directionY)"
             landmarkType = "5">
          </BreakpointContent>
@@ -432,43 +432,43 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/Algorithms/MoveScopeResolver.cpp"
-            timestampString = "494927342.594592"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "102"
-            endingLineNumber = "102"
-            landmarkName = "MoveScopeResolver::walkDirection(MoveScopePoint * lastPoint, int directionX, int directionY)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../Classes/Algorithms/MoveScopeResolver.cpp"
-            timestampString = "494927342.594592"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "105"
-            endingLineNumber = "105"
-            landmarkName = "MoveScopeResolver::walkDirection(MoveScopePoint * lastPoint, int directionX, int directionY)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../Classes/Algorithms/MoveScopeResolver.cpp"
-            timestampString = "494927342.594592"
+            timestampString = "495097750.130242"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "103"
             endingLineNumber = "103"
+            landmarkName = "MoveScopeResolver::walkDirection(MoveScopePoint * lastPoint, int directionX, int directionY)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../Classes/Algorithms/MoveScopeResolver.cpp"
+            timestampString = "495097750.130242"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
+            landmarkName = "MoveScopeResolver::walkDirection(MoveScopePoint * lastPoint, int directionX, int directionY)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../Classes/Algorithms/MoveScopeResolver.cpp"
+            timestampString = "495097750.130242"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
             landmarkName = "MoveScopeResolver::walkDirection(MoveScopePoint * lastPoint, int directionX, int directionY)"
             landmarkType = "5">
          </BreakpointContent>
@@ -528,12 +528,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/Algorithms/MoveScopeResolver.cpp"
-            timestampString = "494927342.594592"
+            timestampString = "495097750.130242"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "98"
-            endingLineNumber = "98"
-            landmarkName = "MoveScopeResolver::calculate()"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
+            landmarkName = "MoveScopeResolver::walkDirection(MoveScopePoint * lastPoint, int directionX, int directionY)"
             landmarkType = "5">
             <Locations>
                <Location
@@ -576,11 +576,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/Algorithms/MoveScopeResolver.cpp"
-            timestampString = "495005089.759191"
+            timestampString = "495097750.130242"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "141"
-            endingLineNumber = "141"
+            startingLineNumber = "142"
+            endingLineNumber = "142"
             landmarkName = "MoveScopeResolver::walkDirection(MoveScopePoint * lastPoint, int directionX, int directionY)"
             landmarkType = "5">
          </BreakpointContent>
@@ -588,7 +588,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/Battle/BattleScene.cpp"

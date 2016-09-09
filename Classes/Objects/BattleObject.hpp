@@ -63,7 +63,7 @@ public:
     
     virtual void setDirection(Direction direction);
     
-    FDActivity * onRemovalActivity();
+    virtual FDActivity * onRemovalActivity();
 };
 
 #endif /* BattleObject_hpp */

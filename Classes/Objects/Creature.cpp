@@ -101,43 +101,15 @@ void Creature::setDirection(Direction direction)
     }
 }
 
-
-// Deprecated
-void Creature::setGesture(GestureStatus gesture)
+void Creature::setFocus(bool isFocus)
 {
-    if (this->_gestureStatus == gesture)
+    if (isFocus)
     {
-        return;
+        _baseSprite->setLocalZOrder(BattleObjectOrder_FocusCreature);
     }
-    
-    this->_gestureStatus = gesture;
-    SlideAnimation * animation;
-    int animationId = _definition->animationId;
-    
-    switch (gesture) {
-        case GestureStatus_Idle:
-            animation = AnimationLibrary::getInstance()->getIdleAnimation(animationId, false);
-            _animator->setAnimation(animation);
-            break;
-        case GestureStatus_WalkingUp:
-            animation = AnimationLibrary::getInstance()->getWalkAnimation(animationId, DirectionUp);
-            _animator->setAnimation(animation);
-            break;
-        case GestureStatus_WalkingDown:
-            animation = AnimationLibrary::getInstance()->getWalkAnimation(animationId, DirectionDown);
-            _animator->setAnimation(animation);
-            break;
-        case GestureStatus_WalkingLeft:
-            animation = AnimationLibrary::getInstance()->getWalkAnimation(animationId, DirectionLeft);
-            _animator->setAnimation(animation);
-            break;
-        case GestureStatus_WalkingRight:
-            animation = AnimationLibrary::getInstance()->getWalkAnimation(animationId, DirectionRight);
-            _animator->setAnimation(animation);
-            break;
-            
-        default:
-            break;
+    else
+    {
+        _baseSprite->setLocalZOrder(BattleObjectOrder_Creature);
     }
 }
 

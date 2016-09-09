@@ -132,8 +132,8 @@ void AnimationLibrary::loadMenuAnimation(int menuItemId)
     std::string key = StringUtils::format("Menu-%d", menuItemId);
     SlideAnimation *animation = new SlideAnimation(Constants::TickPerFrame_IdleAnimation, true, true);
     
-    animation->appendFrame(StringUtils::format("Menu-%03d-1.png", menuItemId));
-    animation->appendFrame(StringUtils::format("Menu-%03d-2.png", menuItemId));
+    animation->appendFrame(StringUtils::format("Menu/Menu-%03d-1.png", menuItemId));
+    animation->appendFrame(StringUtils::format("Menu/Menu-%03d-2.png", menuItemId));
     
     _slideAnimationDictionary->insert(key, animation);
     animation->release();

@@ -22,6 +22,7 @@ class StateDispatcher : public cocos2d::Ref
 private:
     
     ActionState * _currentState;
+    BattleScene * _scene;
     
 public:
     

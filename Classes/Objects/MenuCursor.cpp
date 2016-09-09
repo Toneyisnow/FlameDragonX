@@ -25,8 +25,8 @@ MenuCursor::MenuCursor(int menuItemId, BattleField * field, Vec2 position)
     _centerPosition = position;
     _cursorPosition = getCursorPosition(position);
     
-    _menuImageFileValid = StringUtil::format("Menu/Menu-%03d-1.png");
-    _menuImageFileInvalid = StringUtil::format("Menu/Menu-%03d-3.png");
+    _menuImageFileValid = StringUtil::format("Menu/Menu-%03d-1.png", menuItemId);
+    _menuImageFileInvalid = StringUtil::format("Menu/Menu-%03d-3.png", menuItemId);
     initialize(_menuImageFileValid);
 }
 
@@ -63,6 +63,14 @@ FDActivity * MenuCursor::onOpenActivity()
     return move;
 }
 
+FDActivity * MenuCursor::onRemovalActivity()
+{
+    SimpleMoveActivity * move = new SimpleMoveActivity(_field, this, _centerPosition, Constants::MENU_MOVE_SPEED);
+    move->autorelease();
+    
+    return move;
+}
+
 Vec2 MenuCursor::getCursorPosition(Vec2 pos)
 {
     int positionType = _menuItemId % 10;
@@ -87,12 +95,9 @@ Vec2 MenuCursor::getCursorPosition(Vec2 pos)
     return pos;
 }
 
-
-void MenuCursor::checkValidation()
+void MenuCursor::checkValidation(Creature * creature)
 {
-    Creature * creature = _field->getCreatureAt(_centerPosition.x, _centerPosition.y);
-    
-    if ((_menuItemId / 10 == 1 || _menuItemId / 10 ==2) && creature == nullptr)
+    if ((_menuItemId / 10 == 1 || _menuItemId / 10 == 2) && creature == nullptr)
     {
         // Error Creature is null
         return;
@@ -101,6 +106,7 @@ void MenuCursor::checkValidation()
     _isValid = true;
     switch (_menuItemId) {
         case 10:
+            _isValid = false;
             // Magic
             break;
             

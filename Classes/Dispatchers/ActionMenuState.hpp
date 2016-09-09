@@ -10,16 +10,21 @@
 #define ActionMenuState_hpp
 
 #include "cocos2d.h"
-
 #include "ActionState.hpp"
+#include "Creature.hpp"
 
 class ActionMenuState : public ActionState
 {
 private:
     
-    
 public:
     
+    static ActionMenuState * create(BattleScene * scene, StateSession * session);
+    
+    void onEnterState();
+    void onExitState();
+    
+    ActionState * handleClickAt(Vec2 position);
     
 };
 

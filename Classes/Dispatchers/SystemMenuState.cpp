@@ -26,7 +26,7 @@ void SystemMenuState::onEnterState()
 {
     // Show System Menu
     log("Show system menu");
-    _battleField->showMenuAt(3, _session->lastPosition());
+    _battleField->showSystemMenuAt(3, _session->menuPosition);
 }
 
 void SystemMenuState::onExitState()

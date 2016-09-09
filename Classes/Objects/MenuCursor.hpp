@@ -38,7 +38,7 @@ public:
     
     MenuCursor(int menuItemId, BattleField * field, Vec2 position);
     
-    void checkValidation();
+    void checkValidation(Creature * creature);
     
     bool isSelected();
     void setSelected(bool val);
@@ -48,6 +48,7 @@ public:
     void sendToField(BattleField * field, Vec2 position);
     
     FDActivity * onOpenActivity();
+    FDActivity * onRemovalActivity() override;
 };
 
 #endif /* MenuCursor_hpp */

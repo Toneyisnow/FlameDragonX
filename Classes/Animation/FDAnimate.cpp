@@ -24,7 +24,7 @@ void FDAnimate::setAnimation(SlideAnimation *ani)
 {
     this->_animation = ani;
     
-    if (!this->_animation->isSynchronized())
+    if (this->_animation != nullptr && !this->_animation->isSynchronized())
     {
         this->_currentTick = 0;
     }

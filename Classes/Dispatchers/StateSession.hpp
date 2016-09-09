@@ -23,8 +23,6 @@ private:
     int _selectedItemIndex;
     int _selectedMagicIndex;
     
-    Vec2 _lastPosition;
-    
     MoveScopeResolver * _scopeResolver;
     
 public:
@@ -43,8 +41,12 @@ public:
     int selectedCreatureId();
     int selectedItemIndex();
     int selectedMagicIndex();
-    Vec2 lastPosition();
     MoveScopeResolver * getMoveScopeResolver();
+    
+    Vec2 creaturePositionBeforeMove;
+    Vec2 creaturePositionAfterMove;
+    Vec2 menuPosition;
+    
 };
 
 #endif /* StateSession_hpp */

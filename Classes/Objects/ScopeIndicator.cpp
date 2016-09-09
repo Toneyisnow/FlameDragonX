@@ -15,6 +15,7 @@ ScopeIndicator::ScopeIndicator()
 {
     initialize("Others/WhiteBlock.png");
 
+    _baseSprite->setOpacity(40);
     SlideAnimation * animation = AnimationLibrary::getInstance()->getScopeIndicatorAnimation();
     _animator->setAnimation(animation);
 }

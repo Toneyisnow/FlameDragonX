@@ -60,10 +60,8 @@ public:
     
     CreatureType getType();
     
-    // Deprecated
-    void setGesture(GestureStatus gesture);
-    
     void setDirection(Direction direction);
+    void setFocus(bool isFocus);
     
     bool isVisible();
     

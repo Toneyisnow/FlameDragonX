@@ -41,7 +41,7 @@ ShowMoveScopeState::~ShowMoveScopeState()
 
 void ShowMoveScopeState::onEnterState()
 {
-    Vec2 position = _session->lastPosition();
+    Vec2 position = _session->creaturePositionBeforeMove;
     Creature * creature = _battleField->getCreatureById(_session->selectedCreatureId());
     
     if (creature == nullptr)
@@ -49,6 +49,7 @@ void ShowMoveScopeState::onEnterState()
         return;
     }
     
+    creature->setFocus(true);
     _battleField->setObjectPosition(creature, position);
     
     _resolver = _session->getMoveScopeResolver();
@@ -98,7 +99,8 @@ ActionState * ShowMoveScopeState::handleClickAt(Vec2 position)
         CreatureMoveActivity * move = CreatureMoveActivity::create(_battleField, creature, routePoint);
         _battleField->getBattleScene()->getActivityQueue()->appendActivity(move);
         
-        return new ActionMenuState();
+        _session->creaturePositionAfterMove = position;
+        return ActionMenuState::create(_battleScene, _session);
     }
     else
     {

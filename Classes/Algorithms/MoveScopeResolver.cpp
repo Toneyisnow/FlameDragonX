@@ -86,7 +86,8 @@ void MoveScopeResolver::calculate()
     std::vector<Vec2> keys = _scopeResults->keys();
     for (int i = 0; i < keys.size(); i++) {
         Vec2 point = keys.at(i);
-        if (_field->getCreatureAt(point.x, point.y) != nullptr)
+        Creature * creatureAtPos = _field->getCreatureAt(point.x, point.y);
+        if (creatureAtPos != nullptr && creatureAtPos != _creature)
         {
             _scopeResults->eraseObject(point);
         }

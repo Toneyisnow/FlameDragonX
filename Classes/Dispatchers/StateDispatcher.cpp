@@ -9,11 +9,15 @@
 #include "StateDispatcher.hpp"
 #include "IdleState.hpp"
 #include "BattleScene.hpp"
+#include "CallbackActivity.hpp"
+#include "CallbackMethod.hpp"
 
 StateDispatcher::StateDispatcher(BattleScene * scene)
 {
     _currentState = IdleState::create(scene);
     _currentState->retain();
+    
+    _scene = scene;
 }
 
 StateDispatcher::~StateDispatcher()
@@ -39,7 +43,8 @@ void StateDispatcher::handleClickAt(Vec2 position)
     
     _currentState = nextState;
     _currentState->retain();
-    _currentState->onEnterState();
     
+    CallbackMethod * method = CallbackMethod::create(_currentState, CALLBACK0_SELECTOR(ActionState::onEnterState));
+    _scene->getActivityQueue()->appendActivity(CallbackActivity::create(method));
 }
 

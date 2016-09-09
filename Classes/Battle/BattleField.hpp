@@ -107,7 +107,8 @@ public:
     
     bool isInteractiveBusy();
     
-    void showMenuAt(int menuId, Vec2 position);
+    void showCreatureMenuAt(int menuId, Vec2 position, Creature * creature);
+    void showSystemMenuAt(int menuId, Vec2 position);
     void closeMenu();
     void setActiveMenuCursor(MenuCursor * menuCursor);
     

@@ -14,6 +14,7 @@
 #include "BatchActivity.hpp"
 #include "BattleScene.hpp"
 #include "CursorMoveActivity.hpp"
+#include "RemoveObjectActivity.hpp"
 
 USING_NS_CC;
 
@@ -442,7 +443,12 @@ Vec2 BattleField::getCursorPosition()
     return getObjectPosition(_cursor);
 }
 
-void BattleField::showMenuAt(int menuId, Vec2 position)
+void BattleField::showSystemMenuAt(int menuId, Vec2 position)
+{
+    showCreatureMenuAt(menuId, position, nullptr);
+}
+
+void BattleField::showCreatureMenuAt(int menuId, Vec2 position, Creature * creature)
 {
     int menuItemIds[4] = { menuId * 10, menuId * 10 + 1, menuId * 10 + 2, menuId * 10 + 3};
     
@@ -452,9 +458,9 @@ void BattleField::showMenuAt(int menuId, Vec2 position)
     {
         MenuCursor * menu = new MenuCursor(menuItemId, this, position);
         this->addObject(menu, position);
-        menu->checkValidation();
-        
+        menu->checkValidation(creature);
         batch->addActivity(menu->onOpenActivity());
+        menu->release();
     }
     
     _battleScene->getActivityQueue()->appendActivity(batch);
@@ -463,7 +469,18 @@ void BattleField::showMenuAt(int menuId, Vec2 position)
 
 void BattleField::closeMenu()
 {
+    BatchActivity * batch = new BatchActivity();
     
+    for (BattleObject * object : *_battleObjectList) {
+        if (object->getObjectType() == BattleObject_Menu)
+        {
+            RemoveObjectActivity * removing = RemoveObjectActivity::create(this, object);
+            batch->addActivity(removing);
+        }
+    }
+    
+    _battleScene->getActivityQueue()->appendActivity(batch);
+    batch->release();
 }
 
 void BattleField::setActiveMenuCursor(MenuCursor * selected)

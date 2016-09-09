@@ -39,6 +39,7 @@ void ActivityQueue::insertActivity(FDActivity * activity)
 void ActivityQueue::appendActivity(FDActivity * activity)
 {
     this->_queuedActivityList->insert(_appendToIndex, activity);
+    _appendToIndex++;
 }
 
 void ActivityQueue::insertSingleActivity(FDActivity * activity)

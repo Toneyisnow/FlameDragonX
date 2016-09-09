@@ -43,7 +43,7 @@ ActionState * IdleState::handleClickAt(Vec2 position)
         
         if (creature->getType() == CreatureType_Friend)
         {
-            _session->setLastPosition(position);
+            _session->creaturePositionBeforeMove = position;
             _session->setSelectedCreatureId(creature->getId());
             return ShowMoveScopeState::create(_battleScene, _session);
         }
@@ -59,7 +59,7 @@ ActionState * IdleState::handleClickAt(Vec2 position)
         // Show system menu
         if (CommonHelper::IsSamePosition(_battleField->getCursorPosition(), position))
         {
-            _session->setLastPosition(position);
+            _session->menuPosition = position;
             return SystemMenuState::create(_battleScene, _session);
         }
         
