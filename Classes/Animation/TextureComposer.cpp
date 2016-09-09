@@ -35,7 +35,7 @@ Texture2D * TextureComposer::composeGreyoutTexture(std::string filename)
 	image->release();
 	
 	Texture2D * texture = new Texture2D();
-	texture->initWithData(updateddata, sizeof(Color4B) * width * height, kCCTexture2DPixelFormat_RGBA8888, width, height, CCSize(_width, _height));
+	texture->initWithData(updateddata, sizeof(Color4B) * width * height, kCCTexture2DPixelFormat_RGBA8888, width, height, CCSize(width, height));
 
 	delete[] updateddata;
 	texture->autorelease();

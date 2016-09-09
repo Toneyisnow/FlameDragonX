@@ -37,7 +37,9 @@ AnimationLibrary::~AnimationLibrary()
 
 void AnimationLibrary::preloadBattleAnimationsForCreature(int creatureAniId)
 {
-    this->loadIdleAnimation(creatureAniId);
+    this->loadIdleAnimation(creatureAniId, false);
+    this->loadIdleAnimation(creatureAniId, true);
+    
     
     // Load Walk Animation
     this->loadWalkAnimation(creatureAniId, DirectionLeft);
@@ -46,31 +48,31 @@ void AnimationLibrary::preloadBattleAnimationsForCreature(int creatureAniId)
     this->loadWalkAnimation(creatureAniId, DirectionDown);
 }
 
-void AnimationLibrary::loadIdleAnimation(int creatureAniId, bool greyOut)
+void AnimationLibrary::loadIdleAnimation(int creatureAniId, bool greyout)
 {
     // Load Idle Animation
     SlideAnimation *idleAnimation = new SlideAnimation(Constants::TickPerFrame_IdleAnimation, true, true);
 	
-	int indexes = {1, 2, 3, 2};
+	int indexes[] = {1, 2, 3, 2};
 	
-	if (!greyOut)
+	if (!greyout)
 	{
 		for (int i = 0; i < 4; i++)
 		{
-			idleAnimation->appendFrame(filenameForBattleFieldAnimation(creatureAniId, index[i]));
+			idleAnimation->appendFrame(filenameForBattleFieldAnimation(creatureAniId, indexes[i]));
 		}
 	}
 	else
 	{
 		for (int i = 0; i < 4; i++)
 		{
-			Texture2D * texture = TextureComposer::composeGreyoutTexture(filenameForBattleFieldAnimation(creatureAniId, index[i]));
+			Texture2D * texture = TextureComposer::composeGreyoutTexture(filenameForBattleFieldAnimation(creatureAniId, indexes[i]));
 			idleAnimation->appendFrame(texture);
 		}
 	}
 	
 	
-    std::string key = StringUtils::format("Idle-%03d-%d", creatureAniId, greyOut);
+    std::string key = StringUtils::format("Idle-%03d-%d", creatureAniId, greyout);
     _slideAnimationDictionary->insert(key, idleAnimation);
     idleAnimation->release();
 }
@@ -137,13 +139,13 @@ void AnimationLibrary::loadMenuAnimation(int menuItemId)
     animation->release();
 }
 
-SlideAnimation * AnimationLibrary::getIdleAnimation(int creatureAniId)
+SlideAnimation * AnimationLibrary::getIdleAnimation(int creatureAniId, bool greyout)
 {
-    std::string key = StringUtils::format("Idle-%03d", creatureAniId);
+    std::string key = StringUtils::format("Idle-%03d-%d", creatureAniId, greyout);
     
     if (_slideAnimationDictionary->at(key) == nullptr)
     {
-        this->loadIdleAnimation(creatureAniId);
+        this->loadIdleAnimation(creatureAniId, greyout);
     }
     
     return _slideAnimationDictionary->at(key);

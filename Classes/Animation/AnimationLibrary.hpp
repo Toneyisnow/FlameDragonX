@@ -25,7 +25,7 @@ private:
     
     std::string filenameForBattleFieldAnimation(int creatureAniId, int index);
     //// void loadWalkAnimationForCreature(int creatureAniId, Direction direction, int centerImageId);
-    void loadIdleAnimation(int creatureAniId);
+    void loadIdleAnimation(int creatureAniId, bool greyout);
     void loadWalkAnimation(int creatureAniId, Direction direction);
     void loadScopeIndicatorAnimation();
     void loadMenuAnimation(int menuItemId);
@@ -42,7 +42,7 @@ public:
     
     
     
-    SlideAnimation * getIdleAnimation(int creatureAniId);
+    SlideAnimation * getIdleAnimation(int creatureAniId, bool greyout);
     SlideAnimation * getWalkAnimation(int creatureAniId, Direction direction);
     
     SlideAnimation * getScopeIndicatorAnimation();

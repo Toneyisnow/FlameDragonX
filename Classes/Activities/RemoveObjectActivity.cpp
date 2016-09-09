@@ -7,6 +7,7 @@
 //
 
 #include "RemoveObjectActivity.hpp"
+#include "BattleField.hpp"
 
 RemoveObjectActivity * RemoveObjectActivity::create(BattleField * field, BattleObject * obj)
 {
@@ -19,6 +20,7 @@ RemoveObjectActivity::RemoveObjectActivity(BattleField * field, BattleObject * o
 : FieldActivity(field)
 {
     _activity = obj->onRemovalActivity();
+    _object = obj;
     
     if (_activity != nullptr)
     {
@@ -44,7 +46,7 @@ void RemoveObjectActivity::internalTick(int synchronizedTick)
         }
     }
     
-    _battleField->removeObject(obj);
+    _battleField->removeObject(_object);
     _hasFinished = true;
 }
 

@@ -13,6 +13,8 @@
 #include "ActionState.hpp"
 
 class BattleScene;
+class ActionState;
+
 USING_NS_CC;
 
 class StateDispatcher : public cocos2d::Ref

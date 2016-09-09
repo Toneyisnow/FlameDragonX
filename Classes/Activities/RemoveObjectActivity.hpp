@@ -11,7 +11,7 @@
 
 
 #include "FieldActivity.hpp"
-#include "Creature.hpp"
+#include "BattleObject.hpp"
 
 class RemoveObjectActivity : public FieldActivity
 {

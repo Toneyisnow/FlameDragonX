@@ -11,7 +11,8 @@
 
 #include "cocos2d.h"
 #include "FDPoint.hpp"
-#include "MoveScopeResolver.hpp"
+
+class MoveScopeResolver;
 
 USING_NS_CC;
 

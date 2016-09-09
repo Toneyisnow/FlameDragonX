@@ -6,8 +6,8 @@
 //
 //
 
-#ifndef ActionState_hpp
-#define ActionState_hpp
+#ifndef ActionState2_hpp
+#define ActionState2_hpp
 
 #include "cocos2d.h"
 #include "StateSession.hpp"

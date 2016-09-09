@@ -16,6 +16,8 @@
 
 USING_NS_CC;
 
+class FDActivity;
+
 typedef enum BattleObjectOrder
 {
     BattleObjectOrder_OnGround = 10,
@@ -61,6 +63,7 @@ public:
     
     virtual void setDirection(Direction direction);
     
+    FDActivity * onRemovalActivity();
 };
 
 #endif /* BattleObject_hpp */

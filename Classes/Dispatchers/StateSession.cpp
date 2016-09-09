@@ -7,6 +7,7 @@
 //
 
 #include "StateSession.hpp"
+#include "MoveScopeResolver.hpp"
 
 StateSession * StateSession::newSession()
 {

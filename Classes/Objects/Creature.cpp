@@ -68,7 +68,7 @@ void Creature::initWithDefinition(int identity, int creatureId)
     }
     
     
-    SlideAnimation * animation = AnimationLibrary::getInstance()->getIdleAnimation(_definition->animationId);
+    SlideAnimation * animation = AnimationLibrary::getInstance()->getIdleAnimation(_definition->animationId, false);
     _animator->setAnimation(animation);
 }
 
@@ -91,7 +91,7 @@ void Creature::setDirection(Direction direction)
     
     if (direction == DirectionNone)
     {
-        animation = AnimationLibrary::getInstance()->getIdleAnimation(animationId);
+        animation = AnimationLibrary::getInstance()->getIdleAnimation(animationId, false);
         _animator->setAnimation(animation);
     }
     else
@@ -116,7 +116,7 @@ void Creature::setGesture(GestureStatus gesture)
     
     switch (gesture) {
         case GestureStatus_Idle:
-            animation = AnimationLibrary::getInstance()->getIdleAnimation(animationId);
+            animation = AnimationLibrary::getInstance()->getIdleAnimation(animationId, false);
             _animator->setAnimation(animation);
             break;
         case GestureStatus_WalkingUp:

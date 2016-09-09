@@ -104,13 +104,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/Animation/AnimationLibrary.cpp"
-            timestampString = "494924046.423532"
+            timestampString = "495092281.023496"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "127"
-            endingLineNumber = "127"
-            landmarkName = "AnimationLibrary::getIdleAnimation(int creatureAniId)"
-            landmarkType = "5">
+            startingLineNumber = "129"
+            endingLineNumber = "129">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -120,11 +118,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/Objects/BattleObject.cpp"
-            timestampString = "494753180.949468"
+            timestampString = "495092281.023496"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
             landmarkName = "BattleObject::takeTick(int synchronizedTick)"
             landmarkType = "5">
          </BreakpointContent>
@@ -274,12 +272,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/Animation/AnimationLibrary.cpp"
-            timestampString = "494924046.423532"
+            timestampString = "495092281.023496"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "133"
-            endingLineNumber = "133"
-            landmarkName = "AnimationLibrary::getIdleAnimation(int creatureAniId)"
+            startingLineNumber = "135"
+            endingLineNumber = "135"
+            landmarkName = "AnimationLibrary::loadMenuAnimation(int menuItemId)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

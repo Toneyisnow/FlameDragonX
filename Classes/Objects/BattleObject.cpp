@@ -7,6 +7,7 @@
 //
 
 #include "BattleObject.hpp"
+#include "FDActivity.hpp"
 
 BattleObject::BattleObject(BattleObjectType type)
 {
@@ -44,4 +45,9 @@ Sprite* BattleObject::getSprite()
 void BattleObject::setDirection(Direction direction)
 {
     _direction = direction;
+}
+
+FDActivity * BattleObject::onRemovalActivity()
+{
+    return nullptr;
 }
