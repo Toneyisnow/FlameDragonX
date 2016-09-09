@@ -101,6 +101,8 @@
 		3CE63B371D7F33D900C2C76B /* MenuCursor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63B351D7F33D900C2C76B /* MenuCursor.cpp */; };
 		3CE63B391D7F40FB00C2C76B /* Menu in Resources */ = {isa = PBXBuildFile; fileRef = 3CE63B381D7F40FB00C2C76B /* Menu */; };
 		3CE63B3C1D7F8F6200C2C76B /* PointMap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63B3A1D7F8F6200C2C76B /* PointMap.cpp */; };
+		3CE63B3F1D81551700C2C76B /* ActionMenuState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63B3D1D81551700C2C76B /* ActionMenuState.cpp */; };
+		3CE63B421D81C9DE00C2C76B /* RemoveObjectActivity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63B401D81C9DE00C2C76B /* RemoveObjectActivity.cpp */; };
 		3EACC98F19EE6D4300EB3C5E /* res in Resources */ = {isa = PBXBuildFile; fileRef = 3EACC98E19EE6D4300EB3C5E /* res */; };
 		3EACC99019EE6D4300EB3C5E /* res in Resources */ = {isa = PBXBuildFile; fileRef = 3EACC98E19EE6D4300EB3C5E /* res */; };
 		46880B7B19C43A67006E1F66 /* CloseNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 46880B7619C43A67006E1F66 /* CloseNormal.png */; };
@@ -358,6 +360,10 @@
 		3CE63B381D7F40FB00C2C76B /* Menu */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Menu; sourceTree = "<group>"; };
 		3CE63B3A1D7F8F6200C2C76B /* PointMap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PointMap.cpp; path = Common/PointMap.cpp; sourceTree = "<group>"; };
 		3CE63B3B1D7F8F6200C2C76B /* PointMap.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = PointMap.hpp; path = Common/PointMap.hpp; sourceTree = "<group>"; };
+		3CE63B3D1D81551700C2C76B /* ActionMenuState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ActionMenuState.cpp; path = Dispatchers/ActionMenuState.cpp; sourceTree = "<group>"; };
+		3CE63B3E1D81551700C2C76B /* ActionMenuState.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ActionMenuState.hpp; path = Dispatchers/ActionMenuState.hpp; sourceTree = "<group>"; };
+		3CE63B401D81C9DE00C2C76B /* RemoveObjectActivity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RemoveObjectActivity.cpp; path = Activities/RemoveObjectActivity.cpp; sourceTree = "<group>"; };
+		3CE63B411D81C9DE00C2C76B /* RemoveObjectActivity.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = RemoveObjectActivity.hpp; path = Activities/RemoveObjectActivity.hpp; sourceTree = "<group>"; };
 		3EACC98E19EE6D4300EB3C5E /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; path = res; sourceTree = "<group>"; };
 		46880B7619C43A67006E1F66 /* CloseNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseNormal.png; sourceTree = "<group>"; };
 		46880B7719C43A67006E1F66 /* CloseSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseSelected.png; sourceTree = "<group>"; };
@@ -600,6 +606,8 @@
 				3CE63B201D7D3C4B00C2C76B /* ShowMoveScopeState.hpp */,
 				3CE63B221D7D40D000C2C76B /* SystemMenuState.cpp */,
 				3CE63B231D7D40D000C2C76B /* SystemMenuState.hpp */,
+				3CE63B3D1D81551700C2C76B /* ActionMenuState.cpp */,
+				3CE63B3E1D81551700C2C76B /* ActionMenuState.hpp */,
 			);
 			name = Dispatchers;
 			sourceTree = "<group>";
@@ -675,6 +683,8 @@
 				3C8D684F1D7AA90A00CC3616 /* CreatureDeadActivity.hpp */,
 				3C8D68511D7AAC2F00CC3616 /* TalkActivity.cpp */,
 				3C8D68521D7AAC2F00CC3616 /* TalkActivity.hpp */,
+				3CE63B401D81C9DE00C2C76B /* RemoveObjectActivity.cpp */,
+				3CE63B411D81C9DE00C2C76B /* RemoveObjectActivity.hpp */,
 			);
 			name = Activities;
 			sourceTree = "<group>";
@@ -1068,6 +1078,7 @@
 				3C8D68321D79F4E600CC3616 /* EventCondition.cpp in Sources */,
 				3CB109821D6F74BC002C4121 /* CreatureDefinition.cpp in Sources */,
 				3CB109971D74F33C002C4121 /* MagicDefinition.cpp in Sources */,
+				3CE63B421D81C9DE00C2C76B /* RemoveObjectActivity.cpp in Sources */,
 				3CB1099E1D74F3FE002C4121 /* UsableItemDefinition.cpp in Sources */,
 				3CB109AD1D74FC5E002C4121 /* DataStore.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
@@ -1090,6 +1101,7 @@
 				3CD12F231D6D058000CDF793 /* TextFileReader.cpp in Sources */,
 				3C8D684D1D7A44BE00CC3616 /* CallbackActivity.cpp in Sources */,
 				3C8D68591D7C038700CC3616 /* CursorMoveActivity.cpp in Sources */,
+				3CE63B3F1D81551700C2C76B /* ActionMenuState.cpp in Sources */,
 				3CB1098F1D74D0CE002C4121 /* ActivityQueue.cpp in Sources */,
 				3C8D68271D78F92300CC3616 /* ScopeIndicator.cpp in Sources */,
 				3C8D68471D7A3AD500CC3616 /* RoutePoint.cpp in Sources */,

@@ -21,6 +21,15 @@ StateSession::StateSession()
     _selectedItemIndex = -1;
     _selectedMagicIndex = -1;
     _lastPosition = Vec2(0, 0);
+    _scopeResolver = nullptr;
+}
+
+StateSession::~StateSession()
+{
+    if (_scopeResolver != nullptr)
+    {
+        _scopeResolver->release();
+    }
 }
 
 void StateSession::setSelectedCreatureId(int val)
@@ -43,6 +52,12 @@ void StateSession::setLastPosition(Vec2 position)
     _lastPosition = position;
 }
 
+void StateSession::setMoveScopeResolver(MoveScopeResolver * resolver)
+{
+    _scopeResolver = resolver;
+    _scopeResolver->retain();
+}
+
 int StateSession::selectedCreatureId()
 {
     return _selectedCreatureId;
@@ -61,4 +76,10 @@ int StateSession::selectedMagicIndex()
 Vec2 StateSession::lastPosition()
 {
     return _lastPosition;
+}
+
+
+MoveScopeResolver * StateSession::getMoveScopeResolver()
+{
+    return _scopeResolver;
 }

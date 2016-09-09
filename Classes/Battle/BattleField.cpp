@@ -444,24 +444,21 @@ Vec2 BattleField::getCursorPosition()
 
 void BattleField::showMenuAt(int menuId, Vec2 position)
 {
-    Creature * creature = getCreatureAt(position.x, position.y);
     int menuItemIds[4] = { menuId * 10, menuId * 10 + 1, menuId * 10 + 2, menuId * 10 + 3};
+    
+    BatchActivity * batch = new BatchActivity();
     
     for (int menuItemId : menuItemIds)
     {
-        MenuCursor * menu = new MenuCursor(menuItemId);
-        menu->sendToField(this, position);
+        MenuCursor * menu = new MenuCursor(menuItemId, this, position);
+        this->addObject(menu, position);
+        menu->checkValidation();
         
+        batch->addActivity(menu->onOpenActivity());
     }
     
-    /*
-    CGPoint menuPos[4];
-    menuPos[0] = CGPointMake(pos.x-1, pos.y);
-    menuPos[1] = CGPointMake(pos.x, pos.y-1);
-    menuPos[2] = CGPointMake(pos.x+1, pos.y);
-    menuPos[3] = CGPointMake(pos.x, pos.y+1);
-    */
-    
+    _battleScene->getActivityQueue()->appendActivity(batch);
+    batch->release();
 }
 
 void BattleField::closeMenu()
@@ -492,6 +489,18 @@ BattleObject * BattleField::getObjectByPosition(BattleObjectType type, Vec2 posi
     }
     
     return nullptr;
+}
+
+bool BattleField::isPositionInScope(Vec2 position)
+{
+    for (BattleObject * object : *_battleObjectList) {
+        if (object->getObjectType() == BattleObject_ScopeIndicator && getObjectPosition(object) == position)
+        {
+            return true;
+        }
+    }
+    
+    return false;
 }
 
 void BattleField::removeAllIndicators()

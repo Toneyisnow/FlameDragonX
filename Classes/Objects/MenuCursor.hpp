@@ -14,6 +14,7 @@
 
 class BattleField;
 class Creature;
+class FDActivity;
 
 class MenuCursor : public BattleObject
 {
@@ -23,17 +24,21 @@ private:
     bool _isSelected;
     bool _isValid;
     
+    Vec2 _centerPosition;
+    Vec2 _cursorPosition;
+    
     std::string _menuImageFileValid;
     std::string _menuImageFileInvalid;
     
+    BattleField * _field;
     
-    void checkValid(BattleField * field, Creature * creature);
-    Vec2 getEnterPosition(Vec2 pos);
-    Vec2 getExitPosition(Vec2 pos);
+    Vec2 getCursorPosition(Vec2 pos);
     
 public:
     
-    MenuCursor(int menuItemId);
+    MenuCursor(int menuItemId, BattleField * field, Vec2 position);
+    
+    void checkValidation();
     
     bool isSelected();
     void setSelected(bool val);
@@ -42,7 +47,7 @@ public:
     
     void sendToField(BattleField * field, Vec2 position);
     
-    
+    FDActivity * onOpenActivity();
 };
 
 #endif /* MenuCursor_hpp */

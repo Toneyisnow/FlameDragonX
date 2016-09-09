@@ -111,6 +111,7 @@ public:
     void closeMenu();
     void setActiveMenuCursor(MenuCursor * menuCursor);
     
+    bool isPositionInScope(Vec2 position);
     void removeAllIndicators();
     
 };

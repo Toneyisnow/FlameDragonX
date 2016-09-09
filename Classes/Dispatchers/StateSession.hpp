@@ -10,6 +10,8 @@
 #define StateSession_hpp
 
 #include "cocos2d.h"
+#include "FDPoint.hpp"
+#include "MoveScopeResolver.hpp"
 
 USING_NS_CC;
 
@@ -22,22 +24,26 @@ private:
     
     Vec2 _lastPosition;
     
+    MoveScopeResolver * _scopeResolver;
+    
 public:
     
     static StateSession * newSession();
     StateSession();
+    ~StateSession();
     
     
     void setSelectedCreatureId(int val);
     void setSelectedItemIndex(int val);
     void setSelectedMagicIndex(int val);
     void setLastPosition(Vec2 position);
+    void setMoveScopeResolver(MoveScopeResolver * _scopeResolver);
     
     int selectedCreatureId();
     int selectedItemIndex();
     int selectedMagicIndex();
     Vec2 lastPosition();
-    
+    MoveScopeResolver * getMoveScopeResolver();
 };
 
 #endif /* StateSession_hpp */

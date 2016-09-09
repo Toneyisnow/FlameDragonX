@@ -91,10 +91,6 @@ void MoveScopeResolver::calculate()
             _scopeResults->eraseObject(point);
         }
     }
-    
-    
-    
-    
 }
 
 void MoveScopeResolver::walkDirection(MoveScopePoint * lastPoint, int directionX, int directionY)

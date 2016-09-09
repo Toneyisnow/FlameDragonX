@@ -53,4 +53,5 @@ ActionState * SystemMenuState::handleClickAt(Vec2 position)
         }
     }
     
+    return nullptr;
 }
