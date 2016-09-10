@@ -12,6 +12,7 @@
 #include "MenuCursor.hpp"
 #include "ShowMoveScopeState.hpp"
 #include "BattleScene.hpp"
+#include "SelectAttackTargetState.hpp"
 
 ActionMenuState * ActionMenuState::create(BattleScene * scene, StateSession * session)
 {
@@ -43,8 +44,8 @@ ActionState * ActionMenuState::handleClickAt(Vec2 position)
     
     if (menuItem == nullptr)
     {
+        _battleField->closeMenu();
         return ShowMoveScopeState::create(_battleScene, _session);
-        
     }
     
     if (!menuItem->isSelected())
@@ -64,7 +65,7 @@ ActionState * ActionMenuState::handleClickAt(Vec2 position)
             break;
         case 11:
             // Attack
-            break;
+            return SelectAttackTargetState::create(_battleScene, _session);
         case 12:
             // Item
             break;

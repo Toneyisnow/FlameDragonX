@@ -117,6 +117,8 @@ void BattleField::initWithChapter(int chapterId)
     
     Creature * creature = new Creature(CreatureType_Friend);
     creature->initWithDefinition(3, 3);
+    creature->creatureData()->attackItemIndex = 0;
+    
     this->addCreature(creature, Vec2(2, 24));
     Creature * creature2 = new Creature(CreatureType_Friend);
     creature2->initWithDefinition(2, 2);
@@ -238,9 +240,24 @@ Creature * BattleField::getCreatureAt(int x, int y)
         return nullptr;
     }
     
-    for(Vector<Creature *>::iterator it = _friendList->begin(); it != _friendList->end(); it++)
+    for(Creature * creature : *_friendList)
     {
-        Creature * creature = *it;
+        Vec2 position = convertLocationToPosition(creature->getSprite()->getPosition());
+        if (position.x == x && position.y == y)
+        {
+            return creature;
+        }
+    }
+    for(Creature * creature : *_npcList)
+    {
+        Vec2 position = convertLocationToPosition(creature->getSprite()->getPosition());
+        if (position.x == x && position.y == y)
+        {
+            return creature;
+        }
+    }
+    for(Creature * creature : *_enemyList)
+    {
         Vec2 position = convertLocationToPosition(creature->getSprite()->getPosition());
         if (position.x == x && position.y == y)
         {

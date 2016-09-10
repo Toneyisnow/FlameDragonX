@@ -7,6 +7,7 @@
 //
 
 #include "CreatureData.hpp"
+#include "DataStore.hpp"
 
 CreatureData::CreatureData()
 {
@@ -17,7 +18,7 @@ CreatureData::CreatureData()
     
     
     attackItemIndex = -1;
-    defenseItemIndex = -1;
+    defendItemIndex = -1;
     
     statusEnhanceAp = 0;
     statusEnhanceDp = 0;
@@ -37,4 +38,26 @@ CreatureData::~CreatureData()
     itemList->clear();
     magicList->clear();
     
+}
+
+AttackItemDefinition * CreatureData::getAttackItem()
+{
+    if (attackItemIndex < 0)
+        return nullptr;
+    
+    int attackItemId = itemList->at(attackItemIndex)->getValue();
+    ItemDefinition * item = DataStore::getInstance()->getItemDefinition(attackItemId);
+    
+    return (AttackItemDefinition *)item;
+}
+
+DefendItemDefinition * CreatureData::getDefendItem()
+{
+    if (defendItemIndex < 0)
+        return nullptr;
+    
+    int defendItemId = itemList->at(defendItemIndex)->getValue();
+    ItemDefinition * item = DataStore::getInstance()->getItemDefinition(defendItemId);
+    
+    return (DefendItemDefinition *)item;
 }

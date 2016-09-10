@@ -151,6 +151,8 @@ void BattleScene::showMenu(int menuId)
 
 void BattleScene::attackTo(Creature * creature, Creature * target)
 {
+    log("Attack from %d to %d", creature->getId(), target->getId());
+    
     // Calculations on the Attack result
     
     
@@ -175,8 +177,10 @@ void BattleScene::attackTo(Creature * creature, Creature * target)
 
 }
 
-void BattleScene::magicTo(Creature * creature, Vector<Creature *> * creatureList)
+void BattleScene::magicTo(Creature * creature, int magicIndex, Vector<Creature *> * creatureList)
 {
+    log("Magic from %d.", creature->getId());
+    
     // Calculations on the Attack result
     
     

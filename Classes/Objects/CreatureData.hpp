@@ -29,7 +29,7 @@ public:
     int level, ap, dp, dx, mv, ex;
     
     int attackItemIndex;
-    int defenseItemIndex;
+    int defendItemIndex;
     
     int statusEnhanceAp;
     int statusEnhanceDp;
@@ -46,7 +46,7 @@ public:
     
     
     AttackItemDefinition * getAttackItem();
-    DefendItemDefinition * getDefenseItem();
+    DefendItemDefinition * getDefendItem();
     
 };
 

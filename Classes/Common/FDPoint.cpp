@@ -8,6 +8,14 @@
 
 #include "FDPoint.hpp"
 
+FDPoint * FDPoint::create(int x, int y)
+{
+    FDPoint * p = new FDPoint(Vec2(x, y));
+    
+    p->autorelease();
+    return p;
+}
+
 FDPoint * FDPoint::create(Vec2 point)
 {
     FDPoint * p = new FDPoint(point);

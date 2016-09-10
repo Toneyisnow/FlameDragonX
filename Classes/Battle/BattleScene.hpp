@@ -64,7 +64,7 @@ public:
     void moveAndOpenMenu(Creature * creature, RoutePoint * route);
     void showMenu(int menuIndex);
     void attackTo(Creature * creature, Creature * target);
-    void magicTo(Creature * creature, Vector<Creature *> * creatureList);
+    void magicTo(Creature * creature, int magicIndex, Vector<Creature *> * creatureList);
     void useItem(Creature * creature, int itemIndex, Creature * target);
     void waiveTurn(Creature * creature);
     void creatureEndTurn(Ref * creatureObj);

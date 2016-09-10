@@ -104,6 +104,8 @@
 		3CE63B3F1D81551700C2C76B /* ActionMenuState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63B3D1D81551700C2C76B /* ActionMenuState.cpp */; };
 		3CE63B421D81C9DE00C2C76B /* RemoveObjectActivity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63B401D81C9DE00C2C76B /* RemoveObjectActivity.cpp */; };
 		3CE63B461D827C2C00C2C76B /* TextureComposer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63B441D827C2C00C2C76B /* TextureComposer.cpp */; };
+		3CE63B4B1D83EFC700C2C76B /* RangeScopeResolver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63B491D83EFC700C2C76B /* RangeScopeResolver.cpp */; };
+		3CE63B4F1D83F43900C2C76B /* SelectAttackTargetState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63B4D1D83F43900C2C76B /* SelectAttackTargetState.cpp */; };
 		3EACC98F19EE6D4300EB3C5E /* res in Resources */ = {isa = PBXBuildFile; fileRef = 3EACC98E19EE6D4300EB3C5E /* res */; };
 		3EACC99019EE6D4300EB3C5E /* res in Resources */ = {isa = PBXBuildFile; fileRef = 3EACC98E19EE6D4300EB3C5E /* res */; };
 		46880B7B19C43A67006E1F66 /* CloseNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 46880B7619C43A67006E1F66 /* CloseNormal.png */; };
@@ -367,6 +369,10 @@
 		3CE63B411D81C9DE00C2C76B /* RemoveObjectActivity.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = RemoveObjectActivity.hpp; path = Activities/RemoveObjectActivity.hpp; sourceTree = "<group>"; };
 		3CE63B441D827C2C00C2C76B /* TextureComposer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TextureComposer.cpp; path = Animation/TextureComposer.cpp; sourceTree = "<group>"; };
 		3CE63B451D827C2C00C2C76B /* TextureComposer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = TextureComposer.hpp; path = Animation/TextureComposer.hpp; sourceTree = "<group>"; };
+		3CE63B491D83EFC700C2C76B /* RangeScopeResolver.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RangeScopeResolver.cpp; path = Algorithms/RangeScopeResolver.cpp; sourceTree = "<group>"; };
+		3CE63B4A1D83EFC700C2C76B /* RangeScopeResolver.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = RangeScopeResolver.hpp; path = Algorithms/RangeScopeResolver.hpp; sourceTree = "<group>"; };
+		3CE63B4D1D83F43900C2C76B /* SelectAttackTargetState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SelectAttackTargetState.cpp; path = Dispatchers/SelectAttackTargetState.cpp; sourceTree = "<group>"; };
+		3CE63B4E1D83F43900C2C76B /* SelectAttackTargetState.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = SelectAttackTargetState.hpp; path = Dispatchers/SelectAttackTargetState.hpp; sourceTree = "<group>"; };
 		3EACC98E19EE6D4300EB3C5E /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; path = res; sourceTree = "<group>"; };
 		46880B7619C43A67006E1F66 /* CloseNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseNormal.png; sourceTree = "<group>"; };
 		46880B7719C43A67006E1F66 /* CloseSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseSelected.png; sourceTree = "<group>"; };
@@ -611,6 +617,8 @@
 				3CE63B231D7D40D000C2C76B /* SystemMenuState.hpp */,
 				3CE63B3D1D81551700C2C76B /* ActionMenuState.cpp */,
 				3CE63B3E1D81551700C2C76B /* ActionMenuState.hpp */,
+				3CE63B4D1D83F43900C2C76B /* SelectAttackTargetState.cpp */,
+				3CE63B4E1D83F43900C2C76B /* SelectAttackTargetState.hpp */,
 			);
 			name = Dispatchers;
 			sourceTree = "<group>";
@@ -797,6 +805,8 @@
 			children = (
 				3CE63B2F1D7E7E4300C2C76B /* MoveScopeResolver.cpp */,
 				3CE63B301D7E7E4300C2C76B /* MoveScopeResolver.hpp */,
+				3CE63B491D83EFC700C2C76B /* RangeScopeResolver.cpp */,
+				3CE63B4A1D83EFC700C2C76B /* RangeScopeResolver.hpp */,
 			);
 			name = Algorithms;
 			sourceTree = "<group>";
@@ -1071,6 +1081,7 @@
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				3CE63B1D1D7D337100C2C76B /* IdleState.cpp in Sources */,
 				3CE63B211D7D3C4B00C2C76B /* ShowMoveScopeState.cpp in Sources */,
+				3CE63B4F1D83F43900C2C76B /* SelectAttackTargetState.cpp in Sources */,
 				3C8D68601D7D304700CC3616 /* ActionState.cpp in Sources */,
 				3CA3182F1D7613630042B56A /* FDRange.cpp in Sources */,
 				3CE63B3C1D7F8F6200C2C76B /* PointMap.cpp in Sources */,
@@ -1127,6 +1138,7 @@
 				3C8D68381D79F54900CC3616 /* EventLoader.cpp in Sources */,
 				3CA318291D760C6D0042B56A /* AICreature.cpp in Sources */,
 				3CB1099B1D74F3E2002C4121 /* ItemDefinition.cpp in Sources */,
+				3CE63B4B1D83EFC700C2C76B /* RangeScopeResolver.cpp in Sources */,
 				3CB1098C1D74CE92002C4121 /* SimpleMoveActivity.cpp in Sources */,
 				3C8D68561D7BF5F500CC3616 /* Cursor.cpp in Sources */,
 				3CE63B371D7F33D900C2C76B /* MenuCursor.cpp in Sources */,

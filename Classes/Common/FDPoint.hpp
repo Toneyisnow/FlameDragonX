@@ -21,6 +21,7 @@ private:
 public:
     
     static FDPoint * create(Vec2 point);
+    static FDPoint * create(int x, int y);
     FDPoint(Vec2 point);
     
     Vec2 getValue();
