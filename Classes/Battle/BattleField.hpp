@@ -30,6 +30,9 @@ private:
     BattleScene * _battleScene;
     
     Sprite * _groundImage;
+    Sprite * _coverImage;
+    
+    bool _hasCoverImage;
     
     float _displayScale;
     float _displayBlockSize;
@@ -52,7 +55,7 @@ private:
     
     // Private Methods
     
-    void initGroundMetrix(int chapterId);
+    void initData(int chapterId);
     
     void sendObjectToGround(BattleObject * obj, Vec2 position);
     
@@ -114,7 +117,9 @@ public:
     
     bool isPositionInScope(Vec2 position);
     void removeAllIndicators();
+    int getObjectDistance(BattleObject * c1, BattleObject * c2);
     
+    bool detectedTargetInAttackRange(Creature * creature);
 };
 
 #endif /* BattleField_hpp */

@@ -13,7 +13,7 @@
 #include "BattleObject.hpp"
 #include "CreatureDefinition.hpp"
 #include "CreatureData.hpp"
-
+#include "FDRange.hpp"
 
 typedef enum CreatureType
 {
@@ -44,6 +44,11 @@ private:
     CreatureType _creatureType;
     GestureStatus _gestureStatus;
     
+    bool _hasMoved;
+    bool _hasActioned;
+    
+    
+    
 public:
     
     Creature(CreatureType type);
@@ -63,9 +68,18 @@ public:
     void setDirection(Direction direction);
     void setFocus(bool isFocus);
     
-    bool isVisible();
+    void endTurn();
+    void startTurn();
     
+    
+    bool isVisible();
+    bool canFly();
     bool isDead();
+    bool isFrozen();
+    
+    bool hasTakenAction();
+    
+    FDRange * getAttackRange();
     
 };
 

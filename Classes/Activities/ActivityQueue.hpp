@@ -39,6 +39,7 @@ public:
     
     void takeTick(int synchronizedTick);
     
+    bool isBusy();
 };
 
 

@@ -14,9 +14,15 @@ SimpleMoveActivity::SimpleMoveActivity(BattleField * field, BattleObject * objec
 : FieldActivity(field)
 {
     this->_object = object;
+    this->_object->retain();
     this->_targetLocation = _battleField->convertPositionToLocation(toPosition);
     this->_speed = speed;
     
+}
+
+SimpleMoveActivity::~SimpleMoveActivity()
+{
+    this->_object->release();
 }
 
 void SimpleMoveActivity::initialize()

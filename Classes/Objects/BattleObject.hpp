@@ -22,9 +22,12 @@ typedef enum BattleObjectOrder
 {
     BattleObjectOrder_OnGround = 10,
     BattleObjectOrder_Indicator = 20,
-    BattleObjectOrder_Creature = 30,
-    BattleObjectOrder_Menu = 40,
-    BattleObjectOrder_FocusCreature = 50
+    BattleObjectOrder_SlidingMenu = 25,
+    BattleObjectOrder_GroundCreature = 30,
+    BattleObjectOrder_Cover = 40,
+    BattleObjectOrder_FlyCreature = 50,
+    BattleObjectOrder_Menu = 60,
+
 } BattleObjectOrder;
 
 typedef enum BattleObjectType

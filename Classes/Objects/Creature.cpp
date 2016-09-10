@@ -68,8 +68,7 @@ void Creature::initWithDefinition(int identity, int creatureId)
     }
     
     
-    SlideAnimation * animation = AnimationLibrary::getInstance()->getIdleAnimation(_definition->animationId, false);
-    _animator->setAnimation(animation);
+    startTurn();
 }
 
 
@@ -101,6 +100,7 @@ void Creature::setDirection(Direction direction)
     }
 }
 
+/*
 void Creature::setFocus(bool isFocus)
 {
     if (isFocus)
@@ -112,13 +112,58 @@ void Creature::setFocus(bool isFocus)
         _baseSprite->setLocalZOrder(BattleObjectOrder_Creature);
     }
 }
+*/
+
+
+void Creature::endTurn()
+{
+    _hasActioned = true;
+    
+    SlideAnimation *animation = AnimationLibrary::getInstance()->getIdleAnimation(_definition->animationId, true);
+    _animator->setAnimation(animation);
+}
+
+void Creature::startTurn()
+{
+    _hasActioned = false;
+    _hasMoved = false;
+    
+    SlideAnimation *animation = AnimationLibrary::getInstance()->getIdleAnimation(_definition->animationId, false);
+    _animator->setAnimation(animation);
+}
 
 bool Creature::isVisible()
 {
     return true;
 }
 
+bool Creature::canFly()
+{
+    return _definition->canFly();
+}
+
 bool Creature::isDead()
 {
     return (_data->hpCurrent <= 0);
+}
+
+bool Creature::isFrozen()
+{
+    return false;
+}
+
+bool Creature::hasTakenAction()
+{
+    return _hasActioned;
+}
+
+FDRange * Creature::getAttackRange()
+{
+    AttackItemDefinition * attackItem = _data->getAttackItem();
+    if (attackItem == nullptr)
+    {
+        return nullptr;
+    }
+    
+    return attackItem->attackRange();
 }

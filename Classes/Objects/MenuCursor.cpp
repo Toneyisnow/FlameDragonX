@@ -30,6 +30,11 @@ MenuCursor::MenuCursor(int menuItemId, BattleField * field, Vec2 position)
     initialize(_menuImageFileValid);
 }
 
+int MenuCursor::getId()
+{
+    return _menuItemId;
+}
+
 bool MenuCursor::isSelected()
 {
     return _isSelected;

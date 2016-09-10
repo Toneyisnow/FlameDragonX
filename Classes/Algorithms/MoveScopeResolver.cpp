@@ -39,13 +39,6 @@ MoveScopeResolver::~MoveScopeResolver()
     _scopeResults->release();
 }
 
-int MoveScopeResolver::getDistance(Creature * c1, Creature * c2)
-{
-    Vec2 position1 = _field->getObjectPosition(c1);
-    Vec2 position2 = _field->getObjectPosition(c2);
-    
-    return abs(position1.x - position2.x) + abs(position1.y - position2.y);
-}
 
 void MoveScopeResolver::calculate()
 {
@@ -54,7 +47,8 @@ void MoveScopeResolver::calculate()
     for (int i = 0; i < enemyList->size(); i++) {
         Creature * enemy = enemyList->at(i);
         
-        if (getDistance(_creature, enemy) <= _creature->creatureData()->mv)
+        int distance = _field->getObjectDistance(_creature, enemy);
+        if (distance <= _creature->creatureData()->mv)
         {
             Vec2 enemyPosition = _field->getObjectPosition(enemy);
             

@@ -26,6 +26,26 @@ ActivityQueue::~ActivityQueue()
     delete this->_singleActivityList;
 }
 
+bool ActivityQueue::isBusy()
+{
+    if (_currentActivity != nullptr)
+    {
+        return true;
+    }
+    
+    if (this->_queuedActivityList->size() > 0)
+    {
+        return true;
+    }
+    
+    if (this->_singleActivityList->size() > 0)
+    {
+        return true;
+    }
+    
+    return false;
+}
+
 void ActivityQueue::pushBackActivity(FDActivity * activity)
 {
     this->_queuedActivityList->pushBack(activity);

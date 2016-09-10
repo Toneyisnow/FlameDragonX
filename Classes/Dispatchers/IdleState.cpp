@@ -41,7 +41,7 @@ ActionState * IdleState::handleClickAt(Vec2 position)
     {
         _battleField->setCursorTo(position);
         
-        if (creature->getType() == CreatureType_Friend)
+        if (creature->getType() == CreatureType_Friend && !creature->hasTakenAction() && !creature->isFrozen())
         {
             _session->creaturePositionBeforeMove = position;
             _session->setSelectedCreatureId(creature->getId());

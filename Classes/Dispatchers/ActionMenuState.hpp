@@ -17,6 +17,8 @@ class ActionMenuState : public ActionState
 {
 private:
     
+    Creature * _creature;
+    
 public:
     
     static ActionMenuState * create(BattleScene * scene, StateSession * session);
@@ -25,6 +27,10 @@ public:
     void onExitState();
     
     ActionState * handleClickAt(Vec2 position);
+    
+    void checkTreatureAndWaiveTurn();
+    void confirmPickTreasure();
+    
     
 };
 

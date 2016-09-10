@@ -67,9 +67,22 @@ BattleField::~BattleField()
 
 void BattleField::initWithChapter(int chapterId)
 {
+    // Init Metrix
+    this->initData(chapterId);
+    
     std::string filename = StringUtil::format("Maps/Chapter-%02d.png", chapterId);
     _groundImage = Sprite::create(filename);
     _groundImage->setAnchorPoint(Vec2(0, 0));
+    
+    if (_hasCoverImage)
+    {
+        // TODO: Re-think how to implement this part
+        /*
+        Sprite * coverImage = Sprite::create(StringUtil::format("Maps/Chapter-%02d-Cover.png", chapterId));
+        coverImage->setAnchorPoint(Vec2(0, 0));
+        _groundImage->addChild(coverImage, BattleObjectOrder_Cover);
+         */
+    }
     
     auto size = Director::getInstance()->getWinSize();
     auto sizein = Director::getInstance()->getWinSizeInPixels();
@@ -81,14 +94,6 @@ void BattleField::initWithChapter(int chapterId)
     
     this->addChild(_groundImage, 1);
     
-    // Adding controls to map
-    _touchHandler = new TouchHandler(this);
-    
-    // State Dispatcher
-    _stateDispatcher = new StateDispatcher(_battleScene);
-    
-    // Init Metrix
-    this->initGroundMetrix(chapterId);
     
     // Init Objects
     this->_battleObjectList = new Vector<BattleObject *>();
@@ -101,6 +106,12 @@ void BattleField::initWithChapter(int chapterId)
     this->_cursor = new Cursor();
     addObject(_cursor, Vec2(0, 0));
     
+    // Adding controls to map
+    _touchHandler = new TouchHandler(this);
+    
+    // State Dispatcher
+    _stateDispatcher = new StateDispatcher(_battleScene);
+    
     
     
     
@@ -110,6 +121,9 @@ void BattleField::initWithChapter(int chapterId)
     Creature * creature2 = new Creature(CreatureType_Friend);
     creature2->initWithDefinition(2, 2);
     this->addCreature(creature2, Vec2(2, 22));
+    Creature * creature3 = new Creature(CreatureType_Friend);
+    creature3->initWithDefinition(1, 1);
+    this->addCreature(creature3, Vec2(10, 9));
     
     Creature * enemy1 = new Creature(CreatureType_Enemy);
     enemy1->initWithDefinition(101, 50101);
@@ -169,7 +183,7 @@ float BattleField::getDisplayScale()
     return _displayScale;
 }
 
-void BattleField::initGroundMetrix(int chapterId)
+void BattleField::initData(int chapterId)
 {
     _groundMetrix = new Vector<Ground *>();
     
@@ -194,8 +208,15 @@ void BattleField::initGroundMetrix(int chapterId)
     _treasureCount = reader->readInt();
     for(int i = 0; i < _treasureCount; i++)
     {
+        int x = reader->readInt();
+        int y = reader->readInt();
+        
+        int type = reader->readInt();
+        int itemId = reader->readInt();
         
     }
+    
+    _hasCoverImage = (reader->readInt() == 1);
     
     reader->release();
 }
@@ -232,11 +253,19 @@ Creature * BattleField::getCreatureAt(int x, int y)
 
 Creature * BattleField::getCreatureById(int creatureId)
 {
-    for(Vector<Creature *>::iterator it = _friendList->begin(); it != _friendList->end(); it++)
-    {
-        Creature * creature = *it;
-        if (creature->getId() == creatureId) {
-            return creature;
+    for (Creature * c : *_friendList) {
+        if (c->getId() == creatureId) {
+            return c;
+        }
+    }
+    for (Creature * c : *_npcList) {
+        if (c->getId() == creatureId) {
+            return c;
+        }
+    }
+    for (Creature * c : *_enemyList) {
+        if (c->getId() == creatureId) {
+            return c;
         }
     }
     
@@ -281,7 +310,7 @@ void BattleField::setObjectPosition(BattleObject * obj, Vec2 position)
 
 bool BattleField::isInteractiveBusy()
 {
-    return false;
+    return _battleScene->getActivityQueue()->isBusy();
 }
 
 Vec2 BattleField::convertPositionToLocation(Vec2 pos)
@@ -307,13 +336,14 @@ Vec2 BattleField::convertLocationToPosition(Vec2 loc)
 void BattleField::sendObjectToGround(BattleObject * obj, Vec2 position)
 {
     int zOrder;
+    Creature * creature = (Creature *)obj;
     switch (obj->getObjectType()) {
         case BattleObject_ScopeIndicator:
         case BattleObject_Cursor:
             zOrder = BattleObjectOrder_Indicator;
             break;
         case BattleObject_Creature:
-            zOrder = BattleObjectOrder_Creature;
+            zOrder = (creature != nullptr && creature->canFly()) ? BattleObjectOrder_FlyCreature : BattleObjectOrder_GroundCreature;
             break;
         case BattleObject_Menu:
             zOrder = BattleObjectOrder_Menu;
@@ -416,6 +446,11 @@ void BattleField::takeTick(int synchronizedTick)
 
 void BattleField::onClickedAt(Vec2 location)
 {
+    if (isInteractiveBusy())
+    {
+        return;
+    }
+    
     Vec2 position = convertLocationToPosition(location);
     if (position.x < 0 || position.y < 0 || position.x > _fieldWidth + 1 || position.y > _fieldHeight + 1)
     {
@@ -529,4 +564,46 @@ void BattleField::removeAllIndicators()
             removeObject(obj);
         }
     }
+}
+
+int BattleField::getObjectDistance(BattleObject * c1, BattleObject * c2)
+{
+    Vec2 position1 = this->getObjectPosition(c1);
+    Vec2 position2 = this->getObjectPosition(c2);
+    
+    return abs(position1.x - position2.x) + abs(position1.y - position2.y);
+}
+
+bool BattleField::detectedTargetInAttackRange(Creature * creature)
+{
+    if (creature == nullptr)
+        return false;
+    
+    FDRange * attackRange = creature->getAttackRange();
+    if (attackRange == nullptr)
+        return false;
+
+    if (creature->getType() == CreatureType_Enemy)
+    {
+        for (Creature * target : *_friendList) {
+            int distance = getObjectDistance(creature, target);
+            if (attackRange->containsValue(distance))
+                return true;
+        }
+        for (Creature * target : *_npcList) {
+            int distance = getObjectDistance(creature, target);
+            if (attackRange->containsValue(distance))
+                return true;
+        }
+    }
+    else
+    {
+        for (Creature * target : *_enemyList) {
+            int distance = getObjectDistance(creature, target);
+            if (attackRange->containsValue(distance))
+                return true;
+        }
+    }
+    
+    return false;
 }

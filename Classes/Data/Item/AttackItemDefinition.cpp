@@ -52,3 +52,27 @@ void AttackItemDefinition::initFromFile(TextFileReader * reader)
     _ev = 0;
 }
 
+int AttackItemDefinition::ap()
+{
+    return _ap;
+}
+
+int AttackItemDefinition::hit()
+{
+    return _hit;
+}
+
+int AttackItemDefinition::ev()
+{
+    return _ev;
+}
+
+int AttackItemDefinition::dp()
+{
+    return _dp;
+}
+
+FDRange * AttackItemDefinition::attackRange()
+{
+    return _attackRange;
+}

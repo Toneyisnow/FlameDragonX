@@ -67,7 +67,7 @@ public:
     void magicTo(Creature * creature, Vector<Creature *> * creatureList);
     void useItem(Creature * creature, int itemIndex, Creature * target);
     void waiveTurn(Creature * creature);
-    void creatureEndTurn(int creatureId);
+    void creatureEndTurn(Ref * creatureObj);
     void startTurn();
     void takeAIMove();
     void takeAIAction(int creatureId);

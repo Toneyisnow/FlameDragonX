@@ -51,8 +51,6 @@ public:
     MoveScopeResolver(BattleField * field, Creature * creature);
     ~MoveScopeResolver();
     
-    int getDistance(Creature * c1, Creature * c2);
-    
     void calculate();
     
     Vector<FDPoint *> getResults();

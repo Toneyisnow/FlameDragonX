@@ -38,6 +38,7 @@ public:
     
     MenuCursor(int menuItemId, BattleField * field, Vec2 position);
     
+    int getId();
     void checkValidation(Creature * creature);
     
     bool isSelected();

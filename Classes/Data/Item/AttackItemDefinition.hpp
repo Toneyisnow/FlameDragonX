@@ -37,6 +37,13 @@ public:
     void initFromFile(TextFileReader * reader);
     
     ~AttackItemDefinition();
+    
+    int ap();
+    int hit();
+    int ev();
+    int dp();
+    FDRange * attackRange();
+    
 };
 
 #endif /* AttackItemDefinition_hpp */

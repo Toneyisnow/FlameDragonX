@@ -171,7 +171,7 @@ void BattleScene::attackTo(Creature * creature, Creature * target)
     _eventHandler->notifyTriggeredEvents();
     
     // End Turn
-    this->appendMethodToActivity(CALLBACK1_SELECTOR(BattleScene::creatureEndTurn), creature->getId());
+    this->appendMethodToActivity(CALLBACK2_SELECTOR(BattleScene::creatureEndTurn), creature);
 
 }
 
@@ -190,7 +190,7 @@ void BattleScene::magicTo(Creature * creature, Vector<Creature *> * creatureList
     _eventHandler->notifyTriggeredEvents();
     
     // End Turn
-    this->appendMethodToActivity(CALLBACK1_SELECTOR(BattleScene::creatureEndTurn), creature->getId());
+    this->appendMethodToActivity(CALLBACK2_SELECTOR(BattleScene::creatureEndTurn), creature);
 
 }
 void BattleScene::useItem(Creature * creature, int itemIndex, Creature * target)
@@ -205,7 +205,7 @@ void BattleScene::useItem(Creature * creature, int itemIndex, Creature * target)
     _activityQueue->appendActivity(talk);
     
     // End Turn
-    this->appendMethodToActivity(CALLBACK1_SELECTOR(BattleScene::creatureEndTurn), creature->getId());
+    this->appendMethodToActivity(CALLBACK2_SELECTOR(BattleScene::creatureEndTurn), creature);
 }
 
 void BattleScene::waiveTurn(Creature * creature)
@@ -213,21 +213,39 @@ void BattleScene::waiveTurn(Creature * creature)
     // Recovery Animation
     
     
+    
     // Triggered Events. e.g. Found Treature
     _eventHandler->notifyTriggeredEvents();
     
     // End Turn
-    this->appendMethodToActivity(CALLBACK1_SELECTOR(BattleScene::creatureEndTurn), creature->getId());
+    this->appendMethodToActivity(CALLBACK2_SELECTOR(BattleScene::creatureEndTurn), creature);
 
 }
 
-void BattleScene::creatureEndTurn(int creatureId)
+void BattleScene::creatureEndTurn(Ref * creatureObj)
 {
+    Creature * creature = (Creature *)creatureObj;
+    
     // Grey out the creature
+    creature->endTurn();
     
     if (_currentTurnType == CreatureType_Enemy || _currentTurnType == CreatureType_Npc)
     {
         this->appendMethodToActivity(CALLBACK0_SELECTOR(BattleScene::takeAIMove));
+    }
+    else
+    {
+        bool shouldEndTurn = true;
+        for(Creature * creature : *(_battleField->getFriendList()))
+        {
+            if (!creature->hasTakenAction())
+                shouldEndTurn = false;
+        }
+        
+        if (shouldEndTurn)
+        {
+            this->appendMethodToActivity(CALLBACK0_SELECTOR(BattleScene::startTurn));
+        }
     }
     
 }
@@ -241,21 +259,39 @@ void BattleScene::startTurn()
     }
     else
     {
+        // Grey back all creatures
+        Vector<Creature *> * lastCreaturelist;
+        
         switch (_currentTurnType) {
-        case CreatureType_Friend: _currentTurnType = CreatureType_Npc;
+        case CreatureType_Friend:
+                _currentTurnType = CreatureType_Npc;
+                lastCreaturelist = _battleField->getFriendList();
             break;
-        case CreatureType_Npc: _currentTurnType = CreatureType_Enemy;
+        case CreatureType_Npc:
+                _currentTurnType = CreatureType_Enemy;
+                lastCreaturelist = _battleField->getNPCList();
             break;
-        case CreatureType_Enemy: _currentTurnType = CreatureType_Friend;
-            _turnNumber ++;
+        case CreatureType_Enemy:
+                _currentTurnType = CreatureType_Friend;
+                lastCreaturelist = _battleField->getEnemyList();
+                _turnNumber ++;
             break;
             
         default:
             break;
         }
+        
+        for (Creature * creature : *lastCreaturelist) {
+            creature->startTurn();
+        }
+        
     }
     
-    // Grey back all creatures
+    log("Starting turn for: %d, %d", _turnNumber, _currentTurnType);
+    
+    
+    
+    
     
     // Turn Events
     _eventHandler->notifyTurnEvents();
@@ -277,13 +313,28 @@ void BattleScene::startTurn()
 void BattleScene::takeAIMove()
 {
     // Find AI Creature
-    Creature * target = _battleField->getCreatureById(101);
+    Vector<Creature *> * creatureList = (_currentTurnType == CreatureType_Enemy) ? _battleField->getEnemyList() : _battleField->getNPCList();
+    
+    Creature * target = nullptr;
+    for (Creature * creature : *creatureList) {
+        if (!creature->hasTakenAction())
+        {
+            target = creature;
+            break;
+        }
+    }
     
     if (target != nullptr)
     {
         // Take Move
-        CreatureMoveActivity * activity = nullptr;
-    
+        RoutePoint * route = new RoutePoint();
+        Vec2 position = _battleField->getObjectPosition(target);
+        route->appendPoint(Vec2(position.x, position.y + 4));
+        route->appendPoint(Vec2(position.x + 5, position.y + 4));
+        
+        CreatureMoveActivity * activity = CreatureMoveActivity::create(_battleField, target, route);
+        this->_activityQueue->appendActivity(activity);
+        
         //
         this->appendMethodToActivity(CALLBACK1_SELECTOR(BattleScene::takeAIAction), target->getId());
     }
@@ -295,10 +346,11 @@ void BattleScene::takeAIMove()
 }
 void BattleScene::takeAIAction(int creatureId)
 {
-    log("Take AI Action.");
+    log("Take AI Action. ID = %d", creatureId);
     
+    Creature * creature = _battleField->getCreatureById(creatureId);
     
-    
+    this->waiveTurn(creature);
 }
 
 void BattleScene::appendMethodToActivity(SEL_CALLBACK0 selector)

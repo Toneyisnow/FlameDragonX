@@ -49,7 +49,7 @@ void ShowMoveScopeState::onEnterState()
         return;
     }
     
-    creature->setFocus(true);
+    /// creature->setFocus(true);
     _battleField->setObjectPosition(creature, position);
     
     _resolver = _session->getMoveScopeResolver();
