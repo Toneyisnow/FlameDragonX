@@ -18,6 +18,7 @@
 #include "EventHandler.hpp"
 #include "RoutePoint.hpp"
 #include "CallbackActivity.hpp"
+#include "CounterObject.hpp"
 
 class BattleScene : public cocos2d::Scene
 {
@@ -65,6 +66,7 @@ public:
     void showMenu(int menuIndex);
     void attackTo(Creature * creature, Creature * target);
     void magicTo(Creature * creature, int magicIndex, Vector<Creature *> * creatureList);
+    void postFightAction(Ref * counterObject);
     void useItem(Creature * creature, int itemIndex, Creature * target);
     void waiveTurn(Creature * creature);
     void creatureEndTurn(Ref * creatureObj);

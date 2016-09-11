@@ -18,6 +18,8 @@
 #include "TalkActivity.hpp"
 #include "CreatureDeadActivity.hpp"
 #include "PointMap.hpp"
+#include "GameFormula.hpp"
+#include "FightScene.hpp"
 
 USING_NS_CC;
 
@@ -154,12 +156,45 @@ void BattleScene::attackTo(Creature * creature, Creature * target)
     log("Attack from %d to %d", creature->getId(), target->getId());
     
     // Calculations on the Attack result
+    FightResult * result = GameFormula::dealWithFight(_battleField, creature, target);
     
     
     // Turn to the flight scene
+    CallbackMethod * callback = CallbackMethod::create(this, CALLBACK2_SELECTOR(BattleScene::postFightAction), result->getCounterObject());
+    CounterInfo * info = new CounterInfo(1, callback);
+    FightScene * scene = new FightScene(info, result);
+    
+    Director::getInstance()->pushScene(TransitionFade::create(1.0f, scene));
+
+    info->release();
+    scene->release();
+}
+
+void BattleScene::magicTo(Creature * creature, int magicIndex, Vector<Creature *> * creatureList)
+{
+    log("Magic from %d.", creature->getId());
+    
+    // Calculations on the Attack result
+    
+
+    
+    // Turn to the magic flight scene
+    
+}
+
+void BattleScene::postFightAction(Ref * counterObjectObj)
+{
+    log("Enter postFightAction.");
+    
+    CounterObject * counterObject = (CounterObject *)counterObjectObj;
+    
+    Creature * creature = counterObject->getSubject();
+    
+    // Triggered Events
+    _eventHandler->notifyTriggeredEvents();
     
     // Show Dying Animation
-    if (creature->isDead() || target->isDead())
+    if (creature->isDead())
     {
         CreatureDeadActivity * dead = CreatureDeadActivity::create(this->_battleField, creature);
         _activityQueue->appendActivity(dead);
@@ -177,26 +212,6 @@ void BattleScene::attackTo(Creature * creature, Creature * target)
 
 }
 
-void BattleScene::magicTo(Creature * creature, int magicIndex, Vector<Creature *> * creatureList)
-{
-    log("Magic from %d.", creature->getId());
-    
-    // Calculations on the Attack result
-    
-    
-    // Turn to the magic flight scene
-    
-    // Show Talk messages
-    TalkActivity * talk = TalkActivity::create(this, creature, "Test Message");
-    _activityQueue->appendActivity(talk);
-    
-    // Triggered Events
-    _eventHandler->notifyTriggeredEvents();
-    
-    // End Turn
-    this->appendMethodToActivity(CALLBACK2_SELECTOR(BattleScene::creatureEndTurn), creature);
-
-}
 void BattleScene::useItem(Creature * creature, int itemIndex, Creature * target)
 {
     // Caculates the effect

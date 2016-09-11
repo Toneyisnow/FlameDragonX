@@ -106,6 +106,15 @@
 		3CE63B461D827C2C00C2C76B /* TextureComposer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63B441D827C2C00C2C76B /* TextureComposer.cpp */; };
 		3CE63B4B1D83EFC700C2C76B /* RangeScopeResolver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63B491D83EFC700C2C76B /* RangeScopeResolver.cpp */; };
 		3CE63B4F1D83F43900C2C76B /* SelectAttackTargetState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63B4D1D83F43900C2C76B /* SelectAttackTargetState.cpp */; };
+		3CE63B591D852C0D00C2C76B /* CounterInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63B571D852C0D00C2C76B /* CounterInfo.cpp */; };
+		3CE63B5C1D852DB200C2C76B /* CounterScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63B5A1D852DB200C2C76B /* CounterScene.cpp */; };
+		3CE63B5F1D852E0300C2C76B /* FightScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63B5D1D852E0300C2C76B /* FightScene.cpp */; };
+		3CE63B621D85308600C2C76B /* MagicScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63B601D85308600C2C76B /* MagicScene.cpp */; };
+		3CE63B651D85364200C2C76B /* CounterResult.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63B631D85364200C2C76B /* CounterResult.cpp */; };
+		3CE63B681D85366200C2C76B /* FightResult.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63B661D85366200C2C76B /* FightResult.cpp */; };
+		3CE63B6B1D8536C000C2C76B /* MagicResult.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63B691D8536C000C2C76B /* MagicResult.cpp */; };
+		3CE63B6E1D853C5200C2C76B /* CounterObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63B6C1D853C5200C2C76B /* CounterObject.cpp */; };
+		3CE63B711D853F3300C2C76B /* GameFormula.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63B6F1D853F3300C2C76B /* GameFormula.cpp */; };
 		3EACC98F19EE6D4300EB3C5E /* res in Resources */ = {isa = PBXBuildFile; fileRef = 3EACC98E19EE6D4300EB3C5E /* res */; };
 		3EACC99019EE6D4300EB3C5E /* res in Resources */ = {isa = PBXBuildFile; fileRef = 3EACC98E19EE6D4300EB3C5E /* res */; };
 		46880B7B19C43A67006E1F66 /* CloseNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 46880B7619C43A67006E1F66 /* CloseNormal.png */; };
@@ -373,6 +382,24 @@
 		3CE63B4A1D83EFC700C2C76B /* RangeScopeResolver.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = RangeScopeResolver.hpp; path = Algorithms/RangeScopeResolver.hpp; sourceTree = "<group>"; };
 		3CE63B4D1D83F43900C2C76B /* SelectAttackTargetState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SelectAttackTargetState.cpp; path = Dispatchers/SelectAttackTargetState.cpp; sourceTree = "<group>"; };
 		3CE63B4E1D83F43900C2C76B /* SelectAttackTargetState.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = SelectAttackTargetState.hpp; path = Dispatchers/SelectAttackTargetState.hpp; sourceTree = "<group>"; };
+		3CE63B571D852C0D00C2C76B /* CounterInfo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CounterInfo.cpp; path = Fight/CounterInfo.cpp; sourceTree = "<group>"; };
+		3CE63B581D852C0D00C2C76B /* CounterInfo.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CounterInfo.hpp; path = Fight/CounterInfo.hpp; sourceTree = "<group>"; };
+		3CE63B5A1D852DB200C2C76B /* CounterScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CounterScene.cpp; path = Fight/CounterScene.cpp; sourceTree = "<group>"; };
+		3CE63B5B1D852DB200C2C76B /* CounterScene.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CounterScene.hpp; path = Fight/CounterScene.hpp; sourceTree = "<group>"; };
+		3CE63B5D1D852E0300C2C76B /* FightScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FightScene.cpp; path = Fight/FightScene.cpp; sourceTree = "<group>"; };
+		3CE63B5E1D852E0300C2C76B /* FightScene.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = FightScene.hpp; path = Fight/FightScene.hpp; sourceTree = "<group>"; };
+		3CE63B601D85308600C2C76B /* MagicScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MagicScene.cpp; path = Fight/MagicScene.cpp; sourceTree = "<group>"; };
+		3CE63B611D85308600C2C76B /* MagicScene.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = MagicScene.hpp; path = Fight/MagicScene.hpp; sourceTree = "<group>"; };
+		3CE63B631D85364200C2C76B /* CounterResult.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CounterResult.cpp; path = Algorithms/CounterResult.cpp; sourceTree = "<group>"; };
+		3CE63B641D85364200C2C76B /* CounterResult.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CounterResult.hpp; path = Algorithms/CounterResult.hpp; sourceTree = "<group>"; };
+		3CE63B661D85366200C2C76B /* FightResult.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FightResult.cpp; path = Algorithms/FightResult.cpp; sourceTree = "<group>"; };
+		3CE63B671D85366200C2C76B /* FightResult.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = FightResult.hpp; path = Algorithms/FightResult.hpp; sourceTree = "<group>"; };
+		3CE63B691D8536C000C2C76B /* MagicResult.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MagicResult.cpp; path = Algorithms/MagicResult.cpp; sourceTree = "<group>"; };
+		3CE63B6A1D8536C000C2C76B /* MagicResult.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = MagicResult.hpp; path = Algorithms/MagicResult.hpp; sourceTree = "<group>"; };
+		3CE63B6C1D853C5200C2C76B /* CounterObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CounterObject.cpp; path = Algorithms/CounterObject.cpp; sourceTree = "<group>"; };
+		3CE63B6D1D853C5200C2C76B /* CounterObject.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CounterObject.hpp; path = Algorithms/CounterObject.hpp; sourceTree = "<group>"; };
+		3CE63B6F1D853F3300C2C76B /* GameFormula.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GameFormula.cpp; path = Algorithms/GameFormula.cpp; sourceTree = "<group>"; };
+		3CE63B701D853F3300C2C76B /* GameFormula.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = GameFormula.hpp; path = Algorithms/GameFormula.hpp; sourceTree = "<group>"; };
 		3EACC98E19EE6D4300EB3C5E /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; path = res; sourceTree = "<group>"; };
 		46880B7619C43A67006E1F66 /* CloseNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseNormal.png; sourceTree = "<group>"; };
 		46880B7719C43A67006E1F66 /* CloseSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseSelected.png; sourceTree = "<group>"; };
@@ -807,8 +834,33 @@
 				3CE63B301D7E7E4300C2C76B /* MoveScopeResolver.hpp */,
 				3CE63B491D83EFC700C2C76B /* RangeScopeResolver.cpp */,
 				3CE63B4A1D83EFC700C2C76B /* RangeScopeResolver.hpp */,
+				3CE63B631D85364200C2C76B /* CounterResult.cpp */,
+				3CE63B641D85364200C2C76B /* CounterResult.hpp */,
+				3CE63B661D85366200C2C76B /* FightResult.cpp */,
+				3CE63B671D85366200C2C76B /* FightResult.hpp */,
+				3CE63B691D8536C000C2C76B /* MagicResult.cpp */,
+				3CE63B6A1D8536C000C2C76B /* MagicResult.hpp */,
+				3CE63B6C1D853C5200C2C76B /* CounterObject.cpp */,
+				3CE63B6D1D853C5200C2C76B /* CounterObject.hpp */,
+				3CE63B6F1D853F3300C2C76B /* GameFormula.cpp */,
+				3CE63B701D853F3300C2C76B /* GameFormula.hpp */,
 			);
 			name = Algorithms;
+			sourceTree = "<group>";
+		};
+		3CE63B501D852B0000C2C76B /* Fight */ = {
+			isa = PBXGroup;
+			children = (
+				3CE63B571D852C0D00C2C76B /* CounterInfo.cpp */,
+				3CE63B581D852C0D00C2C76B /* CounterInfo.hpp */,
+				3CE63B5A1D852DB200C2C76B /* CounterScene.cpp */,
+				3CE63B5B1D852DB200C2C76B /* CounterScene.hpp */,
+				3CE63B5D1D852E0300C2C76B /* FightScene.cpp */,
+				3CE63B5E1D852E0300C2C76B /* FightScene.hpp */,
+				3CE63B601D85308600C2C76B /* MagicScene.cpp */,
+				3CE63B611D85308600C2C76B /* MagicScene.hpp */,
+			);
+			name = Fight;
 			sourceTree = "<group>";
 		};
 		46880B7519C43A67006E1F66 /* Resources */ = {
@@ -841,6 +893,7 @@
 				3CD12EFF1D6BB24200CDF793 /* Common */,
 				3CD12F131D6CE74100CDF793 /* Data */,
 				3CD12F121D6CE73A00CDF793 /* Records */,
+				3CE63B501D852B0000C2C76B /* Fight */,
 				3CD12F241D6D060300CDF793 /* Battle */,
 				3CD12F081D6CD87800CDF793 /* Controls */,
 				3C1883421D6B9FB00059056E /* Scenes */,
@@ -1085,6 +1138,8 @@
 				3C8D68601D7D304700CC3616 /* ActionState.cpp in Sources */,
 				3CA3182F1D7613630042B56A /* FDRange.cpp in Sources */,
 				3CE63B3C1D7F8F6200C2C76B /* PointMap.cpp in Sources */,
+				3CE63B5C1D852DB200C2C76B /* CounterScene.cpp in Sources */,
+				3CE63B621D85308600C2C76B /* MagicScene.cpp in Sources */,
 				46880B8A19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */,
 				3CB109931D74ECB1002C4121 /* Constants.cpp in Sources */,
 				3CB109A41D74F440002C4121 /* SpecialItemDefinition.cpp in Sources */,
@@ -1097,13 +1152,16 @@
 				3CE63B421D81C9DE00C2C76B /* RemoveObjectActivity.cpp in Sources */,
 				3CE63B461D827C2C00C2C76B /* TextureComposer.cpp in Sources */,
 				3CB1099E1D74F3FE002C4121 /* UsableItemDefinition.cpp in Sources */,
+				3CE63B591D852C0D00C2C76B /* CounterInfo.cpp in Sources */,
 				3CB109AD1D74FC5E002C4121 /* DataStore.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				3C8D683B1D79F56E00CC3616 /* EventLoaderFactory.cpp in Sources */,
 				3CE63B311D7E7E4300C2C76B /* MoveScopeResolver.cpp in Sources */,
+				3CE63B6E1D853C5200C2C76B /* CounterObject.cpp in Sources */,
 				3CB109891D74CCAB002C4121 /* FDActivity.cpp in Sources */,
 				3CB109A11D74F41E002C4121 /* AttackItemDefinition.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
+				3CE63B711D853F3300C2C76B /* GameFormula.cpp in Sources */,
 				3C8D68631D7D30A000CC3616 /* StateSession.cpp in Sources */,
 				3CB1097F1D6F69AC002C4121 /* FDAnimate.cpp in Sources */,
 				3C8D685D1D7C0D9500CC3616 /* StateDispatcher.cpp in Sources */,
@@ -1124,6 +1182,7 @@
 				3C8D68471D7A3AD500CC3616 /* RoutePoint.cpp in Sources */,
 				3C8D68501D7AA90A00CC3616 /* CreatureDeadActivity.cpp in Sources */,
 				3CB1096F1D6E6B8F002C4121 /* BattleObject.cpp in Sources */,
+				3CE63B681D85366200C2C76B /* FightResult.cpp in Sources */,
 				3CE63B2D1D7D5DF900C2C76B /* TransparencyFrame.cpp in Sources */,
 				3CB109791D6F6489002C4121 /* FDFrame.cpp in Sources */,
 				3C8D68181D78EA2F00CC3616 /* CombinedActivity.cpp in Sources */,
@@ -1136,12 +1195,15 @@
 				3CE63B341D7E9BEA00C2C76B /* FDPoint.cpp in Sources */,
 				3C8D68241D78F24300CC3616 /* CreatureMoveActivity.cpp in Sources */,
 				3C8D68381D79F54900CC3616 /* EventLoader.cpp in Sources */,
+				3CE63B5F1D852E0300C2C76B /* FightScene.cpp in Sources */,
 				3CA318291D760C6D0042B56A /* AICreature.cpp in Sources */,
 				3CB1099B1D74F3E2002C4121 /* ItemDefinition.cpp in Sources */,
+				3CE63B6B1D8536C000C2C76B /* MagicResult.cpp in Sources */,
 				3CE63B4B1D83EFC700C2C76B /* RangeScopeResolver.cpp in Sources */,
 				3CB1098C1D74CE92002C4121 /* SimpleMoveActivity.cpp in Sources */,
 				3C8D68561D7BF5F500CC3616 /* Cursor.cpp in Sources */,
 				3CE63B371D7F33D900C2C76B /* MenuCursor.cpp in Sources */,
+				3CE63B651D85364200C2C76B /* CounterResult.cpp in Sources */,
 				3CE63B271D7D59D400C2C76B /* CommonHelper.cpp in Sources */,
 				3C18834B1D6BA0970059056E /* SceneCreator.cpp in Sources */,
 				3CB109691D6E0BD1002C4121 /* Ground.cpp in Sources */,
