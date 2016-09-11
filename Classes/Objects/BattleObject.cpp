@@ -51,3 +51,8 @@ FDActivity * BattleObject::onRemovalActivity()
 {
     return nullptr;
 }
+
+void BattleObject::setZOrder(int zOrder)
+{
+    _baseSprite->setLocalZOrder(zOrder);
+}

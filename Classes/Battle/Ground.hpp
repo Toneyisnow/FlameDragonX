@@ -30,15 +30,20 @@ private:
     GroundType _groundType;
     int _attackPoint;
     int _defensePoint;
+    bool _hasCover;
     
 public:
     
     static Ground * createGround(GroundType type);
     Ground(GroundType type, int aPoint, int dPoint);
     
+    void setCover(bool cover);
+    
     GroundType getType();
     int getAttackPoint();
     int getDefensePoint();
+    bool hasCover();
+    
 };
 
 #endif /* Ground_hpp */

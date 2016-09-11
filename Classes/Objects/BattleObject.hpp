@@ -22,9 +22,9 @@ typedef enum BattleObjectOrder
 {
     BattleObjectOrder_OnGround = 10,
     BattleObjectOrder_Indicator = 20,
-    BattleObjectOrder_SlidingMenu = 25,
     BattleObjectOrder_GroundCreature = 30,
     BattleObjectOrder_Cover = 40,
+    BattleObjectOrder_HigherIndicator = 45,
     BattleObjectOrder_FlyCreature = 50,
     BattleObjectOrder_Menu = 60,
 
@@ -67,6 +67,8 @@ public:
     virtual void setDirection(Direction direction);
     
     virtual FDActivity * onRemovalActivity();
+    
+    void setZOrder(int zOrder);
 };
 
 #endif /* BattleObject_hpp */

@@ -45,6 +45,7 @@ Ground::Ground(GroundType type, int aPoint, int dPoint)
     this->_groundType = type;
     this->_attackPoint = aPoint;
     this->_defensePoint = dPoint;
+    _hasCover = false;
 }
 
 GroundType Ground::getType()
@@ -60,4 +61,14 @@ int Ground::getAttackPoint()
 int Ground::getDefensePoint()
 {
     return _defensePoint;
+}
+
+void Ground::setCover(bool cover)
+{
+    _hasCover = cover;
+}
+
+bool Ground::hasCover()
+{
+    return _hasCover;
 }

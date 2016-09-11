@@ -76,12 +76,9 @@ void BattleField::initWithChapter(int chapterId)
     
     if (_hasCoverImage)
     {
-        // TODO: Re-think how to implement this part
-        /*
         Sprite * coverImage = Sprite::create(StringUtil::format("Maps/Chapter-%02d-Cover.png", chapterId));
         coverImage->setAnchorPoint(Vec2(0, 0));
         _groundImage->addChild(coverImage, BattleObjectOrder_Cover);
-         */
     }
     
     auto size = Director::getInstance()->getWinSize();
@@ -200,10 +197,20 @@ void BattleField::initData(int chapterId)
             
             GroundType type = (GroundType)reader->readInt();
             Ground * ground = Ground::createGround(type);
-            
             _groundMetrix->pushBack(ground);
-            
-            
+        }
+    }
+    
+    _hasCoverImage = (reader->readInt() == 1);
+    if (_hasCoverImage)
+    {
+        for (int j = 1; j <= _fieldHeight; j++) {
+            for (int i = 1; i <= _fieldWidth; i++) {
+                
+                int value = reader->readInt();
+                Ground * ground = this->groundAt(i, j);
+                ground->setCover(value == 9);
+            }
         }
     }
     
@@ -218,7 +225,6 @@ void BattleField::initData(int chapterId)
         
     }
     
-    _hasCoverImage = (reader->readInt() == 1);
     
     reader->release();
 }
@@ -354,10 +360,12 @@ void BattleField::sendObjectToGround(BattleObject * obj, Vec2 position)
 {
     int zOrder;
     Creature * creature = (Creature *)obj;
+    Ground * ground = groundAt(position.x, position.y);
+    
     switch (obj->getObjectType()) {
         case BattleObject_ScopeIndicator:
         case BattleObject_Cursor:
-            zOrder = BattleObjectOrder_Indicator;
+            zOrder = (ground != nullptr && ground->hasCover()) ?  BattleObjectOrder_HigherIndicator : BattleObjectOrder_Indicator;
             break;
         case BattleObject_Creature:
             zOrder = (creature != nullptr && creature->canFly()) ? BattleObjectOrder_FlyCreature : BattleObjectOrder_GroundCreature;
@@ -482,6 +490,16 @@ void BattleField::setCursorTo(Vec2 position)
 {
     Vec2 unitLocation = convertPositionToLocation(position);
     _cursor->getSprite()->setPosition(unitLocation);
+    
+    Ground * ground = groundAt(position.x, position.y);
+    if (ground->hasCover())
+    {
+        _cursor->setZOrder(BattleObjectOrder_HigherIndicator);
+    }
+    else
+    {
+        _cursor->setZOrder(BattleObjectOrder_Indicator);
+    }
 }
 
 void BattleField::moveCursorTo(Vec2 position)
