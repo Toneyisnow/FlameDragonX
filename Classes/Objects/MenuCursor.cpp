@@ -110,9 +110,18 @@ void MenuCursor::checkValidation(Creature * creature)
     
     _isValid = true;
     switch (_menuItemId) {
-        case 10:
+        case 10:    // Magic
             _isValid = false;
             // Magic
+            break;
+        case 11:    // Attack
+            _isValid = _field->searchTargetInAttackRange(creature).size() > 0;
+            break;
+        case 12:    // Item
+            _isValid = creature->creatureData()->itemList->size() > 0;
+            break;
+        case 13:    // Waive Turn
+            _isValid = true;
             break;
             
         case 30:

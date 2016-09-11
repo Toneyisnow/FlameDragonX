@@ -61,7 +61,17 @@ void Creature::initWithDefinition(int identity, int creatureId)
     _data->mpCurrent = _data->mpMax = _definition->initialMP;
     
     for (int m = 0; m < _definition->initialItemList->size(); m++) {
-        _data->itemList->pushBack(_definition->initialItemList->at(m));
+        FDNumber * itemId = _definition->initialItemList->at(m);
+        _data->itemList->pushBack(itemId);
+        ItemDefinition * definition = DataStore::getInstance()->getItemDefinition(itemId->getValue());
+        if (definition->isAttackItem())
+        {
+            _data->attackItemIndex = m;
+        }
+        else if (definition->isDefendItem())
+        {
+            _data->defendItemIndex = m;
+        }
     }
     for (int m = 0; m < _definition->initialMagicList->size(); m++) {
         _data->magicList->pushBack(_definition->initialMagicList->at(m));

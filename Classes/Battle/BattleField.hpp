@@ -119,7 +119,7 @@ public:
     void removeAllIndicators();
     int getObjectDistance(BattleObject * c1, BattleObject * c2);
     
-    bool detectedTargetInAttackRange(Creature * creature);
+    Vector<Creature *> searchTargetInAttackRange(Creature * creature);
 };
 
 #endif /* BattleField_hpp */

@@ -609,26 +609,28 @@ int BattleField::getObjectDistance(BattleObject * c1, BattleObject * c2)
     return abs(position1.x - position2.x) + abs(position1.y - position2.y);
 }
 
-bool BattleField::detectedTargetInAttackRange(Creature * creature)
+Vector<Creature *> BattleField::searchTargetInAttackRange(Creature * creature)
 {
+    Vector<Creature *> result;
+    
     if (creature == nullptr)
-        return false;
+        return result;
     
     FDRange * attackRange = creature->getAttackRange();
     if (attackRange == nullptr)
-        return false;
+        return result;
 
     if (creature->getType() == CreatureType_Enemy)
     {
         for (Creature * target : *_friendList) {
             int distance = getObjectDistance(creature, target);
             if (attackRange->containsValue(distance))
-                return true;
+                result.pushBack(target);
         }
         for (Creature * target : *_npcList) {
             int distance = getObjectDistance(creature, target);
             if (attackRange->containsValue(distance))
-                return true;
+                result.pushBack(target);
         }
     }
     else
@@ -636,9 +638,9 @@ bool BattleField::detectedTargetInAttackRange(Creature * creature)
         for (Creature * target : *_enemyList) {
             int distance = getObjectDistance(creature, target);
             if (attackRange->containsValue(distance))
-                return true;
+                result.pushBack(target);
         }
     }
     
-    return false;
+    return result;
 }
