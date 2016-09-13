@@ -31,7 +31,23 @@ FightScene::~FightScene()
 
 void FightScene::takeDeltaTimeTck(float dt)
 {
-    Director::getInstance()->popScene();
+    
+    /*
+     Add the follwoing code to Scene class:
+     
+     void Director::popScene(std::function<Scene*(Scene*)> wrappingFunc) {
+     popScene();
+     if (_nextScene) {
+     _nextScene = wrappingFunc(_nextScene);
+     }
+     }
+     
+     */
+    
+    auto f = [](Scene* scene) {
+        return TransitionMoveInL::create(1.0f, scene);
+    };
+    Director::getInstance()->popScene(f);
     
     CallbackMethod * method = _information->getCallback();
     method->execute();

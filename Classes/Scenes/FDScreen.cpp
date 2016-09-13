@@ -7,7 +7,15 @@
 //
 
 #include "FDScreen.hpp"
+#include "Constants.hpp"
 
+FDScreen::FDScreen(Layer* layer)
+{
+    _layer = layer;
+    _screenSize = Director::getInstance()->getOpenGLView()->getDesignResolutionSize();
+    _scaleFactor = Director::getInstance()->getContentScaleFactor();
+    
+}
 
 FDScreen::FDScreen(Layer* layer, int width, int height, bool keepSameScale)
 {
@@ -41,6 +49,43 @@ FDScreen::FDScreen(Layer* layer, int width, int height, bool keepSameScale)
         _offsetY = (visibleSize.height - height * _scaleY) / 2;
     }
 }
+
+void FDScreen::addToWindow(Node * node, Vec2 position, float scale, int zOrder)
+{
+    node->setPosition(position);
+    node->setScale(Constants::DEFAULT_SPRITE_SCALE * _scaleFactor * scale);
+    
+    _layer->addChild(node, zOrder);
+}
+
+void FDScreen::addToWindow(Node * node, Vec2 position, int zOrder)
+{
+    return addToWindow(node, position, 1, zOrder);
+}
+
+void FDScreen::addToWindow(Node * node, Vec2 position, Size shownSize, int zOrder)
+{
+    this->addToWindow(node, position, zOrder);
+    
+    Size nodeSize = node->getContentSize();
+    float scaleX = shownSize.width / nodeSize.width;
+    float scaleY = shownSize.height / nodeSize.height;
+    node->setScale(scaleX, scaleY);
+}
+
+void FDScreen::addToVisible(Node * node, Vec2 position, int zOrder)
+{
+    addToVisible(node, position, 1, zOrder);
+}
+
+void FDScreen::addToVisible(Node * node, Vec2 position, float scale, int zOrder)
+{
+    Vec2 origin = Director::getInstance()->getVisibleOrigin();
+    Vec2 visiblePosition = Vec2(origin.x + position.x, origin.y + position.y);
+    
+    addToWindow(node, visiblePosition, scale, zOrder);
+}
+
 
 void FDScreen::addChild(Node * node, int x, int y, int zOrder)
 {

@@ -37,8 +37,12 @@ public:
     constexpr static const float CURSOR_MOVE_SPEED = 2.5f;
     constexpr static const float MENU_MOVE_SPEED = 3.0f;
     
+    static const int SCREEN_WIDTH = 480;
+    static const int SCREEN_HEIGHT = 320;
     
     static const int LEVEL_COUNT = 30;
+    
+    static const int DEFAULT_SPRITE_SCALE = 1.5f;
     
 };
 

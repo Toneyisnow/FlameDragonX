@@ -26,11 +26,37 @@ bool TitleLayer::init()
         return false;
     }
     
-    _screen = new FDScreen(this, 320, 200, false);
+    
+    
+    
+    auto size = Director::getInstance()->getWinSize();
+    auto sizein = Director::getInstance()->getWinSizeInPixels();
+    auto visibleSize = Director::getInstance()->getVisibleSize();
+    auto frameSize = Director::getInstance()->getOpenGLView()->getFrameSize();
+    Vec2 origin = Director::getInstance()->getVisibleOrigin();
+
+    auto designSize = Director::getInstance()->getOpenGLView()->getDesignResolutionSize();
+    float scaleFactor = Director::getInstance()->getContentScaleFactor();
     
     Sprite* mainSprite = Sprite::create("Title.png");
-    _screen->addChild(mainSprite, 160, 100, 1);
     
+    /*
+    mainSprite->setScale(scaleFactor * 1.5f);
+    mainSprite->setPosition(Vec2(240, 160));
+    this->addChild(mainSprite, 1);
+    */
+    
+    _screen = new FDScreen(this);
+    _screen->addToWindow(mainSprite, Vec2(240, 160), visibleSize, 1);
+    
+    
+    //Sprite* mainSprite = Sprite::create("Title.png");
+    //_screen->addChild(mainSprite, 160, 100, 1);
+    
+    
+    ///auto buttonStart = Button::create("Title_Start_1.png", "Title_Start_0.png", "Title_Start_0.png");
+    ///buttonStart->setPosition(Vec2(240, 120));
+    ///this->addChild(buttonStart, 1);
     
     auto buttonStart = Button::create("Title_Start_1.png", "Title_Start_0.png", "Title_Start_0.png");
     buttonStart->addTouchEventListener([&](Ref* sender, cocos2d::ui::Widget::TouchEventType type){
@@ -45,8 +71,8 @@ bool TitleLayer::init()
                 break;
         }
     });
-    
-    _screen->addChild(buttonStart, 70, 25, 1);
+
+    _screen->addToVisible(buttonStart, Vec2(100, 25), 1.5f, 10);
     
     auto buttonLoad = Button::create("Title_Load_1.png", "Title_Load_0.png", "Title_Load_0.png");
     buttonLoad->addTouchEventListener([&](Ref* sender, cocos2d::ui::Widget::TouchEventType type){
@@ -61,8 +87,7 @@ bool TitleLayer::init()
                 break;
         }
     });
-    
-    _screen->addChild(buttonLoad, 160, 25, 1);
+    _screen->addToVisible(buttonLoad, Vec2(240, 25), 1.5f, 10);
     
     auto buttonContinue = Button::create("Title_Continue_1.png", "Title_Continue_0.png", "Title_Continue_0.png");
     buttonContinue->addTouchEventListener([&](Ref* sender, cocos2d::ui::Widget::TouchEventType type){
@@ -79,8 +104,7 @@ bool TitleLayer::init()
     });
     
     buttonContinue->setEnabled(false);
-    
-    _screen->addChild(buttonContinue, 250, 25, 1);
+    _screen->addToVisible(buttonContinue, Vec2(380, 25), 1.5f, 10);
     
     
     return true;

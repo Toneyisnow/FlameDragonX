@@ -18,8 +18,14 @@ class FDScreen : public cocos2d::Ref
 {
 private:
     Layer *_layer;
+    
+    Size _screenSize;
+    
+    float _scaleFactor;
+    
     int _width;
     int _height;
+    
     bool _keepSameScale;
     float _scaleX;
     float _scaleY;
@@ -31,6 +37,14 @@ private:
 public:
     
     FDScreen(Layer* layer, int width, int height, bool keepSameScale);
+    FDScreen(Layer* layer);
+    
+    void addToWindow(Node * node, Vec2 position, int zOrder);
+    void addToWindow(Node * node, Vec2 position, Size shownSize, int zOrder);
+    void addToWindow(Node * node, Vec2 position, float scale, int zOrder);
+    void addToVisible(Node * node, Vec2 position, int zOrder);
+    void addToVisible(Node * node, Vec2 position, Size shownSize, int zOrder);
+    void addToVisible(Node * node, Vec2 position, float scale, int zOrder);
     
     void addChild(Node * node, int x, int y, int zOrder);
     void addChild(Node * node, int x, int y, int displayWidth, int displayHeight, int zOrder);

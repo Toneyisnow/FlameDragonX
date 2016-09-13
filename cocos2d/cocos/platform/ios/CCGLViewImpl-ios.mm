@@ -123,8 +123,19 @@ bool GLViewImpl::initWithEAGLView(void *eaglview)
     _eaglview = eaglview;
     CCEAGLView *glview = (CCEAGLView*) _eaglview;
 
-    _screenSize.width = _designResolutionSize.width = [glview getWidth];
-    _screenSize.height = _designResolutionSize.height = [glview getHeight];
+    int width = [glview getWidth];
+    int height = [glview getHeight];
+    
+    if (width < height)
+    {
+        int temp = height;
+        height = width;
+        width = temp;
+    }
+    _screenSize.width = _designResolutionSize.width = width;
+    _screenSize.height = _designResolutionSize.height = height;
+    
+    
 //    _scaleX = _scaleY = [glview contentScaleFactor];
 
     return true;

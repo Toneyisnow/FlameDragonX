@@ -296,7 +296,7 @@ public:
      * ONLY call it if there is a running scene.
      */
     void popScene();
-
+    void popScene(std::function<Scene*(Scene*)> wrappingFunc);
     /** 
      * Pops out all scenes from the stack until the root scene in the queue.
      * This scene will replace the running one.

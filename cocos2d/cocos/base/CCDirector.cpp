@@ -862,6 +862,13 @@ void Director::pushScene(Scene *scene)
     _nextScene = scene;
 }
 
+void Director::popScene(std::function<Scene*(Scene*)> wrappingFunc) {
+    popScene();
+    if (_nextScene) {
+            _nextScene = wrappingFunc(_nextScene);
+    }
+}
+
 void Director::popScene(void)
 {
     CCASSERT(_runningScene != nullptr, "running scene should not null");
