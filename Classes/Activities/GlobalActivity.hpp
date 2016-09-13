@@ -20,7 +20,7 @@ class GlobalActivity : public FieldActivity
 {
 protected:
     
-    BattleScene * _game;
+    BattleScene * _battleScene;
     
     
 public:

@@ -20,6 +20,7 @@
 #include "PointMap.hpp"
 #include "GameFormula.hpp"
 #include "FightScene.hpp"
+#include "TalkMessage.hpp"
 
 USING_NS_CC;
 
@@ -30,9 +31,10 @@ BattleScene::BattleScene(ChapterRecord* record)
     
     _battleField = new BattleField(this);
     _battleField->initWithChapter(record->getChapterId());
-    
-    // add layer as a child to scene
     this->addChild(_battleField);
+    
+    _messageLayer = new MessageLayer(this);
+    this->addChild(_messageLayer);
     
     //layer->initWithChapter(record->getChapterId());
     
@@ -203,6 +205,8 @@ void BattleScene::postFightAction(Ref * counterObjectObj)
     // Show Talk messages
     TalkActivity * talk = TalkActivity::create(this, creature, "Test Message");
     _activityQueue->appendActivity(talk);
+    
+    
     
     // Triggered Events
     _eventHandler->notifyTriggeredEvents();
@@ -390,6 +394,10 @@ void BattleScene::appendMethodToActivity(SEL_CALLBACK2 selector, Ref* parameter)
     _activityQueue->appendActivity(callback);
 }
 
+void BattleScene::showMessage(Message * message)
+{
+    this->_messageLayer->showMessage(message);
+}
 
 void BattleScene::testCallMethod(std::function<void(int)> callback)
 {

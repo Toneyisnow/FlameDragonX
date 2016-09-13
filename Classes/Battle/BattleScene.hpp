@@ -19,6 +19,7 @@
 #include "RoutePoint.hpp"
 #include "CallbackActivity.hpp"
 #include "CounterObject.hpp"
+#include "MessageLayer.hpp"
 
 class BattleScene : public cocos2d::Scene
 {
@@ -28,6 +29,8 @@ private:
     int _synchronizedTickCount;
     
     BattleField *_battleField;
+    MessageLayer * _messageLayer;
+    
     ActivityQueue * _activityQueue;
     EventHandler * _eventHandler;
     
@@ -73,6 +76,8 @@ public:
     void startTurn();
     void takeAIMove();
     void takeAIAction(int creatureId);
+    
+    void showMessage(Message * message);
     
     //// CallbackActivity * createFunctionActivity(void(BattleScene::* callBackFunction)());
     //// CallbackActivity * createFunctionActivity(void(BattleScene::* callBackFunction)(int), int intParameter);

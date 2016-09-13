@@ -7,6 +7,8 @@
 //
 
 #include "TalkActivity.hpp"
+#include "TalkMessage.hpp"
+#include "BattleScene.hpp"
 
 TalkActivity * TalkActivity::create(BattleScene * scene, Creature * creature, std::string message)
 {
@@ -26,6 +28,11 @@ TalkActivity::TalkActivity(BattleScene * scene, Creature * creature, std::string
 void TalkActivity::initialize()
 {
     log("TalkActivity initialized.");
+    
+    TalkMessage * message = new TalkMessage();
+    _battleScene->showMessage(message);
+    message->release();
+    
 }
 
 void TalkActivity::internalTick(int synchronizedTick)

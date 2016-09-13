@@ -12,5 +12,5 @@
 GlobalActivity::GlobalActivity(BattleScene * game)
 : FieldActivity(game->getBattleField())
 {
-    this->_game = game;
+    this->_battleScene = game;
 }
