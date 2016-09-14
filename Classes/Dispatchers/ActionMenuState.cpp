@@ -13,6 +13,8 @@
 #include "ShowMoveScopeState.hpp"
 #include "BattleScene.hpp"
 #include "SelectAttackTargetState.hpp"
+#include "MagicBox.hpp"
+#include "CallbackMethod.hpp"
 
 ActionMenuState * ActionMenuState::create(BattleScene * scene, StateSession * session)
 {
@@ -38,14 +40,15 @@ void ActionMenuState::onExitState()
     // _battleField->closeMenu();
 }
 
-ActionState * ActionMenuState::handleClickAt(Vec2 position)
+void ActionMenuState::handleClickAt(Vec2 position)
 {
     MenuCursor * menuItem = (MenuCursor *)_battleField->getObjectByPosition(BattleObject_Menu, position);
     
     if (menuItem == nullptr)
     {
         _battleField->closeMenu();
-        return ShowMoveScopeState::create(_battleScene, _session);
+        _nextState = ShowMoveScopeState::create(_battleScene, _session);
+        return;
     }
     
     if (!menuItem->isSelected())
@@ -55,32 +58,56 @@ ActionState * ActionMenuState::handleClickAt(Vec2 position)
             _battleField->setActiveMenuCursor(menuItem);
         }
         
-        return nullptr;
+        return;
     }
     
     _battleField->closeMenu();
     switch (menuItem->getId()) {
         case 10:
             // Magic
+            this->selectMagic();
             break;
         case 11:
             // Attack
-            return SelectAttackTargetState::create(_battleScene, _session);
+            _nextState = SelectAttackTargetState::create(_battleScene, _session);
+            return;
         case 12:
             // Item
             break;
         case 13:
             // Sleep
             checkTreatureAndWaiveTurn();
-            return IdleState::create(_battleScene);
-            
+            _nextState = IdleState::create(_battleScene);
+            return;
         default:
             break;
     }
     
-    
-    return nullptr;
 }
+
+void ActionMenuState::selectMagic()
+{
+    MagicBox * magicBox = new MagicBox(_creature, MagicOperatingType_Select);
+    SEL_CALLBACK1 k1 = CALLBACK1_SELECTOR(ActionMenuState::confirmSelectMagic);
+    magicBox->setReturnFunction(this, k1);
+    
+    _battleScene->getMessageLayer()->showMessage(magicBox);
+}
+
+void ActionMenuState::confirmSelectMagic(int result)
+{
+    log("Return value from MagicBox: %d", result);
+    
+    if (result < 0)
+    {
+        // Cancel
+    }
+    
+    _session->setSelectedMagicIndex(result);
+    //// _nextState = SelectMagicTargetState(_battleScene, _session);
+    _battleField->notifyStateDispatcher();
+}
+
 
 void ActionMenuState::checkTreatureAndWaiveTurn()
 {

@@ -91,6 +91,7 @@ public:
     Vector<Creature *> * getNPCList();
     
     void takeTick(int synchronizedTick);
+    void notifyStateDispatcher();
     
     Vec2 convertPositionToLocation(Vec2 pos);
     Vec2 convertLocationToPosition(Vec2 loc);

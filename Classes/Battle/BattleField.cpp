@@ -336,6 +336,11 @@ bool BattleField::isInteractiveBusy()
     return _battleScene->getActivityQueue()->isBusy();
 }
 
+void BattleField::notifyStateDispatcher()
+{
+    _stateDispatcher->onNotified();
+}
+
 Vec2 BattleField::convertPositionToLocation(Vec2 pos)
 {
     float locX = (pos.x - 1) * _displayBlockSize + _displayBlockSize / 2;

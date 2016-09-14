@@ -10,10 +10,21 @@
 #define MessageBox_hpp
 
 #include "cocos2d.h"
+#include "Message.hpp"
 
-class MessageBox : public cocos2d::Ref
+typedef enum MessageBoxType
+{
+    MessageBoxType_Item,
+    MessageBoxType_Magic
+} MessageBoxType;
+
+
+class MessageBox : public Message
 {
 private:
+    
+    MessageBoxType _type;
+    
     
 public:
     

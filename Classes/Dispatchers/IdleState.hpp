@@ -25,7 +25,7 @@ public:
     void onEnterState();
     void onExitState();
     
-    ActionState * handleClickAt(Vec2 position);
+    virtual void handleClickAt(Vec2 position) override;
     
 };
 

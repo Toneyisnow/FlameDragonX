@@ -23,10 +23,13 @@ public:
     
     static ActionMenuState * create(BattleScene * scene, StateSession * session);
     
-    void onEnterState();
-    void onExitState();
+    void onEnterState() override;
+    void onExitState() override;
     
-    ActionState * handleClickAt(Vec2 position);
+    void handleClickAt(Vec2 position) override;
+    
+    void selectMagic();
+    void confirmSelectMagic(int result);
     
     void checkTreatureAndWaiveTurn();
     void confirmPickTreasure();

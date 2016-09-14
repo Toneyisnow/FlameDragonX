@@ -54,6 +54,7 @@ public:
     
     
     BattleField * getBattleField();
+    MessageLayer * getMessageLayer();
     ActivityQueue * getActivityQueue();
     
     // static BattleScene* loadByChapterRecord(ChapterRecord* record);

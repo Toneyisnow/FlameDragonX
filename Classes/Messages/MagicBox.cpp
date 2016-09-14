@@ -7,3 +7,10 @@
 //
 
 #include "MagicBox.hpp"
+
+MagicBox::MagicBox(Creature * creature, MagicOperatingType type)
+{
+    _creature = creature;
+    _operatingType = type;
+}
+

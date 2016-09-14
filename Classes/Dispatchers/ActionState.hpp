@@ -25,6 +25,8 @@ protected:
     BattleField * _battleField;
     StateSession * _session;
     
+    ActionState * _nextState;
+    
 public:
     
     ActionState();
@@ -32,10 +34,12 @@ public:
     
     virtual void initWithSession(BattleScene * scene, StateSession * session);
     
+    ActionState * getNextState();
+    
     virtual void onEnterState();
     virtual void onExitState();
     
-    virtual ActionState * handleClickAt(Vec2 position);
+    virtual void handleClickAt(Vec2 position);
     
 };
 

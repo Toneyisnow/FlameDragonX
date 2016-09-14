@@ -25,15 +25,13 @@ StateDispatcher::~StateDispatcher()
     
 }
 
-void StateDispatcher::handleClickAt(Vec2 position)
+void StateDispatcher::onNotified()
 {
-    if (_currentState == nullptr)
-    {
+    if (_currentState == nullptr) {
         return;
     }
     
-    ActionState * nextState = _currentState->handleClickAt(position);
-    
+    ActionState * nextState = _currentState->getNextState();
     if (nextState == nullptr) {
         return;
     }
@@ -46,5 +44,16 @@ void StateDispatcher::handleClickAt(Vec2 position)
     
     CallbackMethod * method = CallbackMethod::create(_currentState, CALLBACK0_SELECTOR(ActionState::onEnterState));
     _scene->getActivityQueue()->appendActivity(CallbackActivity::create(method));
+}
+
+void StateDispatcher::handleClickAt(Vec2 position)
+{
+    if (_currentState == nullptr)
+    {
+        return;
+    }
+    
+    _currentState->handleClickAt(position);
+    onNotified();
 }
 

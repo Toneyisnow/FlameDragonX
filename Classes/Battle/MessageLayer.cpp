@@ -22,8 +22,16 @@ MessageLayer::MessageLayer(BattleScene * scene)
     this->getEventDispatcher()->addEventListenerWithSceneGraphPriority(_listener, this);
     
     _listener->setEnabled(false);
-    
+    _listener->setSwallowTouches(true);
     _activeMessage = nullptr;
+    
+    _activityQueue = new ActivityQueue();
+}
+
+
+ActivityQueue * MessageLayer::getActivityQueue()
+{
+    return _activityQueue;
 }
 
 bool MessageLayer::onTouchBegan(Touch* touch, Event* event)
@@ -38,7 +46,10 @@ void MessageLayer::onTouchEnded(Touch* touch, Event* event)
     log("TouchEnd on MessageLayer");
     
     if (_activeMessage != nullptr)
-        this->closeMessage();
+    {
+        _activeMessage->handleClick(Vec2(0, 0));
+    }
+    // this->closeMessage();
 }
 
 void MessageLayer::onTouchMoved(Touch* touch, Event* event)
@@ -54,7 +65,7 @@ void MessageLayer::onTouchCancelled(Touch* touch, Event* event)
 
 bool MessageLayer::isActive()
 {
-    return (_activeMessage != nullptr);
+    return (_activeMessage != nullptr) || _activityQueue->isBusy();
 }
 
 void MessageLayer::showMessage(Message * message)
@@ -62,20 +73,23 @@ void MessageLayer::showMessage(Message * message)
     _activeMessage = message;
     _activeMessage->retain();
     
-    _sprite = Sprite::create("Others/MessageBox.png");
-    _sprite->setPosition(Vec2(240, 160));
-    this->addChild(_sprite);
+    _activeMessage->showDialog(this);
     
     _listener->setEnabled(true);
-    _listener->setSwallowTouches(true);
 }
-void MessageLayer::closeMessage()
+
+void MessageLayer::removeMessage()
 {
-    this->removeChild(_sprite);
+    _activeMessage->removeDialog();
     
     _activeMessage->release();
     _activeMessage = nullptr;
     
     _listener->setEnabled(false);
-    _listener->setSwallowTouches(false);
+    // _listener->setSwallowTouches(false);
+}
+
+void MessageLayer::takeTick(int synchronizedTick)
+{
+    _activityQueue->takeTick(synchronizedTick);
 }

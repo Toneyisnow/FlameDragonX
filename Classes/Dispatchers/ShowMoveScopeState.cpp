@@ -78,17 +78,17 @@ void ShowMoveScopeState::onExitState()
     
 }
 
-ActionState * ShowMoveScopeState::handleClickAt(Vec2 position)
+void ShowMoveScopeState::handleClickAt(Vec2 position)
 {
     if (_resolver == nullptr)
     {
-        return nullptr;
+        return;
     }
     
     if (!CommonHelper::IsSamePosition(_battleField->getCursorPosition(), position))
     {
         _battleField->setCursorTo(position);
-        return nullptr;
+        return;
     }
     
     if (_battleField->isPositionInScope(position))
@@ -103,12 +103,11 @@ ActionState * ShowMoveScopeState::handleClickAt(Vec2 position)
             _battleField->getBattleScene()->getActivityQueue()->appendActivity(move);
         }
         
-        return ActionMenuState::create(_battleScene, _session);
+        _nextState = ActionMenuState::create(_battleScene, _session);
     }
     else
     {
-        return IdleState::create(_battleScene);
+        _nextState = IdleState::create(_battleScene);
     }
     
-    return nullptr;
 }

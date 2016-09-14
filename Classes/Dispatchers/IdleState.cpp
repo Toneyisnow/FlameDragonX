@@ -33,7 +33,7 @@ void IdleState::onExitState()
     
 }
 
-ActionState * IdleState::handleClickAt(Vec2 position)
+void IdleState::handleClickAt(Vec2 position)
 {
     Creature * creature = _battleField->getCreatureAt(position.x, position.y);
     
@@ -45,13 +45,14 @@ ActionState * IdleState::handleClickAt(Vec2 position)
         {
             _session->creaturePositionBeforeMove = position;
             _session->setSelectedCreatureId(creature->getId());
-            return ShowMoveScopeState::create(_battleScene, _session);
+            _nextState = ShowMoveScopeState::create(_battleScene, _session);
+            return;
         }
         else if (creature->isVisible())
         {
             // Show information about the creature
             
-            return nullptr;
+            return;
         }
     }
     else
@@ -60,11 +61,10 @@ ActionState * IdleState::handleClickAt(Vec2 position)
         if (CommonHelper::IsSamePosition(_battleField->getCursorPosition(), position))
         {
             _session->menuPosition = position;
-            return SystemMenuState::create(_battleScene, _session);
+            _nextState = SystemMenuState::create(_battleScene, _session);
         }
         
         _battleField->setCursorTo(position);
     }
     
-    return nullptr;
 }

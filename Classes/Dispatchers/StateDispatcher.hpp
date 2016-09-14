@@ -30,6 +30,7 @@ public:
     ~StateDispatcher();
     
     void handleClickAt(Vec2 position);
+    void onNotified();
     
 };
 

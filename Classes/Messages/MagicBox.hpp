@@ -9,11 +9,28 @@
 #ifndef MagicBox_hpp
 #define MagicBox_hpp
 
-class MagicBox : public cocos2d::Ref
+#include "cocos2d.h"
+#include "Creature.hpp"
+#include "MessageBox.hpp"
+
+typedef enum MagicOperatingType
+{
+    MagicOperatingType_Select,
+    MagicOperatingType_ShowOnly
+} MagicOperatingType;
+
+class MagicBox : public Message
 {
 private:
     
+    Creature * _creature;
+    MagicOperatingType _operatingType;
+    
 public:
+    
+    MagicBox(Creature * creature, MagicOperatingType type);
+    
+    
 };
 
 #endif /* MagicBox_hpp */

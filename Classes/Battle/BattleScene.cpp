@@ -102,6 +102,11 @@ BattleField * BattleScene::getBattleField()
     return this->_battleField;
 }
 
+MessageLayer * BattleScene::getMessageLayer()
+{
+    return this->_messageLayer;
+}
+
 ActivityQueue * BattleScene::getActivityQueue()
 {
     return this->_activityQueue;
@@ -120,9 +125,14 @@ void BattleScene::takeDeltaTimeTck(float dt)
 
 void BattleScene::takeTick(int synchronizedTick)
 {
-    this->_battleField->takeTick(synchronizedTick);
-    this->_activityQueue->takeTick(synchronizedTick);
-    
+    if (_messageLayer->isActive()) {
+        _messageLayer->takeTick(synchronizedTick);
+    }
+    else
+    {
+        this->_battleField->takeTick(synchronizedTick);
+        this->_activityQueue->takeTick(synchronizedTick);
+    }
 }
 
 int BattleScene::getTurnNumber()

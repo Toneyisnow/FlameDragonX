@@ -21,6 +21,8 @@ void ActionState::initWithSession(BattleScene * scene, StateSession * session)
     
     this->_session = session;
     this->_session->retain();
+    
+    _nextState = nullptr;
 }
 
 ActionState::~ActionState()
@@ -42,7 +44,12 @@ void ActionState::onExitState()
     
 }
 
-ActionState * ActionState::handleClickAt(Vec2 position)
+ActionState * ActionState::getNextState()
 {
-    return nullptr;
+    return _nextState;
+}
+
+
+void ActionState::handleClickAt(Vec2 position)
+{
 }

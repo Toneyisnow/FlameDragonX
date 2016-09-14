@@ -35,14 +35,14 @@ void SystemMenuState::onExitState()
     _battleField->closeMenu();
 }
 
-ActionState * SystemMenuState::handleClickAt(Vec2 position)
+void SystemMenuState::handleClickAt(Vec2 position)
 {
     MenuCursor * menuItem = (MenuCursor *)_battleField->getObjectByPosition(BattleObject_Menu, position);
     
     if (menuItem == nullptr)
     {
-        return IdleState::create(_battleScene);
-
+        _nextState = IdleState::create(_battleScene);
+        return;
     }
     
     if (!menuItem->isSelected())
@@ -53,5 +53,4 @@ ActionState * SystemMenuState::handleClickAt(Vec2 position)
         }
     }
     
-    return nullptr;
 }

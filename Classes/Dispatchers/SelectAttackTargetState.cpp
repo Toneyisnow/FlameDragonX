@@ -70,12 +70,12 @@ void SelectAttackTargetState::onExitState()
     
 }
 
-ActionState * SelectAttackTargetState::handleClickAt(Vec2 position)
+void SelectAttackTargetState::handleClickAt(Vec2 position)
 {
     if (!CommonHelper::IsSamePosition(_battleField->getCursorPosition(), position))
     {
         _battleField->setCursorTo(position);
-        return nullptr;
+        return;
     }
     
     Creature * creature = _battleField->getCreatureById(_session->selectedCreatureId());
@@ -87,13 +87,13 @@ ActionState * SelectAttackTargetState::handleClickAt(Vec2 position)
         if (target != nullptr && target->getType() == CreatureType_Enemy)
         {
             _battleScene->attackTo(creature, target);
-            return IdleState::create(_battleScene);
+            _nextState = IdleState::create(_battleScene);
+            return;
         }
     }
     else
     {
-        return ActionMenuState::create(_battleScene, _session);
+        _nextState = ActionMenuState::create(_battleScene, _session);
+        return;
     }
-    
-    return nullptr;
 }
