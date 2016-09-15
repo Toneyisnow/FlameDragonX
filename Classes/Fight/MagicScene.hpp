@@ -19,11 +19,15 @@ class MagicScene : public CounterScene
 private:
     
     MagicResult * _magicResult;
+    void takeDeltaTimeTick(float dt);
+
     
 public:
     
     
     MagicScene(CounterInfo * info, MagicResult * result);
+    ~MagicScene();
+    
 };
 
 #endif /* MagicScene_hpp */

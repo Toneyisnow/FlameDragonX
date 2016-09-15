@@ -124,7 +124,6 @@ void Creature::setFocus(bool isFocus)
 }
 */
 
-
 void Creature::endTurn()
 {
     _hasActioned = true;

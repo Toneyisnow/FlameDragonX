@@ -63,6 +63,7 @@ public:
     CreatureData * creatureData();
     CreatureDefinition * getDefinition();
     
+    
     CreatureType getType();
     
     void setDirection(Direction direction);

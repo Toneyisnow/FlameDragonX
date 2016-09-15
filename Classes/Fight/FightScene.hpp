@@ -20,7 +20,7 @@ private:
     
     FightResult * _fightResult;
     
-    void takeDeltaTimeTck(float dt);
+    void takeDeltaTimeTick(float dt);
 
 public:
     

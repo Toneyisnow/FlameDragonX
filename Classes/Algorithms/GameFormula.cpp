@@ -18,5 +18,8 @@ FightResult * GameFormula::dealWithFight(BattleField * field, Creature * subject
 
 MagicResult * GameFormula::dealWithMagic(BattleField * field, Creature * subject, Vector<Creature * > targets, int magicId)
 {
-    return nullptr;
+    MagicResult * result = new MagicResult(subject, targets);
+    result->autorelease();
+    
+    return result;
 }

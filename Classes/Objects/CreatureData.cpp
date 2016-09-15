@@ -61,3 +61,25 @@ DefendItemDefinition * CreatureData::getDefendItem()
     
     return (DefendItemDefinition *)item;
 }
+
+ItemDefinition * CreatureData::getItem(int itemIndex)
+{
+    if (itemIndex < 0 || itemIndex >= itemList->size())
+    {
+        return nullptr;
+    }
+    
+    int itemId = itemList->at(itemIndex)->getValue();
+    return DataStore::getInstance()->getItemDefinition(itemId);
+}
+
+MagicDefinition * CreatureData::getMagic(int magicIndex)
+{
+    if (magicIndex < 0 || magicIndex >= magicList->size())
+    {
+        return nullptr;
+    }
+    
+    int magicId = magicList->at(magicIndex)->getValue();
+    return DataStore::getInstance()->getMagicDefinition(magicId);
+}

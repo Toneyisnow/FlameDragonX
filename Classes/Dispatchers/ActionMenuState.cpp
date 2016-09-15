@@ -15,6 +15,8 @@
 #include "SelectAttackTargetState.hpp"
 #include "MagicBox.hpp"
 #include "CallbackMethod.hpp"
+#include "SelectMagicTargetState.hpp"
+#include "ItemMenuState.hpp"
 
 ActionMenuState * ActionMenuState::create(BattleScene * scene, StateSession * session)
 {
@@ -73,7 +75,8 @@ void ActionMenuState::handleClickAt(Vec2 position)
             return;
         case 12:
             // Item
-            break;
+            _nextState = ItemMenuState::create(_battleScene, _session);
+            return;
         case 13:
             // Sleep
             checkTreatureAndWaiveTurn();
@@ -104,7 +107,7 @@ void ActionMenuState::confirmSelectMagic(int result)
     }
     
     _session->setSelectedMagicIndex(result);
-    //// _nextState = SelectMagicTargetState(_battleScene, _session);
+    _nextState = SelectMagicTargetState::create(_battleScene, _session);
     _battleField->notifyStateDispatcher();
 }
 

@@ -51,7 +51,7 @@ void Message::removeDialog()
 
 void Message::handleClick(Vec2 location)
 {
-    _returnValue = 3;
+    _returnValue = 0;
     
     this->closeDialog();
 }
@@ -69,9 +69,11 @@ void Message::closeDialog()
     CallbackActivity * callback1 = CallbackActivity::create(method1);
     _messageLayer->getActivityQueue()->appendActivity(callback1);
     
-    CallbackMethod * method2 = CallbackMethod::create(_callbackTarget, _callbackResultMethod, _returnValue);
-    CallbackActivity * callback2 = CallbackActivity::create(method2);
-    _messageLayer->getActivityQueue()->appendActivity(callback2);
+    if (_callbackTarget != nullptr) {
+        CallbackMethod * method2 = CallbackMethod::create(_callbackTarget, _callbackResultMethod, _returnValue);
+        CallbackActivity * callback2 = CallbackActivity::create(method2);
+        _messageLayer->getActivityQueue()->appendActivity(callback2);
+    }
 }
 
 FDActivity * Message::onEnterActivity()

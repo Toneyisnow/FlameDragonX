@@ -24,9 +24,11 @@ private:
     
 public:
     
-    MagicResult();
+    MagicResult(Creature * c, Vector<Creature *> t);
+    ~MagicResult();
     
     
+    CounterObject * getCounterObject();
     
 };
 

@@ -12,6 +12,7 @@
 #include "cocos2d.h"
 #include "AttackItemDefinition.hpp"
 #include "DefendItemDefinition.hpp"
+#include "MagicDefinition.hpp"
 #include "FDNumber.hpp"
 
 class CreatureData : public cocos2d::Ref
@@ -47,6 +48,8 @@ public:
     
     AttackItemDefinition * getAttackItem();
     DefendItemDefinition * getDefendItem();
+    ItemDefinition * getItem(int itemIndex);
+    MagicDefinition * getMagic(int magicIndex);
     
 };
 

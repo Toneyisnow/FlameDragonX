@@ -21,6 +21,8 @@
 #include "GameFormula.hpp"
 #include "FightScene.hpp"
 #include "TalkMessage.hpp"
+#include "MagicScene.hpp"
+
 
 USING_NS_CC;
 
@@ -29,6 +31,7 @@ BattleScene::BattleScene(ChapterRecord* record)
     DataStore::getInstance()->loadData();
     _activityQueue = new ActivityQueue();
     
+    _chapterId = record->getChapterId();
     _battleField = new BattleField(this);
     _battleField->initWithChapter(record->getChapterId());
     this->addChild(_battleField);
@@ -173,7 +176,7 @@ void BattleScene::attackTo(Creature * creature, Creature * target)
     
     // Turn to the flight scene
     CallbackMethod * callback = CallbackMethod::create(this, CALLBACK2_SELECTOR(BattleScene::postFightAction), result->getCounterObject());
-    CounterInfo * info = new CounterInfo(1, callback);
+    CounterInfo * info = new CounterInfo(_chapterId, callback);
     FightScene * scene = new FightScene(info, result);
     
     Director::getInstance()->pushScene(TransitionFade::create(1.0f, scene));
@@ -187,11 +190,17 @@ void BattleScene::magicTo(Creature * creature, int magicIndex, Vector<Creature *
     log("Magic from %d.", creature->getId());
     
     // Calculations on the Attack result
-    
-
+    MagicDefinition * magic = creature->creatureData()->getMagic(magicIndex);
+    MagicResult * result = GameFormula::dealWithMagic(_battleField, creature, *creatureList, magic->getDefinitionId());
     
     // Turn to the magic flight scene
+    CallbackMethod * callback = CallbackMethod::create(this, CALLBACK2_SELECTOR(BattleScene::postFightAction), result->getCounterObject());
+    CounterInfo * info = new CounterInfo(_chapterId, callback);
+    MagicScene * scene = new MagicScene(info, result);
+    Director::getInstance()->pushScene(TransitionFade::create(1.0f, scene));
     
+    info->release();
+    scene->release();
 }
 
 void BattleScene::postFightAction(Ref * counterObjectObj)

@@ -26,6 +26,7 @@ class BattleScene : public cocos2d::Scene
     
 private:
     
+    int _chapterId;
     int _synchronizedTickCount;
     
     BattleField *_battleField;

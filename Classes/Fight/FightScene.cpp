@@ -18,7 +18,7 @@ FightScene::FightScene(CounterInfo * info, FightResult * result)
     _layer = Layer::create();
     this->addChild(_layer);
 
-    schedule(CC_SCHEDULE_SELECTOR(FightScene::takeDeltaTimeTck), 4.0);
+    schedule(CC_SCHEDULE_SELECTOR(FightScene::takeDeltaTimeTick), 4.0);
     
     
 }
@@ -29,7 +29,7 @@ FightScene::~FightScene()
     
 }
 
-void FightScene::takeDeltaTimeTck(float dt)
+void FightScene::takeDeltaTimeTick(float dt)
 {
     
     /*

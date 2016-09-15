@@ -125,6 +125,9 @@
 		3CE63B8D1D87DEE100C2C76B /* DetailBar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63B8B1D87DEE100C2C76B /* DetailBar.cpp */; };
 		3CE63B901D87DF3A00C2C76B /* ItemBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63B8E1D87DF3A00C2C76B /* ItemBox.cpp */; };
 		3CE63B931D87DF4800C2C76B /* MagicBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63B911D87DF4800C2C76B /* MagicBox.cpp */; };
+		3CE63B961D8A664400C2C76B /* SelectMagicTargetState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63B941D8A664400C2C76B /* SelectMagicTargetState.cpp */; };
+		3CE63B981D8A6BCD00C2C76B /* Backgrounds in Resources */ = {isa = PBXBuildFile; fileRef = 3CE63B971D8A6BCD00C2C76B /* Backgrounds */; };
+		3CE63B9B1D8A7D0600C2C76B /* ItemMenuState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63B991D8A7D0600C2C76B /* ItemMenuState.cpp */; };
 		3EACC98F19EE6D4300EB3C5E /* res in Resources */ = {isa = PBXBuildFile; fileRef = 3EACC98E19EE6D4300EB3C5E /* res */; };
 		3EACC99019EE6D4300EB3C5E /* res in Resources */ = {isa = PBXBuildFile; fileRef = 3EACC98E19EE6D4300EB3C5E /* res */; };
 		46880B7B19C43A67006E1F66 /* CloseNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 46880B7619C43A67006E1F66 /* CloseNormal.png */; };
@@ -430,6 +433,11 @@
 		3CE63B8F1D87DF3A00C2C76B /* ItemBox.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ItemBox.hpp; path = Messages/ItemBox.hpp; sourceTree = "<group>"; };
 		3CE63B911D87DF4800C2C76B /* MagicBox.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MagicBox.cpp; path = Messages/MagicBox.cpp; sourceTree = "<group>"; };
 		3CE63B921D87DF4800C2C76B /* MagicBox.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = MagicBox.hpp; path = Messages/MagicBox.hpp; sourceTree = "<group>"; };
+		3CE63B941D8A664400C2C76B /* SelectMagicTargetState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SelectMagicTargetState.cpp; path = Dispatchers/SelectMagicTargetState.cpp; sourceTree = "<group>"; };
+		3CE63B951D8A664400C2C76B /* SelectMagicTargetState.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = SelectMagicTargetState.hpp; path = Dispatchers/SelectMagicTargetState.hpp; sourceTree = "<group>"; };
+		3CE63B971D8A6BCD00C2C76B /* Backgrounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Backgrounds; sourceTree = "<group>"; };
+		3CE63B991D8A7D0600C2C76B /* ItemMenuState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ItemMenuState.cpp; path = Dispatchers/ItemMenuState.cpp; sourceTree = "<group>"; };
+		3CE63B9A1D8A7D0600C2C76B /* ItemMenuState.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ItemMenuState.hpp; path = Dispatchers/ItemMenuState.hpp; sourceTree = "<group>"; };
 		3EACC98E19EE6D4300EB3C5E /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; path = res; sourceTree = "<group>"; };
 		46880B7619C43A67006E1F66 /* CloseNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseNormal.png; sourceTree = "<group>"; };
 		46880B7719C43A67006E1F66 /* CloseSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseSelected.png; sourceTree = "<group>"; };
@@ -676,6 +684,10 @@
 				3CE63B3E1D81551700C2C76B /* ActionMenuState.hpp */,
 				3CE63B4D1D83F43900C2C76B /* SelectAttackTargetState.cpp */,
 				3CE63B4E1D83F43900C2C76B /* SelectAttackTargetState.hpp */,
+				3CE63B941D8A664400C2C76B /* SelectMagicTargetState.cpp */,
+				3CE63B951D8A664400C2C76B /* SelectMagicTargetState.hpp */,
+				3CE63B991D8A7D0600C2C76B /* ItemMenuState.cpp */,
+				3CE63B9A1D8A7D0600C2C76B /* ItemMenuState.hpp */,
 			);
 			name = Dispatchers;
 			sourceTree = "<group>";
@@ -923,6 +935,7 @@
 		46880B7519C43A67006E1F66 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3CE63B971D8A6BCD00C2C76B /* Backgrounds */,
 				3C8D68281D78FB8000CC3616 /* Others */,
 				3CB1096A1D6E5E66002C4121 /* Icons */,
 				3CD12F2D1D6D074800CDF793 /* Data */,
@@ -1148,6 +1161,7 @@
 				3CD12EFC1D6BB11600CDF793 /* Title_Start_1.png in Resources */,
 				5087E77E17EB970100C73F5D /* Default.png in Resources */,
 				521A8E6419F0C34300D177D7 /* Default-667h@2x.png in Resources */,
+				3CE63B981D8A6BCD00C2C76B /* Backgrounds in Resources */,
 				46880B7B19C43A67006E1F66 /* CloseNormal.png in Resources */,
 				3CD12EF91D6BB11600CDF793 /* Title_Load_0.png in Resources */,
 				3CD12EF81D6BB11600CDF793 /* Title_Continue_1.png in Resources */,
@@ -1256,6 +1270,7 @@
 				3CB109851D6F7626002C4121 /* AnimationLibrary.cpp in Sources */,
 				3CB109AA1D74F816002C4121 /* CreatureChapterRecord.cpp in Sources */,
 				3CE63B341D7E9BEA00C2C76B /* FDPoint.cpp in Sources */,
+				3CE63B961D8A664400C2C76B /* SelectMagicTargetState.cpp in Sources */,
 				3C8D68241D78F24300CC3616 /* CreatureMoveActivity.cpp in Sources */,
 				3CE63B841D87DE9D00C2C76B /* MessageBox.cpp in Sources */,
 				3C8D68381D79F54900CC3616 /* EventLoader.cpp in Sources */,
@@ -1267,6 +1282,7 @@
 				3CE63B4B1D83EFC700C2C76B /* RangeScopeResolver.cpp in Sources */,
 				3CB1098C1D74CE92002C4121 /* SimpleMoveActivity.cpp in Sources */,
 				3C8D68561D7BF5F500CC3616 /* Cursor.cpp in Sources */,
+				3CE63B9B1D8A7D0600C2C76B /* ItemMenuState.cpp in Sources */,
 				3CE63B371D7F33D900C2C76B /* MenuCursor.cpp in Sources */,
 				3CE63B781D87DC5E00C2C76B /* Message.cpp in Sources */,
 				3CE63B651D85364200C2C76B /* CounterResult.cpp in Sources */,

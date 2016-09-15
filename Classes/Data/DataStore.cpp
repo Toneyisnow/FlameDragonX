@@ -15,6 +15,7 @@
 #include "DefendItemDefinition.hpp"
 #include "SpecialItemDefinition.hpp"
 #include "MoneyItemDefinition.hpp"
+#include "MagicDefinition.hpp"
 
 DataStore * DataStore::_instance = nullptr;
 
@@ -40,13 +41,18 @@ DataStore::~DataStore()
     
     this->_itemDefinitionDictionary->clear();
     delete this->_itemDefinitionDictionary;
+    
+    this->_magicDefinitionDictionary->clear();
+    delete this->_magicDefinitionDictionary;
+    
 }
 
 void DataStore::loadData()
 {
     this->loadCreatureDefinition();
-    
     this->loadItemDefinition();
+    this->loadMagicDefinition();
+    
 }
 
 void DataStore::loadCreatureDefinition()
@@ -143,7 +149,23 @@ void DataStore::loadItemDefinition()
     
 }
 
-
+void DataStore::loadMagicDefinition()
+{
+    log("Loading Magic Definition");
+    
+    _magicDefinitionDictionary = new Map<int, MagicDefinition *>();
+    TextFileReader * reader = new TextFileReader("Data/Magic.dat");
+    
+    int magicCount = reader->readInt();
+    for (int m = 0; m < magicCount; m++) {
+        MagicDefinition * def = MagicDefinition::readFromFile(reader);
+        _magicDefinitionDictionary->insert(def->getDefinitionId(), def);
+    }
+    
+    reader->release();
+    
+    log("Loaded Magic Definition");
+}
 
 ///////////////////////////////////////////
 
@@ -156,4 +178,9 @@ CreatureDefinition * DataStore::getCreatureDefinition(int definitionId)
 ItemDefinition * DataStore::getItemDefinition(int itemId)
 {
     return this->_itemDefinitionDictionary->at(itemId);
+}
+
+MagicDefinition * DataStore::getMagicDefinition(int magicId)
+{
+    return this->_magicDefinitionDictionary->at(magicId);
 }
