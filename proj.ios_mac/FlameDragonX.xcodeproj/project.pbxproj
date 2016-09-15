@@ -128,6 +128,8 @@
 		3CE63B961D8A664400C2C76B /* SelectMagicTargetState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63B941D8A664400C2C76B /* SelectMagicTargetState.cpp */; };
 		3CE63B981D8A6BCD00C2C76B /* Backgrounds in Resources */ = {isa = PBXBuildFile; fileRef = 3CE63B971D8A6BCD00C2C76B /* Backgrounds */; };
 		3CE63B9B1D8A7D0600C2C76B /* ItemMenuState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63B991D8A7D0600C2C76B /* ItemMenuState.cpp */; };
+		3CE63B9E1D8A7E8100C2C76B /* RecordMenuState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63B9C1D8A7E8100C2C76B /* RecordMenuState.cpp */; };
+		3CE63BA11D8A7F6000C2C76B /* SettingsMenuState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63B9F1D8A7F6000C2C76B /* SettingsMenuState.cpp */; };
 		3EACC98F19EE6D4300EB3C5E /* res in Resources */ = {isa = PBXBuildFile; fileRef = 3EACC98E19EE6D4300EB3C5E /* res */; };
 		3EACC99019EE6D4300EB3C5E /* res in Resources */ = {isa = PBXBuildFile; fileRef = 3EACC98E19EE6D4300EB3C5E /* res */; };
 		46880B7B19C43A67006E1F66 /* CloseNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 46880B7619C43A67006E1F66 /* CloseNormal.png */; };
@@ -438,6 +440,10 @@
 		3CE63B971D8A6BCD00C2C76B /* Backgrounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Backgrounds; sourceTree = "<group>"; };
 		3CE63B991D8A7D0600C2C76B /* ItemMenuState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ItemMenuState.cpp; path = Dispatchers/ItemMenuState.cpp; sourceTree = "<group>"; };
 		3CE63B9A1D8A7D0600C2C76B /* ItemMenuState.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ItemMenuState.hpp; path = Dispatchers/ItemMenuState.hpp; sourceTree = "<group>"; };
+		3CE63B9C1D8A7E8100C2C76B /* RecordMenuState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RecordMenuState.cpp; path = Dispatchers/RecordMenuState.cpp; sourceTree = "<group>"; };
+		3CE63B9D1D8A7E8100C2C76B /* RecordMenuState.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = RecordMenuState.hpp; path = Dispatchers/RecordMenuState.hpp; sourceTree = "<group>"; };
+		3CE63B9F1D8A7F6000C2C76B /* SettingsMenuState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SettingsMenuState.cpp; path = Dispatchers/SettingsMenuState.cpp; sourceTree = "<group>"; };
+		3CE63BA01D8A7F6000C2C76B /* SettingsMenuState.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = SettingsMenuState.hpp; path = Dispatchers/SettingsMenuState.hpp; sourceTree = "<group>"; };
 		3EACC98E19EE6D4300EB3C5E /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; path = res; sourceTree = "<group>"; };
 		46880B7619C43A67006E1F66 /* CloseNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseNormal.png; sourceTree = "<group>"; };
 		46880B7719C43A67006E1F66 /* CloseSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseSelected.png; sourceTree = "<group>"; };
@@ -680,6 +686,10 @@
 				3CE63B201D7D3C4B00C2C76B /* ShowMoveScopeState.hpp */,
 				3CE63B221D7D40D000C2C76B /* SystemMenuState.cpp */,
 				3CE63B231D7D40D000C2C76B /* SystemMenuState.hpp */,
+				3CE63B9C1D8A7E8100C2C76B /* RecordMenuState.cpp */,
+				3CE63B9D1D8A7E8100C2C76B /* RecordMenuState.hpp */,
+				3CE63B9F1D8A7F6000C2C76B /* SettingsMenuState.cpp */,
+				3CE63BA01D8A7F6000C2C76B /* SettingsMenuState.hpp */,
 				3CE63B3D1D81551700C2C76B /* ActionMenuState.cpp */,
 				3CE63B3E1D81551700C2C76B /* ActionMenuState.hpp */,
 				3CE63B4D1D83F43900C2C76B /* SelectAttackTargetState.cpp */,
@@ -1199,6 +1209,7 @@
 				3C8D68531D7AAC2F00CC3616 /* TalkActivity.cpp in Sources */,
 				3CB109721D6E6BC3002C4121 /* Creature.cpp in Sources */,
 				3CD12F1C1D6D033800CDF793 /* BattleRecord.cpp in Sources */,
+				3CE63B9E1D8A7E8100C2C76B /* RecordMenuState.cpp in Sources */,
 				3CE63B241D7D40D000C2C76B /* SystemMenuState.cpp in Sources */,
 				3CD12F191D6CE7F200CDF793 /* CreatureRecord.cpp in Sources */,
 				3CB109751D6E6FD6002C4121 /* Friend.cpp in Sources */,
@@ -1287,6 +1298,7 @@
 				3CE63B781D87DC5E00C2C76B /* Message.cpp in Sources */,
 				3CE63B651D85364200C2C76B /* CounterResult.cpp in Sources */,
 				3CE63B271D7D59D400C2C76B /* CommonHelper.cpp in Sources */,
+				3CE63BA11D8A7F6000C2C76B /* SettingsMenuState.cpp in Sources */,
 				3CE63B7E1D87DD1800C2C76B /* ConfirmMessage.cpp in Sources */,
 				3C18834B1D6BA0970059056E /* SceneCreator.cpp in Sources */,
 				3CB109691D6E0BD1002C4121 /* Ground.cpp in Sources */,

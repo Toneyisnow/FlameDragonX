@@ -10,6 +10,8 @@
 #include "BattleField.hpp"
 #include "IdleState.hpp"
 #include "MenuCursor.hpp"
+#include "RecordMenuState.hpp"
+#include "SettingsMenuState.hpp"
 
 SystemMenuState * SystemMenuState::create(BattleScene * scene, StateSession * session)
 {
@@ -52,5 +54,26 @@ void SystemMenuState::handleClickAt(Vec2 position)
             _battleField->setActiveMenuCursor(menuItem);
         }
     }
-    
+    else
+    {
+        switch (menuItem->getId()) {
+            case 30:
+                // Matching
+                return;
+                break;
+            case 31:
+                // Record
+                _nextState = RecordMenuState::create(_battleScene, _session);
+                return;
+            case 32:
+                // Settings
+                _nextState = SettingsMenuState::create(_battleScene, _session);
+                return;
+            case 33:
+                // End Turn
+                return;
+            default:
+                break;
+        }
+    }
 }
