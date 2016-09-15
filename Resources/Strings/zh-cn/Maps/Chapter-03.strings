@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+
+
+
+
+
+
+
+
+    <key>Title-03</key><string>第三章  往塞拉村途中</string>
+
+    <key>Condition-Lose</key><string>索尔死亡</string>
+    <key>Condition-Win</key><string>精英战士死亡</string>
+
+    <key>03-01-001-Id</key><string>6</string>
+    <key>03-01-001</key><string>过了这座桥，就快到以医术闻名的塞拉村了。这村子中的祭司医疗法术非常神奇，应该能治好悠妮的失忆怔。</string>
+    <key>03-01-002-Id</key><string>1</string>
+    <key>03-01-002</key><string>希望如此。。。咦。。。</string>
+    <key>03-01-003-Id</key><string>7</string>
+    <key>03-01-003</key><string>。。呼。这回大概是追不上了。。。</string>
+    <key>03-01-004-Id</key><string>21</string>
+    <key>03-01-004</key><string>铁诺，总算追上你了吧！这下子看你怎么逃！</string>
+    <key>03-01-005-Id</key><string>7</string>
+    <key>03-01-005</key><string>你们到底和我有什么仇恨，非得要杀死我不可？！</string>
+    <key>03-01-006-Id</key><string>21</string>
+    <key>03-01-006</key><string>若你能活到我们队长赶到的时候，你再自己去问他吧！</string>
+    <key>03-01-007-Id</key><string>7</string>
+    <key>03-01-007</key><string>可恶！我跟你们拼了！</string>
+    <key>03-01-008-Id</key><string>6</string>
+    <key>03-01-008</key><string>哎呀！看，桥上有人准备要打架耶！</string>
+    <key>03-01-009-Id</key><string>1</string>
+    <key>03-01-009</key><string>以多打少，这太不公平了！走，亚雷斯，我们去帮助那个落单的人！</string>
+    <key>03-01-010-Id</key><string>3</string>
+    <key>03-01-010</key><string>索尔，我们还没搞清楚这是怎么一回事，这也太。。。</string>
+    <key>03-01-011-Id</key><string>1</string>
+    <key>03-01-011</key><string>看那些士兵蛮不讲理的样子，就知道他一定是好人！亚雷斯，你到底去不去？</string>
+    <key>03-01-012-Id</key><string>3</string>
+    <key>03-01-012</key><string>去，去！我总不能看着你一个人去拼命，认识你算是我倒霉！</string>
+    <key>03-01-013-Id</key><string>6</string>
+    <key>03-01-013</key><string>我也去，我也去！</string>
+    <key>03-01-014-Id</key><string>5</string>
+    <key>03-01-014</key><string>既然如此，那么大家都去吧！走喽！</string>
+
+    <key>03-02-001-Id</key><string>40</string>
+    <key>03-02-001</key><string>铁诺，你果然很耐命！怪不得头子一定要我亲自来看看。。。不过，你的好运也到此为止了！</string>
+    <key>03-02-002-Id</key><string>7</string>
+    <key>03-02-002</key><string>如果不是这些年轻人帮忙的话，我早就没命了！不过既然我还活着，我还是要问你一个问题。到底谁命令你来杀我？</string>
+    <key>03-02-003-Id</key><string>40</string>
+    <key>03-02-003</key><string>告诉你也不要紧，是葛雷大人命令我们来除掉你的！</string>
+    <key>03-02-004-Id</key><string>6</string>
+    <key>03-02-004</key><string>葛雷？那个心胸狭窄的禁卫军统领？是为了三年前争夺卡罗那女孩的事吧？</string>
+    <key>03-02-005-Id</key><string>7</string>
+    <key>03-02-005</key><string>你。。你怎么会知道这件事？</string>
+    <key>03-02-006-Id</key><string>6</string>
+    <key>03-02-006</key><string>秘密！不过你可以放心，我们都会帮你的。</string>
+    <key>03-02-007-Id</key><string>40</string>
+    <key>03-02-007</key><string>可恶！帮他的都得死，何况你们已经知道了这个秘密，那就别怪我不留情！给我杀！</string>
+
+    <key>03-03-001-Id</key><string>1</string>
+    <key>03-03-001</key><string>真遗憾，我们已经尽力了，结果还是帮不了他。。。</string>
+    <key>03-03-002-Id</key><string>6</string>
+    <key>03-03-002</key><string>也好，让他到地下和爱人相聚，也不用再四处躲避别人的追杀。。。。</string>
+    <key>03-03-003-Id</key><string>3</string>
+    <key>03-03-003</key><string>希莉亚，你的真实身份究竟是什么？</string>
+    <key>03-03-004-Id</key><string>6</string>
+    <key>03-03-004</key><string>秘密！总之，我们安葬他之后就赶快离开这里吧，要不然的话，麻烦可能还在后头呢！</string>
+    <key>03-03-005-Id</key><string>1</string>
+    <key>03-03-005</key><string>就这么办吧！</string>
+
+    <key>03-04-001-Id</key><string>40</string>
+    <key>03-04-001</key><string>我竟然会败在一批小鬼的手下。。。葛雷大人。。。</string>
+    <key>03-04-002-Id</key><string>7</string>
+    <key>03-04-002</key><string>多谢各位的帮忙，我才能逃过这次追杀。不过葛雷是不会就此罢手的，我在这片土地上，还是找不到安居之所。。。</string>
+    <key>03-04-003-Id</key><string>6</string>
+    <key>03-04-003</key><string>那你可以加入我啊！像你这样老练的战士对我们来说是不可多得的伙伴，而我们一群人在一起，我保证葛雷不敢随便对你下手。</string>
+    <key>03-04-004-Id</key><string>7</string>
+    <key>03-04-004</key><string>小姐，你为什么会知道这些事，我。。。</string>
+    <key>03-04-005-Id</key><string>6</string>
+    <key>03-04-005</key><string>秘密！反正你加入我们就是了！</string>
+    <key>03-04-006-Id</key><string>1</string>
+    <key>03-04-006</key><string>哼！一副故作神秘的样子，真实个古灵精怪的丫头。</string>
+    <key>03-04-007-Id</key><string>6</string>
+    <key>03-04-007</key><string>你说什么？我可是在位你们增加有利的伙伴呢！</string>
+    <key>03-04-008-Id</key><string>1</string>
+    <key>03-04-008</key><string>不稀罕！</string>
+    <key>03-04-009-Id</key><string>7</string>
+    <key>03-04-009</key><string>我已经决定了，如果各位不嫌弃我的话，以后就请多多关照。</string>
+    <key>03-04-010-Id</key><string>3</string>
+    <key>03-04-010</key><string>欢迎！不过，我们还是赶快离开此地，剩下的事以后再说了！</string>
+    <key>03-04-011-Id</key><string>5</string>
+    <key>03-04-011</key><string>说得对，我们上路吧！</string>
+
+    <key>03-99-001-Id</key><string>7</string>
+    <key>03-99-001</key><string>卡罗那。。。。。。！</string>
+</dict>
+</plist>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+
+
+
+
+
+
+
+
+
+    <key>Title-17</key><string>第十七章  血与冰之刃</string>
+    <key>Condition-Lose</key><string>索尔死亡</string>
+    <key>Condition-Win</key><string>敌全灭</string>
+
+    <key>17-01-001-Id</key><string>18</string>
+    <key>17-01-001</key><string>我所料果然不错，瞧，一大堆敌人集结在这小小的冰岛上，一定有什么图谋。。。</string>
+    <key>17-01-002-Id</key><string>16</string>
+    <key>17-01-002</key><string>让我看看。。哎呀！有兽人黑暗战士和没见过的家伙呢，声势似乎颇为浩大的样子！</string>
+    <key>17-01-003-Id</key><string>3</string>
+    <key>17-01-003</key><string>密蒂前辈，我们。。我们现在该怎么办呢？</string>
+    <key>17-01-004-Id</key><string>1</string>
+    <key>17-01-004</key><string>那还用说！把他们全宰了，事情就可以告一段落了！</string>
+    <key>17-01-005-Id</key><string>18</string>
+    <key>17-01-005</key><string>这样吗？我也同意索尔的看法。。总胜于站在这里发呆吧！</string>
+    <key>17-01-006-Id</key><string>3</string>
+    <key>17-01-006</key><string>是啊！我们千里迢迢的赶来这里，不就是要把事情弄清楚吗？</string>
+    <key>17-01-007-Id</key><string>5</string>
+    <key>17-01-007</key><string>小心！敌人已经注意到我们了！</string>
+    <key>17-01-008-Id</key><string>199</string>
+    <key>17-01-008</key><string>剑圣密蒂吗？你总算来了，我知道这几天来你一直在调查此地的事。。唔，看来你还带了不少陪葬的家伙，这一来这冰岛上可有得热闹了。。。</string>
+    <key>17-01-009-Id</key><string>3</string>
+    <key>17-01-009</key><string>密蒂前辈，这奇怪的家伙就是事件的元凶首恶吗？</string>
+    <key>17-01-010-Id</key><string>18</string>
+    <key>17-01-010</key><string>我想应该是。别小看他这奇形怪状的模样，我感觉得到他身上有强大的魔力。。。。总之，这是个棘手的强敌，索尔你要特别小心！</string>
+    <key>17-01-011-Id</key><string>1</string>
+    <key>17-01-011</key><string>哼，我才不怕这家伙呢！大家上啊！</string>
+    <key>17-01-012-Id</key><string>199</string>
+    <key>17-01-012</key><string>真没格调的家伙，本来还想和你们聊聊的，只好早点送你们下地狱了。。给我杀个片甲不留！</string>
+
+
+    <key>17-02-001-Id</key><string>201</string>
+    <key>17-02-001</key><string>密蒂阁下，我们没有来迟吧！</string>
+    <key>17-02-002-Id</key><string>18</string>
+    <key>17-02-002</key><string>各位来的正好！敌人兵力强大，请各位尽力作战，我们务必取得胜利！</string>
+    <key>17-02-003-Id</key><string>201</string>
+    <key>17-02-003</key><string>是！我们一定不会让阁下您失望的！</string>
+
+
+    <key>17-03-001-Id</key><string>199</string>
+    <key>17-03-001</key><string>为什么。。为什么这些下贱的人类居然能打倒我。。。。？主人，救救我。。。</string>
+    <key>17-03-002-Id</key><string>15</string>
+    <key>17-03-002</key><string>咦！这可不是。。「冰之眼」宝石？原来是在冰魔神的身上。。。。 </string>
+    <key>17-03-003-Id</key><string>18</string>
+    <key>17-03-003</key><string>你也知道「魔眼之石」的事？</string>
+    <key>17-03-004-Id</key><string>15</string>
+    <key>17-03-004</key><string>恩，自从我知道某个古老的传说以来，就一直在追寻其中的秘密。但为什么这些家伙会拥有其中之一？。。。</string>
+    <key>17-03-005-Id</key><string>18</string>
+    <key>17-03-005</key><string>我们也正在调查这一点，目前可以肯定的是，这绝对不会是什么好事。。恩，这件事还是等打完仗再来谈好了。。。。 </string>
+    <key>17-03-006-Id</key><string>15</string>
+    <key>17-03-006</key><string>也好，反正这场仗已是胜利在望了！</string>
+
+
+    <key>17-04-001-Id</key><string>18</string>
+    <key>17-04-001</key><string>原来我们打倒的家伙叫做冰魔神，看来和你们上次救出国王时遇到的地魔神是一伙的。他们真正的目的究竟为何，现在仍然是一个谜，看来我们还有好长一段路要走。。。。各位可愿意和我继续一起追索这批邪恶之徒？</string>
+    <key>17-04-002-Id</key><string>1</string>
+    <key>17-04-002</key><string>可是。。我们原先是要找贤者约拿，请他意旨悠妮小姐的失忆症的。。。</string>
+    <key>17-04-003-Id</key><string>18</string>
+    <key>17-04-003</key><string>约拿？他就是这次调查行动的发起人啊！他以各种方法召集了马拉大陆各地的勇士能人，一起向这个未知的阴谋和其计划者挑战，难道你们不知道此事？</string>
+    <key>17-04-004-Id</key><string>12</string>
+    <key>17-04-004</key><string>约拿确是有请我前往北方的黑森林与他会合，但他并没有说明原因。。。。现在我总算明白了！</string>
+
+    <key>17-05-001-Id</key><string>18</string>
+    <key>17-05-001</key><string>原来我们打倒的家伙叫做水魔神，看来和你们上次救出国王时遇到的地魔神是一伙的。他们真正的目的究竟为何，现在仍然是一个谜。。 </string>
+    <key>17-05-002-Id</key><string>17</string>
+    <key>17-05-002</key><string>蜜蒂阁下，那您往后有什么打算？</string>
+    <key>17-05-003-Id</key><string>18</string>
+    <key>17-05-003</key><string>继续追查敌人的底细。此行有什么危险，你们现在应该很清楚了，如果爱惜性命的话，就到此为止比较好。塞可邦勒，他们就交给你了，时间紧迫，我得先走一步。。。</string>
+
+    <key>17-06-001-Id</key><string>19</string>
+    <key>17-06-001</key><string>小伙子们！是你们一行打败冰魔神的吗？</string>
+    <key>17-06-002-Id</key><string>1</string>
+    <key>17-06-002</key><string>这还需要怀疑吗？对了，你是从哪里跑出来的？和冰魔神是一伙的吗？</string>
+    <key>17-06-003-Id</key><string>19</string>
+    <key>17-06-003</key><string>别误会，我是龙人族的剑士凯拉斯，奉命前来冰岛调查时不小心中了这些杂碎的奸计，一直被关在地下的冰穴中；不久前我才设法挣脱绳结跑出来。</string>
+    <key>17-06-004-Id</key><string>3</string>
+    <key>17-06-004</key><string>冰魔神和其部下确实已被我们打倒了，我想你可以放心了。</string>
+    <key>17-06-005-Id</key><string>19</string>
+    <key>17-06-005</key><string>这样吗？能够打倒冰魔神，真是一件了不起的成就。。。。不过你们为什么要与他们作对呢？</string>
+    <key>17-06-006-Id</key><string>1</string>
+    <key>17-06-006</key><string>这哪需要理由！那些家伙在大陆各地胡做非为，我们的目的虽然是寻找贤者约拿，但是看到他们的种种恶行，怎么可以置之不理？</string>
+    <key>17-06-007-Id</key><string>3</string>
+    <key>17-06-007</key><string>我们一路上与敌人交战，不但因此交了不少战友，战记也大为提升，而约拿恰巧也在调查此事，我们的方向正好与他不谋而合。</string>
+    <key>17-06-008-Id</key><string>19</string>
+    <key>17-06-008</key><string>原来如此。。我族之王圣寇拉斯也受到约拿之邀出面调查此事，因此他与我分头前往冰岛和西方的沙漠，想查明敌人的底细，结果我没料到敌人大军聚集于此，一下子就被抓了。。 </string>
+    <key>17-06-009-Id</key><string>15</string>
+    <key>17-06-009</key><string>圣寇拉斯陛下竟然也亲自出马了，看来事态一定非同小可。</string>
+    <key>17-06-010-Id</key><string>19</string>
+    <key>17-06-010</key><string>是啊！只是我有负陛下使命被关了这么多天，约定的日期早过了，也不知道接下来该怎么办。。。</string>
+    <key>17-06-011-Id</key><string>15</string>
+    <key>17-06-011</key><string>那你干脆加入我们一行好了，反正陛下迟早也会和贤者约拿会合，和我们一起去找约拿，不是也一样可以找到陛下吗？</string>
+    <key>17-06-012-Id</key><string>19</string>
+    <key>17-06-012</key><string>你说的有道理，不过不知道这些朋友们。。。。</string>
+    <key>17-06-013-Id</key><string>3</string>
+    <key>17-06-013</key><string>龙人战士是尊贵的武士，既然目的一致，我们当然欢迎你加入！</string>
+    <key>17-06-014-Id</key><string>1</string>
+    <key>17-06-014</key><string>是啊！被抓并不可耻，这笔帐以后再和敌人清算就行了。</string>
+    <key>17-06-015-Id</key><string>19</string>
+    <key>17-06-015</key><string>多谢各位！剑士凯拉斯，以后请多多指教。</string>
+    <key>17-06-016-Id</key><string>1</string>
+    <key>17-06-016</key><string>好极了，又多了一个新伙伴，不过，我可不想继续待在这个光秃秃的冰岛上，索非亚，我们下一步该怎么走？</string>
+    <key>17-06-017-Id</key><string>12</string>
+    <key>17-06-017</key><string>应该是再往北经过山道，前往史威特平原。。。</string>
+    <key>17-06-018-Id</key><string>16</string>
+    <key>17-06-018</key><string>那时条满偏僻的山道，知道的人不多，想必往后的旅程会比较平静了。哈哈哈！</string>
+    <key>17-06-019-Id</key><string>1</string>
+    <key>17-06-019</key><string>但愿如此。我们这就上路吧</string>
+
+
+</dict>
+</plist>

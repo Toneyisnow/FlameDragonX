@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+
+
+
+
+
+
+
+
+
+    <key>Title-22</key><string>第二十二章  远古的呼唤</string>
+    <key>Condition-Lose</key><string>索尔或希尔法死亡</string>
+    <key>Condition-Win</key><string>敌全灭</string>
+
+    <key>22-01-001-Id</key><string>1</string>
+    <key>22-01-001</key><string>一路来到了塔顶，居然都没有遇到敌人，真是奇怪！</string>
+    <key>22-01-002-Id</key><string>3</string>
+    <key>22-01-002</key><string>索尔，不要掉以轻心！说不定敌人都集中在塔顶等我们呢！</string>
+    <key>22-01-003-Id</key><string>1</string>
+    <key>22-01-003</key><string>亚雷斯，你好象说对了！塔顶上有一大群人耶！</string>
+    <key>22-01-004-Id</key><string>3</string>
+    <key>22-01-004</key><string>哦？</string>
+    <key>22-01-005-Id</key><string>199</string>
+    <key>22-01-005</key><string>呼呼呼，你们来得比我预期的还早些，不过也没关系，等我把你们都解决后再来办事就好了。。。。</string>
+    <key>22-01-006-Id</key><string>25</string>
+    <key>22-01-006</key><string>你们执意要占领这圣灵之塔的理由，想必和你们在此进行的勾当有关吧！</string>
+    <key>22-01-007-Id</key><string>199</string>
+    <key>22-01-007</key><string>哈哈哈，反正你们别想活着离开塔顶，所以告诉你们也无妨。#这座塔是大陆上最接近天空的地方，我的主人要在此建立一个传送点，如此他才能把麾下的军队从居城送到这大陆上。。。</string>
+    <key>22-01-008-Id</key><string>25</string>
+    <key>22-01-008</key><string>居城？你们究竟是来自何处？你的主人又是谁？</string>
+    <key>22-01-009-Id</key><string>199</string>
+    <key>22-01-009</key><string>我的主人是支配者，是创造者，也是毁灭者。。。。#其他的你们就不用知道了，准备受死吧！</string>
+    <key>22-01-010-Id</key><string>1</string>
+    <key>22-01-010</key><string>准备要受死的是你吧！看剑！</string>
+    <key>22-01-011-Id</key><string>25</string>
+    <key>22-01-011</key><string>对手的底细不明，大家要小心为战！</string>
+
+
+    <key>22-02-001-Id</key><string>201</string>
+    <key>22-02-001</key><string>嘎嘎。。。。。。！</string>
+    <key>22-02-002-Id</key><string>199</string>
+    <key>22-02-002</key><string>来了吗，宰了这些家伙！</string>
+    <key>22-02-003-Id</key><string>201</string>
+    <key>22-02-003</key><string>嘎嘎嘎。。。！</string>
+
+
+    <key>22-03-001-Id</key><string>27</string>
+    <key>22-03-001</key><string>咦？这是怎么回事？塔顶打成一片？</string>
+    <key>22-03-002-Id</key><string>1</string>
+    <key>22-03-002</key><string>喂这里打的正起劲，如果不想受伤就别过来！</string>
+    <key>22-03-003-Id</key><string>27</string>
+    <key>22-03-003</key><string>别把人看扁了！我起码也是个龙骑士耶！</string>
+    <key>22-03-004-Id</key><string>25</string>
+    <key>22-03-004</key><string>龙骑士？好久没听到这个崇高的名号了。。。。你怎么会恰好来到这里呢？</string>
+    <key>22-03-005-Id</key><string>27</string>
+    <key>22-03-005</key><string>说来话长，我自从不小心被抓之后就一直被关在所在不明的牢房中，几天前才被转送到这塔里。#刚才我听到塔顶有打斗声，看守的人又不在，就设法打破牢门出来看看。</string>
+    <key>22-03-006-Id</key><string>3</string>
+    <key>22-03-006</key><string>原来如此，现在你打算怎么办？</string>
+    <key>22-03-007-Id</key><string>27</string>
+    <key>22-03-007</key><string>当然是加入你们一行，修理那个大家伙啊！我要好好和清算这笔帐！</string>
+    <key>22-03-008-Id</key><string>199</string>
+    <key>22-03-008</key><string>手下败将，还不认输吗？这次我不会再客气了！</string>
+    <key>22-03-009-Id</key><string>1</string>
+    <key>22-03-009</key><string>少罗嗦！先应付完我这一剑再说！</string>
+
+
+    <key>22-04-001-Id</key><string>199</string>
+    <key>22-04-001</key><string>。。这些卑贱的虫蚁。。为何会如此厉害。。。。主人。。。。</string>
+    <key>22-04-002-Id</key><string>1</string>
+    <key>22-04-002</key><string>哎！又失手了，本来这回我有更多话想问他。。。</string>
+    <key>22-04-003-Id</key><string>25</string>
+    <key>22-04-003</key><string>没关系，我们得到了这传送法杖，只要启动他们布下的这个魔法阵，就可以直接传送到他们的根据地了。</string>
+    <key>22-04-004-Id</key><string>21</string>
+    <key>22-04-004</key><string>希尔法，这种单程传送很可能一去不回，你不觉得太冒险了吗？</string>
+    <key>22-04-005-Id</key><string>25</string>
+    <key>22-04-005</key><string>没办法，眼看着敌人就要大举进攻了，只有前往他们的根据地做个彻底解决，才有可能阻止他们。为了保护精灵族和整个马拉大陆，我已有牺牲的决心。</string>
+    <key>22-04-006-Id</key><string>21</string>
+    <key>22-04-006</key><string>这样吗。。。</string>
+    <key>22-04-007-Id</key><string>25</string>
+    <key>22-04-007</key><string>等一下我就启动传送场，想去的就自行走进这魔法阵中，我绝不强迫。</string>
+    <key>22-04-008-Id</key><string>25</string>
+    <key>22-04-008</key><string>你。。你们。。。</string>
+    <key>22-04-009-Id</key><string>21</string>
+    <key>22-04-009</key><string>希尔法，如果就这样让你一个人走，我约拿的名字会被今后的世人所耻笑。我可不是个贪生怕死的人，更不会在危难时抛弃朋友！</string>
+    <key>22-04-010-Id</key><string>3</string>
+    <key>22-04-010</key><string>既然都到了这里，那还有什么好怕的！我们相信，几位前辈的指挥和知识，一定能带领我们度过难关的。</string>
+    <key>22-04-011-Id</key><string>1</string>
+    <key>22-04-011</key><string>就是说啊！马拉大陆上的强者在此济济一堂，要击溃敌人根据地有什么问题！希尔法大师，你要对我们自己有信心才对！</string>
+    <key>22-04-012-Id</key><string>25</string>
+    <key>22-04-012</key><string>谢谢。。谢谢大家这么相信我！既然如此，我这就启动传送魔法！</string>
+    <key>22-04-013-Id</key><string>6</string>
+    <key>22-04-013</key><string>哎，我等不及想看看我们会去的是个怎么样的地方！</string>
+    <key>22-04-014-Id</key><string>25</string>
+    <key>22-04-014</key><string>马那得拉、亚布利加、艾米西得拉、伊多卡那瓦！</string>
+
+
+</dict>
+</plist>

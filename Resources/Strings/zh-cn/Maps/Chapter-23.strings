@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+
+
+
+
+
+
+
+
+
+    <key>Title-23</key><string>第二十三章  向天空之旅</string>
+    <key>Condition-Lose</key><string>索尔或希尔法死亡</string>
+    <key>Condition-Win</key><string>击毁机甲队长</string>
+
+    <key>23-01-001-Id</key><string>1</string>
+    <key>23-01-001</key><string>呼！难过死了。。咦！这里是敌人的根据地吗？为何看起来一点都不像？</string>
+    <key>23-01-002-Id</key><string>21</string>
+    <key>23-01-002</key><string>在传送魔法启动后，我感觉到有极强的魔力从中干扰，传送魔法的作用因此发生了错乱。。希尔法，我说得没错吧？</string>
+    <key>23-01-003-Id</key><string>25</string>
+    <key>23-01-003</key><string>是的，传送过程受到这种干扰，我们没有全部嵌到岩壁里去就该庆幸不已了。不过这里应该离原来的目的地不远，这个我大概可以确定。。。</string>
+    <key>23-01-004-Id</key><string>1</string>
+    <key>23-01-004</key><string>可恶，原来又是敌人搞的鬼！</string>
+    <key>23-01-005-Id</key><string>28</string>
+    <key>23-01-005</key><string>咦！什么时候多了好大一票人出来？他们是怎么来到这里的，我们居然毫无知觉？</string>
+    <key>23-01-006-Id</key><string>29</string>
+    <key>23-01-006</key><string>什么？是敌人吗？</string>
+    <key>23-01-007-Id</key><string>28</string>
+    <key>23-01-007</key><string>看起来不像，还是先过去打个照面再说！</string>
+    <key>23-01-008-Id</key><string>6</string>
+    <key>23-01-008</key><string>哎呀，有人比我们先来了呢！</string>
+    <key>23-01-009-Id</key><string>22</string>
+    <key>23-01-009</key><string>敌人这么快就来了吗？</string>
+    <key>23-01-010-Id</key><string>16</string>
+    <key>23-01-010</key><string>不像，对方只有两个人而已。。好象想和我们谈话的样子。</string>
+    <key>23-01-011-Id</key><string>28</string>
+    <key>23-01-011</key><string>不知各位为何跋涉千里，来到这沙漠之中的废墟？是和我们一样为了研究遗迹而来的吗？</string>
+    <key>23-01-012-Id</key><string>1</string>
+    <key>23-01-012</key><string>啊！你不是卡里斯叔叔吗？</string>
+    <key>23-01-013-Id</key><string>28</string>
+    <key>23-01-013</key><string>你说什么？你怎么知道我叫卡里斯？</string>
+    <key>23-01-014-Id</key><string>1</string>
+    <key>23-01-014</key><string>卡里斯叔叔，我是索尔啊！小时侯你经常带我们去玩，还教我武术的。。。。</string>
+    <key>23-01-015-Id</key><string>3</string>
+    <key>23-01-015</key><string>你这么一说，我也想起来了！他的确是曾经教过我们武术的卡里斯叔叔！</string>
+    <key>23-01-016-Id</key><string>28</string>
+    <key>23-01-016</key><string>你是索尔王子吗？那你就是巴拉多的儿子亚雷斯了！我记得你们从小就在一起的。</string>
+    <key>23-01-017-Id</key><string>3</string>
+    <key>23-01-017</key><string>答对啦卡里斯叔叔，你果然还记得我们！真是好久不见了。</string>
+    <key>23-01-018-Id</key><string>1</string>
+    <key>23-01-018</key><string>听父说您到海外来探险，我们都神往不已呢！真没想到会在这里遇见您。</string>
+    <key>23-01-019-Id</key><string>28</string>
+    <key>23-01-019</key><string>时间过的真快，你们都长大啦！雷特王子，陛下这些日子还好吗？</string>
+    <key>23-01-020-Id</key><string>1</string>
+    <key>23-01-020</key><string>父王母后都很安健，不过老嫌生活平淡了些，大概是等着听卡里斯叔叔您的冒险故事吧！</string>
+    <key>23-01-021-Id</key><string>21</string>
+    <key>23-01-021</key><string>哪！又遇见了一个熟人，这可不是罗得曼吗？你一个好好的边防将军不做，又跑来这里考古啦？</string>
+    <key>23-01-022-Id</key><string>29</string>
+    <key>23-01-022</key><string>果然是约拿你这把老骨头，世界上就你最清楚我的习性。你怎么也舍得跑到这荒山野外来了？</string>
+    <key>23-01-023-Id</key><string>21</string>
+    <key>23-01-023</key><string>我倒忘了问你，这里到底是哪里？我们是被魔法传送来的。</string>
+    <key>23-01-024-Id</key><string>29</string>
+    <key>23-01-024</key><string>呦，这趟路可真远了！这里是大陆西北方的沙漠中央的一个绿洲，我一直对这绿洲中的废墟感兴趣，所以和这朋友一起来调查。</string>
+    <key>23-01-025-Id</key><string>28</string>
+    <key>23-01-025</key><string>不瞒各位，最近有一位学者帮我解读了一篇上古经典的记载，我正在追查其中一些古物的下落，所以碰巧来到这里。。。。</string>
+    <key>23-01-026-Id</key><string>199</string>
+    <key>23-01-026</key><string>哔，发现入侵者！指令：保护飞行岩，交战并歼灭入侵者。</string>
+    <key>23-01-027-Id</key><string>101</string>
+    <key>23-01-027</key><string>哔，指令确认！开始动作！</string>
+    <key>23-01-028-Id</key><string>29</string>
+    <key>23-01-028</key><string>嘿，那是什么怪东西？</string>
+    <key>23-01-029-Id</key><string>28</string>
+    <key>23-01-029</key><string>那是典籍中所记载的古代机兵，他们负责保护所有古代人所留下来的建筑和设施，会将入侵者杀戮殆尽。。。。现在没时间说明了，准备应付这些家伙吧！</string>
+    <key>23-01-030-Id</key><string>1</string>
+    <key>23-01-030</key><string>说到打架，我精神就来了！我们上！</string>
+
+
+    <key>23-02-001-Id</key><string>199</string>
+    <key>23-02-001</key><string>哔，指令系统失效。。任务中止。。指令传输关闭。。。</string>
+
+    <key>23-02-002-Id</key><string>28</string>
+    <key>23-02-002</key><string>不愧是古代人建造的机兵，应付起来真是棘手的很。。幸好大家都能独当一面，才能顺利消灭这些敌人。</string>
+    <key>23-02-003-Id</key><string>29</string>
+    <key>23-02-003</key><string>危机已过，现在我们可以仔细研究这个遗迹了。</string>
+    <key>23-02-004-Id</key><string>3</string>
+    <key>23-02-004</key><string>卡里斯叔叔，这遗迹到底有什么秘密，你还没告诉我们呢！</string>
+    <key>23-02-005-Id</key><string>28</string>
+    <key>23-02-005</key><string>是这样吗？其实我䱟是从古籍上看来的。据说眼前这个小丘是古代人所造的飞行用具，经由一支传送法杖的力量，可以把拥有「天空之钥」的人带到黄金的城堡上去。</string>
+
+    <key>23-02-006-Id</key><string>1</string>
+    <key>23-02-006</key><string>天空之钥？那不就在我们手上吗？</string>
+    <key>23-02-007-Id</key><string>3</string>
+    <key>23-02-007</key><string>「传送手杖」也有啊！我们就是被它传送到这里来的。</string>
+    <key>23-02-008-Id</key><string>28</string>
+    <key>23-02-008</key><string>真的？那真是太巧了！</string>
+    <key>23-02-009-Id</key><string>21</string>
+    <key>23-02-009</key><string>我一直认为，最近大陆上的天地异变和神秘敌人都和这「黄金城」有关。在古代传说中，黄金城总和战争，灾厄等脱不了关系，所以我们一直都在追查这其中的关联。</string>
+    <key>23-02-010-Id</key><string>28</string>
+    <key>23-02-010</key><string>这确是有加以查明的必要。索尔殿下，既然这两件东西都已到手，可以让我和你们一起去看看吗？</string>
+    <key>23-02-011-Id</key><string>1</string>
+    <key>23-02-011</key><string>当然可以！有卡里斯叔叔同行，什么对手都不足为惧了！</string>
+    <key>23-02-012-Id</key><string>3</string>
+    <key>23-02-012</key><string>是呀！</string>
+
+    <key>23-02-013-Id</key><string>21</string>
+    <key>23-02-013</key><string>我听过这东西，据说它是通往黄金城堡的唯一方法。</string>
+    <key>23-02-014-Id</key><string>28</string>
+    <key>23-02-014</key><string>我们并未预料到会有敌人出现，这回算是相当的惊险。。不过，我想我还是先回城休养一下好了，将军殿下，这里就先交给你了。</string>
+    <key>23-02-015-Id</key><string>1</string>
+    <key>23-02-015</key><string>卡里斯叔叔，你要多保重喔！</string>
+    <key>23-02-016-Id</key><string>28</string>
+    <key>23-02-016</key><string>索尔殿下，您和亚雷斯也要多小心！不过以你们的表现看来，我想我是可以放心了。我们后会有期！</string>
+
+    <key>23-02-017-Id</key><string>21</string>
+    <key>23-02-017</key><string>罗得曼，那你打算怎么办呢？我很希望能有像你这样的武士加入，这对我们的战斗力有很大的提升。</string>
+
+    <key>23-02-018-Id</key><string>29</string>
+    <key>23-02-018</key><string>我。。唉，我想。。我还是不太适合。老友，我也要回城了，希望你们此行顺利，都能平安归来。</string>
+    <key>23-02-019-Id</key><string>18</string>
+    <key>23-02-019</key><string>唉，都是因为我的关系。。。。</string>
+    <key>23-02-020-Id</key><string>13</string>
+    <key>23-02-020</key><string>前辈，这怎么说？</string>
+    <key>23-02-021-Id</key><string>18</string>
+    <key>23-02-021</key><string>这是一件很久以前的往事了。。。。那时罗得曼将军还在禁卫军统领任内，而我才划成为禁卫军骑士不久。。。</string>
+    <key>23-02-022-Id</key><string>13</string>
+    <key>23-02-022</key><string>啊！我想起来了！那时前辈你向将军他。。。</string>
+    <key>23-02-023-Id</key><string>18</string>
+    <key>23-02-023</key><string>是的，那时太年轻的我被感情冲昏了头，在大庭广众面前向将军表明爱意。但是将军的夫人妮莉公主是陛下最小的妹妹，我这么做让他非常为难，结果将军向陛下请调边疆，就只为了避开我。。。。</string>
+    <key>23-02-024-Id</key><string>13</string>
+    <key>23-02-024</key><string>原来是这样。</string>
+    <key>23-02-025-Id</key><string>18</string>
+    <key>23-02-025</key><string>那时的我伤心欲绝，虽然把全部心思用在剑术上，仍然忘不了这件事，因此才离开骑士团到深山中修练。。这么多年以后，我已经不在释怀，但将军还这么在乎，你们就可以知道当年我让他多么困扰了。</string>
+    <key>23-02-026-Id</key><string>1</string>
+    <key>23-02-026</key><string>没关系！密蒂前辈，将军的份就算是由你代替了，今后你不但是为了大家而战，也是为了将军而战，过去的遗悾和感伤，就让它在战阵中烟消云散！</string>
+    <key>23-02-027-Id</key><string>18</string>
+    <key>23-02-027</key><string>。。索尔，谢谢你。我会记住这句话的。</string>
+
+    <key>23-02-028-Id</key><string>29</string>
+    <key>23-02-028</key><string>老友，我很希望能与你们同行，可是我是受陛下的任命，在此担任边防将军，除非有陛下的谕命，否则擅离职守视同抗命。</string>
+    <key>23-02-029-Id</key><string>21</string>
+    <key>23-02-029</key><string>是这样吗？。。真是遗憾，我本来以为可以再看到你昔日的英姿呢。。。。</string>
+    <key>23-02-030-Id</key><string>29</string>
+    <key>23-02-030</key><string>这也是件没办法的事。。老友，保重！我得回城了。愿你们此行顺利，平安归来。</string>
+
+    <key>23-02-032-Id</key><string>29</string>
+    <key>23-02-032</key><string>是吗？难得听你这样夸赞我，如果我这把老骨头还能派得上用场，那当然是乐意之至。哈哈哈！</string>
+    <key>23-02-033-Id</key><string>6</string>
+    <key>23-02-033</key><string>太好了！我知道罗德曼将军的战技一直都是没话说的！</string>
+    <key>23-02-034-Id</key><string>29</string>
+    <key>23-02-034</key><string>咦，你不是。。你不是希莉亚公主吗？为何殿下。。会在这里？</string>
+    <key>23-02-035-Id</key><string>6</string>
+    <key>23-02-035</key><string>将军你都可以跷班来考古了，我怎么可以待在宫里发呆呢？</string>
+    <key>23-02-036-Id</key><string>21</string>
+    <key>23-02-036</key><string>好了，别大惊小怪了，为了解决这件事情，王国的强者勇士几乎都到齐了，我们先想想接下来要怎么办吧！</string>
+
+    <key>23-02-037-Id</key><string>25</string>
+    <key>23-02-037</key><string>。。我试了一下，这小丘上的法阵好象对这法杖上的魔力有反应，所以我想实验看看，看能不能让它飞起来。</string>
+    <key>23-02-038-Id</key><string>6</string>
+    <key>23-02-038</key><string>快试，快试！我等不及要看了！</string>
+    <key>23-02-039-Id</key><string>25</string>
+    <key>23-02-039</key><string>好吧，那我现在就开始。。米洛耶尔。。希里卡恩。。耶。。哈洛纳！</string>
+    <key>23-02-040-Id</key><string>1</string>
+    <key>23-02-040</key><string>地震了！哇啊啊，好可怕！</string>
+    <key>23-02-041-Id</key><string>25</string>
+    <key>23-02-041</key><string>可能要起飞了，大家站稳！</string>
+    <key>23-02-042-Id</key><string>6</string>
+    <key>23-02-042</key><string>哇！飞了，飞了！</string>
+    <key>23-02-043-Id</key><string>22</string>
+    <key>23-02-043</key><string>真是神奇！古代人的智慧和力量，果然不是我们所能想象的。</string>
+    <key>23-02-044-Id</key><string>21</string>
+    <key>23-02-044</key><string>这飞行岩开始告诉飞行了。。希尔法，你知道它要飞到哪里去吗？</string>
+    <key>23-02-045-Id</key><string>25</string>
+    <key>23-02-045</key><string>啊？这。。我也不太清楚，我只有使用这法杖启动它而已，现在。。现在它是在飞它自己的。</string>
+    <key>23-02-046-Id</key><string>3</string>
+    <key>23-02-046</key><string>那。。那怎么办？我们总不能就这样一直飞下去吧！</string>
+    <key>23-02-047-Id</key><string>2</string>
+    <key>23-02-047</key><string>别紧张。。。。这飞天丘总会飞到一个目的地的，这是在很久以前就已经决定好了的。。。。</string>
+    <key>23-02-048-Id</key><string>25</string>
+    <key>23-02-048</key><string>悠妮小姐，你知道和这飞行岩有关的事吗？</string>
+    <key>23-02-049-Id</key><string>2</string>
+    <key>23-02-049</key><string>好象有点印象。。。</string>
+    <key>23-02-050-Id</key><string>1</string>
+    <key>23-02-050</key><string>既然悠妮这么说，我们就静观其变吧！看看这玩意到底会把我们带到哪里去！</string>
+    <key>23-02-051-Id</key><string>3</string>
+    <key>23-02-051</key><string>呀呼！这样飞真是过瘾呢！</string>
+
+
+
+</dict>
+</plist>

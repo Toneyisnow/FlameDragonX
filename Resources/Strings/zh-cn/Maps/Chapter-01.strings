@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+
+    <key>Title-01</key><string>第一章  孤岛</string>
+
+    <key>Condition-Lose</key><string>索尔死亡</string>
+    <key>Condition-Win</key><string>敌全灭</string>
+
+    <key>01-01-001-Id</key><string>1</string>
+    <key>01-01-001</key><string>累死了，大家休息一下吧！</string>
+    <key>01-01-002-Id</key><string>3</string>
+    <key>01-01-002</key><string>听说再越过这片海洋就到马拉大陆了，我们先在此休息一会儿，等海水涨潮适合我们上岸的时候船夫就会来接我们。</string>
+    <key>01-01-003-Id</key><string>1</string>
+    <key>01-01-003</key><string>好极了。#悠妮，你。。。恩，坐了这么久的船，有点累吧？</string>
+    <key>01-01-004-Id</key><string>2</string>
+    <key>01-01-004</key><string>恩，还好。海风吹起来真舒服阿。。。</string>
+    <key>01-01-005-Id</key><string>4</string>
+    <key>01-01-005</key><string>。。。！！！</string>
+
+    <key>01-01-006-Id</key><string>11</string>
+    <key>01-01-006</key><string>瞧，竟有呆鸟在这小岛上休息，真是天上掉下来的肥肉。</string>
+    <key>01-01-007-Id</key><string>14</string>
+    <key>01-01-007</key><string>就是说嘛！俺去通报老大支援，你们赶快把这些小子摆平。</string>
+
+    <key>01-01-008-Id</key><string>1</string>
+    <key>01-01-008</key><string>亚雷斯，那群家伙在那里鬼叫什么？</string>
+    <key>01-01-009-Id</key><string>3</string>
+    <key>01-01-009</key><string>恩。。。嘿，好像是船夫提到过的海盗耶！</string>
+    <key>01-01-010-Id</key><string>1</string>
+    <key>01-01-010</key><string>海盗？是要来抢劫我们的吗？</string>
+    <key>01-01-011-Id</key><string>3</string>
+    <key>01-01-011</key><string>岂止抢劫而已，听说这批海盗横行马拉大陆沿海，杀人越货无所不为。</string>
+    <key>01-01-012-Id</key><string>1</string>
+    <key>01-01-012</key><string>什么，要打架我奉陪，要抢劫嘛，门也没有。亚雷斯，好久没活动活动筋骨了，你没问题吧！</string>
+    <key>01-01-013-Id</key><string>3</string>
+    <key>01-01-013</key><string>岂止没问题，我手痒难熬，都快受不了啦！</string>
+    <key>01-01-014-Id</key><string>11</string>
+    <key>01-01-014</key><string>喂，小子们，乖乖的把身上的钱财和那个漂亮小妞交出来，我们就在老大面前说说好话保你们一命！不然。。。</string>
+    <key>01-01-015-Id</key><string>2</string>
+    <key>01-01-015</key><string>什么是漂亮小妞？是指我吗？</string>
+    <key>01-01-016-Id</key><string>3</string>
+    <key>01-01-016</key><string>不是啦，那是。。。</string>
+    <key>01-01-017-Id</key><string>1</string>
+    <key>01-01-017</key><string>可恶，你们这些乱说话的海盗，我要把你们全宰了！</string>
+    <key>01-01-018-Id</key><string>11</string>
+    <key>01-01-018</key><string>啊呀，看来他们想抵抗呢！</string>
+    <key>01-01-019-Id</key><string>12</string>
+    <key>01-01-019</key><string>那就杀无赦，上啊！</string>
+
+    <key>01-02-001-Id</key><string>5</string>
+    <key>01-02-001</key><string>老爸！老爸！</string>
+    <key>01-02-002-Id</key><string>6</string>
+    <key>01-02-002</key><string>真是的，吵的要命，到底在搞什么。。。</string>
+    <key>01-02-003-Id</key><string>5</string>
+    <key>01-02-003</key><string>老爸。。。#有人在岛上打架呢！</string>
+    <key>01-02-004-Id</key><string>6</string>
+    <key>01-02-004</key><string>什么！待我看看。。。#啊哈，可不是海盗在打劫旅客吗？居然在我们面前抢人，胆子不小啊！</string>
+    <key>01-02-005-Id</key><string>5</string>
+    <key>01-02-005</key><string>就是说啊！老爸，您说这该怎么办？</string>
+    <key>01-02-006-Id</key><string>6</string>
+    <key>01-02-006</key><string>小子啊，这可是绝佳的历练机会，我们就帮他们一个忙吧！</string>
+    <key>01-02-007-Id</key><string>1</string>
+    <key>01-02-007</key><string>老头子，你们是来干什么的？若不想受伤就别过来凑热闹！</string>
+    <key>01-02-008-Id</key><string>6</string>
+    <key>01-02-008</key><string>别紧张，小伙子，我们是来帮你们打退海盗的。</string>
+    <key>01-02-008-Id</key><string>1</string>
+    <key>01-02-009</key><string>什么？就这一点海盗，还用不着你们来帮忙！回去回去！</string>
+    <key>01-02-010-Id</key><string>3</string>
+    <key>01-02-010</key><string>哎，索尔，人家是好意要帮忙，你也说几句好听一点的吧！</string>
+    <key>01-02-011-Id</key><string>1</string>
+    <key>01-02-011</key><string>这样吗？好吧，那就。。。喂，老头子，如果你要帮忙的话就先说声多谢了！</string>
+    <key>01-02-012-Id</key><string>6</string>
+    <key>01-02-012</key><string>这些年轻人真有精神啊！小子，我们上！</string>
+    <key>01-02-013-Id</key><string>5</string>
+    <key>01-02-013</key><string>好的，老爸！</string>
+
+    <key>01-03-001-Id</key><string>21</string>
+    <key>01-03-001</key><string>咦，兄弟们好像陷入苦战呢！</string>
+    <key>01-03-002-Id</key><string>22</string>
+    <key>01-03-002</key><string>那还等什么！我们上吧！</string>
+
+    <key>01-04-001-Id</key><string>29</string>
+    <key>01-04-001</key><string>小子们，你们在搞什么！连这些小鬼都收拾不了，还要劳动老大我出马，不怕给别人笑话吗？</string>
+    <key>01-04-002-Id</key><string>1</string>
+    <key>01-04-002</key><string>哼，这难看又吵人的家伙又是来干什么的？</string>
+    <key>01-04-003-Id</key><string>3</string>
+    <key>01-04-003</key><string>大概是海盗首领吧！总算有个像样的对手上场了，这家伙就交给我来处理啦！</string>
+    <key>01-04-004-Id</key><string>1</string>
+    <key>01-04-004</key><string>那怎么可以！对付这种家伙，当然是非我莫属了！让我来！</string>
+    <key>01-04-005-Id</key><string>3</string>
+    <key>01-04-005</key><string>索尔，你真是不够朋友！就为了在喜欢的女孩子面前逞能，竟然。。。</string>
+    <key>01-04-006-Id</key><string>1</string>
+    <key>01-04-006</key><string>你。。你胡说些什么！再乱说的话，我可就。。。</string>
+    <key>01-04-007-Id</key><string>29</string>
+    <key>01-04-007</key><string>喂！你们两个到底在吵什么！要吵的话，等进了地狱后再吵也不迟！</string>
+    <key>01-04-008-Id</key><string>1</string>
+    <key>01-04-008</key><string>你烦什么烦！滚一边去！</string>
+    <key>01-04-009-Id</key><string>3</string>
+    <key>01-04-009</key><string>这家伙讨厌的很，索尔，我们不吵了，先合力宰了他再说！</string>
+    <key>01-04-010-Id</key><string>1</string>
+    <key>01-04-010</key><string>好，就这么办！</string>
+    <key>01-04-011-Id</key><string>29</string>
+    <key>01-04-011</key><string>可恶啊！这两个小子完全不把我放在眼里！给我杀！一个都别放过！</string>
+
+    <key>01-05-001-Id</key><string>31</string>
+    <key>01-05-001</key><string>咦！又有海盗在此逞凶了，现在正是我们海防队建攻的良机！</string>
+    <key>01-05-002-Id</key><string>1</string>
+    <key>01-05-002</key><string>今天真是热闹啊！你们又是来干什么的？</string>
+    <key>01-05-003-Id</key><string>31</string>
+    <key>01-05-003</key><string>我们是亚克斯王国的海岸巡防队，消灭肆虐沿海的海盗本是我们的职责，这些海盗就交给我们来处理，请各位放心！</string>
+    <key>01-05-004-Id</key><string>1</string>
+    <key>01-05-004</key><string>鬼扯，我们打的正高兴，才不需要你们来搅局！</string>
+    <key>01-05-005-Id</key><string>3</string>
+    <key>01-05-005</key><string>索尔啊，我们就要踏进人家的地盘，至少对人家客气点吧！</string>
+    <key>01-05-006-Id</key><string>31</string>
+    <key>01-05-006</key><string>没关系！我们这就来帮忙了！</string>
+
+    <key>01-06-001-Id</key><string>5</string>
+    <key>01-06-001</key><string>老爸，我。。。我不行啦！</string>
+    <key>01-06-002-Id</key><string>6</string>
+    <key>01-06-002</key><string>小子，你先回屋子休息一下吧！这里有老爸挡着！</string>
+    <key>01-06-003-Id</key><string>5</string>
+    <key>01-06-003</key><string>那我就先回去了！</string>
+    <key>01-06-004-Id</key><string>6</string>
+    <key>01-06-004</key><string>你们这些该死的海盗，竟敢砍伤我儿子，我和你们拼了！</string>
+
+    <key>01-07-001-Id</key><string>3</string>
+    <key>01-07-001</key><string>多谢老爹和您公子的帮忙，我们才能顺利打败海盗。</string>
+    <key>01-07-002-Id</key><string>6</string>
+    <key>01-07-002</key><string>哪里！#我和小子住在这岛上除了偶尔出去游历外，平常也闲来无事，帮你们打打海盗，不算什么啦！#对了，说到这个，老头子我倒是有个请求。</string>
+    <key>01-07-003-Id</key><string>3</string>
+    <key>01-07-003</key><string>老爹您说说看。</string>
+    <key>01-07-004-Id</key><string>6</string>
+    <key>01-07-004</key><string>我瞧我这小子和你们满合的来的，希望你们能带他同行，让它出去见识见识，历练一番。我从小教了他不少武术，当你们有麻烦的时候，相信他也可以帮上一点忙。</string>
+    <key>01-07-005-Id</key><string>1</string>
+    <key>01-07-005</key><string>这个好像有点。。。</string>
+    <key>01-07-006-Id</key><string>3</string>
+    <key>01-07-006</key><string>哎！老爹您的这个请求当然是没有问题的啦！悠妮你说是不是？</string>
+    <key>01-07-007-Id</key><string>2</string>
+    <key>01-07-007</key><string>多一个同伴，路上也比较热闹啊！</string>
+    <key>01-07-008-Id</key><string>6</string>
+    <key>01-07-008</key><string>真是太谢谢各位了。#小子阿，来向大家打个招呼！</string>
+    <key>01-07-009-Id</key><string>5</string>
+    <key>01-07-009</key><string>我。。我叫哈诺。以后请。。请大家多多指教。</string>
+    <key>01-07-010-Id</key><string>3</string>
+    <key>01-07-010</key><string>以后我们就是伙伴了。#平时我们要好好相处，遇到危机时要同心协力，好吗？</string>
+    <key>01-07-011-Id</key><string>5</string>
+    <key>01-07-011</key><string>好。。好的。</string>
+    <key>01-07-012-Id</key><string>6</string>
+    <key>01-07-012</key><string>涨潮的时间也差不多到了，你们可以准备上路了。#我这小子就拜托你们啦！</string>
+    <key>01-07-013-Id</key><string>1</string>
+    <key>01-07-013</key><string>老爹您放心吧！我们走喽！</string>
+
+    <key>01-99-001-Id</key><string>29</string>
+    <key>01-99-001</key><string>可恨啊！#今日先碰上这群棘手的小子在先，又遇上王国海防队，真是天亡我也！啊。。。</string>
+
+</dict>
+</plist>

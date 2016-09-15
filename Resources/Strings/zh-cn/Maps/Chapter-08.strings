@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+
+
+
+
+
+
+
+
+    <key>Title-08</key><string>第八章 王城前的战斗</string>
+
+    <key>Condition-Lose</key><string>索尔死亡</string>
+    <key>Condition-Win</key><string>敌全灭</string>
+
+    <key>08-01-001-Id</key><string>9</string>
+    <key>08-01-001</key><string>看！城堡就在眼前了！</string>
+    <key>08-01-002-Id</key><string>3</string>
+    <key>08-01-002</key><string>可是，我们一路上居然都没遇到敌军，莫非。。。</string>
+    <key>08-01-003-Id</key><string>5</string>
+    <key>08-01-003</key><string>你说对拉，他们都在这里等我们呢！</string>
+    <key>08-01-004-Id</key><string>199</string>
+    <key>08-01-004</key><string>大胆的盗贼，不管你们有多厉害，这里就是你们的葬身之处了！</string>
+    <key>08-01-005-Id</key><string>6</string>
+    <key>08-01-005</key><string>等等！大家听我说，不要再打了！我们不是敌人。。。</string>
+    <key>08-01-006-Id</key><string>199</string>
+    <key>08-01-006</key><string>你们以为这种话我会相信？你们当我是白痴吗？</string>
+    <key>08-01-007-Id</key><string>6</string>
+    <key>08-01-007</key><string>无礼者！好吧，你瞧瞧这是什么！</string>
+    <key>08-01-008-Id</key><string>199</string>
+    <key>08-01-008</key><string>咦？这是。。这是历代王后所拥有的[女神之泪]首饰！这首饰应该是在公主的手中，难道。。。</string>
+    <key>08-01-009-Id</key><string>6</string>
+    <key>08-01-009</key><string>没错，我就是亚克斯王国的公主希莉亚，我以公主之名命令你们立刻收起武器！</string>
+    <key>08-01-010-Id</key><string>199</string>
+    <key>08-01-010</key><string>可。。可是。。殿下您们攻击我军的探察队与士兵，此事证据确凿，为何殿下您会。。。</string>
+    <key>08-01-011-Id</key><string>6</string>
+    <key>08-01-011</key><string>我们和他们间发生了点误会这些士兵极为蛮横，不肯听我说明，只好先把他们打发掉拉！</string>
+    <key>08-01-012-Id</key><string>11</string>
+    <key>08-01-012</key><string>队长，这的确是公主殿下没错！我们先迎接公主进城，余事以后再说。。。</string>
+    <key>08-01-013-Id</key><string>199</string>
+    <key>08-01-013</key><string>这。。这怎么行！陛下亲自吩咐，要我把这些乱党消灭，我若没有做到，就是抵抗王命！</string>
+    <key>08-01-014-Id</key><string>11</string>
+    <key>08-01-014</key><string>可是。。。。</string>
+    <key>08-01-015-Id</key><string>199</string>
+    <key>08-01-015</key><string>不用多说了！谁敢违抗王命，一律杀无赦！弟兄们上啊！</string>
+    <key>08-01-016-Id</key><string>11</string>
+    <key>08-01-016</key><string>公主，你放心！我身为史卡迪家的人，一定会舍命保护你的！</string>
+    <key>08-01-017-Id</key><string>199</string>
+    <key>08-01-017</key><string>洛娜，你竟敢违逆我的命令！你也准备死吧！</string>
+
+    <key>08-02-001-Id</key><string>199</string>
+    <key>08-02-001</key><string>公主殿下。。。。属下也是遵命行事，冒犯之处，请您原谅。。。。啊。。。</string>
+    <key>08-02-002-Id</key><string>6</string>
+    <key>08-02-002</key><string>哎！事情为什么会变成这样。。。。我得去见父王一面，把事情弄个清楚才行。</string>
+    <key>08-02-003-Id</key><string>11</string>
+    <key>08-02-003</key><string>公主殿下，现在宫中情势混乱，请容属下随行，以保护殿下的安全。</string>
+    <key>08-02-004-Id</key><string>6</string>
+    <key>08-02-004</key><string>刚才你说你是史卡迪家的人。。。。可是指骑士世家的史卡迪家族？</string>
+    <key>08-02-005-Id</key><string>11</string>
+    <key>08-02-005</key><string>是的！我史卡迪家的族人世代都担负保护王族的使命，如今虽然我家族只剩下我一个人，属下仍会尽忠职守，誓以性命保护殿下的安全。</string>
+    <key>08-02-006-Id</key><string>6</string>
+    <key>08-02-006</key><string>我明白了，你就跟我来吧。。。。索尔，亚雷斯，以后我还要借重你们的力量，你们也和我一起进城吧！</string>
+    <key>08-02-007-Id</key><string>1</string>
+    <key>08-02-007</key><string>希莉亚。。。。是王国公主？那悠妮的身份又是怎么一回事？</string>
+    <key>08-02-008-Id</key><string>3</string>
+    <key>08-02-008</key><string>很简单，是我们搞错拉。现在该怎么办？</string>
+    <key>08-02-009-Id</key><string>1</string>
+    <key>08-02-009</key><string>事到如今，也只有跟着希莉亚进去看看了。走吧！</string>
+</dict>
+</plist>

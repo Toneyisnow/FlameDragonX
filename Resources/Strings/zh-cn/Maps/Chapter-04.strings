@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+
+
+
+
+
+
+
+
+
+    <key>Title-04</key><string>第四章 塞拉村前</string>
+
+    <key>Condition-Lose</key><string>索尔死亡</string>
+    <key>Condition-Win</key><string>敌全灭</string>
+
+    <key>04-01-001-Id</key><string>6</string>
+    <key>04-01-001</key><string>快到塞拉村拉！抄这条近路很快就到了。怎样？还是带着我比较好吧？</string>
+    <key>04-01-002-Id</key><string>1</string>
+    <key>04-01-002</key><string>老是走这种小道，搞不好会碰上强盗哦！</string>
+    <key>04-01-003-Id</key><string>6</string>
+    <key>04-01-003</key><string>谁说的，这条路隐密的很，只有我才知道。。。</string>
+    <key>04-01-004-Id</key><string>5</string>
+    <key>04-01-004</key><string>看，前面好像有人呢！</string>
+    <key>04-01-005-Id</key><string>40</string>
+    <key>04-01-005</key><string>你们想到塞拉村吗？你们是来干什么的？</string>
+    <key>04-01-006-Id</key><string>1</string>
+    <key>04-01-006</key><string>干你屁事！不要碍路！</string>
+    <key>04-01-007-Id</key><string>40</string>
+    <key>04-01-007</key><string>首领说的没错，果然有人抄小路来偷袭了！</string>
+    <key>04-01-008-Id</key><string>3</string>
+    <key>04-01-008</key><string>什么偷袭？把话讲清楚！</string>
+    <key>04-01-009-Id</key><string>40</string>
+    <key>04-01-009</key><string>少装了！死吧！</string>
+
+    <key>04-02-001-Id</key><string>81</string>
+    <key>04-02-001</key><string>嗷呜！。。是谁在这里大吵大闹？</string>
+    <key>04-02-002-Id</key><string>82</string>
+    <key>04-02-002</key><string>吼。。好象是人类在打架。</string>
+    <key>04-02-003-Id</key><string>83</string>
+    <key>04-02-003</key><string>呼。。好象很有趣，我们去打人少的那一边！</string>
+    <key>04-02-004-Id</key><string>84</string>
+    <key>04-02-004</key><string>赞成！赞成！</string>
+
+    <key>04-03-001-Id</key><string>81</string>
+    <key>04-03-001</key><string>好可怕！不玩了！不玩了！</string>
+
+    <key>04-04-001-Id</key><string>1</string>
+    <key>04-04-001</key><string>奇怪了，在这大陆上到处都遇得上强盗！</string>
+    <key>04-04-002-Id</key><string>6</string>
+    <key>04-04-002</key><string>不对，塞拉村可能出事了！我们赶快赶过去看看！</string>
+    <key>04-04-003-Id</key><string>5</string>
+    <key>04-04-003</key><string>打了一场大战，不休息一下吗？</string>
+    <key>04-04-004-Id</key><string>6</string>
+    <key>04-04-004</key><string>放心，途中有个小村落可以稍事休息。走吧！</string>
+
+</dict>
+</plist>

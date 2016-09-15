@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+
+
+
+
+
+
+
+
+    <key>Title-10</key><string>第十章 洞窟中的激战</string>
+
+    <key>Condition-Lose</key><string>索尔或索菲亚或卡纳恩三世死亡</string>
+    <key>Condition-Win</key><string>敌全灭</string>
+
+    <key>10-01-001-Id</key><string>1</string>
+    <key>10-01-001</key><string>哇塞，好大的洞窟！</string>
+    <key>10-01-002-Id</key><string>3</string>
+    <key>10-01-002</key><string>若没有人提供消息的话还真想不到瀑布后面会有这么一个地方呢！</string>
+    <key>10-01-003-Id</key><string>13</string>
+    <key>10-01-003</key><string>公主殿下，属下已将事情查清楚了，禁卫军统领葛雷和敌方勾结，他想谋害陛下然后自立为王。#事实上，陛下在那一晚遇袭是就已经被掳走了，之后葛雷就伪称陛下在寝宫中养伤，然后假借陛下的名义发号施令。</string>
+    <key>10-01-004-Id</key><string>6</string>
+    <key>10-01-004</key><string>他还想借着我们惹上王国军的机会，利用你们把我除掉，以后他就可以高枕无忧了。</string>
+    <key>10-01-005-Id</key><string>13</string>
+    <key>10-01-005</key><string>都怪属下愚昧。#还好葛雷的一名手下曾替他传迁信件到此地，我们才能找到这个所在，相信陛下可能被监禁在此地。</string>
+    <key>10-01-006-Id</key><string>1</string>
+    <key>10-01-006</key><string>那还等什么？我们快把哪个作怪的家伙找出来痛打一顿，这件事就可以做个了结了。</string>
+    <key>10-01-007-Id</key><string>199</string>
+    <key>10-01-007</key><string>不知死活的家伙们，你们真是天真的可以！</string>
+    <key>10-01-008-Id</key><string>13</string>
+    <key>10-01-008</key><string>你就是幕后主使者吗？#快把陛下交还给我们，不然王国禁卫军是不会放过你的！</string>
+    <key>10-01-009-Id</key><string>199</string>
+    <key>10-01-009</key><string>你是说卡纳恩三世那个老头吗？#别担心，等我把你们送上西天，我会让他和你们在天上相见的。哈哈哈哈！</string>
+    <key>10-01-010-Id</key><string>3</string>
+    <key>10-01-010</key><string>哼，难看的家伙，先打上一场再来说大话吧！</string>
+    <key>10-01-011-Id</key><string>13</string>
+    <key>10-01-011</key><string>敌人数量不少，大家小心应战！#援军很快就会到了，所以大家量力而为，不要太勉强！</string>
+    <key>10-01-012-Id</key><string>199</string>
+    <key>10-01-012</key><string>尽管放马过来吧！#今天你们一个都别想活着出去！哇哈哈哈！</string>
+
+    <key>10-02-001-Id</key><string>201</string>
+    <key>10-02-001</key><string>莱汀大人！#属下来迟了真是罪该万死。。。</string>
+    <key>10-02-002-Id</key><string>13</string>
+    <key>10-02-002</key><string>没关系！#陛下确是被监禁在此，凭着王国禁卫军的名誉，大家要努力作战，将陛下平安救回！</string>
+    <key>10-02-003-Id</key><string>201</string>
+    <key>10-02-003</key><string>遵命！</string>
+
+    <key>10-03-001-Id</key><string>199</string>
+    <key>10-03-001</key><string>。。怎。。怎么可能。。#我居然被你们这些无名小卒给打败了。。主人。。救救我。。</string>
+    <key>10-03-002-Id</key><string>3</string>
+    <key>10-03-002</key><string>少讨饶了！#快告诉我们，你绑架国王惹起这一切事端究竟有何目的？</string>
+    <key>10-03-003-Id</key><string>199</string>
+    <key>10-03-003</key><string>。。为了。。为了得到王家的至宝[黄金徽章]。。那是。。</string>
+    <key>10-03-004-Id</key><string>1</string>
+    <key>10-03-004</key><string>怎样！快说啊！</string>
+    <key>10-03-005-Id</key><string>199</string>
+    <key>10-03-005</key><string>。。飞天的。。战车。。钥匙。。啊。。</string>
+
+    <key>10-04-001-Id</key><string>6</string>
+    <key>10-04-001</key><string>父王，您没事吧！#我好担心。。。</string>
+    <key>10-04-002-Id</key><string>901</string>
+    <key>10-04-002</key><string>乖女儿放心，我平安无事。这可要多谢你的朋友们，不然这回我真的是难逃劫数了。</string>
+    <key>10-04-003-Id</key><string>9</string>
+    <key>10-04-003</key><string>国王陛下，令我们纳闷的是敌方如何要对您下手？#您可知道其中的原因？</string>
+    <key>10-04-004-Id</key><string>901</string>
+    <key>10-04-004</key><string>简单来说，他们是为了王家的至宝[黄金徽章]。</string>
+    <key>10-04-005-Id</key><string>1</string>
+    <key>10-04-005</key><string>黄金徽章？那是什么？</string>
+    <key>10-04-006-Id</key><string>12</string>
+    <key>10-04-006</key><string>这个就让我来说吧。#黄金徽章是亚克斯王家的祖传之宝，据说它有着莫大的神秘力量，所以几代以来都一直小心的收藏着，但是它究竟有什么功用，也一直都没有人知道。</string>
+    <key>10-04-007-Id</key><string>901</string>
+    <key>10-04-007</key><string>他们把我绑到这里来，就是要逼我交出黄金徽章。#后来我被拷问得受不了了，终于告诉他们黄金徽章的所在，还连累了执掌神殿的索非亚。。。</string>
+    <key>10-04-008-Id</key><string>9</string>
+    <key>10-04-008</key><string>原来如此。#约拿果然料得没错。。。</string>
+    <key>10-04-009-Id</key><string>12</string>
+    <key>10-04-009</key><string>贤者约拿？你认识他吗？</string>
+    <key>10-04-010-Id</key><string>9</string>
+    <key>10-04-010</key><string>我和他算是旧识了，这回就是他要我到王城和他碰面，才会遇上这些事情的。</string>
+    <key>10-04-011-Id</key><string>12</string>
+    <key>10-04-011</key><string>前几天他也曾经来找我，他说几天后会有一个朋友来王城找他，希望我能把黄金徽章借给他，看来他说的就是你了。</string>
+    <key>10-04-012-Id</key><string>9</string>
+    <key>10-04-012</key><string>你果然见过约拿！#那么。。黄金徽章的事，你能够答应吗？</string>
+    <key>10-04-013-Id</key><string>12</string>
+    <key>10-04-013</key><string>这要看陛下的决定。。。</string>
+    <key>10-04-014-Id</key><string>901</string>
+    <key>10-04-014</key><string>没关系，我早已听说过贤者约拿的大名，他要借用黄金徽章，一定是有重要的用途。#索非亚，等我们回城后，便把黄金徽章交给他。</string>
+    <key>10-04-015-Id</key><string>12</string>
+    <key>10-04-015</key><string>陛下，我有一个请求，希望您也能一并答应。。。</string>
+    <key>10-04-016-Id</key><string>901</string>
+    <key>10-04-016</key><string>什么请求？</string>
+    <key>10-04-017-Id</key><string>12</string>
+    <key>10-04-017</key><string>据约拿所言，最近有邪恶之徒正在进行一桩阴谋，他自己先动身去调查此事，但希望我也能前去帮忙，贡献我自己对神的虔诚与神圣的力量，来阻止邪徒的恶行。#所以我可能不能再担任神殿司祭一职，请陛下您答应。。。</string>
+    <key>10-04-018-Id</key><string>901</string>
+    <key>10-04-018</key><string>这样吗？#好吧，我也不能勉强你。。。。你就去吧！要好好保重！</string>
+    <key>10-04-019-Id</key><string>12</string>
+    <key>10-04-019</key><string>感激不尽！#愿圣灵与陛下同在！</string>
+    <key>10-04-020-Id</key><string>6</string>
+    <key>10-04-020</key><string>父王，我也有一个请求。。。</string>
+    <key>10-04-021-Id</key><string>901</string>
+    <key>10-04-021</key><string>希莉亚，难道你也。。。</string>
+    <key>10-04-022-Id</key><string>6</string>
+    <key>10-04-022</key><string>父王，这些天来，我都和这些朋友一起冒险，觉的自己长大了不少。#如今邪徒的阴谋已经威胁到我们亚克斯王国，我身为王国第一公主跟着他们去冒险，多少也可以尽一点责任。。。</string>
+    <key>10-04-023-Id</key><string>901</string>
+    <key>10-04-023</key><string>。。希莉亚，你瘦了不少，这些天来吃了不少苦吧？</string>
+    <key>10-04-024-Id</key><string>6</string>
+    <key>10-04-024</key><string>不会啊，大家都对我很好，和敌人战斗时，索尔和亚雷斯也总是当在我面前，不让我受到伤害。</string>
+    <key>10-04-025-Id</key><string>901</string>
+    <key>10-04-025</key><string>这样吗？#索尔，亚雷斯，多谢你们照顾我的女儿，如果时间充裕的话，希望能有机会好好谢谢你们。</string>
+    <key>10-04-026-Id</key><string>3</string>
+    <key>10-04-026</key><string>多谢陛下，我们不敢当。</string>
+    <key>10-04-027-Id</key><string>1</string>
+    <key>10-04-027</key><string>是呀！#想当初我们就没料到希莉亚会是公主。。</string>
+    <key>10-04-028-Id</key><string>901</string>
+    <key>10-04-028</key><string>哈哈哈！希莉亚，你的保密功夫还真到家。#我答应你的请求，不过为了你的安全起见，由禁卫队长莱汀与你随行，你没有异议吧？</string>
+    <key>10-04-029-Id</key><string>6</string>
+    <key>10-04-029</key><string>没有，没有！谢谢父王！</string>
+    <key>10-04-030-Id</key><string>13</string>
+    <key>10-04-030</key><string>属下必以生命保护公主，请陛下放心。</string>
+    <key>10-04-031-Id</key><string>901</string>
+    <key>10-04-031</key><string>好！#其他的事，等我们回到城中再说，我们赶快离开这个阴森的洞窟。</string>
+    <key>10-04-032-Id</key><string>13</string>
+    <key>10-04-032</key><string>属下这就安排禁卫军前来迎接。#诸位，我们走吧！</string>
+    <key>10-04-033-Id</key><string>3</string>
+    <key>10-04-033</key><string>看来事情越闹越大了。#索尔，这场热闹我们还要继续凑下去吗？</string>
+    <key>10-04-034-Id</key><string>1</string>
+    <key>10-04-034</key><string>不管怎样，先找到贤者约拿治好悠妮的失忆症再说。#亚雷斯，你会帮我吧！</string>
+    <key>10-04-035-Id</key><string>3</string>
+    <key>10-04-035</key><string>那还用说！我们走吧！</string>
+
+    <key>10-05-001-Id</key><string>199</string>
+    <key>10-05-001</key><string>时间也差不多了，来人哪，把卡纳恩三世杀了！</string>
+</dict>
+</plist>

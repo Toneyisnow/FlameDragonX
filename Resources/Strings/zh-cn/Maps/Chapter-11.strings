@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+
+
+
+
+
+
+
+
+    <key>Title-11</key><string>第十一章 幻之森林</string>
+
+    <key>Condition-Lose</key><string>索尔死亡</string>
+    <key>Condition-Win</key><string>敌全灭</string>
+
+    <key>11-01-001-Id</key><string>9</string>
+    <key>11-01-001</key><string>索非亚，你确定约拿是往这里走的吗？ </string>
+    <key>11-01-002-Id</key><string>12</string>
+    <key>11-01-002</key><string>他说他会一路往北，经由冰海的冰原到黑森林去，走这段行程的话，我想这条路应该不会错。。 </string>
+    <key>11-01-003-Id</key><string>5</string>
+    <key>11-01-003</key><string>不知怎的，我总觉的气氛不大对。。#会不会是走错路了？</string>
+    <key>11-01-004-Id</key><string>12</string>
+    <key>11-01-004</key><string>恩。。这附近的景色是看起来颇为陌生。#早知道不应该抄近路的。。。</string>
+    <key>11-01-005-Id</key><string>11</string>
+    <key>11-01-005</key><string>小心！#附近有人！</string>
+    <key>11-01-006-Id</key><string>101</string>
+    <key>11-01-006</key><string>吼呜！。。#我看到前面有人类！怎么办？</string>
+    <key>11-01-007-Id</key><string>102</string>
+    <key>11-01-007</key><string>呼。。#知道这里有宝藏的应该只有我们啊！</string>
+    <key>11-01-008-Id</key><string>103</string>
+    <key>11-01-008</key><string>吼。。#管他的，妨隘我们的都得死！</string>
+    <key>11-01-009-Id</key><string>104</string>
+    <key>11-01-009</key><string>对，#先宰了他们再说！</string>
+    <key>11-01-010-Id</key><string>9</string>
+    <key>11-01-010</key><string>麻烦了，这种兽人低智商又不讲理，我们准备应战吧！</string>
+    <key>11-01-011-Id</key><string>3</string>
+    <key>11-01-011</key><string>不过，他们提到的宝物是什么？</string>
+    <key>11-01-012-Id</key><string>9</string>
+    <key>11-01-012</key><string>不知道。#此地应该离艾尔夫森林不远，可是这里的景色我却从未见过。。。</string>
+    <key>11-01-013-Id</key><string>14</string>
+    <key>11-01-013</key><string>咦？你不是贝克威吗？#你怎么会跑到这里来了？</string>
+    <key>11-01-014-Id</key><string>9</string>
+    <key>11-01-014</key><string>你是以前住在我家隔壁的珊嘛！#好久不见拉，听说你后来跟着大法师穆勒学法术去了。。#对了，你在这里干什么？</string>
+    <key>11-01-015-Id</key><string>14</string>
+    <key>11-01-015</key><string>这里就是我们精灵族历代长老的藏宝之处，以前叫做[迷雾森林]的地方。。 </string>
+    <key>11-01-016-Id</key><string>9</string>
+    <key>11-01-016</key><string>对，我想起来了。。#这里一向有大雾笼罩，我从小就被告戒不准接近。。#这又怎么了？</string>
+    <key>11-01-017-Id</key><string>14</string>
+    <key>11-01-017</key><string>最近天地异变，千年来保护此地的结界不知怎的失效了，这些兽人的知此地有宝物，就伺机前来抢夺。</string>
+    <key>11-01-018-Id</key><string>9</string>
+    <key>11-01-018</key><string>有这种事？</string>
+    <key>11-01-019-Id</key><string>101</string>
+    <key>11-01-019</key><string>吼。。#原来这些人都是你带来的！#都给我一起杀了！</string>
+    <key>11-01-020-Id</key><string>14</string>
+    <key>11-01-020</key><string>贝克威，和我一起保护这些宝物吧！#至少不要让他们落入兽人手中。。。</string>
+    <key>11-01-021-Id</key><string>9</string>
+    <key>11-01-021</key><string>可是我们还要赶路。。。</string>
+    <key>11-01-022-Id</key><string>1</string>
+    <key>11-01-022</key><string>没关系，趁此机会活动活动筋骨，也没什么不好啊！</string>
+    <key>11-01-023-Id</key><string>9</string>
+    <key>11-01-023</key><string>谢了，索尔！#珊，你要多小心点！</string>
+    <key>11-01-024-Id</key><string>14</string>
+    <key>11-01-024</key><string>不要紧，我躲在你后面就可以了，我知道你会保护我的！</string>
+    <key>11-01-025-Id</key><string>9</string>
+    <key>11-01-025</key><string>说不过你。。。。#好！大家上吧！</string>
+
+    <key>11-02-001-Id</key><string>14</string>
+    <key>11-02-001</key><string>有赖各位的帮助，终于把这些兽人驱离此地。。。。#我代表精灵族谢谢各位。</string>
+    <key>11-02-002-Id</key><string>3</string>
+    <key>11-02-002</key><string>小事一桩。#对了，贝克威先生，你难得遇见一个童年旧友，不留下来和她。。。。#好好聚聚吗？</string>
+    <key>11-02-003-Id</key><string>9</string>
+    <key>11-02-003</key><string>约拿嘱咐的事情非常紧急，虽然这艾尔夫森林是我的家乡，我想我没时间在次停留。。</string>
+    <key>11-02-004-Id</key><string>14</string>
+    <key>11-02-004</key><string>非常紧急的事？#快告诉我！一定很有趣吧！</string>
+    <key>11-02-005-Id</key><string>9</string>
+    <key>11-02-005</key><string>珊！#这是很正经的事，可不是小孩时代的玩意。。。</string>
+    <key>11-02-006-Id</key><string>14</string>
+    <key>11-02-006</key><string>什么！#你以为我在开玩笑！#好，我就和你一起去一趟，看看到底是什么大事！</string>
+    <key>11-02-007-Id</key><string>9</string>
+    <key>11-02-007</key><string>别乱来！#这趟旅程相当危险，你还是乖乖呆在这里。。。</string>
+    <key>11-02-008-Id</key><string>14</string>
+    <key>11-02-008</key><string>既然旅程危险，我就不会担心你吗？#至少我也是大法师穆勒的高徒啊！</string>
+    <key>11-02-009-Id</key><string>9</string>
+    <key>11-02-009</key><string>哎！说不过你。。。。#反正你在家乡八成也一样不安分，就跟着我去好拉！</string>
+    <key>11-02-010-Id</key><string>14</string>
+    <key>11-02-010</key><string>太棒了，谢谢你！#我叫做珊，请大家以后多多指教！</string>
+    <key>11-02-011-Id</key><string>1</string>
+    <key>11-02-011</key><string>欢迎加入！#那么，现在请你当向导带我们走过这片森林吧！</string>
+    <key>11-02-012-Id</key><string>14</string>
+    <key>11-02-012</key><string>没问题，大家跟我来！</string>
+
+
+
+</dict>
+</plist>

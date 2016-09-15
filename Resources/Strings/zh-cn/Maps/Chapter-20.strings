@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+
+
+
+
+
+
+
+
+
+    <key>Title-20</key><string>第二十章  死亡般的沉寂</string>
+    <key>Condition-Lose</key><string>索尔死亡</string>
+    <key>Condition-Win</key><string>敌全灭</string>
+
+    <key>20-01-001-Id</key><string>21</string>
+    <key>20-01-001</key><string>咦！一阵子没来这里，沼泽的面积好象又变大了。。这里本来应该还是森林的。</string>
+    <key>20-01-002-Id</key><string>3</string>
+    <key>20-01-002</key><string>沼泽会吞食森林？这种事我可没听过。</string>
+    <key>20-01-003-Id</key><string>12</string>
+    <key>20-01-003</key><string>这个死之沼泽是全大陆邪气最中的地方，什么事情都有可能大声，大家要特别小心。。。</string>
+    <key>20-01-004-Id</key><string>16</string>
+    <key>20-01-004</key><string>安静！我听到前面有打斗声！</string>
+    <key>20-01-005-Id</key><string>23</string>
+    <key>20-01-005</key><string>可恶，看来传闻果然是真的。。。</string>
+    <key>20-01-006-Id</key><string>201</string>
+    <key>20-01-006</key><string>我还是不能相信，这世界上居然有看不见的怪物！</string>
+    <key>20-01-007-Id</key><string>202</string>
+    <key>20-01-007</key><string>你才刚被咬了一口而已，接受事实吧！</string>
+    <key>20-01-008-Id</key><string>51</string>
+    <key>20-01-008</key><string>嘿，认命吧！谁教你们误入这片沼泽！</string>
+    <key>20-01-009-Id</key><string>52</string>
+    <key>20-01-009</key><string>首领有命，凡是进入这片沼泽的都得死！</string>
+    <key>20-01-010-Id</key><string>203</string>
+    <key>20-01-010</key><string>谢多，我们现在该怎么办？</string>
+    <key>20-01-011-Id</key><string>23</string>
+    <key>20-01-011</key><string>。。。跟他们拼了！</string>
+    <key>20-01-012-Id</key><string>51</string>
+    <key>20-01-012</key><string>那你们就受死吧！</string>
+    <key>20-01-013-Id</key><string>5</string>
+    <key>20-01-013</key><string>从他们的话听来，好象是遇到了看不见的隐形怪物呢！</string>
+    <key>20-01-014-Id</key><string>21</string>
+    <key>20-01-014</key><string>有这种事？这对我们度过此地时可是一大威胁，恩。。。。 </string>
+    <key>20-01-015-Id</key><string>3</string>
+    <key>20-01-015</key><string>不如我们现在就出去和他们携手作战，强行越过这沼泽，同时也摸清楚这隐性怪物的底细。</string>
+    <key>20-01-016-Id</key><string>1</string>
+    <key>20-01-016</key><string>我赞成！坐视无辜旅人被敌方攻击，这可不是我们的一贯作风！</string>
+    <key>20-01-017-Id</key><string>21</string>
+    <key>20-01-017</key><string>既然如此，我们就上阵吧！不过对手中有看不见的家伙，大家要谨慎些！</string>
+
+
+    <key>20-02-001-Id</key><string>21</string>
+    <key>20-02-001</key><string>这虽是一场苦战，但感谢神庇佑我们获得最后的胜利。#对了，你们是怎么碰上这件怪事的？</string>
+    <key>20-02-002-Id</key><string>23</string>
+    <key>20-02-002</key><string>我们在行经此地时，忽然就遭到这些家伙和隐形的沼泽怪物的攻击，幸好各位赶来援助，不然我们大概已经不明不白的死在这里了。</string>
+    <key>20-02-003-Id</key><string>22</string>
+    <key>20-02-003</key><string>为何那些家伙要封锁死之沼泽？想要阻止我们前往北方吗？</string>
+    <key>20-02-004-Id</key><string>201</string>
+    <key>20-02-004</key><string>可能和来路不明的黑暗军进攻「圣灵之塔」一事有关。。。。</string>
+    <key>20-02-005-Id</key><string>9</string>
+    <key>20-02-005</key><string>什么？真有此事？</string>
+    <key>20-02-006-Id</key><string>201</string>
+    <key>20-02-006</key><string>是的，我们这一支精灵族住要亚述森林，世代负责守护圣地。最近季节的黑暗军似想进攻圣灵之塔，长老深恐我们的兵力抵挡不住，所以派遣我们向哈斯米尔求救，没想到地方已在此布下陷阱。。 </string>
+    <key>20-02-007-Id</key><string>14</string>
+    <key>20-02-007</key><string>圣灵之塔究竟有什么秘密，值得那些家伙拼命进攻？</string>
+    <key>20-02-008-Id</key><string>201</string>
+    <key>20-02-008</key><string>我们也不知道，因为那里已有数百年没人进去过了。。。。不过长老深信黑暗军一旦攻占圣灵之塔，后果一定不堪设想，所以严令我们务必死守。</string>
+    <key>20-02-009-Id</key><string>9</string>
+    <key>20-02-009</key><string>原来如此。哈斯米尔也遭到敌方死伤惨重，救兵可以不必去求了，我们这就去亚述森林增援。</string>
+    <key>20-02-010-Id</key><string>201</string>
+    <key>20-02-010</key><string>谢谢你们！这样我们就可以放心的回去覆命了！</string>
+    <key>20-02-011-Id</key><string>21</string>
+    <key>20-02-011</key><string>恩，看来你似乎是个忍者，这个职业现在已经不多见了。。。。你往后有何打算？</string>
+    <key>20-02-012-Id</key><string>23</string>
+    <key>20-02-012</key><string>我在这森林中隐居多年，这些年来的和平生活，让我以为这一身技艺已经没有用了，现在我发现这种想法好象是错了。。如果你们不介意的话，我愿意加入你们，与黑暗军周旋到底！</string>
+    <key>20-02-013-Id</key><string>3</string>
+    <key>20-02-013</key><string>与黑暗军对阵，人手再多也不会嫌够的。欢迎加入！</string>
+
+
+    <key>20-03-001-Id</key><string>24</string>
+    <key>20-03-001</key><string>嘎吼吱！希哩呼咯噜。。。</string>
+    <key>20-03-002-Id</key><string>22</string>
+    <key>20-03-002</key><string>这不是下等魔族么？怎么会在此出现？</string>
+    <key>20-03-003-Id</key><string>21</string>
+    <key>20-03-003</key><string>看起来好象没有敌意的样子，只可惜我不懂魔族的语言。。。。 </string>
+    <key>20-03-004-Id</key><string>2</string>
+    <key>20-03-004</key><string>你说什么？我听不清楚，稍等一下。</string>
+    <key>20-03-005-Id</key><string>24</string>
+    <key>20-03-005</key><string>嘎呼吱！希哩呼咯噜。。。</string>
+    <key>20-03-006-Id</key><string>2</string>
+    <key>20-03-006</key><string>恩，恩。。。。我明白了，我会向他们替你求情的。</string>
+    <key>20-03-007-Id</key><string>21</string>
+    <key>20-03-007</key><string>悠妮，你懂它们的话？</string>
+    <key>20-03-008-Id</key><string>2</string>
+    <key>20-03-008</key><string>是的，我听得懂他在说些什么，不过我不知道为何我听的懂。。。</string>
+    <key>20-03-009-Id</key><string>21</string>
+    <key>20-03-009</key><string>没关系，悠妮小姐，他和你说了些什么？</string>
+    <key>20-03-010-Id</key><string>2</string>
+    <key>20-03-010</key><string>他说他叫达克塞，是下等魔族战士，因为对首领的命令产生了怀疑，而被处以监禁的刑法，原先是由「死亡骷髅」所看管，后来我们打到了负责放手死之沼泽的敌军，他才乘乱逃了出来。</string>
+    <key>20-03-011-Id</key><string>21</string>
+    <key>20-03-011</key><string>恶魔族也牵涉其中吗？这比我想象的还麻烦。。。。那么，这位达克塞先生对我们有何指教呢？</string>
+    <key>20-03-012-Id</key><string>2</string>
+    <key>20-03-012</key><string>他说魔族已遭人以某种方式操纵，他希望能加入我们一行，拯救恶魔族免于毁灭的命运。</string>
+    <key>20-03-013-Id</key><string>22</string>
+    <key>20-03-013</key><string>恶魔族能够信任吗？何况又是下等的恶魔。。。。</string>
+    <key>20-03-014-Id</key><string>1</string>
+    <key>20-03-014</key><string>没关系！只要有新对抗黑暗军者，都可以加入我们一行！我们要先能相信别人，才能得到别人的信任。不是吗？</string>
+    <key>20-03-015-Id</key><string>21</string>
+    <key>20-03-015</key><string>遗憾的是，现在没时间欢迎新人了，事态紧急，我们得立刻赶往亚述森林。</string>
+    <key>20-03-016-Id</key><string>1</string>
+    <key>20-03-016</key><string>没问题！我们上路罗！</string>
+</dict>
+</plist>

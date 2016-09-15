@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+
+
+
+
+
+
+
+
+
+    <key>Title-02</key><string>第二章  罗德镇</string>
+    <key>Condition-Lose</key><string>索尔死亡 或 村民全灭</string>
+    <key>Condition-Win</key><string>敌全灭</string>
+
+    <key>02-01-001-Id</key><string>3</string>
+    <key>02-01-001</key><string>我们已经抵达罗德阵了。听说这里是沿岸最繁荣的城镇，我们可以在这里歇一下，顺便到酒店里打听一下消息。。。</string>
+    <key>02-01-002-Id</key><string>1</string>
+    <key>02-01-002</key><string>亚雷斯，我看你的情报有误，这里连半个人都没有，倒像是座鬼城！</string>
+    <key>02-01-003-Id</key><string>2</string>
+    <key>02-01-003</key><string>我好怕。。。</string>
+    <key>02-01-004-Id</key><string>5</string>
+    <key>02-01-004</key><string>这可怪了，上次我和老爹来这里买酒的时候，镇上还热闹得很啊！怎么会。。。</string>
+
+    <key>02-01-006-Id</key><string>91</string>
+    <key>02-01-006</key><string>啊！强盗来啦！快跑啊！</string>
+    <key>02-01-007-Id</key><string>1</string>
+    <key>02-01-007</key><string>等等！我们不是海盗！</string>
+    <key>02-01-008-Id</key><string>92</string>
+    <key>02-01-008</key><string>你们不是海盗，那你们是来干什么的？</string>
+    <key>02-01-009-Id</key><string>3</string>
+    <key>02-01-009</key><string>我们不过是路过此镇，想在镇上休息一下而已！请把事情说清楚，说不定我可以助各位一臂之力！</string>
+    <key>02-01-010-Id</key><string>91</string>
+    <key>02-01-010</key><string>哎？你们这些小毛头能做什么？穷凶极恶的海盗团预告要在此时洗劫此镇，镇上的人都跑光了，我们是回来多带走一些财物的，马上也要逃离此地。你们也快逃吧，要是碰上了那群海盗就糟了！</string>
+    <key>02-01-011-Id</key><string>4</string>
+    <key>02-01-011</key><string>。。。！！！</string>
+
+    <key>02-01-012-Id</key><string>21</string>
+    <key>02-01-012</key><string>呀呼！我们照预告准时到达！咦，居然还有不怕死的没走？</string>
+    <key>02-01-013-Id</key><string>92</string>
+    <key>02-01-013</key><string>啊！强盗来了！完啦！</string>
+    <key>02-01-014-Id</key><string>21</string>
+    <key>02-01-014</key><string>我们不是说过，我们来的时候不准有人留在镇上吗？你们是活得不耐烦了！</string>
+    <key>02-01-015-Id</key><string>91</string>
+    <key>02-01-015</key><string>。。。啊，强盗大人，请放我们一马，以后不敢了。。。</string>
+    <key>02-01-016-Id</key><string>3</string>
+    <key>02-01-016</key><string>这些强盗真猖狂啊！索尔，我们来教训他们一顿！</string>
+    <key>02-01-017-Id</key><string>1</string>
+    <key>02-01-017</key><string>什么教训！不给这些家伙悔改的机会，把他们全宰了再说！</string>
+    <key>02-01-018-Id</key><string>5</string>
+    <key>02-01-018</key><string>我赞成！</string>
+    <key>02-01-019-Id</key><string>21</string>
+    <key>02-01-019</key><string>哎呀！那群小子说要把咱们全宰了呢！</string>
+    <key>02-01-020-Id</key><string>22</string>
+    <key>02-01-020</key><string>好可怕啊！我好怕！</string>
+    <key>02-01-021-Id</key><string>21</string>
+    <key>02-01-021</key><string>既然如此，我们就陪他们玩玩！上！</string>
+
+    <key>02-02-001-Id</key><string>31</string>
+    <key>02-02-001</key><string>咦？弟兄们在干什么？他们早该把事情干好了吧？</string>
+    <key>02-02-002-Id</key><string>32</string>
+    <key>02-02-002</key><string>好像和别人打得正起劲呢！</string>
+    <key>02-02-003-Id</key><string>31</string>
+    <key>02-02-003</key><string>我看到有漏网之鱼向这边逃来呢！我们先打发他们再说。</string>
+    <key>02-02-004-Id</key><string>92</string>
+    <key>02-02-004</key><string>救命啊！这里又有强盗出现了！</string>
+    <key>02-02-005-Id</key><string>3</string>
+    <key>02-02-005</key><string>可恶，没想到敌人竟然分兵两路。。。</string>
+    <key>02-02-006-Id</key><string>1</string>
+    <key>02-02-006</key><string>不管怎样，得想办法援救那些无辜的村民。</string>
+    <key>02-02-007-Id</key><string>3</string>
+    <key>02-02-007</key><string>怎么办呢？索尔。。。</string>
+    <key>02-02-008-Id</key><string>1</string>
+    <key>02-02-008</key><string>啊，你们，往东南边逃吧！</string>
+    <key>02-02-009-Id</key><string>91</string>
+    <key>02-02-009</key><string>好的！大伙往东南边逃吧！</string>
+
+    <key>02-03-001-Id</key><string>92</string>
+    <key>02-03-001</key><string>谢谢各位的帮助，让我们逃过一劫！</string>
+    <key>02-03-101-Id</key><string>92</string>
+    <key>02-03-101</key><string>谢谢各位的帮助，这是一点小意思，请收下！</string>
+    <key>02-03-002-Id</key><string>6</string>
+    <key>02-03-002</key><string>好棒！好棒！打的真漂亮！</string>
+    <key>02-03-003-Id</key><string>1</string>
+    <key>02-03-003</key><string>咦？那里蹦出来的野丫头？</string>
+    <key>02-03-004-Id</key><string>6</string>
+    <key>02-03-004</key><string>说话客气点！我可不是野丫头。刚才你们在打的时候，我一直都躲在屋子里看，真是看了一场好戏。</string>
+    <key>02-03-005-Id</key><string>3</string>
+    <key>02-03-005</key><string>小姐，你的胆量可真大。有什么我们能效劳的吗？</string>
+    <key>02-03-006-Id</key><string>6</string>
+    <key>02-03-006</key><string>也没什么啦，只是想问问你们，你们这么好的身手，应该不只是来这里打强盗的吧？</string>
+    <key>02-03-007-Id</key><string>1</string>
+    <key>02-03-007</key><string>是这样的，我们想医治这个女孩子的失忆症，并且送她回家。</string>
+    <key>02-03-008-Id</key><string>6</string>
+    <key>02-03-008</key><string>这是怎么一回事？</string>
+    <key>02-03-009-Id</key><string>1</string>
+    <key>02-03-009</key><string>简单的来说，我们在森林捡到了悠妮这女孩。。。。</string>
+    <key>02-03-010-Id</key><string>6</string>
+    <key>02-03-010</key><string>捡？</string>
+    <key>02-03-011-Id</key><string>1</string>
+    <key>02-03-011</key><string>不对不对，是找到了悠妮，虽然失去了记忆，但是我们相信她是这马拉大陆的人，甚至是某王国的公主也说不定，因此设法渡海送她回来。</string>
+    <key>02-03-012-Id</key><string>6</string>
+    <key>02-03-012</key><string>奇怪了，这大陆上就只有一个亚可斯王国，而这个王国的公主就。。。。</string>
+    <key>02-03-013-Id</key><string>3</string>
+    <key>02-03-013</key><string>就怎样？</string>
+    <key>02-03-014-Id</key><string>6</string>
+    <key>02-03-014</key><string>没，没什么啦。这样吧，我知道那里有人能医治失忆症，我可以带你们去，不过。。。要附带一个条件哦。</string>
+    <key>02-03-015-Id</key><string>1</string>
+    <key>02-03-015</key><string>先说来听，我们会尽量想办法的！</string>
+    <key>02-03-016-Id</key><string>6</string>
+    <key>02-03-016</key><string>其实也很简单，就是要带我一起去。</string>
+    <key>02-03-017-Id</key><string>3</string>
+    <key>02-03-017</key><string>这。。。。。</string>
+    <key>02-03-018-Id</key><string>1</string>
+    <key>02-03-018</key><string>小姐，这可不是好玩的，你一个年轻女孩子跟着我们，恐怕会倒大霉哦！</string>
+    <key>02-03-019-Id</key><string>6</string>
+    <key>02-03-019</key><string>小看我的本领，你才准备倒大霉呢。怎样？接不接受我的条件啊？</string>
+    <key>02-03-020-Id</key><string>5</string>
+    <key>02-03-020</key><string>索尔大哥，现在强盗也不知何时会再来，把一个女孩子就这样丢在这里太危险了，我看还是先带他离开的好。</string>
+    <key>02-03-021-Id</key><string>3</string>
+    <key>02-03-021</key><string>是啊，索尔，悠妮的事必须尽快解决，大不了我们多为她操分心就是啦。</string>
+    <key>02-03-022-Id</key><string>1</string>
+    <key>02-03-022</key><string>好吧！不过小姐你给我听好，你是负责带路的，别给我们添麻烦。知道吗？</string>
+    <key>02-03-023-Id</key><string>6</string>
+    <key>02-03-023</key><string>没问题！走吧走吧，我来带路！往这边！</string>
+    <key>02-03-024-Id</key><string>1</string>
+    <key>02-03-024</key><string>真是没办法，哎！</string>
+
+    <key>02-91-001-Id</key><string>91</string>
+    <key>02-91-001</key><string>啊。。。。</string>
+    <key>02-92-001-Id</key><string>92</string>
+    <key>02-92-001</key><string>啊。。啊。。。。</string>
+    <key>02-93-001-Id</key><string>93</string>
+    <key>02-93-001</key><string>啊。。。。</string>
+    <key>02-94-001-Id</key><string>94</string>
+    <key>02-94-001</key><string>啊。。。啊啊。。。</string>
+    <key>02-95-001-Id</key><string>95</string>
+    <key>02-95-001</key><string>啊啊。。。。。。</string>
+    <key>02-96-001-Id</key><string>96</string>
+    <key>02-96-001</key><string>啊。。。。</string>
+
+
+
+
+
+</dict>
+</plist>

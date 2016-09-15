@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+
+
+
+
+
+
+
+    <key>Title-06</key><string>第六章 普里兹港</string>
+
+    <key>Condition-Lose</key><string>索尔死亡</string>
+    <key>Condition-Win</key><string>敌全灭</string>
+
+    <key>06-01-001-Id</key><string>8</string>
+    <key>06-01-001</key><string>奇怪了，约拿好象不在城里，只好先来这里找找看了。。</string>
+    <key>06-01-002-Id</key><string>3</string>
+    <key>06-01-002</key><string>前面好象有士兵在巡逻，大家要小心点！</string>
+    <key>06-01-003-Id</key><string>107</string>
+    <key>06-01-003</key><string>喂！你们站住！这里不是禁止进入了吗？你们来这里干什么？</string>
+    <key>06-01-004-Id</key><string>5</string>
+    <key>06-01-004</key><string>真抱歉，我们是来找人的。。</string>
+    <key>06-01-005-Id</key><string>107</string>
+    <key>06-01-005</key><string>找什么找，这里什么人都没有！回去回去！。。。。咦？等等，你们通通给我站住！</string>
+    <key>06-01-006-Id</key><string>1</string>
+    <key>06-01-006</key><string>又怎么了？</string>
+    <key>06-01-007-Id</key><string>107</string>
+    <key>06-01-007</key><string>你是艾迪沙林斯吧！自从上次你们一伙抢劫了维克勒城之后，我们一直在找你，想不到你居然跑去当别人的护卫了！</string>
+    <key>06-01-008-Id</key><string>51</string>
+    <key>06-01-008</key><string>。。。。。。。。</string>
+    <key>06-01-009-Id</key><string>107</string>
+    <key>06-01-009</key><string>所以啊，我看你还是乖乖束手就擒，跟我们回去，这样对你比较好。恩？</string>
+    <key>06-01-010-Id</key><string>8</string>
+    <key>06-01-010</key><string>等一下！护卫是爸爸派给我的，你们要抓走他，叫我回去怎么交代？</string>
+    <key>06-01-011-Id</key><string>107</string>
+    <key>06-01-011</key><string>那可不干我们的事！再无理取闹的话，就连你也一起逮捕！</string>
+    <key>06-01-012-Id</key><string>8</string>
+    <key>06-01-012</key><string>你敢！</string>
+    <key>06-01-013-Id</key><string>199</string>
+    <key>06-01-013</key><string>那边在吵什么吵？</string>
+    <key>06-01-014-Id</key><string>107</string>
+    <key>06-01-014</key><string>队长，我在这群人中发现一个通缉犯，但他的主人拒绝让我们逮捕他。</string>
+    <key>06-01-015-Id</key><string>199</string>
+    <key>06-01-015</key><string>那就全部抓起来！拒捕者格杀勿论！</string>
+    <key>06-01-016-Id</key><string>3</string>
+    <key>06-01-016</key><string>看来我们又有麻烦了，索尔，怎么办？</string>
+    <key>06-01-017-Id</key><string>1</string>
+    <key>06-01-017</key><string>这些士兵也太蛮横了！亚雷斯，我们上！</string>
+    <key>06-01-018-Id</key><string>6</string>
+    <key>06-01-018</key><string>这下子想不打都不行喽！</string>
+
+    <key>06-02-001-Id</key><string>199</string>
+    <key>06-02-001</key><string>看你们的身手不象是普通人，你们到底是谁？</string>
+    <key>06-02-002-Id</key><string>1</string>
+    <key>06-02-002</key><string>刚刚说过了，我们只是普通的旅行者罢了。</string>
+    <key>06-02-003-Id</key><string>199</string>
+    <key>06-02-003</key><string>不可能！你们绝对不是普通的旅行者！</string>
+    <key>06-02-004-Id</key><string>1</string>
+    <key>06-02-004</key><string>信不信由你了！</string>
+    <key>06-02-005-Id</key><string>199</string>
+    <key>06-02-005</key><string>可恨！这些人还真强，弟兄们再撑一会儿莱汀大人就来了，再撑一会儿！</string>
+    <key>06-02-006-Id</key><string>1</string>
+    <key>06-02-006</key><string>看他们的样子似乎还有援军！大家，先把小队长打倒吧！</string>
+
+    <key>06-03-001-Id</key><string>163</string>
+    <key>06-03-001</key><string>小队长，这是怎么一回事？</string>
+    <key>06-03-002-Id</key><string>199</string>
+    <key>06-03-002</key><string>莱。。莱汀大人！这一群匪徒公然拒捕，他们战技高超，我们正尝试要那下他。。 </string>
+    <key>06-03-003-Id</key><string>163</string>
+    <key>06-03-003</key><string>原来不过是些匪徒而已，通通给我抓起来！</string>
+
+    <key>06-04-001-Id</key><string>199</string>
+    <key>06-04-001</key><string>你。。你们不是一般的匪徒，你们。。到底有何目的？。。</string>
+    <key>06-04-002-Id</key><string>1</string>
+    <key>06-04-002</key><string>这一切只是误会而已，我们。。。。</string>
+
+    <key>06-05-001-Id</key><string>9</string>
+    <key>06-05-001</key><string>天啊！你们居然攻击王国派来的调查队，还把小队长给杀了，难道你们不怕被全王国军通缉吗？</string>
+    <key>06-05-002-Id</key><string>6</string>
+    <key>06-05-002</key><string>这只是一场误会，可是他们不肯听我们解释。。。</string>
+    <key>06-05-003-Id</key><string>9</string>
+    <key>06-05-003</key><string>哎，现在说什么都没有用啦！你们到底是来干什么的？</string>
+    <key>06-05-004-Id</key><string>8</string>
+    <key>06-05-004</key><string>我们来此找贤者约拿。。</string>
+    <key>06-05-005-Id</key><string>9</string>
+    <key>06-05-005</key><string>你们是来找约拿的？约拿两天前就已经离开此地了。</string>
+    <key>06-05-006-Id</key><string>8</string>
+    <key>06-05-006</key><string>为什么？听说他近年来很少离开普里兹港的啊！</string>
+    <key>06-05-007-Id</key><string>9</string>
+    <key>06-05-007</key><string>是没错。不过这个港城最近夜里发生不少宗失踪事件，状况严重到连王国都派守备队来调查了，想必你们还不知道吧！</string>
+    <key>06-05-008-Id</key><string>3</string>
+    <key>06-05-008</key><string>怪不得码头一带到处都是士兵。</string>
+    <key>06-05-009-Id</key><string>9</string>
+    <key>06-05-009</key><string>我叫做贝克威，和约拿算是满熟的朋友。前两天他来找我，说他发现一件大阴谋，和连日来的失踪事件有关，必须立刻前去调查。他委托我一些事之后就离开了。。</string>
+    <key>06-05-010-Id</key><string>1</string>
+    <key>06-05-010</key><string>真倒霉，那这趟不就又白跑了吗？还因此和王国军结了怨。。</string>
+    <key>06-05-011-Id</key><string>8</string>
+    <key>06-05-011</key><string>你是在指我吗？这又不全是我的错！</string>
+    <key>06-05-012-Id</key><string>1</string>
+    <key>06-05-012</key><string>你还敢说，要不是因为你爸爸派给你的护卫。。</string>
+    <key>06-05-013-Id</key><string>9</string>
+    <key>06-05-013</key><string>好拉好拉！吵架解决不了事情，这样吧，约拿约了我两天后到亚克斯王国的王城去和他碰面，既然你们有事找他，就和我一起去好了。</string>
+    <key>06-05-014-Id</key><string>5</string>
+    <key>06-05-014</key><string>嘎？到王城去？那我们不是自投罗网吗？</string>
+    <key>06-05-015-Id</key><string>6</string>
+    <key>06-05-015</key><string>这个你们倒可以不用担心，我保证一定不会有事的。</string>
+    <key>06-05-016-Id</key><string>1</string>
+    <key>06-05-016</key><string>希丽亚，你为什么敢做这种保证？</string>
+    <key>06-05-017-Id</key><string>6</string>
+    <key>06-05-017</key><string>这是秘密，不告诉你！</string>
+    <key>06-05-018-Id</key><string>1</string>
+    <key>06-05-018</key><string>好，既然如此，我们就准备上路吧！贝克威先生，您怎样呢？</string>
+    <key>06-05-019-Id</key><string>9</string>
+    <key>06-05-019</key><string>先和我回城里一趟，等我收拾一下东西，待会儿就可以启程了。走吧！</string>
+
+</dict>
+</plist>

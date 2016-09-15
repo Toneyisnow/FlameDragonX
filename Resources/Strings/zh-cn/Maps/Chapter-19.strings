@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+
+
+
+
+
+
+
+
+
+    <key>Title-19</key><string>第十九章  黑暗中的狙击</string>
+    <key>Condition-Lose</key><string>索尔死亡</string>
+    <key>Condition-Win</key><string>敌全灭</string>
+
+    <key>19-01-001-Id</key><string>1</string>
+    <key>19-01-001</key><string>真令人不舒服的森林！这里是什么地方？</string>
+    <key>19-01-002-Id</key><string>21</string>
+    <key>19-01-002</key><string>这是大陆北方山脉之麓的黑森林，由于山脉的浓密的森林阻挡阳光，这一带看起来总是阴森森的，一般旅人都不敢行经此处。</string>
+    <key>19-01-003-Id</key><string>6</string>
+    <key>19-01-003</key><string>过了此地，也就快到死之沼泽了，听说曾有人在这一带遭怪物攻击。。。</string>
+    <key>19-01-004-Id</key><string>16</string>
+    <key>19-01-004</key><string>我有不好的预感，大家要多小心！</string>
+    <key>19-01-005-Id</key><string>5</string>
+    <key>19-01-005</key><string>哎呀！老爹你说对啦，前面果然有人来了！</string>
+    <key>19-01-006-Id</key><string>199</string>
+    <key>19-01-006</key><string>约拿老头，上次在你手里折损了不少弟兄，今天这笔帐要一并讨回来！准备受死吧！</string>
+    <key>19-01-007-Id</key><string>3</string>
+    <key>19-01-007</key><string>可恶，又是阴魂不散的死亡骷髅！</string>
+    <key>19-01-008-Id</key><string>1</string>
+    <key>19-01-008</key><string>不知死活的家伙，你们的罪业就到此为止了！我今天绝不放过你们！</string>
+    <key>19-01-009-Id</key><string>22</string>
+    <key>19-01-009</key><string>咦！这是恶名昭彰的「死亡骷髅」佣兵团啊！他们竟然在这里出现，难道果真是有人在暗中。。。。 </string>
+    <key>19-01-010-Id</key><string>19</string>
+    <key>19-01-010</key><string>嘿！那可不是巴拿罗西亚阁䨋吗？真巧啊！</string>
+    <key>19-01-011-Id</key><string>22</string>
+    <key>19-01-011</key><string>啊！你是凯啦斯吗！好一阵子没碰面了，想不到会在这里遇见你。。。</string>
+    <key>19-01-012-Id</key><string>19</string>
+    <key>19-01-012</key><string>巴拿罗西亚阁下，现在可能不是叙旧的好时候，先让我们解决了这帮想谋害约拿先生的恶徒再说。</string>
+    <key>19-01-013-Id</key><string>22</string>
+    <key>19-01-013</key><string>约拿先生也在这里？好极了，这场仗也算上我一份！</string>
+
+
+    <key>19-02-001-Id</key><string>199</string>
+    <key>19-02-001</key><string>。。为什么。。为什么这些小鬼竟然如此厉害。。。。</string>
+
+
+    <key>19-03-001-Id</key><string>22</string>
+    <key>19-03-001</key><string>这场仗打的真实漂亮！对于各位的表现，我个人㜟是非常佩服。</string>
+    <key>19-03-002-Id</key><string>19</string>
+    <key>19-03-002</key><string>巴拿罗西䪚阁下，陛下不是和您在一起的吗？</string>
+    <key>19-03-003-Id</key><string>22</string>
+    <key>19-03-003</key><string>啊，我早该想到的，原来你是圣寇拉斯的部下。。。</string>
+    <key>19-03-004-Id</key><string>19</string>
+    <key>19-03-004</key><string>是的，我们在行经死亡沼泽中发现「死亡骷髅」在此出没，陛下担心他们的目标可能是你们，所以命令我先来查看一番。</string>
+    <key>19-03-005-Id</key><string>21</string>
+    <key>19-03-005</key><string>原来如此。。。。那他往哪里去了？</string>
+    <key>19-03-006-Id</key><string>22</string>
+    <key>19-03-006</key><string>陛下说他已经发现了一些蛛丝马迹，要赶往西方高塔一趟，我想现在应该还在路上吧。</string>
+    <key>19-03-007-Id</key><string>9</string>
+    <key>19-03-007</key><string>西方高塔。。。。那不就是「圣灵之塔」吗？那里是我们精灵组的发源圣地，想不到敌人也看上了那里，不知道他们有何意图？</string>
+    <key>19-03-008-Id</key><string>21</string>
+    <key>19-03-008</key><string>总之，我们要尽快和圣寇拉斯会合，看来他已发现了重要的线索，往后的几天可能得赶一下路，大家忍耐一点。</string>
+    <key>19-03-009-Id</key><string>1</string>
+    <key>19-03-009</key><string>这有什么问题！倒是约拿先生您年事已大，可不要太勉强喔！</string>
+    <key>19-03-010-Id</key><string>21</string>
+    <key>19-03-010</key><string>呵呵。。索尔，谢谢你的关心，我会注意的。我们这就上路吧！</string>
+
+
+</dict>
+</plist>

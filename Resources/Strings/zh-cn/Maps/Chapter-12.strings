@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+
+
+
+
+
+
+
+
+    <key>Title-12</key><string>第十二章 北山道</string>
+
+    <key>Condition-Lose</key><string>索尔或米亚斯多德死亡</string>
+    <key>Condition-Win</key><string>敌全灭</string>
+
+    <key>12-01-001-Id</key><string>14</string>
+    <key>12-01-001</key><string>过了这山道，就到我们位在北森林的城镇了。#你们可以先在那里休息一下。。。。</string>
+    <key>12-01-002-Id</key><string>5</string>
+    <key>12-01-002</key><string>瞧，前面有人呢！</string>
+    <key>12-01-003-Id</key><string>9</string>
+    <key>12-01-003</key><string>咦？#又是一大群兽人，还有。。。</string>
+    <key>12-01-004-Id</key><string>15</string>
+    <key>12-01-004</key><string>哎呀，有救了有救了！#救命啊！</string>
+    <key>12-01-005-Id</key><string>14</string>
+    <key>12-01-005</key><string>你为什么会被兽人追杀呢？#我好想知道，赶快告诉我！</string>
+    <key>12-01-006-Id</key><string>15</string>
+    <key>12-01-006</key><string>如果你能打败这些兽人救我一命，我不但告诉你为什么，还可以额外告诉你一个大秘密！</string>
+    <key>12-01-007-Id</key><string>14</string>
+    <key>12-01-007</key><string>呀！#听起来很有趣，我答应。。。</string>
+    <key>12-01-008-Id</key><string>9</string>
+    <key>12-01-008</key><string>喂！#不要给大伙找麻烦。。。</string>
+    <key>12-01-009-Id</key><string>3</string>
+    <key>12-01-009</key><string>没关系，反正我们急着要过这山道，顺便摆平这些兽人也没什么不好。#索尔，我说的没错吧？</string>
+    <key>12-01-010-Id</key><string>1</string>
+    <key>12-01-010</key><string>亚雷斯，你越来越了解我了，不过何必这么啰唆——咱们说上就上！#杀啊！</string>
+    <key>12-01-011-Id</key><string>3</string>
+    <key>12-01-011</key><string>这小子真是。。。</string>
+
+
+    <key>12-02-001-Id</key><string>199</string>
+    <key>12-02-001</key><string>可恶。。但是还没有结束。。。</string>
+    <key>12-02-002-Id</key><string>15</string>
+    <key>12-02-002</key><string>我叫做米亚斯多德。#感谢各位的帮忙，我才能捡回一命。</string>
+    <key>12-02-003-Id</key><string>14</string>
+    <key>12-02-003</key><string>米亚。。好啰唆的名字，你不是说，救了你你就会告诉我们什么大秘密吗？快说吧！</string>
+    <key>12-02-004-Id</key><string>15</string>
+    <key>12-02-004</key><string>嘿,其实这个秘密你们不一定会有兴趣，不过我还是说出来好了。#昨天夜里我偷听到兽人部队的谈话，它们要进攻精灵城镇哈斯米尔。。。</string>
+    <key>12-02-005-Id</key><string>9</string>
+    <key>12-02-005</key><string>什么！#那不是我们的故乡吗？</string>
+    <key>12-02-006-Id</key><string>14</string>
+    <key>12-02-006</key><string>糟了！#我们要赶快回去警告镇民们才行！</string>
+    <key>12-02-007-Id</key><string>12</string>
+    <key>12-02-007</key><string>哈斯米尔不是位在北森林的精灵都城吗？#这可奇怪了，兽人族什么时候有胆量攻打精灵族了？</string>
+    <key>12-02-008-Id</key><string>15</string>
+    <key>12-02-008</key><string>但我确实看到相当庞大的兽人部队集结，它们总该不是在大露营吧？</string>
+    <key>12-02-009-Id</key><string>9</string>
+    <key>12-02-009</key><string>这不重要，我们赶快前往哈斯米尔，帮精灵族打退兽人大军。#不好意思，这回又要麻烦你们了。。。</string>
+    <key>12-02-010-Id</key><string>1</string>
+    <key>12-02-010</key><string>既然是朋友的事，我们怎能袖手旁观呢！#我们赶埫上路吧，要不然就真的来不及了！</string>
+
+
+</dict>
+</plist>

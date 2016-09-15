@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+
+
+
+
+
+
+
+
+
+    <key>Title-25</key><string>第二十五章  火焰的审判</string>
+    <key>Condition-Lose</key><string>索尔或圣寇拉斯死亡</string>
+    <key>Condition-Win</key><string>敌全灭</string>
+
+    <key>25-01-001-Id</key><string>199</string>
+    <key>25-01-001</key><string>果然不愧是龙人族之长，终于让你找到这里了！</string>
+    <key>25-01-002-Id</key><string>30</string>
+    <key>25-01-002</key><string>你竟敢利用恶魔敏来逞一己的野心私欲，实在是不可原谅</string>
+    <key>25-01-003-Id</key><string>199</string>
+    <key>25-01-003</key><string>恶魔族本来就是我们创造㚄要如何使用他们是我们的事！#而且，你既然知道了这些事，我就不会让你活着离开这里。。。。</string>
+    <key>25-01-004-Id</key><string>30</string>
+    <key>25-01-004</key><string>我手下的援军马上就赶到了，今天要让你看看龙人族战士的力量！</string>
+    <key>25-01-005-Id</key><string>199</string>
+    <key>25-01-005</key><string>真惊人的声势，你到底派来了什么援军？</string>
+    <key>25-01-006-Id</key><string>30</string>
+    <key>25-01-006</key><string>这。。好象不是。。</string>
+    <key>25-01-007-Id</key><string>1</string>
+    <key>25-01-007</key><string>终于停了！</string>
+    <key>25-01-008-Id</key><string>5</string>
+    <key>25-01-008</key><string>呜。。真烂的着陆法！还没和敌人交战就摔掉半条命了。。。。</string>
+    <key>25-01-009-Id</key><string>1</string>
+    <key>25-01-009</key><string>悠妮，悠妮！你没有受伤吧？</string>
+    <key>25-01-010-Id</key><string>2</string>
+    <key>25-01-010</key><string>还好，一点伤都没有。。索尔你也还好吧？</string>
+    <key>25-01-011-Id</key><string>6</string>
+    <key>25-01-011</key><string>哼。。。。差别待遇喔！</string>
+    <key>25-01-012-Id</key><string>21</string>
+    <key>25-01-012</key><string>别吵了，大家都没事吧！这里好象就是敌方的根据地之一，我们要特别小心。。。。</string>
+    <key>25-01-013-Id</key><string>19</string>
+    <key>25-01-013</key><string>咦！那边有人在对峙着。。好象有我们一族的龙人呢！</string>
+    <key>25-01-014-Id</key><string>22</string>
+    <key>25-01-014</key><string>真的？那陛下人一定在里面！圣寇拉斯陛下！</string>
+    <key>25-01-015-Id</key><string>30</string>
+    <key>25-01-015</key><string>有人认识我吗？啊！是巴拿罗西亚和凯拉斯！</string>
+    <key>25-01-016-Id</key><string>19</string>
+    <key>25-01-016</key><string>陛下，我们总算找到您了！</string>
+    <key>25-01-017-Id</key><string>21</string>
+    <key>25-01-017</key><string>圣寇拉斯，好久不见了，没想到会和你在这里会师！</string>
+    <key>25-01-018-Id</key><string>30</string>
+    <key>25-01-018</key><string>啊！原来是约拿先生，好极啦，有你手下这批生力军，这下子就没问题了！</string>
+    <key>25-01-019-Id</key><string>199</string>
+    <key>25-01-019</key><string>哼，果然是你找来的援军没错，你们都准备死在这里吧！</string>
+    <key>25-01-020-Id</key><string>1</string>
+    <key>25-01-020</key><string>这怪家伙还真嚣张，亚雷斯，我们合力宰了他！</string>
+    <key>25-01-021-Id</key><string>3</string>
+    <key>25-01-021</key><string>对！送他去和他的前三个伙伴相会！</string>
+    <key>25-01-022-Id</key><string>199</string>
+    <key>25-01-022</key><string>什么！难道。。难道地水风三个魔神都已经被你们打败了？可恶！#我火魔神要替他们一并把这笔血债讨回来！</string>
+    <key>25-01-023-Id</key><string>1</string>
+    <key>25-01-023</key><string>少罗嗦！有种就放马过来吧！</string>
+
+    <key>25-02-001-Id</key><string>211</string>
+    <key>25-02-001</key><string>圣寇拉斯陛下，我们来迟了！</string>
+    <key>25-02-002-Id</key><string>30</string>
+    <key>25-02-002</key><string>还不晚，先把火魔神打倒再说吧！</string>
+
+    <key>25-03-001-Id</key><string>199</string>
+    <key>25-03-001</key><string>。。可恶，#主人不会放过你们的。啊。。#到时候你们就会和这世界一起毁灭。。。</string>
+
+    <key>25-04-001-Id</key><string>30</string>
+    <key>25-04-001</key><string>真是惊险的一战！约老头，你从哪里搬来这些生力军？如果没有他们，这一战的结果就会改观了。</string>
+    <key>25-04-002-Id</key><string>21</string>
+    <key>25-04-002</key><string>他们是一群富正义感的年轻勇士，因为机缘巧合同聚一堂，之后为了打倒暗中威胁这整个大陆的敌人而和我一起奋战至今。</string>
+    <key>25-04-003-Id</key><string>30</string>
+    <key>25-04-003</key><string>好极了，我正愁来不及召集一支够强的军队！据我调查的结果，这熔岩洞窟中有通道通往一个古代人的遗迹，据说从那里可以直达黄金瞄城堡。</string>
+    <key>25-04-004-Id</key><string>1</string>
+    <key>25-04-004</key><string>所谓的黄金的城堡，就是指敌人的根据地吗？</string>
+    <key>25-04-005-Id</key><string>21</string>
+    <key>25-04-005</key><string>很难说，我们要去确认之后才知道。</string>
+    <key>25-04-006-Id</key><string>30</string>
+    <key>25-04-006</key><string>敌人似乎怕我们发现这一点，牀以刚才那家伙企图施用魔法让火山爆发，彻底毁灭这条通道，但这样也会毁了恶魔族的栖息之地。。幸好你们及时抵达，才没有让那家伙得逞。</string>
+    <key>25-04-007-Id</key><string>3</string>
+    <key>25-04-007</key><string>好极了，咱们赶快前往遗迹吧，这次绝不能再让敌人抢先了！</string>
+    <key>25-04-008-Id</key><string>31</string>
+    <key>25-04-008</key><string>等等！</string>
+    <key>25-04-009-Id</key><string>1</string>
+    <key>25-04-009</key><string>咦，敌方还有漏网之鱼吗？</string>
+    <key>25-04-010-Id</key><string>31</string>
+    <key>25-04-010</key><string>别误会，我是来加入你们一行的。</string>
+    <key>25-04-011-Id</key><string>21</string>
+    <key>25-04-011</key><string>你会说人类的语言？这可有趣了。</string>
+    <key>25-04-012-Id</key><string>31</string>
+    <key>25-04-012</key><string>我是当今恶魔族之王卡尔根的弟弟，王家魔法师亚齐梅吉。我平日对人类和大陆上的其他种族有很深的研究，所以通晓你们的语言。</string>
+    <key>25-04-013-Id</key><string>21</string>
+    <key>25-04-013</key><string>你的种族刚刚才联合火魔神与我们为敌，为何现在你又要加入我们？</string>
+    <key>25-04-014-Id</key><string>31</string>
+    <key>25-04-014</key><string>我族并不是故意要与你们为敌，因为敌人以邪法控制了王兄的神智，籍以命令我族的战士来抵挡你们的攻势。我看穿这一点之后，敌人便假王兄之手将我监禁起来，还好你们阻止了他们，不然整个恶魔族可能会就此灭亡。</string>
+    <key>25-04-015-Id</key><string>21</string>
+    <key>25-04-015</key><string>原来如此，你对敌人的所知有多少？</string>
+    <key>25-04-016-Id</key><string>31</string>
+    <key>25-04-016</key><string>我相信他们和古代人的遗迹以及黄金城绝对有关连，他们可能是从附近的遗迹来到这个世界的，所以当务之急是经由本地的通道前往遗迹，以免他们再度增援。</string>
+    <key>25-04-017-Id</key><string>19</string>
+    <key>25-04-017</key><string>好极了，那接下来便由你来带路了。</string>
+    <key>25-04-018-Id</key><string>31</string>
+    <key>25-04-018</key><string>乐意之至！我们这就走吧！</string>
+
+</dict>
+</plist>

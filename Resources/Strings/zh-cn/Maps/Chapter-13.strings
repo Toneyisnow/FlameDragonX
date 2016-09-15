@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+
+
+
+
+
+
+
+
+    <key>Title-13</key><string>第十三章 哈斯米尔之战</string>
+
+    <key>Condition-Lose</key><string>索尔死亡或精灵全灭</string>
+    <key>Condition-Win</key><string>敌全灭</string>
+
+    <key>13-01-001-Id</key><string>9</string>
+    <key>13-01-001</key><string>糟了！#我们果然来迟了一步！</string>
+    <key>13-01-002-Id</key><string>14</string>
+    <key>13-01-002</key><string>不要紧，村中的居民好象都已经先撤走了饿，只剩下一些战士还在抵挡兽人的攻势。。。。</string>
+    <key>13-01-003-Id</key><string>15</string>
+    <key>13-01-003</key><string>好极了，宝箱好象都还安然无恙，不知道「火焰之眼」是否。。。</string>
+    <key>13-01-004-Id</key><string>3</string>
+    <key>13-01-004</key><string>你说什么？</string>
+    <key>13-01-005-Id</key><string>15</string>
+    <key>13-01-005</key><string>。。没事！没事！#我们赶快去帮忙吧！</string>
+    <key>13-01-006-Id</key><string>1</string>
+    <key>13-01-006</key><string>没错！#把那些兽人杀个落花流水！我们上吧！</string>
+
+    <key>13-05-001-Id</key><string>88</string>
+    <key>13-05-001</key><string>年轻人，你们年纪轻轻就有这种武艺，真是了不起！#这件重要的宝物绝不能让它落入兽人的手中，就先拜托你保管了。。。</string>
+    <key>13-05-002-Id</key><string>1</string>
+    <key>13-05-002</key><string>好的！#这是。。。</string>
+    <key>13-05-003-Id</key><string>88</string>
+    <key>13-05-003</key><string>你会发现它的功用的，代替我好好使用它吧！</string>
+
+    <key>13-02-001-Id</key><string>16</string>
+    <key>13-02-001</key><string>我的天啊！#这是怎么一回事？</string>
+    <key>13-02-002-Id</key><string>5</string>
+    <key>13-02-002</key><string>老。。老爹！#您怎么来了？</string>
+    <key>13-02-003-Id</key><string>16</string>
+    <key>13-02-003</key><string>怎么？我不能来吗？#我只是来看个老朋友而已。。怎么会变成这样子？</string>
+    <key>13-02-004-Id</key><string>5</string>
+    <key>13-02-004</key><string>兽人大军来攻，村内的居民好象都逃光了，我们正在迎战敌军。。。</string>
+    <key>13-02-005-Id</key><string>16</string>
+    <key>13-02-005</key><string>兽人？#这些家伙是活的不耐烦了？#我先来给他们几斧头再说！#小子啊，你也要好好干！</string>
+    <key>13-02-006-Id</key><string>5</string>
+    <key>13-02-006</key><string>是的，老爹！</string>
+    <key>13-02-007-Id</key><string>1</string>
+    <key>13-02-007</key><string>哈瓦特老爹，欢迎加入！</string>
+
+    <key>13-03-001-Id</key><string>199</string>
+    <key>13-03-001</key><string>吼呜！宰了这些家伙。。。</string>
+
+    <key>13-04-001-Id</key><string>51</string>
+    <key>13-04-001</key><string>你们不是贝克威和珊吗？#还有好久不见的哈瓦那老爹幸好你们带了帮手来，要不然我们真会抵挡不住了。#不过，你们又怎么会知道兽人大军前来攻击呢？</string>
+    <key>13-04-002-Id</key><string>14</string>
+    <key>13-04-002</key><string>凑巧啦！还好这些朋友愿意帮忙。#城中的居民呢？</string>
+    <key>13-04-003-Id</key><string>51</string>
+    <key>13-04-003</key><string>我们事先收到警告，居民都连夜撤到安全的地方去了。#不过听说兽人大军还在离哈斯米尔不远的兰迪平原驻屯，眼前情势仍然很险恶。。。</string>
+    <key>13-04-004-Id</key><string>9</string>
+    <key>13-04-004</key><string>对了，兽人大军为何要攻打哈斯米尔？#我到现在还是不明白。</string>
+    <key>13-04-005-Id</key><string>51</string>
+    <key>13-04-005</key><string>这一点我们也不清楚，不过他们在开战前曾大声宣言，要把精灵族杀戮殆尽，为何如此我们并不清楚。。。</string>
+    <key>13-04-006-Id</key><string>1</string>
+    <key>13-04-006</key><string>还不简单！#兽人大军现在不是驻屯在那个什么平原吗？#我们去把他们杀个人仰马翻，再抓几个来问问不就好了？</string>
+    <key>13-04-007-Id</key><string>3</string>
+    <key>13-04-007</key><string>典型的索尔作风。。。。#不过也不失为一个好方法。</string>
+    <key>13-04-008-Id</key><string>6</string>
+    <key>13-04-008</key><string>是啊，让那些兽人继续待在那里太危险了，先把他们在野外歼灭，免得他们又来进攻。</string>
+    <key>13-04-009-Id</key><string>2</string>
+    <key>13-04-009</key><string>正好老爹也来了，我们的战力大增，要对付那些兽人相信不是难事。#老爹，你会和我们一起去吧！</string>
+    <key>13-04-010-Id</key><string>16</string>
+    <key>13-04-010</key><string>当然！就这几只兽人，那能让我过瘾呢！#再说，我也想看看这些日子以来，小子长进了多少。哈哈哈！</string>
+    <key>13-04-011-Id</key><string>1</string>
+    <key>13-04-011</key><string>既然如此，那我们稍事休息之后就出发吧！</string>
+
+
+</dict>
+</plist>

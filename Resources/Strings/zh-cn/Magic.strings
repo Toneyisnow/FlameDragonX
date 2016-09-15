@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+
+    <key>101</key><string>火焰术</string>
+    <key>102</key><string>烈焰术</string>
+    <key>103</key><string>炎龙术</string>
+    <key>104</key><string>天火术</string>
+    <key>105</key><string>电击术</string>
+    <key>106</key><string>落雷术</string>
+    <key>107</key><string>轰雷术</string>
+    <key>108</key><string>神雷术</string>
+    <key>109</key><string>圣光弹</string>
+    <key>110</key><string>碎岩术</string>
+    <key>111</key><string>地震术</string>
+    <key>112</key><string>裂地术</string>
+    <key>113</key><string>破龙击</string>
+    <key>114</key><string>凄惶斩</string>
+    <key>115</key><string>炽炎刀</string>
+    <key>116</key><string>音速刃</string>
+    <key>117</key><string>咒杀术</string>
+    <key>118</key><string>炽天使</string>
+    <key>119</key><string>震荡波</string>
+
+    <key>301</key><string>封咒术</string>
+    <key>302</key><string>毒击术</string>
+    <key>303</key><string>麻痹术</string>
+
+    <key>201</key><string>治疗术</string>
+    <key>202</key><string>回复术</string>
+    <key>203</key><string>再生术</string>
+    <key>204</key><string>神恩术</string>
+    <key>205</key><string>风妖精</string>
+
+    <key>401</key><string>魔刃术</string>
+    <key>402</key><string>魔铠术</string>
+    <key>403</key><string>风行术</string>
+    <key>404</key><string>解毒术</string>
+    <key>405</key><string>祛麻术</string>
+    <key>406</key><string>行动术</string>
+    <key>407</key><string>破坏神</string>
+    <key>408</key><string>暗邪鬼</string>
+
+    <key>501</key><string>传送术</string>
+
+</dict>
+</plist>

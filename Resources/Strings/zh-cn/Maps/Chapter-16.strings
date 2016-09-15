@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+
+
+
+
+
+
+
+
+
+    <key>Title-16</key><string>第十六章  冰原之战</string>
+    <key>Condition-Lose</key><string>索尔或蜜蒂死亡</string>
+    <key>Condition-Win</key><string>敌全灭</string>
+
+    <key>16-01-001-Id</key><string>3</string>
+    <key>16-01-001</key><string>唔，好冷！#住惯了罗特帝亚的温暖气候，还真有点不习惯。</string>
+    <key>16-01-002-Id</key><string>17</string>
+    <key>16-01-002</key><string>不知道我的朋友是否已经抵达此地，照理说应该会有点徴召。。。</string>
+    <key>16-01-003-Id</key><string>16</string>
+    <key>16-01-003</key><string>嘿，在这种地方特别容易看到远处。。。。#咦，那可不是有人在打架吗？</string>
+    <key>16-01-004-Id</key><string>17</string>
+    <key>16-01-004</key><string>啊，那不就是。。。</string>
+    <key>16-01-005-Id</key><string>18</string>
+    <key>16-01-005</key><string>塞可邦勒？你来的正好，我遇上了一点小麻烦。。。。这些是你新交的朋友吗？</string>
+    <key>16-01-006-Id</key><string>17</string>
+    <key>16-01-006</key><string>是的，有一些志同道合的战友，他们一路赶过来帮忙的。</string>
+    <key>16-01-007-Id</key><string>18</string>
+    <key>16-01-007</key><string>好极了，那么这一回我可以少费点工夫，叫你的朋友们快点，赶快解决这场仗，我们还有很多事要办。</string>
+    <key>16-01-008-Id</key><string>3</string>
+    <key>16-01-008</key><string>塞可邦勒，这位女士就是你所说的朋友吗？</string>
+    <key>16-01-009-Id</key><string>17</string>
+    <key>16-01-009</key><string>是的，她就是剑圣密蒂，多年来一直在山中隐居，锻炼更高强的剑技。</string>
+    <key>16-01-010-Id</key><string>13</string>
+    <key>16-01-010</key><string>是她啊！我记得多年前她在皇宫禁卫团中是我的前辈，后来好象因为醉心于剑术，就辞起骑士团的职务，那时大家都很惋惜呢！</string>
+    <key>16-01-011-Id</key><string>6</string>
+    <key>16-01-011</key><string>像她这样的厉害人物，为何会突然在此出现？</string>
+    <key>16-01-012-Id</key><string>17</string>
+    <key>16-01-012</key><string>她似乎是受友人所托，前来调查一些事情。我和她在路上结识，她得知我要回去确认兽人的侵攻行动，就托我回来通知她结果。</string>
+    <key>16-01-013-Id</key><string>12</string>
+    <key>16-01-013</key><string>这样说起来，莫非她和约拿也有什么关连。。。</string>
+    <key>16-01-014-Id</key><string>1</string>
+    <key>16-01-014</key><string>算了吧！#这女人一副大姐样，刚见面就对人发号施令，看了就不顺眼！#我才不管她是什么剑圣呢！</string>
+    <key>16-01-015-Id</key><string>3</string>
+    <key>16-01-015</key><string>索尔，那我们就表现给她看啊！#让她知道我们罗特帝亚的剑士也不是泛泛之辈！</string>
+    <key>16-01-016-Id</key><string>1</string>
+    <key>16-01-016</key><string>说的对！今天要大干一场！上啊！</string>
+
+
+    <key>16-02-001-Id</key><string>18</string>
+    <key>16-02-001</key><string>各位，漂亮的一仗！#真是把团队合作的精神发挥到了极致，我个人非常佩服。</string>
+    <key>16-02-002-Id</key><string>11</string>
+    <key>16-02-002</key><string>阁下的剑技也极为高超，真是让我们开了眼界。</string>
+    <key>16-02-003-Id</key><string>18</string>
+    <key>16-02-003</key><string>谢谢。#那么，我想各位会到这里来，相信都和我有着相同的目的，现在已查明敌方部队正集结在北方的艾斯岛上，接下来就由我带领各位前去，将敌人一举歼灭。#我想各位都没有意见吧？</string>
+    <key>16-02-004-Id</key><string>1</string>
+    <key>16-02-004</key><string>我有意见！</string>
+    <key>16-02-005-Id</key><string>3</string>
+    <key>16-02-005</key><string>索。。索尔？#你怎么了？</string>
+    <key>16-02-006-Id</key><string>18</string>
+    <key>16-02-006</key><string>你有什么意见，就说出来听听看吧。</string>
+    <key>16-02-007-Id</key><string>1</string>
+    <key>16-02-007</key><string>既然是我们战技高超，我们为什么要由你来带领？#应该是你加入我们，然后向导我们到艾斯岛去才对，不是吗？</string>
+    <key>16-02-008-Id</key><string>10</string>
+    <key>16-02-008</key><string>索尔大哥，密蒂阁下也算是剑士中的前辈，你也多少敬老尊贤一下嘛。。</string>
+    <key>16-02-009-Id</key><string>1</string>
+    <key>16-02-009</key><string>哼，我才不服！#会打架的才算高手，我从小就这么认为。</string>
+    <key>16-02-010-Id</key><string>18</string>
+    <key>16-02-010</key><string>咈咈。。#小子，你年纪这么轻就有如此的胆识和武艺，我很欣赏。。。。#也好，我一个人过了这么多年，也好久没有尝过被人带领的滋味了，我就加入你们吧！#剑圣密蒂，以后请各位多多指教。</string>
+    <key>16-02-011-Id</key><string>3</string>
+    <key>16-02-011</key><string>这就是王者的霸气啊！#不愧是索尔,光这一点我就比不上他了。</string>
+    <key>16-02-012-Id</key><string>9</string>
+    <key>16-02-012</key><string>那么，密蒂阁下，这就请你带领我们到艾斯岛去吧！</string>
+    <key>16-02-013-Id</key><string>1</string>
+    <key>16-02-013</key><string>哼，我才我才不在乎这些事呢！#我们快上路吧！</string>
+
+
+    <key>16-03-001-Id</key><string>18</string>
+    <key>16-03-001</key><string>恩，一场不错的仗但是耗的时间太久了。。。。#塞可邦勒,有关兽人的情况我已经明白了，等一下我马上要赶到艾斯岛去，如果你的朋友也想凑凑热闹的话，就由你带他们去吧，我应该告诉过你艾斯岛的位置。</string>
+    <key>16-03-002-Id</key><string>17</string>
+    <key>16-03-002</key><string>是的，我确实记得。</string>
+    <key>16-03-003-Id</key><string>18</string>
+    <key>16-03-003</key><string>艾斯岛的情势非比寻常，叫他们量力而为，不要把小命送掉了。#我走了。</string>
+    <key>16-03-004-Id</key><string>1</string>
+    <key>16-03-004</key><string>哼，这女人真是够嚣张了！#我。。</string>
+    <key>16-03-005-Id</key><string>3</string>
+    <key>16-03-005</key><string>唉，索尔，我们技不如人，你还想怎么样？</string>
+    <key>16-03-006-Id</key><string>9</string>
+    <key>16-03-006</key><string>我们还是先赶到艾斯岛上观察一下情势，或许还有我们可以帮忙的地方。。。</string>
+    <key>16-03-007-Id</key><string>3</string>
+    <key>16-03-007</key><string>也只好这样了！#索尔，别无精打采的，我们走吧！</string>
+    <key>16-03-008-Id</key><string>1</string>
+    <key>16-03-008</key><string>可恶，我才不肯认输呢！#等着瞧！</string>
+
+</dict>
+</plist>

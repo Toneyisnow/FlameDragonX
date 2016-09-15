@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+
+    <key>111</key><string>剑士</string>
+    <key>112</key><string>剑圣</string>
+    <key>113</key><string>英雄</string>
+    <key>121</key><string>战士</string>
+    <key>122</key><string>圣战士</string>
+    <key>123</key><string>魔战士</string>
+    <key>131</key><string>骑士</string>
+    <key>132</key><string>圣骑士</string>
+    <key>133</key><string>龙骑士</string>
+    <key>141</key><string>弓兵</string>
+    <key>142</key><string>狙击手</string>
+    <key>143</key><string>神射手</string>
+    <key>151</key><string>法师</string>
+    <key>152</key><string>大法师</string>
+    <key>153</key><string>召唤师</string>
+    <key>154</key><string>僧侣</string>
+    <key>155</key><string>祭师</string>
+    <key>156</key><string>圣者</string>
+    <key>161</key><string>武者</string>
+    <key>162</key><string>斗士</string>
+    <key>163</key><string>武圣</string>
+    <key>171</key><string>龙剑士</string>
+    <key>181</key><string>忍者</string>
+    <key>191</key><string>机兵</string>
+    <key>211</key><string>盗贼</string>
+    <key>212</key><string>平民</string>
+    <key>888</key><string>？？？</string>
+    <key>900</key><string>？？？</string>
+    <key>999</key><string>？？？</string>
+</dict>
+</plist>

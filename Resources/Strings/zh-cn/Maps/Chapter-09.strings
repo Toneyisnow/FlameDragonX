@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+
+
+
+
+
+
+
+
+    <key>Title-09</key><string>第九章 骑士的抉择</string>
+
+    <key>Condition-Lose</key><string>索尔死亡</string>
+    <key>Condition-Win</key><string>敌全灭</string>
+
+    <key>09-01-001-Id</key><string>1</string>
+    <key>09-01-001</key><string>希莉亚，看来你父王的大军已经在等我们了！</string>
+    <key>09-01-002-Id</key><string>6</string>
+    <key>09-01-002</key><string>放心，交给我就是了。</string>
+    <key>09-01-003-Id</key><string>199</string>
+    <key>09-01-003</key><string>殿下，以您王国公主的身份怎可和这些盗贼为伍？陛下已下令逮捕这帮盗贼，让属下迎接殿下回宫，这些盗贼交给禁卫军处理就可以了。</string>
+    <key>09-01-004-Id</key><string>6</string>
+    <key>09-01-004</key><string>莱汀，我一直以为你是个聪明人，难道连你也不相信我吗？赶快把这些禁卫军撤走我要去见父王，把事情说个清楚。</string>
+    <key>09-01-005-Id</key><string>199</string>
+    <key>09-01-005</key><string>公主殿下，陛下有令在先，把这帮匪徒通通抓起来再说，如果您还是要护着他们的话，那属下就得罪了。</string>
+    <key>09-01-006-Id</key><string>6</string>
+    <key>09-01-006</key><string>莱汀，你敢对我动手！</string>
+    <key>09-01-007-Id</key><string>199</string>
+    <key>09-01-007</key><string>公主殿下，请原谅属下的无礼。来人，把这群盗匪都给我抓起来！</string>
+
+    <key>09-02-001-Id</key><string>199</string>
+    <key>09-02-001</key><string>唔。。公主殿下，您为何。。为何要带这些人来加害陛下。。。</string>
+    <key>09-02-002-Id</key><string>6</string>
+    <key>09-02-002</key><string>莱汀，我怎么会想要加害父王！宫中到底发生了什么事？</string>
+    <key>09-02-003-Id</key><string>199</string>
+    <key>09-02-003</key><string>。。前几天有刺客夜袭陛下的寝宫，想要抓走陛下，幸好打斗声惊醒了侍卫，卫兵冲进来救驾，陛下才幸免于难。。</string>
+    <key>09-02-004-Id</key><string>6</string>
+    <key>09-02-004</key><string>有这种事？！说下去！</string>
+    <key>09-02-005-Id</key><string>199</string>
+    <key>09-02-005</key><string>刺客临走前扬言，几天之内一定会在来。。。。陛下遭到这种惊吓，几天来一直在床上修养。。</string>
+    <key>09-02-006-Id</key><string>1</string>
+    <key>09-02-006</key><string>这件事又为何扯到我们身上？</string>
+    <key>09-02-007-Id</key><string>199</string>
+    <key>09-02-007</key><string>为了搜查可疑分子，我们在王国各处派出调查队，结果又发现了不少怪事，例如普里兹港的失踪事件，而你们又惹上调查队，结果。。。</string>
+    <key>09-02-008-Id</key><string>6</string>
+    <key>09-02-008</key><string>大臣们一致认为我们就是刺客？这太荒谬了！</string>
+    <key>09-02-009-Id</key><string>199</string>
+    <key>09-02-009</key><string>葛雷大人相当支持这种说法，所以命令我们禁卫军派兵攻击你们。。。</string>
+    <key>09-02-010-Id</key><string>6</string>
+    <key>09-02-010</key><string>不是父王下令的吗？怎么又变成葛雷了？</string>
+    <key>09-02-011-Id</key><string>199</string>
+    <key>09-02-011</key><string>陛下多日来一直卧病在床，军令方面都是经由葛雷大人发布。。</string>
+    <key>09-02-012-Id</key><string>209</string>
+    <key>09-02-012</key><string>禁卫军队长莱汀，想不到你竟敢和盗匪勾结，我们奉葛雷大人之命将你逮捕！赶快束手就擒吧！</string>
+    <key>09-02-013-Id</key><string>199</string>
+    <key>09-02-013</key><string>可恶，我明白了，葛雷这个该死的叛徒。。。</string>
+    <key>09-02-014-Id</key><string>6</string>
+    <key>09-02-014</key><string>莱汀，照这样看来，父王处境危险，我们先设法杀进去再说！</string>
+    <key>09-02-015-Id</key><string>199</string>
+    <key>09-02-015</key><string>殿下，属下被奸人所骗，有负保护陛下的使命，请让属下和你们一起去！</string>
+    <key>09-02-016-Id</key><string>6</string>
+    <key>09-02-016</key><string>你受伤这么重，还是先。。。</string>
+    <key>09-02-017-Id</key><string>1</string>
+    <key>09-02-017</key><string>喂！希莉亚，现在情况紧急我看这家伙蛮能打的，叫玛琳用法术给他治一下伤就可以上阵了，应该可以多少帮上点忙吧！</string>
+    <key>09-02-018-Id</key><string>6</string>
+    <key>09-02-018</key><string>索尔，你说话也客气点。。。</string>
+    <key>09-02-019-Id</key><string>199</string>
+    <key>09-02-019</key><string>公主殿下，请给属下一个将功赎罪的机会！</string>
+    <key>09-02-020-Id</key><string>1</string>
+    <key>09-02-020</key><string>这不就好了吗？</string>
+    <key>09-02-021-Id</key><string>6</string>
+    <key>09-02-021</key><string>好吧，容我再借重一次大家的力量！我们上！</string>
+
+    <key>09-03-001-Id</key><string>301</string>
+    <key>09-03-001</key><string>不得了了！葛雷大人被杀了！</string>
+    <key>09-03-002-Id</key><string>13</string>
+    <key>09-03-002</key><string>把话讲清楚一点！到底是怎么一回事？</string>
+    <key>09-03-003-Id</key><string>301</string>
+    <key>09-03-003</key><string>我。。我是葛雷大人房外的卫兵，刚才忽然听到房内传出一阵惨叫声，我冲进去一看葛雷大人已经倒在地上不省人事了。。</string>
+    <key>09-03-004-Id</key><string>13</string>
+    <key>09-03-004</key><string>有这种事！公主殿下，看来王城内情势险恶，我先进去探察一番，再回来向殿下报告！</string>
+    <key>09-03-005-Id</key><string>6</string>
+    <key>09-03-005</key><string>小心点！</string>
+</dict>
+</plist>

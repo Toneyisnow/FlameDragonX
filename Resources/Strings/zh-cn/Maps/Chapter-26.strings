@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+
+
+
+
+
+
+
+
+
+    <key>Title-26</key><string>第二十六章　未知的回廊</string>
+    <key>Condition-Lose</key><string>索尔或悠妮或亚齐梅吉死亡</string>
+    <key>Condition-Win</key><string>敌全灭</string>
+
+    <key>26-01-001-Id</key><string>3</string>
+    <key>26-01-001</key><string>嘿，这是什么怪地方？。。这种景色以前从没看过！</string>
+    <key>26-01-002-Id</key><string>31</string>
+    <key>26-01-002</key><string>这条通道据说是古代人所建造的，历代的恶魔族之王都禁止族人进入此地，似乎踏进这通道会招徕可怕的灾祸。。。</string>
+    <key>26-01-003-Id</key><string>30</string>
+    <key>26-01-003</key><string>我感到灾祸好象已经在眼前了，那些看起来像玩偶的东西是什么？</string>
+    <key>26-01-004-Id</key><string>139</string>
+    <key>26-01-004</key><string>入侵者发现！#指令：防卫及消除威胁的存在#方法：攻击并消灭。</string>
+    <key>26-01-005-Id</key><string>101</string>
+    <key>26-01-005</key><string>命令确认！目标分析完毕！启动！执行接战指令！</string>
+    <key>26-01-006-Id</key><string>30</string>
+    <key>26-01-006</key><string>那是什么？</string>
+    <key>26-01-007-Id</key><string>1</string>
+    <key>26-01-007</key><string>简单来说，那是古代人建造的机器守卫，用来防守他们的遗迹和据点。。没时间解释了，我们准备动手吧！</string>
+    <key>26-01-008-Id</key><string>6</string>
+    <key>26-01-008</key><string>小心！他们要冲过来了！</string>
+    <key>26-01-009-Id</key><string>21</string>
+    <key>26-01-009</key><string>敌人的数量比上次更多了，大家小心应战！</string>
+
+    <key>26-01-010-Id</key><string>2</string>
+    <key>26-01-010</key><string>这机兵的头部怎么开着？这个金属盒子。。好象满适合的，应该是这样放进去。。。。咦！</string>
+    <key>26-01-011-Id</key><string>32</string>
+    <key>26-01-011</key><string>系统启始，请指示操作码及行动模式。</string>
+    <key>26-01-012-Id</key><string>2</string>
+    <key>26-01-012</key><string>这。。#好象是01EC244#-FE2C51932</string>
+    <key>26-01-013-Id</key><string></string>
+    <key>26-01-013</key><string>确认。#主人，01279943渥德，回复到正常操作状态，请指示。</string>
+    <key>26-01-014-Id</key><string></string>
+    <key>26-01-014</key><string>我为什么记得这些东西？。。好吧，帮我们打倒那些机兵！能理解吗？</string>
+    <key>26-01-015-Id</key><string>32</string>
+    <key>26-01-015</key><string>理解，指令内容确认，系统资料设定。。待命状态完成。#完毕。</string>
+    <key>26-01-016-Id</key><string>2</string>
+    <key>26-01-016</key><string>目标清楚后即解除一级战斗状态，并确认所有我方目标。等待下一次战斗指示码。</string>
+    <key>26-01-017-Id</key><string>32</string>
+    <key>26-01-017</key><string>了解</string>
+    <key>26-01-018-Id</key><string>1</string>
+    <key>26-01-018</key><string>悠妮，你在那边做什么？</string>
+    <key>26-01-019-Id</key><string>2</string>
+    <key>26-01-019</key><string>没。。没什么，我说服了这个机甲兵帮我们作战。</string>
+    <key>26-01-020-Id</key><string>3</string>
+    <key>26-01-020</key><string>哇塞，悠妮你真厉害！</string>
+
+    <key>26-02-001-Id</key><string>2</string>
+    <key>26-02-001</key><string>那是什么奇怪的东西？头部还开着？</string>
+
+    <key>26-03-001-Id</key><string>139</string>
+    <key>26-03-001</key><string>。。严重受损，指挥控制不能。。系统关闭。。。。</string>
+
+    <key>26-04-002-Id</key><string>31</string>
+    <key>26-04-002</key><string>好极了，我们迅速击溃了敌方机甲兵，现在可以马上前往遗迹。。嘿，队伍里怎么有个敌方的机甲兵？</string>
+    <key>26-04-003-Id</key><string>1</string>
+    <key>26-04-003</key><string>那是悠妮帮我们拉进伙的，她和机甲兵一直很有缘。</string>
+    <key>26-04-004-Id</key><string>3</string>
+    <key>26-04-004</key><string>是啊，她初次和我们相遇时就带着盖亚。</string>
+    <key>26-04-005-Id</key><string>31</string>
+    <key>26-04-005</key><string>是这样吗？。。悠妮小姐，我看你好象知道机甲兵的启动码，是吧？</string>
+    <key>26-04-006-Id</key><string>2</string>
+    <key>26-04-006</key><string>啊？启动码。。那是什么东西？我不知道！</string>
+    <key>26-04-007-Id</key><string>31</string>
+    <key>26-04-007</key><string>是吗？悠妮小姐，我看你一定知道！你到底是从哪里来的？你绝不是一般人类！为了我们大家，把话说个清楚吧！</string>
+    <key>26-04-008-Id</key><string>2</string>
+    <key>26-04-008</key><string>。。不。。不要再说了！。。我什么都不知道。。。。</string>
+    <key>26-04-009-Id</key><string>1</string>
+    <key>26-04-009</key><string>亚齐梅吉，够了！你要是把她弄哭了，我绝不饶你！</string>
+    <key>26-04-010-Id</key><string>21</string>
+    <key>26-04-010</key><string>。。算啦，不要逼问她了，问这个机甲兵也是一样。。。。喂，那个机甲兵。</string>
+    <key>26-04-011-Id</key><string>32</string>
+    <key>26-04-011</key><string>01279943渥德，命令确认。</string>
+    <key>26-04-012-Id</key><string>21</string>
+    <key>26-04-012</key><string>你叫渥德吗？请回答我的问题。</string>
+    <key>26-04-013-Id</key><string>32</string>
+    <key>26-04-013</key><string>了解，记忆库连接，资料载入待命。请指示。</string>
+    <key>26-04-014-Id</key><string>21</string>
+    <key>26-04-014</key><string>你们的种族来自何方？领导者又是谁？</string>
+    <key>26-04-015-Id</key><string>32</string>
+    <key>26-04-015</key><string>记忆库搜寻，资料#73324：01279943渥德隶属第六机甲战斗团第三战斗中队，全师团由第一空中要塞建造，在执行第七号战斗防卫指令时，经由传送站送到地表。#我们的领导者是全能的创造者，他可以任意床在机械和生命，是这个大地的主宰者，我们并不知道领导者的名字，那不在我们的记忆库领域之内。</string>
+    <key>26-04-016-Id</key><string>21</string>
+    <key>26-04-016</key><string>。从未听说这种事。。好吧，那你们为何要攻击这个大陆？</string>
+    <key>26-04-017-Id</key><string>32</string>
+    <key>26-04-017</key><string>记忆库搜寻，资料#2074213：第六机甲战斗团᥉命执行第七号挘斗防卫命令，#主要目标：消灭X-07地区的敌方生命体，防止任何敌方单位进入转送站：但就最后的记录，本次作战已经中止，而01279943渥德在遭受敌方攻击之后，误动安全装置导致能源单位弹出，系统中断至今，并未再接到任何更新的作战命令。</string>
+    <key>26-04-018-Id</key><string>25</string>
+    <key>26-04-018</key><string>这家伙的话还真是难懂。。约拿老头，佀听懂了多少？</string>
+    <key>26-04-019-Id</key><string>21</string>
+    <key>26-04-019</key><string>我只知道这位渥德老兄好象并未参与这次的攻击，不过一切麻烦的根源似乎都来自所谓的「第一空中要塞」，它也可能就是「黄金的城堡」，由古代人所建造的飞行堡垒，兼具建造机甲兵的能力。。。。</string>
+    <key>26-04-020-Id</key><string>30</string>
+    <key>26-04-020</key><string>古代人不是早在数万年前的最终战争中就灭绝了吗？为什么这个要塞还能发动攻击？</string>
+    <key>26-04-021-Id</key><string>1</string>
+    <key>26-04-021</key><string>这个「黄金城」会不会是由类似的机甲兵所控制，由于没有收到所谓的中止作战指令，所以仍在执行以前的作战行动？</string>
+    <key>26-04-022-Id</key><string>13</string>
+    <key>26-04-022</key><string>很有可能，古代人建造这种飞行要塞，主要目的应该就是控制制压和对地攻击，但最终战争早在数万年前就已经结束了，为何到现在才又开始行动？</string>
+    <key>26-04-023-Id</key><string>21</string>
+    <key>26-04-023</key><string>看来只有上黄金城一趟，这一切的谜题才能够解开！渥德，你所说的转送站在哪里？</string>
+    <key>26-04-024-Id</key><string>32</string>
+    <key>26-04-024</key><string>就位在这地下通道的出口处。</string>
+
+    <key>26-05-001-Id</key><string>31</string>
+    <key>26-05-001</key><string>好极了，我们迅速击溃了敌方机甲兵，现在可以马上前往遗迹，不过我们还是对敌人的底细一无所知。。。。悠妮小姐，你的护卫也是古代人所造的机甲兵吧？</string>
+    <key>26-05-002-Id</key><string>3</string>
+    <key>26-05-002</key><string>是的，她初次和我们相遇时就带着盖亚。</string>
+    <key>26-05-003-Id</key><string>31</string>
+    <key>26-05-003</key><string>是这样吗？。。悠妮小姐，我看你一定知道些什么，有关古代人和这批机甲兵的秘密。。。。是吧？</string>
+    <key>26-05-004-Id</key><string>2</string>
+    <key>26-05-004</key><string>古代人？机甲兵？。。。。那是什么东西？我不知道！</string>
+    <key>26-05-005-Id</key><string>31</string>
+    <key>26-05-005</key><string>是吗？悠妮小姐，我看你一定知道！你到底是从哪里来的？你绝不是一般人类！为了我们大家，把话说个清楚吧！</string>
+    <key>26-05-006-Id</key><string>2</string>
+    <key>26-05-006</key><string>。。不。。不要再说了！。。我什么都不知道。。。。</string>
+    <key>26-05-007-Id</key><string>1</string>
+    <key>26-05-007</key><string>亚齐梅吉，够了！你要是把她弄哭了，我绝不饶你！</string>
+    <key>26-05-008-Id</key><string>21</string>
+    <key>26-05-008</key><string>。。算啦，不要逼问她了，反正上了黄金城，相信一切的迷题自然都会解开的！</string>
+
+    <key>26-06-001-Id</key><string>1</string>
+    <key>26-06-001</key><string>好，那就一鼓作气冲过去，我们这就走吧！悠妮，跟着我！</string>
+    <key>26-06-002-Id</key><string>2</string>
+    <key>26-06-002</key><string>。。。。。。</string>
+    <key>26-06-003-Id</key><string>1</string>
+    <key>26-06-003</key><string>悠妮，怎么了？是不是。。我的口气太粗鲁了？对不起！</string>
+    <key>26-06-004-Id</key><string>2</string>
+    <key>26-06-004</key><string>不是的，索尔，我好迷惑。。。。我到底是谁？这一切。。。。到底和我有什么关连？我真的不知道。。我好怕我会给你带来灾祸，也许一开始你就不该救我的。。。</string>
+    <key>26-06-005-Id</key><string>1</string>
+    <key>26-06-005</key><string>悠妮，我永远都会相信你的！只要有你和我在一起，我什么也不怕！我们不是都来到这里了吗？</string>
+    <key>26-06-006-Id</key><string>2</string>
+    <key>26-06-006</key><string>可是。。可是。。</string>
+    <key>26-06-007-Id</key><string>1</string>
+    <key>26-06-007</key><string>刚才的事就当它没发生过，来，我们一起走过去！</string>
+    <key>26-06-008-Id</key><string>25</string>
+    <key>26-06-008</key><string>其实亚齐梅吉说的也没错。。这样子好吗？</string>
+    <key>26-06-009-Id</key><string>21</string>
+    <key>26-06-009</key><string>这个年轻人得到神的庇佑，我想我们应该尊重他的决定。。不多说了，我们走吧！</string>
+    <key>26-06-010-Id</key><string>31</string>
+    <key>26-06-010</key><string>也只能这样了！</string>
+
+</dict>
+</plist>

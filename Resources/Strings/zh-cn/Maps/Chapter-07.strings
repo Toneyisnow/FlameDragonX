@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+
+
+
+
+
+
+
+
+    <key>Title-07</key><string>第七章 往王城的途中</string>
+
+    <key>Condition-Lose</key><string>索尔死亡</string>
+    <key>Condition-Win</key><string>敌全灭</string>
+
+    <key>07-01-001-Id</key><string>9</string>
+    <key>07-01-001</key><string>这条路是通往王城的要道，虽然走这条路较快，但遇到王国守备军的机会也较高。。。。</string>
+    <key>07-01-002-Id</key><string>5</string>
+    <key>07-01-002</key><string>你说的没错，我已经看到了。</string>
+    <key>07-01-003-Id</key><string>121</string>
+    <key>07-01-003</key><string>前面那批人一定就是在普里兹港逞凶的匪徒，通通给我拿下！</string>
+    <key>07-01-004-Id</key><string>6</string>
+    <key>07-01-004</key><string>等等，大家都是自己人，这是一场误会。。。。</string>
+    <key>07-01-005-Id</key><string>121</string>
+    <key>07-01-005</key><string>少玩弄诡计想拖延时间了。乖乖的受死吧！</string>
+    <key>07-01-006-Id</key><string>6</string>
+    <key>07-01-006</key><string>哎，想不通，只好先打再说了。索尔，我们上！</string>
+    <key>07-01-007-Id</key><string>1</string>
+    <key>07-01-007</key><string>啊？我没问题，你自己可要小心点，不要太勉强！</string>
+    <key>07-01-008-Id</key><string>6</string>
+    <key>07-01-008</key><string>索尔，谢谢你！</string>
+
+    <key>07-02-001-Id</key><string>10</string>
+    <key>07-02-001</key><string>哎呀！一大群男人追杀一个小姑娘，不觉得丢脸吗？</string>
+    <key>07-02-002-Id</key><string>159</string>
+    <key>07-02-002</key><string>你的一拳让我的部下得疗养三个月，无故殴打王国驻军可是重罪，乖乖的跟我回去说个明白吧！</string>
+    <key>07-02-003-Id</key><string>10</string>
+    <key>07-02-003</key><string>谁教他对我乱瞄！你们王国军都是这个样子的吗？</string>
+    <key>07-02-004-Id</key><string>159</string>
+    <key>07-02-004</key><string>哼。。。。不和你吵了，给我抓起来！</string>
+    <key>07-02-005-Id</key><string>5</string>
+    <key>07-02-005</key><string>咦！那边有王国军在围攻一个小女孩，这是怎么一回事？</string>
+    <key>07-02-006-Id</key><string>9</string>
+    <key>07-02-006</key><string>喂，我们自己都顾不了了，不要再去凑热闹。。。。</string>
+    <key>07-02-007-Id</key><string>1</string>
+    <key>07-02-007</key><string>什么！你能眼睁睁的看着一群王国军欺负一个小女孩？我自己去收拾他们好了。</string>
+    <key>07-02-008-Id</key><string>3</string>
+    <key>07-02-008</key><string>好拉好拉，我陪你去就是了，反正不差这几个。。。</string>
+    <key>07-02-009-Id</key><string>9</string>
+    <key>07-02-009</key><string>好吧，那就上吧！</string>
+
+    <key>07-03-001-Id</key><string>121</string>
+    <key>07-03-001</key><string>可恶。。国王陛下，我不能再护卫您了。。请原谅属下的无能。。</string>
+    <key>07-03-002-Id</key><string>6</string>
+    <key>07-03-002</key><string>你弄错了，我们不是来加害国王的！</string>
+    <key>07-03-003-Id</key><string>121</string>
+    <key>07-03-003</key><string>是吗？。。那么。。前些日子到底是谁。。。。啊。。。。</string>
+
+    <key>07-04-001-Id</key><string>10</string>
+    <key>07-04-001</key><string>多谢你们的帮忙！连王国的精锐部队也不是你们对手，你们到底是什么来历！</string>
+    <key>07-04-002-Id</key><string>1</string>
+    <key>07-04-002</key><string>这个说起来很麻烦，此地又很危险，我看你还是回家睡觉好了。</string>
+    <key>07-04-003-Id</key><string>10</string>
+    <key>07-04-003</key><string>什么，你竟敢小看我！若是你听到我老师的名字，包准你吓一大跳。。。</string>
+    <key>07-04-004-Id</key><string>9</string>
+    <key>07-04-004</key><string>凯丽小姐，你的身手的确是很不错，可以请教你的老师是那一位吗？</string>
+    <key>07-04-005-Id</key><string>10</string>
+    <key>07-04-005</key><string>这个。。还是不能告诉你！不过，如果你们愿意让我加入的话，我可以考虑透露一点。</string>
+    <key>07-04-006-Id</key><string>9</string>
+    <key>07-04-006</key><string>欢迎！我们就要和王国军大战，正愁人手不够，有你的加入真是再好不过了。</string>
+    <key>07-04-007-Id</key><string>10</string>
+    <key>07-04-007</key><string>以后我们就是伙伴了，请大家多多指教！</string>
+    <key>07-04-008-Id</key><string>3</string>
+    <key>07-04-008</key><string>此地不宜久留，凯丽小姐，我们这就上路吧！</string>
+
+    <key>07-05-001-Id</key><string>3</string>
+    <key>07-05-001</key><string>看来我们又被人家误会了，索尔，现在我们该怎么办？</string>
+    <key>07-05-002-Id</key><string>1</string>
+    <key>07-05-002</key><string>那还用说，当然是杀进王城去弄个明白！</string>
+    <key>07-05-003-Id</key><string>8</string>
+    <key>07-05-003</key><string>恩，够气魄！</string>
+    <key>07-05-004-Id</key><string>6</string>
+    <key>07-05-004</key><string>我们快上路吧！这件事不弄个清楚，更麻烦的事还在后头呢！</string>
+
+</dict>
+</plist>

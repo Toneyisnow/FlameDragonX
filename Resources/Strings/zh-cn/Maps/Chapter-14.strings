@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+
+
+
+
+
+
+
+
+
+    <key>Title-14</key><string>第十四章  平原的会战</string>
+    <key>Condition-Lose</key><string>索尔死亡</string>
+    <key>Condition-Win</key><string>敌全灭</string>
+
+    <key>14-01-001-Id</key><string>10</string>
+    <key>14-01-001</key><string>看到了！#那里有一大群兽人，好象还在休息呢！</string>
+    <key>14-01-002-Id</key><string>1</string>
+    <key>14-01-002</key><string>好极了，我们去叫醒他们</string>
+    <key>14-01-003-Id</key><string>16</string>
+    <key>14-01-003</key><string>别太猴急，小子！#我们先小心接近，再伺机而动！</string>
+    <key>14-01-004-Id</key><string>3</string>
+    <key>14-01-004</key><string>好，我们上吧！</string>
+
+
+    <key>14-02-001-Id</key><string>108</string>
+    <key>14-02-001</key><string>吼呜！#注意，有人接近了！</string>
+    <key>14-02-002-Id</key><string>104</string>
+    <key>14-02-002</key><string>通通给我醒来！#开打了！</string>
+    <key>14-02-003-Id</key><string>105</string>
+    <key>14-02-003</key><string>咦？对手呢？#怎么都是一堆小鬼头...</string>
+    <key>14-02-004-Id</key><string>106</string>
+    <key>14-02-004</key><string>管他的，知道我们大军再次集结而还还敢接近的，一定不是一般的小鬼，先打了再说！</string>
+
+
+    <key>14-03-001-Id</key><string>1</string>
+    <key>14-03-001</key><string>你们来这里干什么？#想要命的话就赶快说！</string>
+    <key>14-03-002-Id</key><string>132</string>
+    <key>14-03-002</key><string>。。我。。我不知道啊，首领萨卡大人。。#四天前命令我们在此集结，准备。。准备攻打精灵族的都城哈斯米尔，有一队伙伴已经先去了，到现在还没回来，结果。。结果你们就先来了。。。</string>
+    <key>14-03-003-Id</key><string>3</string>
+    <key>14-03-003</key><string>笨蛋，那一队早就被我们宰光了！#那么，你们的首领萨卡为何要攻打哈斯米尔？赶快说清楚！</string>
+    <key>14-03-004-Id</key><string>132</string>
+    <key>14-03-004</key><string>。。这。。这。。#我也不太清楚，只记得首领吩咐队长的时候有提到要杀光精灵族以及务必要抢到宝物，其他的我就没听清楚了。。。。</string>
+    <key>14-03-005-Id</key><string>15</string>
+    <key>14-03-005</key><string>什么宝物？</string>
+    <key>14-03-006-Id</key><string>132</string>
+    <key>14-03-006</key><string>。。哎，我怎么可能知道。。。。#求你们饶了我吧，我保证不会回去向首领通风报信。。</string>
+    <key>14-03-007-Id</key><string>1</string>
+    <key>14-03-007</key><string>好吧，再回答我们一个问题，我们就放你走。#你们的首领萨卡现在在哪里？</string>
+    <key>14-03-008-Id</key><string>132</string>
+    <key>14-03-008</key><string>首领啊。。#他应该是率领另一队到拉卡湖就攻打豹人族了，如果没错的话，他应该还在那一带才对。。。。。#我知道的都告诉你们了，可以放我走了吧？</string>
+    <key>14-03-009-Id</key><string>1</string>
+    <key>14-03-009</key><string>好，你可以走了！快滚吧！</string>
+    <key>14-03-010-Id</key><string>132</string>
+    <key>14-03-010</key><string>谢。。谢谢！</string>
+    <key>14-03-011-Id</key><string>3</string>
+    <key>14-03-011</key><string>索尔，你怎么可以未经大家的同意就放他走呢！</string>
+    <key>14-03-012-Id</key><string>9</string>
+    <key>14-03-012</key><string>不要紧，我们需要的都已经知道了，不过情况好像更加麻烦了。。。</string>
+    <key>14-03-013-Id</key><string>5</string>
+    <key>14-03-013</key><string>兽人族是吃了什么熊心豹子胆，竟敢同时攻打精灵族和豹人族！</string>
+    <key>14-03-014-Id</key><string>6</string>
+    <key>14-03-014</key><string>我看啊，一定是有人在背后指使，不然兽人族那来这么大的胆量。</string>
+    <key>14-03-015-Id</key><string>14</string>
+    <key>14-03-015</key><string>豹人族的战斗力在这大陆的几个种族中虽然也是数一数二的，但这种规模的攻击他们也未必挡的住，我们还是先去拉卡湖看看吧，必要时还可以支援他们。</string>
+    <key>14-03-016-Id</key><string>9</string>
+    <key>14-03-016</key><string>拉卡湖离此地不远，途中好像有个小村落，我们可以先在那里休息一下。</string>
+    <key>14-03-017-Id</key><string>1</string>
+    <key>14-03-017</key><string>那我们还等什么？#走吧！</string>
+
+
+
+
+</dict>
+</plist>

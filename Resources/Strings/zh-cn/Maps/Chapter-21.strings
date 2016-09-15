@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+
+
+
+
+
+
+
+
+
+    <key>Title-21</key><string>第二十一章  亚述森林</string>
+    <key>Condition-Lose</key><string>索尔或希尔法死亡</string>
+    <key>Condition-Win</key><string>敌全灭</string>
+
+    <key>21-01-001-Id</key><string>1</string>
+    <key>21-01-001</key><string>呼！一路都没休息的赶路，真是累死人了。</string>
+    <key>21-01-002-Id</key><string>9</string>
+    <key>21-01-002</key><string>希望我们还来得及。</string>
+    <key>21-01-003-Id</key><string>14</string>
+    <key>21-01-003</key><string>这里好象是平日的聚会场所，不过为何充满了血腥味。</string>
+    <key>21-01-004-Id</key><string>16</string>
+    <key>21-01-004</key><string>啊！前面好象是敌方的大军，精灵族人被围在中间！</string>
+    <key>21-01-005-Id</key><string>25</string>
+    <key>21-01-005</key><string>不要做白日梦了！我宁可葬身于此，也不原作你们的俘虏！</string>
+    <key>21-01-006-Id</key><string>199</string>
+    <key>21-01-006</key><string>老头子，识时务者为俊杰，我的雇主很需要像你这样法力高强又见识广博的大法师，如果你愿意投降，我保证他不会亏待你的。呵呵呵。</string>
+    <key>21-01-007-Id</key><string>25</string>
+    <key>21-01-007</key><string>少罗嗦了！精灵族可不是贪生怕死的种族，来一决胜负吧！</string>
+    <key>21-01-008-Id</key><string>26</string>
+    <key>21-01-008</key><string>有我在此，你们休想碰长老一根汗毛！ </string>
+    <key>21-01-009-Id</key><string>199</string>
+    <key>21-01-009</key><string>既然你们不肯跟我走，我就只好把你们的尸体带回去了，给我杀！</string>
+    <key>21-01-010-Id</key><string>3</string>
+    <key>21-01-010</key><string>可恶！又是「死亡骷髅」！</string>
+    <key>21-01-011-Id</key><string>21</string>
+    <key>21-01-011</key><string>看来圣灵之塔已经落入敌手，剩下的精灵族人正在做最后的顽抗。#没办法，我们先保住他们的性命，再作其他的打算！</string>
+    <key>21-01-012-Id</key><string>199</string>
+    <key>21-01-012</key><string>又有其他的傻瓜来了吗？#好极了，我正嫌这些精灵太少，杀起来不过瘾呢！</string>
+    <key>21-01-013-Id</key><string>13</string>
+    <key>21-01-013</key><string>玛。。玛尔！原来是你！#没想到你还活着..</string>
+    <key>21-01-014-Id</key><string>199</string>
+    <key>21-01-014</key><string>哦，是禁卫军的队长大人啊！#遗憾的很，「死亡骷髅」当年是被你们剿灭了，但我花了好几年的时间又把他重建起来，现在的「死亡骷髅」已非昔日所能比了..</string>
+    <key>21-01-015-Id</key><string>13</string>
+    <key>21-01-015</key><string>早知如此，当时就不该好心放你逃走的...</string>
+    <key>21-01-016-Id</key><string>199</string>
+    <key>21-01-016</key><string>是吗？#那时没有追杀到底是你自己的疏忽，也好，我们顺便清算一下当年的帐....#你们都别想活着离开这里！</string>
+    <key>21-01-017-Id</key><string>1</string>
+    <key>21-01-017</key><string>这种为钱卖命的恶棍，何必和他们罗嗦！#我们上！</string>
+
+
+    <key>21-02-001-Id</key><string>199</string>
+    <key>21-02-001</key><string>终于来了吗！宰了这些家伙！</string>
+
+
+    <key>21-03-001-Id</key><string>199</string>
+    <key>21-03-001</key><string>。。哼，小伙子们还真有一手啊....#败在你们手里，我没什么话好说了.. </string>
+    <key>21-03-002-Id</key><string>13</string>
+    <key>21-03-002</key><string>玛尔！#..如果那时你改过向善，就不会有今天的结果！#..为什么...</string>
+    <key>21-03-003-Id</key><string>199</string>
+    <key>21-03-003</key><string>..莱汀，我对你说过，我的身上流着罪犯的血液，我们是注定不能并肩作战的..#你以后可以放心了....唔...</string>
+    <key>21-03-004-Id</key><string>13</string>
+    <key>21-03-004</key><string>玛尔....</string>
+
+
+    <key>21-03-005-Id</key><string>25</string>
+    <key>21-03-005</key><string>我本来以为这回死定了，还好你们前来支援，我们才能战胜这个杀手集团，真是非常感激。</string>
+    <key>21-03-006-Id</key><string>21</string>
+    <key>21-03-006</key><string>幸好我们还赶得及，想必这是神的旨意。圣灵之塔的情形如何？</string>
+    <key>21-03-007-Id</key><string>25</string>
+    <key>21-03-007</key><string>三天前就已经被敌人攻入了，为了减少无谓的死伤，我就命令所有的守军撤退，所以那里的情形现在我也不很清楚。</string>
+    <key>21-03-008-Id</key><string>21</string>
+    <key>21-03-008</key><string>我明白了。此外，我先前请你情形的调查可有结果？</string>
+    <key>21-03-009-Id</key><string>25</string>
+    <key>21-03-009</key><string>我在王城的大图书馆中花了三个月研究古代典籍，还在各地的遗迹中进行挖掘，结果只得到了这只法杖和一点结论。</string>
+    <key>21-03-010-Id</key><string>21</string>
+    <key>21-03-010</key><string>恩，真是支很奇异的法杖....结论怎么说呢？</string>
+    <key>21-03-011-Id</key><string>25</string>
+    <key>21-03-011</key><string>根据古典籍的记载，有关你所说的「天空之钥」，事实上是由一个黄金徽章和五颗魔法宝石所构成的，这六样东西必须经由该法杖的魔力才能结合在一起，从而发僺及强大的力量，据说这力量可以克服时间和空间的限制，将使用者移动到遥远的未知地方去。</string>
+    <key>21-03-012-Id</key><string>21</string>
+    <key>21-03-012</key><string>很有趣的说法！你的结论呢？</string>
+    <key>21-03-013-Id</key><string>25</string>
+    <key>21-03-013</key><string>那有什么结论！这六件东西，早在八百年前就不知道都失落都哪里去了，而当我开始试图要寻找它们的踪迹时，黑暗军就对亚述森林发动了攻击，我只好先中断了这段研究。</string>
+    <key>21-03-014-Id</key><string>21</string>
+    <key>21-03-014</key><string>我一直相信天空之钥和这一连串事端有关，既然你暂时无法完成研究，这个揣测也就只好作罢，我们得换一个新的调查方向....</string>
+
+    <key>21-03-015-Id</key><string>1</string>
+    <key>21-03-015</key><string>等等！希尔法大师，你所说的徽章和宝石，是不是这些？</string>
+    <key>21-03-016-Id</key><string>25</string>
+    <key>21-03-016</key><string>啊！蕴含光、暗、火焰、冰和星星之力的五颗宝石....就是这个没错！你们怎么找到这些东西的？</string>
+    <key>21-03-017-Id</key><string>1</string>
+    <key>21-03-017</key><string>一路上逐一得来的，敌人似乎也对他们感兴趣，所以其中几个费了好大劲才到手。</string>
+    <key>21-03-018-Id</key><string>25</string>
+    <key>21-03-018</key><string>好极了，我现在就试试这支法杖管不管用。大家让开一些，这可能会有些危险.,..未知的远古的神袛啊，履行契约的时刻到了，请给予这法杖以失落的力量，让被遗忘的道路再次开启....</string>
+    <key>21-03-019-Id</key><string>25</string>
+    <key>21-03-019</key><string>吗那得拉、亚布利加、艼米西德拉、伊多卡那瓦！....</string>
+    <key>21-03-020-Id</key><string>25</string>
+    <key>21-03-020</key><string>瞧，完成了！相信这就是你一直在找的「天空之钥」！</string>
+    <key>21-03-021-Id</key><string>21</string>
+    <key>21-03-021</key><string>真令人不敢相信，我花了十几年寻找的东西，竟然就这样到手了，这是命运的安排吧....</string>
+    <key>21-03-022-Id</key><string>3</string>
+    <key>21-03-022</key><string>约拿先生，这个「天空之钥」有什么特别的用途？</string>
+    <key>21-03-023-Id</key><string>21</string>
+    <key>21-03-023</key><string>我只知道他与古代人的传说有关，据说它开仪打开往天空的道路，至于是用怎样的方式，就没有人知道了。</string>
+    <key>21-03-024-Id</key><string>1</string>
+    <key>21-03-024</key><string>哎，好失望，我还以为这下就可以飞上天空了呢！</string>
+    <key>21-03-025-Id</key><string>21</string>
+    <key>21-03-025</key><string>索尔，别急，我相信我们真正的敌人必定与这天空之钥有关，我们迟早可以解开这个秘密以及悠妮小姐的来历之谜。</string>
+    <key>21-03-026-Id</key><string>1</string>
+    <key>21-03-026</key><string>真的吗?..那我就放心了。</string>
+
+    <key>21-03-027-Id</key><string>25</string>
+    <key>21-03-027</key><string>虽然如此，为了避免敌人在塔中玩出什么花样，我们还是马上动身前往巨塔，其他的事以后再说！罗兰，为了增强战斗力起见，你也和我一起去吧！</string>
+    <key>21-03-028-Id</key><string>26</string>
+    <key>21-03-028</key><string>是的，长老！善后工作交给其他人就可以了。</string>
+    <key>21-03-029-Id</key><string>1</string>
+    <key>21-03-029</key><string>好！我们这就出发罗！</string>
+</dict>
+</plist>

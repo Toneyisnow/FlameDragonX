@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+
+
+
+
+
+
+
+
+
+    <key>Title-28</key><string>第二十八章　探索者</string>
+    <key>Condition-Lose</key><string>索尔或优妮死亡</string>
+    <key>Condition-Win</key><string>击毁机甲队长</string>
+
+    <key>28-01-001-Id</key><string>1</string>
+    <key>28-01-001</key><string>这里就是黄金城吗？好奇怪的建筑，这哪像什么城堡！</string>
+    <key>28-01-002-Id</key><string>3</string>
+    <key>28-01-002</key><string>说是一座金属作成的要塞还差不多，从外面的云海看来，我们好象是在很高的地方。</string>
+    <key>28-01-003-Id</key><string>2</string>
+    <key>28-01-003</key><string>这里是用来传送机甲兵团到地上用的转送站，由此就可以进入黄金城内部。</string>
+    <key>28-01-004-Id</key><string>21</string>
+    <key>28-01-004</key><string>看来古代人必定拥有极高度的文明。。。。这种冶金和构筑的技术，绝对不是现有的文明或魔法所能做到的。</string>
+    <key>28-01-005-Id</key><string>25</string>
+    <key>28-01-005</key><string>如果有时间的话，真希望能好好的研究一下此地。</string>
+    <key>28-01-006-Id</key><string>2</string>
+    <key>28-01-006</key><string>可惜我们没什么时间了，我怕那家伙会启动最终兵器「黑暗之焰」，无论如何我们要赶快找到他才行。。。。</string>
+    <key>28-01-007-Id</key><string>201</string>
+    <key>28-01-007</key><string>C-02地区，第一防卫队抵达。转送辨识及接站资料。</string>
+    <key>28-01-008-Id</key><string>101</string>
+    <key>28-01-008</key><string>传送完成。目标及命令确认，防卫行动开始。</string>
+
+    <key>28-01-009-Id</key><string>201</string>
+    <key>28-01-009</key><string>C-02地区，第二防卫队抵达。转送辨识及接站资料。</string>
+    <key>28-01-010-Id</key><string>114</string>
+    <key>28-01-010</key><string>传送完成。目标及命令确认，防卫行动开始。</string>
+    <key>28-01-011-Id</key><string>202</string>
+    <key>28-01-011</key><string>C-02地区，第三防卫队抵达。转送辨识及接站资料。</string>
+    <key>28-01-012-Id</key><string>120</string>
+    <key>28-01-012</key><string>传送完成。目标及命令确认，防卫行动开始。</string>
+    <key>28-01-013-Id</key><string>201</string>
+    <key>28-01-013</key><string>C-02地区，第四防卫队抵达。转送辨识及接站资料。</string>
+    <key>28-01-014-Id</key><string>130</string>
+    <key>28-01-014</key><string>传送完成。目标及命令确认，防卫行动开始。</string>
+    <key>28-01-015-Id</key><string>201</string>
+    <key>28-01-015</key><string>C-02地区，第五防卫队抵达。转送辨识及接站资料。</string>
+    <key>28-01-016-Id</key><string>136</string>
+    <key>28-01-016</key><string>传送完成。目标及命令确认，防卫行动开始。</string>
+
+    <key>28-02-001-Id</key><string>114</string>
+    <key>28-02-001</key><string>。。严重受损，指挥控制不能。。系统关闭。。。。</string>
+
+    <key>28-03-001-Id</key><string>201</string>
+    <key>28-03-001</key><string>。。严重受损，指挥控制不能。。系统关闭。。。。</string>
+
+    <key>28-04-001-Id</key><string>202</string>
+    <key>28-04-001</key><string>。。严重受损，指挥控制不能。。系统关闭。。。。</string>
+
+    <key>28-05-001-Id</key><string>2</string>
+    <key>28-05-001</key><string>大家都没事吧？#我们赶快离开这里，要不敌方防卫队会不断向这里涌来。</string>
+    <key>28-05-002-Id</key><string>21</string>
+    <key>28-05-002</key><string>接下来要往哪里呢？</string>
+    <key>28-05-003-Id</key><string>2</string>
+    <key>28-05-003</key><string>到黄金城的核心区域，我必须要夺回中枢系统的控制权，这样我就可以解除要塞中大部分防卫部队的战斗状态。</string>
+    <key>28-05-004-Id</key><string>1</string>
+    <key>28-05-004</key><string>。。听不懂。#就照你说的吧！</string>
+    <key>28-05-005-Id</key><string>2</string>
+    <key>28-05-005</key><string>嘻，听不懂是正常的！#我来带路，往这边走！</string>
+
+    <key>28-06-001-Id</key><string>002</string>
+    <key>28-06-001</key><string>不。。。我不能输给那家伙。。索尔。。索。。。</string>
+
+</dict>
+</plist>

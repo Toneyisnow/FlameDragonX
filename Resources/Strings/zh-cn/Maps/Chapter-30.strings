@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+
+
+
+
+
+
+
+
+
+    <key>Title-30</key><string>第三十章　传说的终章</string>
+    <key>Condition-Lose</key><string>索尔或悠妮死亡</string>
+    <key>Condition-Win</key><string>空魔神死亡</string>
+
+    <key>30-01-001-Id</key><string>3</string>
+    <key>30-01-001</key><string>唔。。#我们还活着吗？</string>
+    <key>30-01-002-Id</key><string>21</string>
+    <key>30-01-002</key><string>好强烈的震动！#不过我没有感觉到什么异状。。。。</string>
+    <key>30-01-003-Id</key><string>1</string>
+    <key>30-01-003</key><string>嘿，这是怎么回事？</string>
+    <key>30-01-004-Id</key><string>999</string>
+    <key>30-01-004</key><string>哼，我们的命真大。。#看来次反应炉并未完全失效，虽然超荷的磁界能量爆发造成了部分空间扭曲，不过这反应是暂时性的，影响并不很大。#哼哼哼。。。。</string>
+    <key>30-01-005-Id</key><string>2</string>
+    <key>30-01-005</key><string>ASR-06，我们才刚捡回一条命难道你还。。？</string>
+    <key>30-01-006-Id</key><string>999</string>
+    <key>30-01-006</key><string>ASR-07，我伟大的计划差点毁在你手里，这次我不会再重蹈覆辙了，我要先把你和这帮蝼蚁彻底消灭掉，再重新开始执行计划。。。</string>
+    <key>30-01-007-Id</key><string>1</string>
+    <key>30-01-007</key><string>欠揍的家伙，到现在你居然还不死心，你真的把我给搞火了。。。。#今天非宰了你不可！</string>
+    <key>30-01-008-Id</key><string>3</string>
+    <key>30-01-008</key><string>来吧！#伙伴们，我们一起消灭这个万恶的原凶！</string>
+    <key>30-01-009-Id</key><string>999</string>
+    <key>30-01-009</key><string>咈咈咈。。。。。。#一群不知死活的家伙。</string>
+    <key>30-01-010-Id</key><string>999</string>
+    <key>30-01-010</key><string>都出来吧！</string>
+    <key>30-01-011-Id</key><string>3</string>
+    <key>30-01-011</key><string>咦！这些家伙不是早就被我们摆平了？怎么又。。</string>
+    <key>30-01-012-Id</key><string>999</string>
+    <key>30-01-012</key><string>ASR-07，你不在的这段时间我致力于发展生化合成人，这四个魔神就是我的得意杰作！他们不过我制造出来的生命体，所以损失了随时可以再造。。#这一批是我最新的改良版本，绝对不会再输给你们！</string>
+    <key>30-01-013-Id</key><string>2</string>
+    <key>30-01-013</key><string>。哼，等一下！</string>
+    <key>30-01-014-Id</key><string>999</string>
+    <key>30-01-014</key><string>你还有什么遗言吗？</string>
+    <key>30-01-015-Id</key><string>2</string>
+    <key>30-01-015</key><string>身为这个要塞的两大中枢，我们本来应该协力共事的，很遗憾我们今天必须倾力对决。。。#所以我也不需再隐藏了，就让你看看第一空中要塞暨管理中枢真正的力量吧！</string>
+    <key>30-01-016-Id</key><string>3</string>
+    <key>30-01-016</key><string>咦，上一场仗中身上受的伤都痊愈了！</string>
+    <key>30-01-017-Id</key><string>21</string>
+    <key>30-01-017</key><string>恩，我觉的身上重新充满了力量！</string>
+    <key>30-01-018-Id</key><string>999</string>
+    <key>30-01-018</key><string>哼哼。。#想不到你还有这种能力，这样不过能让这些蝼蚁撑久一点而已。。#胜利仍将会属于我！</string>
+    <key>30-01-019-Id</key><string>1</string>
+    <key>30-01-019</key><string>少罗嗦了，要打架就过来啊！</string>
+    <key>30-01-020-Id</key><string>999</string>
+    <key>30-01-020</key><string>大地的代言者，让这些愚者知道创造者的威严！</string>
+    <key>30-01-021-Id</key><string>201</string>
+    <key>30-01-021</key><string>地魔神领命！</string>
+    <key>30-01-022-Id</key><string>999</string>
+    <key>30-01-022</key><string>水与冰的女王，将这些家伙冰封在永恒的死之牢狱中！</string>
+    <key>30-01-023-Id</key><string>202</string>
+    <key>30-01-023</key><string>水魔神领命！</string>
+    <key>30-01-024-Id</key><string>999</string>
+    <key>30-01-024</key><string>狂风的吟唱者，用你的利刃将他们撕裂成血肉的飞雾！</string>
+    <key>30-01-025-Id</key><string>203</string>
+    <key>30-01-025</key><string>风魔神领命！</string>
+    <key>30-01-026-Id</key><string>999</string>
+    <key>30-01-026</key><string>烈焰的主宰，燃起你的地狱之火，把他们烧得连灰都不剩！</string>
+    <key>30-01-027-Id</key><string>204</string>
+    <key>30-01-027</key><string>火魔神领命！</string>
+    <key>30-01-028-Id</key><string>999</string>
+    <key>30-01-028</key><string>遗憾的很，不识抬举的你们竟然选择接受中末的天罚。。胆敢违抗神的意志的蝼蚁们迎接你们的最后一刻吧！</string>
+
+    <key>30-02-001-Id</key><string>999</string>
+    <key>30-02-001</key><string>这怎么可能。。#我是至高无上的创造者和支配者。。#竟然会被这些卑微的蝼蚁给打倒。。。。不。。。。</string>
+    <key>30-02-002-Id</key><string>2</string>
+    <key>30-02-002</key><string>总算结束了。。。。#这个很久以前就铸成的错误，终于就此消失在时间的洪流之中了。。。。</string>
+    <key>30-02-003-Id</key><string>1</string>
+    <key>30-02-003</key><string>。。我们终于打赢了这场仗！#悠妮，真是太好了！</string>
+    <key>30-02-004-Id</key><string>21</string>
+    <key>30-02-004</key><string>很高兴我们终于解决了这件事情。。。#不过，身为一个学者，我总想知道这一切的来龙去脉。。#悠妮小姐，你能给我们一个说明吗？</string>
+    <key>30-02-005-Id</key><string>2</string>
+    <key>30-02-005</key><string>。。。。。。我就简短的说明吧。#这个空中要塞，以及我和空魔神，都是古代人所制造的，恶魔族也是古代人发展出来的战斗用生物。。。。。#那时古代人正在互相争战，为了获取胜利，双方制造出无数的恐怖武器，这个要塞就是其中的一个。。。。</string>
+    <key>30-02-006-Id</key><string>25</string>
+    <key>30-02-006</key><string>自古流传的「审判之日」战争吗？#据说那场战争毁灭了天空与大地，直到数万年后万物才再次复兴。。。。</string>
+    <key>30-02-007-Id</key><string>2</string>
+    <key>30-02-007</key><string>是的。双方使用最终武器互相攻击，最后只有少数古代人的领袖乘着飞行器离开了这个星球，其他的都死在这场战争中。。。。#这个要塞是为了对地压制攻击而建造的，我和空魔神负责控制这要塞的中枢，我控制和维持要塞的运行，#空魔神不，ASR-06则负责对地面的监视和武器的使用，#换言之，这个要塞是由我和空魔呻所一起指挥的。 </string>
+    <key>30-02-008-Id</key><string>21</string>
+    <key>30-02-008</key><string>真令人难以想象。。。。</string>
+    <key>30-02-009-Id</key><string>2</string>
+    <key>30-02-009</key><string>我们都以人的肉体接受过特殊的再造和强化手术，能够直接以意志和系统连接并传达各项命令，而且能以休眠的防止来防止肉体上的衰老，所以，在理论上我们可以永生不死，永远担任空中要塞的控制工作。#就在残余的古代人要撤离此地的时候，我们收到攻击指令，命令我们用最终武器「黑暗之焰」轰炸地表。#可是就在执行命令的前一刻，却又收到模糊的讯号，命令我们中止攻击。之后我们再也没有收到过任何讯号，我们就这样等待着永远也不会再有的战斗命令，和这座孤伶伶的要塞在控制飘荡了三万年的时光。</string>
+    <key>30-02-010-Id</key><string>1</string>
+    <key>30-02-010</key><string>三。。三万年！#你不会觉的很寂寞吗？</string>
+    <key>30-02-011-Id</key><string>2</string>
+    <key>30-02-011</key><string>不。我们都处在休眠状态，有状况通讯系统会自动叫醒我们，所以三万年的时间并不算久。#我们一直沉睡到不久之前。。。。</string>
+    <key>30-02-012-Id</key><string>21</string>
+    <key>30-02-012</key><string>原本处在沉睡状况下的要塞为何会再次苏醒？</string>
+    <key>30-02-013-Id</key><string>2</string>
+    <key>30-02-013</key><string>要塞发生了一次意外，安全系统误报要塞遭受攻击。。。#ASR-06认为那是来自地面上的攻击，坚持要继续以前的攻击命令，我和他发生很大的争执。#由于我醒来后曾对地表做过观察，发现陆地上已再次出现生命和文明，所以就把攻击电脑所不可或缺的单元计算晶片拿出来，从要塞上丢了下去。#三万年前的战争已经够了，我不想看到再一次的惨剧。。。#结果ASR-06发现了我的意图，在争取晶片的途中，我失足跌了下去。。。</string>
+    <key>30-02-014-Id</key><string>3</string>
+    <key>30-02-014</key><string>结果。。你就掉到罗特帝亚来了。</string>
+    <key>30-02-015-Id</key><string>2</string>
+    <key>30-02-015</key><string>刚醒来的时候，我的系统受到严重冲击，部分记忆无法存取，所以我忘记了以往的一切。#那时无心的说出想回家的话，索尔你们才和我一路来到这里，。。#这是命运之神的安排吧！</string>
+    <key>30-02-016-Id</key><string>21</string>
+    <key>30-02-016</key><string>真是令人难以置信。。。#我想，这一切都是神的旨意，现在我们已打倒了最后的敌人，悠妮小姐，往后。。。#你打算怎么办呢？</string>
+    <key>30-02-017-Id</key><string>2</string>
+    <key>30-02-017</key><string>我会用空间传送装置送你们回马拉大陆，然后我会把要塞带到超空间中，让它永远永远的从这个世界上消失。。#一切就让它就就此结束吧！</string>
+    <key>30-02-018-Id</key><string>1</string>
+    <key>30-02-018</key><string>悠妮，你不和我们一起走吗？</string>
+    <key>30-02-019-Id</key><string>2</string>
+    <key>30-02-019</key><string>不。我本来就是这个要塞的一部分，而为了保证这种事不会再发生，我也必须待在这个要塞上。。#我想这是和大家说再见的时刻了，这些日子以来的冒险与种种回忆。。。#我会永远记在心里。。。</string>
+    <key>30-02-020-Id</key><string>1</string>
+    <key>30-02-020</key><string>悠妮！你真的要留在这儿？。。。</string>
+    <key>30-02-021-Id</key><string>2</string>
+    <key>30-02-021</key><string>索尔，我真的很感谢你，你已经实现了诺言，将我送回家了。#你对我来说是很特别的，在记忆苏醒的刹那，我为了自己将选择哪一方面而迷乱，然而。。是你让我做了最后的决定。</string>
+    <key>30-02-022-Id</key><string>1</string>
+    <key>30-02-022</key><string>。。不能为了我。。。</string>
+    <key>30-02-023-Id</key><string>2</string>
+    <key>30-02-023</key><string>索尔，我了解你的心情，但是。。#我并不是一般的女子，也不属于这个新的世界。。。#就让我留在这里吧，这也是我的职责。。。。</string>
+    <key>30-02-024-Id</key><string>21</string>
+    <key>30-02-024</key><string>索尔，你要谅解悠妮的立场，而且，在将来的岁月中，你也一定会再遇到适合你的女孩子，#更何况你身为罗特帝亚的王子，有美好的将来和前程，别辜负了悠妮的心意。</string>
+    <key>30-02-025-Id</key><string>1</string>
+    <key>30-02-025</key><string>。。。。。。。。我明白了。#悠妮，你要多保重。。</string>
+    <key>30-02-026-Id</key><string>2</string>
+    <key>30-02-026</key><string>谢谢。。。。。。我会永远永远记得你的，索尔。。在我的生命中。。。。</string>
+
+    <key>30-03-001-Id</key><string>002</string>
+    <key>30-03-001</key><string>不。。。我不能输给那家伙。。索尔。。索。。。</string>
+
+</dict>
+</plist>

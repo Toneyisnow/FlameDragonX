@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+
+
+
+
+
+
+
+
+    <key>Title-05</key><string>第五章 塞拉村</string>
+
+    <key>Condition-Lose</key><string>索尔死亡</string>
+    <key>Condition-Win</key><string>敌全灭</string>
+
+    <key>05-01-001-Id</key><string>99</string>
+    <key>05-01-001</key><string>喔呵呵呵！摆平了这些士兵，塞拉村就是我的拉！</string>
+    <key>05-01-002-Id</key><string>81</string>
+    <key>05-01-002</key><string>别做梦了！我们的援军再过一会就到了，等着瞧吧！</string>
+    <key>05-01-003-Id</key><string>99</string>
+    <key>05-01-003</key><string>那就要看你们能不能活到哪个时候了！</string>
+    <key>05-01-004-Id</key><string>8</string>
+    <key>05-01-004</key><string>可恶的强盗，连这个神圣的村庄都敢侵犯，我不会放过你们的！</string>
+    <key>05-01-005-Id</key><string>99</string>
+    <key>05-01-005</key><string>小女孩来凑什么热闹，若不想受伤就快回家去！</string>
+    <key>05-01-006-Id</key><string>8</string>
+    <key>05-01-006</key><string>可恶，你敢轻视我！我的护卫们很快就到了，那时候就。。。</string>
+    <key>05-01-007-Id</key><string>6</string>
+    <key>05-01-007</key><string>哎呀呀呀！果然出事了！</string>
+    <key>05-01-008-Id</key><string>5</string>
+    <key>05-01-008</key><string>好大群的强盗啊！这下子有得打了。。。</string>
+    <key>05-01-009-Id</key><string>99</string>
+    <key>05-01-009</key><string>喔呵呵呵！这些就是你的护卫吗？怎么看起来都是些小毛头？</string>
+    <key>05-01-010-Id</key><string>8</string>
+    <key>05-01-010</key><string>这个。。。。</string>
+    <key>05-01-011-Id</key><string>1</string>
+    <key>05-01-011</key><string>谁是小毛头！老女人，你说话最好小心点！</string>
+    <key>05-01-012-Id</key><string>99</string>
+    <key>05-01-012</key><string>不知死活的小鬼，让你吃些苦头，你才会知道大姐我的厉害。通通都给我杀了！</string>
+    <key>05-01-013-Id</key><string>8</string>
+    <key>05-01-013</key><string>喂！你们来帮个忙吧！打退这个强盗团，我可以付你们不低的酬金。。。</string>
+    <key>05-01-014-Id</key><string>1</string>
+    <key>05-01-014</key><string>要打架吗？我兴致可高的很，亚雷斯，我们上！</string>
+    <key>05-01-015-Id</key><string>2</string>
+    <key>05-01-015</key><string>敌人数量很多，大家小心了！</string>
+
+    <key>05-02-001-Id</key><string>99</string>
+    <key>05-02-001</key><string>就几个小鬼还打发不掉吗？好，第二队，第三队上！</string>
+
+    <key>05-03-001-Id</key><string>111</string>
+    <key>05-03-001</key><string>无法无天的盗贼，竟然侵犯受神所庇护的神圣之村，难道不怕遭天罚吗？我们王国正规军这就来替天行道！</string>
+    <key>05-03-002-Id</key><string>99</string>
+    <key>05-03-002</key><string>你们来的正好，还来得及帮你们的伙伴收尸。喔呵呵呵！</string>
+    <key>05-03-003-Id</key><string>111</string>
+    <key>05-03-003</key><string>可恶，大家上啊！和这些家伙拼了！</string>
+
+    <key>05-04-001-Id</key><string>101</string>
+    <key>05-04-001</key><string>呜吼~~好吵啊！</string>
+    <key>05-04-002-Id</key><string>102</string>
+    <key>05-04-002</key><string>呜吼~~又发生什么事了？</string>
+    <key>05-04-003-Id</key><string>103</string>
+    <key>05-04-003</key><string>呜吼~~又有人类在打架了！</string>
+    <key>05-04-004-Id</key><string>101</string>
+    <key>05-04-004</key><string>有趣有趣！我们再去打人少的那一边！</string>
+
+    <key>05-05-001-Id</key><string>102</string>
+    <key>05-05-001</key><string>吼。。等等，那好象是我们上次遇到的那一批人耶！好可怕，不要和他们打！快逃快逃！</string>
+
+    <key>05-06-001-Id</key><string>99</string>
+    <key>05-06-001</key><string>。。。啊。。我居然就这样被一群小鬼打败了，我不甘心。。。</string>
+    <key>05-06-002-Id</key><string>8</string>
+    <key>05-06-002</key><string>多谢大家帮我们打败盗贼，我代表村中的祭司们向各位致谢。除了我答应的酬劳外，各位是否还需要任何医疗与协助？相信祭司们会很乐意帮忙的。</string>
+    <key>05-06-003-Id</key><string>1</string>
+    <key>05-06-003</key><string>酬劳可以免拉，帮我们医好这位小姐的失忆症就可以了。</string>
+    <key>05-06-004-Id</key><string>8</string>
+    <key>05-06-004</key><string>失忆症？这个。。这种病，他们恐怕是帮不上忙喔！</string>
+    <key>05-06-005-Id</key><string>1</string>
+    <key>05-06-005</key><string>为什么？</string>
+    <key>05-06-006-Id</key><string>8</string>
+    <key>05-06-006</key><string>我曾跟着村中的祭司学过一阵子神术，据我所知，神术能医治的都是肢骨肉体上的疾病，失忆症算是一种心病，神术并不会对心灵记忆等产生影响，所以也无从治起。</string>
+    <key>05-06-007-Id</key><string>1</string>
+    <key>05-06-007</key><string>嘎？那岂不是。。白忙一场了？希。。希莉亚！</string>
+    <key>05-06-008-Id</key><string>6</string>
+    <key>05-06-008</key><string>这。。这不是我的错啊！我本来也以为祭司们医术高超，一定能治好悠妮的失忆症的。。 </string>
+    <key>05-06-009-Id</key><string>3</string>
+    <key>05-06-009</key><string>索尔，现在怪希莉亚也没用，还是想想下一步该怎么做吧。</string>
+    <key>05-06-010-Id</key><string>2</string>
+    <key>05-06-010</key><string>索尔，我也不好意思再麻烦你们了，不如。。。。</string>
+    <key>05-06-011-Id</key><string>8</string>
+    <key>05-06-011</key><string>别急嘛！我还知道有另一个方法可以医治悠妮小姐的失忆症，想不想试试看啊？</string>
+    <key>05-06-012-Id</key><string>1</string>
+    <key>05-06-012</key><string>有附带条件吧？</string>
+    <key>05-06-013-Id</key><string>8</string>
+    <key>05-06-013</key><string>别说这么难听嘛！是这样的拉，有个叫约拿的贤者住在南部的大港普里兹，他见多识广，应该知道怎么医治悠妮小姐的失忆症吧！</string>
+    <key>05-06-014-Id</key><string>3</string>
+    <key>05-06-014</key><string>所以你就。。</string>
+    <key>05-06-015-Id</key><string>8</string>
+    <key>05-06-015</key><string>我正好也要到普里兹港去找约拿，这一带最近都不怎么安宁，所以我想和你们结伴而行，如此就可以互相照顾拉。你们放心，我自己有带护卫随行，不会太麻烦你们的。</string>
+    <key>05-06-016-Id</key><string>2</string>
+    <key>05-06-016</key><string>这样妥当吗？</string>
+    <key>05-06-017-Id</key><string>3</string>
+    <key>05-06-017</key><string>既然是要治好悠妮的失忆症，我想什么办法都值得一试。</string>
+    <key>05-06-018-Id</key><string>1</string>
+    <key>05-06-018</key><string>说的也是。那我们就一起去找约拿吧！还有，希莉亚，你今后打算怎么办呢？</string>
+    <key>05-06-019-Id</key><string>6</string>
+    <key>05-06-019</key><string>我还是跟着你们吧，多少也可以帮上一些忙。而且和你们同行，总是会遇到不少有趣的事呢！</string>
+    <key>05-06-020-Id</key><string>1</string>
+    <key>05-06-020</key><string>这个疯丫头真是。。不管了，我们上路吧！</string>
+</dict>
+</plist>

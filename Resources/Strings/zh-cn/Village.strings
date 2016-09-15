@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+
+    <key>VillagePosition-0</key><string>出 口</string>
+    <key>VillagePosition-1</key><string>道具店</string>
+    <key>VillagePosition-2</key><string>教 会</string>
+    <key>VillagePosition-3</key><string>酒 店</string>
+    <key>VillagePosition-4</key><string>武器店</string>
+    <key>VillagePosition-5</key><string>？？？</string>
+</dict>
+</plist>

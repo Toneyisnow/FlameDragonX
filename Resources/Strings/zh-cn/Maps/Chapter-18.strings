@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+
+    <key>Title-18</key><string>第十八章  遥远的彼岸</string>
+    <key>Condition-Lose</key><string>索尔或兰斯洛特或约拿死亡</string>
+    <key>Condition-Win</key><string>黑暗骑士死亡</string>
+
+    <key>18-01-001-Id</key><string>3</string>
+    <key>18-01-001</key><string>好长的吊桥！在这山岳决定搆筑这么长的吊桥，一定很不容易吧！</string>
+    <key>18-01-002-Id</key><string>1</string>
+    <key>18-01-002</key><string>这吊桥通往哪里？</string>
+    <key>18-01-003-Id</key><string>12</string>
+    <key>18-01-003</key><string>过了这道吊桥，地形便急转直下，通往史威特平原平冟和黑暗沼泽。。。</string>
+    <key>18-01-004-Id</key><string>16</string>
+    <key>18-01-004</key><string>咦！有亲比我们先到此地了呢！</string>
+    <key>18-01-005-Id</key><string>5</string>
+    <key>18-01-005</key><string>老爹，吊桥上有一个高大的骑士和一位老者，是吧？</string>
+    <key>18-01-006-Id</key><string>9</string>
+    <key>18-01-006</key><string>老者？莫非是。。。</string>
+    <key>18-01-007-Id</key><string>12</string>
+    <key>18-01-007</key><string>是他的背影没错！约拿先生！</string>
+    <key>18-01-008-Id</key><string>21</string>
+    <key>18-01-008</key><string>哎呀！可不是索非亚和贝克威吗？还带了一票小朋友呢，你们什么时候来的？</string>
+    <key>18-01-009-Id</key><string>9</string>
+    <key>18-01-009</key><string>刚刚才到的，约拿先生，真高兴能遇见您。。</string>
+    <key>18-01-010-Id</key><string>21</string>
+    <key>18-01-010</key><string>听说你们一路上战绩卓著，想必法术战技也都锻炼得不错了，这对我们日后与黑暗势力的决战大有助益。。</string>
+    <key>18-01-011-Id</key><string>1</string>
+    <key>18-01-011</key><string>小心，约拿先生，您的背后有人！</string>
+    <key>18-01-012-Id</key><string>101</string>
+    <key>18-01-012</key><string>嘿嘿，由他们的话听来，这来头果然是约拿没错！</string>
+    <key>18-01-013-Id</key><string>199</string>
+    <key>18-01-013</key><string>大家听清楚了，宰了他就可以获得丰厚的赏金！大家努力作战，回去就可以快活度日了！</string>
+    <key>18-01-014-Id</key><string>102</string>
+    <key>18-01-014</key><string>那还等什么？大伙儿上吧！</string>
+    <key>18-01-015-Id</key><string>16</string>
+    <key>18-01-015</key><string>糟啦，由他们铠甲上的纹饰看来，我们好象有大麻烦了。。。</string>
+    <key>18-01-016-Id</key><string>3</string>
+    <key>18-01-016</key><string>怎么回事？</string>
+    <key>18-01-017-Id</key><string>16</string>
+    <key>18-01-017</key><string>如果我没记错的话，这是一支叫做「死亡骷髅」的黑暗佣兵团，这些恶名昭彰的家伙转接暗杀和劫掠的生意，为了赚血腥钱无所不为！</string>
+    <key>18-01-018-Id</key><string>13</string>
+    <key>18-01-018</key><string>我想起来了，以前我们王国骑士团曾对他们发动过一次清剿，自那之后就没再听过他们的消息了。</string>
+    <key>18-01-019-Id</key><string>9</string>
+    <key>18-01-019</key><string>他们在次出现，难道是为了约拿先生而来？。。。。糟了，约拿先生有危险！</string>
+    <key>18-01-020-Id</key><string>1</string>
+    <key>18-01-020</key><string>敌人人数不少，我们赶快过去支援！走吧！</string>
+    <key>18-01-021-Id</key><string>20</string>
+    <key>18-01-021</key><string>约拿先生，出现在桥彼端的似乎是「死亡骷髅」佣兵团，这批佣兵应该是冲着我们来的。</string>
+    <key>18-01-022-Id</key><string>21</string>
+    <key>18-01-022</key><string>是么？敌人终于下杀手了。。也好，我好久没活动这把老骨头啦，还可以顺便看看小子们的表现，兰斯洛特，你应该没问题吧？ </string>
+    <key>18-01-023-Id</key><string>20</string>
+    <key>18-01-023</key><string>请您放心，不管情势如何，我都誓以生命来保护您的安全。</string>
+    <key>18-01-024-Id</key><string>21</string>
+    <key>18-01-024</key><string>不用这么客气，这又不是我们第一次联手。。。。敌人来了，我们小心迎战吧！</string>
+
+
+    <key>18-02-001-Id</key><string>140</string>
+    <key>18-02-001</key><string>好耐命的老头！约拿和那个骑士居然都还活着？</string>
+    <key>18-02-002-Id</key><string>141</string>
+    <key>18-02-002</key><string>他们好象找来了帮手，弝兄们好象死伤惨重！首领要我们来增援果然是对的。</string>
+    <key>18-02-003-Id</key><string>140</string>
+    <key>18-02-003</key><string>既然如此，我们就从这里突击他们的后方，和桥上的弟兄左右夹击，让他们插翅也难飞！</string>
+    <key>18-02-004-Id</key><string>141</string>
+    <key>18-02-004</key><string>好，就这么办！我们上吧！</string>
+
+
+    <key>18-03-001-Id</key><string>199</string>
+    <key>18-03-001</key><string>可恶。。我的同伴会为我报仇的。。。。等着瞧吧。。。</string>
+    <key>18-03-002-Id</key><string>21</string>
+    <key>18-03-002</key><string>多谢大家的帮助！玛琳，索非亚，贝克威，很高兴你们能赶此地与我会合；还有不少我认识的朋友们，我也在此向你们问好。至于几位初次见面的这几位年轻的。。勇士们怎么称呼呢？</string>
+    <key>18-03-003-Id</key><string>1</string>
+    <key>18-03-003</key><string>约拿先生，我叫索尔，这两位是我的好友亚雷斯和悠妮小姐，我໬来自东方的罗特帝亚。</string>
+    <key>18-03-004-Id</key><string>21</string>
+    <key>18-03-004</key><string>啊！罗特帝亚吗？那可真是远道而杤。不知道你们为何大老远前来此地？</string>
+    <key>18-03-005-Id</key><string>1</string>
+    <key>18-03-005</key><string>老实说，是想请约拿先生你医治悠妮小姐的失忆症。。</string>
+    <key>18-03-006-Id</key><string>21</string>
+    <key>18-03-006</key><string>失忆症？这可难倒我了，如果是魔法所造成的，我或许还能帮得上忙；但若是头部受伤或是疾病引起的，那就是僧侣分内的工作了。。。。。。不过既然你们都大老远跑来了，我还是帮她看看吧，悠妮小姐，请你过来这边。。</string>
+    <key>18-03-007-Id</key><string>21</string>
+    <key>18-03-007</key><string>恩。。。。有趣，有趣！这种事我还是第一次见到。。。。</string>
+    <key>18-03-008-Id</key><string>1</string>
+    <key>18-03-008</key><string>约拿先生，怎么样？</string>
+    <key>18-03-009-Id</key><string>21</string>
+    <key>18-03-009</key><string>坏消息是，我无法医治她的失忆症，这有特别的原因；好消息则是，或许我能告诉你她来自何处。</string>
+    <key>18-03-010-Id</key><string>1</string>
+    <key>18-03-010</key><string>这样也行，我们本来就是要送她回家的。约拿先生，能告诉我们地点在哪里吗？</string>
+    <key>18-03-011-Id</key><string>21</string>
+    <key>18-03-011</key><string>现在还不行，因为这涉及我正在调查的古代秘密，我自己也无法确定。。。。不过，也许在这次的事情告一段落之后，我就可以给你们一个确切的答案。</string>
+    <key>18-03-012-Id</key><string>1</string>
+    <key>18-03-012</key><string>那就是说，我们又得。。。。唉！</string>
+    <key>18-03-013-Id</key><string>3</string>
+    <key>18-03-013</key><string>索尔，别叹气啦！我们不如就跟着大家完成这场痛快的大冒险，这种经验以后也很难再有啦！</string>
+    <key>18-03-014-Id</key><string>6</string>
+    <key>18-03-014</key><string>是啊！索尔，你要是不在了，以后的战斗就没人领导了！</string>
+    <key>18-03-015-Id</key><string>1</string>
+    <key>18-03-015</key><string>可是，我只是想赶快回复悠妮的记忆。。。。</string>
+    <key>18-03-016-Id</key><string>2</string>
+    <key>18-03-016</key><string>没关系。索尔，我一直有种奇异的预感，我觉得。。我觉的好象只要再这样走下去，事情一定会有结果的，所以我想。。我希望能继续这段旅程。。。</string>
+    <key>18-03-017-Id</key><string>1</string>
+    <key>18-03-017</key><string>真。。真的吗？好极了，既然你这么认为，我就没有意见了！</string>
+    <key>18-03-018-Id</key><string>8</string>
+    <key>18-03-018</key><string>万岁！索尔他们会留下来了！</string>
+    <key>18-03-019-Id</key><string>9</string>
+    <key>18-03-019</key><string>索尔，我们以后要靠你出力的地方还很多，欢迎你继续和我们一起奋斗。</string>
+    <key>18-03-020-Id</key><string>1</string>
+    <key>18-03-020</key><string>谢谢大家！</string>
+    <key>18-03-021-Id</key><string>21</string>
+    <key>18-03-021</key><string>呵呵呵，这里可不是个叙旧的好地方，前面的路上有个小镇，我们还是先离开这个危险的山崖，去那里好好休息一下吧！</string>
+    <key>18-03-022-Id</key><string>1</string>
+    <key>18-03-022</key><string>我同意！大家上路吧！</string>
+
+
+</dict>
+</plist>

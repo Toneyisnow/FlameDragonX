@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+
+
+
+
+
+
+
+
+
+    <key>Title-15</key><string>第十五章  拉卡湖的激战</string>
+    <key>Condition-Lose</key><string>索尔或塞可邦勒死亡</string>
+    <key>Condition-Win</key><string>敌全灭</string>
+
+    <key>15-01-001-Id</key><string>3</string>
+    <key>15-01-001</key><string>我看到兽人军了，他们就位在北方，更远的地方好象是豹人族的部队。</string>
+    <key>15-01-002-Id</key><string>10</string>
+    <key>15-01-002</key><string>谈到豹人，我就想起我的师兄塞可邦勒。。。咦？那不就是我师兄吗？#塞可邦勒师兄！是你吗？我是凯丽啊！</string>
+    <key>15-01-003-Id</key><string>201</string>
+    <key>15-01-003</key><string>谁在叫我？#咦！是凯丽啊！真是凑巧，怎么会在这时候遇上你。。。</string>
+    <key>15-01-004-Id</key><string>10</string>
+    <key>15-01-004</key><string>我听说兽人大军攻打豹人族就带朋友们来帮忙，也没预想到会在这里遇上师兄你。。。</string>
+    <key>15-01-005-Id</key><string>201</string>
+    <key>15-01-005</key><string>既然如此，就先谢谢你了！#还有，这批兽人是由其首领萨卡所带领，你们要特别小心！</string>
+    <key>15-01-006-Id</key><string>10</string>
+    <key>15-01-006</key><string>我知道了！#索尔，亚雷斯，大家帮我这个忙好吗？#我一个人是打不过这批兽人大军的。。。</string>
+    <key>15-01-007-Id</key><string>3</string>
+    <key>15-01-007</key><string>放心吧，我们本来就是要来帮豹人的，索尔，你说是不是？</string>
+    <key>15-01-008-Id</key><string>1</string>
+    <key>15-01-008</key><string>是啊！来这里不就是要打架的吗？#眼前就有一大堆欠揍的家伙，还罗嗦什么？我们上吧！</string>
+    <key>15-01-009-Id</key><string>10</string>
+    <key>15-01-009</key><string>谢谢大家！</string>
+    <key>15-01-010-Id</key><string>199</string>
+    <key>15-01-010</key><string>哼，又有妨碍者了吗？#通通多去死吧！给我杀的一个都不剩！</string>
+
+
+    <key>15-02-001-Id</key><string>3</string>
+    <key>15-02-001</key><string>我看到兽人军了，他们就位在北方，更远的地方好象是豹人族的部队。</string>
+    <key>15-02-002-Id</key><string>16</string>
+    <key>15-02-002</key><string>看来豹人情式不妙，我们赶快去助它们一臂之力！</string>
+    <key>15-02-003-Id</key><string>1</string>
+    <key>15-02-003</key><string>喂！#豹人的老兄们别怕，我们来帮忙了！</string>
+    <key>15-02-004-Id</key><string>201</string>
+    <key>15-02-004</key><string>是谁来了？#是敌方援军吗？#咦！是一群年轻小伙子。。。#此地战况险恶，你们来这里干什么？#不想受伤就快走吧！</string>
+    <key>15-02-005-Id</key><string>1</string>
+    <key>15-02-005</key><string>老兄你心地不错啊！#放心，我们是来帮你们的，这些杂碎交给我们就没错啦！</string>
+    <key>15-02-006-Id</key><string>201</string>
+    <key>15-02-006</key><string>这样吗？#看你们信心十足的样子。。#好吧，我在此先谢谢你们！#此外，这批兽人是由其首领萨卡所带领，你们要特别小心！</string>
+    <key>15-02-007-Id</key><string>1</string>
+    <key>15-02-007</key><string>知道啦！#各位，咱们上吧！</string>
+    <key>15-02-008-Id</key><string>199</string>
+    <key>15-02-008</key><string>哼，又有妨碍者了吗？#通通都去死吧！给我杀的一个都不剩！</string>
+
+
+    <key>15-02-009-Id</key><string>201</string>
+    <key>15-02-009</key><string>没退路了，大家跟他们拼了！</string>
+
+    <key>15-02-010-Id</key><string>199</string>
+    <key>15-02-010</key><string>就这几个人还解决不了，第二队再上！</string>
+
+
+    <key>15-03-001-Id</key><string>151</string>
+    <key>15-03-001</key><string>哎呀！#我们好像来迟啦！</string>
+    <key>15-03-002-Id</key><string>152</string>
+    <key>15-03-002</key><string>首领命令我们携带这批贵重宝物，为了避免一起注意所以绕道而行，迟到也是应该的。</string>
+    <key>15-03-003-Id</key><string>151</string>
+    <key>15-03-003</key><string>不知道现在战况如何？</string>
+    <key>15-03-004-Id</key><string>125</string>
+    <key>15-03-004</key><string>喂！你们不是负责运送宝物的吗？#来这里干什么？</string>
+    <key>15-03-005-Id</key><string>151</string>
+    <key>15-03-005</key><string>首领吩咐我们带着东西，到这里和他们会合。。。</string>
+    <key>15-03-006-Id</key><string>125</string>
+    <key>15-03-006</key><string>笨蛋！#你没看到战况不妙吗？#赶快离开这里，把东西带到艾斯岛去！</string>
+    <key>15-03-007-Id</key><string>151</string>
+    <key>15-03-007</key><string>。。知。。知道了！</string>
+    <key>15-03-008-Id</key><string>152</string>
+    <key>15-03-008</key><string>赶快逃啊！</string>
+
+
+    <key>15-04-001-Id</key><string>15</string>
+    <key>15-04-001</key><string>咦？这。。这不是「光之眼」的宝石吗？为何兽人族也在收集这些东西。。。</string>
+    <key>15-04-002-Id</key><string>14</string>
+    <key>15-04-002</key><string>传说中的「魔眼宝石」吗？我听老师说过，听说他们有强大的魔力，但这和兽人族有什么关系？。。。</string>
+    <key>15-04-003-Id</key><string>15</string>
+    <key>15-04-003</key><string>你也知道吗？据说他们的价值并不只是魔力而已，而是和一件古代的秘密有很大的关系。。。</string>
+    <key>15-04-004-Id</key><string>1</string>
+    <key>15-04-004</key><string>你们在谈些什么？好象很有趣的样子！</string>
+    <key>15-04-005-Id</key><string>15</string>
+    <key>15-04-005</key><string>不聊了，先把仗打完再说！</string>
+
+
+    <key>15-05-001-Id</key><string>199</string>
+    <key>15-05-001</key><string>啊。。主人，救救我。。你答应要给我。。给我力量和。。永恒的。。生命的。。。。</string>
+    <key>15-05-002-Id</key><string>1</string>
+    <key>15-05-002</key><string>糟啦，这一下打得太重了些，等一下没人可以问话了，可惜可惜。</string>
+
+
+    <key>15-06-001-Id</key><string>201</string>
+    <key>15-06-001</key><string>感谢各位的协助,我们才能够抵挡兽人大军的攻势,我们代表豹人族向各位致上十二万分的谢意。</string>
+    <key>15-06-002-Id</key><string>10</string>
+    <key>15-06-002</key><string>师兄，不用客气啦，我这些朋友们都是正义的热血好汉，他们一路上已经不知道帮了多少人呢。</string>
+    <key>15-06-003-Id</key><string>201</string>
+    <key>15-06-003</key><string>话虽然这么说，我还是要谢谢他们。对了，凯丽，你可有看到兽人的军队在其他地方出现？</string>
+    <key>15-06-004-Id</key><string>10</string>
+    <key>15-06-004</key><string>有啊！他们显示攻打精灵族的都城哈斯米尔，然后又和我们在兰迪平原打了一仗，最近兽人都看得厌了。</string>
+
+    <key>15-06-005-Id</key><string>201</string>
+    <key>15-06-005</key><string>感谢各位的协助,我们才能够抵挡兽人军的攻势,我们代表豹人族向各位致上十二万分的谢意。</string>
+    <key>15-06-006-Id</key><string>1</string>
+    <key>15-06-006</key><string>小事一桩！正好也可让我们活动活动筋骨。</string>
+    <key>15-06-007-Id</key><string>201</string>
+    <key>15-06-007</key><string>话虽然这么说，我还是要谢谢你们。对了，各位可有看到兽人的军队在其它地方出现？</string>
+    <key>15-06-008-Id</key><string>9</string>
+    <key>15-06-008</key><string>有啊！他们先是攻打精灵族的都城哈斯米尔，然后又和我们在兰迪平原打了一仗，最近兽人真是嚣张得不得了。</string>
+
+    <key>15-06-009-Id</key><string>201</string>
+    <key>15-06-009</key><string>有这种事？看来阴谋之说果然是真的。</string>
+    <key>15-06-010-Id</key><string>3</string>
+    <key>15-06-010</key><string>什么意思？</string>
+    <key>15-06-011-Id</key><string>201</string>
+    <key>15-06-011</key><string>最近我得到消息，说有人在背后操纵黑森林一带的兽人族和狂战士，准备要对精灵族和豹人族进行灭族的屠戮行动，我起初还半信半疑，兼程赶回家乡看看，没想到就遇上了。</string>
+    <key>15-06-012-Id</key><string>9</string>
+    <key>15-06-012</key><string>我们精灵族也差点惨遭屠戮，到底是谁在背后操纵这一切？</string>
+    <key>15-06-013-Id</key><string>201</string>
+    <key>15-06-013</key><string>这我也不清楚，不过据我那朋友所言，有更大群的兽人和黑暗战士在北方的冰岛一带集结，她已经先去调查了，我预计在解决这里的事情之后，也会尽快赶去和她会合。</string>
+    <key>15-06-014-Id</key><string>12</string>
+    <key>15-06-014</key><string>恩，约拿似乎也是往这个方向而去，看来这些事情似乎有所关连。。。</string>
+    <key>15-06-015-Id</key><string>3</string>
+    <key>15-06-015</key><string>既然顺路的话，那我们就一起去吧！</string>
+    <key>15-06-016-Id</key><string>1</string>
+    <key>15-06-016</key><string>就这么办吧，我倒想看看到底是谁在搞鬼！走吧！</string>
+
+
+
+</dict>
+</plist>

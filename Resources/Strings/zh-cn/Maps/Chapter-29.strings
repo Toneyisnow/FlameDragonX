@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+
+
+
+
+
+
+
+
+
+    <key>Title-29</key><string>第二十九章　无边的黑暗之中</string>
+    <key>Condition-Lose</key><string>索尔或悠妮死亡</string>
+    <key>Condition-Win</key><string>解除防御系统</string>
+
+    <key>29-01-001-Id</key><string>1</string>
+    <key>29-01-001</key><string>好累，拐了半天路，头都快晕了。。。。</string>
+    <key>29-01-002-Id</key><string>2</string>
+    <key>29-01-002</key><string>没办法，为了少打一些无谓的仗以保留大家的实力，尽量避开其它的守卫队是必须的。</string>
+    <key>29-01-003-Id</key><string>21</string>
+    <key>29-01-003</key><string>唔！这地方蕴涵着极强大的能量，其威力之强是我前所未见的。。</string>
+    <key>29-01-004-Id</key><string>2</string>
+    <key>29-01-004</key><string>是的，这里就是黄金城的核心，次元反应炉。这反应炉不但产生整个要塞所需的动力，以某种方法将它的反应逆转，也可以让它成为恐怖的最终兵器。。。。</string>
+    <key>29-01-005-Id</key><string>9</string>
+    <key>29-01-005</key><string>那我们现在该怎么办？破坏它吗？</string>
+    <key>29-01-006-Id</key><string>2</string>
+    <key>29-01-006</key><string>不！并不需要破坏它，在这核心区的北方，就是要塞的中枢控制系统，只要有这天空之钥，我就可以接管要塞的中枢系统，经由我的终端连接内部的网络来控制整个要塞。</string>
+    <key>29-01-007-Id</key><string>1</string>
+    <key>29-01-007</key><string>悠妮，想不到你有这种能力，我好佩服你！</string>
+    <key>29-01-008-Id</key><string>2</string>
+    <key>29-01-008</key><string>是吗？想要有这种能力，可是要付出可怕的代价的。。不多说了，我们这就过去吧。</string>
+    <key>29-01-009-Id</key><string>163</string>
+    <key>29-01-009</key><string>哔，目标发现并确认！执行作战指令！间接坐标传输完成，防卫用障壁启动！各单位，歼灭所有敌目标！不需顾虑ASR-07！</string>
+    <key>29-01-010-Id</key><string>3</string>
+    <key>29-01-010</key><string>哼，有埋伏！</string>
+    <key>29-01-011-Id</key><string>1</string>
+    <key>29-01-011</key><string>地形差了一点是真的，但要战胜应该还不是难事。</string>
+    <key>29-01-012-Id</key><string>2</string>
+    <key>29-01-012</key><string>这里现在还完全在敌方的控制下，我们千万不能掉以轻心。大家设法护送我到前面的控制盘去就可以了，只要让我有机会把「天空之钥」安装好，我就能让这些防卫部队全部变成废铁。</string>
+    <key>29-01-013-Id</key><string>1</string>
+    <key>29-01-013</key><string>没问题，包在我身上！</string>
+    <key>29-01-014-Id</key><string>3</string>
+    <key>29-01-014</key><string>我们赶快动手吧，可别让敌人抢了先机！</string>
+
+    <key>29-02-001-Id</key><string>2</string>
+    <key>29-02-001</key><string>就是这里了！系统识别码。。0370425188。。啊，这是。。</string>
+    <key>29-02-002-Id</key><string>1</string>
+    <key>29-02-002</key><string>悠妮，怎样？</string>
+    <key>29-02-003-Id</key><string>2</string>
+    <key>29-02-003</key><string>中枢撤消最高级系统防卫需要一些时间，我想还要再等一会儿！</string>
+    <key>29-02-004-Id</key><string>1</string>
+    <key>29-02-004</key><string>没关系！倒是你自己可要多小心些！</string>
+    <key>29-02-005-Id</key><string>2</string>
+    <key>29-02-005</key><string>好的！</string>
+
+    <key>29-03-001-Id</key><string>2</string>
+    <key>29-03-001</key><string>奇怪，终端竟然抗拒我的命令，有人对防卫系统动了手脚！</string>
+    <key>29-03-002-Id</key><string>1</string>
+    <key>29-03-002</key><string>悠妮，怎样了？</string>
+    <key>29-03-003-Id</key><string>2</string>
+    <key>29-03-003</key><string>糟糕，系统进入了最终防卫状态！这。。</string>
+    <key>29-03-004-Id</key><string>301</string>
+    <key>29-03-004</key><string>警告！中枢部有敌人侵入！</string>
+    <key>29-03-005-Id</key><string>302</string>
+    <key>29-03-005</key><string>最终防卫状态启动！</string>
+    <key>29-03-006-Id</key><string>303</string>
+    <key>29-03-006</key><string>对外系统连结闭锁！自我防卫装置启动！</string>
+    <key>29-03-007-Id</key><string>1</string>
+    <key>29-03-007</key><string>悠妮，小心！那三条龙是。。。。</string>
+    <key>29-03-008-Id</key><string>2</string>
+    <key>29-03-008</key><string>事到如今，也只能这样做了。。大家听着，这三条巨龙形状的东西是黄金城的防卫中枢，由于敌人的干扰，我们现在已经无法控制防卫中枢，必须集合大家的力量来把它们彻底摧毁！</string>
+    <key>29-03-009-Id</key><string>5</string>
+    <key>29-03-009</key><string>怎么摧毁？用武器砍烂吗？</string>
+    <key>29-03-010-Id</key><string>2</string>
+    <key>29-03-010</key><string>是的，直接攻击它们就行了！不过它们都有防卫装置防护，防卫装置的威力极为强大，千万不可大意！</string>
+    <key>29-03-011-Id</key><string>3</string>
+    <key>29-03-011</key><string>知道了！大家上吧！</string>
+
+    <key>29-04-001-Id</key><string>1</string>
+    <key>29-04-001</key><string>成了！</string>
+    <key>29-04-002-Id</key><string>2</string>
+    <key>29-04-002</key><string>好极了，防卫中枢已经完全停止，虽然我们失去了指挥其他防卫部队的能力，但往后敌人也无法再利用防卫部队来阻止我们。#多谢大家的帮忙，现在只要再接管剩下的系统，便可以防止对方使用最终武器。</string>
+    <key>29-04-003-Id</key><string>3</string>
+    <key>29-04-003</key><string>好极了，那我们接下来要怎么做？</string>
+    <key>29-04-004-Id</key><string>2</string>
+    <key>29-04-004</key><string>找出最后的敌人，我相信他是这一切事件的背后主使者，他是。。</string>
+    <key>29-04-005-Id</key><string>999</string>
+    <key>29-04-005</key><string>是指我吗？</string>
+    <key>29-04-006-Id</key><string>2</string>
+    <key>29-04-006</key><string>是。。是你！真的是你！</string>
+    <key>29-04-007-Id</key><string>999</string>
+    <key>29-04-007</key><string>ASR-07，你的系统真的受损这么重吗？居然认敌为友，实在令我无法理解。。不过，还是很感谢你帮我送回这单元计算晶片，有了它，一直处在中止状况的「黑暗之焰」计划就可以继续下去了。。。。</string>
+    <key>29-04-008-Id</key><string>2</string>
+    <key>29-04-008</key><string>为何你始终不肯放弃这个疯狂的计划？</string>
+    <key>29-04-009-Id</key><string>999</string>
+    <key>29-04-009</key><string>这些地上的蝼蚁，有什么留存的必要！我们当初接到的命令不就是毁灭他们吗？</string>
+    <key>29-04-010-Id</key><string>2</string>
+    <key>29-04-010</key><string>但我们最后接到了中止命令！「黑暗之焰」作战已经中止了！</string>
+    <key>29-04-011-Id</key><string>999</string>
+    <key>29-04-011</key><string>是中止，不是取消！#那些家伙命令我们进行最终计划，把我们留在这个该死的星球上，然后自己就逃到外太空去了！#想想我们已经等了多久！已经多久了！</string>
+    <key>29-04-012-Id</key><string>2</string>
+    <key>29-04-012</key><string>ASR-06，看来你的系统果然故障了！在上一次的意外中。。你一直没有试着去自我修复吗？</string>
+    <key>29-04-013-Id</key><string>999</string>
+    <key>29-04-013</key><string>没有必要！我的使命就是执行作战计划。现在我终于可以开始履行我的职务了。。。。</string>
+    <key>29-04-014-Id</key><string>2</string>
+    <key>29-04-014</key><string>不可能的，我已成功的和最高命令系统连接，现在整个要塞的中枢都在我的控制之下！</string>
+    <key>29-04-015-Id</key><string>999</string>
+    <key>29-04-015</key><string>别傻了，你忘了我身为监视暨战斗系统，在使用武器上有最高的优先权限吗？即使你掌握整个系统中枢，攻击电脑仍然会接受我的命令。。。。</string>
+    <key>29-04-016-Id</key><string>2</string>
+    <key>29-04-016</key><string>你。。。。</string>
+    <key>29-04-017-Id</key><string>999</string>
+    <key>29-04-017</key><string>黑暗之焰系统三十秒后启动，目标马拉大陆！哇哈哈哈，我等这一刻好久了！</string>
+    <key>29-04-018-Id</key><string>2</string>
+    <key>29-04-018</key><string>。。好，既然如此，我只有用最后一着了！。。。。</string>
+    <key>29-04-019-Id</key><string>999</string>
+    <key>29-04-019</key><string>你想干什么？你阻止不了我的。。。。不，不，你不能这样做！</string>
+    <key>29-04-020-Id</key><string>2</string>
+    <key>29-04-020</key><string>你启动了黑暗之焰，我就让反应炉逆转！#等到能量积蓄突破亚空间障壁的负荷量，引发空间扭曲我们就一起和这黄金城在超空间中永恒的漂流吧！</string>
+    <key>29-04-021-Id</key><string>999</string>
+    <key>29-04-021</key><string>。。你这样做，这些人也难逃一劫！</string>
+    <key>29-04-022-Id</key><string>2</string>
+    <key>29-04-022</key><string>若让你启动了「黑暗之焰」，会有更多无辜的人因此丧命！为了保护这个大家所珍惜爱护的世界，相信。。相信大家不会怪我的！</string>
+    <key>29-04-023-Id</key><string>21</string>
+    <key>29-04-023</key><string>悠妮，做的好！无论如何，我们都不能和邪恶之徒妥协！</string>
+    <key>29-04-024-Id</key><string>16</string>
+    <key>29-04-024</key><string>我们这些老头子早就都已经活的腻了，只可惜了这些前途大好的年轻人们。。。。</string>
+    <key>29-04-025-Id</key><string>3</string>
+    <key>29-04-025</key><string>我们的传奇会留在罗特帝亚和马拉大陆的历史上吧！身为一个武士，这就是最高的回报了！</string>
+    <key>29-04-026-Id</key><string>2</string>
+    <key>29-04-026</key><string>对不起，如果。。如果今天我没有把大家带到这黄金城上来，或许就不会这样了。。</string>
+    <key>29-04-027-Id</key><string>1</string>
+    <key>29-04-027</key><string>悠妮，我自始至终都相信你的抉择，今天会有这种结果全是这家伙的错，不管怎样，我要先劈他两剑再说！</string>
+    <key>29-04-028-Id</key><string>999</string>
+    <key>29-04-028</key><string>笨蛋，来送死吧！</string>
+    <key>29-04-029-Id</key><string>999</string>
+    <key>29-04-029</key><string>反、反应炉超过负荷了！。。</string>
+
+    <key>29-05-001-Id</key><string>002</string>
+    <key>29-05-001</key><string>不。。。我不能输给那家伙。。索尔。。索。。。</string>
+</dict>
+</plist>
