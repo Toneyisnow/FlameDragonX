@@ -1,0 +1,29 @@
+Dictionary *language = Dictionary::createWithContentsOfFile("ch.plist");
+
+	String* str = (String*)language->objectForKey("003");
+
+	std::string stri(str->getCString());
+	int size = stri.size();
+
+
+	char* wholeLine = new char[size + 1];
+	strcpy(wholeLine, str->getCString());
+	int wholesize = strlen(wholeLine);
+	char * end = wholeLine + wholesize;
+
+	char* w = wholeLine;
+	for (int  i = 0; i < 7; i++)
+	{
+		int cp = utf8::next(w, end);
+		if (*w == '#')
+		{
+			cocos2d::log("Found #");
+		}
+	}
+	
+	int charsize = w - wholeLine;
+	char * firstLine = new char[charsize + 1];
+	
+	strncpy(firstLine, wholeLine, charsize);
+	firstLine[charsize] = '\0';
+	auto label = Label::createWithTTF(firstLine, "fonts/mini_black.ttf", 24);
