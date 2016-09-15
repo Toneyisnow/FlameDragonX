@@ -1,18 +1,20 @@
 Dictionary *language = Dictionary::createWithContentsOfFile("ch.plist");
 
-	String* str = (String*)language->objectForKey("003");
+	String* str = (String*)language->objectForKey("004");
+	std::string localizedString(str->getCString());
 
-	std::string stri(str->getCString());
-	int size = stri.size();
-
-
-	char* wholeLine = new char[size + 1];
-	strcpy(wholeLine, str->getCString());
-	int wholesize = strlen(wholeLine);
+	String* item = (String*)language->objectForKey("005");
+	
+	std::string filledString = StringUtils::format(localizedString.c_str(), item->getCString());
+	
+	
+	int wholesize = filledString.size();
+	char* wholeLine = new char[wholesize + 1];
+	strcpy(wholeLine, filledString.c_str());
 	char * end = wholeLine + wholesize;
 
 	char* w = wholeLine;
-	for (int  i = 0; i < 7; i++)
+	while (w < end)
 	{
 		int cp = utf8::next(w, end);
 		if (*w == '#')

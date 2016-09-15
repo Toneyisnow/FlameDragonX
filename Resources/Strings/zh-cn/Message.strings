@@ -11,13 +11,23 @@
     <key>Confirm-06</key><string>要离开战场吗？</string>
     <key>Confirm-07</key><string>身上的物品满了，要交换吗？</string>
     <key>Confirm-08</key><string>确定要进入战场吗？</string>
+	
+	<key>Confirm-51</key><string>确定要保存游戏吗？</string>
+    <key>Confirm-52</key><string>确定要读取游戏吗？</string>
+    <key>Confirm-53</key><string>要离开战场吗？</string>
+    <key>Confirm-54</key><string>这个%s，#%d元，要不要啊？</string>
+    <key>Confirm-55</key><string>这个%s，#%d元，卖不卖啊？</string>
+    <key>Confirm-56</key><string>要装备上去吗？</string>
+    <key>Confirm-57</key><string>复活%s，#需要%d元，确定要复活吗？</string>
+    <key>Confirm-58</key><string>%s转职为%s，#需要%d元，确定要转职吗？</string>
 
+	
     <key>Message-01</key><string>好的。#就结束本回合的行动吧！</string>
     <key>Message-02</key><string>是吗？那么就不要了。</string>
     <key>Message-03</key><string>打开宝箱，发现%@！</string>
     <key>Message-04</key><string>发掘宝藏，发现%@！</string>
     <key>Message-05</key><string>获得经验值%d点！</string>
-    <key>Message-06</key><string>得到%@，将%@放了回去！</string>
+    <key>Message-06</key><string>得到%s，将%s放了回去！</string>
     <key>Message-07</key><string>那么就放回去吧！</string>
     <key>Message-08</key><string>那么请休息吧！</string>
     <key>Message-09</key><string>战况已经保存成功！</string>
@@ -28,9 +38,9 @@
     <key>Message-14</key><string>#力量提升%d！</string>
     <key>Message-15</key><string>#耐力提升%d！</string>
     <key>Message-16</key><string>#速度提升%d！</string>
-    <key>Message-17</key><string>#学会了%@！</string>
+    <key>Message-17</key><string>#学会了%s！</string>
 
-    <key>Message-21</key><string>从敌人身上获得%@！</string>
+    <key>Message-21</key><string>从敌人身上获得%s！</string>
     <key>Message-22</key><string>道具满了！</string>
 
     <key>Message-51</key><string>呃，买东西吗？</string>
@@ -44,28 +54,16 @@
     <key>Message-59</key><string>要给谁呢？</string>
     <key>Message-60</key><string>队员中没有需要复活的！</string>
     <key>Message-61</key><string>队员中没有可以转职的！</string>
-    <key>Message-62</key><string>%@带不动了！</string>
+    <key>Message-62</key><string>%s带不动了！</string>
     <key>Message-63</key><string>钱不够！</string>
     <key>Message-64</key><string>该队员没有任何物品！</string>
     <key>Message-65</key><string>返回</string>
-    <key>Message-70</key><string>%@ 转职成 %@</string>
+    <key>Message-70</key><string>%s 转职成 %s</string>
     <key>Message-71</key><string>请选择出场的队员：%02d / %02d</string>
 
     <key>Message-50001</key><string>敌全灭</string>
     <key>Message-60001</key><string>索尔死亡</string>
     <key>Message-60002</key><string>村民全部死亡</string>
-
-
-    <key>Confirm-51</key><string>确定要保存游戏吗？</string>
-    <key>Confirm-52</key><string>确定要读取游戏吗？</string>
-    <key>Confirm-53</key><string>要离开战场吗？</string>
-    <key>Confirm-54</key><string>这个%@，#%d元，要不要啊？</string>
-    <key>Confirm-55</key><string>这个%@，#%d元，卖不卖啊？</string>
-    <key>Confirm-56</key><string>要装备上去吗？</string>
-    <key>Confirm-57</key><string>复活%@，#需要%d元，确定要复活吗？</string>
-    <key>Confirm-58</key><string>%@转职为%@，#需要%d元，确定要转职吗？</string>
-
-
 
 </dict>
 </plist>
