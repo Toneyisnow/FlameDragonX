@@ -8,9 +8,11 @@
 
 #include "MagicBox.hpp"
 
-MagicBox::MagicBox(Creature * creature, MagicOperatingType type)
+MagicBox::MagicBox(Creature * creature, MessageBoxOperatingType type)
 {
     _creature = creature;
     _operatingType = type;
+    
+                                 
 }
 

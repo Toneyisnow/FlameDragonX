@@ -22,16 +22,19 @@
 #include "FightScene.hpp"
 #include "TalkMessage.hpp"
 #include "MagicScene.hpp"
-
+#include "LocalizedStrings.hpp"
 
 USING_NS_CC;
 
 BattleScene::BattleScene(ChapterRecord* record)
 {
-    DataStore::getInstance()->loadData();
+    // DataStore::getInstance()->loadData();
+    _chapterId = record->getChapterId();
+    
+    LocalizedStrings::getInstance()->loadChapterStrings(_chapterId);
+    
     _activityQueue = new ActivityQueue();
     
-    _chapterId = record->getChapterId();
     _battleField = new BattleField(this);
     _battleField->initWithChapter(record->getChapterId());
     this->addChild(_battleField);
@@ -222,7 +225,7 @@ void BattleScene::postFightAction(Ref * counterObjectObj)
     }
     
     // Show Talk messages
-    TalkActivity * talk = TalkActivity::create(this, creature, "Test Message");
+    TalkActivity * talk = TalkActivity::create(TalkActivityType_Speak, this, creature, creature->getDefinition()->name);
     _activityQueue->appendActivity(talk);
     
     
@@ -243,7 +246,7 @@ void BattleScene::useItem(Creature * creature, int itemIndex, Creature * target)
     // Use Animation
     
     // Show Talk messages
-    TalkActivity * talk = TalkActivity::create(this, creature, "Test Message");
+    TalkActivity * talk = TalkActivity::create(TalkActivityType_Speak, this, creature, "Test Message");
     _activityQueue->appendActivity(talk);
     
     // End Turn

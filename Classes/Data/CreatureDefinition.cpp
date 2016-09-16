@@ -7,6 +7,7 @@
 //
 
 #include "CreatureDefinition.hpp"
+#include "LocalizedStrings.hpp"
 
 CreatureDefinition * CreatureDefinition::readFromFile(TextFileReader * reader)
 {
@@ -15,7 +16,7 @@ CreatureDefinition * CreatureDefinition::readFromFile(TextFileReader * reader)
     def->definitionId = reader->readInt();
     def->animationId = def->definitionId % 1000;
     
-    //// def->name = LocalizedString::creatureName(def)
+    def->name = LocalizedStrings::getInstance()->getCreatureName(def->animationId);
     
     def->race = reader->readInt();
     def->occupation = reader->readInt();
@@ -55,7 +56,7 @@ CreatureDefinition * CreatureDefinition::readBaseInfoFromFile(TextFileReader * r
     def->definitionId = reader->readInt();
     def->animationId = def->definitionId % 1000;
     
-    //// def->name = LocalizedString::creatureName(def)
+    def->name = LocalizedStrings::getInstance()->getCreatureName(def->animationId);
     
     def->race = reader->readInt();
     def->occupation = reader->readInt();
@@ -93,8 +94,7 @@ CreatureDefinition * CreatureDefinition::readFromFile(TextFileReader * reader, M
     }
     
     def->animationId = baseDef->animationId;
-    
-    //// def->name = ;
+    def->name = baseDef->name;
     
     def->race = baseDef->race;
     def->occupation = baseDef->occupation;

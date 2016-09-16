@@ -7,3 +7,12 @@
 //
 
 #include "ItemBox.hpp"
+
+ItemBox::ItemBox(Creature * creature, MessageBoxOperatingType type)
+{
+    _creature = creature;
+    _operatingType = type;
+    
+    
+}
+

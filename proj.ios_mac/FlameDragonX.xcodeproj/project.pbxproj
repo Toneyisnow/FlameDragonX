@@ -120,7 +120,7 @@
 		3CE63B7B1D87DCB900C2C76B /* TalkMessage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63B791D87DCB900C2C76B /* TalkMessage.cpp */; };
 		3CE63B7E1D87DD1800C2C76B /* ConfirmMessage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63B7C1D87DD1800C2C76B /* ConfirmMessage.cpp */; };
 		3CE63B811D87DE2A00C2C76B /* SpeakMessage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63B7F1D87DE2A00C2C76B /* SpeakMessage.cpp */; };
-		3CE63B841D87DE9D00C2C76B /* MessageBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63B821D87DE9D00C2C76B /* MessageBox.cpp */; };
+		3CE63B841D87DE9D00C2C76B /* CompositeBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63B821D87DE9D00C2C76B /* CompositeBox.cpp */; };
 		3CE63B871D87DEBB00C2C76B /* DatoBar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63B851D87DEBB00C2C76B /* DatoBar.cpp */; };
 		3CE63B8D1D87DEE100C2C76B /* DetailBar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63B8B1D87DEE100C2C76B /* DetailBar.cpp */; };
 		3CE63B901D87DF3A00C2C76B /* ItemBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63B8E1D87DF3A00C2C76B /* ItemBox.cpp */; };
@@ -130,6 +130,10 @@
 		3CE63B9B1D8A7D0600C2C76B /* ItemMenuState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63B991D8A7D0600C2C76B /* ItemMenuState.cpp */; };
 		3CE63B9E1D8A7E8100C2C76B /* RecordMenuState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63B9C1D8A7E8100C2C76B /* RecordMenuState.cpp */; };
 		3CE63BA11D8A7F6000C2C76B /* SettingsMenuState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63B9F1D8A7F6000C2C76B /* SettingsMenuState.cpp */; };
+		3CE63BA31D8BADD500C2C76B /* Strings in Resources */ = {isa = PBXBuildFile; fileRef = 3CE63BA21D8BADD500C2C76B /* Strings */; };
+		3CE63BA61D8BAF8D00C2C76B /* LocalizedStrings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63BA41D8BAF8D00C2C76B /* LocalizedStrings.cpp */; };
+		3CE63BA81D8BC3FC00C2C76B /* Dato in Resources */ = {isa = PBXBuildFile; fileRef = 3CE63BA71D8BC3FC00C2C76B /* Dato */; };
+		3CE63BAB1D8BCF2200C2C76B /* SelectableBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63BA91D8BCF2200C2C76B /* SelectableBox.cpp */; };
 		3EACC98F19EE6D4300EB3C5E /* res in Resources */ = {isa = PBXBuildFile; fileRef = 3EACC98E19EE6D4300EB3C5E /* res */; };
 		3EACC99019EE6D4300EB3C5E /* res in Resources */ = {isa = PBXBuildFile; fileRef = 3EACC98E19EE6D4300EB3C5E /* res */; };
 		46880B7B19C43A67006E1F66 /* CloseNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 46880B7619C43A67006E1F66 /* CloseNormal.png */; };
@@ -425,8 +429,8 @@
 		3CE63B7D1D87DD1800C2C76B /* ConfirmMessage.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ConfirmMessage.hpp; path = Messages/ConfirmMessage.hpp; sourceTree = "<group>"; };
 		3CE63B7F1D87DE2A00C2C76B /* SpeakMessage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SpeakMessage.cpp; path = Messages/SpeakMessage.cpp; sourceTree = "<group>"; };
 		3CE63B801D87DE2A00C2C76B /* SpeakMessage.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = SpeakMessage.hpp; path = Messages/SpeakMessage.hpp; sourceTree = "<group>"; };
-		3CE63B821D87DE9D00C2C76B /* MessageBox.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MessageBox.cpp; path = Messages/MessageBox.cpp; sourceTree = "<group>"; };
-		3CE63B831D87DE9D00C2C76B /* MessageBox.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = MessageBox.hpp; path = Messages/MessageBox.hpp; sourceTree = "<group>"; };
+		3CE63B821D87DE9D00C2C76B /* CompositeBox.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CompositeBox.cpp; path = Messages/CompositeBox.cpp; sourceTree = "<group>"; };
+		3CE63B831D87DE9D00C2C76B /* CompositeBox.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CompositeBox.hpp; path = Messages/CompositeBox.hpp; sourceTree = "<group>"; };
 		3CE63B851D87DEBB00C2C76B /* DatoBar.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DatoBar.cpp; path = Messages/DatoBar.cpp; sourceTree = "<group>"; };
 		3CE63B861D87DEBB00C2C76B /* DatoBar.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = DatoBar.hpp; path = Messages/DatoBar.hpp; sourceTree = "<group>"; };
 		3CE63B8B1D87DEE100C2C76B /* DetailBar.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DetailBar.cpp; path = Messages/DetailBar.cpp; sourceTree = "<group>"; };
@@ -444,6 +448,12 @@
 		3CE63B9D1D8A7E8100C2C76B /* RecordMenuState.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = RecordMenuState.hpp; path = Dispatchers/RecordMenuState.hpp; sourceTree = "<group>"; };
 		3CE63B9F1D8A7F6000C2C76B /* SettingsMenuState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SettingsMenuState.cpp; path = Dispatchers/SettingsMenuState.cpp; sourceTree = "<group>"; };
 		3CE63BA01D8A7F6000C2C76B /* SettingsMenuState.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = SettingsMenuState.hpp; path = Dispatchers/SettingsMenuState.hpp; sourceTree = "<group>"; };
+		3CE63BA21D8BADD500C2C76B /* Strings */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Strings; sourceTree = "<group>"; };
+		3CE63BA41D8BAF8D00C2C76B /* LocalizedStrings.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LocalizedStrings.cpp; path = Data/LocalizedStrings.cpp; sourceTree = "<group>"; };
+		3CE63BA51D8BAF8D00C2C76B /* LocalizedStrings.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = LocalizedStrings.hpp; path = Data/LocalizedStrings.hpp; sourceTree = "<group>"; };
+		3CE63BA71D8BC3FC00C2C76B /* Dato */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Dato; sourceTree = "<group>"; };
+		3CE63BA91D8BCF2200C2C76B /* SelectableBox.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SelectableBox.cpp; path = Messages/SelectableBox.cpp; sourceTree = "<group>"; };
+		3CE63BAA1D8BCF2200C2C76B /* SelectableBox.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = SelectableBox.hpp; path = Messages/SelectableBox.hpp; sourceTree = "<group>"; };
 		3EACC98E19EE6D4300EB3C5E /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; path = res; sourceTree = "<group>"; };
 		46880B7619C43A67006E1F66 /* CloseNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseNormal.png; sourceTree = "<group>"; };
 		46880B7719C43A67006E1F66 /* CloseSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseSelected.png; sourceTree = "<group>"; };
@@ -859,6 +869,8 @@
 				3CB109961D74F33C002C4121 /* MagicDefinition.hpp */,
 				3CB109AB1D74FC5E002C4121 /* DataStore.cpp */,
 				3CB109AC1D74FC5E002C4121 /* DataStore.hpp */,
+				3CE63BA41D8BAF8D00C2C76B /* LocalizedStrings.cpp */,
+				3CE63BA51D8BAF8D00C2C76B /* LocalizedStrings.hpp */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -928,8 +940,8 @@
 				3CE63B7D1D87DD1800C2C76B /* ConfirmMessage.hpp */,
 				3CE63B7F1D87DE2A00C2C76B /* SpeakMessage.cpp */,
 				3CE63B801D87DE2A00C2C76B /* SpeakMessage.hpp */,
-				3CE63B821D87DE9D00C2C76B /* MessageBox.cpp */,
-				3CE63B831D87DE9D00C2C76B /* MessageBox.hpp */,
+				3CE63B821D87DE9D00C2C76B /* CompositeBox.cpp */,
+				3CE63B831D87DE9D00C2C76B /* CompositeBox.hpp */,
 				3CE63B851D87DEBB00C2C76B /* DatoBar.cpp */,
 				3CE63B861D87DEBB00C2C76B /* DatoBar.hpp */,
 				3CE63B8B1D87DEE100C2C76B /* DetailBar.cpp */,
@@ -938,6 +950,8 @@
 				3CE63B8F1D87DF3A00C2C76B /* ItemBox.hpp */,
 				3CE63B911D87DF4800C2C76B /* MagicBox.cpp */,
 				3CE63B921D87DF4800C2C76B /* MagicBox.hpp */,
+				3CE63BA91D8BCF2200C2C76B /* SelectableBox.cpp */,
+				3CE63BAA1D8BCF2200C2C76B /* SelectableBox.hpp */,
 			);
 			name = Messages;
 			sourceTree = "<group>";
@@ -949,10 +963,12 @@
 				3C8D68281D78FB8000CC3616 /* Others */,
 				3CB1096A1D6E5E66002C4121 /* Icons */,
 				3CD12F2D1D6D074800CDF793 /* Data */,
+				3CE63BA71D8BC3FC00C2C76B /* Dato */,
 				3CD12F2B1D6D073F00CDF793 /* Maps */,
 				3CE63B381D7F40FB00C2C76B /* Menu */,
 				3C1883621D6BB0C10059056E /* Title */,
 				521A8EA819F11F5000D177D7 /* fonts */,
+				3CE63BA21D8BADD500C2C76B /* Strings */,
 				3EACC98E19EE6D4300EB3C5E /* res */,
 				46880B7619C43A67006E1F66 /* CloseNormal.png */,
 				46880B7719C43A67006E1F66 /* CloseSelected.png */,
@@ -1165,7 +1181,9 @@
 				50EF629617ECD46A001EB2F8 /* Icon-40.png in Resources */,
 				5087E78217EB970100C73F5D /* Icon-144.png in Resources */,
 				3CD12EFB1D6BB11600CDF793 /* Title_Start_0.png in Resources */,
+				3CE63BA81D8BC3FC00C2C76B /* Dato in Resources */,
 				3EACC98F19EE6D4300EB3C5E /* res in Resources */,
+				3CE63BA31D8BADD500C2C76B /* Strings in Resources */,
 				50EF629817ECD46A001EB2F8 /* Icon-80.png in Resources */,
 				5087E78417EB970100C73F5D /* Icon-57.png in Resources */,
 				3CD12EFC1D6BB11600CDF793 /* Title_Start_1.png in Resources */,
@@ -1203,6 +1221,7 @@
 				3CB109A71D74F46C002C4121 /* MoneyItemDefinition.cpp in Sources */,
 				3C8D68411D7A095E00CC3616 /* EventChapterCommon.cpp in Sources */,
 				3C8D684A1D7A3FA800CC3616 /* CallbackMethod.cpp in Sources */,
+				3CE63BAB1D8BCF2200C2C76B /* SelectableBox.cpp in Sources */,
 				3C8D683E1D79F5BB00CC3616 /* EventChapter1.cpp in Sources */,
 				3C8D68211D78EEC900CC3616 /* BatchActivity.cpp in Sources */,
 				3C8D681E1D78EB3B00CC3616 /* GlobalActivity.cpp in Sources */,
@@ -1283,9 +1302,10 @@
 				3CE63B341D7E9BEA00C2C76B /* FDPoint.cpp in Sources */,
 				3CE63B961D8A664400C2C76B /* SelectMagicTargetState.cpp in Sources */,
 				3C8D68241D78F24300CC3616 /* CreatureMoveActivity.cpp in Sources */,
-				3CE63B841D87DE9D00C2C76B /* MessageBox.cpp in Sources */,
+				3CE63B841D87DE9D00C2C76B /* CompositeBox.cpp in Sources */,
 				3C8D68381D79F54900CC3616 /* EventLoader.cpp in Sources */,
 				3CE63B5F1D852E0300C2C76B /* FightScene.cpp in Sources */,
+				3CE63BA61D8BAF8D00C2C76B /* LocalizedStrings.cpp in Sources */,
 				3CA318291D760C6D0042B56A /* AICreature.cpp in Sources */,
 				3CB1099B1D74F3E2002C4121 /* ItemDefinition.cpp in Sources */,
 				3CE63B931D87DF4800C2C76B /* MagicBox.cpp in Sources */,

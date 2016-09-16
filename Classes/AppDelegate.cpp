@@ -2,6 +2,8 @@
 #include "HelloWorldScene.h"
 #include "SceneCreator.h"
 #include "Constants.hpp"
+#include "DataStore.hpp"
+#include "LocalizedStrings.hpp"
 
 USING_NS_CC;
 
@@ -77,6 +79,9 @@ bool AppDelegate::applicationDidFinishLaunching() {
 
     register_all_packages();
 
+    LocalizedStrings::getInstance()->loadBasicStrings();
+    DataStore::getInstance()->loadData();
+    
     // create a scene. it's an autorelease object
     auto scene = SceneCreator::createTitleScene();
 

@@ -34,7 +34,7 @@ void MagicDefinition::initFromFile(TextFileReader * reader)
     
     _hittingRate = reader->readInt();
     _effectScope = reader->readInt();
-    _effectRange = reader->readInt();
+    _effectCoverage = reader->readInt();
     _mpCost = reader->readInt();
     _allowAfterMove = reader->readInt();
     _aiConsiderRate = reader->readInt();
@@ -50,9 +50,9 @@ int MagicDefinition::effectScope()
     return _effectScope;
 }
 
-int MagicDefinition::effectRange()
+int MagicDefinition::effectCoverage()
 {
-    return _effectRange;
+    return _effectCoverage;
 }
 
 int MagicDefinition::hittingRate()

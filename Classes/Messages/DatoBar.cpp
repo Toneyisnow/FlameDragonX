@@ -7,3 +7,14 @@
 //
 
 #include "DatoBar.hpp"
+
+DatoBar::DatoBar(int creatureAniId)
+{
+    
+    _baseSprite = Sprite::create("Others/CreatureDato.png");
+}
+
+Sprite * DatoBar::getSprite()
+{
+    return _baseSprite;
+}

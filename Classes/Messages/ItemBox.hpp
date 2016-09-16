@@ -9,12 +9,17 @@
 #ifndef ItemBox_hpp
 #define ItemBox_hpp
 
+#include "cocos2d.h"
+#include "SelectableBox.hpp"
 
-class ItemBox : public cocos2d::Ref
+class ItemBox : public SelectableBox
 {
 private:
     
 public:
+    
+    ItemBox(Creature * creature, MessageBoxOperatingType type);
+    
 };
 
 #endif /* ItemBox_hpp */

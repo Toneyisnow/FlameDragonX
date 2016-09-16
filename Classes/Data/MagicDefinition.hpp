@@ -38,7 +38,7 @@ private:
     int _apInvolvedRate;
     int _hittingRate;
     int _effectScope;
-    int _effectRange;
+    int _effectCoverage;
     int _mpCost;
     bool _allowAfterMove;
     int _aiConsiderRate;
@@ -49,7 +49,7 @@ public:
     void initFromFile(TextFileReader * reader);
     
     int effectScope();
-    int effectRange();
+    int effectCoverage();
     int hittingRate();
     int mpCost();
     bool allowAfterMove();

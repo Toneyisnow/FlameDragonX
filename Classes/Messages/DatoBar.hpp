@@ -11,11 +11,20 @@
 
 #include "cocos2d.h"
 
+USING_NS_CC;
+
 class DatoBar : public cocos2d::Ref
 {
 private:
     
+    Sprite * _baseSprite;
+    
 public:
+    
+    DatoBar(int creatureAniId);
+    
+    Sprite * getSprite();
+    
 };
 
 

@@ -7,20 +7,22 @@
 //
 
 #include "TalkActivity.hpp"
-#include "TalkMessage.hpp"
 #include "BattleScene.hpp"
+#include "TalkMessage.hpp"
+#include "SpeakMessage.hpp"
 
-TalkActivity * TalkActivity::create(BattleScene * scene, Creature * creature, std::string message)
+TalkActivity * TalkActivity::create(TalkActivityType type, BattleScene * scene, Creature * creature, std::string message)
 {
-    TalkActivity * activity = new TalkActivity(scene, creature, message);
+    TalkActivity * activity = new TalkActivity(type, scene, creature, message);
     activity->autorelease();
     
     return activity;
 }
 
-TalkActivity::TalkActivity(BattleScene * scene, Creature * creature, std::string message)
+TalkActivity::TalkActivity(TalkActivityType type, BattleScene * scene, Creature * creature, std::string message)
 : GlobalActivity(scene)
 {
+    this->_type = type;
     this->_creature = creature;
     this->_message = message;
 }
@@ -29,10 +31,17 @@ void TalkActivity::initialize()
 {
     log("TalkActivity initialized.");
     
-    TalkMessage * message = new TalkMessage();
+    Message * message;
+    
+    if (this->_type == TalkActivityType_Speak) {
+        message = new SpeakMessage(_creature, _message);
+    }
+    else {
+        // message = new TalkMessage(_creature, _message);
+    }
+    
     _battleScene->getMessageLayer()->showMessage(message);
     message->release();
-    
 }
 
 void TalkActivity::internalTick(int synchronizedTick)

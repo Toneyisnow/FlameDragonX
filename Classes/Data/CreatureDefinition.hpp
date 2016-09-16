@@ -28,6 +28,7 @@ public:
 
     CreatureDefinition();
     
+    std::string name;
     int definitionId;
     int animationId;
     int race;

@@ -17,7 +17,9 @@ class MessageLayer;
 
 class Message : public cocos2d::Ref
 {
-private:
+protected:
+    
+    const int DEFAULT_MESSAGEBOX_SCALE = Director::getInstance()->getContentScaleFactor();
     
     int _returnValue;
     

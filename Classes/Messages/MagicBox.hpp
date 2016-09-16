@@ -11,24 +11,16 @@
 
 #include "cocos2d.h"
 #include "Creature.hpp"
-#include "MessageBox.hpp"
+#include "SelectableBox.hpp"
 
-typedef enum MagicOperatingType
-{
-    MagicOperatingType_Select,
-    MagicOperatingType_ShowOnly
-} MagicOperatingType;
-
-class MagicBox : public Message
+class MagicBox : public SelectableBox
 {
 private:
     
-    Creature * _creature;
-    MagicOperatingType _operatingType;
     
 public:
     
-    MagicBox(Creature * creature, MagicOperatingType type);
+    MagicBox(Creature * creature, MessageBoxOperatingType type);
     
     
 };

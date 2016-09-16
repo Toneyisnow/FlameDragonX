@@ -13,7 +13,7 @@
 #include "ShowMoveScopeState.hpp"
 #include "BattleScene.hpp"
 #include "SelectAttackTargetState.hpp"
-#include "MagicBox.hpp"
+#include "CompositeBox.hpp"
 #include "CallbackMethod.hpp"
 #include "SelectMagicTargetState.hpp"
 #include "ItemMenuState.hpp"
@@ -90,7 +90,7 @@ void ActionMenuState::handleClickAt(Vec2 position)
 
 void ActionMenuState::selectMagic()
 {
-    MagicBox * magicBox = new MagicBox(_creature, MagicOperatingType_Select);
+    CompositeBox * magicBox = new CompositeBox(_creature, MessageBoxType_Magic, MessageBoxOperatingType_Select);
     SEL_CALLBACK1 k1 = CALLBACK1_SELECTOR(ActionMenuState::confirmSelectMagic);
     magicBox->setReturnFunction(this, k1);
     
