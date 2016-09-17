@@ -20,7 +20,7 @@ Creature::Creature(CreatureType type)
     this->_gestureStatus = GestureStatus_Idle;
     // this->initialize();
     
-    initialize("Others/WhiteBlock.png");
+    initialize("Others/Empty.png");
 }
 
 Creature::~Creature()
@@ -76,7 +76,6 @@ void Creature::initWithDefinition(int identity, int creatureId)
     for (int m = 0; m < _definition->initialMagicList->size(); m++) {
         _data->magicList->pushBack(_definition->initialMagicList->at(m));
     }
-    
     
     startTurn();
 }
