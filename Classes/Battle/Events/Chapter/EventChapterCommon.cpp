@@ -7,3 +7,10 @@
 //
 
 #include "EventChapterCommon.hpp"
+#include "Creature.hpp"
+#include "LocalizedStrings.hpp"
+#include "BattleScene.hpp"
+#include "BattleField.hpp"
+#include "TalkActivity.hpp"
+
+

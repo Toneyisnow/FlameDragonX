@@ -47,8 +47,6 @@ BattleScene::BattleScene(ChapterRecord* record)
     _eventHandler = new EventHandler(this);
     _eventHandler->initFromDefinition(record->getChapterId());
     
-    
-    
     _synchronizedTickCount = 0;
     schedule(CC_SCHEDULE_SELECTOR(BattleScene::takeDeltaTimeTck), 1.0 / Constants::GAME_FPS);
     
@@ -146,7 +144,7 @@ int BattleScene::getTurnNumber()
     return _turnNumber;
 }
 
-int BattleScene::getCurrentTurnType()
+CreatureType BattleScene::getCurrentTurnType()
 {
     return _currentTurnType;
 }

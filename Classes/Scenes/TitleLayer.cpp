@@ -114,7 +114,9 @@ void TitleLayer::onStartGame()
 {
     log("onStartGame");
     
-    ChapterRecord * chapterRecord = ChapterRecord::createSample();
+    // ChapterRecord * chapterRecord = ChapterRecord::createSample();
+    
+    ChapterRecord * chapterRecord = ChapterRecord::newGame();
     //BattleScene * scene = BattleScene::loadByChapterRecord(chapterRecord);
     BattleScene * scene = new BattleScene(chapterRecord);
     

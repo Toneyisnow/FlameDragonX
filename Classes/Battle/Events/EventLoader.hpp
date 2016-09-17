@@ -11,13 +11,14 @@
 
 #include "cocos2d.h"
 #include "FDEvent.hpp"
+#include "Creature.hpp"
 
 class BattleScene;
 class EventHandler;
 
 class EventLoader : public cocos2d::Ref
 {
-private:
+protected:
     
     BattleScene * _battleScene;
     EventHandler * _eventHandler;
@@ -35,8 +36,9 @@ public:
     
     int loadSingleEvent(EventCondition * condition, CallbackMethod * method);
     
-    void loadTurnEvent(int turnNumber, int type, CallbackMethod * method);
+    int loadTurnEvent(int turnNumber, CreatureType type, SEL_CALLBACK0 function);
     
+    void showTalkMessage(int chapterId, int conversationId, int sequenceId);
     
 };
 #endif /* EventLoader_hpp */

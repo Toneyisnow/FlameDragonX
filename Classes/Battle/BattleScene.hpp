@@ -64,7 +64,7 @@ public:
     // BattleScene();
   
     int getTurnNumber();
-    int getCurrentTurnType();
+    CreatureType getCurrentTurnType();
     
     // Activity Methods
     void moveAndOpenMenu(Creature * creature, RoutePoint * route);

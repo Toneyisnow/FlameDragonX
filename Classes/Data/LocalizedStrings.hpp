@@ -41,6 +41,8 @@ public:
     
     std::string getCreatureName(int creatureId);
     
+    int getConversationCreatureId(int chapterId, int conversationId, int sequenceId);
+    std::string getConversation(int chapterId, int conversationId, int sequenceId);
 };
 
 #endif /* LocalizedStrings_hpp */

@@ -19,6 +19,9 @@ private:
     
 public:
     
+    void loadEvents() override;
+    
+    void round1();
     
 };
 #endif /* EventChapter1_hpp */

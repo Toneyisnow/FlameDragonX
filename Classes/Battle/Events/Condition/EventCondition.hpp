@@ -32,7 +32,7 @@ protected:
 public:
     
     EventType getEventType();
-    bool isMatch(BattleScene * scene);
+    virtual bool isMatch(BattleScene * scene);
     
     
 };

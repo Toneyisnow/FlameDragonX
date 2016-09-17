@@ -91,6 +91,7 @@
 		3CD12F2C1D6D073F00CDF793 /* Maps in Resources */ = {isa = PBXBuildFile; fileRef = 3CD12F2B1D6D073F00CDF793 /* Maps */; };
 		3CD12F2E1D6D074800CDF793 /* Data in Resources */ = {isa = PBXBuildFile; fileRef = 3CD12F2D1D6D074800CDF793 /* Data */; };
 		3CE439651D8D02F60043676E /* SpriteMoveActivity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE439631D8D02F60043676E /* SpriteMoveActivity.cpp */; };
+		3CE439691D8D12790043676E /* TurnCondition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE439671D8D12790043676E /* TurnCondition.cpp */; };
 		3CE63B1D1D7D337100C2C76B /* IdleState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63B1B1D7D337100C2C76B /* IdleState.cpp */; };
 		3CE63B211D7D3C4B00C2C76B /* ShowMoveScopeState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63B1F1D7D3C4B00C2C76B /* ShowMoveScopeState.cpp */; };
 		3CE63B241D7D40D000C2C76B /* SystemMenuState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63B221D7D40D000C2C76B /* SystemMenuState.cpp */; };
@@ -373,6 +374,8 @@
 		3CD12F2D1D6D074800CDF793 /* Data */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Data; sourceTree = "<group>"; };
 		3CE439631D8D02F60043676E /* SpriteMoveActivity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SpriteMoveActivity.cpp; path = Activities/SpriteMoveActivity.cpp; sourceTree = "<group>"; };
 		3CE439641D8D02F60043676E /* SpriteMoveActivity.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = SpriteMoveActivity.hpp; path = Activities/SpriteMoveActivity.hpp; sourceTree = "<group>"; };
+		3CE439671D8D12790043676E /* TurnCondition.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TurnCondition.cpp; path = Battle/Events/Condition/TurnCondition.cpp; sourceTree = "<group>"; };
+		3CE439681D8D12790043676E /* TurnCondition.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = TurnCondition.hpp; path = Battle/Events/Condition/TurnCondition.hpp; sourceTree = "<group>"; };
 		3CE63B1B1D7D337100C2C76B /* IdleState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IdleState.cpp; path = Dispatchers/IdleState.cpp; sourceTree = "<group>"; };
 		3CE63B1C1D7D337100C2C76B /* IdleState.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = IdleState.hpp; path = Dispatchers/IdleState.hpp; sourceTree = "<group>"; };
 		3CE63B1F1D7D3C4B00C2C76B /* ShowMoveScopeState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ShowMoveScopeState.cpp; path = Dispatchers/ShowMoveScopeState.cpp; sourceTree = "<group>"; };
@@ -669,6 +672,8 @@
 			children = (
 				3C8D68301D79F4E600CC3616 /* EventCondition.cpp */,
 				3C8D68311D79F4E600CC3616 /* EventCondition.hpp */,
+				3CE439671D8D12790043676E /* TurnCondition.cpp */,
+				3CE439681D8D12790043676E /* TurnCondition.hpp */,
 			);
 			name = Condition;
 			sourceTree = "<group>";
@@ -1329,6 +1334,7 @@
 				3C18834B1D6BA0970059056E /* SceneCreator.cpp in Sources */,
 				3CB109691D6E0BD1002C4121 /* Ground.cpp in Sources */,
 				3CA318261D760AD00042B56A /* CreatureData.cpp in Sources */,
+				3CE439691D8D12790043676E /* TurnCondition.cpp in Sources */,
 				3CD12F021D6BB26500CDF793 /* ResourceManager.cpp in Sources */,
 				3CE63B871D87DEBB00C2C76B /* DatoBar.cpp in Sources */,
 			);

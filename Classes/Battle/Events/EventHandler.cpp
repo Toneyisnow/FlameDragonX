@@ -30,7 +30,6 @@ void EventHandler::initFromDefinition(int chapterId)
     _eventLoader = EventLoaderFactory::getEventLoader(chapterId);
     _eventLoader->initWithScene(this->_battleScene, this);
     _eventLoader->loadEvents();
-    
     _eventLoader->retain();
 }
 

@@ -111,7 +111,7 @@ void BattleField::initWithChapter(int chapterId)
     
     
     
-    
+    /*
     Creature * creature = new Creature(CreatureType_Friend);
     creature->initWithDefinition(3, 3);
     creature->creatureData()->attackItemIndex = 0;
@@ -153,7 +153,7 @@ void BattleField::initWithChapter(int chapterId)
     _battleScene->getActivityQueue()->pushBackActivity(bacth);
     activity2->release();
     
-    
+    */
     
 }
 

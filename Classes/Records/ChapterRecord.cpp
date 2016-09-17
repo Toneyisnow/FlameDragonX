@@ -20,8 +20,30 @@ ChapterRecord * ChapterRecord::createSample()
     return record;
 }
 
+ChapterRecord * ChapterRecord::newGame()
+{
+    ChapterRecord * record = new ChapterRecord(1);
+    record->setMoney(0);
+    return record;
+}
+
 
 int ChapterRecord::getChapterId()
 {
     return _chapterId;
+}
+
+void ChapterRecord::setMoney(int money)
+{
+    _money = money;
+}
+
+int ChapterRecord::getMoney()
+{
+    return _money;
+}
+
+Vector<CreatureRecord *> ChapterRecord::getFriendRecordList()
+{
+    return _friendRecordList;
 }
