@@ -13,6 +13,8 @@
 
 Message::Message()
 {
+    _callbackTarget = nullptr;
+    _callbackResultMethod = nullptr;
     _returnValue = -1;
 }
 

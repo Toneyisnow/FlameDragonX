@@ -10,12 +10,23 @@
 #include "MessageLayer.hpp"
 #include "ItemBox.hpp"
 #include "MagicBox.hpp"
+#include "SpriteMoveActivity.hpp"
+#include "BatchActivity.hpp"
 
 CompositeBox::CompositeBox(Creature * creature, MessageBoxType type, MessageBoxOperatingType oType)
 {
     this->_creature = creature;
     this->_type = type;
     this->_operatingType = oType;
+    
+    _datoPosition0 = Vec2(0, 140);
+    _datoPosition1 = Vec2(174, 140);
+    _detailPosition0 = Vec2(176, 302);
+    _detailPosition1 = Vec2(176, 140);
+    _mainPosition0 = Vec2(240, 0);
+    _mainPosition1 = Vec2(240, 138);
+    
+    _flyInflyOutDuration = 0.1f;
 }
 
 CompositeBox::~CompositeBox()
@@ -26,16 +37,10 @@ CompositeBox::~CompositeBox()
 void CompositeBox::initDialog()
 {
     _datoBar = new DatoBar(_creature->getDefinition()->animationId);
-    _datoBar->getSprite()->setAnchorPoint(Vec2(1.0f, 0));
-    _datoBar->getSprite()->setPosition(Vec2(160, 162));
-    _datoBar->getSprite()->setScale(DEFAULT_MESSAGEBOX_SCALE);
-    _messageLayer->addChild(_datoBar->getSprite());
+    this->addComponent(_datoBar->getSprite(), Vec2(1.0f, 0.0f), _datoPosition0);
     
     _detailBar = new DetailBar(_creature);
-    _detailBar->getSprite()->setAnchorPoint(Vec2(0, 0));
-    _detailBar->getSprite()->setPosition(Vec2(162, 162));
-    _detailBar->getSprite()->setScale(DEFAULT_MESSAGEBOX_SCALE);
-    _messageLayer->addChild(_detailBar->getSprite());
+    this->addComponent(_detailBar->getSprite(), Vec2(0.0f, 0.0f), _detailPosition0);
     
     if (_type == MessageBoxType_Item) {
         _mainBox = new ItemBox(_creature, _operatingType);
@@ -45,10 +50,7 @@ void CompositeBox::initDialog()
         _mainBox = new MagicBox(_creature, _operatingType);
     }
     
-    _mainBox->getSprite()->setAnchorPoint(Vec2(0.5f, 1.0f));
-    _mainBox->getSprite()->setPosition(Vec2(240, 158));
-    _mainBox->getSprite()->setScale(DEFAULT_MESSAGEBOX_SCALE);
-    _messageLayer->addChild(_mainBox->getSprite());
+    this->addComponent(_mainBox->getSprite(), Vec2(0.5f, 1.0f), _mainPosition0);
 }
 
 void CompositeBox::removeDialog()
@@ -62,17 +64,55 @@ void CompositeBox::removeDialog()
     _mainBox->release();
 }
 
+void CompositeBox::addComponent(Sprite * component, Vec2 anchorPoint, Vec2 position)
+{
+    component->setAnchorPoint(anchorPoint);
+    component->setPosition(position);
+    component->setScale(DEFAULT_MESSAGEBOX_SCALE);
+    _messageLayer->addChild(component);
+}
+
 FDActivity * CompositeBox::onEnterActivity()
 {
-    return nullptr;
+    BatchActivity* batchActivity = new BatchActivity();
+    
+    auto activity1 = new SpriteMoveActivity(_datoBar->getSprite(), _datoPosition1, _flyInflyOutDuration);
+    auto activity2 = new SpriteMoveActivity(_detailBar->getSprite(), _detailPosition1, _flyInflyOutDuration);
+    auto activity3 = new SpriteMoveActivity(_mainBox->getSprite(), _mainPosition1, _flyInflyOutDuration);
+    
+    batchActivity->addActivity(activity1);
+    batchActivity->addActivity(activity2);
+    batchActivity->addActivity(activity3);
+    
+    activity1->release();
+    activity2->release();
+    activity3->release();
+    
+    return batchActivity;
 }
 
 FDActivity * CompositeBox::onExitActivity()
 {
-    return nullptr;
+    BatchActivity* batchActivity = new BatchActivity();
+    
+    auto activity1 = new SpriteMoveActivity(_datoBar->getSprite(), _datoPosition0, _flyInflyOutDuration);
+    auto activity2 = new SpriteMoveActivity(_detailBar->getSprite(), _detailPosition0, _flyInflyOutDuration);
+    auto activity3 = new SpriteMoveActivity(_mainBox->getSprite(), _mainPosition0, _flyInflyOutDuration);
+    
+    batchActivity->addActivity(activity1);
+    batchActivity->addActivity(activity2);
+    batchActivity->addActivity(activity3);
+    
+    activity1->release();
+    activity2->release();
+    activity3->release();
+    
+    return batchActivity;
 }
 
 void CompositeBox::handleClick(Vec2 location)
 {
+    _returnValue = 0;
+    this->closeDialog();
     
 }

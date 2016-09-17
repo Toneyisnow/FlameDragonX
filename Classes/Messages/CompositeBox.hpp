@@ -34,10 +34,21 @@ private:
     DetailBar * _detailBar;
     SelectableBox * _mainBox;
     
+    Vec2 _datoPosition0;
+    Vec2 _datoPosition1;
+    Vec2 _detailPosition0;
+    Vec2 _detailPosition1;
+    Vec2 _mainPosition0;
+    Vec2 _mainPosition1;
+    
+    float _flyInflyOutDuration;
+    
 public:
     
     CompositeBox(Creature * creature, MessageBoxType type, MessageBoxOperatingType oType);
     ~CompositeBox();
+    
+    void addComponent(Sprite * component, Vec2 anchorPoint, Vec2 position);
     
     void initDialog() override;
     void removeDialog() override;

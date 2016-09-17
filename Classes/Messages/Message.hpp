@@ -19,7 +19,7 @@ class Message : public cocos2d::Ref
 {
 protected:
     
-    const int DEFAULT_MESSAGEBOX_SCALE = Director::getInstance()->getContentScaleFactor();
+    const int DEFAULT_MESSAGEBOX_SCALE = Director::getInstance()->getContentScaleFactor() * 1.3f;
     
     int _returnValue;
     

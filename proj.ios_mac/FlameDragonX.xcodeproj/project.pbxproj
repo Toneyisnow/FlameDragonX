@@ -90,6 +90,7 @@
 		3CD12F2A1D6D065800CDF793 /* BattleScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CD12F281D6D065800CDF793 /* BattleScene.cpp */; };
 		3CD12F2C1D6D073F00CDF793 /* Maps in Resources */ = {isa = PBXBuildFile; fileRef = 3CD12F2B1D6D073F00CDF793 /* Maps */; };
 		3CD12F2E1D6D074800CDF793 /* Data in Resources */ = {isa = PBXBuildFile; fileRef = 3CD12F2D1D6D074800CDF793 /* Data */; };
+		3CE439651D8D02F60043676E /* SpriteMoveActivity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE439631D8D02F60043676E /* SpriteMoveActivity.cpp */; };
 		3CE63B1D1D7D337100C2C76B /* IdleState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63B1B1D7D337100C2C76B /* IdleState.cpp */; };
 		3CE63B211D7D3C4B00C2C76B /* ShowMoveScopeState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63B1F1D7D3C4B00C2C76B /* ShowMoveScopeState.cpp */; };
 		3CE63B241D7D40D000C2C76B /* SystemMenuState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63B221D7D40D000C2C76B /* SystemMenuState.cpp */; };
@@ -370,6 +371,8 @@
 		3CD12F281D6D065800CDF793 /* BattleScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BattleScene.cpp; path = Battle/BattleScene.cpp; sourceTree = "<group>"; };
 		3CD12F2B1D6D073F00CDF793 /* Maps */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Maps; sourceTree = "<group>"; };
 		3CD12F2D1D6D074800CDF793 /* Data */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Data; sourceTree = "<group>"; };
+		3CE439631D8D02F60043676E /* SpriteMoveActivity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SpriteMoveActivity.cpp; path = Activities/SpriteMoveActivity.cpp; sourceTree = "<group>"; };
+		3CE439641D8D02F60043676E /* SpriteMoveActivity.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = SpriteMoveActivity.hpp; path = Activities/SpriteMoveActivity.hpp; sourceTree = "<group>"; };
 		3CE63B1B1D7D337100C2C76B /* IdleState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IdleState.cpp; path = Dispatchers/IdleState.cpp; sourceTree = "<group>"; };
 		3CE63B1C1D7D337100C2C76B /* IdleState.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = IdleState.hpp; path = Dispatchers/IdleState.hpp; sourceTree = "<group>"; };
 		3CE63B1F1D7D3C4B00C2C76B /* ShowMoveScopeState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ShowMoveScopeState.cpp; path = Dispatchers/ShowMoveScopeState.cpp; sourceTree = "<group>"; };
@@ -787,6 +790,8 @@
 				3C8D68521D7AAC2F00CC3616 /* TalkActivity.hpp */,
 				3CE63B401D81C9DE00C2C76B /* RemoveObjectActivity.cpp */,
 				3CE63B411D81C9DE00C2C76B /* RemoveObjectActivity.hpp */,
+				3CE439631D8D02F60043676E /* SpriteMoveActivity.cpp */,
+				3CE439641D8D02F60043676E /* SpriteMoveActivity.hpp */,
 			);
 			name = Activities;
 			sourceTree = "<group>";
@@ -1300,6 +1305,7 @@
 				3CB109851D6F7626002C4121 /* AnimationLibrary.cpp in Sources */,
 				3CB109AA1D74F816002C4121 /* CreatureChapterRecord.cpp in Sources */,
 				3CE63B341D7E9BEA00C2C76B /* FDPoint.cpp in Sources */,
+				3CE439651D8D02F60043676E /* SpriteMoveActivity.cpp in Sources */,
 				3CE63B961D8A664400C2C76B /* SelectMagicTargetState.cpp in Sources */,
 				3C8D68241D78F24300CC3616 /* CreatureMoveActivity.cpp in Sources */,
 				3CE63B841D87DE9D00C2C76B /* CompositeBox.cpp in Sources */,
