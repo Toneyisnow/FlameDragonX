@@ -29,8 +29,10 @@ private:
 public:
     
     static CreatureMoveActivity * create(BattleField * field, Creature * creature, RoutePoint * route);
+    static CreatureMoveActivity * create(BattleField * field, int creatureId, RoutePoint * route);
     
     CreatureMoveActivity(BattleField * field, Creature * creature);
+    CreatureMoveActivity(BattleField * field, int creatureId);
     
     void appendPosition(Vec2 position);
     void appendPosition(int posX, int posY);

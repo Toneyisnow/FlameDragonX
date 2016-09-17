@@ -27,6 +27,7 @@ class AICreature : public Creature
 {
 private:
     
+    
     int dropItemId;
     
     AIType aiType;
@@ -35,6 +36,7 @@ private:
     
 public:
     
+    AICreature(CreatureType type);
     
     
 };

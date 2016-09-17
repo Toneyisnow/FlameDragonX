@@ -8,6 +8,13 @@
 
 #include "CreatureMoveActivity.hpp"
 #include "Constants.hpp"
+#include "BattleField.hpp"
+
+CreatureMoveActivity * CreatureMoveActivity::create(BattleField * field, int creatureId, RoutePoint * route)
+{
+    Creature * creature = field->getCreatureById(creatureId);
+    return create(field, creature, route);
+}
 
 CreatureMoveActivity * CreatureMoveActivity::create(BattleField * field, Creature * creature, RoutePoint * route)
 {
@@ -28,6 +35,12 @@ CreatureMoveActivity::CreatureMoveActivity(BattleField * field, Creature * creat
 {
     this->_field = field;
     this->_creature = creature;
+}
+
+CreatureMoveActivity::CreatureMoveActivity(BattleField * field, int creatureId)
+{
+    this->_field = field;
+    this->_creature = field->getCreatureById(creatureId);
 }
 
 

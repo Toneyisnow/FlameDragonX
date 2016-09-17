@@ -20,7 +20,8 @@ private:
 public:
     
     Friend();
-    
+    static Friend * create(int creatureId, int definitionId);
+
 };
 
 #endif /* Friend_hpp */

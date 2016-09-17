@@ -74,3 +74,9 @@ void EventLoader::showTalkMessage(int chapterId, int conversationId, int sequenc
     _battleScene->getActivityQueue()->appendActivity(talk);
     
 }
+
+void EventLoader::appendActivityMethod(SEL_CALLBACK0 function)
+{
+    CallbackActivity * activity = CallbackActivity::create(CallbackMethod::create(this, function));
+    _battleScene->getActivityQueue()->appendActivity(activity);
+}

@@ -22,6 +22,7 @@ public:
     void loadEvents() override;
     
     void round1();
+    void round1_1();
     
 };
 #endif /* EventChapter1_hpp */

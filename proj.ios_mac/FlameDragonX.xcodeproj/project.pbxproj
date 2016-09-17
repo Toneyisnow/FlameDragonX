@@ -92,6 +92,7 @@
 		3CD12F2E1D6D074800CDF793 /* Data in Resources */ = {isa = PBXBuildFile; fileRef = 3CD12F2D1D6D074800CDF793 /* Data */; };
 		3CE439651D8D02F60043676E /* SpriteMoveActivity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE439631D8D02F60043676E /* SpriteMoveActivity.cpp */; };
 		3CE439691D8D12790043676E /* TurnCondition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE439671D8D12790043676E /* TurnCondition.cpp */; };
+		3CE4396C1D8D263C0043676E /* Enemy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE4396A1D8D263C0043676E /* Enemy.cpp */; };
 		3CE63B1D1D7D337100C2C76B /* IdleState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63B1B1D7D337100C2C76B /* IdleState.cpp */; };
 		3CE63B211D7D3C4B00C2C76B /* ShowMoveScopeState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63B1F1D7D3C4B00C2C76B /* ShowMoveScopeState.cpp */; };
 		3CE63B241D7D40D000C2C76B /* SystemMenuState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63B221D7D40D000C2C76B /* SystemMenuState.cpp */; };
@@ -376,6 +377,8 @@
 		3CE439641D8D02F60043676E /* SpriteMoveActivity.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = SpriteMoveActivity.hpp; path = Activities/SpriteMoveActivity.hpp; sourceTree = "<group>"; };
 		3CE439671D8D12790043676E /* TurnCondition.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TurnCondition.cpp; path = Battle/Events/Condition/TurnCondition.cpp; sourceTree = "<group>"; };
 		3CE439681D8D12790043676E /* TurnCondition.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = TurnCondition.hpp; path = Battle/Events/Condition/TurnCondition.hpp; sourceTree = "<group>"; };
+		3CE4396A1D8D263C0043676E /* Enemy.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Enemy.cpp; path = Objects/Enemy.cpp; sourceTree = "<group>"; };
+		3CE4396B1D8D263C0043676E /* Enemy.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Enemy.hpp; path = Objects/Enemy.hpp; sourceTree = "<group>"; };
 		3CE63B1B1D7D337100C2C76B /* IdleState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IdleState.cpp; path = Dispatchers/IdleState.cpp; sourceTree = "<group>"; };
 		3CE63B1C1D7D337100C2C76B /* IdleState.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = IdleState.hpp; path = Dispatchers/IdleState.hpp; sourceTree = "<group>"; };
 		3CE63B1F1D7D3C4B00C2C76B /* ShowMoveScopeState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ShowMoveScopeState.cpp; path = Dispatchers/ShowMoveScopeState.cpp; sourceTree = "<group>"; };
@@ -741,6 +744,8 @@
 				3C8D68551D7BF5F500CC3616 /* Cursor.hpp */,
 				3CE63B351D7F33D900C2C76B /* MenuCursor.cpp */,
 				3CE63B361D7F33D900C2C76B /* MenuCursor.hpp */,
+				3CE4396A1D8D263C0043676E /* Enemy.cpp */,
+				3CE4396B1D8D263C0043676E /* Enemy.hpp */,
 			);
 			name = Objects;
 			sourceTree = "<group>";
@@ -1270,6 +1275,7 @@
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				3C8D683B1D79F56E00CC3616 /* EventLoaderFactory.cpp in Sources */,
 				3CE63B311D7E7E4300C2C76B /* MoveScopeResolver.cpp in Sources */,
+				3CE4396C1D8D263C0043676E /* Enemy.cpp in Sources */,
 				3CE63B6E1D853C5200C2C76B /* CounterObject.cpp in Sources */,
 				3CB109891D74CCAB002C4121 /* FDActivity.cpp in Sources */,
 				3CB109A11D74F41E002C4121 /* AttackItemDefinition.cpp in Sources */,

@@ -7,3 +7,10 @@
 //
 
 #include "AICreature.hpp"
+
+
+AICreature::AICreature(CreatureType type)
+: Creature(type)
+{
+    
+}

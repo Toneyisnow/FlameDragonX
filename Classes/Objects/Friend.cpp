@@ -13,3 +13,12 @@ Friend::Friend()
 {
     
 }
+
+
+Friend * Friend::create(int creatureId, int definitionId)
+{
+    Friend * f = new Friend();
+    f->initWithDefinition(creatureId, definitionId);
+    f->autorelease();
+    return f;
+}

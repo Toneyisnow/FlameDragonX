@@ -37,8 +37,9 @@ public:
     int loadSingleEvent(EventCondition * condition, CallbackMethod * method);
     
     int loadTurnEvent(int turnNumber, CreatureType type, SEL_CALLBACK0 function);
-    
     void showTalkMessage(int chapterId, int conversationId, int sequenceId);
+    void appendActivityMethod(SEL_CALLBACK0 function);
+    
     
 };
 #endif /* EventLoader_hpp */
