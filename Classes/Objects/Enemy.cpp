@@ -26,6 +26,8 @@ Enemy * Enemy::create(int creatureId, int definitionId, int dropItemId)
 {
     Enemy * enemy = new Enemy();
     enemy->initWithDefinition(creatureId, definitionId);
+    enemy->dropItemId = dropItemId;
+    
     enemy->autorelease();
     return enemy;
 }

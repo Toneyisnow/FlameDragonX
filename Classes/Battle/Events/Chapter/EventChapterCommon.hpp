@@ -19,6 +19,7 @@ private:
 public:
     
     
+    
 };
 
 #endif /* EventChapterCommon_hpp */

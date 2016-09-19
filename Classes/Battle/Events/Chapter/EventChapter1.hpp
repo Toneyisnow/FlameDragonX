@@ -23,6 +23,13 @@ public:
     
     void round1();
     void round1_1();
+    void round1_2();
+    void round1_3();
+    
+    void round3();
+    void round4();
+    void round5_Boss();
+    void round6_Npc();
     
 };
 #endif /* EventChapter1_hpp */

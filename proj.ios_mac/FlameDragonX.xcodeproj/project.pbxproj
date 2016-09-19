@@ -93,6 +93,14 @@
 		3CE439651D8D02F60043676E /* SpriteMoveActivity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE439631D8D02F60043676E /* SpriteMoveActivity.cpp */; };
 		3CE439691D8D12790043676E /* TurnCondition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE439671D8D12790043676E /* TurnCondition.cpp */; };
 		3CE4396C1D8D263C0043676E /* Enemy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE4396A1D8D263C0043676E /* Enemy.cpp */; };
+		3CE4396F1D8FB3F50043676E /* DurationActivity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE4396D1D8FB3F50043676E /* DurationActivity.cpp */; };
+		3CE439721D8FC5E50043676E /* Npc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE439701D8FC5E50043676E /* Npc.cpp */; };
+		3CE439751D8FC7AB0043676E /* CreatureDyingCondition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE439731D8FC7AB0043676E /* CreatureDyingCondition.cpp */; };
+		3CE439781D8FC87F0043676E /* CreatureDeadCondition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE439761D8FC87F0043676E /* CreatureDeadCondition.cpp */; };
+		3CE4397B1D8FC98C0043676E /* TeamEliminatedCondition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE439791D8FC98C0043676E /* TeamEliminatedCondition.cpp */; };
+		3CE4397E1D8FCBB20043676E /* AnyTurnCondition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE4397C1D8FCBB20043676E /* AnyTurnCondition.cpp */; };
+		3CE439811D8FCC3A0043676E /* ArrivePositionCondition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE4397F1D8FCC3A0043676E /* ArrivePositionCondition.cpp */; };
+		3CE439841D8FCD030043676E /* ArrivePositionTurnCondition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE439821D8FCD030043676E /* ArrivePositionTurnCondition.cpp */; };
 		3CE63B1D1D7D337100C2C76B /* IdleState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63B1B1D7D337100C2C76B /* IdleState.cpp */; };
 		3CE63B211D7D3C4B00C2C76B /* ShowMoveScopeState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63B1F1D7D3C4B00C2C76B /* ShowMoveScopeState.cpp */; };
 		3CE63B241D7D40D000C2C76B /* SystemMenuState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63B221D7D40D000C2C76B /* SystemMenuState.cpp */; };
@@ -379,6 +387,22 @@
 		3CE439681D8D12790043676E /* TurnCondition.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = TurnCondition.hpp; path = Battle/Events/Condition/TurnCondition.hpp; sourceTree = "<group>"; };
 		3CE4396A1D8D263C0043676E /* Enemy.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Enemy.cpp; path = Objects/Enemy.cpp; sourceTree = "<group>"; };
 		3CE4396B1D8D263C0043676E /* Enemy.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Enemy.hpp; path = Objects/Enemy.hpp; sourceTree = "<group>"; };
+		3CE4396D1D8FB3F50043676E /* DurationActivity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DurationActivity.cpp; path = Activities/DurationActivity.cpp; sourceTree = "<group>"; };
+		3CE4396E1D8FB3F50043676E /* DurationActivity.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = DurationActivity.hpp; path = Activities/DurationActivity.hpp; sourceTree = "<group>"; };
+		3CE439701D8FC5E50043676E /* Npc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Npc.cpp; path = Objects/Npc.cpp; sourceTree = "<group>"; };
+		3CE439711D8FC5E50043676E /* Npc.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Npc.hpp; path = Objects/Npc.hpp; sourceTree = "<group>"; };
+		3CE439731D8FC7AB0043676E /* CreatureDyingCondition.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CreatureDyingCondition.cpp; path = Battle/Events/Condition/CreatureDyingCondition.cpp; sourceTree = "<group>"; };
+		3CE439741D8FC7AB0043676E /* CreatureDyingCondition.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CreatureDyingCondition.hpp; path = Battle/Events/Condition/CreatureDyingCondition.hpp; sourceTree = "<group>"; };
+		3CE439761D8FC87F0043676E /* CreatureDeadCondition.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CreatureDeadCondition.cpp; path = Battle/Events/Condition/CreatureDeadCondition.cpp; sourceTree = "<group>"; };
+		3CE439771D8FC87F0043676E /* CreatureDeadCondition.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CreatureDeadCondition.hpp; path = Battle/Events/Condition/CreatureDeadCondition.hpp; sourceTree = "<group>"; };
+		3CE439791D8FC98C0043676E /* TeamEliminatedCondition.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TeamEliminatedCondition.cpp; path = Battle/Events/Condition/TeamEliminatedCondition.cpp; sourceTree = "<group>"; };
+		3CE4397A1D8FC98C0043676E /* TeamEliminatedCondition.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = TeamEliminatedCondition.hpp; path = Battle/Events/Condition/TeamEliminatedCondition.hpp; sourceTree = "<group>"; };
+		3CE4397C1D8FCBB20043676E /* AnyTurnCondition.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AnyTurnCondition.cpp; path = Battle/Events/Condition/AnyTurnCondition.cpp; sourceTree = "<group>"; };
+		3CE4397D1D8FCBB20043676E /* AnyTurnCondition.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = AnyTurnCondition.hpp; path = Battle/Events/Condition/AnyTurnCondition.hpp; sourceTree = "<group>"; };
+		3CE4397F1D8FCC3A0043676E /* ArrivePositionCondition.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ArrivePositionCondition.cpp; path = Battle/Events/Condition/ArrivePositionCondition.cpp; sourceTree = "<group>"; };
+		3CE439801D8FCC3A0043676E /* ArrivePositionCondition.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ArrivePositionCondition.hpp; path = Battle/Events/Condition/ArrivePositionCondition.hpp; sourceTree = "<group>"; };
+		3CE439821D8FCD030043676E /* ArrivePositionTurnCondition.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ArrivePositionTurnCondition.cpp; path = Battle/Events/Condition/ArrivePositionTurnCondition.cpp; sourceTree = "<group>"; };
+		3CE439831D8FCD030043676E /* ArrivePositionTurnCondition.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ArrivePositionTurnCondition.hpp; path = Battle/Events/Condition/ArrivePositionTurnCondition.hpp; sourceTree = "<group>"; };
 		3CE63B1B1D7D337100C2C76B /* IdleState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IdleState.cpp; path = Dispatchers/IdleState.cpp; sourceTree = "<group>"; };
 		3CE63B1C1D7D337100C2C76B /* IdleState.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = IdleState.hpp; path = Dispatchers/IdleState.hpp; sourceTree = "<group>"; };
 		3CE63B1F1D7D3C4B00C2C76B /* ShowMoveScopeState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ShowMoveScopeState.cpp; path = Dispatchers/ShowMoveScopeState.cpp; sourceTree = "<group>"; };
@@ -677,6 +701,18 @@
 				3C8D68311D79F4E600CC3616 /* EventCondition.hpp */,
 				3CE439671D8D12790043676E /* TurnCondition.cpp */,
 				3CE439681D8D12790043676E /* TurnCondition.hpp */,
+				3CE439731D8FC7AB0043676E /* CreatureDyingCondition.cpp */,
+				3CE439741D8FC7AB0043676E /* CreatureDyingCondition.hpp */,
+				3CE439761D8FC87F0043676E /* CreatureDeadCondition.cpp */,
+				3CE439771D8FC87F0043676E /* CreatureDeadCondition.hpp */,
+				3CE439791D8FC98C0043676E /* TeamEliminatedCondition.cpp */,
+				3CE4397A1D8FC98C0043676E /* TeamEliminatedCondition.hpp */,
+				3CE4397C1D8FCBB20043676E /* AnyTurnCondition.cpp */,
+				3CE4397D1D8FCBB20043676E /* AnyTurnCondition.hpp */,
+				3CE4397F1D8FCC3A0043676E /* ArrivePositionCondition.cpp */,
+				3CE439801D8FCC3A0043676E /* ArrivePositionCondition.hpp */,
+				3CE439821D8FCD030043676E /* ArrivePositionTurnCondition.cpp */,
+				3CE439831D8FCD030043676E /* ArrivePositionTurnCondition.hpp */,
 			);
 			name = Condition;
 			sourceTree = "<group>";
@@ -746,6 +782,8 @@
 				3CE63B361D7F33D900C2C76B /* MenuCursor.hpp */,
 				3CE4396A1D8D263C0043676E /* Enemy.cpp */,
 				3CE4396B1D8D263C0043676E /* Enemy.hpp */,
+				3CE439701D8FC5E50043676E /* Npc.cpp */,
+				3CE439711D8FC5E50043676E /* Npc.hpp */,
 			);
 			name = Objects;
 			sourceTree = "<group>";
@@ -802,6 +840,8 @@
 				3CE63B411D81C9DE00C2C76B /* RemoveObjectActivity.hpp */,
 				3CE439631D8D02F60043676E /* SpriteMoveActivity.cpp */,
 				3CE439641D8D02F60043676E /* SpriteMoveActivity.hpp */,
+				3CE4396D1D8FB3F50043676E /* DurationActivity.cpp */,
+				3CE4396E1D8FB3F50043676E /* DurationActivity.hpp */,
 			);
 			name = Activities;
 			sourceTree = "<group>";
@@ -1242,12 +1282,14 @@
 				3C8D681E1D78EB3B00CC3616 /* GlobalActivity.cpp in Sources */,
 				3C8D68531D7AAC2F00CC3616 /* TalkActivity.cpp in Sources */,
 				3CB109721D6E6BC3002C4121 /* Creature.cpp in Sources */,
+				3CE439721D8FC5E50043676E /* Npc.cpp in Sources */,
 				3CD12F1C1D6D033800CDF793 /* BattleRecord.cpp in Sources */,
 				3CE63B9E1D8A7E8100C2C76B /* RecordMenuState.cpp in Sources */,
 				3CE63B241D7D40D000C2C76B /* SystemMenuState.cpp in Sources */,
 				3CD12F191D6CE7F200CDF793 /* CreatureRecord.cpp in Sources */,
 				3CB109751D6E6FD6002C4121 /* Friend.cpp in Sources */,
 				3CB109651D6D0D06002C4121 /* TouchHandler.cpp in Sources */,
+				3CE439811D8FCC3A0043676E /* ArrivePositionCondition.cpp in Sources */,
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				3CE63B1D1D7D337100C2C76B /* IdleState.cpp in Sources */,
 				3CE63B211D7D3C4B00C2C76B /* ShowMoveScopeState.cpp in Sources */,
@@ -1313,21 +1355,26 @@
 				3CD12F201D6D051200CDF793 /* StringUtil.cpp in Sources */,
 				3CB109B01D74FF92002C4121 /* FDNumber.cpp in Sources */,
 				3CE63B2A1D7D5DDD00C2C76B /* OffsetFrame.cpp in Sources */,
+				3CE439751D8FC7AB0043676E /* CreatureDyingCondition.cpp in Sources */,
 				3CB109851D6F7626002C4121 /* AnimationLibrary.cpp in Sources */,
 				3CB109AA1D74F816002C4121 /* CreatureChapterRecord.cpp in Sources */,
 				3CE63B341D7E9BEA00C2C76B /* FDPoint.cpp in Sources */,
+				3CE4397E1D8FCBB20043676E /* AnyTurnCondition.cpp in Sources */,
 				3CE439651D8D02F60043676E /* SpriteMoveActivity.cpp in Sources */,
 				3CE63B961D8A664400C2C76B /* SelectMagicTargetState.cpp in Sources */,
 				3C8D68241D78F24300CC3616 /* CreatureMoveActivity.cpp in Sources */,
 				3CE63B841D87DE9D00C2C76B /* CompositeBox.cpp in Sources */,
 				3C8D68381D79F54900CC3616 /* EventLoader.cpp in Sources */,
+				3CE4397B1D8FC98C0043676E /* TeamEliminatedCondition.cpp in Sources */,
 				3CE63B5F1D852E0300C2C76B /* FightScene.cpp in Sources */,
 				3CE63BA61D8BAF8D00C2C76B /* LocalizedStrings.cpp in Sources */,
 				3CA318291D760C6D0042B56A /* AICreature.cpp in Sources */,
 				3CB1099B1D74F3E2002C4121 /* ItemDefinition.cpp in Sources */,
 				3CE63B931D87DF4800C2C76B /* MagicBox.cpp in Sources */,
+				3CE4396F1D8FB3F50043676E /* DurationActivity.cpp in Sources */,
 				3CE63B6B1D8536C000C2C76B /* MagicResult.cpp in Sources */,
 				3CE63B4B1D83EFC700C2C76B /* RangeScopeResolver.cpp in Sources */,
+				3CE439781D8FC87F0043676E /* CreatureDeadCondition.cpp in Sources */,
 				3CB1098C1D74CE92002C4121 /* SimpleMoveActivity.cpp in Sources */,
 				3C8D68561D7BF5F500CC3616 /* Cursor.cpp in Sources */,
 				3CE63B9B1D8A7D0600C2C76B /* ItemMenuState.cpp in Sources */,
@@ -1342,6 +1389,7 @@
 				3CA318261D760AD00042B56A /* CreatureData.cpp in Sources */,
 				3CE439691D8D12790043676E /* TurnCondition.cpp in Sources */,
 				3CD12F021D6BB26500CDF793 /* ResourceManager.cpp in Sources */,
+				3CE439841D8FCD030043676E /* ArrivePositionTurnCondition.cpp in Sources */,
 				3CE63B871D87DEBB00C2C76B /* DatoBar.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

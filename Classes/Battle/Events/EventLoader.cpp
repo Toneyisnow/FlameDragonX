@@ -13,6 +13,7 @@
 #include "BattleField.hpp"
 #include "TalkActivity.hpp"
 #include "BattleScene.hpp"
+#include "BattleField.hpp"
 
 EventLoader::EventLoader()
 {
@@ -32,6 +33,7 @@ void EventLoader::loadEvents()
 void EventLoader::initWithScene(BattleScene * scene, EventHandler * handler)
 {
     this->_battleScene = scene;
+    this->_battleField = scene->getBattleField();
     this->_eventHandler = handler;
     
     _generatedEventId = 0;
@@ -61,14 +63,19 @@ int EventLoader::loadTurnEvent(int turnNumber, CreatureType type, SEL_CALLBACK0 
     return eventId;
 }
 
+void EventLoader::showTalkMessage(int chapterId, int conversationId, int fromId, int toId)
+{
+    for (int i = fromId; i <= toId; i++) {
+        showTalkMessage(chapterId, conversationId, i);
+    }
+}
+
 void EventLoader::showTalkMessage(int chapterId, int conversationId, int sequenceId)
 {
     int creatureId = LocalizedStrings::getInstance()->getConversationCreatureId(chapterId, conversationId, sequenceId);
     std::string message =LocalizedStrings::getInstance()->getConversation(chapterId, conversationId, sequenceId);
     
-    BattleField * field = _battleScene->getBattleField();
-    
-    Creature * creature = field->getCreatureById(creatureId);
+    Creature * creature = _battleField->getCreatureById(creatureId);
     
     TalkActivity * talk = TalkActivity::create(TalkActivityType_Speak, _battleScene, creature, message);
     _battleScene->getActivityQueue()->appendActivity(talk);
@@ -79,4 +86,14 @@ void EventLoader::appendActivityMethod(SEL_CALLBACK0 function)
 {
     CallbackActivity * activity = CallbackActivity::create(CallbackMethod::create(this, function));
     _battleScene->getActivityQueue()->appendActivity(activity);
+}
+
+
+void EventLoader::BattleField_RemoveObject(Ref * obj)
+{
+    BattleObject * battleObj = (BattleObject *)obj;
+    if (battleObj != nullptr)
+    {
+        _battleField->removeObject(battleObj);
+    }
 }

@@ -41,10 +41,6 @@ private:
     void takeDeltaTimeTck(float dt);
     void takeTick(int synchronizedTick);
     
-    void appendMethodToActivity(SEL_CALLBACK0 selector);
-    void appendMethodToActivity(SEL_CALLBACK1 selector, int value);
-    void appendMethodToActivity(SEL_CALLBACK2 selector, Ref* parameter);
-    
     
     
 public:
@@ -81,9 +77,19 @@ public:
     
     void showMessage(Message * message);
     
+    void appendMethodToActivity(SEL_CALLBACK0 selector);
+    void appendMethodToActivity(SEL_CALLBACK1 selector, int value);
+    void appendMethodToActivity(SEL_CALLBACK2 selector, Ref* parameter);
+    void appendMethodToActivity(Ref * obj, SEL_CALLBACK0 selector);
+    void appendMethodToActivity(Ref * obj, SEL_CALLBACK1 selector, int value);
+    void appendMethodToActivity(Ref * obj, SEL_CALLBACK2 selector, Ref* parameter);
+    
+    
     //// CallbackActivity * createFunctionActivity(void(BattleScene::* callBackFunction)());
     //// CallbackActivity * createFunctionActivity(void(BattleScene::* callBackFunction)(int), int intParameter);
-                                                           
+    
+    
+    
     void testCallMethod(std::function<void(int)> callback);
     void testCallBack0();
     void testCallBack1(int num);

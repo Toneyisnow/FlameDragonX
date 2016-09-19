@@ -52,6 +52,7 @@ private:
     Vector<Creature *> * _enemyList;
     Vector<Creature *> * _npcList;
     Vector<BattleObject *> * _battleObjectList;
+    Vector<Creature *> * _deadCreatureList;
     
     // Private Methods
     
@@ -82,6 +83,7 @@ public:
     
     Creature * getCreatureAt(int x, int y);
     Creature * getCreatureById(int creatureId);
+    Creature * getDeadCreatureById(int creatureId);
     Vec2 getObjectPosition(BattleObject * obj);
     void setObjectPosition(BattleObject * obj, Vec2 position);
     BattleObject * getObjectByPosition(BattleObjectType type, Vec2 position);
@@ -89,6 +91,7 @@ public:
     Vector<Creature *> * getFriendList();
     Vector<Creature *> * getEnemyList();
     Vector<Creature *> * getNPCList();
+    
     
     void takeTick(int synchronizedTick);
     void notifyStateDispatcher();
@@ -108,6 +111,7 @@ public:
     void setCursorTo(Vec2 position);
     void moveCursorTo(Vec2 position);
     Vec2 getCursorPosition();
+    void setCursorObjectTo(Ref * position);
     
     bool isInteractiveBusy();
     

@@ -13,4 +13,3 @@
 #include "BattleField.hpp"
 #include "TalkActivity.hpp"
 
-

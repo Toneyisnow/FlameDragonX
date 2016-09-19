@@ -398,19 +398,34 @@ void BattleScene::takeAIAction(int creatureId)
 
 void BattleScene::appendMethodToActivity(SEL_CALLBACK0 selector)
 {
-    CallbackActivity * callback = CallbackActivity::create(CallbackMethod::create(this, selector));
-    _activityQueue->appendActivity(callback);
+    appendMethodToActivity(this, selector);
 }
 
 void BattleScene::appendMethodToActivity(SEL_CALLBACK1 selector, int value)
 {
-    CallbackActivity * callback = CallbackActivity::create(CallbackMethod::create(this, selector, value));
-    _activityQueue->appendActivity(callback);
+    appendMethodToActivity(this, selector, value);
 }
 
 void BattleScene::appendMethodToActivity(SEL_CALLBACK2 selector, Ref* parameter)
 {
-    CallbackActivity * callback = CallbackActivity::create(CallbackMethod::create(this, selector, parameter));
+    appendMethodToActivity(this, selector, parameter);
+}
+
+void BattleScene::appendMethodToActivity(Ref* obj, SEL_CALLBACK0 selector)
+{
+    CallbackActivity * callback = CallbackActivity::create(CallbackMethod::create(obj, selector));
+    _activityQueue->appendActivity(callback);
+}
+
+void BattleScene::appendMethodToActivity(Ref* obj, SEL_CALLBACK1 selector, int value)
+{
+    CallbackActivity * callback = CallbackActivity::create(CallbackMethod::create(obj, selector, value));
+    _activityQueue->appendActivity(callback);
+}
+
+void BattleScene::appendMethodToActivity(Ref* obj, SEL_CALLBACK2 selector, Ref* parameter)
+{
+    CallbackActivity * callback = CallbackActivity::create(CallbackMethod::create(obj, selector, parameter));
     _activityQueue->appendActivity(callback);
 }
 

@@ -27,9 +27,6 @@ class AICreature : public Creature
 {
 private:
     
-    
-    int dropItemId;
-    
     AIType aiType;
     
     //// void aiParameter;
@@ -38,7 +35,7 @@ public:
     
     AICreature(CreatureType type);
     
-    
+    int dropItemId;
 };
 
 

@@ -295,6 +295,17 @@ Creature * BattleField::getCreatureById(int creatureId)
     return nullptr;
 }
 
+Creature * BattleField::getDeadCreatureById(int creatureId)
+{
+    for (Creature * c : *_deadCreatureList)
+    {
+        if (c->getId() == creatureId)
+            return c;
+    }
+    
+    return nullptr;
+}
+
 Vector<Creature *> * BattleField::getFriendList()
 {
     return _friendList;
@@ -505,6 +516,11 @@ void BattleField::setCursorTo(Vec2 position)
     {
         _cursor->setZOrder(BattleObjectOrder_Indicator);
     }
+}
+
+void BattleField::setCursorObjectTo(Ref * point)
+{
+    setCursorTo(((FDPoint *)point)->getValue());
 }
 
 void BattleField::moveCursorTo(Vec2 position)

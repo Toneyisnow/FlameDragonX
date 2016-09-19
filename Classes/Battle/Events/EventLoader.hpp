@@ -14,6 +14,7 @@
 #include "Creature.hpp"
 
 class BattleScene;
+class BattleField;
 class EventHandler;
 
 class EventLoader : public cocos2d::Ref
@@ -21,6 +22,7 @@ class EventLoader : public cocos2d::Ref
 protected:
     
     BattleScene * _battleScene;
+    BattleField * _battleField;
     EventHandler * _eventHandler;
     
     int _generatedEventId;
@@ -36,10 +38,15 @@ public:
     
     int loadSingleEvent(EventCondition * condition, CallbackMethod * method);
     
+    
+    ///// Helper Functions /////
+    
     int loadTurnEvent(int turnNumber, CreatureType type, SEL_CALLBACK0 function);
+    void showTalkMessage(int chapterId, int conversationId, int fromId, int toId);
     void showTalkMessage(int chapterId, int conversationId, int sequenceId);
     void appendActivityMethod(SEL_CALLBACK0 function);
     
+    void BattleField_RemoveObject(Ref * obj);
     
 };
 #endif /* EventLoader_hpp */
