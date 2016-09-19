@@ -13,33 +13,6 @@ Dictionary *language = Dictionary::createWithContentsOfFile("ch.plist");
 	strcpy(wholeLine, filledString.c_str());
 	char * end = wholeLine + wholesize;
 
-	char* w = wholeLine;
-	while (w < end)
-	{
-		int cp = utf8::next(w, end);
-		if (*w == '#')
-		{
-			cocos2d::log("Found #");
-		}
-	}
-	
-	int charsize = w - wholeLine;
-	char * firstLine = new char[charsize + 1];
-	
-	strncpy(firstLine, wholeLine, charsize);
-	firstLine[charsize] = '\0';
-	auto label = Label::createWithTTF(firstLine, "fonts/mini_black.ttf", 24);
-
-
-
-
-
-
-int wholesize = filledString.size();
-	char* wholeLine = new char[wholesize + 1];
-	strcpy(wholeLine, filledString.c_str());
-	char * end = wholeLine + wholesize;
-
 	int CHAR_PER_LINE = 11;
 	int LINE_PER_SCREEN = 3;
 
@@ -62,10 +35,7 @@ int wholesize = filledString.size();
 			cocos2d::log("Split line.");
 
 			int charsize = w - last;
-			if (*w == '#')
-			{
-				charsize--;
-			}
+			
 
 			char * currentLine = new char[charsize + 1];
 			strncpy(currentLine, last, charsize);
@@ -76,6 +46,10 @@ int wholesize = filledString.size();
 
 			last = w;
 			charCount = 0;
+			if (*w == '#')
+			{
+				last++;
+			}
 		}
 	}
 	
