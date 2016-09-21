@@ -22,6 +22,7 @@ private:
     SlideAnimation * _animation;
     
     int _currentTick;
+    bool _hasFinished;
     
 public:
     
@@ -31,6 +32,8 @@ public:
     void setAnimation(SlideAnimation *ani);
     
     void takeTick(int synchronizedTick);
+    
+    bool hasFinished();
     
 };
 

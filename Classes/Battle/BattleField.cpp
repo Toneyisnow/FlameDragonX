@@ -63,6 +63,11 @@ BattleField::~BattleField()
     {
         _npcList->clear();
     }
+    if (_deadCreatureList != nullptr)
+    {
+        _deadCreatureList->clear();
+    }
+    
 }
 
 void BattleField::initWithChapter(int chapterId)
@@ -99,6 +104,7 @@ void BattleField::initWithChapter(int chapterId)
     this->_friendList = new Vector<Creature *>();
     this->_enemyList = new Vector<Creature *>();
     this->_npcList = new Vector<Creature *>();
+    this->_deadCreatureList = new Vector<Creature *>();
     
     this->_cursor = new Cursor();
     addObject(_cursor, Vec2(0, 0));
@@ -108,8 +114,6 @@ void BattleField::initWithChapter(int chapterId)
     
     // State Dispatcher
     _stateDispatcher = new StateDispatcher(_battleScene);
-    
-    
     
     /*
     Creature * creature = new Creature(CreatureType_Friend);
@@ -321,6 +325,11 @@ Vector<Creature *> * BattleField::getNPCList()
     return _npcList;
 }
 
+Vector<Creature *> * BattleField::getDeadCreatureList()
+{
+    return _deadCreatureList;
+}
+
 Vec2 BattleField::getObjectPosition(BattleObject * obj)
 {
     if (obj == nullptr)
@@ -370,6 +379,14 @@ Vec2 BattleField::convertLocationToPosition(Vec2 loc)
     /// int posY = _fieldHeight - int(loc.y / BLOCK_SIZE);
     
     return Vec2(posX, posY);
+}
+
+Vec2 BattleField::getScreenLocationByLocation(Vec2 loc)
+{
+    float locX = loc.x * _displayScale + _groundImage->getPosition().x;
+    float locY = loc.y * _displayScale + _groundImage->getPosition().y;
+    
+    return Vec2(locX, locY);
 }
 
 void BattleField::sendObjectToGround(BattleObject * obj, Vec2 position)
@@ -516,6 +533,37 @@ void BattleField::setCursorTo(Vec2 position)
     {
         _cursor->setZOrder(BattleObjectOrder_Indicator);
     }
+    
+    // Make sure the cursor is in the screen
+    Vec2 cursorScreenLoc = getScreenLocationByLocation(unitLocation);
+    float minX = 2 * Constants::UNIT_ICON_SIZE;
+    float minY = 2 * Constants::UNIT_ICON_SIZE;
+    float maxX = Constants::SCREEN_WIDTH - minX;
+    float maxY = Constants::SCREEN_HEIGHT - minY;
+    
+    float dx = 0;
+    if (cursorScreenLoc.x < minX) {
+        dx = minX - cursorScreenLoc.x;
+    }
+    if (cursorScreenLoc.x > maxX) {
+        dx = maxX - cursorScreenLoc.x;
+    }
+    
+    float dy = 0;
+    if (cursorScreenLoc.y < minY) {
+        dy = minY - cursorScreenLoc.y;
+    }
+    if (cursorScreenLoc.y > maxY) {
+        dy = maxY - cursorScreenLoc.y;
+    }
+    
+    if (dx != 0 || dy != 0) {
+        log("Set Cursor, dx=%f, dy=%f", dx, dy);
+    }
+    
+    Vec2 originLoc = _groundImage->getPosition();
+    _groundImage->setPosition(originLoc.x + dx, originLoc.y + dy);
+    
 }
 
 void BattleField::setCursorObjectTo(Ref * point)
@@ -570,7 +618,7 @@ void BattleField::closeMenu()
         }
     }
     
-    _battleScene->getActivityQueue()->appendActivity(batch);
+    _battleScene->getActivityQueue()->insertActivity(batch);
     batch->release();
 }
 

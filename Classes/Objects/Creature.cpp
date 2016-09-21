@@ -175,3 +175,32 @@ FDRange * Creature::getAttackRange()
     
     return attackItem->attackRange();
 }
+
+int Creature::updateHp(int delta)
+{
+    int hpPrevious = _data->hpCurrent;
+    _data->hpCurrent += delta;
+    
+    _data->hpCurrent = max(0, _data->hpCurrent);
+    _data->hpCurrent = min(_data->hpMax, _data->hpCurrent);
+    
+    return _data->hpCurrent - hpPrevious;
+}
+
+int Creature::updateMp(int delta)
+{
+    int mpPrevious = _data->mpCurrent;
+    _data->mpCurrent += delta;
+    
+    _data->mpCurrent = max(0, _data->mpCurrent);
+    _data->mpCurrent = min(_data->mpMax, _data->mpCurrent);
+    
+    return _data->mpCurrent - mpPrevious;
+   
+}
+
+void Creature::setLastGainedExperience(int exp)
+{
+    _lastGainedExperience = exp;
+}
+

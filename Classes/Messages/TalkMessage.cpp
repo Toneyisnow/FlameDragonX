@@ -7,3 +7,8 @@
 //
 
 #include "TalkMessage.hpp"
+TalkMessage::TalkMessage(Creature * creature, std::string content)
+: ConversationMessage(creature, content)
+{
+    
+}

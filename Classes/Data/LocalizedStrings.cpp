@@ -38,6 +38,9 @@ void LocalizedStrings::loadBasicStrings()
 
     _creatureNames = Dictionary::createWithContentsOfFile("Strings/zh-cn/Creature.strings");
     _creatureNames->retain();
+    
+    _messages = Dictionary::createWithContentsOfFile("Strings/zh-cn/Message.strings");
+    _messages->retain();
 }
 
 
@@ -62,6 +65,24 @@ std::string LocalizedStrings::getCreatureName(int creatureId)
     return result;
 }
 
+std::string LocalizedStrings::getConfirmString(int confirmId)
+{
+    std::string key = StringUtils::format("Confirm-%02d", confirmId);
+    String* str = (String*)_messages->objectForKey(key.c_str());
+    std::string result(str->getCString());
+    
+    return result;
+}
+
+std::string LocalizedStrings::getMessageString(int messageId)
+{
+    std::string key = StringUtils::format("Message-%02d", messageId);
+    String* str = (String*)_messages->objectForKey(key.c_str());
+    std::string result(str->getCString());
+    
+    return result;
+}
+
 int LocalizedStrings::getConversationCreatureId(int chapterId, int conversationId, int sequenceId)
 {
     std::string key = StringUtils::format("%02d-%02d-%03d-Id", chapterId, conversationId, sequenceId);
@@ -78,3 +99,4 @@ std::string LocalizedStrings::getConversation(int chapterId, int conversationId,
     
     return result;
 }
+

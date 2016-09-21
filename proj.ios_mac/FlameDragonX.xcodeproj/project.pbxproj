@@ -101,6 +101,10 @@
 		3CE4397E1D8FCBB20043676E /* AnyTurnCondition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE4397C1D8FCBB20043676E /* AnyTurnCondition.cpp */; };
 		3CE439811D8FCC3A0043676E /* ArrivePositionCondition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE4397F1D8FCC3A0043676E /* ArrivePositionCondition.cpp */; };
 		3CE439841D8FCD030043676E /* ArrivePositionTurnCondition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE439821D8FCD030043676E /* ArrivePositionTurnCondition.cpp */; };
+		3CE439871D91029A0043676E /* ConversationMessage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE439851D91029A0043676E /* ConversationMessage.cpp */; };
+		3CE4398A1D9109C40043676E /* ShowMessageActivity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE439881D9109C40043676E /* ShowMessageActivity.cpp */; };
+		3CE4398D1D9118D50043676E /* FDRandom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE4398B1D9118D50043676E /* FDRandom.cpp */; };
+		3CE4398F1D9250230043676E /* Animations in Resources */ = {isa = PBXBuildFile; fileRef = 3CE4398E1D9250230043676E /* Animations */; };
 		3CE63B1D1D7D337100C2C76B /* IdleState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63B1B1D7D337100C2C76B /* IdleState.cpp */; };
 		3CE63B211D7D3C4B00C2C76B /* ShowMoveScopeState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63B1F1D7D3C4B00C2C76B /* ShowMoveScopeState.cpp */; };
 		3CE63B241D7D40D000C2C76B /* SystemMenuState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63B221D7D40D000C2C76B /* SystemMenuState.cpp */; };
@@ -403,6 +407,13 @@
 		3CE439801D8FCC3A0043676E /* ArrivePositionCondition.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ArrivePositionCondition.hpp; path = Battle/Events/Condition/ArrivePositionCondition.hpp; sourceTree = "<group>"; };
 		3CE439821D8FCD030043676E /* ArrivePositionTurnCondition.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ArrivePositionTurnCondition.cpp; path = Battle/Events/Condition/ArrivePositionTurnCondition.cpp; sourceTree = "<group>"; };
 		3CE439831D8FCD030043676E /* ArrivePositionTurnCondition.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ArrivePositionTurnCondition.hpp; path = Battle/Events/Condition/ArrivePositionTurnCondition.hpp; sourceTree = "<group>"; };
+		3CE439851D91029A0043676E /* ConversationMessage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ConversationMessage.cpp; path = Messages/ConversationMessage.cpp; sourceTree = "<group>"; };
+		3CE439861D91029A0043676E /* ConversationMessage.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ConversationMessage.hpp; path = Messages/ConversationMessage.hpp; sourceTree = "<group>"; };
+		3CE439881D9109C40043676E /* ShowMessageActivity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ShowMessageActivity.cpp; path = Activities/ShowMessageActivity.cpp; sourceTree = "<group>"; };
+		3CE439891D9109C40043676E /* ShowMessageActivity.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ShowMessageActivity.hpp; path = Activities/ShowMessageActivity.hpp; sourceTree = "<group>"; };
+		3CE4398B1D9118D50043676E /* FDRandom.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FDRandom.cpp; path = Common/FDRandom.cpp; sourceTree = "<group>"; };
+		3CE4398C1D9118D50043676E /* FDRandom.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = FDRandom.hpp; path = Common/FDRandom.hpp; sourceTree = "<group>"; };
+		3CE4398E1D9250230043676E /* Animations */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Animations; sourceTree = "<group>"; };
 		3CE63B1B1D7D337100C2C76B /* IdleState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IdleState.cpp; path = Dispatchers/IdleState.cpp; sourceTree = "<group>"; };
 		3CE63B1C1D7D337100C2C76B /* IdleState.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = IdleState.hpp; path = Dispatchers/IdleState.hpp; sourceTree = "<group>"; };
 		3CE63B1F1D7D3C4B00C2C76B /* ShowMoveScopeState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ShowMoveScopeState.cpp; path = Dispatchers/ShowMoveScopeState.cpp; sourceTree = "<group>"; };
@@ -836,6 +847,8 @@
 				3C8D684F1D7AA90A00CC3616 /* CreatureDeadActivity.hpp */,
 				3C8D68511D7AAC2F00CC3616 /* TalkActivity.cpp */,
 				3C8D68521D7AAC2F00CC3616 /* TalkActivity.hpp */,
+				3CE439881D9109C40043676E /* ShowMessageActivity.cpp */,
+				3CE439891D9109C40043676E /* ShowMessageActivity.hpp */,
 				3CE63B401D81C9DE00C2C76B /* RemoveObjectActivity.cpp */,
 				3CE63B411D81C9DE00C2C76B /* RemoveObjectActivity.hpp */,
 				3CE439631D8D02F60043676E /* SpriteMoveActivity.cpp */,
@@ -888,6 +901,8 @@
 				3CE63B331D7E9BEA00C2C76B /* FDPoint.hpp */,
 				3CE63B3A1D7F8F6200C2C76B /* PointMap.cpp */,
 				3CE63B3B1D7F8F6200C2C76B /* PointMap.hpp */,
+				3CE4398B1D9118D50043676E /* FDRandom.cpp */,
+				3CE4398C1D9118D50043676E /* FDRandom.hpp */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -995,6 +1010,8 @@
 				3CE63B7D1D87DD1800C2C76B /* ConfirmMessage.hpp */,
 				3CE63B7F1D87DE2A00C2C76B /* SpeakMessage.cpp */,
 				3CE63B801D87DE2A00C2C76B /* SpeakMessage.hpp */,
+				3CE439851D91029A0043676E /* ConversationMessage.cpp */,
+				3CE439861D91029A0043676E /* ConversationMessage.hpp */,
 				3CE63B821D87DE9D00C2C76B /* CompositeBox.cpp */,
 				3CE63B831D87DE9D00C2C76B /* CompositeBox.hpp */,
 				3CE63B851D87DEBB00C2C76B /* DatoBar.cpp */,
@@ -1014,6 +1031,7 @@
 		46880B7519C43A67006E1F66 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3CE4398E1D9250230043676E /* Animations */,
 				3CE63B971D8A6BCD00C2C76B /* Backgrounds */,
 				3C8D68281D78FB8000CC3616 /* Others */,
 				3CB1096A1D6E5E66002C4121 /* Icons */,
@@ -1230,6 +1248,7 @@
 				521A8E6519F0C34300D177D7 /* Default-736h@3x.png in Resources */,
 				521A8EA919F11F5000D177D7 /* fonts in Resources */,
 				3CD12EFA1D6BB11600CDF793 /* Title_Load_1.png in Resources */,
+				3CE4398F1D9250230043676E /* Animations in Resources */,
 				50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */,
 				5087E78017EB970100C73F5D /* Icon-114.png in Resources */,
 				50EF62A217ECD613001EB2F8 /* Icon-29.png in Resources */,
@@ -1276,6 +1295,7 @@
 				3CB109A71D74F46C002C4121 /* MoneyItemDefinition.cpp in Sources */,
 				3C8D68411D7A095E00CC3616 /* EventChapterCommon.cpp in Sources */,
 				3C8D684A1D7A3FA800CC3616 /* CallbackMethod.cpp in Sources */,
+				3CE4398A1D9109C40043676E /* ShowMessageActivity.cpp in Sources */,
 				3CE63BAB1D8BCF2200C2C76B /* SelectableBox.cpp in Sources */,
 				3C8D683E1D79F5BB00CC3616 /* EventChapter1.cpp in Sources */,
 				3C8D68211D78EEC900CC3616 /* BatchActivity.cpp in Sources */,
@@ -1285,6 +1305,7 @@
 				3CE439721D8FC5E50043676E /* Npc.cpp in Sources */,
 				3CD12F1C1D6D033800CDF793 /* BattleRecord.cpp in Sources */,
 				3CE63B9E1D8A7E8100C2C76B /* RecordMenuState.cpp in Sources */,
+				3CE439871D91029A0043676E /* ConversationMessage.cpp in Sources */,
 				3CE63B241D7D40D000C2C76B /* SystemMenuState.cpp in Sources */,
 				3CD12F191D6CE7F200CDF793 /* CreatureRecord.cpp in Sources */,
 				3CB109751D6E6FD6002C4121 /* Friend.cpp in Sources */,
@@ -1379,6 +1400,7 @@
 				3C8D68561D7BF5F500CC3616 /* Cursor.cpp in Sources */,
 				3CE63B9B1D8A7D0600C2C76B /* ItemMenuState.cpp in Sources */,
 				3CE63B371D7F33D900C2C76B /* MenuCursor.cpp in Sources */,
+				3CE4398D1D9118D50043676E /* FDRandom.cpp in Sources */,
 				3CE63B781D87DC5E00C2C76B /* Message.cpp in Sources */,
 				3CE63B651D85364200C2C76B /* CounterResult.cpp in Sources */,
 				3CE63B271D7D59D400C2C76B /* CommonHelper.cpp in Sources */,

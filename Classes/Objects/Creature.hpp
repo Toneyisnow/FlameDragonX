@@ -47,7 +47,7 @@ private:
     bool _hasMoved;
     bool _hasActioned;
     
-    
+    int _lastGainedExperience;
     
 public:
     
@@ -81,6 +81,11 @@ public:
     bool hasTakenAction();
     
     FDRange * getAttackRange();
+    
+    int updateHp(int delta);
+    int updateMp(int delta);
+    
+    void setLastGainedExperience(int exp);
     
 };
 

@@ -29,7 +29,7 @@ class Ground : public cocos2d::Ref
 private:
     GroundType _groundType;
     int _attackPoint;
-    int _defensePoint;
+    int _defendPoint;
     bool _hasCover;
     
 public:
@@ -41,7 +41,7 @@ public:
     
     GroundType getType();
     int getAttackPoint();
-    int getDefensePoint();
+    int getDefendPoint();
     bool hasCover();
     
 };

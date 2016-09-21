@@ -114,6 +114,9 @@ void ActionMenuState::confirmSelectMagic(int result)
 
 void ActionMenuState::checkTreatureAndWaiveTurn()
 {
+    Vec2 position = _battleField->getObjectPosition(_creature);
+    // Treasure * treasure = _battleField->getTreatureAt(position);
+    
     this->confirmPickTreasure();
 }
 

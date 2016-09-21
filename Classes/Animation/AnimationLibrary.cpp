@@ -77,6 +77,29 @@ void AnimationLibrary::loadIdleAnimation(int creatureAniId, bool greyout)
     idleAnimation->release();
 }
 
+void AnimationLibrary::loadDeadAnimation(int creatureAniId)
+{
+    SlideAnimation *animation = new SlideAnimation(Constants::TickPerFrame_MoveAnimation, false, false);
+    
+    int indexes[] = {2, 5, 8, 11};
+    
+    for (int m = 0; m < 3; m ++) {
+    
+        for (int i = 0; i < 4; i++)
+        {
+            animation->appendFrame(filenameForBattleFieldAnimation(creatureAniId, indexes[i]));
+        }
+    }
+    
+    for (int i = 1; i <= 8; i++) {
+        animation->appendFrame(StringUtils::format("Animations/Explode/Explode-%02d.png", i));
+    }
+    
+    std::string key = StringUtils::format("Dead-%03d", creatureAniId);
+    _slideAnimationDictionary->insert(key, animation);
+    animation->release();
+}
+
 void AnimationLibrary::loadWalkAnimation(int creatureAniId, Direction direction)
 {
     int centerImageId;
@@ -160,6 +183,18 @@ SlideAnimation * AnimationLibrary::getWalkAnimation(int creatureAniId, Direction
         this->loadWalkAnimation(creatureAniId, direction);
     }
 
+    return _slideAnimationDictionary->at(key);
+}
+
+SlideAnimation * AnimationLibrary::getDeadAnimation(int creatureAniId)
+{
+    std::string key = StringUtils::format("Dead-%03d", creatureAniId);
+    
+    if (_slideAnimationDictionary->at(key) == nullptr)
+    {
+        this->loadDeadAnimation(creatureAniId);
+    }
+    
     return _slideAnimationDictionary->at(key);
 }
 

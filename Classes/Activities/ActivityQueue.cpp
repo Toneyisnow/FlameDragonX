@@ -54,6 +54,7 @@ void ActivityQueue::pushBackActivity(FDActivity * activity)
 void ActivityQueue::insertActivity(FDActivity * activity)
 {
     this->_queuedActivityList->insert(0, activity);
+    _appendToIndex = 1;
 }
 
 void ActivityQueue::appendActivity(FDActivity * activity)

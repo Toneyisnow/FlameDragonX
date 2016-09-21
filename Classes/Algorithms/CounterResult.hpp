@@ -17,12 +17,12 @@ class CounterResult : public cocos2d::Ref
     
 private:
     
-    int _hpBefore;
-    int _hpAfter;
-    bool _isCriticalHit;
     
 public:
     
+    int hpBefore;
+    int hpAfter;
+    bool isCriticalHit;
     
 };
 

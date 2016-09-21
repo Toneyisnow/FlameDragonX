@@ -27,7 +27,7 @@ public:
     
     
     int hpCurrent, hpMax, mpCurrent, mpMax;
-    int level, ap, dp, dx, mv, ex;
+    int level, ap, dp, hit, dx, mv, ex;
     
     int attackItemIndex;
     int defendItemIndex;
@@ -44,6 +44,13 @@ public:
     
     CreatureData();
     ~CreatureData();
+    
+    int calculatedAp();
+    int calculatedDp();
+    int calculatedHit();
+    int calculatedEv();
+    
+    
     
     
     AttackItemDefinition * getAttackItem();

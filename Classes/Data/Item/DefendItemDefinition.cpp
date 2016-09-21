@@ -29,3 +29,13 @@ void DefendItemDefinition::initFromFile(TextFileReader * reader)
     _ev = reader->readInt();
     
 }
+
+int DefendItemDefinition::dp()
+{
+    return _dp;
+}
+
+int DefendItemDefinition::ev()
+{
+    return _ev;
+}

@@ -41,6 +41,7 @@ public:
     static const int SCREEN_HEIGHT = 320;
     
     static const int LEVEL_COUNT = 30;
+    static const int UNIT_ICON_SIZE = 24;
     
     static const int DEFAULT_SPRITE_SCALE = 1.5f;
     

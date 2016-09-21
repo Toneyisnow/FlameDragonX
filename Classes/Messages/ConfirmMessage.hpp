@@ -10,14 +10,17 @@
 #define ConfirmMessage_hpp
 
 #include "cocos2d.h"
-#include "Message.hpp"
+#include "ConversationMessage.hpp"
 
-class ConfirmMessage : public Message
+class ConfirmMessage : public ConversationMessage
 {
 private:
     
 public:
     
+    ConfirmMessage(std::string content);
+    ConfirmMessage(Creature * creature, std::string content);
+
     
 };
 

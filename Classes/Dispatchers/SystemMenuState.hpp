@@ -22,10 +22,14 @@ public:
     
     static SystemMenuState * create(BattleScene * scene, StateSession * session);
     
-    void onEnterState();
-    void onExitState();
+    void onEnterState() override;
+    void onExitState() override;
     
     virtual void handleClickAt(Vec2 position) override;
+    
+    void promptEndTurn();
+    void confirmEndTurn(int confirmed);
+    
     
 };
 

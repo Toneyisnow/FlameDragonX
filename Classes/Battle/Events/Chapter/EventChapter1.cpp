@@ -21,6 +21,8 @@ void EventChapter1::loadEvents()
     this->loadTurnEvent(1, CreatureType_Friend, CALLBACK0_SELECTOR(EventChapter1::round1));
     this->loadTurnEvent(3, CreatureType_Friend, CALLBACK0_SELECTOR(EventChapter1::round3));
     this->loadTurnEvent(4, CreatureType_Friend, CALLBACK0_SELECTOR(EventChapter1::round4));
+    this->loadTurnEvent(5, CreatureType_Friend, CALLBACK0_SELECTOR(EventChapter1::round5_Boss));
+    this->loadTurnEvent(6, CreatureType_Friend, CALLBACK0_SELECTOR(EventChapter1::round6_Npc));
     
 }
 
@@ -165,7 +167,7 @@ void EventChapter1::round3()
 {
     log("Event round3 triggered.");
     _battleField->addCreature(Friend::create(5, 5), Vec2(12, 12));
-    _battleField->addCreature(Friend::create(6, 6), Vec2(12, 12));
+    _battleField->addCreature(Friend::create(6, 1016), Vec2(12, 12));
     
     CreatureMoveActivity * activity1 = new CreatureMoveActivity(_battleField, 5);
     activity1->appendPosition(12, 14);
@@ -218,7 +220,7 @@ void EventChapter1::round4()
     _battleScene->getActivityQueue()->appendActivity(batch);
     batch->release();
 
-    showTalkMessage(1, 2, 1, 2);
+    showTalkMessage(1, 3, 1, 2);
 }
 
 void EventChapter1::round5_Boss()
@@ -285,8 +287,8 @@ void EventChapter1::round6_Npc()
     batch->addActivity(activity3);
     activity3->release();
     CreatureMoveActivity * activity4 = new CreatureMoveActivity(_battleField, 34);
-    activity3->appendPosition(19, 15);
-    activity3->appendPosition(20, 15);
+    activity4->appendPosition(19, 15);
+    activity4->appendPosition(20, 15);
     batch->addActivity(activity4);
     activity4->release();
     

@@ -66,6 +66,9 @@ public:
     
     virtual void setDirection(Direction direction);
     
+    void setAnimation(SlideAnimation * animation);
+    bool animationStopped();
+    
     virtual FDActivity * onRemovalActivity();
     
     void setZOrder(int zOrder);

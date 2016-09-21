@@ -23,6 +23,7 @@
 #include "TalkMessage.hpp"
 #include "MagicScene.hpp"
 #include "LocalizedStrings.hpp"
+#include "DurationActivity.hpp"
 
 USING_NS_CC;
 
@@ -208,17 +209,20 @@ void BattleScene::postFightAction(Ref * counterObjectObj)
 {
     log("Enter postFightAction.");
     
+    _activityQueue->appendActivity(DurationActivity::create(1.0f));
+    
     CounterObject * counterObject = (CounterObject *)counterObjectObj;
     
     Creature * creature = counterObject->getSubject();
+    Creature * target = counterObject->getTargetList().at(0);
     
     // Triggered Events
     _eventHandler->notifyTriggeredEvents();
     
     // Show Dying Animation
-    if (creature->isDead())
+    // if (creature->isDead())
     {
-        CreatureDeadActivity * dead = CreatureDeadActivity::create(this->_battleField, creature);
+        CreatureDeadActivity * dead = CreatureDeadActivity::create(this->_battleField, target);
         _activityQueue->appendActivity(dead);
     }
     
@@ -257,12 +261,22 @@ void BattleScene::waiveTurn(Creature * creature)
     
     
     
-    // Triggered Events. e.g. Found Treature
+    // Triggered Events. e.g Position events
     _eventHandler->notifyTriggeredEvents();
     
     // End Turn
     this->appendMethodToActivity(CALLBACK2_SELECTOR(BattleScene::creatureEndTurn), creature);
 
+}
+
+void BattleScene::waiveAllTurn()
+{
+    for (Creature * c : *_battleField->getFriendList()) {
+        if (!c->hasTakenAction())
+        {
+            this->waiveTurn(c);
+        }
+    }
 }
 
 void BattleScene::creatureEndTurn(Ref * creatureObj)
@@ -372,8 +386,8 @@ void BattleScene::takeAIMove()
         // Take Move
         RoutePoint * route = new RoutePoint();
         Vec2 position = _battleField->getObjectPosition(target);
-        route->appendPoint(Vec2(position.x, position.y + 4));
-        route->appendPoint(Vec2(position.x + 5, position.y + 4));
+        route->appendPoint(Vec2(position.x, position.y + 1));
+        route->appendPoint(Vec2(position.x + 1, position.y + 1));
         
         CreatureMoveActivity * activity = CreatureMoveActivity::create(_battleField, target, route);
         this->_activityQueue->appendActivity(activity);

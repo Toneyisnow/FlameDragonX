@@ -45,7 +45,7 @@ void FightScene::takeDeltaTimeTick(float dt)
      */
     
     auto f = [](Scene* scene) {
-        return TransitionMoveInL::create(1.0f, scene);
+        return TransitionFade::create(1.0f, scene);
     };
     Director::getInstance()->popScene(f);
     

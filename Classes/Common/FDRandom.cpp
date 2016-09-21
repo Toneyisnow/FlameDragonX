@@ -1,0 +1,29 @@
+//
+//  FDRandom.cpp
+//  FlameDragonX
+//
+//  Created by SuiYi on 9/20/16.
+//
+//
+
+#include "FDRandom.hpp"
+
+int FDRandom::valueFromRange(int min, int max)
+{
+    if (max < min)
+    {
+        int temp = min;
+        min = max;
+        max = temp;
+    }
+    
+    int ran = rand() * (max - min) + min;
+    return ran;
+}
+
+bool FDRandom::hitWithRate(int rate)
+{
+    int random = rand() % 100;
+    return (random < rate);
+    
+}

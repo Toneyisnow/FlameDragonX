@@ -25,8 +25,11 @@ private:
     
     std::string filenameForBattleFieldAnimation(int creatureAniId, int index);
     //// void loadWalkAnimationForCreature(int creatureAniId, Direction direction, int centerImageId);
+    
     void loadIdleAnimation(int creatureAniId, bool greyout);
     void loadWalkAnimation(int creatureAniId, Direction direction);
+    void loadDeadAnimation(int creatureAniId);
+    
     void loadScopeIndicatorAnimation();
     void loadMenuAnimation(int menuItemId);
     
@@ -41,9 +44,10 @@ public:
     void preloadBattleAnimationsForCreature(int creatureAniId);
     
     
-    
+    // Creature
     SlideAnimation * getIdleAnimation(int creatureAniId, bool greyout);
     SlideAnimation * getWalkAnimation(int creatureAniId, Direction direction);
+    SlideAnimation * getDeadAnimation(int creatureAniId);
     
     SlideAnimation * getScopeIndicatorAnimation();
     

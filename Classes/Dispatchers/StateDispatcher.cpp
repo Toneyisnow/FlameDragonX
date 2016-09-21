@@ -38,6 +38,8 @@ void StateDispatcher::onNotified()
     
     _currentState->onExitState();
     _currentState->release();
+    // CallbackMethod * method1 = CallbackMethod::create(_currentState, CALLBACK0_SELECTOR(ActionState::onExitState));
+    // _scene->getActivityQueue()->appendActivity(CallbackActivity::create(method));
     
     _currentState = nextState;
     _currentState->retain();

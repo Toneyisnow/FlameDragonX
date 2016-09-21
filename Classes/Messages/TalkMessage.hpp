@@ -10,14 +10,16 @@
 #define TalkMessage_hpp
 
 #include "cocos2d.h"
-#include "Message.hpp"
+#include "ConversationMessage.hpp"
 
-class TalkMessage : public Message
+class TalkMessage : public ConversationMessage
 {
 private:
     
 public:
     
+    TalkMessage(Creature * creature, std::string content);
+
     
 };
 

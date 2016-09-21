@@ -51,7 +51,7 @@ void SlideAnimation::appendFrame(Texture2D * texture)
 
 int SlideAnimation::getFrameCount()
 {
-    return _frameList.size();
+    return (int)_frameList.size();
 }
 
 FDFrame * SlideAnimation::frameAt(int index)

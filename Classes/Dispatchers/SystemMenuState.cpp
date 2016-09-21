@@ -8,10 +8,14 @@
 
 #include "SystemMenuState.hpp"
 #include "BattleField.hpp"
+#include "BattleScene.hpp"
 #include "IdleState.hpp"
 #include "MenuCursor.hpp"
 #include "RecordMenuState.hpp"
 #include "SettingsMenuState.hpp"
+#include "LocalizedStrings.hpp"
+#include "ConfirmMessage.hpp"
+#include "ShowMessageActivity.hpp"
 
 SystemMenuState * SystemMenuState::create(BattleScene * scene, StateSession * session)
 {
@@ -71,9 +75,30 @@ void SystemMenuState::handleClickAt(Vec2 position)
                 return;
             case 33:
                 // End Turn
+                promptEndTurn();
                 return;
             default:
                 break;
         }
     }
 }
+
+void SystemMenuState::promptEndTurn()
+{
+    ConfirmMessage * confirm = new ConfirmMessage(LocalizedStrings::getInstance()->getConfirmString(1));
+    confirm->setReturnFunction(this, CALLBACK1_SELECTOR(SystemMenuState::confirmEndTurn));
+    ShowMessageActivity * activity = ShowMessageActivity::create(_battleScene, confirm);
+    _battleScene->getActivityQueue()->appendActivity(activity);
+    confirm->autorelease();
+}
+
+void SystemMenuState::confirmEndTurn(int confirmed)
+{
+    log("Confirm result: %d", confirmed);
+    
+    _battleScene->waiveAllTurn();
+    
+    _nextState = IdleState::create(_battleScene);
+    _battleField->notifyStateDispatcher();
+}
+

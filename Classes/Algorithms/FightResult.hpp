@@ -20,10 +20,10 @@ private:
     
     CounterObject * _counterObject;
     
-    CounterResult _attackInfo1;
-    CounterResult _attackInfo2;
-    CounterResult _fightBackInfo1;
-    CounterResult _fightBackInfo2;
+    CounterResult * _attackInfo1;
+    CounterResult * _attackInfo2;
+    CounterResult * _fightBackInfo1;
+    CounterResult * _fightBackInfo2;
     
 public:
     
@@ -31,6 +31,16 @@ public:
     ~FightResult();
     
     CounterObject * getCounterObject();
+    
+    void setAttackInfo1(CounterResult* result);
+    void setAttackInfo2(CounterResult* result);
+    void setFightBackInfo1(CounterResult* result);
+    void setFightBackInfo2(CounterResult* result);
+    
+    CounterResult attackInfo1;
+    CounterResult attackInfo2;
+    CounterResult fightBackInfo1;
+    CounterResult fightBackInfo2;
     
 };
 

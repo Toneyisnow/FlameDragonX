@@ -47,6 +47,16 @@ void BattleObject::setDirection(Direction direction)
     _direction = direction;
 }
 
+void BattleObject::setAnimation(SlideAnimation * animation)
+{
+    _animator->setAnimation(animation);
+}
+
+bool BattleObject::animationStopped()
+{
+    return _animator->hasFinished();
+}
+
 FDActivity * BattleObject::onRemovalActivity()
 {
     return nullptr;

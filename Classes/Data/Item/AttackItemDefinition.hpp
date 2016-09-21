@@ -44,6 +44,8 @@ public:
     int dp();
     FDRange * attackRange();
     
+    int getPoisonRate();
+    
 };
 
 #endif /* AttackItemDefinition_hpp */

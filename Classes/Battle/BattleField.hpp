@@ -91,13 +91,14 @@ public:
     Vector<Creature *> * getFriendList();
     Vector<Creature *> * getEnemyList();
     Vector<Creature *> * getNPCList();
-    
+    Vector<Creature *> * getDeadCreatureList();
     
     void takeTick(int synchronizedTick);
     void notifyStateDispatcher();
     
     Vec2 convertPositionToLocation(Vec2 pos);
     Vec2 convertLocationToPosition(Vec2 loc);
+    Vec2 getScreenLocationByLocation(Vec2 loc);
     
     //void activityMoveCreature(Vec2 position, Vec2 target);
     //void activityMoveCreatureWithMenu(Vec2 position, Vec2 target);

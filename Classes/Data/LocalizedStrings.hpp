@@ -41,6 +41,11 @@ public:
     
     std::string getCreatureName(int creatureId);
     
+    std::string getConfirmString(int confirmId);
+    std::string getMessageString(int messageId);
+    
+    
+    
     int getConversationCreatureId(int chapterId, int conversationId, int sequenceId);
     std::string getConversation(int chapterId, int conversationId, int sequenceId);
 };

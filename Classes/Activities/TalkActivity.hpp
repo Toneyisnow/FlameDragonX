@@ -21,6 +21,8 @@ typedef enum TalkActivityType
 
 class BattleScene;
 
+
+// This is DEPRACATED and replaced by ShowMessageActivity
 class TalkActivity : public GlobalActivity
 {
 private:

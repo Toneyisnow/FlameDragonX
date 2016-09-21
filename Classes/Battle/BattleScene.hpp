@@ -72,6 +72,7 @@ public:
     void waiveTurn(Creature * creature);
     void creatureEndTurn(Ref * creatureObj);
     void startTurn();
+    void waiveAllTurn();
     void takeAIMove();
     void takeAIAction(int creatureId);
     

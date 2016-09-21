@@ -72,6 +72,16 @@ int AttackItemDefinition::dp()
     return _dp;
 }
 
+int AttackItemDefinition::getPoisonRate()
+{
+    // Cui Du Dao, Hei An Jian, Hei An Gong
+    if (_definitionId == 214 || _definitionId == 205 || _definitionId == 247) {
+        return 30;
+    }
+    
+    return 0;
+}
+
 FDRange * AttackItemDefinition::attackRange()
 {
     return _attackRange;

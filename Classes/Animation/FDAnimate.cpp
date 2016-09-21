@@ -14,6 +14,7 @@ FDAnimate::FDAnimate(Sprite * sprite)
     
     this->_animation = nullptr;
     this->_currentTick = 0;
+    this->_hasFinished = false;
 }
 
 FDAnimate::~FDAnimate()
@@ -27,12 +28,13 @@ void FDAnimate::setAnimation(SlideAnimation *ani)
     if (this->_animation != nullptr && !this->_animation->isSynchronized())
     {
         this->_currentTick = 0;
+        this->_hasFinished = false;
     }
 }
 
 void FDAnimate::takeTick(int synchronizedTick)
 {
-    if (this->_animation == nullptr)
+    if (this->_animation == nullptr || _hasFinished)
     {
         return;
     }
@@ -46,9 +48,17 @@ void FDAnimate::takeTick(int synchronizedTick)
     else
     {
         this->_currentTick ++;
-        if (this->_currentTick >= this->_animation->getTotalTick() && this->_animation->isRepeatable())
+        if (this->_currentTick >= this->_animation->getTotalTick())
         {
-            this->_currentTick = 0;
+            if (this->_animation->isRepeatable())
+            {
+                this->_currentTick = 0;
+            }
+            else
+            {
+                _hasFinished = true;
+                this->_currentTick = this->_animation->getTotalTick() - 1;
+            }
         }
         tick = this->_currentTick;
     }
@@ -59,4 +69,9 @@ void FDAnimate::takeTick(int synchronizedTick)
         frame->renderFrame(this->_sprite);
     }
     
+}
+
+bool FDAnimate::hasFinished()
+{
+    return _hasFinished;
 }

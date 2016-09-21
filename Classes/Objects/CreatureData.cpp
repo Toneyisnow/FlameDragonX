@@ -83,3 +83,82 @@ MagicDefinition * CreatureData::getMagic(int magicIndex)
     int magicId = magicList->at(magicIndex)->getValue();
     return DataStore::getInstance()->getMagicDefinition(magicId);
 }
+
+int CreatureData::calculatedAp()
+{
+    int deltaAp = 0;
+    AttackItemDefinition * item = this->getAttackItem();
+    if (item != nullptr)
+    {
+        deltaAp = item->ap();
+    }
+    
+    int total = ap + deltaAp;
+    if (statusEnhanceAp > 0) {
+        total += 0.15 * total;
+    }
+    
+    return total;
+    
+}
+int CreatureData::calculatedDp()
+{
+    int deltaDp = 0;
+    AttackItemDefinition * item = this->getAttackItem();
+    if (item != nullptr)
+    {
+        deltaDp = item->dp();
+    }
+    DefendItemDefinition * itemD = this->getDefendItem();
+    if (itemD != nullptr)
+    {
+        deltaDp += itemD->dp();
+    }
+    
+    int total = dp + deltaDp;
+    if (statusEnhanceDp > 0) {
+        total += 0.15 * total;
+    }
+    
+    return total;
+}
+
+int CreatureData::calculatedHit()
+{
+    int deltaHit = 0;
+    AttackItemDefinition * item = this->getAttackItem();
+    if (item != nullptr)
+    {
+        deltaHit = item->hit();
+    }
+    
+    int total = dx + deltaHit;
+    if (statusEnhanceDx) {
+        total += 0.15 * total;
+    }
+    
+    return total;
+}
+
+int CreatureData::calculatedEv()
+{
+    int deltaEv = 0;
+    AttackItemDefinition * item = this->getAttackItem();
+    if (item != nullptr)
+    {
+        deltaEv += item->ev();
+    }
+    DefendItemDefinition * itemD = this->getDefendItem();
+    if (itemD != nullptr)
+    {
+        deltaEv += itemD->ev();
+    }
+    
+    int total = dx + deltaEv;
+    if (statusEnhanceDx) {
+        total += 0.15 * total;
+    }
+    
+    return total;
+}
+

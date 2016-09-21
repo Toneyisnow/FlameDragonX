@@ -32,6 +32,8 @@ public:
     static DefendItemDefinition * readFromFile(TextFileReader * reader);
     void initFromFile(TextFileReader * reader);
     
+    int dp();
+    int ev();
     
 };
 #endif /* DefendItemDefinition_hpp */
