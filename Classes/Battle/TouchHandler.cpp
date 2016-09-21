@@ -8,6 +8,7 @@
 
 #include "TouchHandler.hpp"
 #include "BattleField.hpp"
+#include "Constants.hpp"
 
 TouchHandler::TouchHandler(BattleField * field)
 {
@@ -52,22 +53,22 @@ listener->onTouchesMoved = [&](const std::vector<Touch*>& touches, Event* evt) {
     this->onTouchesMoved(touches, evt);
 };
 
-field->getEventDispatcher()->addEventListenerWithFixedPriority(listener, 1);
+//// field->getEventDispatcher()->addEventListenerWithFixedPriority(listener, 1);
 
 
 	
 	
 	
-	/*
+	
     auto touchListener = EventListenerTouchOneByOne::create();
     
     touchListener->onTouchBegan = CC_CALLBACK_2(TouchHandler::onTouchBegan, this);
     touchListener->onTouchEnded = CC_CALLBACK_2(TouchHandler::onTouchEnded, this);
     touchListener->onTouchMoved = CC_CALLBACK_2(TouchHandler::onTouchMoved, this);
-    touchListener->onTouchCancelled = CC_CALLBACK_2(TouchHandler::onTouchCancelled, this);
+    touchListener->onTouchCancelled = CC_CALLBACK_2(TouchHandler::onTouchEnded, this);
     
     field->getEventDispatcher()->addEventListenerWithSceneGraphPriority(touchListener, field);
-    */
+    _totalTouchCount = 0;
     
     _field = field;
 }
@@ -79,40 +80,102 @@ void TouchHandler::test()
 
 bool TouchHandler::onTouchBegan(Touch* touch, Event* event)
 {
-    Point p = touch->getLocation();
-    Point fieldPosition = _field->getFieldPositionOnScreen();
+    _totalTouchCount ++;
+    log("onTouchBegan. %d", _totalTouchCount);
     
-    _deltaPoint.x = p.x - fieldPosition.x;
-    _deltaPoint.y = p.y - fieldPosition.y;
     
-    _hasTouchMoved = false;
+    if (_totalTouchCount == 1) {
+    
+        _firstTouch = touch;
+        Point p = touch->getLocation();
+        Point fieldPosition = _field->getFieldPositionOnScreen();
+    
+        _deltaPoint.x = p.x - fieldPosition.x;
+        _deltaPoint.y = p.y - fieldPosition.y;
+    
+        _hasTouchMoved = false;
+    }
+    else
+    {
+        _hasTouchMoved = true;
+        
+        if (_totalTouchCount == 2) {
+            _secondTouch = touch;
+            
+            Point p1 = _firstTouch->getLocation();
+            Point p2 = _secondTouch->getLocation();
+            float distance = abs(p1.x - p2.x) + abs(p1.y - p2.y) + 1;
+            _benchMarkScale = _field->getDisplayScale() / distance;
+            _originScale = _field->getDisplayScale();
+            _originDistance = distance;
+        }
+    }
     
     return true;
 }
 
 void TouchHandler::onTouchEnded(Touch* touch, Event* event)
 {
-    Vec2 fieldPosition = _field->getFieldPositionOnScreen();
-    log("%f, %f", fieldPosition.x, fieldPosition.y);
+    log("onTouchEnded. %d", _totalTouchCount);
     
-    if (!_hasTouchMoved) {
-        
-        Vec2 p = touch->getLocation();
-        
-        float scale = _field->getDisplayScale();
-        Vec2 positionOnField = Vec2((p.x - fieldPosition.x ) / scale, (p.y - fieldPosition.y) / scale);
-        log("Position on Field: %f, %f", positionOnField.x, positionOnField.y);
+    if (_totalTouchCount == 1)
+    {
+        Vec2 fieldPosition = _field->getFieldPositionOnScreen();
+        log("%f, %f", fieldPosition.x, fieldPosition.y);
     
-        _field->onClickedAt(positionOnField);
+        if (!_hasTouchMoved) {
+        
+            Vec2 p = touch->getLocation();
+        
+            float scale = _field->getDisplayScale();
+            Vec2 positionOnField = Vec2((p.x - fieldPosition.x ) / scale, (p.y - fieldPosition.y) / scale);
+            log("Position on Field: %f, %f", positionOnField.x, positionOnField.y);
+    
+            _field->onClickedAt(positionOnField);
+        }
+        
+        _firstTouch = nullptr;
     }
+    else if (_totalTouchCount == 2)
+    {
+        if (touch == _firstTouch) {
+            _firstTouch = _secondTouch;
+            _secondTouch = nullptr;
+        }
+        
+        Point p = _firstTouch->getLocation();
+        Point fieldPosition = _field->getFieldPositionOnScreen();
+            
+        _deltaPoint.x = p.x - fieldPosition.x;
+        _deltaPoint.y = p.y - fieldPosition.y;
+    }
+    
+    _totalTouchCount --;
 }
 
 void TouchHandler::onTouchMoved(Touch* touch, Event* event)
 {
-    _hasTouchMoved = true;
-    Point p = touch->getLocation();
+    log("onTouchMoved. %d", _totalTouchCount);
     
-    this->moveFieldTo(Vec2(p.x - _deltaPoint.x, p.y - _deltaPoint.y));
+    _hasTouchMoved = true;
+    
+    if (_totalTouchCount == 1) {
+        Point p = touch->getLocation();
+        this->moveFieldTo(Vec2(p.x - _deltaPoint.x, p.y - _deltaPoint.y));
+    }
+    else if (_totalTouchCount == 2)
+    {
+        // Zoom the field
+        Point p1 = _firstTouch->getLocation();
+        Point p2 = _secondTouch->getLocation();
+        float distance = abs(p1.x - p2.x) + abs(p1.y - p2.y) + 1;
+        float rate = distance / _originDistance;
+        
+        _field->setDisplayScale(_originScale * rate);
+        
+        Point newPos = Vec2(p1.x - _deltaPoint.x * rate, p1.y - _deltaPoint.y * rate);
+        this->moveFieldTo(newPos);
+    }
 }
 
 void TouchHandler::onTouchCancelled(Touch* touch, Event* event)
@@ -122,6 +185,8 @@ void TouchHandler::onTouchCancelled(Touch* touch, Event* event)
 
 bool TouchHandler::onTouchesBegan(const std::vector<Touch*>& touches, Event* event)
 {
+    log("onTouchesBegan : %d", touches.size());
+    
     Point p = touches.back()->getLocation();
     Point fieldPosition = _field->getFieldPositionOnScreen();
     
@@ -135,6 +200,14 @@ bool TouchHandler::onTouchesBegan(const std::vector<Touch*>& touches, Event* eve
     else
     {
         _hasTouchMoved = true;
+        
+        if (touches.size() == 2) {
+            Point p1 = touches.at(0)->getLocation();
+            Point p2 = touches.at(1)->getLocation();
+            
+            float distance = abs(p1.x - p2.x) + abs(p1.y - p2.y) + 1;
+            _benchMarkScale = _field->getDisplayScale() / distance;
+        }
     }
     
     return true;
@@ -142,10 +215,12 @@ bool TouchHandler::onTouchesBegan(const std::vector<Touch*>& touches, Event* eve
 
 void TouchHandler::onTouchesEnded(const std::vector<Touch*>& touches, Event* event)
 {
+    log("onTouchesEnded : %d", touches.size());
+    
     Vec2 fieldPosition = _field->getFieldPositionOnScreen();
     log("%f, %f", fieldPosition.x, fieldPosition.y);
     
-    if (!_hasTouchMoved) {
+    if (touches.size() == 1 && !_hasTouchMoved) {
         
         Vec2 p = touches.back()->getLocation();
         
@@ -159,19 +234,36 @@ void TouchHandler::onTouchesEnded(const std::vector<Touch*>& touches, Event* eve
 
 void TouchHandler::onTouchesMoved(const std::vector<Touch*>& touches, Event* event)
 {
-    _hasTouchMoved = true;
-    Point p = touches.back()->getLocation();
+    log("onTouchesMoved : %d", touches.size());
     
-    this->moveFieldTo(Vec2(p.x - _deltaPoint.x, p.y - _deltaPoint.y));
+    _hasTouchMoved = true;
+    
+    if (touches.size() == 1)
+    {
+        // Move the field
+        Point p = touches.back()->getLocation();
+        this->moveFieldTo(Vec2(p.x - _deltaPoint.x, p.y - _deltaPoint.y));
+    }
+    else if (touches.size() == 2)
+    {
+        // Zoom the field
+        Point p1 = touches.at(0)->getLocation();
+        Point p2 = touches.at(1)->getLocation();
+        float distance = abs(p1.x - p2.x) + abs(p1.y - p2.y) + 1;
+        _field->setDisplayScale(_benchMarkScale * distance);
+    }
 }
 
 void TouchHandler::onTouchesCancelled(const std::vector<Touch*>& touches, Event* event)
 {
-    cocos2d::log("touch cancelled");
+    log("onTouchesCancelled : %d", touches.size());
+    
 }
 
 void TouchHandler::moveFieldTo(Vec2 position)
-{    
+{
+    int Move_Margin = Constants::UNIT_ICON_SIZE * _field->getDisplayScale();
+    
     auto visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
     Size fieldSize = _field->getFieldSizeOnScreen();
@@ -183,22 +275,30 @@ void TouchHandler::moveFieldTo(Vec2 position)
     float posX = position.x;
     float posY = position.y;
     
-    if (adjustX > MOVE_MARGIN_SIZE)
+    if (fieldSize.width < visibleSize.width - Move_Margin)  // The edge case the the whole map is smaller than screen
     {
-        posX = MOVE_MARGIN_SIZE + origin.x;
+        posX = Move_Margin + origin.x;
     }
-    if (adjustY > MOVE_MARGIN_SIZE)
+    else if (adjustX > Move_Margin)
     {
-        posY = MOVE_MARGIN_SIZE + origin.y;
+        posX = Move_Margin + origin.x;
+    }
+    else if (adjustX < visibleSize.width - fieldSize.width - Move_Margin)
+    {
+        posX = visibleSize.width - fieldSize.width - Move_Margin + origin.x;
     }
     
-    if (adjustX < visibleSize.width - fieldSize.width - MOVE_MARGIN_SIZE)
+    if (fieldSize.height < visibleSize.height - Move_Margin)
     {
-        posX = visibleSize.width - fieldSize.width - MOVE_MARGIN_SIZE + origin.x;
+        posY = Move_Margin + origin.y;
     }
-    if (adjustY < visibleSize.height - fieldSize.height - MOVE_MARGIN_SIZE)
+    else if (adjustY > Move_Margin)
     {
-        posY = visibleSize.height - fieldSize.height - MOVE_MARGIN_SIZE + origin.y;
+        posY = Move_Margin + origin.y;
+    }
+    else if (adjustY < visibleSize.height - fieldSize.height - Move_Margin)
+    {
+        posY = visibleSize.height - fieldSize.height - Move_Margin + origin.y;
     }
     
     _field->setFieldPositionOnScreen(posX, posY);

@@ -21,8 +21,16 @@ private:
     
     const int MOVE_MARGIN_SIZE = 50;
     
+    int _totalTouchCount;
+    
     BattleField * _field;
     Point _deltaPoint;
+    float _benchMarkScale;
+    float _originScale;
+    float _originDistance;
+    
+    Touch * _firstTouch;
+    Touch * _secondTouch;
     
     bool _hasTouchMoved;
     

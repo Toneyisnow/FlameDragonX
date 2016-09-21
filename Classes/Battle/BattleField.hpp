@@ -27,6 +27,10 @@ private:
     
     const int BLOCK_SIZE = 24;
     
+    int DEFAULT_DISPLAY_SCALE;
+    int MIN_DISPLAY_SCALE;
+    int MAX_DISPLAY_SCALE;
+    
     BattleScene * _battleScene;
     
     Sprite * _groundImage;
@@ -76,6 +80,7 @@ public:
     Size getFieldSizeOnScreen();
     
     float getDisplayScale();
+    void setDisplayScale(float scale);
     
     Size getFieldSize();
     

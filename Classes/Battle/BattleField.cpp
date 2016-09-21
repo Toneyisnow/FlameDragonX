@@ -89,10 +89,12 @@ void BattleField::initWithChapter(int chapterId)
     auto size = Director::getInstance()->getWinSize();
     auto sizein = Director::getInstance()->getWinSizeInPixels();
     
-    _displayScale = 1.5f * sizein.width / size.width;
-    _displayBlockSize = (float)BLOCK_SIZE * size.width / sizein.width ;
+    DEFAULT_DISPLAY_SCALE = 1.5f * sizein.width / size.width;
+    MIN_DISPLAY_SCALE = 0.6f * sizein.width / size.width;
+    MAX_DISPLAY_SCALE = 3.0f * sizein.width / size.width;
+    this->setDisplayScale(DEFAULT_DISPLAY_SCALE);
     
-    _groundImage->setScale(_displayScale);
+    _displayBlockSize = (float)BLOCK_SIZE * size.width / sizein.width ;
     
     this->addChild(_groundImage, 1);
     
@@ -184,6 +186,16 @@ Size BattleField::getFieldSize()
 float BattleField::getDisplayScale()
 {
     return _displayScale;
+}
+
+void BattleField::setDisplayScale(float scale)
+{
+    if (scale > MAX_DISPLAY_SCALE || scale < MIN_DISPLAY_SCALE) {
+        return;
+    }
+    
+    _displayScale = scale;
+    _groundImage->setScale(_displayScale);
 }
 
 void BattleField::initData(int chapterId)
