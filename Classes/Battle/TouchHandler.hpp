@@ -35,8 +35,14 @@ public:
     void onTouchMoved(Touch* touch, Event* event);
     void onTouchCancelled(Touch* touch, Event* event);
     
+    bool onTouchesBegan(const std::vector<Touch*>& touches, Event* evt);
+    void onTouchesEnded(const std::vector<Touch*>& touches, Event* evt);
+    void onTouchesMoved(const std::vector<Touch*>& touches, Event* evt);
+    void onTouchesCancelled(const std::vector<Touch*>& touches, Event* evt);
+    
     void moveFieldTo(Vec2 position);
     
+    void test();
     
 };
 #endif /* TouchHandler_hpp */

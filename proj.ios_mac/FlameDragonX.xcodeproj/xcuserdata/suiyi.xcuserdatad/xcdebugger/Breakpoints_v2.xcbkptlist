@@ -56,11 +56,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/Battle/TouchHandler.cpp"
-            timestampString = "494666169.015521"
+            timestampString = "496138093.236468"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
             landmarkName = "TouchHandler::onTouchBegan(Touch* touch, Event* event)"
             landmarkType = "5">
          </BreakpointContent>
@@ -288,11 +288,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/Battle/TouchHandler.cpp"
-            timestampString = "494666169.015521"
+            timestampString = "496138093.236468"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
             landmarkName = "TouchHandler::TouchHandler(BattleField * field)"
             landmarkType = "5">
          </BreakpointContent>
@@ -848,11 +848,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ios/RootViewController.mm"
-            timestampString = "495353840.998817"
+            timestampString = "496137447.250193"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
             landmarkName = "-loadView"
             landmarkType = "5">
          </BreakpointContent>
