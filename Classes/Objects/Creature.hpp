@@ -72,12 +72,14 @@ public:
     void endTurn();
     void startTurn();
     
-    
+    bool canFireMagic();
     bool isVisible();
     bool canFly();
     bool isDead();
     bool isFrozen();
     
+    void setMoved(int val);
+    bool hasMoved();
     bool hasTakenAction();
     
     FDRange * getAttackRange();

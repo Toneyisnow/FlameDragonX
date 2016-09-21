@@ -111,7 +111,7 @@ void MenuCursor::checkValidation(Creature * creature)
     _isValid = true;
     switch (_menuItemId) {
         case 10:    // Magic
-            _isValid = true;
+            _isValid = creature->canFireMagic();
             // Magic
             break;
         case 11:    // Attack

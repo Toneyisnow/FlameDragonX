@@ -145,6 +145,26 @@ bool Creature::isVisible()
     return true;
 }
 
+bool Creature::canFireMagic()
+{
+    if (_data->magicList->size() <= 0 || _data->statusProhibited > 0) {
+        return false;
+    }
+    
+    if (!_hasMoved) {
+        return true;
+    }
+    
+    for (FDNumber * magicId : *_data->magicList) {
+        MagicDefinition * magic = DataStore::getInstance()->getMagicDefinition(magicId->getValue());
+        if (magic->allowAfterMove()) {
+            return true;
+        }
+    }
+    
+    return false;
+}
+
 bool Creature::canFly()
 {
     return _definition->canFly();
@@ -158,6 +178,16 @@ bool Creature::isDead()
 bool Creature::isFrozen()
 {
     return false;
+}
+
+void Creature::setMoved(int val)
+{
+    _hasMoved = val;
+}
+
+bool Creature::hasMoved()
+{
+    return _hasMoved;
 }
 
 bool Creature::hasTakenAction()

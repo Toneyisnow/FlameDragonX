@@ -42,11 +42,18 @@ public:
     ///// Helper Functions /////
     
     int loadTurnEvent(int turnNumber, CreatureType type, SEL_CALLBACK0 function);
+    int loadDieEvent(int creatureId, SEL_CALLBACK0 function);
+    int loadDyingEvent(int creatureId, SEL_CALLBACK0 function);
+    int loadTeamEvent(CreatureType type, SEL_CALLBACK0 function);
+    
     void showTalkMessage(int chapterId, int conversationId, int fromId, int toId);
     void showTalkMessage(int chapterId, int conversationId, int sequenceId);
     void appendActivityMethod(SEL_CALLBACK0 function);
     
     void BattleField_RemoveObject(Ref * obj);
+    
+    void gameOver();
+    
     
 };
 #endif /* EventLoader_hpp */

@@ -89,6 +89,9 @@ public:
     //// CallbackActivity * createFunctionActivity(void(BattleScene::* callBackFunction)());
     //// CallbackActivity * createFunctionActivity(void(BattleScene::* callBackFunction)(int), int intParameter);
     
+    void gameWin();
+    void gameOver();
+    void gameCleared();
     
     
     void testCallMethod(std::function<void(int)> callback);

@@ -448,6 +448,26 @@ void BattleScene::showMessage(Message * message)
     this->_messageLayer->showMessage(message);
 }
 
+void BattleScene::gameWin()
+{
+    log("Game Win.");
+    
+    // Switch to VillageScene
+}
+
+void BattleScene::gameOver()
+{
+    log("Game Over");
+    
+    // Switch to GameOverScene
+}
+
+void BattleScene::gameCleared()
+{
+    // Stop Background Music
+}
+
+
 void BattleScene::testCallMethod(std::function<void(int)> callback)
 {
     callback(4);

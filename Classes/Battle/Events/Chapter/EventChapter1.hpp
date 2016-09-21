@@ -31,5 +31,10 @@ public:
     void round5_Boss();
     void round6_Npc();
     
+    void bossDying();
+    void hanuoDie();
+    void hawateDie();
+    void enemyClear();
+    
 };
 #endif /* EventChapter1_hpp */

@@ -24,6 +24,12 @@ void EventChapter1::loadEvents()
     this->loadTurnEvent(5, CreatureType_Friend, CALLBACK0_SELECTOR(EventChapter1::round5_Boss));
     this->loadTurnEvent(6, CreatureType_Friend, CALLBACK0_SELECTOR(EventChapter1::round6_Npc));
     
+    this->loadDieEvent(1, CALLBACK0_SELECTOR(EventLoader::gameOver));
+    this->loadDieEvent(5, CALLBACK0_SELECTOR(EventChapter1::hanuoDie));
+    this->loadDieEvent(6, CALLBACK0_SELECTOR(EventChapter1::hawateDie));
+    
+    this->loadDyingEvent(29, CALLBACK0_SELECTOR(EventChapter1::bossDying));
+    this->loadTeamEvent(CreatureType_Enemy, CALLBACK0_SELECTOR(EventChapter1::enemyClear));
 }
 
 void EventChapter1::round1()
@@ -296,4 +302,48 @@ void EventChapter1::round6_Npc()
     batch->release();
 
     showTalkMessage(1, 5, 1, 6);
+}
+
+void EventChapter1::bossDying()
+{
+    showTalkMessage(1, 99, 1);
+}
+
+void EventChapter1::hanuoDie()
+{
+    // Hawate change to NPC
+    Creature * hawate = _battleField->getCreatureById(6);
+    if (hawate != nullptr)
+    {
+        showTalkMessage(1, 6, 1, 4);
+        
+        _battleField->getNPCList()->pushBack(hawate);
+        _battleField->getFriendList()->eraseObject(hawate);
+    }
+}
+
+void EventChapter1::hawateDie()
+{
+    
+}
+
+void EventChapter1::enemyClear()
+{
+    _battleScene->gameCleared();
+    
+    Creature * hawate = _battleField->getCreatureById(6);
+    if (hawate != nullptr)
+    {
+        _battleField->getFriendList()->eraseObject(hawate);
+    }
+    
+    Creature * hanuo = _battleField->getDeadCreatureById(5);
+    if (hanuo != nullptr) {
+        _battleField->getFriendList()->pushBack(hawate);
+        _battleField->getDeadCreatureList()->eraseObject(hawate);
+    }
+    
+    showTalkMessage(1, 7, 1, 13);
+    
+    _battleScene->appendMethodToActivity(CALLBACK0_SELECTOR(BattleScene::gameWin));
 }

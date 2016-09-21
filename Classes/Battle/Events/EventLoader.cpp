@@ -10,10 +10,12 @@
 #include "EventHandler.hpp"
 #include "TurnCondition.hpp"
 #include "LocalizedStrings.hpp"
-#include "BattleField.hpp"
 #include "TalkActivity.hpp"
 #include "BattleScene.hpp"
 #include "BattleField.hpp"
+#include "CreatureDeadCondition.hpp"
+#include "CreatureDyingCondition.hpp"
+#include "TeamEliminatedCondition.hpp"
 
 EventLoader::EventLoader()
 {
@@ -61,6 +63,50 @@ int EventLoader::loadTurnEvent(int turnNumber, CreatureType type, SEL_CALLBACK0 
     method->release();
     
     return eventId;
+}
+
+int EventLoader::loadDieEvent(int creatureId, SEL_CALLBACK0 function)
+{
+    CreatureDeadCondition * cond = new CreatureDeadCondition(creatureId);
+    CallbackMethod * method = new CallbackMethod(this, function);
+    
+    int eventId = this->loadSingleEvent(cond, method);
+    
+    cond->release();
+    method->release();
+    
+    return eventId;
+}
+
+int EventLoader::loadDyingEvent(int creatureId, SEL_CALLBACK0 function)
+{
+    CreatureDyingCondition * cond = new CreatureDyingCondition(creatureId);
+    CallbackMethod * method = new CallbackMethod(this, function);
+    
+    int eventId = this->loadSingleEvent(cond, method);
+    
+    cond->release();
+    method->release();
+    
+    return eventId;
+}
+
+int EventLoader::loadTeamEvent(CreatureType type, SEL_CALLBACK0 function)
+{
+    TeamEliminatedCondition * cond = new TeamEliminatedCondition(type);
+    CallbackMethod * method = new CallbackMethod(this, function);
+    
+    int eventId = this->loadSingleEvent(cond, method);
+    
+    cond->release();
+    method->release();
+    
+    return eventId;
+}
+
+void EventLoader::gameOver()
+{
+    _battleScene->appendMethodToActivity(CALLBACK0_SELECTOR(BattleScene::gameOver));
 }
 
 void EventLoader::showTalkMessage(int chapterId, int conversationId, int fromId, int toId)
