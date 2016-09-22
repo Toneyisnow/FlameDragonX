@@ -32,7 +32,6 @@ TouchHandler::TouchHandler(BattleField * field)
 // …
 return YES;
 
-*/
     
 auto listener = EventListenerTouchAllAtOnce::create();
 listener->onTouchesBegan = [&](const std::vector<Touch*>& touches, Event* evt) {
@@ -53,13 +52,9 @@ listener->onTouchesMoved = [&](const std::vector<Touch*>& touches, Event* evt) {
     this->onTouchesMoved(touches, evt);
 };
 
-//// field->getEventDispatcher()->addEventListenerWithFixedPriority(listener, 1);
+ field->getEventDispatcher()->addEventListenerWithFixedPriority(listener, 1);
+     */
 
-
-	
-	
-	
-	
     auto touchListener = EventListenerTouchOneByOne::create();
     
     touchListener->onTouchBegan = CC_CALLBACK_2(TouchHandler::onTouchBegan, this);
@@ -81,8 +76,7 @@ void TouchHandler::test()
 bool TouchHandler::onTouchBegan(Touch* touch, Event* event)
 {
     _totalTouchCount ++;
-    log("onTouchBegan. %d", _totalTouchCount);
-    
+    /// log("onTouchBegan. %d", _totalTouchCount);
     
     if (_totalTouchCount == 1) {
     
@@ -116,12 +110,12 @@ bool TouchHandler::onTouchBegan(Touch* touch, Event* event)
 
 void TouchHandler::onTouchEnded(Touch* touch, Event* event)
 {
-    log("onTouchEnded. %d", _totalTouchCount);
+    /// log("onTouchEnded. %d", _totalTouchCount);
     
     if (_totalTouchCount == 1)
     {
         Vec2 fieldPosition = _field->getFieldPositionOnScreen();
-        log("%f, %f", fieldPosition.x, fieldPosition.y);
+        /// log("%f, %f", fieldPosition.x, fieldPosition.y);
     
         if (!_hasTouchMoved) {
         
@@ -129,7 +123,7 @@ void TouchHandler::onTouchEnded(Touch* touch, Event* event)
         
             float scale = _field->getDisplayScale();
             Vec2 positionOnField = Vec2((p.x - fieldPosition.x ) / scale, (p.y - fieldPosition.y) / scale);
-            log("Position on Field: %f, %f", positionOnField.x, positionOnField.y);
+            /// log("Position on Field: %f, %f", positionOnField.x, positionOnField.y);
     
             _field->onClickedAt(positionOnField);
         }
@@ -155,7 +149,7 @@ void TouchHandler::onTouchEnded(Touch* touch, Event* event)
 
 void TouchHandler::onTouchMoved(Touch* touch, Event* event)
 {
-    log("onTouchMoved. %d", _totalTouchCount);
+    /// log("onTouchMoved. %d", _totalTouchCount);
     
     _hasTouchMoved = true;
     
@@ -180,7 +174,7 @@ void TouchHandler::onTouchMoved(Touch* touch, Event* event)
 
 void TouchHandler::onTouchCancelled(Touch* touch, Event* event)
 {
-    cocos2d::log("touch cancelled");
+    /// cocos2d::log("touch cancelled");
 }
 
 bool TouchHandler::onTouchesBegan(const std::vector<Touch*>& touches, Event* event)
@@ -262,7 +256,7 @@ void TouchHandler::onTouchesCancelled(const std::vector<Touch*>& touches, Event*
 
 void TouchHandler::moveFieldTo(Vec2 position)
 {
-    int Move_Margin = Constants::UNIT_ICON_SIZE * _field->getDisplayScale();
+    int Move_Margin = Constants::UNIT_ICON_SIZE * _field->getDisplayScale() / 2;
     
     auto visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();

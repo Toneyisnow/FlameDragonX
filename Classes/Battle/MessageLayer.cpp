@@ -37,6 +37,10 @@ ActivityQueue * MessageLayer::getActivityQueue()
 bool MessageLayer::onTouchBegan(Touch* touch, Event* event)
 {
     log("TouchBegan on MessageLayer.");
+    if (_activeMessage != nullptr)
+    {
+        _activeMessage->handleClick(touch->getLocation());
+    }
     
     return true;
 }
@@ -45,9 +49,9 @@ void MessageLayer::onTouchEnded(Touch* touch, Event* event)
 {
     log("TouchEnd on MessageLayer");
     
-    if (_activeMessage != nullptr)
+    //if (_activeMessage != nullptr)
     {
-        _activeMessage->handleClick(Vec2(0, 0));
+    //    _activeMessage->handleClick(Vec2(0, 0));
     }
     // this->closeMessage();
 }
@@ -65,7 +69,7 @@ void MessageLayer::onTouchCancelled(Touch* touch, Event* event)
 
 bool MessageLayer::isActive()
 {
-    return (_activeMessage != nullptr) || _activityQueue->isBusy();
+    return (_activeMessage != nullptr && _activeMessage->isBlocking()) || _activityQueue->isBusy();
 }
 
 void MessageLayer::showMessage(Message * message)
@@ -76,14 +80,18 @@ void MessageLayer::showMessage(Message * message)
     _activeMessage->showDialog(this);
     
     _listener->setEnabled(true);
+    _listener->setSwallowTouches(_activeMessage->isBlocking());
 }
 
 void MessageLayer::removeMessage()
 {
+    if (_activeMessage != nullptr)
+    {
     _activeMessage->removeDialog();
     
     _activeMessage->release();
     _activeMessage = nullptr;
+    }
     
     _listener->setEnabled(false);
     // _listener->setSwallowTouches(false);

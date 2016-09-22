@@ -11,12 +11,13 @@
 
 #include "Message.hpp"
 #include "Creature.hpp"
+#include "ScaledSprite.hpp"
 
 class ConversationMessage : public Message
 {
 protected:
     
-    Sprite * _messageBox;
+    ScaledSprite * _messageBox;
     
     Creature * _creature;
     std::string _content;

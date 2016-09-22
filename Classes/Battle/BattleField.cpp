@@ -88,13 +88,14 @@ void BattleField::initWithChapter(int chapterId)
     
     auto size = Director::getInstance()->getWinSize();
     auto sizein = Director::getInstance()->getWinSizeInPixels();
+    float contentScale = Director::getInstance()->getContentScaleFactor();
     
-    DEFAULT_DISPLAY_SCALE = 1.5f * sizein.width / size.width;
-    MIN_DISPLAY_SCALE = 0.6f * sizein.width / size.width;
-    MAX_DISPLAY_SCALE = 3.0f * sizein.width / size.width;
+    DEFAULT_DISPLAY_SCALE = 1.5f * contentScale;
+    MIN_DISPLAY_SCALE = 0.6f * contentScale;
+    MAX_DISPLAY_SCALE = 3.0f * contentScale;
     this->setDisplayScale(DEFAULT_DISPLAY_SCALE);
     
-    _displayBlockSize = (float)BLOCK_SIZE * size.width / sizein.width ;
+    _displayBlockSize = (float)BLOCK_SIZE / contentScale;
     
     this->addChild(_groundImage, 1);
     
@@ -550,8 +551,8 @@ void BattleField::setCursorTo(Vec2 position)
     Vec2 cursorScreenLoc = getScreenLocationByLocation(unitLocation);
     float minX = 2 * Constants::UNIT_ICON_SIZE;
     float minY = 2 * Constants::UNIT_ICON_SIZE;
-    float maxX = Constants::SCREEN_WIDTH - minX;
-    float maxY = Constants::SCREEN_HEIGHT - minY;
+    float maxX = Constants::getScreenSize().width - minX;
+    float maxY = Constants::getScreenSize().height - minY;
     
     float dx = 0;
     if (cursorScreenLoc.x < minX) {

@@ -105,6 +105,8 @@
 		3CE4398A1D9109C40043676E /* ShowMessageActivity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE439881D9109C40043676E /* ShowMessageActivity.cpp */; };
 		3CE4398D1D9118D50043676E /* FDRandom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE4398B1D9118D50043676E /* FDRandom.cpp */; };
 		3CE4398F1D9250230043676E /* Animations in Resources */ = {isa = PBXBuildFile; fileRef = 3CE4398E1D9250230043676E /* Animations */; };
+		3CE439931D9332360043676E /* CreatureInfoMessage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE439911D9332360043676E /* CreatureInfoMessage.cpp */; };
+		3CE439971D93BE940043676E /* ScaledSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE439951D93BE940043676E /* ScaledSprite.cpp */; };
 		3CE63B1D1D7D337100C2C76B /* IdleState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63B1B1D7D337100C2C76B /* IdleState.cpp */; };
 		3CE63B211D7D3C4B00C2C76B /* ShowMoveScopeState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63B1F1D7D3C4B00C2C76B /* ShowMoveScopeState.cpp */; };
 		3CE63B241D7D40D000C2C76B /* SystemMenuState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63B221D7D40D000C2C76B /* SystemMenuState.cpp */; };
@@ -414,6 +416,10 @@
 		3CE4398B1D9118D50043676E /* FDRandom.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FDRandom.cpp; path = Common/FDRandom.cpp; sourceTree = "<group>"; };
 		3CE4398C1D9118D50043676E /* FDRandom.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = FDRandom.hpp; path = Common/FDRandom.hpp; sourceTree = "<group>"; };
 		3CE4398E1D9250230043676E /* Animations */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Animations; sourceTree = "<group>"; };
+		3CE439911D9332360043676E /* CreatureInfoMessage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CreatureInfoMessage.cpp; path = Messages/CreatureInfoMessage.cpp; sourceTree = "<group>"; };
+		3CE439921D9332360043676E /* CreatureInfoMessage.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CreatureInfoMessage.hpp; path = Messages/CreatureInfoMessage.hpp; sourceTree = "<group>"; };
+		3CE439951D93BE940043676E /* ScaledSprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ScaledSprite.cpp; path = Controls/ScaledSprite.cpp; sourceTree = "<group>"; };
+		3CE439961D93BE940043676E /* ScaledSprite.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ScaledSprite.hpp; path = Controls/ScaledSprite.hpp; sourceTree = "<group>"; };
 		3CE63B1B1D7D337100C2C76B /* IdleState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IdleState.cpp; path = Dispatchers/IdleState.cpp; sourceTree = "<group>"; };
 		3CE63B1C1D7D337100C2C76B /* IdleState.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = IdleState.hpp; path = Dispatchers/IdleState.hpp; sourceTree = "<group>"; };
 		3CE63B1F1D7D3C4B00C2C76B /* ShowMoveScopeState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ShowMoveScopeState.cpp; path = Dispatchers/ShowMoveScopeState.cpp; sourceTree = "<group>"; };
@@ -910,6 +916,8 @@
 		3CD12F081D6CD87800CDF793 /* Controls */ = {
 			isa = PBXGroup;
 			children = (
+				3CE439951D93BE940043676E /* ScaledSprite.cpp */,
+				3CE439961D93BE940043676E /* ScaledSprite.hpp */,
 			);
 			name = Controls;
 			sourceTree = "<group>";
@@ -1024,6 +1032,8 @@
 				3CE63B921D87DF4800C2C76B /* MagicBox.hpp */,
 				3CE63BA91D8BCF2200C2C76B /* SelectableBox.cpp */,
 				3CE63BAA1D8BCF2200C2C76B /* SelectableBox.hpp */,
+				3CE439911D9332360043676E /* CreatureInfoMessage.cpp */,
+				3CE439921D9332360043676E /* CreatureInfoMessage.hpp */,
 			);
 			name = Messages;
 			sourceTree = "<group>";
@@ -1342,6 +1352,7 @@
 				3CE63B6E1D853C5200C2C76B /* CounterObject.cpp in Sources */,
 				3CB109891D74CCAB002C4121 /* FDActivity.cpp in Sources */,
 				3CB109A11D74F41E002C4121 /* AttackItemDefinition.cpp in Sources */,
+				3CE439971D93BE940043676E /* ScaledSprite.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				3CE63B7B1D87DCB900C2C76B /* TalkMessage.cpp in Sources */,
 				3CE63B8D1D87DEE100C2C76B /* DetailBar.cpp in Sources */,
@@ -1358,6 +1369,7 @@
 				3C8D682F1D79F4A900CC3616 /* FDEvent.cpp in Sources */,
 				3CD12F2A1D6D065800CDF793 /* BattleScene.cpp in Sources */,
 				3CB1097C1D6F6635002C4121 /* SlideAnimation.cpp in Sources */,
+				3CE439931D9332360043676E /* CreatureInfoMessage.cpp in Sources */,
 				3CD12F231D6D058000CDF793 /* TextFileReader.cpp in Sources */,
 				3CE63B811D87DE2A00C2C76B /* SpeakMessage.cpp in Sources */,
 				3C8D684D1D7A44BE00CC3616 /* CallbackActivity.cpp in Sources */,

@@ -7,3 +7,8 @@
 //
 
 #include "Constants.hpp"
+
+Size Constants::getScreenSize()
+{
+    return Director::getInstance()->getWinSize();
+}

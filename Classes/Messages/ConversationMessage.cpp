@@ -31,7 +31,7 @@ void ConversationMessage::initDialog()
 
 void ConversationMessage::buildBaseDialog(Vec2 screenPosition)
 {
-    _messageBox = Sprite::create("Others/MessageBox.png");
+    _messageBox = ScaledSprite::create("Others/MessageBox.png");
     _messageBox->setPosition(screenPosition);
     _messageBox->setAnchorPoint(Vec2(0.5f, 0));
     _messageBox->setScale(DEFAULT_MESSAGEBOX_SCALE);
@@ -40,16 +40,12 @@ void ConversationMessage::buildBaseDialog(Vec2 screenPosition)
     int creatureDatoId = (_creature != nullptr ? _creature->getDefinition()->animationId : 0);
     Sprite * dato = Sprite::create(StringUtils::format("Dato/Dato-%03d-1.png", creatureDatoId));
     dato->setAnchorPoint(Vec2(0, 0));
-    dato->setPosition(Vec2(1, 1));
-    _messageBox->addChild(dato, 1);
+    _messageBox->addChild(dato, Vec2(3, 3));
     
-    auto label = Label::createWithTTF(_content.c_str(), "fonts/mini_black.ttf", 8);
-    
+    auto label = Label::createWithTTF(_content.c_str(), "fonts/mini_black.ttf", 14);
     label->setColor(Color3B(255, 255, 255));
-    label->setPosition(Vec2(30, 20));
     label->setAnchorPoint(Vec2(0, 0.5f));
-    _messageBox->addChild(label, 1);
-    
+    _messageBox->addLabel(label, Vec2(80, 60));
 
 }
 

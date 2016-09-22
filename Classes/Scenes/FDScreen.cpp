@@ -60,7 +60,10 @@ void FDScreen::addToWindow(Node * node, Vec2 position, float scale, int zOrder)
 
 void FDScreen::addToWindow(Node * node, Vec2 position, int zOrder)
 {
-    return addToWindow(node, position, 1, zOrder);
+    node->setPosition(position);
+    // node->setScale(Constants::DEFAULT_SPRITE_SCALE * _scaleFactor);
+    
+    _layer->addChild(node, zOrder);
 }
 
 void FDScreen::addToWindow(Node * node, Vec2 position, Size shownSize, int zOrder)

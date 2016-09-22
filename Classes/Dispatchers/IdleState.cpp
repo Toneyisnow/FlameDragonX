@@ -13,6 +13,7 @@
 #include "ShowMoveScopeState.hpp"
 #include "SystemMenuState.hpp"
 #include "CommonHelper.hpp"
+#include "CreatureInfoMessage.hpp"
 
 IdleState * IdleState::create(BattleScene * scene)
 {
@@ -45,6 +46,14 @@ void IdleState::handleClickAt(Vec2 position)
         {
             _session->creaturePositionBeforeMove = position;
             _session->setSelectedCreatureId(creature->getId());
+            
+            Vec2 location = _battleField->convertPositionToLocation(position);
+            Vec2 screenLoc = _battleField->getScreenLocationByLocation(location);
+            
+            CreatureInfoMessage * bar = new CreatureInfoMessage(creature, screenLoc);
+            _battleScene->showMessage(bar);
+            bar->release();
+            
             _nextState = ShowMoveScopeState::create(_battleScene, _session);
             return;
         }

@@ -16,6 +16,7 @@ Message::Message()
     _callbackTarget = nullptr;
     _callbackResultMethod = nullptr;
     _returnValue = -1;
+    _isBlocking = true;
 }
 
 void Message::setReturnFunction(Ref * target, SEL_CALLBACK1 method)
@@ -86,4 +87,9 @@ FDActivity * Message::onEnterActivity()
 FDActivity * Message::onExitActivity()
 {
     return nullptr;
+}
+
+bool Message::isBlocking()
+{
+    return _isBlocking;
 }

@@ -19,7 +19,7 @@ class Message : public cocos2d::Ref
 {
 protected:
     
-    const int DEFAULT_MESSAGEBOX_SCALE = Director::getInstance()->getContentScaleFactor() * 1.3f;
+    const int DEFAULT_MESSAGEBOX_SCALE = 1.3f;
     
     int _returnValue;
     
@@ -29,6 +29,9 @@ protected:
     MessageLayer * _messageLayer;
     
     Sprite * _sprite;
+    
+    bool _isBlocking;
+    
 public:
     
     Message();
@@ -45,6 +48,7 @@ public:
     
     virtual void handleClick(Vec2 location);
     
+    bool isBlocking();
 };
 
 #endif /* Message_hpp */

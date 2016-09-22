@@ -23,6 +23,7 @@ typedef enum Direction
     DirectionRight = 4
 } Direction;
 
+USING_NS_CC;
 
 class Constants : public cocos2d::Ref
 {
@@ -37,8 +38,10 @@ public:
     constexpr static const float CURSOR_MOVE_SPEED = 2.5f;
     constexpr static const float MENU_MOVE_SPEED = 3.0f;
     
-    static const int SCREEN_WIDTH = 480;
-    static const int SCREEN_HEIGHT = 320;
+    static const int ORIGIN_SCREEN_WIDTH = 480;    // We are using FIXED_WIDTH solution so only need to specify the width
+    static const int ORIGIN_SCREEN_HEIGHT = 320;    // We are using FIXED_WIDTH solution so only need to specify the width
+    
+    static Size getScreenSize();
     
     static const int LEVEL_COUNT = 30;
     static const int UNIT_ICON_SIZE = 24;
