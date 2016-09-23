@@ -27,7 +27,9 @@ void MagicDefinition::initFromFile(TextFileReader * reader)
     this->_type = (MagicType)reader->readInt();
     int min = reader->readInt();
     int max = reader->readInt();
-    this->_quantityRange = FDRange::rangeWithValues(min, max);
+    this->_quantityRange = reader->readRange();
+    this->_quantityRange->retain();
+    
     if (_type == MagicType_Attack) {
         _apInvolvedRate = reader->readInt();
     }

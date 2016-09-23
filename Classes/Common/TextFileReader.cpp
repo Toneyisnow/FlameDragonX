@@ -7,6 +7,7 @@
 //
 
 #include "TextFileReader.hpp"
+#include "FDRange.hpp"
 
 using namespace std;
 
@@ -34,4 +35,12 @@ string TextFileReader::readString()
     inputStream >> content;
     
     return content;
+}
+
+FDRange * TextFileReader::readRange()
+{
+    int min = this->readInt();
+    int max = this->readInt();
+    
+    return FDRange::rangeWithValues(min, max);
 }

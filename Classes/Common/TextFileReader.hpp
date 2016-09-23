@@ -13,6 +13,8 @@
 #include <stdio.h>
 #include <fstream>
 #include "cocos2d.h"
+#include "FDRange.hpp"
+
 USING_NS_CC;
 using namespace std;
 
@@ -29,6 +31,7 @@ public:
     
     int readInt();
     std::string readString();
+    FDRange * readRange();
     
 };
 

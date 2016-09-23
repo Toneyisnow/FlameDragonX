@@ -59,7 +59,11 @@ BattleScene::BattleScene(ChapterRecord* record)
     CreatureDefinition * def = DataStore::getInstance()->getCreatureDefinition(3);
     CreatureDefinition * def2 = DataStore::getInstance()->getCreatureDefinition(50508);
     
-    MoneyItemDefinition * item = (MoneyItemDefinition *)DataStore::getInstance()->getItemDefinition(901);
+    LevelUpDefinition * levelup = DataStore::getInstance()->getLevelUpDefinition(1016);
+    LevelUpMagicDefinition * levelupmagic = DataStore::getInstance()->getLevelUpMagicDefinition(302, 23);
+    OccupationDefinition * occupation = DataStore::getInstance()->getOccupationDefinition(999);
+    ShopDefinition * shop = DataStore::getInstance()->getShopDefinition(27, ShopType_Secret);
+    TransfersDefinition * transfers = DataStore::getInstance()->getTransfersDefinition(17);
     
     log("Definition of 50508: Ani=%d EX=%d", def2->animationId, def2->initialEX);
     

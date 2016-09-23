@@ -45,6 +45,20 @@ DataStore::~DataStore()
     this->_magicDefinitionDictionary->clear();
     delete this->_magicDefinitionDictionary;
     
+    this->_levelUpDefinitionDictionary->clear();
+    delete this->_levelUpDefinitionDictionary;
+    
+    this->_levelUpMagicDefinitionDictionary->clear();
+    delete this->_levelUpMagicDefinitionDictionary;
+    
+    this->_shopDefinitionDictionary->clear();
+    delete this->_shopDefinitionDictionary;
+    
+    this->_occupationDefinitionDictionary->clear();
+    delete this->_occupationDefinitionDictionary;
+    
+    this->_transfersDefinitionDictionary->clear();
+    delete this->_transfersDefinitionDictionary;
 }
 
 void DataStore::loadData()
@@ -52,6 +66,11 @@ void DataStore::loadData()
     this->loadCreatureDefinition();
     this->loadItemDefinition();
     this->loadMagicDefinition();
+    this->loadLevelUpDefinition();
+    this->loadLevelUpMagicDefinition();
+    this->loadShopDefinition();
+    this->loadOccupationDefinition();
+    this->loadTransfersDefinition();
     
 }
 
@@ -167,6 +186,100 @@ void DataStore::loadMagicDefinition()
     log("Loaded Magic Definition");
 }
 
+void DataStore::loadLevelUpDefinition()
+{
+    log("Loading Level Up Definition");
+    
+    _levelUpDefinitionDictionary = new Map<int, LevelUpDefinition *>();
+    TextFileReader * reader = new TextFileReader("Data/Levelup.dat");
+    
+    int count = reader->readInt();
+    for (int m = 0; m < count; m++) {
+        LevelUpDefinition * def = LevelUpDefinition::readFromFile(reader);
+        _levelUpDefinitionDictionary->insert(def->definitionId(), def);
+    }
+    
+    reader->release();
+    
+    log("Loaded Level Up Definition");
+}
+
+void DataStore::loadLevelUpMagicDefinition()
+{
+    log("Loading Level Up Magic Definition");
+    
+    _levelUpMagicDefinitionDictionary = new Map<int, LevelUpMagicDefinition *>();
+    TextFileReader * reader = new TextFileReader("Data/LevelupMagic.dat");
+    
+    LevelUpMagicDefinition * def = LevelUpMagicDefinition::readFromFile(reader);
+    
+    while (def != nullptr)
+    {
+        int key = generateLevelUpMagicKey(def->definitionId(), def->creatureLevel());
+        _levelUpMagicDefinitionDictionary->insert(key, def);
+        def = LevelUpMagicDefinition::readFromFile(reader);
+    }
+    
+    reader->release();
+    
+    log("Loaded Level Up Magic Definition");
+}
+
+
+void DataStore::loadShopDefinition()
+{
+    log("Loading Shop Definition");
+    
+    _shopDefinitionDictionary = new Map<int, ShopDefinition *>();
+    TextFileReader * reader = new TextFileReader("Data/Shop.dat");
+    
+    int chapter;
+    while ((chapter = reader->readInt()) > 0) {
+        int type = reader->readInt();
+        int key = chapter * 10 + type;
+        ShopDefinition * shop = ShopDefinition::readFromFile(reader);
+        _shopDefinitionDictionary->insert(key, shop);
+    }
+    
+    reader->release();
+    log("Loaded Shop Definition");
+}
+
+void DataStore::loadOccupationDefinition()
+{
+    log("Loading Occupation Definition");
+    
+    _occupationDefinitionDictionary = new Map<int, OccupationDefinition *>();
+    TextFileReader * reader = new TextFileReader("Data/Occupation.dat");
+    
+    int count = reader->readInt();
+    for (int i = 0; i < count; i++) {
+        OccupationDefinition * def = OccupationDefinition::readFromFile(reader);
+        _occupationDefinitionDictionary->insert(def->occupationId(), def);
+    }
+    
+    reader->release();
+    log("Loaded Occupation Definition");
+}
+
+void DataStore::loadTransfersDefinition()
+{
+    log("Loading Transfers Definition");
+    
+    _transfersDefinitionDictionary = new Map<int, TransfersDefinition *>();
+    TextFileReader * reader = new TextFileReader("Data/Transfer.dat");
+    
+    int count = reader->readInt();
+    for (int i = 0; i < count; i++) {
+        TransfersDefinition * def = TransfersDefinition::readFromFile(reader);
+        _transfersDefinitionDictionary->insert(def->creatureDefId(), def);
+    }
+    
+    reader->release();
+    log("Loaded Transfers Definition");
+}
+
+
 ///////////////////////////////////////////
 
 
@@ -183,4 +296,39 @@ ItemDefinition * DataStore::getItemDefinition(int itemId)
 MagicDefinition * DataStore::getMagicDefinition(int magicId)
 {
     return this->_magicDefinitionDictionary->at(magicId);
+}
+
+LevelUpDefinition * DataStore::getLevelUpDefinition(int definitionId)
+{
+    return this->_levelUpDefinitionDictionary->at(definitionId);
+}
+
+LevelUpMagicDefinition * DataStore::getLevelUpMagicDefinition(int creatureId, int creatureLevel)
+{
+    return this->_levelUpMagicDefinitionDictionary->at(generateLevelUpMagicKey(creatureId, creatureLevel));
+}
+
+ShopDefinition * DataStore::getShopDefinition(int chapterId, ShopType shopType)
+{
+    return this->_shopDefinitionDictionary->at(generateShopKey(chapterId, shopType));
+}
+
+OccupationDefinition * DataStore::getOccupationDefinition(int occupationId)
+{
+    return this->_occupationDefinitionDictionary->at(occupationId);
+}
+
+TransfersDefinition * DataStore::getTransfersDefinition(int creatureId)
+{
+    return this->_transfersDefinitionDictionary->at(creatureId);
+}
+
+int DataStore::generateShopKey(int chapterId, ShopType shopType)
+{
+    return chapterId * 10 + shopType;
+}
+
+int DataStore::generateLevelUpMagicKey(int creatureId, int creatureLevel)
+{
+    return creatureId * 100 + creatureLevel;
 }
