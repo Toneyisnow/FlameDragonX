@@ -20,9 +20,9 @@ CompositeBox::CompositeBox(Creature * creature, MessageBoxType type, MessageBoxO
     this->_operatingType = oType;
     
     _datoPosition0 = Vec2(0, 140);
-    _datoPosition1 = Vec2(174, 140);
-    _detailPosition0 = Vec2(176, 302);
-    _detailPosition1 = Vec2(176, 140);
+    _datoPosition1 = Vec2(152, 140);
+    _detailPosition0 = Vec2(154, 302);
+    _detailPosition1 = Vec2(154, 140);
     _mainPosition0 = Vec2(240, 0);
     _mainPosition1 = Vec2(240, 138);
     
@@ -64,7 +64,7 @@ void CompositeBox::removeDialog()
     _mainBox->release();
 }
 
-void CompositeBox::addComponent(Sprite * component, Vec2 anchorPoint, Vec2 position)
+void CompositeBox::addComponent(ScaledSprite * component, Vec2 anchorPoint, Vec2 position)
 {
     component->setAnchorPoint(anchorPoint);
     component->setPosition(position);
@@ -112,7 +112,20 @@ FDActivity * CompositeBox::onExitActivity()
 
 void CompositeBox::handleClick(Vec2 location)
 {
-    _returnValue = 0;
-    this->closeDialog();
+    if (location.y > 160) {
+        _returnValue = -1;
+        this->closeDialog();
+        return;
+    }
+    
+    Vec2 mainBoxLocation = _mainBox->getSprite()->getPosition();
+    float convertedX = (location.x - mainBoxLocation.x) / _mainBox->getSprite()->getScale() + _mainBox->getSprite()->getContentSize().width / 2;
+    float convertedY = (location.y - mainBoxLocation.y) / _mainBox->getSprite()->getScale() + _mainBox->getSprite()->getContentSize().height;
+    
+    int result = _mainBox->handleClick(Vec2(convertedX, convertedY));
+    if (result >= 0) {
+        _returnValue = result;
+        this->closeDialog();
+    }
     
 }

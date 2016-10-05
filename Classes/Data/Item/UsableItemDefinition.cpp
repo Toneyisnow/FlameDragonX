@@ -32,3 +32,14 @@ void UsableItemDefinition::initFromFile(TextFileReader * reader)
     
     this->_isReusable = (reader->readInt() == 1);
 }
+
+bool UsableItemDefinition::isReusable()
+{
+    return this->_isReusable;
+}
+
+bool UsableItemDefinition::onlyUseToSelf()
+{
+    return this->_definitionId >= 111 && this->_definitionId <= 115;
+}
+

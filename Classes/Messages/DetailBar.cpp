@@ -12,11 +12,11 @@
 DetailBar::DetailBar(Creature * creature)
 {
     _creature = creature;
-    _baseSprite = Sprite::create("Others/CreatureDetail.png");
+    _baseSprite = ScaledSprite::create("Others/CreatureDetail.png");
 }
 
 
-Sprite * DetailBar::getSprite()
+ScaledSprite * DetailBar::getSprite()
 {
     return _baseSprite;
 }

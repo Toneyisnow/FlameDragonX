@@ -49,6 +49,9 @@ public:
     static UsableItemDefinition * readFromFile(TextFileReader * reader);
     void initFromFile(TextFileReader * reader);
     
+    bool isReusable();
+    bool onlyUseToSelf();
+    
 };
 
 #endif /* UsableItemDefinition_hpp */

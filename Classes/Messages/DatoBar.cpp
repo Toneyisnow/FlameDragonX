@@ -10,15 +10,14 @@
 
 DatoBar::DatoBar(int creatureAniId)
 {
-    _baseSprite = Sprite::create("Others/CreatureDato.png");
+    _baseSprite = ScaledSprite::create("Others/CreatureDato.png");
     
     Sprite * dato = Sprite::create(StringUtils::format("Dato/Dato-%03d-1.png", creatureAniId));
     dato->setAnchorPoint(Vec2(0, 0));
-    dato->setPosition(Vec2(1.5f, 1.5f));
-    _baseSprite->addChild(dato);
+    _baseSprite->addChild(dato, Vec2(1.5f, 1.5f));
 }
 
-Sprite * DatoBar::getSprite()
+ScaledSprite * DatoBar::getSprite()
 {
     return _baseSprite;
 }

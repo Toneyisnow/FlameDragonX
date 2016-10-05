@@ -31,8 +31,11 @@ public:
     void selectMagic();
     void confirmSelectMagic(int result);
     
+    void moveCursorToTarget();
+    
     void checkTreatureAndWaiveTurn();
     void confirmPickTreasure();
+    
     
     
 };

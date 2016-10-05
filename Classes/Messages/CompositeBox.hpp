@@ -14,6 +14,7 @@
 #include "DatoBar.hpp"
 #include "DetailBar.hpp"
 #include "SelectableBox.hpp"
+#include "ScaledSprite.hpp"
 
 typedef enum MessageBoxType
 {
@@ -48,7 +49,7 @@ public:
     CompositeBox(Creature * creature, MessageBoxType type, MessageBoxOperatingType oType);
     ~CompositeBox();
     
-    void addComponent(Sprite * component, Vec2 anchorPoint, Vec2 position);
+    void addComponent(ScaledSprite * component, Vec2 anchorPoint, Vec2 position);
     
     void initDialog() override;
     void removeDialog() override;

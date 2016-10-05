@@ -36,5 +36,6 @@ public:
     void hawateDie();
     void enemyClear();
     
+    void test();
 };
 #endif /* EventChapter1_hpp */

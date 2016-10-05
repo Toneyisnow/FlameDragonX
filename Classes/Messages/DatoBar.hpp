@@ -10,6 +10,7 @@
 #define DatoBar_hpp
 
 #include "cocos2d.h"
+#include "ScaledSprite.hpp"
 
 USING_NS_CC;
 
@@ -17,13 +18,13 @@ class DatoBar : public cocos2d::Ref
 {
 private:
     
-    Sprite * _baseSprite;
+    ScaledSprite * _baseSprite;
     
 public:
     
     DatoBar(int creatureAniId);
     
-    Sprite * getSprite();
+    ScaledSprite * getSprite();
     
 };
 

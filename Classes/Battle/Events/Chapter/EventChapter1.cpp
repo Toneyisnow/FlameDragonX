@@ -18,7 +18,8 @@
 
 void EventChapter1::loadEvents()
 {
-    this->loadTurnEvent(1, CreatureType_Friend, CALLBACK0_SELECTOR(EventChapter1::round1));
+    this->loadTurnEvent(1, CreatureType_Friend, CALLBACK0_SELECTOR(EventChapter1::test));
+    
     this->loadTurnEvent(3, CreatureType_Friend, CALLBACK0_SELECTOR(EventChapter1::round3));
     this->loadTurnEvent(4, CreatureType_Friend, CALLBACK0_SELECTOR(EventChapter1::round4));
     this->loadTurnEvent(5, CreatureType_Friend, CALLBACK0_SELECTOR(EventChapter1::round5_Boss));
@@ -30,6 +31,20 @@ void EventChapter1::loadEvents()
     
     this->loadDyingEvent(29, CALLBACK0_SELECTOR(EventChapter1::bossDying));
     this->loadTeamEvent(CreatureType_Enemy, CALLBACK0_SELECTOR(EventChapter1::enemyClear));
+}
+
+void EventChapter1::test()
+{
+    _battleField->addCreature(Friend::create(1, 1), Vec2(8, 20));
+    _battleField->addCreature(Friend::create(2, 2), Vec2(11, 21));
+    _battleField->addCreature(Friend::create(3, 3), Vec2(9, 22));
+    _battleField->addCreature(Friend::create(4, 4), Vec2(12, 23));
+    
+    _battleField->addCreature(Enemy::create(11, 50101), Vec2(2, 22));
+    _battleField->addCreature(Enemy::create(12, 50101, 101), Vec2(3, 22));
+    _battleField->addCreature(Enemy::create(13, 50101), Vec2(4, 23));
+    _battleField->addCreature(Enemy::create(14, 50101), Vec2(5, 23));
+    
 }
 
 void EventChapter1::round1()

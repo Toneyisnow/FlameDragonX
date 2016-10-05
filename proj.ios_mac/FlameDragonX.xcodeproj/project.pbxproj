@@ -113,6 +113,7 @@
 		3CE439A31D9501710043676E /* OccupationDefinition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE439A11D9501710043676E /* OccupationDefinition.cpp */; };
 		3CE439A61D9503CF0043676E /* TransferDefinition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE439A41D9503CF0043676E /* TransferDefinition.cpp */; };
 		3CE439A91D9507840043676E /* TransfersDefinition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE439A71D9507840043676E /* TransfersDefinition.cpp */; };
+		3CE439AC1DA4C89F0043676E /* SelectItemTargetState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE439AA1DA4C89F0043676E /* SelectItemTargetState.cpp */; };
 		3CE63B1D1D7D337100C2C76B /* IdleState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63B1B1D7D337100C2C76B /* IdleState.cpp */; };
 		3CE63B211D7D3C4B00C2C76B /* ShowMoveScopeState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63B1F1D7D3C4B00C2C76B /* ShowMoveScopeState.cpp */; };
 		3CE63B241D7D40D000C2C76B /* SystemMenuState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE63B221D7D40D000C2C76B /* SystemMenuState.cpp */; };
@@ -438,6 +439,8 @@
 		3CE439A51D9503CF0043676E /* TransferDefinition.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = TransferDefinition.hpp; path = Data/TransferDefinition.hpp; sourceTree = "<group>"; };
 		3CE439A71D9507840043676E /* TransfersDefinition.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TransfersDefinition.cpp; path = Data/TransfersDefinition.cpp; sourceTree = "<group>"; };
 		3CE439A81D9507840043676E /* TransfersDefinition.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = TransfersDefinition.hpp; path = Data/TransfersDefinition.hpp; sourceTree = "<group>"; };
+		3CE439AA1DA4C89F0043676E /* SelectItemTargetState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SelectItemTargetState.cpp; path = Dispatchers/SelectItemTargetState.cpp; sourceTree = "<group>"; };
+		3CE439AB1DA4C89F0043676E /* SelectItemTargetState.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = SelectItemTargetState.hpp; path = Dispatchers/SelectItemTargetState.hpp; sourceTree = "<group>"; };
 		3CE63B1B1D7D337100C2C76B /* IdleState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IdleState.cpp; path = Dispatchers/IdleState.cpp; sourceTree = "<group>"; };
 		3CE63B1C1D7D337100C2C76B /* IdleState.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = IdleState.hpp; path = Dispatchers/IdleState.hpp; sourceTree = "<group>"; };
 		3CE63B1F1D7D3C4B00C2C76B /* ShowMoveScopeState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ShowMoveScopeState.cpp; path = Dispatchers/ShowMoveScopeState.cpp; sourceTree = "<group>"; };
@@ -790,6 +793,8 @@
 				3CE63B951D8A664400C2C76B /* SelectMagicTargetState.hpp */,
 				3CE63B991D8A7D0600C2C76B /* ItemMenuState.cpp */,
 				3CE63B9A1D8A7D0600C2C76B /* ItemMenuState.hpp */,
+				3CE439AA1DA4C89F0043676E /* SelectItemTargetState.cpp */,
+				3CE439AB1DA4C89F0043676E /* SelectItemTargetState.hpp */,
 			);
 			name = Dispatchers;
 			sourceTree = "<group>";
@@ -1451,6 +1456,7 @@
 				3CE4398D1D9118D50043676E /* FDRandom.cpp in Sources */,
 				3CE63B781D87DC5E00C2C76B /* Message.cpp in Sources */,
 				3CE63B651D85364200C2C76B /* CounterResult.cpp in Sources */,
+				3CE439AC1DA4C89F0043676E /* SelectItemTargetState.cpp in Sources */,
 				3CE63B271D7D59D400C2C76B /* CommonHelper.cpp in Sources */,
 				3CE63BA11D8A7F6000C2C76B /* SettingsMenuState.cpp in Sources */,
 				3CE63B7E1D87DD1800C2C76B /* ConfirmMessage.cpp in Sources */,

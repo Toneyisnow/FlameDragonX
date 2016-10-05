@@ -13,11 +13,14 @@ typedef enum MessageBoxOperatingType
 {
     MessageBoxOperatingType_Select,
     MessageBoxOperatingType_ShowOnly,
-    MessageBoxOperatingType_Equip
+    MessageBoxOperatingType_Equip,
+    MessageBoxOperatingType_Use
+    
 } MessageBoxOperatingType;
 
 #include "cocos2d.h"
 #include "Creature.hpp"
+#include "ScaledSprite.hpp"
 
 USING_NS_CC;
 
@@ -29,13 +32,24 @@ protected:
     
     MessageBoxOperatingType _operatingType;
     
-    Sprite * _baseSprite;
+    ScaledSprite * _baseSprite;
+    
+    float _initialX;
+    float _initialY;
+    float _spacingX;
+    float _spacingY;
+    
+    int _objectCount;
     
 public:
     
     SelectableBox();
     
-    Sprite * getSprite();
+    ScaledSprite * getSprite();
+    
+    void drawObject(int index);
+    int handleClick(Vec2 location);
+    
 };
 
 #endif /* SelectableBox_hpp */

@@ -12,6 +12,7 @@
 
 #include "cocos2d.h"
 #include "Creature.hpp"
+#include "ScaledSprite.hpp"
 
 USING_NS_CC;
 
@@ -19,14 +20,14 @@ class DetailBar : public cocos2d::Ref
 {
 private:
     
-    Sprite * _baseSprite;
+    ScaledSprite * _baseSprite;
     
     Creature * _creature;
 public:
     
     DetailBar(Creature * creature);
     
-    Sprite * getSprite();
+    ScaledSprite * getSprite();
 };
 
 #endif /* DetailBar_hpp */

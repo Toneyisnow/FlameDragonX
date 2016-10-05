@@ -19,8 +19,8 @@ ConversationMessage::ConversationMessage(Creature * creature, std::string conten
 {
     _creature = creature;
     _content = content;
-    _upScreen = Vec2(240, 220);
-    _downScreen = Vec2(240, 50);
+    _upScreen = Vec2(240, 170);
+    _downScreen = Vec2(240, 10);
 }
 
 void ConversationMessage::initDialog()

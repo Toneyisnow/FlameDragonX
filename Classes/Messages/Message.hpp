@@ -19,7 +19,7 @@ class Message : public cocos2d::Ref
 {
 protected:
     
-    const int DEFAULT_MESSAGEBOX_SCALE = 1.3f;
+    const float DEFAULT_MESSAGEBOX_SCALE = 1.35f;
     
     int _returnValue;
     

@@ -71,6 +71,7 @@ void ActionMenuState::handleClickAt(Vec2 position)
             break;
         case 11:
             // Attack
+            this->moveCursorToTarget();
             _nextState = SelectAttackTargetState::create(_battleScene, _session);
             return;
         case 12:
@@ -91,8 +92,7 @@ void ActionMenuState::handleClickAt(Vec2 position)
 void ActionMenuState::selectMagic()
 {
     CompositeBox * magicBox = new CompositeBox(_creature, MessageBoxType_Magic, MessageBoxOperatingType_Select);
-    SEL_CALLBACK1 k1 = CALLBACK1_SELECTOR(ActionMenuState::confirmSelectMagic);
-    magicBox->setReturnFunction(this, k1);
+    magicBox->setReturnFunction(this, CALLBACK1_SELECTOR(ActionMenuState::confirmSelectMagic));
     
     _battleScene->getMessageLayer()->showMessage(magicBox);
 }
@@ -111,6 +111,16 @@ void ActionMenuState::confirmSelectMagic(int result)
     _battleField->notifyStateDispatcher();
 }
 
+void ActionMenuState::moveCursorToTarget()
+{
+    Vector<Creature *> targets = _battleField->searchTargetInAttackRange(_creature);
+    if (targets.size() == 0)
+    {
+        return;
+    }
+    
+    _battleField->moveCursorTo(_battleField->getObjectPosition(targets.at(0)));
+}
 
 void ActionMenuState::checkTreatureAndWaiveTurn()
 {
