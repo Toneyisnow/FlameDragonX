@@ -11,6 +11,8 @@
 
 #include "cocos2d.h"
 #include "ActionState.hpp"
+#include "Creature.hpp"
+#include "ItemDefinition.hpp"
 
 class BattleScene;
 
@@ -18,7 +20,8 @@ class SelectItemTargetState : public ActionState
 {
 private:
     
-    
+    bool canApplyOnCreature(ItemDefinition * item, Creature * target);
+
 public:
     
     SelectItemTargetState();

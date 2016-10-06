@@ -602,7 +602,7 @@ void BattleField::showSystemMenuAt(int menuId, Vec2 position)
 
 void BattleField::showCreatureMenuAt(int menuId, Vec2 position, Creature * creature)
 {
-    int menuItemIds[4] = { menuId * 10, menuId * 10 + 1, menuId * 10 + 2, menuId * 10 + 3};
+    int menuItemIds[4] = { menuId * 10 + 3, menuId * 10 + 2, menuId * 10 + 1, menuId * 10};
     
     BatchActivity * batch = new BatchActivity();
     
@@ -611,6 +611,10 @@ void BattleField::showCreatureMenuAt(int menuId, Vec2 position, Creature * creat
         MenuCursor * menu = new MenuCursor(menuItemId, this, position);
         this->addObject(menu, position);
         menu->checkValidation(creature);
+        if (menu->isValid()) {
+            this->setActiveMenuCursor(menu);
+        }
+        
         batch->addActivity(menu->onOpenActivity());
         menu->release();
     }
@@ -619,20 +623,33 @@ void BattleField::showCreatureMenuAt(int menuId, Vec2 position, Creature * creat
     batch->release();
 }
 
-void BattleField::closeMenu()
+void BattleField::closeMenu(bool withAnimation)
 {
-    BatchActivity * batch = new BatchActivity();
+    if (withAnimation) {
+        BatchActivity * batch = new BatchActivity();
     
-    for (BattleObject * object : *_battleObjectList) {
-        if (object->getObjectType() == BattleObject_Menu)
-        {
-            RemoveObjectActivity * removing = RemoveObjectActivity::create(this, object);
-            batch->addActivity(removing);
+        for (BattleObject * object : *_battleObjectList) {
+            if (object->getObjectType() == BattleObject_Menu && !object->isRemoving())
+            {
+                RemoveObjectActivity * removing = RemoveObjectActivity::create(this, object);
+                batch->addActivity(removing);
+            }
+        }
+        
+        _battleScene->getActivityQueue()->insertActivity(batch);
+        batch->release();
+    }
+    else
+    {
+        for (long i = _battleObjectList->size() - 1; i >= 0; i--) {
+            
+            BattleObject * obj = _battleObjectList->at(i);
+            if (obj->getObjectType() == BattleObject_Menu)
+            {
+                this->removeObject(obj);
+            }
         }
     }
-    
-    _battleScene->getActivityQueue()->insertActivity(batch);
-    batch->release();
 }
 
 void BattleField::setActiveMenuCursor(MenuCursor * selected)
@@ -689,6 +706,30 @@ int BattleField::getObjectDistance(BattleObject * c1, BattleObject * c2)
     Vec2 position2 = this->getObjectPosition(c2);
     
     return abs(position1.x - position2.x) + abs(position1.y - position2.y);
+}
+
+bool BattleField::hasAdjacentFriend(Creature * creature)
+{
+    Vec2 position = this->getObjectPosition(creature);
+    
+    Creature * adjacent;
+    adjacent = this->getCreatureAt(position.x + 1, position.y);
+    if (adjacent != nullptr && adjacent->getType() == CreatureType_Friend) {
+        return true;
+    }
+    adjacent = this->getCreatureAt(position.x - 1, position.y);
+    if (adjacent != nullptr && adjacent->getType() == CreatureType_Friend) {
+        return true;
+    }
+    adjacent = this->getCreatureAt(position.x, position.y + 1);
+    if (adjacent != nullptr && adjacent->getType() == CreatureType_Friend) {
+        return true;
+    }
+    adjacent = this->getCreatureAt(position.x, position.y - 1);
+    if (adjacent != nullptr && adjacent->getType() == CreatureType_Friend) {
+        return true;
+    }
+    return false;
 }
 
 Vector<Creature *> BattleField::searchTargetInAttackRange(Creature * creature)

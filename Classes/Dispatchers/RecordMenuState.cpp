@@ -35,7 +35,7 @@ void RecordMenuState::onEnterState()
 void RecordMenuState::onExitState()
 {
     log("Close record menu");
-    _battleField->closeMenu();
+    _battleField->closeMenu(true);
 }
 
 void RecordMenuState::handleClickAt(Vec2 position)

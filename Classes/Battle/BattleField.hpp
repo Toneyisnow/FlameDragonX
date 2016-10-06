@@ -123,13 +123,14 @@ public:
     
     void showCreatureMenuAt(int menuId, Vec2 position, Creature * creature);
     void showSystemMenuAt(int menuId, Vec2 position);
-    void closeMenu();
+    void closeMenu(bool withAnimation);
     void setActiveMenuCursor(MenuCursor * menuCursor);
     
     bool isPositionInScope(Vec2 position);
     void removeAllIndicators();
     int getObjectDistance(BattleObject * c1, BattleObject * c2);
     
+    bool hasAdjacentFriend(Creature * creature);
     Vector<Creature *> searchTargetInAttackRange(Creature * creature);
 };
 

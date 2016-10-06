@@ -78,7 +78,7 @@
             startingLineNumber = "98"
             endingLineNumber = "98"
             landmarkName = "BattleField::initWithChapter(int chapterId)"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -124,7 +124,7 @@
             startingLineNumber = "37"
             endingLineNumber = "37"
             landmarkName = "BattleObject::takeTick(int synchronizedTick)"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -140,7 +140,7 @@
             startingLineNumber = "261"
             endingLineNumber = "261"
             landmarkName = "BattleField::getCreatureAt(int x, int y)"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -294,7 +294,7 @@
             startingLineNumber = "386"
             endingLineNumber = "386"
             landmarkName = "BattleField::convertLocationToPosition(Vec2 loc)"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -310,7 +310,7 @@
             startingLineNumber = "147"
             endingLineNumber = "147"
             landmarkName = "BattleField::initWithChapter(int chapterId)"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -342,7 +342,7 @@
             startingLineNumber = "20"
             endingLineNumber = "20"
             landmarkName = "IdleState::create(BattleScene * scene)"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -374,7 +374,7 @@
             startingLineNumber = "86"
             endingLineNumber = "86"
             landmarkName = "BattleScene::BattleScene(ChapterRecord* record)"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -582,7 +582,7 @@
             startingLineNumber = "71"
             endingLineNumber = "71"
             landmarkName = "BattleScene::BattleScene(ChapterRecord* record)"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -598,7 +598,7 @@
             startingLineNumber = "76"
             endingLineNumber = "76"
             landmarkName = "BattleField::initWithChapter(int chapterId)"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -614,7 +614,7 @@
             startingLineNumber = "78"
             endingLineNumber = "78"
             landmarkName = "BattleField::initWithChapter(int chapterId)"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -624,13 +624,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/Dispatchers/ActionMenuState.cpp"
-            timestampString = "497339878.110582"
+            timestampString = "497433353.022875"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "135"
-            endingLineNumber = "135"
+            startingLineNumber = "147"
+            endingLineNumber = "147"
             landmarkName = "ActionMenuState::confirmPickTreasure()"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -662,7 +662,7 @@
             startingLineNumber = "377"
             endingLineNumber = "377"
             landmarkName = "BattleScene::takeAIMove()"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -678,7 +678,7 @@
             startingLineNumber = "351"
             endingLineNumber = "351"
             landmarkName = "BattleScene::startTurn()"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -694,7 +694,7 @@
             startingLineNumber = "60"
             endingLineNumber = "60"
             landmarkName = "SimpleMoveActivity::internalTick(int synchronizeTick)"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -710,7 +710,7 @@
             startingLineNumber = "410"
             endingLineNumber = "410"
             landmarkName = "BattleScene::takeAIAction(int creatureId)"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -726,7 +726,7 @@
             startingLineNumber = "81"
             endingLineNumber = "81"
             landmarkName = "SelectAttackTargetState::handleClickAt(Vec2 position)"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -742,7 +742,7 @@
             startingLineNumber = "85"
             endingLineNumber = "85"
             landmarkName = "SelectAttackTargetState::handleClickAt(Vec2 position)"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -854,7 +854,7 @@
             startingLineNumber = "37"
             endingLineNumber = "37"
             landmarkName = "IdleState::handleClickAt(Vec2 position)"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -966,7 +966,7 @@
             startingLineNumber = "551"
             endingLineNumber = "551"
             landmarkName = "BattleField::setCursorTo(Vec2 position)"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1028,7 +1028,7 @@
             startingLineNumber = "66"
             endingLineNumber = "66"
             landmarkName = "BattleScene::BattleScene(ChapterRecord* record)"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1061,6 +1061,70 @@
             endingLineNumber = "258"
             landmarkName = "DataStore::loadOccupationDefinition()"
             landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../Classes/Dispatchers/ExchangeItemTargetState.cpp"
+            timestampString = "497429406.58288"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "ExchangeItemTargetState::onEnterState()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../Classes/Dispatchers/ActionMenuState.cpp"
+            timestampString = "497433696.251412"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "ActionMenuState::onEnterState()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../Classes/Dispatchers/ActionMenuState.cpp"
+            timestampString = "497433873.66826"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "ActionMenuState::onEnterState()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../Classes/Objects/Creature.cpp"
+            timestampString = "497433915.458936"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "150"
+            endingLineNumber = "150"
+            landmarkName = "Creature::canFireMagic()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

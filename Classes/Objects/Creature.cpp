@@ -180,7 +180,7 @@ bool Creature::isFrozen()
     return false;
 }
 
-void Creature::setMoved(int val)
+void Creature::setMoved(bool val)
 {
     _hasMoved = val;
 }
@@ -188,6 +188,11 @@ void Creature::setMoved(int val)
 bool Creature::hasMoved()
 {
     return _hasMoved;
+}
+
+void Creature::setTakenAction(bool val)
+{
+    _hasActioned = val;
 }
 
 bool Creature::hasTakenAction()

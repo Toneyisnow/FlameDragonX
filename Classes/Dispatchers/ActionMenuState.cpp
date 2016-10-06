@@ -33,8 +33,10 @@ void ActionMenuState::onEnterState()
     log("Show action menu");
     
     _creature = _battleField->getCreatureById(_session->selectedCreatureId());
+    //// _creature->setMoved(!_session->creaturePositionAfterMove.equals(_session->creaturePositionBeforeMove));
     
     _battleField->showCreatureMenuAt(1, _session->creaturePositionAfterMove, _creature);
+    
 }
 
 void ActionMenuState::onExitState()
@@ -48,8 +50,18 @@ void ActionMenuState::handleClickAt(Vec2 position)
     
     if (menuItem == nullptr)
     {
-        _battleField->closeMenu();
-        _nextState = ShowMoveScopeState::create(_battleScene, _session);
+        _battleField->closeMenu(true);
+        
+        if (_creature->hasTakenAction())
+        {
+            _battleScene->creatureEndTurn(_creature);
+            _nextState = IdleState::create(_battleScene);
+        }
+        else
+        {
+            _nextState = ShowMoveScopeState::create(_battleScene, _session);
+        }
+        
         return;
     }
     
@@ -63,7 +75,7 @@ void ActionMenuState::handleClickAt(Vec2 position)
         return;
     }
     
-    _battleField->closeMenu();
+    _battleField->closeMenu(true);
     switch (menuItem->getId()) {
         case 10:
             // Magic

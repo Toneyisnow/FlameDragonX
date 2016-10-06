@@ -162,3 +162,42 @@ int CreatureData::calculatedEv()
     return total;
 }
 
+
+bool CreatureData::isItemFull()
+{
+    return (itemList->size() >= ITEM_MAX);
+}
+
+void CreatureData::removeItem(int itemIndex)
+{
+    if (itemIndex < 0 || itemIndex >= itemList->size()) {
+        return;
+    }
+    
+    if (attackItemIndex == itemIndex) {
+        attackItemIndex = -1;
+    }
+    else if (attackItemIndex > itemIndex)
+    {
+        attackItemIndex --;
+    }
+    
+    if (defendItemIndex == itemIndex) {
+        defendItemIndex = -1;
+    }
+    else if (defendItemIndex > itemIndex)
+    {
+        defendItemIndex --;
+    }
+    
+    itemList->erase(itemIndex);
+}
+
+void CreatureData::addItem(int itemId)
+{
+    if (itemList->size() >= ITEM_MAX) {
+        return;
+    }
+    
+    itemList->pushBack(FDNumber::numberWithInt(itemId));
+}

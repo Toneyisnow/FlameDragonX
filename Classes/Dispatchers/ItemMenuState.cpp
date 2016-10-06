@@ -15,6 +15,7 @@
 #include "ActionMenuState.hpp"
 #include "CompositeBox.hpp"
 #include "SelectItemTargetState.hpp"
+#include "ExchangeItemTargetState.hpp"
 
 ItemMenuState * ItemMenuState::create(BattleScene * scene, StateSession * session)
 {
@@ -39,7 +40,7 @@ void ItemMenuState::onEnterState()
 void ItemMenuState::onExitState()
 {
     log("Close item menu");
-    _battleField->closeMenu();
+    // _battleField->closeMenu(true);
 }
 
 void ItemMenuState::handleClickAt(Vec2 position)
@@ -48,6 +49,7 @@ void ItemMenuState::handleClickAt(Vec2 position)
     
     if (menuItem == nullptr)
     {
+        _battleField->closeMenu(true);
         _nextState = ActionMenuState::create(_battleScene, _session);
         return;
     }
@@ -85,26 +87,41 @@ void ItemMenuState::handleClickAt(Vec2 position)
 
 void ItemMenuState::selectItemToExchange()
 {
+    _battleField->closeMenu(true);
+    
     CompositeBox * itemBox = new CompositeBox(_creature, MessageBoxType_Item, MessageBoxOperatingType_Select);
     itemBox->setReturnFunction(this, CALLBACK1_SELECTOR(ItemMenuState::confirmItemToExchange));
     _battleScene->getMessageLayer()->showMessage(itemBox);
+    itemBox->release();
 }
 
 void ItemMenuState::confirmItemToExchange(int itemIndex)
 {
+    if (itemIndex < 0) {
+        
+        this->onEnterState();
+        return;
+    }
     
+    _session->setSelectedItemIndex(itemIndex);
+    _nextState = ExchangeItemTargetState::create(_battleScene, _session);
+    _battleField->notifyStateDispatcher();
 }
 
 void ItemMenuState::selectItemToUse()
 {
+    _battleField->closeMenu(true);
+    
     CompositeBox * itemBox = new CompositeBox(_creature, MessageBoxType_Item, MessageBoxOperatingType_Use);
     itemBox->setReturnFunction(this, CALLBACK1_SELECTOR(ItemMenuState::confirmItemToUse));
     _battleScene->getMessageLayer()->showMessage(itemBox);
+    itemBox->release();
 }
 
 void ItemMenuState::confirmItemToUse(int itemIndex)
 {
     if (itemIndex < 0) {
+        this->onEnterState();
         return;
     }
     

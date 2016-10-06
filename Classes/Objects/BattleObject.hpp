@@ -51,6 +51,8 @@ protected:
     
     Direction _direction;
     
+    bool _isRemoving;
+    
 public:
     
     BattleObject(BattleObjectType type);
@@ -72,6 +74,8 @@ public:
     virtual FDActivity * onRemovalActivity();
     
     void setZOrder(int zOrder);
+    
+    bool isRemoving();
 };
 
 #endif /* BattleObject_hpp */

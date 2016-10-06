@@ -38,7 +38,7 @@ void SystemMenuState::onEnterState()
 void SystemMenuState::onExitState()
 {
     log("Close system menu");
-    _battleField->closeMenu();
+    _battleField->closeMenu(true);
 }
 
 void SystemMenuState::handleClickAt(Vec2 position)

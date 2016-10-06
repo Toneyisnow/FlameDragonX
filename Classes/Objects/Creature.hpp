@@ -78,7 +78,8 @@ public:
     bool isDead();
     bool isFrozen();
     
-    void setMoved(int val);
+    void setMoved(bool val);
+    void setTakenAction(bool val);
     bool hasMoved();
     bool hasTakenAction();
     

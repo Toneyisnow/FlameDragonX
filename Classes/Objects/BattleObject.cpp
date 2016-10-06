@@ -12,7 +12,7 @@
 BattleObject::BattleObject(BattleObjectType type)
 {
     _objectType = type;
-
+    _isRemoving = false;
 }
 
 BattleObject::~BattleObject()
@@ -65,4 +65,9 @@ FDActivity * BattleObject::onRemovalActivity()
 void BattleObject::setZOrder(int zOrder)
 {
     _baseSprite->setLocalZOrder(zOrder);
+}
+
+bool BattleObject::isRemoving()
+{
+    return _isRemoving;
 }

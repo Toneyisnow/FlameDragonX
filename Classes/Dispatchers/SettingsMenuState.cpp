@@ -35,7 +35,7 @@ void SettingsMenuState::onEnterState()
 void SettingsMenuState::onExitState()
 {
     log("Close Settings menu");
-    _battleField->closeMenu();
+    _battleField->closeMenu(true);
 }
 
 void SettingsMenuState::handleClickAt(Vec2 position)

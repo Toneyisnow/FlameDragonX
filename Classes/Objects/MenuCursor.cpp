@@ -70,9 +70,14 @@ FDActivity * MenuCursor::onOpenActivity()
 
 FDActivity * MenuCursor::onRemovalActivity()
 {
+    if (_isRemoving) {
+        return nullptr;
+    }
+    
     SimpleMoveActivity * move = new SimpleMoveActivity(_field, this, _centerPosition, Constants::MENU_MOVE_SPEED);
     move->autorelease();
     
+    _isRemoving = true;
     return move;
 }
 
@@ -123,7 +128,9 @@ void MenuCursor::checkValidation(Creature * creature)
         case 13:    // Waive Turn
             _isValid = true;
             break;
-            
+        case 20:    // Exchange Item
+            _isValid = _field->hasAdjacentFriend(creature);
+            break;
         case 30:
             // Match
             _isValid = false;

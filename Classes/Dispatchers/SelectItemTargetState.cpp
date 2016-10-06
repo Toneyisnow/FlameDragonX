@@ -53,7 +53,7 @@ void SelectItemTargetState::onEnterState()
     ItemDefinition * item = creature->creatureData()->getItem(itemIndex);
     UsableItemDefinition * usableItem = (UsableItemDefinition *)item;
     
-    usableItem = (UsableItemDefinition *)DataStore::getInstance()->getItemDefinition(101);
+    usableItem = (UsableItemDefinition *)DataStore::getInstance()->getItemDefinition(111);
     
     int max = (usableItem->onlyUseToSelf() ? 0 : 1);
     RangeScopeResolver * resolver = new RangeScopeResolver(_battleField, position, FDRange::rangeWithValues(0, max));
@@ -87,13 +87,13 @@ void SelectItemTargetState::handleClickAt(Vec2 position)
     }
     
     Creature * creature = _battleField->getCreatureById(_session->selectedCreatureId());
-    
     int itemIndex = _session->selectedItemIndex();
+    ItemDefinition * item = creature->creatureData()->getItem(itemIndex);
     
     if (_battleField->isPositionInScope(position))
     {
         Creature * target = _battleField->getCreatureAt(position.x, position.y);
-        if (target == nullptr) {
+        if (target == nullptr  || !this->canApplyOnCreature(item, target)) {
             return;
         }
         
@@ -106,4 +106,13 @@ void SelectItemTargetState::handleClickAt(Vec2 position)
         _nextState = ItemMenuState::create(_battleScene, _session);
         return;
     }
+}
+
+bool SelectItemTargetState::canApplyOnCreature(ItemDefinition * item, Creature * target)
+{
+    if (item->getDefinitionId() == 119) {
+        return (target->getType() == CreatureType_Enemy);
+    }
+    
+    return (target->getType() == CreatureType_Npc || target->getType() == CreatureType_Friend);
 }

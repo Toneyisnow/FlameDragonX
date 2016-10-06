@@ -19,6 +19,7 @@
 		3C1883581D6BA5840059056E /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C1883571D6BA5840059056E /* OpenGLES.framework */; };
 		3C18835F1D6BABA10059056E /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C18835E1D6BABA10059056E /* libz.1.2.5.dylib */; };
 		3C1883611D6BAC130059056E /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C1883601D6BAC130059056E /* CoreMotion.framework */; };
+		3C4FA5761DA620EC00AA9DF1 /* ExchangeItemTargetState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C4FA5741DA620EC00AA9DF1 /* ExchangeItemTargetState.cpp */; };
 		3C8D68181D78EA2F00CC3616 /* CombinedActivity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C8D68161D78EA2F00CC3616 /* CombinedActivity.cpp */; };
 		3C8D681B1D78EAAE00CC3616 /* FieldActivity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C8D68191D78EAAE00CC3616 /* FieldActivity.cpp */; };
 		3C8D681E1D78EB3B00CC3616 /* GlobalActivity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C8D681C1D78EB3B00CC3616 /* GlobalActivity.cpp */; };
@@ -263,6 +264,8 @@
 		3C1883571D6BA5840059056E /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/OpenGLES.framework; sourceTree = DEVELOPER_DIR; };
 		3C18835E1D6BABA10059056E /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = ../../../../../usr/lib/libz.1.2.5.dylib; sourceTree = "<group>"; };
 		3C1883601D6BAC130059056E /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/CoreMotion.framework; sourceTree = DEVELOPER_DIR; };
+		3C4FA5741DA620EC00AA9DF1 /* ExchangeItemTargetState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ExchangeItemTargetState.cpp; path = Dispatchers/ExchangeItemTargetState.cpp; sourceTree = "<group>"; };
+		3C4FA5751DA620EC00AA9DF1 /* ExchangeItemTargetState.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ExchangeItemTargetState.hpp; path = Dispatchers/ExchangeItemTargetState.hpp; sourceTree = "<group>"; };
 		3C8D68161D78EA2F00CC3616 /* CombinedActivity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CombinedActivity.cpp; path = Activities/CombinedActivity.cpp; sourceTree = "<group>"; };
 		3C8D68171D78EA2F00CC3616 /* CombinedActivity.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CombinedActivity.hpp; path = Activities/CombinedActivity.hpp; sourceTree = "<group>"; };
 		3C8D68191D78EAAE00CC3616 /* FieldActivity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FieldActivity.cpp; path = Activities/FieldActivity.cpp; sourceTree = "<group>"; };
@@ -795,6 +798,8 @@
 				3CE63B9A1D8A7D0600C2C76B /* ItemMenuState.hpp */,
 				3CE439AA1DA4C89F0043676E /* SelectItemTargetState.cpp */,
 				3CE439AB1DA4C89F0043676E /* SelectItemTargetState.hpp */,
+				3C4FA5741DA620EC00AA9DF1 /* ExchangeItemTargetState.cpp */,
+				3C4FA5751DA620EC00AA9DF1 /* ExchangeItemTargetState.hpp */,
 			);
 			name = Dispatchers;
 			sourceTree = "<group>";
@@ -1366,6 +1371,7 @@
 				3CA3182F1D7613630042B56A /* FDRange.cpp in Sources */,
 				3CE63B3C1D7F8F6200C2C76B /* PointMap.cpp in Sources */,
 				3CE63B5C1D852DB200C2C76B /* CounterScene.cpp in Sources */,
+				3C4FA5761DA620EC00AA9DF1 /* ExchangeItemTargetState.cpp in Sources */,
 				3CE63B621D85308600C2C76B /* MagicScene.cpp in Sources */,
 				46880B8A19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */,
 				3CB109931D74ECB1002C4121 /* Constants.cpp in Sources */,

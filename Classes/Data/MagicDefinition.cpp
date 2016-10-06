@@ -25,8 +25,6 @@ void MagicDefinition::initFromFile(TextFileReader * reader)
     /// this->name
     
     this->_type = (MagicType)reader->readInt();
-    int min = reader->readInt();
-    int max = reader->readInt();
     this->_quantityRange = reader->readRange();
     this->_quantityRange->retain();
     

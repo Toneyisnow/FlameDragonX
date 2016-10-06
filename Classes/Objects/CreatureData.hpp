@@ -58,6 +58,10 @@ public:
     ItemDefinition * getItem(int itemIndex);
     MagicDefinition * getMagic(int magicIndex);
     
+    bool isItemFull();
+    void removeItem(int itemIndex);
+    void addItem(int itemId);
+    
 };
 
 #endif /* CreatureData_hpp */
