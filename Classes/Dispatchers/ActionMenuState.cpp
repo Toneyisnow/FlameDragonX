@@ -84,7 +84,7 @@ void ActionMenuState::handleClickAt(Vec2 position)
         case 11:
             // Attack
             _battleField->closeMenu(true);
-            this->moveCursorToTarget();
+            this->moveCursorToAttackTarget();
             _nextState = SelectAttackTargetState::create(_battleScene, _session);
             return;
         case 12:
@@ -123,14 +123,28 @@ void ActionMenuState::confirmSelectMagic(int result)
         return;
     }
     
+    _selectedMagic = _creature->creatureData()->getMagic(result);
     _session->setSelectedMagicIndex(result);
     _nextState = SelectMagicTargetState::create(_battleScene, _session);
     _battleField->notifyStateDispatcher();
+    
+    this->moveCursorToMagicTarget();
 }
 
-void ActionMenuState::moveCursorToTarget()
+void ActionMenuState::moveCursorToAttackTarget()
 {
     Vector<Creature *> targets = _battleField->searchTargetInAttackRange(_creature);
+    if (targets.size() == 0)
+    {
+        return;
+    }
+    
+    _battleField->moveCursorTo(_battleField->getObjectPosition(targets.at(0)));
+}
+
+void ActionMenuState::moveCursorToMagicTarget()
+{
+    Vector<Creature *> targets = _battleField->searchTargetInMagicRange(_creature, _selectedMagic->getDefinitionId());
     if (targets.size() == 0)
     {
         return;

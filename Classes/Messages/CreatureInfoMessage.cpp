@@ -22,7 +22,7 @@ CreatureInfoMessage::CreatureInfoMessage(Creature * creature, Vec2 clickedAtLoca
 void CreatureInfoMessage::initDialog()
 {
     _baseSprite = ScaledSprite::create("Others/CreatureInfoBarBase.png");
-    _baseSprite->setScale(DEFAULT_MESSAGEBOX_SCALE);
+    _baseSprite->setScale(MESSAGEBOX_SCALE);
     _baseSprite->setPosition(_position);
     
     // Name
@@ -34,7 +34,7 @@ void CreatureInfoMessage::initDialog()
     // HP Bar
     Sprite * hpBar = Sprite::create(StringUtils::format("Others/CreatureInfoBarHp.png"));
     hpBar->setAnchorPoint(Vec2(0, 0.5f));
-    hpBar->setScaleX(_creature->creatureData()->hpCurrent / _creature->creatureData()->hpMax);
+    hpBar->setScaleX((float)_creature->creatureData()->hpCurrent / _creature->creatureData()->hpMax);
     _baseSprite->addChild(hpBar, Vec2(28.8, 22.5));
     
     // MP Bar
@@ -42,7 +42,7 @@ void CreatureInfoMessage::initDialog()
     {
         Sprite * mpBar = Sprite::create(StringUtils::format("Others/CreatureInfoBarMp.png"));
         mpBar->setAnchorPoint(Vec2(0, 0.5f));
-        mpBar->setScaleX(_creature->creatureData()->mpCurrent / _creature->creatureData()->mpMax);
+        mpBar->setScaleX((float)_creature->creatureData()->mpCurrent / _creature->creatureData()->mpMax);
         _baseSprite->addChild(mpBar, Vec2(28.8, 10.5));
     }
     

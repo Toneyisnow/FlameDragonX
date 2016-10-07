@@ -17,7 +17,7 @@ int FDRandom::valueFromRange(int min, int max)
         max = temp;
     }
     
-    int ran = rand() * (max - min) + min;
+    int ran = rand() % (max - min) + min;
     return ran;
 }
 

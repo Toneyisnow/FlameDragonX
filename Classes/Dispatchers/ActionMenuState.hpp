@@ -18,6 +18,7 @@ class ActionMenuState : public ActionState
 private:
     
     Creature * _creature;
+    MagicDefinition * _selectedMagic;
     
 public:
     
@@ -31,7 +32,8 @@ public:
     void selectMagic();
     void confirmSelectMagic(int result);
     
-    void moveCursorToTarget();
+    void moveCursorToAttackTarget();
+    void moveCursorToMagicTarget();
     
     void checkTreatureAndWaiveTurn();
     void confirmPickTreasure();

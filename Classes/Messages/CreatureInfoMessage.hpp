@@ -18,6 +18,8 @@ class CreatureInfoMessage : public Message
 {
 private:
     
+    const float MESSAGEBOX_SCALE = 1.1f;
+    
     const Vec2 _leftPosition = Vec2(120, Constants::getScreenSize().height - 50);
     const Vec2 _rightPosition = Vec2(360, Constants::getScreenSize().height - 50);
     

@@ -24,6 +24,7 @@
 #include "MagicScene.hpp"
 #include "LocalizedStrings.hpp"
 #include "DurationActivity.hpp"
+#include "CompositeBox.hpp"
 
 USING_NS_CC;
 
@@ -197,6 +198,8 @@ void BattleScene::magicTo(Creature * creature, int magicIndex, Vector<Creature *
     
     // Calculations on the Attack result
     MagicDefinition * magic = creature->creatureData()->getMagic(magicIndex);
+    creature->creatureData()->mpCurrent -= magic->mpCost();
+    
     MagicResult * result = GameFormula::dealWithMagic(_battleField, creature, creatureList, magic->getDefinitionId());
     
     // Turn to the magic flight scene
@@ -450,6 +453,32 @@ void BattleScene::appendMethodToActivity(Ref* obj, SEL_CALLBACK2 selector, Ref* 
 void BattleScene::showMessage(Message * message)
 {
     this->_messageLayer->showMessage(message);
+}
+
+void BattleScene::showItemStatus(Ref * creatureObj)
+{
+    Creature * creature = (Creature *)creatureObj;
+    if (creature == nullptr)
+    {
+        return;
+    }
+    
+    CompositeBox * itemBox = new CompositeBox(creature, MessageBoxType_Item, MessageBoxOperatingType_ShowOnly);
+    _messageLayer->showMessage(itemBox);
+    itemBox->release();
+}
+
+void BattleScene::showMagicStatus(Ref * creatureObj)
+{
+    Creature * creature = (Creature *)creatureObj;
+    if (creature == nullptr)
+    {
+        return;
+    }
+    
+    CompositeBox * magicBox = new CompositeBox(creature, MessageBoxType_Magic, MessageBoxOperatingType_ShowOnly);
+    _messageLayer->showMessage(magicBox);
+    magicBox->release();
 }
 
 void BattleScene::gameWin()

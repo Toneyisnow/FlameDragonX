@@ -133,8 +133,9 @@ public:
     int getPositionDistance(Vec2 position1, Vec2 position2);
     
     bool hasAdjacentFriend(Creature * creature);
-    Vector<Creature *> searchTargetInAttackRange(Creature * creature);
     Vector<Creature *> getCreaturesInRange(Vec2 position, int range, bool badGuy);
+    Vector<Creature *> searchTargetInAttackRange(Creature * creature);
+    Vector<Creature *> searchTargetInMagicRange(Creature * creature, int magicId);
     
 };
 

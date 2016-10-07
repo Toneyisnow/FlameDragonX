@@ -76,6 +76,9 @@ public:
     void takeAIMove();
     void takeAIAction(int creatureId);
     
+    void showItemStatus(Ref * creature);
+    void showMagicStatus(Ref * creature);
+    
     void showMessage(Message * message);
     
     void appendMethodToActivity(SEL_CALLBACK0 selector);

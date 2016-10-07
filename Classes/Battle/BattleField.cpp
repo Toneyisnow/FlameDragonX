@@ -15,6 +15,7 @@
 #include "BattleScene.hpp"
 #include "CursorMoveActivity.hpp"
 #include "RemoveObjectActivity.hpp"
+#include "DataStore.hpp"
 
 USING_NS_CC;
 
@@ -766,6 +767,48 @@ Vector<Creature *> BattleField::searchTargetInAttackRange(Creature * creature)
         for (Creature * target : *_enemyList) {
             int distance = getObjectDistance(creature, target);
             if (attackRange->containsValue(distance))
+                result.pushBack(target);
+        }
+    }
+    
+    return result;
+}
+
+Vector<Creature *> BattleField::searchTargetInMagicRange(Creature * creature, int magicId)
+{
+    Vector<Creature *> result;
+    
+    if (creature == nullptr)
+        return result;
+    
+    MagicDefinition * magic = DataStore::getInstance()->getMagicDefinition(magicId);
+    if (magic == nullptr) {
+        return result;
+    }
+    
+    int scope = magic->effectScope();
+    bool goodCreature = (creature->getType() == CreatureType_Friend || creature->getType() == CreatureType_Npc);
+    bool goodMagic = (magic->getType() == MagicType_Recover || magic->getType() == MagicType_Defensive);
+    bool goodGuy = ((goodCreature && goodMagic) || (!goodCreature && !goodMagic));
+    
+    if (goodGuy)
+    {
+        for (Creature * target : *_friendList) {
+            int distance = getObjectDistance(creature, target);
+            if (distance <= scope)
+                result.pushBack(target);
+        }
+        for (Creature * target : *_npcList) {
+            int distance = getObjectDistance(creature, target);
+            if (distance <= scope)
+                result.pushBack(target);
+        }
+    }
+    else
+    {
+        for (Creature * target : *_enemyList) {
+            int distance = getObjectDistance(creature, target);
+            if (distance <= scope)
                 result.pushBack(target);
         }
     }
