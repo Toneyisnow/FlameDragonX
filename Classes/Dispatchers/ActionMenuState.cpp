@@ -75,23 +75,26 @@ void ActionMenuState::handleClickAt(Vec2 position)
         return;
     }
     
-    _battleField->closeMenu(true);
     switch (menuItem->getId()) {
         case 10:
             // Magic
+            _battleField->closeMenu(false);
             this->selectMagic();
             break;
         case 11:
             // Attack
+            _battleField->closeMenu(true);
             this->moveCursorToTarget();
             _nextState = SelectAttackTargetState::create(_battleScene, _session);
             return;
         case 12:
             // Item
+            _battleField->closeMenu(true);
             _nextState = ItemMenuState::create(_battleScene, _session);
             return;
         case 13:
             // Sleep
+            _battleField->closeMenu(true);
             checkTreatureAndWaiveTurn();
             _nextState = IdleState::create(_battleScene);
             return;
@@ -116,6 +119,8 @@ void ActionMenuState::confirmSelectMagic(int result)
     if (result < 0)
     {
         // Cancel
+        this->onEnterState();
+        return;
     }
     
     _session->setSelectedMagicIndex(result);

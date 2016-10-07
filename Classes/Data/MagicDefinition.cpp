@@ -45,6 +45,11 @@ int MagicDefinition::getDefinitionId()
     return _definitionId;
 }
 
+MagicType MagicDefinition::getType()
+{
+    return _type;
+}
+
 int MagicDefinition::effectScope()
 {
     return _effectScope;

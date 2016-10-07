@@ -123,13 +123,22 @@ void MenuCursor::checkValidation(Creature * creature)
             _isValid = _field->searchTargetInAttackRange(creature).size() > 0;
             break;
         case 12:    // Item
-            _isValid = creature->creatureData()->itemList->size() > 0;
+            _isValid = !creature->creatureData()->isItemEmpty();
             break;
         case 13:    // Waive Turn
             _isValid = true;
             break;
         case 20:    // Exchange Item
-            _isValid = _field->hasAdjacentFriend(creature);
+            _isValid = !creature->creatureData()->isItemEmpty() && _field->hasAdjacentFriend(creature);
+            break;
+        case 21:    // Use Item
+            _isValid = !creature->creatureData()->isItemEmpty();
+            break;
+        case 22:    // Equip Item
+            _isValid = !creature->creatureData()->isItemEmpty();
+            break;
+        case 23:    // Drop Item
+            _isValid = !creature->creatureData()->isItemEmpty();
             break;
         case 30:
             // Match

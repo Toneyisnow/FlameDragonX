@@ -168,6 +168,11 @@ bool CreatureData::isItemFull()
     return (itemList->size() >= ITEM_MAX);
 }
 
+bool CreatureData::isItemEmpty()
+{
+    return itemList->size() == 0;
+}
+
 void CreatureData::removeItem(int itemIndex)
 {
     if (itemIndex < 0 || itemIndex >= itemList->size()) {

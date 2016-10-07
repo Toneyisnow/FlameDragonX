@@ -82,14 +82,24 @@ void SelectMagicTargetState::handleClickAt(Vec2 position)
     
     Creature * creature = _battleField->getCreatureById(_session->selectedCreatureId());
     int magicIndex = _session->selectedMagicIndex();
+    MagicDefinition * magic = creature->creatureData()->getMagic(magicIndex);
     
     if (_battleField->isPositionInScope(position))
     {
-        Vector<Creature *> * targetList = new Vector<Creature *>();
+        bool forBadGuys = (magic->getType() == MagicType_Attack || magic->getType() == MagicType_Offensive);
         
-        _battleScene->magicTo(creature, magicIndex, targetList);
-        _nextState = IdleState::create(_battleScene);
-        return;
+        Vector<Creature *> targetList = _battleField->getCreaturesInRange(position, magic->effectCoverage(), forBadGuys);
+        
+        if (targetList.size() > 0)
+        {
+            _battleScene->magicTo(creature, magicIndex, targetList);
+            _nextState = IdleState::create(_battleScene);
+            return;
+        }
+        else
+        {
+            return;
+        }
     }
     else
     {

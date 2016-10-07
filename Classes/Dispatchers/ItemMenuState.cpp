@@ -87,7 +87,7 @@ void ItemMenuState::handleClickAt(Vec2 position)
 
 void ItemMenuState::selectItemToExchange()
 {
-    _battleField->closeMenu(true);
+    _battleField->closeMenu(false);
     
     CompositeBox * itemBox = new CompositeBox(_creature, MessageBoxType_Item, MessageBoxOperatingType_Select);
     itemBox->setReturnFunction(this, CALLBACK1_SELECTOR(ItemMenuState::confirmItemToExchange));
@@ -110,7 +110,7 @@ void ItemMenuState::confirmItemToExchange(int itemIndex)
 
 void ItemMenuState::selectItemToUse()
 {
-    _battleField->closeMenu(true);
+    _battleField->closeMenu(false);
     
     CompositeBox * itemBox = new CompositeBox(_creature, MessageBoxType_Item, MessageBoxOperatingType_Use);
     itemBox->setReturnFunction(this, CALLBACK1_SELECTOR(ItemMenuState::confirmItemToUse));
@@ -132,20 +132,37 @@ void ItemMenuState::confirmItemToUse(int itemIndex)
 
 void ItemMenuState::selectItemToEquip()
 {
+    _battleField->closeMenu(false);
     
+    CompositeBox * itemBox = new CompositeBox(_creature, MessageBoxType_Item, MessageBoxOperatingType_Equip);
+    itemBox->setReturnFunction(this, CALLBACK1_SELECTOR(ItemMenuState::confirmItemToEquip));
+    _battleScene->getMessageLayer()->showMessage(itemBox);
+    itemBox->release();
 }
 
 void ItemMenuState::confirmItemToEquip(int itemIndex)
 {
-    
+    this->onEnterState();
 }
 
 void ItemMenuState::selectItemToDrop()
 {
+    _battleField->closeMenu(false);
     
+    CompositeBox * itemBox = new CompositeBox(_creature, MessageBoxType_Item, MessageBoxOperatingType_Select);
+    itemBox->setReturnFunction(this, CALLBACK1_SELECTOR(ItemMenuState::confirmItemToDrop));
+    _battleScene->getMessageLayer()->showMessage(itemBox);
+    itemBox->release();
+
 }
 
 void ItemMenuState::confirmItemToDrop(int itemIndex)
 {
+    this->onEnterState();
     
+    if (itemIndex >= 0) {
+        
+        // Drop Item
+        _creature->creatureData()->removeItem(itemIndex);
+    }
 }

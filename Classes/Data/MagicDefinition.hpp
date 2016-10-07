@@ -59,6 +59,8 @@ public:
     FDRange * getEffectScope();
     
     int getDefinitionId();
+    MagicType getType();
+    
     bool hasAnimation();
     bool isCross();
     

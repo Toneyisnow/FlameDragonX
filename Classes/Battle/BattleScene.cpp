@@ -191,13 +191,13 @@ void BattleScene::attackTo(Creature * creature, Creature * target)
     scene->release();
 }
 
-void BattleScene::magicTo(Creature * creature, int magicIndex, Vector<Creature *> * creatureList)
+void BattleScene::magicTo(Creature * creature, int magicIndex, Vector<Creature *> creatureList)
 {
     log("Magic from %d.", creature->getId());
     
     // Calculations on the Attack result
     MagicDefinition * magic = creature->creatureData()->getMagic(magicIndex);
-    MagicResult * result = GameFormula::dealWithMagic(_battleField, creature, *creatureList, magic->getDefinitionId());
+    MagicResult * result = GameFormula::dealWithMagic(_battleField, creature, creatureList, magic->getDefinitionId());
     
     // Turn to the magic flight scene
     CallbackMethod * callback = CallbackMethod::create(this, CALLBACK2_SELECTOR(BattleScene::postFightAction), result->getCounterObject());

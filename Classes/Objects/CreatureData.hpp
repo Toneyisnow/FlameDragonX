@@ -59,6 +59,8 @@ public:
     MagicDefinition * getMagic(int magicIndex);
     
     bool isItemFull();
+    bool isItemEmpty();
+    
     void removeItem(int itemIndex);
     void addItem(int itemId);
     

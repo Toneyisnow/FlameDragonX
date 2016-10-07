@@ -700,12 +700,17 @@ void BattleField::removeAllIndicators()
     }
 }
 
+int BattleField::getPositionDistance(Vec2 position1, Vec2 position2)
+{
+    return abs(position1.x - position2.x) + abs(position1.y - position2.y);
+}
+
 int BattleField::getObjectDistance(BattleObject * c1, BattleObject * c2)
 {
     Vec2 position1 = this->getObjectPosition(c1);
     Vec2 position2 = this->getObjectPosition(c2);
     
-    return abs(position1.x - position2.x) + abs(position1.y - position2.y);
+    return getPositionDistance(position1, position2);
 }
 
 bool BattleField::hasAdjacentFriend(Creature * creature)
@@ -761,6 +766,34 @@ Vector<Creature *> BattleField::searchTargetInAttackRange(Creature * creature)
         for (Creature * target : *_enemyList) {
             int distance = getObjectDistance(creature, target);
             if (attackRange->containsValue(distance))
+                result.pushBack(target);
+        }
+    }
+    
+    return result;
+}
+
+Vector<Creature *> BattleField::getCreaturesInRange(Vec2 position, int range, bool badGuy)
+{
+    Vector<Creature *> result;
+    if (!badGuy)
+    {
+        for (Creature * target : *_friendList) {
+            int distance = getPositionDistance(position, this->getObjectPosition(target));
+            if (distance <= range)
+                result.pushBack(target);
+        }
+        for (Creature * target : *_npcList) {
+            int distance = getPositionDistance(position, this->getObjectPosition(target));
+            if (distance <= range)
+                result.pushBack(target);
+        }
+    }
+    else
+    {
+        for (Creature * target : *_enemyList) {
+            int distance = getPositionDistance(position, this->getObjectPosition(target));
+            if (distance <= range)
                 result.pushBack(target);
         }
     }
