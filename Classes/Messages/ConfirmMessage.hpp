@@ -21,7 +21,8 @@ public:
     ConfirmMessage(std::string content);
     ConfirmMessage(Creature * creature, std::string content);
 
-    
+    void handleClick(Vec2 location) override;
+
 };
 
 #endif /* ConfirmMessage_hpp */

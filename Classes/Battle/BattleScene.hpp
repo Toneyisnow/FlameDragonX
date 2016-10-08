@@ -29,6 +29,8 @@ private:
     int _chapterId;
     int _synchronizedTickCount;
     
+    int _totalMoney;
+    
     BattleField *_battleField;
     MessageLayer * _messageLayer;
     
@@ -38,10 +40,14 @@ private:
     int _turnNumber;
     CreatureType _currentTurnType;
     
+    Creature * _currentTalkerFriend;
+    Vector<FDNumber *> _currentDropItems;
+    
     void takeDeltaTimeTck(float dt);
     void takeTick(int synchronizedTick);
     
-    
+    void confirmItemFullExchange(int result);
+    void confirmItemFullExchangeWithItem(int result);
     
 public:
     
@@ -87,7 +93,7 @@ public:
     void appendMethodToActivity(Ref * obj, SEL_CALLBACK0 selector);
     void appendMethodToActivity(Ref * obj, SEL_CALLBACK1 selector, int value);
     void appendMethodToActivity(Ref * obj, SEL_CALLBACK2 selector, Ref* parameter);
-    
+    void clearAllActivity();
     
     //// CallbackActivity * createFunctionActivity(void(BattleScene::* callBackFunction)());
     //// CallbackActivity * createFunctionActivity(void(BattleScene::* callBackFunction)(int), int intParameter);

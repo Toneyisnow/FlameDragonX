@@ -19,3 +19,10 @@ ConfirmMessage::ConfirmMessage(Creature * creature, std::string content)
 {
  
 }
+
+void ConfirmMessage::handleClick(Vec2 location)
+{
+    _returnValue = 1;
+    
+    this->closeDialog();
+}

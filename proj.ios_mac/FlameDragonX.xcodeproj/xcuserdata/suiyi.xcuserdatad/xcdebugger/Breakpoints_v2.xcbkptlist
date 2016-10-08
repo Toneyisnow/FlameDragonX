@@ -184,7 +184,7 @@
             startingLineNumber = "73"
             endingLineNumber = "73"
             landmarkName = "ActivityQueue::takeTick(int synchronizedTick)"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -246,7 +246,7 @@
             startingLineNumber = "82"
             endingLineNumber = "82"
             landmarkName = "CreatureDefinition::readFromFile(TextFileReader * reader, Map&lt;int, CreatureDefinition *&gt; * dict)"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -368,11 +368,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/Battle/BattleScene.cpp"
-            timestampString = "497516152.457876"
+            timestampString = "497605290.976599"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
             landmarkName = "BattleScene::BattleScene(ChapterRecord* record)"
             landmarkType = "7">
          </BreakpointContent>
@@ -576,11 +576,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/Battle/BattleScene.cpp"
-            timestampString = "497516152.457876"
+            timestampString = "497605290.976599"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
             landmarkName = "BattleScene::BattleScene(ChapterRecord* record)"
             landmarkType = "7">
          </BreakpointContent>
@@ -646,7 +646,7 @@
             startingLineNumber = "31"
             endingLineNumber = "31"
             landmarkName = "ActivityQueue::isBusy()"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -656,11 +656,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/Battle/BattleScene.cpp"
-            timestampString = "497516152.457876"
+            timestampString = "497605290.976599"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "380"
-            endingLineNumber = "380"
+            startingLineNumber = "481"
+            endingLineNumber = "481"
             landmarkName = "BattleScene::takeAIMove()"
             landmarkType = "7">
          </BreakpointContent>
@@ -672,11 +672,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/Battle/BattleScene.cpp"
-            timestampString = "497516152.457876"
+            timestampString = "497605290.976599"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "354"
-            endingLineNumber = "354"
+            startingLineNumber = "455"
+            endingLineNumber = "455"
             landmarkName = "BattleScene::startTurn()"
             landmarkType = "7">
          </BreakpointContent>
@@ -704,11 +704,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/Battle/BattleScene.cpp"
-            timestampString = "497516152.457876"
+            timestampString = "497605290.976599"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "413"
-            endingLineNumber = "413"
+            startingLineNumber = "514"
+            endingLineNumber = "514"
             landmarkName = "BattleScene::takeAIAction(int creatureId)"
             landmarkType = "7">
          </BreakpointContent>
@@ -758,7 +758,7 @@
             startingLineNumber = "54"
             endingLineNumber = "54"
             landmarkName = "TitleLayer::init()"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -790,7 +790,7 @@
             startingLineNumber = "43"
             endingLineNumber = "43"
             landmarkName = "AppDelegate::applicationDidFinishLaunching()"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -982,7 +982,7 @@
             startingLineNumber = "43"
             endingLineNumber = "43"
             landmarkName = "TitleLayer::init()"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -996,7 +996,9 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "12"
-            endingLineNumber = "12">
+            endingLineNumber = "12"
+            landmarkName = "Constants::getScreenSize()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1022,11 +1024,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/Battle/BattleScene.cpp"
-            timestampString = "497516152.457876"
+            timestampString = "497605290.976599"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
             landmarkName = "BattleScene::BattleScene(ChapterRecord* record)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1141,6 +1143,70 @@
             endingLineNumber = "16"
             landmarkName = "GameFormula::dealWithFight(BattleField * field, Creature * subject, Creature * target)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../Classes/Battle/BattleScene.cpp"
+            timestampString = "497605557.501861"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "259"
+            endingLineNumber = "259"
+            landmarkName = "BattleScene::postFightAction(Ref * counterObjectObj)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../Classes/Battle/BattleField.cpp"
+            timestampString = "497606358.55697"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "767"
+            endingLineNumber = "767"
+            landmarkName = "BattleField::searchTargetInAttackRange(Creature * creature)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BattleField::searchTargetInAttackRange(Creature*)"
+                  moduleName = "FlameDragonX-mobile"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/suiyi/MyProjects/FlameDragonX/Classes/Battle/BattleField.cpp"
+                  timestampString = "497606944.362036"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "767"
+                  endingLineNumber = "767"
+                  offsetFromSymbolStart = "808">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BattleField::searchTargetInAttackRange(Creature*)"
+                  moduleName = "FlameDragonX-mobile"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/suiyi/MyProjects/FlameDragonX/Classes/Battle/BattleField.cpp"
+                  timestampString = "497606944.363395"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "767"
+                  endingLineNumber = "767"
+                  offsetFromSymbolStart = "956">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

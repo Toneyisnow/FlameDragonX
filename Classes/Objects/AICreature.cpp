@@ -14,3 +14,10 @@ AICreature::AICreature(CreatureType type)
 {
     
 }
+
+void AICreature::wakeUpByAttack()
+{
+    if (aiType == AIType_Idle) {
+        aiType = AIType_Aggressive;
+    }
+}

@@ -29,18 +29,25 @@ Vector<FDPoint *> RangeScopeResolver::calculcate()
         
         for (int k = 0; k <= r; k ++) {
             
-            result.pushBack(FDPoint::create(_point.x + r - k, _point.y + k));
+            appendPoint(result, _point.x + r - k, _point.y + k);
             
             if ( k > 0)
-                result.pushBack(FDPoint::create(_point.x + r - k, _point.y - k));
+                appendPoint(result, _point.x + r - k, _point.y - k);
             
             if ( k < r)
-                result.pushBack(FDPoint::create(_point.x - r + k, _point.y + k));
+                appendPoint(result, _point.x - r + k, _point.y + k);
             
             if ( k > 0 && k < r)
-                result.pushBack(FDPoint::create(_point.x - r + k, _point.y - k));
+                appendPoint(result, _point.x - r + k, _point.y - k);
         }
     }
     
     return result;
+}
+
+void RangeScopeResolver::appendPoint(Vector<FDPoint *> &list, int x, int y)
+{
+    if (x > 0 && x <= _field->getFieldSize().width && y > 0 && y <= _field->getFieldSize().height) {
+        list.pushBack(FDPoint::create(x, y));
+    }
 }

@@ -16,6 +16,7 @@ class SceneCreator : public cocos2d::Scene
 {
 public:
     static cocos2d::Scene* createTitleScene();
+    static cocos2d::Scene* createGameOverScene();
     
 };
 

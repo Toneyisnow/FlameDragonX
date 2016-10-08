@@ -239,3 +239,13 @@ void Creature::setLastGainedExperience(int exp)
     _lastGainedExperience = exp;
 }
 
+int Creature::lastGainedExperience()
+{
+    return _lastGainedExperience;
+}
+
+
+std::string Creature::updateExpAndLevelUp()
+{
+    return "";
+}

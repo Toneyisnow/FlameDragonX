@@ -10,6 +10,7 @@
 
 #include "SceneCreator.h"
 #include "TitleLayer.hpp"
+#include "GameOverLayer.hpp"
 
 USING_NS_CC;
 
@@ -29,6 +30,20 @@ Scene* SceneCreator::createTitleScene()
 }
 
 
+Scene* SceneCreator::createGameOverScene()
+{
+    // 'scene' is an autorelease object
+    auto scene = Scene::create();
+    
+    // 'layer' is an autorelease object
+    auto layer = GameOverLayer::create();
+    
+    // add layer as a child to scene
+    scene->addChild(layer);
+    
+    // return the scene
+    return scene;
+}
 
 
 

@@ -26,3 +26,8 @@ void MoneyItemDefinition::initFromFile(TextFileReader * reader)
     _quantity = reader->readInt();
     
 }
+
+int MoneyItemDefinition::quantity()
+{
+    return _quantity;
+}

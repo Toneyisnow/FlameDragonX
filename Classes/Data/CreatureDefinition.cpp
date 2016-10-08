@@ -156,3 +156,12 @@ bool CreatureDefinition::isKnight()
 {
     return (occupation == 131 || occupation == 132);
 }
+
+int CreatureDefinition::getMaximumLevel()
+{
+    if (race == 7) {
+        return 99;
+    }
+    
+    return 40;
+}

@@ -40,6 +40,8 @@ public:
     void takeTick(int synchronizedTick);
     
     bool isBusy();
+    
+    void removeAll();
 };
 
 

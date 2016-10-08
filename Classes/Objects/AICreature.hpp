@@ -13,6 +13,7 @@
 #include "Creature.hpp"
 
 typedef enum AIType {
+    AIType_Idle,
     AIType_Aggressive,
     AIType_Defensive,
     AIType_Guard,
@@ -34,6 +35,7 @@ private:
 public:
     
     AICreature(CreatureType type);
+    void wakeUpByAttack();
     
     int dropItemId;
 };

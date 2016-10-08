@@ -31,6 +31,7 @@ public:
     
     Vector<FDPoint *> calculcate();
     
+    void appendPoint(Vector<FDPoint *> &list, int x, int y);
 };
 
 #endif /* RangeScopeResolver_hpp */

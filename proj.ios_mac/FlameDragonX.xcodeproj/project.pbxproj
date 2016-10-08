@@ -20,6 +20,7 @@
 		3C18835F1D6BABA10059056E /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C18835E1D6BABA10059056E /* libz.1.2.5.dylib */; };
 		3C1883611D6BAC130059056E /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C1883601D6BAC130059056E /* CoreMotion.framework */; };
 		3C4FA5761DA620EC00AA9DF1 /* ExchangeItemTargetState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C4FA5741DA620EC00AA9DF1 /* ExchangeItemTargetState.cpp */; };
+		3C4FA57A1DA781C700AA9DF1 /* GameOverLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C4FA5781DA781C700AA9DF1 /* GameOverLayer.cpp */; };
 		3C8D68181D78EA2F00CC3616 /* CombinedActivity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C8D68161D78EA2F00CC3616 /* CombinedActivity.cpp */; };
 		3C8D681B1D78EAAE00CC3616 /* FieldActivity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C8D68191D78EAAE00CC3616 /* FieldActivity.cpp */; };
 		3C8D681E1D78EB3B00CC3616 /* GlobalActivity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C8D681C1D78EB3B00CC3616 /* GlobalActivity.cpp */; };
@@ -266,6 +267,8 @@
 		3C1883601D6BAC130059056E /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/CoreMotion.framework; sourceTree = DEVELOPER_DIR; };
 		3C4FA5741DA620EC00AA9DF1 /* ExchangeItemTargetState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ExchangeItemTargetState.cpp; path = Dispatchers/ExchangeItemTargetState.cpp; sourceTree = "<group>"; };
 		3C4FA5751DA620EC00AA9DF1 /* ExchangeItemTargetState.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ExchangeItemTargetState.hpp; path = Dispatchers/ExchangeItemTargetState.hpp; sourceTree = "<group>"; };
+		3C4FA5781DA781C700AA9DF1 /* GameOverLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GameOverLayer.cpp; path = Scenes/GameOverLayer.cpp; sourceTree = "<group>"; };
+		3C4FA5791DA781C700AA9DF1 /* GameOverLayer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = GameOverLayer.hpp; path = Scenes/GameOverLayer.hpp; sourceTree = "<group>"; };
 		3C8D68161D78EA2F00CC3616 /* CombinedActivity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CombinedActivity.cpp; path = Activities/CombinedActivity.cpp; sourceTree = "<group>"; };
 		3C8D68171D78EA2F00CC3616 /* CombinedActivity.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CombinedActivity.hpp; path = Activities/CombinedActivity.hpp; sourceTree = "<group>"; };
 		3C8D68191D78EAAE00CC3616 /* FieldActivity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FieldActivity.cpp; path = Activities/FieldActivity.cpp; sourceTree = "<group>"; };
@@ -698,6 +701,8 @@
 				3C18834D1D6BA1490059056E /* TitleLayer.hpp */,
 				3CD12F051D6BC86B00CDF793 /* FDScreen.cpp */,
 				3CD12F061D6BC86B00CDF793 /* FDScreen.hpp */,
+				3C4FA5781DA781C700AA9DF1 /* GameOverLayer.cpp */,
+				3C4FA5791DA781C700AA9DF1 /* GameOverLayer.hpp */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
@@ -1399,6 +1404,7 @@
 				3CE63B7B1D87DCB900C2C76B /* TalkMessage.cpp in Sources */,
 				3CE63B8D1D87DEE100C2C76B /* DetailBar.cpp in Sources */,
 				3CE63B711D853F3300C2C76B /* GameFormula.cpp in Sources */,
+				3C4FA57A1DA781C700AA9DF1 /* GameOverLayer.cpp in Sources */,
 				3C8D68631D7D30A000CC3616 /* StateSession.cpp in Sources */,
 				3CB1097F1D6F69AC002C4121 /* FDAnimate.cpp in Sources */,
 				3C8D685D1D7C0D9500CC3616 /* StateDispatcher.cpp in Sources */,

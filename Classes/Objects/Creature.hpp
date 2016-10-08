@@ -89,6 +89,9 @@ public:
     int updateMp(int delta);
     
     void setLastGainedExperience(int exp);
+    int lastGainedExperience();
+    
+    std::string updateExpAndLevelUp();
     
 };
 

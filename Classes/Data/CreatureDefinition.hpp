@@ -43,6 +43,8 @@ public:
     
     bool canFly();
     bool isKnight();
+    int getMaximumLevel();
+    
     
 };
 #endif /* CreatureDefinition_hpp */

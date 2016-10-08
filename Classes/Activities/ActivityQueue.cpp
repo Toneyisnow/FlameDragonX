@@ -103,3 +103,13 @@ void ActivityQueue::takeTick(int synchronizedTick)
         }
     }
 }
+
+void ActivityQueue::removeAll()
+{
+    this->_queuedActivityList->clear();
+    this->_singleActivityList->clear();
+    
+    _currentActivity->release();
+    _currentActivity = nullptr;
+    
+}

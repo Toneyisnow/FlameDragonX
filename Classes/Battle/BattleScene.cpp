@@ -25,6 +25,12 @@
 #include "LocalizedStrings.hpp"
 #include "DurationActivity.hpp"
 #include "CompositeBox.hpp"
+#include "SceneCreator.h"
+#include "ShowMessageActivity.hpp"
+#include "ConfirmMessage.hpp"
+#include "BatchActivity.hpp"
+#include "Enemy.hpp"
+#include "LocalizedStrings.hpp"
 
 USING_NS_CC;
 
@@ -51,6 +57,8 @@ BattleScene::BattleScene(ChapterRecord* record)
     
     _synchronizedTickCount = 0;
     schedule(CC_SCHEDULE_SELECTOR(BattleScene::takeDeltaTimeTck), 1.0 / Constants::GAME_FPS);
+    
+    _totalMoney = record->getMoney();
     
     _turnNumber = 0;
     startTurn();
@@ -221,26 +229,119 @@ void BattleScene::postFightAction(Ref * counterObjectObj)
     CounterObject * counterObject = (CounterObject *)counterObjectObj;
     
     Creature * creature = counterObject->getSubject();
-    Creature * target = counterObject->getTargetList().at(0);
+    Vector<Creature *> targetList = counterObject->getTargetList();
     
     // Triggered Events
     _eventHandler->notifyTriggeredEvents();
     
-    // Show Dying Animation
-    // if (creature->isDead())
-    {
-        CreatureDeadActivity * dead = CreatureDeadActivity::create(this->_battleField, target);
+    // Analysis Dead Creature and find the drop items
+    Vector<FDNumber *> dropItemList;
+    
+    if (creature->isDead()) {
+        CreatureDeadActivity * dead = CreatureDeadActivity::create(this->_battleField, creature);
         _activityQueue->appendActivity(dead);
+        
+        if (creature->getType() == CreatureType_Enemy) {
+            Enemy * enemy = (Enemy *)creature;
+            ItemDefinition * dropItem = DataStore::getInstance()->getItemDefinition(enemy->dropItemId);
+            if (dropItem != nullptr) {
+                dropItemList.pushBack(FDNumber::numberWithInt(dropItem->getDefinitionId()));
+            }
+        }
     }
     
-    // Show Talk messages
-    TalkActivity * talk = TalkActivity::create(TalkActivityType_Speak, this, creature, creature->getDefinition()->name);
-    _activityQueue->appendActivity(talk);
+    BatchActivity * activity = new BatchActivity();
+    for (Creature * target : targetList) {
+        if (target->isDead()) {
+            CreatureDeadActivity * act = CreatureDeadActivity::create(this->_battleField, target);
+            activity->addActivity(act);
+            
+            if (target->getType() == CreatureType_Enemy) {
+                Enemy * enemy = (Enemy *)target;
+                ItemDefinition * dropItem = DataStore::getInstance()->getItemDefinition(enemy->dropItemId);
+                if (dropItem != nullptr) {
+                    dropItemList.pushBack(FDNumber::numberWithInt(dropItem->getDefinitionId()));
+                }
+            }
+        }
+    }
+    _activityQueue->appendActivity(activity);
+    activity->release();
     
     
+    // Get Talker Friend
+    Creature * target = targetList.at(0);
+    if (creature->getType() == CreatureType_Friend && !creature->isDead()) {
+        _currentTalkerFriend = creature;
+    }
+    else if (target->getType() == CreatureType_Friend && !target->isDead()) {
+        _currentTalkerFriend = target;
+    }
+    
+    if (_currentTalkerFriend != nullptr) {
+        
+        // Pick up the drop items
+        std::string messageTemplate = LocalizedStrings::getInstance()->getMessageString(21);
+        
+        for (FDNumber * dropItem : dropItemList) {
+            ItemDefinition * item = DataStore::getInstance()->getItemDefinition(dropItem->getValue());
+            
+            // Show Talk Message
+            std::string message = StringUtils::format(messageTemplate.c_str(), item->getName().c_str());
+            
+            TalkActivity * talk = TalkActivity::create(TalkActivityType_Speak, this, _currentTalkerFriend, message);
+            _activityQueue->appendActivity(talk);
+            
+            if (item->isMoney()) {
+                _totalMoney += ((MoneyItemDefinition *)item)->quantity();
+            }
+            else
+            {
+                if (_currentTalkerFriend->creatureData()->isItemFull()) {
+                    
+                    // Show Item is Full, ask whether to exchange
+                    _currentDropItems.pushBack(FDNumber::numberWithInt(item->getDefinitionId()));
+                    
+                    ConfirmMessage * itemFull = new ConfirmMessage(_currentTalkerFriend, "Item is Full, Exchange?");
+                    itemFull->setReturnFunction(this, CALLBACK1_SELECTOR(BattleScene::confirmItemFullExchange));
+                    ShowMessageActivity * showMessage = ShowMessageActivity::create(this, itemFull);
+                    _activityQueue->appendActivity(showMessage);
+                    itemFull->release();
+                }
+                else
+                {
+                    _currentTalkerFriend->creatureData()->addItem(item->getDefinitionId());
+                }
+            }
+        }
+        
+        // Experience and level up message
+        if (_currentTalkerFriend->creatureData()->level < _currentTalkerFriend->getDefinition()->getMaximumLevel()
+            && _currentTalkerFriend->lastGainedExperience() > 0) {
+            
+            std::string experienceMessage = StringUtils::format(LocalizedStrings::getInstance()->getMessageString(5).c_str(), _currentTalkerFriend->lastGainedExperience());
+            TalkActivity * talk = TalkActivity::create(TalkActivityType_Speak, this, _currentTalkerFriend, experienceMessage);
+            _activityQueue->appendActivity(talk);
+            
+            std::string levelUpMessage = _currentTalkerFriend->updateExpAndLevelUp();
+            if (levelUpMessage.length() > 0)
+            {
+                TalkActivity * talk = TalkActivity::create(TalkActivityType_Speak, this, _currentTalkerFriend, levelUpMessage);
+                _activityQueue->appendActivity(talk);
+            }
+        }
+    }
+    
+    // Wake up if the AI is idle
+    for (Creature * target : targetList) {
+        if (target->getType() == CreatureType_Enemy || target->getType() == CreatureType_Npc) {
+            AICreature * aiCreature = (AICreature *)target;
+            aiCreature->wakeUpByAttack();
+        }
+    }
     
     // Triggered Events
-    _eventHandler->notifyTriggeredEvents();
+    this->appendMethodToActivity(_eventHandler, CALLBACK0_SELECTOR(EventHandler::notifyTriggeredEvents));
     
     // End Turn
     this->appendMethodToActivity(CALLBACK2_SELECTOR(BattleScene::creatureEndTurn), creature);
@@ -417,6 +518,51 @@ void BattleScene::takeAIAction(int creatureId)
     this->waiveTurn(creature);
 }
 
+void BattleScene::confirmItemFullExchange(int result)
+{
+    if (result == 0) {
+        TalkActivity * talk = TalkActivity::create(TalkActivityType_Speak, this, _currentTalkerFriend, "Ok, ignore it");
+        _activityQueue->insertActivity(talk);
+        
+        if (_currentDropItems.size() > 0) {
+            _currentDropItems.erase(0);
+        }
+    }
+    else
+    {
+        CompositeBox * itemBox = new CompositeBox(_currentTalkerFriend, MessageBoxType_Item, MessageBoxOperatingType_Select);
+        itemBox->setReturnFunction(this, CALLBACK1_SELECTOR(BattleScene::confirmItemFullExchangeWithItem));
+        _messageLayer->showMessage(itemBox);
+        itemBox->release();
+    }
+}
+
+void BattleScene::confirmItemFullExchangeWithItem(int result)
+{
+    if (result < 0)
+    {
+        TalkActivity * talk = TalkActivity::create(TalkActivityType_Speak, this, _currentTalkerFriend, "Ok, ignore it");
+        _activityQueue->insertActivity(talk);
+        
+        if (_currentDropItems.size() > 0) {
+            _currentDropItems.erase(0);
+        }
+    }
+    else
+    {
+        // Exchange the item with _currentDropItem
+        
+        if (_currentDropItems.size() > 0) {
+            
+            log("Exchange the item with drop item.");
+            
+            _currentTalkerFriend->creatureData()->removeItem(result);
+            _currentTalkerFriend->creatureData()->addItem(_currentDropItems.at(0)->getValue());
+            _currentDropItems.erase(0);
+        }
+    }
+}
+
 void BattleScene::appendMethodToActivity(SEL_CALLBACK0 selector)
 {
     appendMethodToActivity(this, selector);
@@ -448,6 +594,11 @@ void BattleScene::appendMethodToActivity(Ref* obj, SEL_CALLBACK2 selector, Ref* 
 {
     CallbackActivity * callback = CallbackActivity::create(CallbackMethod::create(obj, selector, parameter));
     _activityQueue->appendActivity(callback);
+}
+
+void BattleScene::clearAllActivity()
+{
+    _activityQueue->removeAll();
 }
 
 void BattleScene::showMessage(Message * message)
@@ -492,7 +643,11 @@ void BattleScene::gameOver()
 {
     log("Game Over");
     
+    this->clearAllActivity();
+    
     // Switch to GameOverScene
+    Scene * gameOverScene = SceneCreator::createGameOverScene();
+    Director::getInstance()->pushScene(TransitionFade::create(1.0f, gameOverScene));
 }
 
 void BattleScene::gameCleared()

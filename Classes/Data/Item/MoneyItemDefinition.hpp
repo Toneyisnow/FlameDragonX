@@ -26,6 +26,7 @@ public:
     static MoneyItemDefinition * readFromFile(TextFileReader * reader);
     void initFromFile(TextFileReader * reader);
     
+    int quantity();
 };
 
 #endif /* MoneyItemDefinition_hpp */
