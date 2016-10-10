@@ -17,7 +17,7 @@ USING_NS_CC;
 
 class SlideAnimation : public cocos2d::Ref
 {
-private:
+protected:
     
     int _defaultFrameTickCount;
     bool _isRepeatable;

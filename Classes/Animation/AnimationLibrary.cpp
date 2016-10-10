@@ -10,6 +10,8 @@
 #include "Constants.hpp"
 #include "TransparencyFrame.hpp"
 #include "TextureComposer.hpp"
+#include "DataStore.hpp"
+#include "FightAnimationDefinition.hpp"
 
 AnimationLibrary * AnimationLibrary::_instance = nullptr;
 
@@ -162,6 +164,20 @@ void AnimationLibrary::loadMenuAnimation(int menuItemId)
     animation->release();
 }
 
+void AnimationLibrary::loadFightAnimation(int animationId, FightAnimationType type)
+{
+    std::string key = StringUtils::format("Fight-%d-%d", animationId, type);
+    
+    FightAnimationDefinition * definition = DataStore::getInstance()->getFightAnimationDefinition(animationId, type);
+    FightAnimation * animation = new FightAnimation(definition);
+    
+    _slideAnimationDictionary->insert(key, animation);
+    animation->release();
+}
+
+
+///////////////////////////////////////////////////////
+
 SlideAnimation * AnimationLibrary::getIdleAnimation(int creatureAniId, bool greyout)
 {
     std::string key = StringUtils::format("Idle-%03d-%d", creatureAniId, greyout);
@@ -218,6 +234,17 @@ SlideAnimation * AnimationLibrary::getMenuAnimation(int menuItemId)
     }
     
     return _slideAnimationDictionary->at(key);
+}
+
+FightAnimation * AnimationLibrary::getFightAnimation(int animationId, FightAnimationType type)
+{
+    std::string key = StringUtils::format("Fight-%d-%d", animationId, type);
+    if (_slideAnimationDictionary->at(key) == nullptr)
+    {
+        this->loadFightAnimation(animationId, type);
+    }
+    
+    return (FightAnimation *)_slideAnimationDictionary->at(key);
 }
 
 std::string AnimationLibrary::filenameForBattleFieldAnimation(int creatureAniId, int index)

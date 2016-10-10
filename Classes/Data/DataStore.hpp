@@ -20,6 +20,7 @@
 #include "ShopDefinition.hpp"
 #include "OccupationDefinition.hpp"
 #include "TransfersDefinition.hpp"
+#include "FightAnimationDefinition.hpp"
 
 USING_NS_CC;
 
@@ -37,6 +38,7 @@ private:
     Map<int, ShopDefinition *> * _shopDefinitionDictionary;
     Map<int, OccupationDefinition *> * _occupationDefinitionDictionary;
     Map<int, TransfersDefinition *> * _transfersDefinitionDictionary;
+    Map<int, FightAnimationDefinition *> * _fightAnimationDefinitionDictionary;
     
     static int generateShopKey(int chapterId, ShopType shopType);
     static int generateLevelUpMagicKey(int creatureId, int creatureLevel);
@@ -57,6 +59,7 @@ public:
     void loadShopDefinition();
     void loadOccupationDefinition();
     void loadTransfersDefinition();
+    void loadFightAnimationDefinition();
     
     CreatureDefinition * getCreatureDefinition(int creatureId);
     ItemDefinition * getItemDefinition(int itemId);
@@ -66,6 +69,8 @@ public:
     ShopDefinition * getShopDefinition(int chapterId, ShopType shopType);
     OccupationDefinition * getOccupationDefinition(int occupationId);
     TransfersDefinition * getTransfersDefinition(int creatureId);
+    FightAnimationDefinition * getFightAnimationDefinition(int animationid, FightAnimationType type);
+    
     
 };
 #endif /* DataStore_hpp */

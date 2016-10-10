@@ -59,6 +59,9 @@ DataStore::~DataStore()
     
     this->_transfersDefinitionDictionary->clear();
     delete this->_transfersDefinitionDictionary;
+    
+    this->_fightAnimationDefinitionDictionary->clear();
+    delete this->_fightAnimationDefinitionDictionary;
 }
 
 void DataStore::loadData()
@@ -71,6 +74,7 @@ void DataStore::loadData()
     this->loadShopDefinition();
     this->loadOccupationDefinition();
     this->loadTransfersDefinition();
+    this->loadFightAnimationDefinition();
     
 }
 
@@ -277,6 +281,41 @@ void DataStore::loadTransfersDefinition()
     
     reader->release();
     log("Loaded Transfers Definition");
+}
+
+void DataStore::loadFightAnimationDefinition()
+{
+    log("Loading the FightAnimation Definition.");
+    
+    _fightAnimationDefinitionDictionary = new Map<int, FightAnimationDefinition *>();
+    TextFileReader * reader = new TextFileReader("Data/FightAnimation.dat");
+    
+    int animationId = reader->readInt();
+    while (animationId > 0) {
+        int animationCount = reader->readInt();
+        
+        // Idle Animation
+        FightAnimationDefinition * idleAnimation = new FightAnimationDefinition(animationId, FightAnimationType_Idle);
+        idleAnimation->readFromFile(reader);
+        _fightAnimationDefinitionDictionary->insert(animationId * 10 + FightAnimationType_Idle, idleAnimation);
+        idleAnimation->release();
+        
+        // Attack Animation
+        FightAnimationDefinition * attackAnimation = new FightAnimationDefinition(animationId, FightAnimationType_Attack);
+        attackAnimation->readFromFile(reader);
+        _fightAnimationDefinitionDictionary->insert(animationId * 10 + FightAnimationType_Attack, attackAnimation);
+        attackAnimation->release();
+        
+        // Skil Animation
+        if (animationCount > 2) {
+            FightAnimationDefinition * skillAnimation = new FightAnimationDefinition(animationId, FightAnimationType_Skill);
+            skillAnimation->readFromFile(reader);
+            _fightAnimationDefinitionDictionary->insert(animationId * 10 + FightAnimationType_Skill, attackAnimation);
+            skillAnimation->release();
+        }
+    }
+    
+    log("Loaded the FightAnimation Definition.");
 }
 
 

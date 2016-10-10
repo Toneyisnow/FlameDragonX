@@ -21,6 +21,10 @@
 		3C1883611D6BAC130059056E /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C1883601D6BAC130059056E /* CoreMotion.framework */; };
 		3C4FA5761DA620EC00AA9DF1 /* ExchangeItemTargetState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C4FA5741DA620EC00AA9DF1 /* ExchangeItemTargetState.cpp */; };
 		3C4FA57A1DA781C700AA9DF1 /* GameOverLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C4FA5781DA781C700AA9DF1 /* GameOverLayer.cpp */; };
+		3C4FA57C1DAB705200AA9DF1 /* Tais in Resources */ = {isa = PBXBuildFile; fileRef = 3C4FA57B1DAB705200AA9DF1 /* Tais */; };
+		3C4FA57F1DAB768600AA9DF1 /* FightAnimationDefinition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C4FA57D1DAB768600AA9DF1 /* FightAnimationDefinition.cpp */; };
+		3C4FA5821DAB769600AA9DF1 /* FightFrameDefinition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C4FA5801DAB769600AA9DF1 /* FightFrameDefinition.cpp */; };
+		3C4FA5851DAB826300AA9DF1 /* FightAnimation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C4FA5831DAB826300AA9DF1 /* FightAnimation.cpp */; };
 		3C8D68181D78EA2F00CC3616 /* CombinedActivity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C8D68161D78EA2F00CC3616 /* CombinedActivity.cpp */; };
 		3C8D681B1D78EAAE00CC3616 /* FieldActivity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C8D68191D78EAAE00CC3616 /* FieldActivity.cpp */; };
 		3C8D681E1D78EB3B00CC3616 /* GlobalActivity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C8D681C1D78EB3B00CC3616 /* GlobalActivity.cpp */; };
@@ -269,6 +273,13 @@
 		3C4FA5751DA620EC00AA9DF1 /* ExchangeItemTargetState.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ExchangeItemTargetState.hpp; path = Dispatchers/ExchangeItemTargetState.hpp; sourceTree = "<group>"; };
 		3C4FA5781DA781C700AA9DF1 /* GameOverLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GameOverLayer.cpp; path = Scenes/GameOverLayer.cpp; sourceTree = "<group>"; };
 		3C4FA5791DA781C700AA9DF1 /* GameOverLayer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = GameOverLayer.hpp; path = Scenes/GameOverLayer.hpp; sourceTree = "<group>"; };
+		3C4FA57B1DAB705200AA9DF1 /* Tais */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Tais; sourceTree = "<group>"; };
+		3C4FA57D1DAB768600AA9DF1 /* FightAnimationDefinition.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FightAnimationDefinition.cpp; path = Data/FightAnimationDefinition.cpp; sourceTree = "<group>"; };
+		3C4FA57E1DAB768600AA9DF1 /* FightAnimationDefinition.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = FightAnimationDefinition.hpp; path = Data/FightAnimationDefinition.hpp; sourceTree = "<group>"; };
+		3C4FA5801DAB769600AA9DF1 /* FightFrameDefinition.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FightFrameDefinition.cpp; path = Data/FightFrameDefinition.cpp; sourceTree = "<group>"; };
+		3C4FA5811DAB769600AA9DF1 /* FightFrameDefinition.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = FightFrameDefinition.hpp; path = Data/FightFrameDefinition.hpp; sourceTree = "<group>"; };
+		3C4FA5831DAB826300AA9DF1 /* FightAnimation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FightAnimation.cpp; path = Animation/FightAnimation.cpp; sourceTree = "<group>"; };
+		3C4FA5841DAB826300AA9DF1 /* FightAnimation.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = FightAnimation.hpp; path = Animation/FightAnimation.hpp; sourceTree = "<group>"; };
 		3C8D68161D78EA2F00CC3616 /* CombinedActivity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CombinedActivity.cpp; path = Activities/CombinedActivity.cpp; sourceTree = "<group>"; };
 		3C8D68171D78EA2F00CC3616 /* CombinedActivity.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CombinedActivity.hpp; path = Activities/CombinedActivity.hpp; sourceTree = "<group>"; };
 		3C8D68191D78EAAE00CC3616 /* FieldActivity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FieldActivity.cpp; path = Activities/FieldActivity.cpp; sourceTree = "<group>"; };
@@ -855,6 +866,8 @@
 				3CE63B291D7D5DDD00C2C76B /* OffsetFrame.hpp */,
 				3CE63B2B1D7D5DF900C2C76B /* TransparencyFrame.cpp */,
 				3CE63B2C1D7D5DF900C2C76B /* TransparencyFrame.hpp */,
+				3C4FA5831DAB826300AA9DF1 /* FightAnimation.cpp */,
+				3C4FA5841DAB826300AA9DF1 /* FightAnimation.hpp */,
 			);
 			name = Animation;
 			sourceTree = "<group>";
@@ -994,6 +1007,10 @@
 				3CE439A51D9503CF0043676E /* TransferDefinition.hpp */,
 				3CE439A71D9507840043676E /* TransfersDefinition.cpp */,
 				3CE439A81D9507840043676E /* TransfersDefinition.hpp */,
+				3C4FA57D1DAB768600AA9DF1 /* FightAnimationDefinition.cpp */,
+				3C4FA57E1DAB768600AA9DF1 /* FightAnimationDefinition.hpp */,
+				3C4FA5801DAB769600AA9DF1 /* FightFrameDefinition.cpp */,
+				3C4FA5811DAB769600AA9DF1 /* FightFrameDefinition.hpp */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -1097,6 +1114,7 @@
 				3C1883621D6BB0C10059056E /* Title */,
 				521A8EA819F11F5000D177D7 /* fonts */,
 				3CE63BA21D8BADD500C2C76B /* Strings */,
+				3C4FA57B1DAB705200AA9DF1 /* Tais */,
 				3EACC98E19EE6D4300EB3C5E /* res */,
 				46880B7619C43A67006E1F66 /* CloseNormal.png */,
 				46880B7719C43A67006E1F66 /* CloseSelected.png */,
@@ -1290,6 +1308,7 @@
 				5087E78617EB970100C73F5D /* Icon-76.png in Resources */,
 				3C8D68291D78FB8000CC3616 /* Others in Resources */,
 				3CE63B391D7F40FB00C2C76B /* Menu in Resources */,
+				3C4FA57C1DAB705200AA9DF1 /* Tais in Resources */,
 				5087E77F17EB970100C73F5D /* Default@2x.png in Resources */,
 				50EF629917ECD46A001EB2F8 /* Icon-100.png in Resources */,
 				3CD12EF71D6BB11600CDF793 /* Title_Continue_0.png in Resources */,
@@ -1418,6 +1437,7 @@
 				3C8D682F1D79F4A900CC3616 /* FDEvent.cpp in Sources */,
 				3CD12F2A1D6D065800CDF793 /* BattleScene.cpp in Sources */,
 				3CB1097C1D6F6635002C4121 /* SlideAnimation.cpp in Sources */,
+				3C4FA57F1DAB768600AA9DF1 /* FightAnimationDefinition.cpp in Sources */,
 				3CE439A01D94FF8B0043676E /* ShopDefinition.cpp in Sources */,
 				3CE439931D9332360043676E /* CreatureInfoMessage.cpp in Sources */,
 				3CD12F231D6D058000CDF793 /* TextFileReader.cpp in Sources */,
@@ -1446,6 +1466,7 @@
 				3CB109AA1D74F816002C4121 /* CreatureChapterRecord.cpp in Sources */,
 				3CE63B341D7E9BEA00C2C76B /* FDPoint.cpp in Sources */,
 				3CE4397E1D8FCBB20043676E /* AnyTurnCondition.cpp in Sources */,
+				3C4FA5851DAB826300AA9DF1 /* FightAnimation.cpp in Sources */,
 				3CE439651D8D02F60043676E /* SpriteMoveActivity.cpp in Sources */,
 				3CE63B961D8A664400C2C76B /* SelectMagicTargetState.cpp in Sources */,
 				3C8D68241D78F24300CC3616 /* CreatureMoveActivity.cpp in Sources */,
@@ -1461,6 +1482,7 @@
 				3CE63B6B1D8536C000C2C76B /* MagicResult.cpp in Sources */,
 				3CE63B4B1D83EFC700C2C76B /* RangeScopeResolver.cpp in Sources */,
 				3CE439781D8FC87F0043676E /* CreatureDeadCondition.cpp in Sources */,
+				3C4FA5821DAB769600AA9DF1 /* FightFrameDefinition.cpp in Sources */,
 				3CB1098C1D74CE92002C4121 /* SimpleMoveActivity.cpp in Sources */,
 				3C8D68561D7BF5F500CC3616 /* Cursor.cpp in Sources */,
 				3CE63B9B1D8A7D0600C2C76B /* ItemMenuState.cpp in Sources */,

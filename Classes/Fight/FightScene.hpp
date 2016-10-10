@@ -18,9 +18,12 @@ class FightScene : public CounterScene
 {
 private:
     
+    Creature * _subject;
+    Creature * _target;
+    
     FightResult * _fightResult;
     
-    void takeDeltaTimeTick(float dt);
+    void takeTick(float dt) override;
 
 public:
     

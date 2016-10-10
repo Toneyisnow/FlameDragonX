@@ -11,6 +11,8 @@
 
 #include "cocos2d.h"
 #include "SlideAnimation.hpp"
+#include "FightAnimationDefinition.hpp"
+#include "FightAnimation.hpp"
 
 USING_NS_CC;
 
@@ -33,6 +35,7 @@ private:
     void loadScopeIndicatorAnimation();
     void loadMenuAnimation(int menuItemId);
     
+    void loadFightAnimation(int animationId, FightAnimationType type);
     
 public:
     
@@ -49,10 +52,14 @@ public:
     SlideAnimation * getWalkAnimation(int creatureAniId, Direction direction);
     SlideAnimation * getDeadAnimation(int creatureAniId);
     
+    // Scope Indicator
     SlideAnimation * getScopeIndicatorAnimation();
     
+    // Menu
     SlideAnimation * getMenuAnimation(int menuItemId);
     
+    // Fight Animations
+    FightAnimation * getFightAnimation(int animationId, FightAnimationType type);
     
 };
 #endif /* AnimationLibrary_hpp */

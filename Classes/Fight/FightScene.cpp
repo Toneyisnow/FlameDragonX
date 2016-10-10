@@ -15,10 +15,13 @@ FightScene::FightScene(CounterInfo * info, FightResult * result)
     _fightResult = result;
     _fightResult->retain();
     
-    _layer = Layer::create();
-    this->addChild(_layer);
-
-    schedule(CC_SCHEDULE_SELECTOR(FightScene::takeDeltaTimeTick), 4.0);
+    if (result->getCounterObject() == nullptr)
+    {
+        throw new exception();
+    }
+    
+    _subject = result->getCounterObject()->getSubject();
+    _target = result->getCounterObject()->getTargetList().at(0);
     
     
 }
@@ -29,7 +32,7 @@ FightScene::~FightScene()
     
 }
 
-void FightScene::takeDeltaTimeTick(float dt)
+void FightScene::takeTick(float dt)
 {
     
     /*

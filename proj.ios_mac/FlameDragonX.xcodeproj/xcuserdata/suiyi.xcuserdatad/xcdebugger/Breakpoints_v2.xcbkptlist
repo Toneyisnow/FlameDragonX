@@ -214,7 +214,7 @@
             startingLineNumber = "88"
             endingLineNumber = "88"
             landmarkName = "DataStore::loadCreatureDefinition()"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -230,7 +230,7 @@
             startingLineNumber = "104"
             endingLineNumber = "104"
             landmarkName = "DataStore::loadCreatureDefinition()"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -262,7 +262,7 @@
             startingLineNumber = "110"
             endingLineNumber = "110"
             landmarkName = "DataStore::loadCreatureDefinition()"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -278,7 +278,7 @@
             startingLineNumber = "158"
             endingLineNumber = "158"
             landmarkName = "AnimationLibrary::loadMenuAnimation(int menuItemId)"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1046,7 +1046,7 @@
             startingLineNumber = "253"
             endingLineNumber = "253"
             landmarkName = "DataStore::loadOccupationDefinition()"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1062,7 +1062,7 @@
             startingLineNumber = "258"
             endingLineNumber = "258"
             landmarkName = "DataStore::loadOccupationDefinition()"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
