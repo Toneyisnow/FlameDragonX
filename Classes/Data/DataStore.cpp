@@ -313,8 +313,11 @@ void DataStore::loadFightAnimationDefinition()
             _fightAnimationDefinitionDictionary->insert(animationId * 10 + FightAnimationType_Skill, attackAnimation);
             skillAnimation->release();
         }
+        
+        animationId = reader->readInt();
     }
     
+    reader->release();
     log("Loaded the FightAnimation Definition.");
 }
 
@@ -360,6 +363,11 @@ OccupationDefinition * DataStore::getOccupationDefinition(int occupationId)
 TransfersDefinition * DataStore::getTransfersDefinition(int creatureId)
 {
     return this->_transfersDefinitionDictionary->at(creatureId);
+}
+
+FightAnimationDefinition * DataStore::getFightAnimationDefinition(int animationId, FightAnimationType type)
+{
+    return this->_fightAnimationDefinitionDictionary->at(animationId * 10 + type);
 }
 
 int DataStore::generateShopKey(int chapterId, ShopType shopType)

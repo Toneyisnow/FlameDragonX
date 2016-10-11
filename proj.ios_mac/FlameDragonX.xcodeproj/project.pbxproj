@@ -25,6 +25,7 @@
 		3C4FA57F1DAB768600AA9DF1 /* FightAnimationDefinition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C4FA57D1DAB768600AA9DF1 /* FightAnimationDefinition.cpp */; };
 		3C4FA5821DAB769600AA9DF1 /* FightFrameDefinition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C4FA5801DAB769600AA9DF1 /* FightFrameDefinition.cpp */; };
 		3C4FA5851DAB826300AA9DF1 /* FightAnimation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C4FA5831DAB826300AA9DF1 /* FightAnimation.cpp */; };
+		3C4FA5871DACADF100AA9DF1 /* Fights in Resources */ = {isa = PBXBuildFile; fileRef = 3C4FA5861DACADF100AA9DF1 /* Fights */; };
 		3C8D68181D78EA2F00CC3616 /* CombinedActivity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C8D68161D78EA2F00CC3616 /* CombinedActivity.cpp */; };
 		3C8D681B1D78EAAE00CC3616 /* FieldActivity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C8D68191D78EAAE00CC3616 /* FieldActivity.cpp */; };
 		3C8D681E1D78EB3B00CC3616 /* GlobalActivity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C8D681C1D78EB3B00CC3616 /* GlobalActivity.cpp */; };
@@ -280,6 +281,7 @@
 		3C4FA5811DAB769600AA9DF1 /* FightFrameDefinition.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = FightFrameDefinition.hpp; path = Data/FightFrameDefinition.hpp; sourceTree = "<group>"; };
 		3C4FA5831DAB826300AA9DF1 /* FightAnimation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FightAnimation.cpp; path = Animation/FightAnimation.cpp; sourceTree = "<group>"; };
 		3C4FA5841DAB826300AA9DF1 /* FightAnimation.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = FightAnimation.hpp; path = Animation/FightAnimation.hpp; sourceTree = "<group>"; };
+		3C4FA5861DACADF100AA9DF1 /* Fights */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fights; sourceTree = "<group>"; };
 		3C8D68161D78EA2F00CC3616 /* CombinedActivity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CombinedActivity.cpp; path = Activities/CombinedActivity.cpp; sourceTree = "<group>"; };
 		3C8D68171D78EA2F00CC3616 /* CombinedActivity.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CombinedActivity.hpp; path = Activities/CombinedActivity.hpp; sourceTree = "<group>"; };
 		3C8D68191D78EAAE00CC3616 /* FieldActivity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FieldActivity.cpp; path = Activities/FieldActivity.cpp; sourceTree = "<group>"; };
@@ -1109,6 +1111,7 @@
 				3CB1096A1D6E5E66002C4121 /* Icons */,
 				3CD12F2D1D6D074800CDF793 /* Data */,
 				3CE63BA71D8BC3FC00C2C76B /* Dato */,
+				3C4FA5861DACADF100AA9DF1 /* Fights */,
 				3CD12F2B1D6D073F00CDF793 /* Maps */,
 				3CE63B381D7F40FB00C2C76B /* Menu */,
 				3C1883621D6BB0C10059056E /* Title */,
@@ -1329,6 +1332,7 @@
 				50EF629617ECD46A001EB2F8 /* Icon-40.png in Resources */,
 				5087E78217EB970100C73F5D /* Icon-144.png in Resources */,
 				3CD12EFB1D6BB11600CDF793 /* Title_Start_0.png in Resources */,
+				3C4FA5871DACADF100AA9DF1 /* Fights in Resources */,
 				3CE63BA81D8BC3FC00C2C76B /* Dato in Resources */,
 				3EACC98F19EE6D4300EB3C5E /* res in Resources */,
 				3CE63BA31D8BADD500C2C76B /* Strings in Resources */,

@@ -46,3 +46,18 @@ void FightAnimationDefinition::readFromFile(TextFileReader * reader)
         frame->release();
     }
 }
+
+int FightAnimationDefinition::animationId()
+{
+    return _animationId;
+}
+
+FightAnimationType FightAnimationDefinition::type()
+{
+    return _type;
+}
+
+Vector<FightFrameDefinition *> FightAnimationDefinition::frameList()
+{
+    return _frameList;
+}

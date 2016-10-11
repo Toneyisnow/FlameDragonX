@@ -17,12 +17,22 @@ Message::Message()
     _callbackResultMethod = nullptr;
     _returnValue = -1;
     _isBlocking = true;
+    
+    _messageLayer = nullptr;
+    _layer = nullptr;
 }
 
 void Message::setReturnFunction(Ref * target, SEL_CALLBACK1 method)
 {
     _callbackTarget = target;
     _callbackResultMethod = method;
+}
+
+void Message::showDialog(Layer * layer)
+{
+    _layer = layer;
+    
+    initDialog();
 }
 
 void Message::showDialog(MessageLayer * layer)
@@ -41,15 +51,16 @@ void Message::showDialog(MessageLayer * layer)
 
 void Message::initDialog()
 {
+    /*
     _sprite = Sprite::create("Others/MessageBox.png");
     _sprite->setPosition(Vec2(240, 160));
     _messageLayer->addChild(_sprite);
-    
+    */
 }
 
 void Message::removeDialog()
 {
-    _messageLayer->removeChild(_sprite);
+    // _messageLayer->removeChild(_sprite);
 }
 
 void Message::handleClick(Vec2 location)

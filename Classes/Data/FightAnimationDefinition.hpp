@@ -34,6 +34,13 @@ public:
     FightAnimationDefinition(int animationId, FightAnimationType type);
     
     void readFromFile(TextFileReader * reader);
+    
+    int animationId();
+    FightAnimationType type();
+    
+    Vector<FightFrameDefinition *> frameList();
+    
+    
 };
 
 #endif /* FightAnimationDefinition_hpp */

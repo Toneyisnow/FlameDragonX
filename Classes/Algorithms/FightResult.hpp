@@ -37,10 +37,10 @@ public:
     void setFightBackInfo1(CounterResult* result);
     void setFightBackInfo2(CounterResult* result);
     
-    CounterResult attackInfo1;
-    CounterResult attackInfo2;
-    CounterResult fightBackInfo1;
-    CounterResult fightBackInfo2;
+    CounterResult * attackInfo1();
+    CounterResult * attackInfo2();
+    CounterResult * fightBackInfo1();
+    CounterResult * fightBackInfo2();
     
 };
 

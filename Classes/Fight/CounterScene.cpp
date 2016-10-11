@@ -35,6 +35,7 @@ CounterScene::CounterScene(CounterInfo * info)
     taiImage->setPosition(Vec2(winSize.width * 0.7f, winSize.height * 0.2f));
     _layer->addChild(taiImage);
     
+    this->start();
 }
 
 CounterScene::~CounterScene()
@@ -43,6 +44,11 @@ CounterScene::~CounterScene()
 }
 
 void CounterScene::start()
+{
+    
+}
+
+void CounterScene::takeTick(float dt)
 {
     
 }

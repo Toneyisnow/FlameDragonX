@@ -29,12 +29,27 @@ private:
     
     Vec2 _position;
     
+    Sprite * _hpBar;
+    Sprite * _mpBar;
+    Label * _hpLabel;
+    Label * _mpLabel;
+    
 public:
     
+    CreatureInfoMessage(Creature * creature);
     CreatureInfoMessage(Creature * creature, Vec2 clickedAtLocation);
     
     void initDialog() override;
     void removeDialog() override;
+    
+    void setPosition(Vec2 position);
+    
+    void setHp(int hpValue);
+    void setMp(int mpValue);
+    
+    void appear();
+    void hide();
+    
     
 };
 

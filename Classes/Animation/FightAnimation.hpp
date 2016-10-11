@@ -25,6 +25,7 @@ public:
   
     FightAnimation(FightAnimationDefinition * def);
     
+    bool isRemoteAttack();
 };
 
 #endif /* FightAnimation_hpp */

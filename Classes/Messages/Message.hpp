@@ -27,6 +27,7 @@ protected:
     SEL_CALLBACK1 _callbackResultMethod;
     
     MessageLayer * _messageLayer;
+    Layer * _layer;
     
     Sprite * _sprite;
     
@@ -39,6 +40,7 @@ public:
     void setReturnFunction(Ref * target, SEL_CALLBACK1 method);
     
     void showDialog(MessageLayer * layer);
+    void showDialog(Layer * layer);
     void closeDialog();
     
     virtual void initDialog();

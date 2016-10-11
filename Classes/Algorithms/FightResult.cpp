@@ -49,3 +49,23 @@ void FightResult::setFightBackInfo2(CounterResult* result)
     _fightBackInfo2 = result;
     _fightBackInfo2->retain();
 }
+
+CounterResult * FightResult::attackInfo1()
+{
+    return _attackInfo1;
+}
+
+CounterResult * FightResult::attackInfo2()
+{
+    return _attackInfo2;
+}
+
+CounterResult * FightResult::fightBackInfo1()
+{
+    return _fightBackInfo1;
+}
+
+CounterResult * FightResult::fightBackInfo2()
+{
+    return _fightBackInfo2;
+}
