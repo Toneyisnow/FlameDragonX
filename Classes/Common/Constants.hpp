@@ -33,6 +33,7 @@ public:
     
     static const int TickPerFrame_IdleAnimation = 15;
     static const int TickPerFrame_MoveAnimation = 5;
+    static const int TickPerFrame_FightAnimation = 5;
     
     constexpr static const float CREATURE_MOVE_SPEED = 1.2f;
     constexpr static const float CURSOR_MOVE_SPEED = 4.5f;

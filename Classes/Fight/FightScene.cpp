@@ -29,12 +29,21 @@ FightScene::FightScene(CounterInfo * info, FightResult * result)
     _targetAttackAnimation = AnimationLibrary::getInstance()->getFightAnimation(_target->getDefinition()->animationId, FightAnimationType_Attack);
     _targetIdleAnimation = AnimationLibrary::getInstance()->getFightAnimation(_target->getDefinition()->animationId, FightAnimationType_Idle);
     
+    _subjectAnimation = new CombinedAnimation();
+    _targetAnimation = new CombinedAnimation();
+    
+    this->start();
 }
 
 FightScene::~FightScene()
 {
     _fightResult->autorelease();
     
+    _subjectAnimation->release();
+    _targetAnimation->release();
+    
+    _subjectAnimate->release();
+    _targetAnimate->release();
 }
 
 void FightScene::start()
@@ -44,33 +53,76 @@ void FightScene::start()
     
     
     // Subject and Target
-    _subjectSprite = ScaledSprite::create("Others/Empty.png");
+    
+    _subjectSprite = ScaledSprite::create(StringUtils::format("Fights/%03d/Fight-%03d-1-01.png", _subject->getDefinition()->animationId, _subject->getDefinition()->animationId));
     _subjectSprite->setScale(1.3f);
     _subjectSprite->setPosition(screenCenter);
     _layer->addChild(_subjectSprite);
     
-    _targetSprite = ScaledSprite::create("Others/Empty.png");
+    _targetSprite = ScaledSprite::create(StringUtils::format("Fights/%03d/Fight-%03d-1-01.png", _target->getDefinition()->animationId, _target->getDefinition()->animationId));
     _targetSprite->setScale(1.3f);
     _targetSprite->setPosition(screenCenter);
     _layer->addChild(_targetSprite);
     
+    _subjectAnimate = new FDAnimate(_subjectSprite);
+    _subjectAnimate->setAnimation(_subjectAnimation);
+    _targetAnimate = new FDAnimate(_targetSprite);
+    _targetAnimate->setAnimation(_targetAnimation);
+    
+    
     // Creature Bar
     _subjectInfo = new CreatureInfoMessage(_subject);
-    if (_fightResult->fightBackInfo1() != nullptr) {
-        _subjectInfo->setHp(_fightResult->fightBackInfo1()->hpBefore);
-    }
-    
-    _subjectInfo->setPosition(this->getBarLocation(_subject));
     _subjectInfo->showDialog(_layer);
+    _subjectInfo->setPosition(this->getBarLocation(_subject));
+    if (_fightResult->fightBackInfo1() != nullptr) {
+        CounterResult * back1 = _fightResult->fightBackInfo1();
+        //// _subjectInfo->setHp(_fightResult->fightBackInfo1()->hpBefore);
+    }
+    _subjectInfo->release();
     
     _targetInfo = new CreatureInfoMessage(_target);
+    _targetInfo->showDialog(_layer);
     _targetInfo->setHp(_fightResult->attackInfo1()->hpBefore);
     _targetInfo->setPosition(this->getBarLocation(_target));
-    _targetInfo->showDialog(_layer);
+    _targetInfo->release();
     
     if (_subjectAttackAnimation->isRemoteAttack())
     {
         this->setTargetVisible(false);
+    }
+    
+    _subjectAnimation->appendAnimation(_subjectIdleAnimation);
+    _subjectAnimation->appendAnimation(_subjectIdleAnimation);
+    
+    _subjectAnimation->appendAnimation(_subjectAttackAnimation);
+    if (_fightResult->attackInfo2() != nullptr) {
+        _subjectAnimation->appendAnimation(_subjectAttackAnimation);
+    }
+    
+    alignSubjectTargetAnimation();
+    
+    if (_fightResult->fightBackInfo1() != nullptr) {
+        _targetAnimation->appendAnimation(_targetAttackAnimation);
+    }
+    if (_fightResult->fightBackInfo2() != nullptr) {
+        _targetAnimation->appendAnimation(_targetAttackAnimation);
+    }
+    
+    alignSubjectTargetAnimation();
+    
+    _subjectAnimation->appendAnimation(_subjectIdleAnimation);
+    _subjectAnimation->appendAnimation(_subjectIdleAnimation);
+    alignSubjectTargetAnimation();
+    
+}
+
+void FightScene::alignSubjectTargetAnimation()
+{
+    while (_subjectAnimation->getTotalTick() < _targetAnimation->getTotalTick()) {
+        _subjectAnimation->appendAnimation(_subjectIdleAnimation);
+    }
+    while (_targetAnimation->getTotalTick() < _subjectAnimation->getTotalTick()) {
+        _targetAnimation->appendAnimation(_targetIdleAnimation);
     }
 }
 
@@ -78,34 +130,13 @@ void FightScene::takeTick(float dt)
 {
     _tickCount ++;
     
-    if (_tickCount < 120) {
-        return;
+    _subjectAnimate->takeTick(_tickCount);
+    _targetAnimate->takeTick(_tickCount);
+    
+    
+    if (_subjectAnimate->hasFinished() && _targetAnimate->hasFinished()) {
+        closeScene();
     }
-    
-    /*
-     Add the follwoing code to Scene class:
-     
-     void Director::popScene(std::function<Scene*(Scene*)> wrappingFunc) {
-     popScene();
-     if (_nextScene) {
-     _nextScene = wrappingFunc(_nextScene);
-     }
-     }
-     
-     */
-    
-    if (_tickCount > 120)
-    {
-        return;
-    }
-    
-    auto f = [](Scene* scene) {
-        return TransitionFade::create(1.0f, scene);
-    };
-    Director::getInstance()->popScene(f);
-    
-    CallbackMethod * method = _information->getCallback();
-    method->execute();
 }
 
 void FightScene::setTargetVisible(bool val)

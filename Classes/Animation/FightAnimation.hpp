@@ -13,19 +13,26 @@
 #include "SlideAnimation.hpp"
 #include "FightAnimationDefinition.hpp"
 
+class CounterScene;
+
 class FightAnimation : public SlideAnimation
 {
 private:
 
-    const int DEFAULT_INTERVAL = 10;
-    
     FightAnimationDefinition * _definition;
+    
+    CounterScene * _scene;
+    int _tagIndex;
     
 public:
   
     FightAnimation(FightAnimationDefinition * def);
     
     bool isRemoteAttack();
+    
+    void setTagIndex(int tag);
+    void setCounterScene(CounterScene * scene);
+    
 };
 
 #endif /* FightAnimation_hpp */

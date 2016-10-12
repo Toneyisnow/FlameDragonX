@@ -14,6 +14,7 @@
 #include "CounterScene.hpp"
 #include "FightResult.hpp"
 #include "FightAnimation.hpp"
+#include "CombinedAnimation.hpp"
 
 class FightScene : public CounterScene
 {
@@ -32,6 +33,11 @@ private:
     FightAnimation * _targetAttackAnimation;
     FightAnimation * _targetIdleAnimation;
     
+    CombinedAnimation * _subjectAnimation;
+    CombinedAnimation * _targetAnimation;
+    
+    FDAnimate * _subjectAnimate;
+    FDAnimate * _targetAnimate;
     
     Vec2 getBarLocation(Creature * creature);
     void setTargetVisible(bool val);
@@ -44,6 +50,7 @@ public:
     ~FightScene();
    
     void start() override;
+    void alignSubjectTargetAnimation();
     
 };
 

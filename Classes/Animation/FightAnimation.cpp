@@ -10,7 +10,7 @@
 #include "cocos2d.h"
 
 FightAnimation::FightAnimation(FightAnimationDefinition * def)
-: SlideAnimation(DEFAULT_INTERVAL, false, false)
+: SlideAnimation(Constants::TickPerFrame_FightAnimation, false, false)
 {
     _definition = def;
     
@@ -30,4 +30,15 @@ bool FightAnimation::isRemoteAttack()
     }
     
     return false;
+}
+
+
+void FightAnimation::setTagIndex(int tag)
+{
+    _tagIndex = tag;
+}
+
+void FightAnimation::setCounterScene(CounterScene * scene)
+{
+    _scene = scene;
 }

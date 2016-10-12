@@ -10,6 +10,8 @@
 
 CounterScene::CounterScene(CounterInfo * info)
 {
+    _isClosing = false;
+    
     _information = info;
     _information->retain();
     
@@ -35,7 +37,6 @@ CounterScene::CounterScene(CounterInfo * info)
     taiImage->setPosition(Vec2(winSize.width * 0.7f, winSize.height * 0.2f));
     _layer->addChild(taiImage);
     
-    this->start();
 }
 
 CounterScene::~CounterScene()
@@ -51,4 +52,31 @@ void CounterScene::start()
 void CounterScene::takeTick(float dt)
 {
     
+}
+
+void CounterScene::closeScene()
+{
+    if (_isClosing) {
+        return;
+    }
+    
+    _isClosing = true;
+    
+    /*
+     Add the follwoing code to Scene class:
+     
+     void Director::popScene(std::function<Scene*(Scene*)> wrappingFunc) {
+     popScene();
+     if (_nextScene) {
+     _nextScene = wrappingFunc(_nextScene);
+     }
+     }
+     */
+    auto f = [](Scene* scene) {
+        return TransitionFade::create(0.6f, scene);
+    };
+    Director::getInstance()->popScene(f);
+    
+    CallbackMethod * method = _information->getCallback();
+    method->execute();
 }

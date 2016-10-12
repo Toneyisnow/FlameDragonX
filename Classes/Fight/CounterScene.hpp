@@ -27,6 +27,8 @@ protected:
     
     Layer * _layer;
     int _tickCount;
+    bool _isClosing;
+    
     
     ScaledSprite * _taiSprite;
     
@@ -41,6 +43,8 @@ public:
     
     virtual void start();
     virtual void takeTick(float dt);
+    
+    void closeScene();
 };
 
 #endif /* FightScene_hpp */

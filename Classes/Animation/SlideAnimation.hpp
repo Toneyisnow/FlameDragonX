@@ -35,14 +35,14 @@ public:
     void appendFrame(std::string filename);
     void appendFrame(Texture2D * texture);
     
-    int getFrameCount();
+    virtual int getFrameCount();
     FDFrame * frameAt(int index);
     
-    FDFrame * frameAtTick(int tick);
+    virtual FDFrame * frameAtTick(int tick);
     
     bool isRepeatable();
     bool isSynchronized();
-    int getTotalTick();
+    virtual int getTotalTick();
     
 };
 

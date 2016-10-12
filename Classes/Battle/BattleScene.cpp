@@ -194,7 +194,7 @@ void BattleScene::attackTo(Creature * creature, Creature * target)
     CounterInfo * info = new CounterInfo(_chapterId, callback);
     FightScene * scene = new FightScene(info, result);
     
-    Director::getInstance()->pushScene(TransitionFade::create(1.0f, scene));
+    Director::getInstance()->pushScene(TransitionFade::create(0.6f, scene));
 
     info->release();
     scene->release();
@@ -214,7 +214,7 @@ void BattleScene::magicTo(Creature * creature, int magicIndex, Vector<Creature *
     CallbackMethod * callback = CallbackMethod::create(this, CALLBACK2_SELECTOR(BattleScene::postFightAction), result->getCounterObject());
     CounterInfo * info = new CounterInfo(_chapterId, callback);
     MagicScene * scene = new MagicScene(info, result);
-    Director::getInstance()->pushScene(TransitionFade::create(1.0f, scene));
+    Director::getInstance()->pushScene(TransitionFade::create(0.6f, scene));
     
     info->release();
     scene->release();
@@ -224,7 +224,7 @@ void BattleScene::postFightAction(Ref * counterObjectObj)
 {
     log("Enter postFightAction.");
     
-    _activityQueue->appendActivity(DurationActivity::create(1.0f));
+    _activityQueue->appendActivity(DurationActivity::create(0.6f));
     
     CounterObject * counterObject = (CounterObject *)counterObjectObj;
     
