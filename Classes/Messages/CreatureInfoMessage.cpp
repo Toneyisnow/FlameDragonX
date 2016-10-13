@@ -89,7 +89,7 @@ void CreatureInfoMessage::removeDialog()
 void CreatureInfoMessage::setHp(int hpValue)
 {
     // HP Bar
-    if (hpValue == 0) {
+    if (hpValue <= 0) {
         _hpBar->setOpacity(0);
     }
     else {
@@ -144,4 +144,9 @@ void CreatureInfoMessage::appear()
 void CreatureInfoMessage::hide()
 {
     _baseSprite->setVisible(false);
+}
+
+void CreatureInfoMessage::setZOrder(int order)
+{
+    _baseSprite->setLocalZOrder(order);
 }

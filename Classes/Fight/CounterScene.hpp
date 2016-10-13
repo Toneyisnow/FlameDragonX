@@ -21,7 +21,7 @@ protected:
     const int ZORDER_ENEMYBAR = 2;
     const int ZORDER_FRIENDBAR = 3;
     const int ZORDER_TAI = 4;
-    const int ZORDER_FRIENDGUY = 5;
+    const int ZORDER_FRIEND = 5;
     
     CounterInfo * _information;
     

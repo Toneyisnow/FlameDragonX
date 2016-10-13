@@ -9,6 +9,7 @@
 #include "FightScene.hpp"
 #include "CallbackMethod.hpp"
 #include "AnimationLibrary.hpp"
+#include "FightFrame.hpp"
 
 FightScene::FightScene(CounterInfo * info, FightResult * result)
 : CounterScene(info)
@@ -29,8 +30,6 @@ FightScene::FightScene(CounterInfo * info, FightResult * result)
     _targetAttackAnimation = AnimationLibrary::getInstance()->getFightAnimation(_target->getDefinition()->animationId, FightAnimationType_Attack);
     _targetIdleAnimation = AnimationLibrary::getInstance()->getFightAnimation(_target->getDefinition()->animationId, FightAnimationType_Idle);
     
-    _subjectAnimation = new CombinedAnimation();
-    _targetAnimation = new CombinedAnimation();
     
     this->start();
 }
@@ -39,11 +38,11 @@ FightScene::~FightScene()
 {
     _fightResult->autorelease();
     
-    _subjectAnimation->release();
-    _targetAnimation->release();
-    
     _subjectAnimate->release();
     _targetAnimate->release();
+    
+    _subjectInfo->release();
+    _targetInfo->release();
 }
 
 void FightScene::start()
@@ -57,72 +56,73 @@ void FightScene::start()
     _subjectSprite = ScaledSprite::create(StringUtils::format("Fights/%03d/Fight-%03d-1-01.png", _subject->getDefinition()->animationId, _subject->getDefinition()->animationId));
     _subjectSprite->setScale(1.3f);
     _subjectSprite->setPosition(screenCenter);
-    _layer->addChild(_subjectSprite);
+    _layer->addChild(_subjectSprite, (_subject->getType() == CreatureType_Enemy) ? ZORDER_ENEMY : ZORDER_FRIEND);
     
     _targetSprite = ScaledSprite::create(StringUtils::format("Fights/%03d/Fight-%03d-1-01.png", _target->getDefinition()->animationId, _target->getDefinition()->animationId));
     _targetSprite->setScale(1.3f);
     _targetSprite->setPosition(screenCenter);
-    _layer->addChild(_targetSprite);
+    _layer->addChild(_targetSprite, (_target->getType() == CreatureType_Enemy) ? ZORDER_ENEMY : ZORDER_FRIEND);
     
-    _subjectAnimate = new FDAnimate(_subjectSprite);
-    _subjectAnimate->setAnimation(_subjectAnimation);
-    _targetAnimate = new FDAnimate(_targetSprite);
-    _targetAnimate->setAnimation(_targetAnimation);
+    _subjectAnimate = new CombinedAnimate(_subjectSprite);
+    _targetAnimate = new CombinedAnimate(_targetSprite);
     
     
     // Creature Bar
     _subjectInfo = new CreatureInfoMessage(_subject);
     _subjectInfo->showDialog(_layer);
+    _subjectInfo->setZOrder((_subject->getType() == CreatureType_Enemy) ? ZORDER_ENEMYBAR : ZORDER_FRIENDBAR);
     _subjectInfo->setPosition(this->getBarLocation(_subject));
     if (_fightResult->fightBackInfo1() != nullptr) {
         CounterResult * back1 = _fightResult->fightBackInfo1();
         //// _subjectInfo->setHp(_fightResult->fightBackInfo1()->hpBefore);
     }
-    _subjectInfo->release();
     
     _targetInfo = new CreatureInfoMessage(_target);
     _targetInfo->showDialog(_layer);
+    _targetInfo->setZOrder((_target->getType() == CreatureType_Enemy) ? ZORDER_ENEMYBAR : ZORDER_FRIENDBAR);
     _targetInfo->setHp(_fightResult->attackInfo1()->hpBefore);
     _targetInfo->setPosition(this->getBarLocation(_target));
-    _targetInfo->release();
     
     if (_subjectAttackAnimation->isRemoteAttack())
     {
         this->setTargetVisible(false);
     }
     
-    _subjectAnimation->appendAnimation(_subjectIdleAnimation);
-    _subjectAnimation->appendAnimation(_subjectIdleAnimation);
+    _subjectAnimate->appendAnimate(FDAnimate::create(_subjectSprite, _subjectIdleAnimation));
+    _subjectAnimate->appendAnimate(FDAnimate::create(_subjectSprite, _subjectIdleAnimation));
     
-    _subjectAnimation->appendAnimation(_subjectAttackAnimation);
+    _subjectAnimate->appendAnimate(generateAttackAnimate(_subjectSprite, _subjectAttackAnimation, 1, CALLBACK2_SELECTOR(FightScene::onSubjectAttack)));
+    
     if (_fightResult->attackInfo2() != nullptr) {
-        _subjectAnimation->appendAnimation(_subjectAttackAnimation);
+        _subjectAnimate->appendAnimate(generateAttackAnimate(_subjectSprite, _subjectAttackAnimation, 2, CALLBACK2_SELECTOR(FightScene::onSubjectAttack)));
     }
     
     alignSubjectTargetAnimation();
     
     if (_fightResult->fightBackInfo1() != nullptr) {
-        _targetAnimation->appendAnimation(_targetAttackAnimation);
+        _targetAnimate->appendAnimate(generateAttackAnimate(_targetSprite, _targetAttackAnimation, 1, CALLBACK2_SELECTOR(FightScene::onTargetAttack)));
     }
     if (_fightResult->fightBackInfo2() != nullptr) {
-        _targetAnimation->appendAnimation(_targetAttackAnimation);
+        _targetAnimate->appendAnimate(generateAttackAnimate(_targetSprite, _targetAttackAnimation, 2, CALLBACK2_SELECTOR(FightScene::onTargetAttack)));
     }
     
     alignSubjectTargetAnimation();
     
-    _subjectAnimation->appendAnimation(_subjectIdleAnimation);
-    _subjectAnimation->appendAnimation(_subjectIdleAnimation);
+    _targetAnimate->appendAnimate(FDAnimate::create(_targetSprite, _targetIdleAnimation));
+    _targetAnimate->appendAnimate(FDAnimate::create(_targetSprite, _targetIdleAnimation));
     alignSubjectTargetAnimation();
-    
 }
 
 void FightScene::alignSubjectTargetAnimation()
 {
-    while (_subjectAnimation->getTotalTick() < _targetAnimation->getTotalTick()) {
-        _subjectAnimation->appendAnimation(_subjectIdleAnimation);
+    if (!_subjectAttackAnimation->isRemoteAttack()) {
+        while (_subjectAnimate->getTotalTick() < _targetAnimate->getTotalTick()) {
+            _subjectAnimate->appendAnimate(FDAnimate::create(_subjectSprite, _subjectIdleAnimation));
+        }
     }
-    while (_targetAnimation->getTotalTick() < _subjectAnimation->getTotalTick()) {
-        _targetAnimation->appendAnimation(_targetIdleAnimation);
+    
+    while (_targetAnimate->getTotalTick() < _subjectAnimate->getTotalTick()) {
+        _targetAnimate->appendAnimate(FDAnimate::create(_targetSprite, _targetIdleAnimation));
     }
 }
 
@@ -166,3 +166,70 @@ Vec2 FightScene::getBarLocation(Creature * creature)
         return Vec2(screenSize.width * 0.25, screenSize.height * 0.1);
     }
 }
+
+FDAnimate * FightScene::generateAttackAnimate(Sprite * sprite, SlideAnimation * animation, int tag, SEL_CALLBACK2 onAttack)
+{
+    FDAnimate * animate = FDAnimate::create(sprite, animation);
+    animate->setTag(tag);
+    animate->setCallback(this, onAttack);
+    
+    return animate;
+}
+
+void FightScene::onSubjectAttack(Ref * frameObj)
+{
+    FightFrame * frame = (FightFrame *)frameObj;
+    FightFrameDefinition * frameDefinition = frame->getDefinition();
+    
+    int tag = _subjectAnimate->getCurrentAnimate()->getTag();
+    CounterResult * attackInfo = (tag == 2) ? _fightResult->attackInfo2() : _fightResult->attackInfo1();
+    
+    if (_subjectAttackAnimation->isRemoteAttack())
+    {
+        if (frameDefinition->isRemote()) {
+            this->setTargetVisible(false);
+            _subjectInfo->appear();
+        } else {
+            this->setTargetVisible(true);
+            _subjectInfo->hide();
+        }
+    }
+    
+    if (frameDefinition->isHitting()) {
+        
+        int nowValue = attackInfo->hpBefore - (attackInfo->hpBefore - attackInfo->hpAfter) * frameDefinition->hittingRate();
+        if (nowValue < 0) {
+            nowValue = 0;
+        }
+        
+        _targetInfo->setHp(nowValue);
+        
+        if (attackInfo->isCriticalHit) {
+            // TODO
+        }
+    }
+}
+
+void FightScene::onTargetAttack(Ref * frameObj)
+{
+    FightFrame * frame = (FightFrame *)frameObj;
+    FightFrameDefinition * frameDefinition = frame->getDefinition();
+    
+    int tag = _subjectAnimate->getCurrentAnimate()->getTag();
+    CounterResult * attackInfo = (tag == 2) ? _fightResult->fightBackInfo2() : _fightResult->fightBackInfo1();
+    
+    if (frameDefinition->isHitting()) {
+        
+        int nowValue = attackInfo->hpBefore - (attackInfo->hpBefore - attackInfo->hpAfter) * frameDefinition->hittingRate();
+        if (nowValue < 0) {
+            nowValue = 0;
+        }
+        
+        _subjectInfo->setHp(nowValue);
+        
+        if (attackInfo->isCriticalHit) {
+            // TODO
+        }
+    }
+}
+

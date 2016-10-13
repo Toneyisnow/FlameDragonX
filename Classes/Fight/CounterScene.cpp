@@ -28,14 +28,14 @@ CounterScene::CounterScene(CounterInfo * info)
     ScaledSprite * backgroundImage = ScaledSprite::create(backgroundImagefile);
     backgroundImage->setScale(1.3f);
     backgroundImage->setPosition(Vec2(winSize.width / 2, winSize.height / 2));
-    _layer->addChild(backgroundImage);
+    _layer->addChild(backgroundImage, 0);
     
     // Add Tai
     std::string taiImageFile = StringUtils::format("Tais/Tai-%02d.png", info->getBackgroundImageId());
-    ScaledSprite * taiImage = ScaledSprite::create(taiImageFile);
-    taiImage->setScale(1.3f);
-    taiImage->setPosition(Vec2(winSize.width * 0.7f, winSize.height * 0.2f));
-    _layer->addChild(taiImage);
+    _taiSprite = ScaledSprite::create(taiImageFile);
+    _taiSprite->setScale(1.3f);
+    _taiSprite->setPosition(Vec2(winSize.width * 0.68f, winSize.height / 2 - 115));
+    _layer->addChild(_taiSprite, ZORDER_TAI);
     
 }
 

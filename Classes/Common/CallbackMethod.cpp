@@ -112,3 +112,4 @@ void CallbackMethod::execute()
         (_target->*_selector2)(_paramObject);
     }
 }
+

@@ -30,6 +30,7 @@ public:
     int soundId();
     bool isRemote();
     float hittingRate();
+    bool isHitting();
     
 };
 

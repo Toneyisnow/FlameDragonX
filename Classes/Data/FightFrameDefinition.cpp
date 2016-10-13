@@ -34,3 +34,8 @@ float FightFrameDefinition::hittingRate()
 {
     return _hittingRate;
 }
+
+bool FightFrameDefinition::isHitting()
+{
+    return _hittingRate > 0.01;
+}

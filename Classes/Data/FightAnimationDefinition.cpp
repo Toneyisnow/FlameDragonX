@@ -40,7 +40,7 @@ void FightAnimationDefinition::readFromFile(TextFileReader * reader)
         int interval = 100; // ??
         int soundId = 0;
         bool isRemote = (i <= remoteFrameIndex);
-        float hittingRate = (_type == FightAnimationType_Attack) ? hitArray[i] / 100.0f : 0;
+        float hittingRate = (_type == FightAnimationType_Attack) ? hitArray[i - 1] / 100.0f : 0;
         FightFrameDefinition * frame = new FightFrameDefinition(interval, soundId, isRemote, hittingRate);
         _frameList.pushBack(frame);
         frame->release();

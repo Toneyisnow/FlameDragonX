@@ -21,17 +21,12 @@ private:
 
     FightAnimationDefinition * _definition;
     
-    CounterScene * _scene;
-    int _tagIndex;
-    
 public:
   
     FightAnimation(FightAnimationDefinition * def);
     
     bool isRemoteAttack();
     
-    void setTagIndex(int tag);
-    void setCounterScene(CounterScene * scene);
     
 };
 

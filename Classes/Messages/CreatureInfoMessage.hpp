@@ -50,6 +50,7 @@ public:
     void appear();
     void hide();
     
+    void setZOrder(int order);
     
 };
 

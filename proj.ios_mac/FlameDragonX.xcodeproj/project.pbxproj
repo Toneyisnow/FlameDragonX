@@ -26,7 +26,8 @@
 		3C4FA5821DAB769600AA9DF1 /* FightFrameDefinition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C4FA5801DAB769600AA9DF1 /* FightFrameDefinition.cpp */; };
 		3C4FA5851DAB826300AA9DF1 /* FightAnimation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C4FA5831DAB826300AA9DF1 /* FightAnimation.cpp */; };
 		3C4FA5871DACADF100AA9DF1 /* Fights in Resources */ = {isa = PBXBuildFile; fileRef = 3C4FA5861DACADF100AA9DF1 /* Fights */; };
-		3C4FA58A1DAE0DBE00AA9DF1 /* CombinedAnimation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C4FA5881DAE0DBE00AA9DF1 /* CombinedAnimation.cpp */; };
+		3C4FA58A1DAE0DBE00AA9DF1 /* CombinedAnimate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C4FA5881DAE0DBE00AA9DF1 /* CombinedAnimate.cpp */; };
+		3C4FA58D1DAF57B300AA9DF1 /* FightFrame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C4FA58B1DAF57B300AA9DF1 /* FightFrame.cpp */; };
 		3C8D68181D78EA2F00CC3616 /* CombinedActivity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C8D68161D78EA2F00CC3616 /* CombinedActivity.cpp */; };
 		3C8D681B1D78EAAE00CC3616 /* FieldActivity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C8D68191D78EAAE00CC3616 /* FieldActivity.cpp */; };
 		3C8D681E1D78EB3B00CC3616 /* GlobalActivity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C8D681C1D78EB3B00CC3616 /* GlobalActivity.cpp */; };
@@ -283,8 +284,10 @@
 		3C4FA5831DAB826300AA9DF1 /* FightAnimation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FightAnimation.cpp; path = Animation/FightAnimation.cpp; sourceTree = "<group>"; };
 		3C4FA5841DAB826300AA9DF1 /* FightAnimation.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = FightAnimation.hpp; path = Animation/FightAnimation.hpp; sourceTree = "<group>"; };
 		3C4FA5861DACADF100AA9DF1 /* Fights */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fights; sourceTree = "<group>"; };
-		3C4FA5881DAE0DBE00AA9DF1 /* CombinedAnimation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CombinedAnimation.cpp; path = Animation/CombinedAnimation.cpp; sourceTree = "<group>"; };
-		3C4FA5891DAE0DBE00AA9DF1 /* CombinedAnimation.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CombinedAnimation.hpp; path = Animation/CombinedAnimation.hpp; sourceTree = "<group>"; };
+		3C4FA5881DAE0DBE00AA9DF1 /* CombinedAnimate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CombinedAnimate.cpp; path = Animation/CombinedAnimate.cpp; sourceTree = "<group>"; };
+		3C4FA5891DAE0DBE00AA9DF1 /* CombinedAnimate.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CombinedAnimate.hpp; path = Animation/CombinedAnimate.hpp; sourceTree = "<group>"; };
+		3C4FA58B1DAF57B300AA9DF1 /* FightFrame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FightFrame.cpp; path = Animation/FightFrame.cpp; sourceTree = "<group>"; };
+		3C4FA58C1DAF57B300AA9DF1 /* FightFrame.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = FightFrame.hpp; path = Animation/FightFrame.hpp; sourceTree = "<group>"; };
 		3C8D68161D78EA2F00CC3616 /* CombinedActivity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CombinedActivity.cpp; path = Activities/CombinedActivity.cpp; sourceTree = "<group>"; };
 		3C8D68171D78EA2F00CC3616 /* CombinedActivity.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CombinedActivity.hpp; path = Activities/CombinedActivity.hpp; sourceTree = "<group>"; };
 		3C8D68191D78EAAE00CC3616 /* FieldActivity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FieldActivity.cpp; path = Activities/FieldActivity.cpp; sourceTree = "<group>"; };
@@ -859,6 +862,8 @@
 			children = (
 				3CB109771D6F6489002C4121 /* FDFrame.cpp */,
 				3CB109781D6F6489002C4121 /* FDFrame.hpp */,
+				3C4FA58B1DAF57B300AA9DF1 /* FightFrame.cpp */,
+				3C4FA58C1DAF57B300AA9DF1 /* FightFrame.hpp */,
 				3CB1097A1D6F6635002C4121 /* SlideAnimation.cpp */,
 				3CB1097B1D6F6635002C4121 /* SlideAnimation.hpp */,
 				3CB1097D1D6F69AC002C4121 /* FDAnimate.cpp */,
@@ -873,8 +878,8 @@
 				3CE63B2C1D7D5DF900C2C76B /* TransparencyFrame.hpp */,
 				3C4FA5831DAB826300AA9DF1 /* FightAnimation.cpp */,
 				3C4FA5841DAB826300AA9DF1 /* FightAnimation.hpp */,
-				3C4FA5881DAE0DBE00AA9DF1 /* CombinedAnimation.cpp */,
-				3C4FA5891DAE0DBE00AA9DF1 /* CombinedAnimation.hpp */,
+				3C4FA5881DAE0DBE00AA9DF1 /* CombinedAnimate.cpp */,
+				3C4FA5891DAE0DBE00AA9DF1 /* CombinedAnimate.hpp */,
 			);
 			name = Animation;
 			sourceTree = "<group>";
@@ -1466,6 +1471,7 @@
 				3C8D68181D78EA2F00CC3616 /* CombinedActivity.cpp in Sources */,
 				3CE439A61D9503CF0043676E /* TransferDefinition.cpp in Sources */,
 				3C18834E1D6BA1490059056E /* TitleLayer.cpp in Sources */,
+				3C4FA58D1DAF57B300AA9DF1 /* FightFrame.cpp in Sources */,
 				3CD12F201D6D051200CDF793 /* StringUtil.cpp in Sources */,
 				3CE4399A1D94F76F0043676E /* LevelUpDefinition.cpp in Sources */,
 				3CB109B01D74FF92002C4121 /* FDNumber.cpp in Sources */,
@@ -1502,7 +1508,7 @@
 				3CE439AC1DA4C89F0043676E /* SelectItemTargetState.cpp in Sources */,
 				3CE63B271D7D59D400C2C76B /* CommonHelper.cpp in Sources */,
 				3CE63BA11D8A7F6000C2C76B /* SettingsMenuState.cpp in Sources */,
-				3C4FA58A1DAE0DBE00AA9DF1 /* CombinedAnimation.cpp in Sources */,
+				3C4FA58A1DAE0DBE00AA9DF1 /* CombinedAnimate.cpp in Sources */,
 				3CE63B7E1D87DD1800C2C76B /* ConfirmMessage.cpp in Sources */,
 				3C18834B1D6BA0970059056E /* SceneCreator.cpp in Sources */,
 				3CB109691D6E0BD1002C4121 /* Ground.cpp in Sources */,

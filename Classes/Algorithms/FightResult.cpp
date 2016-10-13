@@ -13,6 +13,11 @@ FightResult::FightResult(Creature * c, Creature * t)
     this->_counterObject = new CounterObject(c);
     this->_counterObject->addTarget(t);
     
+    _attackInfo1 = nullptr;
+    _attackInfo2 = nullptr;
+    _fightBackInfo1 = nullptr;
+    _fightBackInfo2 = nullptr;
+    
 }
 
 FightResult::~FightResult()
