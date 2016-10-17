@@ -247,6 +247,11 @@ FightAnimation * AnimationLibrary::getFightAnimation(int animationId, FightAnima
     return (FightAnimation *)_slideAnimationDictionary->at(key);
 }
 
+FightAnimation * AnimationLibrary::getMagicAnimation(int magicId, bool isBad)
+{
+    return getFightAnimation(3, FightAnimationType_Attack);
+}
+
 std::string AnimationLibrary::filenameForBattleFieldAnimation(int creatureAniId, int index)
 {
     return StringUtils::format("Icons/%03d/Icon-%03d-%02d.png", creatureAniId, creatureAniId, index);

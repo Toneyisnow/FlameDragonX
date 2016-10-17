@@ -20,15 +20,19 @@ class MagicResult : public cocos2d::Ref
 private:
     
     CounterObject * _counterObject;
-    Vector<CounterResult *> _magicCounterList;
+    int _magicId;
+    Vector<CounterResult *> _resultList;
     
 public:
     
-    MagicResult(Creature * c, Vector<Creature *> t);
+    MagicResult(Creature * c, int magicId, Vector<Creature *> t);
     ~MagicResult();
     
+    int getMagicId();
+    void appendResult(CounterResult * result);
     
     CounterObject * getCounterObject();
+    CounterResult * getCounterResult(int index);
     
 };
 

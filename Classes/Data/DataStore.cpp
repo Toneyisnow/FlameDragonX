@@ -310,8 +310,11 @@ void DataStore::loadFightAnimationDefinition()
         if (animationCount > 2) {
             FightAnimationDefinition * skillAnimation = new FightAnimationDefinition(animationId, FightAnimationType_Skill);
             skillAnimation->readFromFile(reader);
-            _fightAnimationDefinitionDictionary->insert(animationId * 10 + FightAnimationType_Skill, attackAnimation);
+            _fightAnimationDefinitionDictionary->insert(animationId * 10 + FightAnimationType_Skill, skillAnimation);
             skillAnimation->release();
+        }
+        else {
+            _fightAnimationDefinitionDictionary->insert(animationId * 10 + FightAnimationType_Skill, attackAnimation);
         }
         
         animationId = reader->readInt();

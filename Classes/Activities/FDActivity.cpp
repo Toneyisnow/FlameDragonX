@@ -45,3 +45,15 @@ void FDActivity::initialize()
 {
     
 }
+
+void FDActivity::reset()
+{
+    _isInitialized = false;
+    _hasFinished = false;
+}
+
+int FDActivity::getTotalTick()
+{
+    // By default, the activity will finish within 1 tick
+    return 1;
+}

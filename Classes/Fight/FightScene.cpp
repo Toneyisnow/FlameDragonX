@@ -156,16 +156,7 @@ void FightScene::setTargetVisible(bool val)
     }
 }
 
-Vec2 FightScene::getBarLocation(Creature * creature)
-{
-    Size screenSize = Constants::getScreenSize();
-    if (creature->getType() == CreatureType_Friend || creature->getType() == CreatureType_Npc) {
-        return Vec2(screenSize.width * 0.7, screenSize.height * 0.85);
-    }
-    else {
-        return Vec2(screenSize.width * 0.25, screenSize.height * 0.1);
-    }
-}
+
 
 FDAnimate * FightScene::generateAttackAnimate(Sprite * sprite, SlideAnimation * animation, int tag, SEL_CALLBACK2 onAttack)
 {

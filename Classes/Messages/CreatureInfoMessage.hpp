@@ -39,6 +39,8 @@ public:
     CreatureInfoMessage(Creature * creature);
     CreatureInfoMessage(Creature * creature, Vec2 clickedAtLocation);
     
+    void setCreature(Creature * c);
+    
     void initDialog() override;
     void removeDialog() override;
     

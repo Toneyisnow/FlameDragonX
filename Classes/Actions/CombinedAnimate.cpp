@@ -12,11 +12,21 @@ CombinedAnimate::CombinedAnimate(Sprite * sprite)
 : FDAnimate(sprite)
 {
     _animateList.clear();
+    _currentAnimate = 0;
 }
 
 CombinedAnimate::~CombinedAnimate()
 {
     _animateList.clear();
+}
+
+void CombinedAnimate::reset()
+{
+    for (FDAnimate * animate : _animateList) {
+        animate->reset();
+    }
+    
+    _currentAnimate = 0;
 }
 
 void CombinedAnimate::appendAnimate(FDAnimate * animate)
@@ -26,16 +36,16 @@ void CombinedAnimate::appendAnimate(FDAnimate * animate)
 
 void CombinedAnimate::takeTick(int synchronizedTick)
 {
-    if (_animateList.size() == 0) {
+    if (_currentAnimate == _animateList.size()) {
         _hasFinished = true;
         return;
     }
     
-    FDAnimate * animate = _animateList.at(0);
+    FDAnimate * animate = _animateList.at(_currentAnimate);
     animate->takeTick(synchronizedTick);
     
     if (animate->hasFinished()) {
-        _animateList.erase(0);
+        _currentAnimate++;
     }
 }
 
@@ -52,11 +62,11 @@ int CombinedAnimate::getTotalTick()
 
 FDAnimate * CombinedAnimate::getCurrentAnimate()
 {
-    return (_animateList.size() == 0) ? nullptr : _animateList.at(0);
+    return (_animateList.size() <= _currentAnimate) ? nullptr : _animateList.at(_currentAnimate);
 }
 
 bool CombinedAnimate::hasFinished()
 {
-    return (_animateList.size() == 0);
+    return _hasFinished;
 }
 

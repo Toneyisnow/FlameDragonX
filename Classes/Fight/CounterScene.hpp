@@ -22,6 +22,7 @@ protected:
     const int ZORDER_FRIENDBAR = 3;
     const int ZORDER_TAI = 4;
     const int ZORDER_FRIEND = 5;
+    const int ZORDER_MAGIC = 6;
     
     CounterInfo * _information;
     
@@ -35,6 +36,7 @@ protected:
     CreatureInfoMessage * _subjectInfo;
     CreatureInfoMessage * _targetInfo;
     
+    Vec2 getBarLocation(Creature * creature);
     
 public:
     

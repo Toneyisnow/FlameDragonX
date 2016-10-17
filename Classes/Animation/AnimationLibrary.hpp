@@ -60,6 +60,8 @@ public:
     
     // Fight Animations
     FightAnimation * getFightAnimation(int animationId, FightAnimationType type);
+    FightAnimation * getMagicAnimation(int magicId, bool isBad);
+    
     
 };
 #endif /* AnimationLibrary_hpp */

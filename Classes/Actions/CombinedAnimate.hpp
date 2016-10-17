@@ -18,6 +18,8 @@ private:
     
     Vector<FDAnimate *> _animateList;
     
+    int _currentAnimate;
+    
 public:
     
     CombinedAnimate(Sprite * sprite);
@@ -30,6 +32,8 @@ public:
     bool hasFinished() override;
     
     int getTotalTick() override;
+    
+    void reset() override;
     
     FDAnimate * getCurrentAnimate();
     

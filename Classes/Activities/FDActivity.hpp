@@ -37,8 +37,10 @@ public:
     virtual void internalTick(int synchronizedTick);
     void takeTick(int synchronizedTick);
     
-    bool hasFinished();
+    virtual bool hasFinished();
+    virtual void reset();
     
+    virtual int getTotalTick();
     
 };
 

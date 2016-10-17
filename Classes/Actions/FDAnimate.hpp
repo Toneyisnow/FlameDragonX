@@ -39,6 +39,8 @@ public:
     FDAnimate(Sprite * sprite);
     ~FDAnimate();
     
+    virtual void reset();
+    
     void setAnimation(SlideAnimation *ani);
     
     virtual void takeTick(int synchronizedTick);

@@ -26,8 +26,14 @@
 		3C4FA5821DAB769600AA9DF1 /* FightFrameDefinition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C4FA5801DAB769600AA9DF1 /* FightFrameDefinition.cpp */; };
 		3C4FA5851DAB826300AA9DF1 /* FightAnimation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C4FA5831DAB826300AA9DF1 /* FightAnimation.cpp */; };
 		3C4FA5871DACADF100AA9DF1 /* Fights in Resources */ = {isa = PBXBuildFile; fileRef = 3C4FA5861DACADF100AA9DF1 /* Fights */; };
-		3C4FA58A1DAE0DBE00AA9DF1 /* CombinedAnimate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C4FA5881DAE0DBE00AA9DF1 /* CombinedAnimate.cpp */; };
 		3C4FA58D1DAF57B300AA9DF1 /* FightFrame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C4FA58B1DAF57B300AA9DF1 /* FightFrame.cpp */; };
+		3C4FA5931DB3697900AA9DF1 /* CombinedAnimate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C4FA58F1DB3697900AA9DF1 /* CombinedAnimate.cpp */; };
+		3C4FA5941DB3697900AA9DF1 /* FDAnimate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C4FA5911DB3697900AA9DF1 /* FDAnimate.cpp */; };
+		3C4FA5971DB369A800AA9DF1 /* FDAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C4FA5951DB369A800AA9DF1 /* FDAction.cpp */; };
+		3C4FA59A1DB36B1400AA9DF1 /* CombinedAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C4FA5981DB36B1400AA9DF1 /* CombinedAction.cpp */; };
+		3C4FA59D1DB36D4900AA9DF1 /* MoveByAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C4FA59B1DB36D4900AA9DF1 /* MoveByAction.cpp */; };
+		3C4FA5A01DB4943000AA9DF1 /* MoveByActivity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C4FA59E1DB4943000AA9DF1 /* MoveByActivity.cpp */; };
+		3C4FA5A31DB4954100AA9DF1 /* AnimateActivity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C4FA5A11DB4954100AA9DF1 /* AnimateActivity.cpp */; };
 		3C8D68181D78EA2F00CC3616 /* CombinedActivity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C8D68161D78EA2F00CC3616 /* CombinedActivity.cpp */; };
 		3C8D681B1D78EAAE00CC3616 /* FieldActivity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C8D68191D78EAAE00CC3616 /* FieldActivity.cpp */; };
 		3C8D681E1D78EB3B00CC3616 /* GlobalActivity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C8D681C1D78EB3B00CC3616 /* GlobalActivity.cpp */; };
@@ -65,7 +71,6 @@
 		3CB109751D6E6FD6002C4121 /* Friend.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CB109731D6E6FD6002C4121 /* Friend.cpp */; };
 		3CB109791D6F6489002C4121 /* FDFrame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CB109771D6F6489002C4121 /* FDFrame.cpp */; };
 		3CB1097C1D6F6635002C4121 /* SlideAnimation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CB1097A1D6F6635002C4121 /* SlideAnimation.cpp */; };
-		3CB1097F1D6F69AC002C4121 /* FDAnimate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CB1097D1D6F69AC002C4121 /* FDAnimate.cpp */; };
 		3CB109821D6F74BC002C4121 /* CreatureDefinition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CB109801D6F74BC002C4121 /* CreatureDefinition.cpp */; };
 		3CB109851D6F7626002C4121 /* AnimationLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CB109831D6F7626002C4121 /* AnimationLibrary.cpp */; };
 		3CB109891D74CCAB002C4121 /* FDActivity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CB109871D74CCAB002C4121 /* FDActivity.cpp */; };
@@ -284,10 +289,22 @@
 		3C4FA5831DAB826300AA9DF1 /* FightAnimation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FightAnimation.cpp; path = Animation/FightAnimation.cpp; sourceTree = "<group>"; };
 		3C4FA5841DAB826300AA9DF1 /* FightAnimation.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = FightAnimation.hpp; path = Animation/FightAnimation.hpp; sourceTree = "<group>"; };
 		3C4FA5861DACADF100AA9DF1 /* Fights */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fights; sourceTree = "<group>"; };
-		3C4FA5881DAE0DBE00AA9DF1 /* CombinedAnimate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CombinedAnimate.cpp; path = Animation/CombinedAnimate.cpp; sourceTree = "<group>"; };
-		3C4FA5891DAE0DBE00AA9DF1 /* CombinedAnimate.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CombinedAnimate.hpp; path = Animation/CombinedAnimate.hpp; sourceTree = "<group>"; };
 		3C4FA58B1DAF57B300AA9DF1 /* FightFrame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FightFrame.cpp; path = Animation/FightFrame.cpp; sourceTree = "<group>"; };
 		3C4FA58C1DAF57B300AA9DF1 /* FightFrame.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = FightFrame.hpp; path = Animation/FightFrame.hpp; sourceTree = "<group>"; };
+		3C4FA58F1DB3697900AA9DF1 /* CombinedAnimate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CombinedAnimate.cpp; path = Actions/CombinedAnimate.cpp; sourceTree = "<group>"; };
+		3C4FA5901DB3697900AA9DF1 /* CombinedAnimate.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CombinedAnimate.hpp; path = Actions/CombinedAnimate.hpp; sourceTree = "<group>"; };
+		3C4FA5911DB3697900AA9DF1 /* FDAnimate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FDAnimate.cpp; path = Actions/FDAnimate.cpp; sourceTree = "<group>"; };
+		3C4FA5921DB3697900AA9DF1 /* FDAnimate.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = FDAnimate.hpp; path = Actions/FDAnimate.hpp; sourceTree = "<group>"; };
+		3C4FA5951DB369A800AA9DF1 /* FDAction.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FDAction.cpp; path = Actions/FDAction.cpp; sourceTree = "<group>"; };
+		3C4FA5961DB369A800AA9DF1 /* FDAction.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = FDAction.hpp; path = Actions/FDAction.hpp; sourceTree = "<group>"; };
+		3C4FA5981DB36B1400AA9DF1 /* CombinedAction.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CombinedAction.cpp; path = Actions/CombinedAction.cpp; sourceTree = "<group>"; };
+		3C4FA5991DB36B1400AA9DF1 /* CombinedAction.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CombinedAction.hpp; path = Actions/CombinedAction.hpp; sourceTree = "<group>"; };
+		3C4FA59B1DB36D4900AA9DF1 /* MoveByAction.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MoveByAction.cpp; path = Actions/MoveByAction.cpp; sourceTree = "<group>"; };
+		3C4FA59C1DB36D4900AA9DF1 /* MoveByAction.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = MoveByAction.hpp; path = Actions/MoveByAction.hpp; sourceTree = "<group>"; };
+		3C4FA59E1DB4943000AA9DF1 /* MoveByActivity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MoveByActivity.cpp; path = Activities/MoveByActivity.cpp; sourceTree = "<group>"; };
+		3C4FA59F1DB4943000AA9DF1 /* MoveByActivity.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = MoveByActivity.hpp; path = Activities/MoveByActivity.hpp; sourceTree = "<group>"; };
+		3C4FA5A11DB4954100AA9DF1 /* AnimateActivity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AnimateActivity.cpp; path = Activities/AnimateActivity.cpp; sourceTree = "<group>"; };
+		3C4FA5A21DB4954100AA9DF1 /* AnimateActivity.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = AnimateActivity.hpp; path = Activities/AnimateActivity.hpp; sourceTree = "<group>"; };
 		3C8D68161D78EA2F00CC3616 /* CombinedActivity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CombinedActivity.cpp; path = Activities/CombinedActivity.cpp; sourceTree = "<group>"; };
 		3C8D68171D78EA2F00CC3616 /* CombinedActivity.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CombinedActivity.hpp; path = Activities/CombinedActivity.hpp; sourceTree = "<group>"; };
 		3C8D68191D78EAAE00CC3616 /* FieldActivity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FieldActivity.cpp; path = Activities/FieldActivity.cpp; sourceTree = "<group>"; };
@@ -360,8 +377,6 @@
 		3CB109781D6F6489002C4121 /* FDFrame.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = FDFrame.hpp; path = Animation/FDFrame.hpp; sourceTree = "<group>"; };
 		3CB1097A1D6F6635002C4121 /* SlideAnimation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SlideAnimation.cpp; path = Animation/SlideAnimation.cpp; sourceTree = "<group>"; };
 		3CB1097B1D6F6635002C4121 /* SlideAnimation.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = SlideAnimation.hpp; path = Animation/SlideAnimation.hpp; sourceTree = "<group>"; };
-		3CB1097D1D6F69AC002C4121 /* FDAnimate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FDAnimate.cpp; path = Animation/FDAnimate.cpp; sourceTree = "<group>"; };
-		3CB1097E1D6F69AC002C4121 /* FDAnimate.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = FDAnimate.hpp; path = Animation/FDAnimate.hpp; sourceTree = "<group>"; };
 		3CB109801D6F74BC002C4121 /* CreatureDefinition.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CreatureDefinition.cpp; path = Data/CreatureDefinition.cpp; sourceTree = "<group>"; };
 		3CB109811D6F74BC002C4121 /* CreatureDefinition.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CreatureDefinition.hpp; path = Data/CreatureDefinition.hpp; sourceTree = "<group>"; };
 		3CB109831D6F7626002C4121 /* AnimationLibrary.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AnimationLibrary.cpp; path = Animation/AnimationLibrary.cpp; sourceTree = "<group>"; };
@@ -740,6 +755,23 @@
 			name = Title;
 			sourceTree = "<group>";
 		};
+		3C4FA58E1DB3693200AA9DF1 /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				3C4FA58F1DB3697900AA9DF1 /* CombinedAnimate.cpp */,
+				3C4FA5901DB3697900AA9DF1 /* CombinedAnimate.hpp */,
+				3C4FA5981DB36B1400AA9DF1 /* CombinedAction.cpp */,
+				3C4FA5991DB36B1400AA9DF1 /* CombinedAction.hpp */,
+				3C4FA5911DB3697900AA9DF1 /* FDAnimate.cpp */,
+				3C4FA5921DB3697900AA9DF1 /* FDAnimate.hpp */,
+				3C4FA5951DB369A800AA9DF1 /* FDAction.cpp */,
+				3C4FA5961DB369A800AA9DF1 /* FDAction.hpp */,
+				3C4FA59B1DB36D4900AA9DF1 /* MoveByAction.cpp */,
+				3C4FA59C1DB36D4900AA9DF1 /* MoveByAction.hpp */,
+			);
+			name = Actions;
+			sourceTree = "<group>";
+		};
 		3C8D682A1D79F46200CC3616 /* Events */ = {
 			isa = PBXGroup;
 			children = (
@@ -866,8 +898,6 @@
 				3C4FA58C1DAF57B300AA9DF1 /* FightFrame.hpp */,
 				3CB1097A1D6F6635002C4121 /* SlideAnimation.cpp */,
 				3CB1097B1D6F6635002C4121 /* SlideAnimation.hpp */,
-				3CB1097D1D6F69AC002C4121 /* FDAnimate.cpp */,
-				3CB1097E1D6F69AC002C4121 /* FDAnimate.hpp */,
 				3CB109831D6F7626002C4121 /* AnimationLibrary.cpp */,
 				3CB109841D6F7626002C4121 /* AnimationLibrary.hpp */,
 				3CE63B441D827C2C00C2C76B /* TextureComposer.cpp */,
@@ -878,8 +908,6 @@
 				3CE63B2C1D7D5DF900C2C76B /* TransparencyFrame.hpp */,
 				3C4FA5831DAB826300AA9DF1 /* FightAnimation.cpp */,
 				3C4FA5841DAB826300AA9DF1 /* FightAnimation.hpp */,
-				3C4FA5881DAE0DBE00AA9DF1 /* CombinedAnimate.cpp */,
-				3C4FA5891DAE0DBE00AA9DF1 /* CombinedAnimate.hpp */,
 			);
 			name = Animation;
 			sourceTree = "<group>";
@@ -889,6 +917,8 @@
 			children = (
 				3CB109871D74CCAB002C4121 /* FDActivity.cpp */,
 				3CB109881D74CCAB002C4121 /* FDActivity.hpp */,
+				3C4FA5A11DB4954100AA9DF1 /* AnimateActivity.cpp */,
+				3C4FA5A21DB4954100AA9DF1 /* AnimateActivity.hpp */,
 				3CB1098A1D74CE92002C4121 /* SimpleMoveActivity.cpp */,
 				3CB1098B1D74CE92002C4121 /* SimpleMoveActivity.hpp */,
 				3C8D684B1D7A44BE00CC3616 /* CallbackActivity.cpp */,
@@ -919,6 +949,8 @@
 				3CE439641D8D02F60043676E /* SpriteMoveActivity.hpp */,
 				3CE4396D1D8FB3F50043676E /* DurationActivity.cpp */,
 				3CE4396E1D8FB3F50043676E /* DurationActivity.hpp */,
+				3C4FA59E1DB4943000AA9DF1 /* MoveByActivity.cpp */,
+				3C4FA59F1DB4943000AA9DF1 /* MoveByActivity.hpp */,
 			);
 			name = Activities;
 			sourceTree = "<group>";
@@ -1140,6 +1172,7 @@
 		46880B8319C43A87006E1F66 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				3C4FA58E1DB3693200AA9DF1 /* Actions */,
 				3CB109861D74CC93002C4121 /* Activities */,
 				3CE63B2E1D7E7E1400C2C76B /* Algorithms */,
 				3CB109761D6F6470002C4121 /* Animation */,
@@ -1392,9 +1425,12 @@
 				3CB109721D6E6BC3002C4121 /* Creature.cpp in Sources */,
 				3CE4399D1D94FD470043676E /* LevelUpMagicDefinition.cpp in Sources */,
 				3CE439721D8FC5E50043676E /* Npc.cpp in Sources */,
+				3C4FA5A31DB4954100AA9DF1 /* AnimateActivity.cpp in Sources */,
 				3CD12F1C1D6D033800CDF793 /* BattleRecord.cpp in Sources */,
+				3C4FA5A01DB4943000AA9DF1 /* MoveByActivity.cpp in Sources */,
 				3CE63B9E1D8A7E8100C2C76B /* RecordMenuState.cpp in Sources */,
 				3CE439871D91029A0043676E /* ConversationMessage.cpp in Sources */,
+				3C4FA5971DB369A800AA9DF1 /* FDAction.cpp in Sources */,
 				3CE63B241D7D40D000C2C76B /* SystemMenuState.cpp in Sources */,
 				3CD12F191D6CE7F200CDF793 /* CreatureRecord.cpp in Sources */,
 				3CB109751D6E6FD6002C4121 /* Friend.cpp in Sources */,
@@ -1439,7 +1475,6 @@
 				3CE63B711D853F3300C2C76B /* GameFormula.cpp in Sources */,
 				3C4FA57A1DA781C700AA9DF1 /* GameOverLayer.cpp in Sources */,
 				3C8D68631D7D30A000CC3616 /* StateSession.cpp in Sources */,
-				3CB1097F1D6F69AC002C4121 /* FDAnimate.cpp in Sources */,
 				3C8D685D1D7C0D9500CC3616 /* StateDispatcher.cpp in Sources */,
 				3CE63B741D87D6BC00C2C76B /* MessageLayer.cpp in Sources */,
 				3CD12F071D6BC86B00CDF793 /* FDScreen.cpp in Sources */,
@@ -1461,8 +1496,12 @@
 				3CE63B3F1D81551700C2C76B /* ActionMenuState.cpp in Sources */,
 				3CB1098F1D74D0CE002C4121 /* ActivityQueue.cpp in Sources */,
 				3C8D68271D78F92300CC3616 /* ScopeIndicator.cpp in Sources */,
+				3C4FA5941DB3697900AA9DF1 /* FDAnimate.cpp in Sources */,
 				3C8D68471D7A3AD500CC3616 /* RoutePoint.cpp in Sources */,
+				3C4FA5931DB3697900AA9DF1 /* CombinedAnimate.cpp in Sources */,
 				3C8D68501D7AA90A00CC3616 /* CreatureDeadActivity.cpp in Sources */,
+				3C4FA59D1DB36D4900AA9DF1 /* MoveByAction.cpp in Sources */,
+				3C4FA59A1DB36B1400AA9DF1 /* CombinedAction.cpp in Sources */,
 				3CB1096F1D6E6B8F002C4121 /* BattleObject.cpp in Sources */,
 				3CE63B681D85366200C2C76B /* FightResult.cpp in Sources */,
 				3CE63B2D1D7D5DF900C2C76B /* TransparencyFrame.cpp in Sources */,
@@ -1508,7 +1547,6 @@
 				3CE439AC1DA4C89F0043676E /* SelectItemTargetState.cpp in Sources */,
 				3CE63B271D7D59D400C2C76B /* CommonHelper.cpp in Sources */,
 				3CE63BA11D8A7F6000C2C76B /* SettingsMenuState.cpp in Sources */,
-				3C4FA58A1DAE0DBE00AA9DF1 /* CombinedAnimate.cpp in Sources */,
 				3CE63B7E1D87DD1800C2C76B /* ConfirmMessage.cpp in Sources */,
 				3C18834B1D6BA0970059056E /* SceneCreator.cpp in Sources */,
 				3CB109691D6E0BD1002C4121 /* Ground.cpp in Sources */,

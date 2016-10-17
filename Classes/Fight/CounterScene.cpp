@@ -80,3 +80,14 @@ void CounterScene::closeScene()
     CallbackMethod * method = _information->getCallback();
     method->execute();
 }
+
+Vec2 CounterScene::getBarLocation(Creature * creature)
+{
+    Size screenSize = Constants::getScreenSize();
+    if (creature->getType() == CreatureType_Friend || creature->getType() == CreatureType_Npc) {
+        return Vec2(screenSize.width * 0.7, screenSize.height * 0.85);
+    }
+    else {
+        return Vec2(screenSize.width * 0.25, screenSize.height * 0.1);
+    }
+}

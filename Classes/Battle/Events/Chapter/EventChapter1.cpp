@@ -36,7 +36,7 @@ void EventChapter1::loadEvents()
 void EventChapter1::test()
 {
     _battleField->addCreature(Friend::create(1, 1), Vec2(8, 20));
-    _battleField->addCreature(Friend::create(2, 2), Vec2(11, 21));
+    _battleField->addCreature(Friend::create(2, 2), Vec2(6, 21));
     _battleField->addCreature(Friend::create(3, 3), Vec2(9, 22));
     _battleField->addCreature(Friend::create(4, 4), Vec2(12, 23));
     _battleField->addCreature(Friend::create(6, 6), Vec2(10, 23));

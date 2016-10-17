@@ -36,7 +36,6 @@ private:
     CombinedAnimate * _subjectAnimate;
     CombinedAnimate * _targetAnimate;
     
-    Vec2 getBarLocation(Creature * creature);
     void setTargetVisible(bool val);
     
     void takeTick(float dt) override;

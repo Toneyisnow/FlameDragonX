@@ -18,17 +18,24 @@ class CombinedActivity : public FDActivity
 {
 protected:
     
-    Vector<FDActivity *> * _activityList;
+    Vector<FDActivity *> _activityList;
     int _currentActivityIndex;
     
 public:
     
     CombinedActivity();
+    ~CombinedActivity();
     
     void appendActivity(FDActivity *activity);
     
-    virtual void initialize();
-    virtual void internalTick(int synchronizedTick);
+    virtual void initialize() override;
+    virtual void internalTick(int synchronizedTick) override;
+    
+    virtual int getTotalTick() override;
+    virtual void reset() override;
+    
+    FDActivity * getCurrentActivity();
+    int getCurrentIndex();
     
     
 };

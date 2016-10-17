@@ -1,42 +1,47 @@
 //
-//  Animate.cpp
+//  AnimateActivity.cpp
 //  FlameDragonX
 //
-//  Created by SuiYi on 8/25/16.
+//  Created by SuiYi on 10/16/16.
 //
 //
 
-#include "FDAnimate.hpp"
+#include "AnimateActivity.hpp"
 #include "CallbackMethod.hpp"
 
 
-FDAnimate * FDAnimate::create(Sprite * sprite, SlideAnimation * ani)
+AnimateActivity * AnimateActivity::create(Sprite * sprite, SlideAnimation * ani)
 {
-    FDAnimate * animate = new FDAnimate(sprite);
+    AnimateActivity * animate = new AnimateActivity(sprite);
     animate->setAnimation(ani);
     animate->autorelease();
     
     return animate;
 }
 
-FDAnimate::FDAnimate(Sprite * sprite)
+AnimateActivity::AnimateActivity(Sprite * sprite)
 {
     this->_sprite = sprite;
     
     this->_animation = nullptr;
     this->_currentTick = 0;
-    this->_hasFinished = false;
     
     _callbackTarget = nullptr;
     _callbackSelector = nullptr;
     _tag = 0;
 }
 
-FDAnimate::~FDAnimate()
+AnimateActivity::~AnimateActivity()
 {
 }
 
-void FDAnimate::setAnimation(SlideAnimation *ani)
+void AnimateActivity::reset()
+{
+    FDActivity::reset();
+    this->_currentTick = 0;
+}
+
+void AnimateActivity::setAnimation(SlideAnimation *ani)
 {
     this->_animation = ani;
     _lastFrame = nullptr;
@@ -48,7 +53,7 @@ void FDAnimate::setAnimation(SlideAnimation *ani)
     }
 }
 
-void FDAnimate::takeTick(int synchronizedTick)
+void AnimateActivity::internalTick(int synchronizedTick)
 {
     if (this->_animation == nullptr || _hasFinished)
     {
@@ -95,28 +100,23 @@ void FDAnimate::takeTick(int synchronizedTick)
     }
 }
 
-bool FDAnimate::hasFinished()
-{
-    return _hasFinished;
-}
-
-void FDAnimate::setTag(int tag)
+void AnimateActivity::setTag(int tag)
 {
     _tag = tag;
 }
 
-int FDAnimate::getTag()
+int AnimateActivity::getTag()
 {
     return _tag;
 }
 
-void FDAnimate::setCallback(Ref * target, SEL_CALLBACK2 callback)
+void AnimateActivity::setCallback(Ref * target, SEL_CALLBACK2 callback)
 {
     _callbackTarget = target;
     _callbackSelector = callback;
 }
 
-int FDAnimate::getTotalTick()
+int AnimateActivity::getTotalTick()
 {
     return (_animation != nullptr) ? _animation->getTotalTick() : 0;
 }
