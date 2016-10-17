@@ -14,7 +14,8 @@
 #include "CounterScene.hpp"
 #include "FightResult.hpp"
 #include "FightAnimation.hpp"
-#include "CombinedAnimate.hpp"
+#include "CombinedActivity.hpp"
+#include "AnimateActivity.hpp"
 
 class FightScene : public CounterScene
 {
@@ -33,14 +34,14 @@ private:
     FightAnimation * _targetAttackAnimation;
     FightAnimation * _targetIdleAnimation;
     
-    CombinedAnimate * _subjectAnimate;
-    CombinedAnimate * _targetAnimate;
+    CombinedActivity * _subjectAnimate;
+    CombinedActivity * _targetAnimate;
     
     void setTargetVisible(bool val);
     
     void takeTick(float dt) override;
 
-    FDAnimate * generateAttackAnimate(Sprite * sprite, SlideAnimation * animation, int tag, SEL_CALLBACK2 onAttack);
+    AnimateActivity * generateAttackAnimate(Sprite * sprite, SlideAnimation * animation, int tag, SEL_CALLBACK2 onAttack);
     
 public:
     

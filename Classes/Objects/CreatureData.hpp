@@ -39,6 +39,10 @@ public:
     int statusFrozen;
     int statusProhibited;
 
+    void clearStatusPoisoned();
+    void clearStatusFrozen();
+    void clearStatusProhibited();
+    
     Vector<FDNumber *> * itemList;
     Vector<FDNumber *> * magicList;
     

@@ -7,6 +7,7 @@
 //
 
 #include "MagicDefinition.hpp"
+#include "GameFormula.hpp"
 
 MagicDefinition * MagicDefinition::readFromFile(TextFileReader * reader)
 {
@@ -80,7 +81,7 @@ int MagicDefinition::aiConsiderRate()
     return _aiConsiderRate;
 }
 
-int MagicDefinition::apInvovedRate()
+int MagicDefinition::apInvolvedRate()
 {
     return _apInvolvedRate;
 }
@@ -91,6 +92,10 @@ FDRange * MagicDefinition::getEffectScope()
     return FDRange::rangeWithValues(min, _effectScope);
 }
 
+FDRange * MagicDefinition::getQuantityRange()
+{
+    return _quantityRange;
+}
 
 bool MagicDefinition::hasAnimation()
 {
@@ -100,4 +105,90 @@ bool MagicDefinition::hasAnimation()
 bool MagicDefinition::isCross()
 {
     return (_definitionId == 116 || _definitionId == 119);
+}
+
+void MagicDefinition::takeOffensiveEffect(Creature * target)
+{
+    if (target == nullptr)
+    {
+        return;
+    }
+    
+    switch (_definitionId) {
+        case 301:
+            GameFormula::actionedByProhibited(target);
+            break;
+        case 302:
+            GameFormula::actionedByPoison(target);
+            break;
+        case 303:
+            GameFormula::actionedByFrozen(target);
+            break;
+        default:
+            break;
+    }
+}
+
+void MagicDefinition::takeDeffensiveEffect(Creature * target)
+{
+    if (target == nullptr) {
+        return;
+    }
+    
+    switch (_definitionId) {
+        case 401:
+            GameFormula::actionedByEnhanceAp(target);
+            break;
+        case 402:
+            GameFormula::actionedByEnhanceDp(target);
+            break;
+        case 403:
+            GameFormula::actionedByEnhanceDx(target);
+            break;
+        case 404:
+            target->creatureData()->clearStatusPoisoned();
+            break;
+        case 405:
+            target->creatureData()->clearStatusFrozen();
+            break;
+        case 406:
+            target->startTurn();
+            break;
+        case 407:
+            GameFormula::actionedByEnhanceAp(target);
+            GameFormula::actionedByEnhanceDp(target);
+            GameFormula::actionedByEnhanceDx(target);
+            break;
+        case 408:
+            // Don't know what is the effect
+            break;
+        default:
+            break;
+    }
+}
+
+int MagicDefinition::baseExperience()
+{
+    switch (_definitionId) {
+        case 401:
+        case 402:
+        case 403:
+            return 4;
+        case 406:
+            return 8;
+        case 301:
+        case 302:
+        case 303:
+        case 404:
+        case 405:
+            return 4;
+        case 407:
+        case 408:
+            return 3;
+        case 501:
+            return 10;
+        default:
+            break;
+    }
+    return 0;
 }

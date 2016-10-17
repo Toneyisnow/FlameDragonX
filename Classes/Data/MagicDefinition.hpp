@@ -24,6 +24,8 @@ typedef enum MagicType
     
 } MagicType;
 
+class Creature;
+
 class MagicDefinition : public cocos2d::Ref
 {
 private:
@@ -54,9 +56,10 @@ public:
     int mpCost();
     bool allowAfterMove();
     int aiConsiderRate();
-    int apInvovedRate();
+    int apInvolvedRate();
     
     FDRange * getEffectScope();
+    FDRange * getQuantityRange();
     
     int getDefinitionId();
     MagicType getType();
@@ -64,6 +67,10 @@ public:
     bool hasAnimation();
     bool isCross();
     
+    void takeOffensiveEffect(Creature * target);
+    void takeDeffensiveEffect(Creature * target);
+    
+    int baseExperience();
 };
 
 #endif /* MagicDefinition_hpp */

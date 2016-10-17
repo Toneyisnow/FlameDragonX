@@ -206,3 +206,19 @@ void CreatureData::addItem(int itemId)
     
     itemList->pushBack(FDNumber::numberWithInt(itemId));
 }
+
+void CreatureData::clearStatusPoisoned()
+{
+    statusPoisoned = 0;
+}
+
+void CreatureData::clearStatusFrozen()
+{
+    statusFrozen = 0;
+}
+
+void CreatureData::clearStatusProhibited()
+{
+    statusProhibited = 0;
+}
+

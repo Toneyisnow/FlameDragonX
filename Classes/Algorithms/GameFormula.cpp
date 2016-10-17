@@ -10,6 +10,7 @@
 #include "BattleField.hpp"
 #include "FDRandom.hpp"
 #include "AttackItemDefinition.hpp"
+#include "DataStore.hpp"
 
 FightResult * GameFormula::dealWithFight(BattleField * field, Creature * subject, Creature * target)
 {
@@ -81,10 +82,32 @@ FightResult * GameFormula::dealWithFight(BattleField * field, Creature * subject
     return result;
 }
 
-MagicResult * GameFormula::dealWithMagic(BattleField * field, Creature * subject, Vector<Creature * > targets, int magicId)
+MagicResult * GameFormula::dealWithMagic(BattleField * field, Creature * subject, Vector<Creature * > &targets, int magicId)
 {
     MagicResult * result = new MagicResult(subject, magicId, targets);
-    result->autorelease();
+    MagicDefinition * magic = DataStore::getInstance()->getMagicDefinition(magicId);
+
+    if (magic == nullptr) {
+        result->autorelease();
+        return result;
+    }
+    
+    int totalExp = 0;
+    for (Creature * target : targets) {
+        CounterResult * singleResult = GameFormula::singleMagic(field, subject, target, magic);
+        result->appendResult(singleResult);
+        
+        if (magic->getType() == MagicType_Attack || magic->getType() == MagicType_Recover)
+        {
+            totalExp += GameFormula::calculateExperience(subject, target, singleResult);
+        }
+        else
+        {
+            totalExp += GameFormula::calculateMagicExperience(subject, target, magic);
+        }
+    }
+    
+    subject->setLastGainedExperience(totalExp);
     
     return result;
 }
@@ -142,6 +165,53 @@ CounterResult * GameFormula::singleAttack(BattleField * field, Creature * subjec
     return result;
 }
 
+CounterResult * GameFormula::singleMagic(BattleField * field, Creature * subject, Creature * target, MagicDefinition * magic)
+{
+    bool isHit = FDRandom::hitWithRate(magic->hittingRate());
+    int reduceHp = 0;
+    
+    if (isHit)
+    {
+        OccupationDefinition * occupation = DataStore::getInstance()->getOccupationDefinition(target->getDefinition()->occupation);
+        float defenseRate = 1.0f;
+        if (occupation != nullptr) {
+            defenseRate = (float)(100 - occupation->magicDefenseRate()) / 100.0;
+        }
+        
+        switch (magic->getType()) {
+            case MagicType_Attack:
+                reduceHp = FDRandom::valueFromRange(magic->getQuantityRange()->getMin(), magic->getQuantityRange()->getMax() + (int)(magic->apInvolvedRate() * subject->creatureData()->ap / 100));
+                reduceHp = (int)(reduceHp * defenseRate);
+                reduceHp = MAX(reduceHp, 0);
+                break;
+                
+            case MagicType_Recover:
+                reduceHp = -FDRandom::valueFromRange(magic->getQuantityRange()->getMin(), magic->getQuantityRange()->getMax());
+                reduceHp = MAX(reduceHp, 0);
+                reduceHp = MIN(reduceHp, target->creatureData()->hpMax - target->creatureData()->hpCurrent);
+                break;
+                
+            case MagicType_Offensive:
+                magic->takeOffensiveEffect(target);
+                break;
+            case MagicType_Defensive:
+                magic->takeDeffensiveEffect(target);
+                break;
+                
+            default:
+                break;
+        }
+    }
+
+    CounterResult * result = new CounterResult();
+    result->hpBefore = target->creatureData()->hpCurrent;
+    result->hpAfter = target->creatureData()->hpCurrent - reduceHp;
+    target->updateHp(-reduceHp);
+    
+    result->autorelease();
+    return result;
+}
+
 int GameFormula::calculateExperience(Creature * subject, Creature * target, CounterResult * counterResult)
 {
     if (subject == nullptr || target == nullptr || counterResult == nullptr)
@@ -183,6 +253,17 @@ int GameFormula::calculateExperience(Creature * subject, Creature * target, Coun
     return (int)exp;
 }
 
+int GameFormula::calculateMagicExperience(Creature * subject, Creature * target, MagicDefinition * magic)
+{
+    if (subject == nullptr || target == nullptr || magic == nullptr) {
+        return 0;
+    }
+    
+    int targetLevel = GameFormula::getCalculatedLevel(target);
+    int subjectLevel = GameFormula::getCalculatedLevel(subject);
+    float exp = magic->baseExperience() * targetLevel / subjectLevel;
+    return (int)exp;
+}
 
 int GameFormula::commonDoubleAttackRate()
 {
@@ -223,5 +304,65 @@ int GameFormula::getCalculatedLevel(Creature * creature)
         default:
             return creature->creatureData()->level;
     }
+}
+
+void GameFormula::actionedByEnhanceAp(Creature * target)
+{
+    if (target == nullptr) {
+        return;
+    }
+    
+    int roundCount = FDRandom::valueFromRange(2, 4);
+    target->creatureData()->statusEnhanceAp = roundCount;
+}
+
+void GameFormula::actionedByEnhanceDp(Creature * target)
+{
+    if (target == nullptr) {
+        return;
+    }
+    
+    int roundCount = FDRandom::valueFromRange(2, 4);
+    target->creatureData()->statusEnhanceDp = roundCount;
+}
+
+void GameFormula::actionedByEnhanceDx(Creature * target)
+{
+    if (target == nullptr) {
+        return;
+    }
+    
+    int roundCount = FDRandom::valueFromRange(2, 4);
+    target->creatureData()->statusEnhanceDx = roundCount;
+}
+
+void GameFormula::actionedByPoision(Creature * target)
+{
+    if (target == nullptr) {
+        return;
+    }
+    
+    int roundCount = FDRandom::valueFromRange(10, 15);
+    target->creatureData()->statusPoisoned = roundCount;
+}
+
+void GameFormula::actionedByProhibited(Creature * target)
+{
+    if (target == nullptr) {
+        return;
+    }
+    
+    int roundCount = FDRandom::valueFromRange(2, 4);
+    target->creatureData()->statusProhibited = roundCount;
+}
+
+void GameFormula::actionedByFrozen(Creature * target)
+{
+    if (target == nullptr) {
+        return;
+    }
+    
+    int roundCount = FDRandom::valueFromRange(2, 4);
+    target->creatureData()->statusFrozen = roundCount;
 }
 

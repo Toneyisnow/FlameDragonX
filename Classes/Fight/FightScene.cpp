@@ -10,6 +10,7 @@
 #include "CallbackMethod.hpp"
 #include "AnimationLibrary.hpp"
 #include "FightFrame.hpp"
+#include "AnimateActivity.hpp"
 
 FightScene::FightScene(CounterInfo * info, FightResult * result)
 : CounterScene(info)
@@ -63,8 +64,8 @@ void FightScene::start()
     _targetSprite->setPosition(screenCenter);
     _layer->addChild(_targetSprite, (_target->getType() == CreatureType_Enemy) ? ZORDER_ENEMY : ZORDER_FRIEND);
     
-    _subjectAnimate = new CombinedAnimate(_subjectSprite);
-    _targetAnimate = new CombinedAnimate(_targetSprite);
+    _subjectAnimate = new CombinedActivity();
+    _targetAnimate = new CombinedActivity();
     
     
     // Creature Bar
@@ -73,8 +74,7 @@ void FightScene::start()
     _subjectInfo->setZOrder((_subject->getType() == CreatureType_Enemy) ? ZORDER_ENEMYBAR : ZORDER_FRIENDBAR);
     _subjectInfo->setPosition(this->getBarLocation(_subject));
     if (_fightResult->fightBackInfo1() != nullptr) {
-        CounterResult * back1 = _fightResult->fightBackInfo1();
-        //// _subjectInfo->setHp(_fightResult->fightBackInfo1()->hpBefore);
+        _subjectInfo->setHp(_fightResult->fightBackInfo1()->hpBefore);
     }
     
     _targetInfo = new CreatureInfoMessage(_target);
@@ -88,28 +88,28 @@ void FightScene::start()
         this->setTargetVisible(false);
     }
     
-    _subjectAnimate->appendAnimate(FDAnimate::create(_subjectSprite, _subjectIdleAnimation));
-    _subjectAnimate->appendAnimate(FDAnimate::create(_subjectSprite, _subjectIdleAnimation));
+    _subjectAnimate->appendActivity(AnimateActivity::create(_subjectSprite, _subjectIdleAnimation));
+    _subjectAnimate->appendActivity(AnimateActivity::create(_subjectSprite, _subjectIdleAnimation));
     
-    _subjectAnimate->appendAnimate(generateAttackAnimate(_subjectSprite, _subjectAttackAnimation, 1, CALLBACK2_SELECTOR(FightScene::onSubjectAttack)));
+    _subjectAnimate->appendActivity(generateAttackAnimate(_subjectSprite, _subjectAttackAnimation, 1, CALLBACK2_SELECTOR(FightScene::onSubjectAttack)));
     
     if (_fightResult->attackInfo2() != nullptr) {
-        _subjectAnimate->appendAnimate(generateAttackAnimate(_subjectSprite, _subjectAttackAnimation, 2, CALLBACK2_SELECTOR(FightScene::onSubjectAttack)));
+        _subjectAnimate->appendActivity(generateAttackAnimate(_subjectSprite, _subjectAttackAnimation, 2, CALLBACK2_SELECTOR(FightScene::onSubjectAttack)));
     }
     
     alignSubjectTargetAnimation();
     
     if (_fightResult->fightBackInfo1() != nullptr) {
-        _targetAnimate->appendAnimate(generateAttackAnimate(_targetSprite, _targetAttackAnimation, 1, CALLBACK2_SELECTOR(FightScene::onTargetAttack)));
+        _targetAnimate->appendActivity(generateAttackAnimate(_targetSprite, _targetAttackAnimation, 1, CALLBACK2_SELECTOR(FightScene::onTargetAttack)));
     }
     if (_fightResult->fightBackInfo2() != nullptr) {
-        _targetAnimate->appendAnimate(generateAttackAnimate(_targetSprite, _targetAttackAnimation, 2, CALLBACK2_SELECTOR(FightScene::onTargetAttack)));
+        _targetAnimate->appendActivity(generateAttackAnimate(_targetSprite, _targetAttackAnimation, 2, CALLBACK2_SELECTOR(FightScene::onTargetAttack)));
     }
     
     alignSubjectTargetAnimation();
     
-    _targetAnimate->appendAnimate(FDAnimate::create(_targetSprite, _targetIdleAnimation));
-    _targetAnimate->appendAnimate(FDAnimate::create(_targetSprite, _targetIdleAnimation));
+    _targetAnimate->appendActivity(AnimateActivity::create(_targetSprite, _targetIdleAnimation));
+    _targetAnimate->appendActivity(AnimateActivity::create(_targetSprite, _targetIdleAnimation));
     alignSubjectTargetAnimation();
 }
 
@@ -117,12 +117,12 @@ void FightScene::alignSubjectTargetAnimation()
 {
     if (!_subjectAttackAnimation->isRemoteAttack()) {
         while (_subjectAnimate->getTotalTick() < _targetAnimate->getTotalTick()) {
-            _subjectAnimate->appendAnimate(FDAnimate::create(_subjectSprite, _subjectIdleAnimation));
+            _subjectAnimate->appendActivity(AnimateActivity::create(_subjectSprite, _subjectIdleAnimation));
         }
     }
     
     while (_targetAnimate->getTotalTick() < _subjectAnimate->getTotalTick()) {
-        _targetAnimate->appendAnimate(FDAnimate::create(_targetSprite, _targetIdleAnimation));
+        _targetAnimate->appendActivity(AnimateActivity::create(_targetSprite, _targetIdleAnimation));
     }
 }
 
@@ -158,9 +158,9 @@ void FightScene::setTargetVisible(bool val)
 
 
 
-FDAnimate * FightScene::generateAttackAnimate(Sprite * sprite, SlideAnimation * animation, int tag, SEL_CALLBACK2 onAttack)
+AnimateActivity * FightScene::generateAttackAnimate(Sprite * sprite, SlideAnimation * animation, int tag, SEL_CALLBACK2 onAttack)
 {
-    FDAnimate * animate = FDAnimate::create(sprite, animation);
+    AnimateActivity * animate = AnimateActivity::create(sprite, animation);
     animate->setTag(tag);
     animate->setCallback(this, onAttack);
     
@@ -172,7 +172,7 @@ void FightScene::onSubjectAttack(Ref * frameObj)
     FightFrame * frame = (FightFrame *)frameObj;
     FightFrameDefinition * frameDefinition = frame->getDefinition();
     
-    int tag = _subjectAnimate->getCurrentAnimate()->getTag();
+    int tag = ((AnimateActivity *)_subjectAnimate->getCurrentActivity())->getTag();
     CounterResult * attackInfo = (tag == 2) ? _fightResult->attackInfo2() : _fightResult->attackInfo1();
     
     if (_subjectAttackAnimation->isRemoteAttack())
@@ -206,7 +206,7 @@ void FightScene::onTargetAttack(Ref * frameObj)
     FightFrame * frame = (FightFrame *)frameObj;
     FightFrameDefinition * frameDefinition = frame->getDefinition();
     
-    int tag = _subjectAnimate->getCurrentAnimate()->getTag();
+    int tag = ((AnimateActivity *)_subjectAnimate->getCurrentActivity())->getTag();
     CounterResult * attackInfo = (tag == 2) ? _fightResult->fightBackInfo2() : _fightResult->fightBackInfo1();
     
     if (frameDefinition->isHitting()) {
