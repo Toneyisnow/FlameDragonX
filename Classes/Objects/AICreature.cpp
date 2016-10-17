@@ -21,3 +21,8 @@ void AICreature::wakeUpByAttack()
         aiType = AIType_Aggressive;
     }
 }
+
+AIType AICreature::getAIType()
+{
+    return aiType;
+}

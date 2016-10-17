@@ -38,6 +38,9 @@ public:
     void wakeUpByAttack();
     
     int dropItemId;
+    
+    AIType getAIType();
+    
 };
 
 

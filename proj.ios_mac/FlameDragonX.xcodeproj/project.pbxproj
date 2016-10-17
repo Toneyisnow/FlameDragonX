@@ -31,6 +31,9 @@
 		3C4FA5941DB3697900AA9DF1 /* FDAnimate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C4FA5911DB3697900AA9DF1 /* FDAnimate.cpp */; };
 		3C4FA5A01DB4943000AA9DF1 /* MoveByActivity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C4FA59E1DB4943000AA9DF1 /* MoveByActivity.cpp */; };
 		3C4FA5A31DB4954100AA9DF1 /* AnimateActivity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C4FA5A11DB4954100AA9DF1 /* AnimateActivity.cpp */; };
+		3C4FA5A71DB4C4DA00AA9DF1 /* AIDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C4FA5A51DB4C4DA00AA9DF1 /* AIDelegate.cpp */; };
+		3C4FA5AA1DB4C4EA00AA9DF1 /* AIFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C4FA5A81DB4C4EA00AA9DF1 /* AIFactory.cpp */; };
+		3C4FA5AD1DB4C60000AA9DF1 /* AIAggressiveDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C4FA5AB1DB4C60000AA9DF1 /* AIAggressiveDelegate.cpp */; };
 		3C8D68181D78EA2F00CC3616 /* CombinedActivity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C8D68161D78EA2F00CC3616 /* CombinedActivity.cpp */; };
 		3C8D681B1D78EAAE00CC3616 /* FieldActivity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C8D68191D78EAAE00CC3616 /* FieldActivity.cpp */; };
 		3C8D681E1D78EB3B00CC3616 /* GlobalActivity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C8D681C1D78EB3B00CC3616 /* GlobalActivity.cpp */; };
@@ -296,6 +299,12 @@
 		3C4FA59F1DB4943000AA9DF1 /* MoveByActivity.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = MoveByActivity.hpp; path = Activities/MoveByActivity.hpp; sourceTree = "<group>"; };
 		3C4FA5A11DB4954100AA9DF1 /* AnimateActivity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AnimateActivity.cpp; path = Activities/AnimateActivity.cpp; sourceTree = "<group>"; };
 		3C4FA5A21DB4954100AA9DF1 /* AnimateActivity.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = AnimateActivity.hpp; path = Activities/AnimateActivity.hpp; sourceTree = "<group>"; };
+		3C4FA5A51DB4C4DA00AA9DF1 /* AIDelegate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AIDelegate.cpp; path = Battle/AI/AIDelegate.cpp; sourceTree = "<group>"; };
+		3C4FA5A61DB4C4DA00AA9DF1 /* AIDelegate.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = AIDelegate.hpp; path = Battle/AI/AIDelegate.hpp; sourceTree = "<group>"; };
+		3C4FA5A81DB4C4EA00AA9DF1 /* AIFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AIFactory.cpp; path = Battle/AI/AIFactory.cpp; sourceTree = "<group>"; };
+		3C4FA5A91DB4C4EA00AA9DF1 /* AIFactory.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = AIFactory.hpp; path = Battle/AI/AIFactory.hpp; sourceTree = "<group>"; };
+		3C4FA5AB1DB4C60000AA9DF1 /* AIAggressiveDelegate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AIAggressiveDelegate.cpp; path = Battle/AI/AIAggressiveDelegate.cpp; sourceTree = "<group>"; };
+		3C4FA5AC1DB4C60000AA9DF1 /* AIAggressiveDelegate.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = AIAggressiveDelegate.hpp; path = Battle/AI/AIAggressiveDelegate.hpp; sourceTree = "<group>"; };
 		3C8D68161D78EA2F00CC3616 /* CombinedActivity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CombinedActivity.cpp; path = Activities/CombinedActivity.cpp; sourceTree = "<group>"; };
 		3C8D68171D78EA2F00CC3616 /* CombinedActivity.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CombinedActivity.hpp; path = Activities/CombinedActivity.hpp; sourceTree = "<group>"; };
 		3C8D68191D78EAAE00CC3616 /* FieldActivity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FieldActivity.cpp; path = Activities/FieldActivity.cpp; sourceTree = "<group>"; };
@@ -757,6 +766,19 @@
 			name = Actions;
 			sourceTree = "<group>";
 		};
+		3C4FA5A41DB4C4B500AA9DF1 /* AI */ = {
+			isa = PBXGroup;
+			children = (
+				3C4FA5A51DB4C4DA00AA9DF1 /* AIDelegate.cpp */,
+				3C4FA5A61DB4C4DA00AA9DF1 /* AIDelegate.hpp */,
+				3C4FA5A81DB4C4EA00AA9DF1 /* AIFactory.cpp */,
+				3C4FA5A91DB4C4EA00AA9DF1 /* AIFactory.hpp */,
+				3C4FA5AB1DB4C60000AA9DF1 /* AIAggressiveDelegate.cpp */,
+				3C4FA5AC1DB4C60000AA9DF1 /* AIAggressiveDelegate.hpp */,
+			);
+			name = AI;
+			sourceTree = "<group>";
+		};
 		3C8D682A1D79F46200CC3616 /* Events */ = {
 			isa = PBXGroup;
 			children = (
@@ -1047,6 +1069,7 @@
 		3CD12F241D6D060300CDF793 /* Battle */ = {
 			isa = PBXGroup;
 			children = (
+				3C4FA5A41DB4C4B500AA9DF1 /* AI */,
 				3C8D682A1D79F46200CC3616 /* Events */,
 				3CD12F261D6D065800CDF793 /* BattleField.cpp */,
 				3CD12F271D6D065800CDF793 /* BattleField.hpp */,
@@ -1432,8 +1455,10 @@
 				3C4FA5761DA620EC00AA9DF1 /* ExchangeItemTargetState.cpp in Sources */,
 				3CE63B621D85308600C2C76B /* MagicScene.cpp in Sources */,
 				46880B8A19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */,
+				3C4FA5AD1DB4C60000AA9DF1 /* AIAggressiveDelegate.cpp in Sources */,
 				3CB109931D74ECB1002C4121 /* Constants.cpp in Sources */,
 				3CB109A41D74F440002C4121 /* SpecialItemDefinition.cpp in Sources */,
+				3C4FA5A71DB4C4DA00AA9DF1 /* AIDelegate.cpp in Sources */,
 				3CD12F291D6D065800CDF793 /* BattleField.cpp in Sources */,
 				3C8D681B1D78EAAE00CC3616 /* FieldActivity.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
@@ -1491,6 +1516,7 @@
 				3CB109791D6F6489002C4121 /* FDFrame.cpp in Sources */,
 				3C8D68181D78EA2F00CC3616 /* CombinedActivity.cpp in Sources */,
 				3CE439A61D9503CF0043676E /* TransferDefinition.cpp in Sources */,
+				3C4FA5AA1DB4C4EA00AA9DF1 /* AIFactory.cpp in Sources */,
 				3C18834E1D6BA1490059056E /* TitleLayer.cpp in Sources */,
 				3C4FA58D1DAF57B300AA9DF1 /* FightFrame.cpp in Sources */,
 				3CD12F201D6D051200CDF793 /* StringUtil.cpp in Sources */,
