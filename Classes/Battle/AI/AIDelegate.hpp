@@ -13,18 +13,20 @@
 #include "AICreature.hpp"
 
 class BattleScene;
+class BattleField;
 
 class AIDelegate : public cocos2d::Ref
 {
 protected:
     AICreature * _creature;
     BattleScene * _battleScene;
+    BattleField * _battleField;
     
 public:
     
     AIDelegate(AICreature * creature, BattleScene * scene);
     
-    void takeAction();
+    virtual void takeAction();
     
     
 };

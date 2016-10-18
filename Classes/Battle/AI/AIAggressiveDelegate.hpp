@@ -17,11 +17,13 @@ class AIAggressiveDelegate : public AIDelegate
 {
 private:
     
+    void searchAttackTarget();
     
 public:
     
     AIAggressiveDelegate(AICreature * creature, BattleScene * scene);
     
+    void takeAction() override;
 };
 
 #endif /* AIAggressiveDelegate_hpp */

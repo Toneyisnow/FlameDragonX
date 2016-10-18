@@ -28,19 +28,29 @@ class AICreature : public Creature
 {
 private:
     
-    AIType aiType;
+    AIType _aiType;
+    
+    int _actionSpeed;
     
     //// void aiParameter;
+    
+    void generateActionSpeed();
     
 public:
     
     AICreature(CreatureType type);
+    AICreature(CreatureType type, AIType aiType);
+    
+    void initWithDefinition(int identity, int creatureId) override;
+    
+    
     void wakeUpByAttack();
     
     int dropItemId;
     
     AIType getAIType();
     
+    int getActionSpeed();
 };
 
 

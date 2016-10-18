@@ -34,7 +34,7 @@ typedef enum GestureStatus {
 
 class Creature : public BattleObject
 {
-private:
+protected:
     
     int _identifier;
     int _creatureId;
@@ -55,7 +55,7 @@ public:
     
     ~Creature();
     
-    void initWithDefinition(int identity, int creatureId);
+    virtual void initWithDefinition(int identity, int creatureId);
     
     int getId();
     
@@ -72,6 +72,7 @@ public:
     void endTurn();
     void startTurn();
     
+    bool knowMagic();
     bool canFireMagic();
     bool isVisible();
     bool canFly();

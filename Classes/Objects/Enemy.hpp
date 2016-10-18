@@ -20,6 +20,7 @@ private:
 public:
     
     Enemy();
+    Enemy(AIType aiType);
     
     static Enemy * create(int creatureId, int definitionId);
     static Enemy * create(int creatureId, int definitionId, int dropItemId);

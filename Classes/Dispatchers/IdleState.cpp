@@ -61,7 +61,7 @@ void IdleState::handleClickAt(Vec2 position)
         {
             // Show information about the creature
             _battleScene->appendMethodToActivity(CALLBACK2_SELECTOR(BattleScene::showItemStatus), creature);
-            if (creature->creatureData()->magicList->size() > 0) {
+            if (creature->knowMagic()) {
                 _battleScene->appendMethodToActivity(CALLBACK2_SELECTOR(BattleScene::showMagicStatus), creature);
             }
             

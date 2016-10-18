@@ -336,7 +336,7 @@ void GameFormula::actionedByEnhanceDx(Creature * target)
     target->creatureData()->statusEnhanceDx = roundCount;
 }
 
-void GameFormula::actionedByPoision(Creature * target)
+void GameFormula::actionedByPoison(Creature * target)
 {
     if (target == nullptr) {
         return;

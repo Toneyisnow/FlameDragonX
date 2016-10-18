@@ -145,6 +145,11 @@ bool Creature::isVisible()
     return true;
 }
 
+bool Creature::knowMagic()
+{
+    return _data->magicList->size() > 0;
+}
+
 bool Creature::canFireMagic()
 {
     if (_data->magicList->size() <= 0 || _data->statusProhibited > 0) {

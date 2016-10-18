@@ -12,17 +12,47 @@
 AICreature::AICreature(CreatureType type)
 : Creature(type)
 {
+    _aiType = AIType_Aggressive;
+}
+
+AICreature::AICreature(CreatureType type, AIType aiType)
+: Creature(type)
+{
+    _aiType = aiType;
+}
+
+void AICreature::initWithDefinition(int identity, int creatureId)
+{
+    Creature::initWithDefinition(identity, creatureId);
     
+    this->generateActionSpeed();
 }
 
 void AICreature::wakeUpByAttack()
 {
-    if (aiType == AIType_Idle) {
-        aiType = AIType_Aggressive;
+    if (_aiType == AIType_Idle) {
+        _aiType = AIType_Aggressive;
     }
 }
 
 AIType AICreature::getAIType()
 {
-    return aiType;
+    return _aiType;
+}
+
+void AICreature::generateActionSpeed()
+{
+    // TODO: should add more logic here
+    
+    if (this->knowMagic()) {
+        _actionSpeed = 20;
+    }
+    else {
+        _actionSpeed = 10;
+    }
+}
+
+int AICreature::getActionSpeed()
+{
+    return _actionSpeed;
 }

@@ -55,6 +55,9 @@ BattleScene::BattleScene(ChapterRecord* record)
     _eventHandler = new EventHandler(this);
     _eventHandler->initFromDefinition(record->getChapterId());
     
+    _enemyAIHander = new AIHandler(this, CreatureType_Enemy);
+    _npcAIHander = new AIHandler(this, CreatureType_Npc);
+    
     _synchronizedTickCount = 0;
     schedule(CC_SCHEDULE_SELECTOR(BattleScene::takeDeltaTimeTck), 1.0 / Constants::GAME_FPS);
     
@@ -111,8 +114,14 @@ BattleScene::BattleScene(BattleRecord * battleRecord)
 BattleScene::~BattleScene()
 {
     _battleField->release();
+    _messageLayer->release();
     
     _activityQueue->release();
+    _eventHandler->release();
+    
+    _enemyAIHander->release();
+    _npcAIHander->release();
+    
 }
 
 BattleField * BattleScene::getBattleField()
@@ -474,10 +483,35 @@ void BattleScene::startTurn()
     }
 }
 
-
 void BattleScene::takeAIMove()
 {
     // Find AI Creature
+    if (_currentTurnType == CreatureType_Enemy)
+    {
+        AICreature * enemy = _enemyAIHander->findNextCreature();
+        if (enemy != nullptr) {
+            
+            _enemyAIHander->takeAction(enemy);
+            
+        } else {
+            // Start Next Turn
+            this->appendMethodToActivity(CALLBACK0_SELECTOR(BattleScene::startTurn));
+        }
+    }
+    else
+    {
+        AICreature * npc = _npcAIHander->findNextCreature();
+        if (npc != nullptr) {
+            
+            _npcAIHander->takeAction(npc);
+            
+        } else {
+            // Start Next Turn
+            this->appendMethodToActivity(CALLBACK0_SELECTOR(BattleScene::startTurn));
+        }
+    }
+    
+    /*
     Vector<Creature *> * creatureList = (_currentTurnType == CreatureType_Enemy) ? _battleField->getEnemyList() : _battleField->getNPCList();
     
     Creature * target = nullptr;
@@ -508,6 +542,8 @@ void BattleScene::takeAIMove()
         // Start Next Turn
         this->appendMethodToActivity(CALLBACK0_SELECTOR(BattleScene::startTurn));
     }
+    
+    */
 }
 void BattleScene::takeAIAction(int creatureId)
 {

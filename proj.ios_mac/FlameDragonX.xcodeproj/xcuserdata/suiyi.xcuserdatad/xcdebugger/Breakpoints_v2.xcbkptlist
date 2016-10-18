@@ -368,11 +368,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/Battle/BattleScene.cpp"
-            timestampString = "497605290.976599"
+            timestampString = "498466904.780182"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "95"
-            endingLineNumber = "95"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
             landmarkName = "BattleScene::BattleScene(ChapterRecord* record)"
             landmarkType = "7">
          </BreakpointContent>
@@ -576,11 +576,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/Battle/BattleScene.cpp"
-            timestampString = "497605290.976599"
+            timestampString = "498466904.780182"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
             landmarkName = "BattleScene::BattleScene(ChapterRecord* record)"
             landmarkType = "7">
          </BreakpointContent>
@@ -656,11 +656,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/Battle/BattleScene.cpp"
-            timestampString = "497605290.976599"
+            timestampString = "498466904.780182"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "481"
-            endingLineNumber = "481"
+            startingLineNumber = "515"
+            endingLineNumber = "515"
             landmarkName = "BattleScene::takeAIMove()"
             landmarkType = "7">
          </BreakpointContent>
@@ -672,11 +672,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/Battle/BattleScene.cpp"
-            timestampString = "497605290.976599"
+            timestampString = "498466904.780182"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "455"
-            endingLineNumber = "455"
+            startingLineNumber = "464"
+            endingLineNumber = "464"
             landmarkName = "BattleScene::startTurn()"
             landmarkType = "7">
          </BreakpointContent>
@@ -704,11 +704,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/Battle/BattleScene.cpp"
-            timestampString = "497605290.976599"
+            timestampString = "498466904.780182"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "514"
-            endingLineNumber = "514"
+            startingLineNumber = "550"
+            endingLineNumber = "550"
             landmarkName = "BattleScene::takeAIAction(int creatureId)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1024,11 +1024,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/Battle/BattleScene.cpp"
-            timestampString = "497605290.976599"
+            timestampString = "498466904.780182"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
             landmarkName = "BattleScene::BattleScene(ChapterRecord* record)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1120,11 +1120,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/Objects/Creature.cpp"
-            timestampString = "497433915.458936"
+            timestampString = "498466904.780182"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "150"
-            endingLineNumber = "150"
+            startingLineNumber = "155"
+            endingLineNumber = "155"
             landmarkName = "Creature::canFireMagic()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1136,11 +1136,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/Algorithms/GameFormula.cpp"
-            timestampString = "497514554.579287"
+            timestampString = "498466904.780182"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "16"
-            endingLineNumber = "16"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
             landmarkName = "GameFormula::dealWithFight(BattleField * field, Creature * subject, Creature * target)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1152,11 +1152,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/Battle/BattleScene.cpp"
-            timestampString = "497605557.501861"
+            timestampString = "498466904.780182"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "259"
-            endingLineNumber = "259"
+            startingLineNumber = "268"
+            endingLineNumber = "268"
             landmarkName = "BattleScene::postFightAction(Ref * counterObjectObj)"
             landmarkType = "7">
          </BreakpointContent>

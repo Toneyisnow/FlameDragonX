@@ -43,7 +43,7 @@ public:
     static void actionedByEnhanceAp(Creature * target);
     static void actionedByEnhanceDp(Creature * target);
     static void actionedByEnhanceDx(Creature * target);
-    static void actionedByPoision(Creature * target);
+    static void actionedByPoison(Creature * target);
     static void actionedByProhibited(Creature * target);
     static void actionedByFrozen(Creature * target);
     

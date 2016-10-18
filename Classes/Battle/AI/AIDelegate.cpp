@@ -13,4 +13,10 @@ AIDelegate::AIDelegate(AICreature * creature, BattleScene * scene)
 {
     _creature = creature;
     _battleScene = scene;
+    _battleField = scene->getBattleField();
+}
+
+void AIDelegate::takeAction()
+{
+    // Implement in sub class
 }

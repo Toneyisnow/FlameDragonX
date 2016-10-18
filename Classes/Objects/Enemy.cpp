@@ -14,6 +14,12 @@ Enemy::Enemy()
     
 }
 
+Enemy::Enemy(AIType aiType)
+: AICreature(CreatureType_Enemy, aiType)
+{
+    
+}
+
 Enemy * Enemy::create(int creatureId, int definitionId)
 {
     Enemy * enemy = new Enemy();

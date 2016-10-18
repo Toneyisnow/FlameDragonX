@@ -20,6 +20,7 @@
 #include "CallbackActivity.hpp"
 #include "CounterObject.hpp"
 #include "MessageLayer.hpp"
+#include "AIHandler.hpp"
 
 class BattleScene : public cocos2d::Scene
 {
@@ -42,6 +43,9 @@ private:
     
     Creature * _currentTalkerFriend;
     Vector<FDNumber *> _currentDropItems;
+    
+    AIHandler * _enemyAIHander;
+    AIHandler * _npcAIHander;
     
     void takeDeltaTimeTck(float dt);
     void takeTick(int synchronizedTick);
