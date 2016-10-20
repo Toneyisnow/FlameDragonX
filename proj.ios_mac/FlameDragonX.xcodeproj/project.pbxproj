@@ -35,6 +35,8 @@
 		3C4FA5AA1DB4C4EA00AA9DF1 /* AIHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C4FA5A81DB4C4EA00AA9DF1 /* AIHandler.cpp */; };
 		3C4FA5AD1DB4C60000AA9DF1 /* AIAggressiveDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C4FA5AB1DB4C60000AA9DF1 /* AIAggressiveDelegate.cpp */; };
 		3C4FA5B01DB5FC3700AA9DF1 /* AIIdleDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C4FA5AE1DB5FC3700AA9DF1 /* AIIdleDelegate.cpp */; };
+		3C4FA5B31DB8932A00AA9DF1 /* MovePathResolver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C4FA5B11DB8932A00AA9DF1 /* MovePathResolver.cpp */; };
+		3C4FA5B61DB8A99600AA9DF1 /* ResolverHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C4FA5B41DB8A99600AA9DF1 /* ResolverHelper.cpp */; };
 		3C8D68181D78EA2F00CC3616 /* CombinedActivity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C8D68161D78EA2F00CC3616 /* CombinedActivity.cpp */; };
 		3C8D681B1D78EAAE00CC3616 /* FieldActivity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C8D68191D78EAAE00CC3616 /* FieldActivity.cpp */; };
 		3C8D681E1D78EB3B00CC3616 /* GlobalActivity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C8D681C1D78EB3B00CC3616 /* GlobalActivity.cpp */; };
@@ -308,6 +310,10 @@
 		3C4FA5AC1DB4C60000AA9DF1 /* AIAggressiveDelegate.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = AIAggressiveDelegate.hpp; path = Battle/AI/AIAggressiveDelegate.hpp; sourceTree = "<group>"; };
 		3C4FA5AE1DB5FC3700AA9DF1 /* AIIdleDelegate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AIIdleDelegate.cpp; path = Battle/AI/AIIdleDelegate.cpp; sourceTree = "<group>"; };
 		3C4FA5AF1DB5FC3700AA9DF1 /* AIIdleDelegate.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = AIIdleDelegate.hpp; path = Battle/AI/AIIdleDelegate.hpp; sourceTree = "<group>"; };
+		3C4FA5B11DB8932A00AA9DF1 /* MovePathResolver.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MovePathResolver.cpp; path = Algorithms/MovePathResolver.cpp; sourceTree = "<group>"; };
+		3C4FA5B21DB8932A00AA9DF1 /* MovePathResolver.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = MovePathResolver.hpp; path = Algorithms/MovePathResolver.hpp; sourceTree = "<group>"; };
+		3C4FA5B41DB8A99600AA9DF1 /* ResolverHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ResolverHelper.cpp; path = Algorithms/ResolverHelper.cpp; sourceTree = "<group>"; };
+		3C4FA5B51DB8A99600AA9DF1 /* ResolverHelper.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ResolverHelper.hpp; path = Algorithms/ResolverHelper.hpp; sourceTree = "<group>"; };
 		3C8D68161D78EA2F00CC3616 /* CombinedActivity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CombinedActivity.cpp; path = Activities/CombinedActivity.cpp; sourceTree = "<group>"; };
 		3C8D68171D78EA2F00CC3616 /* CombinedActivity.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CombinedActivity.hpp; path = Activities/CombinedActivity.hpp; sourceTree = "<group>"; };
 		3C8D68191D78EAAE00CC3616 /* FieldActivity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FieldActivity.cpp; path = Activities/FieldActivity.cpp; sourceTree = "<group>"; };
@@ -1097,6 +1103,10 @@
 				3CE63B301D7E7E4300C2C76B /* MoveScopeResolver.hpp */,
 				3CE63B491D83EFC700C2C76B /* RangeScopeResolver.cpp */,
 				3CE63B4A1D83EFC700C2C76B /* RangeScopeResolver.hpp */,
+				3C4FA5B11DB8932A00AA9DF1 /* MovePathResolver.cpp */,
+				3C4FA5B21DB8932A00AA9DF1 /* MovePathResolver.hpp */,
+				3C4FA5B41DB8A99600AA9DF1 /* ResolverHelper.cpp */,
+				3C4FA5B51DB8A99600AA9DF1 /* ResolverHelper.hpp */,
 				3CE63B631D85364200C2C76B /* CounterResult.cpp */,
 				3CE63B641D85364200C2C76B /* CounterResult.hpp */,
 				3CE63B661D85366200C2C76B /* FightResult.cpp */,
@@ -1484,6 +1494,7 @@
 				3CB109A11D74F41E002C4121 /* AttackItemDefinition.cpp in Sources */,
 				3CE439971D93BE940043676E /* ScaledSprite.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
+				3C4FA5B61DB8A99600AA9DF1 /* ResolverHelper.cpp in Sources */,
 				3CE63B7B1D87DCB900C2C76B /* TalkMessage.cpp in Sources */,
 				3CE63B8D1D87DEE100C2C76B /* DetailBar.cpp in Sources */,
 				3CE63B711D853F3300C2C76B /* GameFormula.cpp in Sources */,
@@ -1517,6 +1528,7 @@
 				3C8D68501D7AA90A00CC3616 /* CreatureDeadActivity.cpp in Sources */,
 				3CB1096F1D6E6B8F002C4121 /* BattleObject.cpp in Sources */,
 				3CE63B681D85366200C2C76B /* FightResult.cpp in Sources */,
+				3C4FA5B31DB8932A00AA9DF1 /* MovePathResolver.cpp in Sources */,
 				3CE63B2D1D7D5DF900C2C76B /* TransparencyFrame.cpp in Sources */,
 				3CE439A31D9501710043676E /* OccupationDefinition.cpp in Sources */,
 				3CB109791D6F6489002C4121 /* FDFrame.cpp in Sources */,

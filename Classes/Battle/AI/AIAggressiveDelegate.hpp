@@ -17,7 +17,11 @@ class AIAggressiveDelegate : public AIDelegate
 {
 private:
     
-    void searchAttackTarget();
+    Creature * locateOffensiveTarget();
+    Vec2 locateOffensiveTargetPosition(Creature * target);
+    
+    void takeAttackAction();
+    
     
 public:
     
