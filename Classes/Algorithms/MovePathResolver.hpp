@@ -22,14 +22,14 @@ class MovePathPoint : public cocos2d::Ref
     
 public:
     
-    static MovePathPoint * create(Vec2 pos, MovePathPoint * previousPoint, int moved, int h);
+    static MovePathPoint * create(Vec2 pos, MovePathPoint * previousPoint, int moved, float h);
     
     Vec2 position;
     MovePathPoint * previousPoint;
     
     int movedPoint;
-    int heuristicPoint;
-    int totalPoint;
+    float heuristicPoint;
+    float totalPoint;
     
 };
 
@@ -42,10 +42,12 @@ private:
     Vec2 _targetPosition;
     RoutePoint * _resultRoute;
     PointMap<Creature *> * _zocPositions;
+    PointMap<Ref *> * _visitedPositions;
     
     bool _hasReachedTarget;
     
     void enqueue(Vector<MovePathPoint *> &positionQueue, MovePathPoint * point);
+    
     
 public:
     

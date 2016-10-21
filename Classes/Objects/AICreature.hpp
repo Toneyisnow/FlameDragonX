@@ -13,13 +13,11 @@
 #include "Creature.hpp"
 
 typedef enum AIType {
-    AIType_Idle,
     AIType_Aggressive,
     AIType_Defensive,
     AIType_Guard,
     AIType_Escape,
     AIType_StandBy,
-    AIType_UnNoticable,
     AIType_Treasure
 } AIType;
 
@@ -31,6 +29,8 @@ private:
     AIType _aiType;
     
     int _actionSpeed;
+    
+    bool _isUnnoticeableByOthers;
     
     //// void aiParameter;
     
@@ -51,6 +51,11 @@ public:
     AIType getAIType();
     
     int getActionSpeed();
+    
+    bool isAbleToAttack(Creature * another);
+    bool isUnnoticeableByOthers();
+    void setUnnoticeableByOthers(bool val);
+    
 };
 
 

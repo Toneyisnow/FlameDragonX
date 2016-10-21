@@ -8,6 +8,7 @@
 
 #include "GameOverLayer.hpp"
 #include "Constants.hpp"
+#include "ScaledSprite.hpp"
 
 USING_NS_CC;
 
@@ -24,7 +25,7 @@ bool GameOverLayer::init()
     float scaleFactor = Director::getInstance()->getContentScaleFactor();
     Size screen = Constants::getScreenSize();
     
-    Sprite* mainSprite = Sprite::create("GameOver.png");
+    Sprite* mainSprite = ScaledSprite::create("Others/GameOver.png");
     mainSprite->setPosition(screen.width / 2, screen.height / 2);
     mainSprite->setScale(scaleFactor * 1.5f);
     this->addChild(mainSprite);

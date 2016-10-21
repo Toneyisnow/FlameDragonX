@@ -6,21 +6,21 @@
 //
 //
 
-#ifndef AIIdleDelegate_hpp
-#define AIIdleDelegate_hpp
+#ifndef AIStandByDelegate_hpp
+#define AIStandByDelegate_hpp
 
 #include "cocos2d.h"
 #include "AIDelegate.hpp"
 #include "AICreature.hpp"
 
-class AIIdleDelegate : public AIDelegate
+class AIStandByDelegate : public AIDelegate
 {
 private:
     
     
 public:
     
-    AIIdleDelegate(AICreature * creature, BattleScene * scene);
+    AIStandByDelegate(AICreature * creature, BattleScene * scene);
     
     void takeAction() override;
 };

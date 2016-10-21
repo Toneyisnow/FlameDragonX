@@ -33,7 +33,6 @@ MoveScopeResolver::MoveScopeResolver(BattleField * field, Creature * creature)
 
 MoveScopeResolver::~MoveScopeResolver()
 {
-    _zocPositions->release();
     
     _movePoints->clear();
     delete _movePoints;
@@ -91,6 +90,8 @@ void MoveScopeResolver::calculate()
             _scopeResults->eraseObject(point);
         }
     }
+    
+    _zocPositions->release();
 }
 
 void MoveScopeResolver::walkDirection(MoveScopePoint * lastPoint, int directionX, int directionY)
@@ -114,6 +115,12 @@ void MoveScopeResolver::walkDirection(MoveScopePoint * lastPoint, int directionX
         moveLeft -= moveCount;
         if (moveLeft < 0)
         {
+            return;
+        }
+        
+        // If it is Enemy
+        Creature * c = _field->getCreatureAt(currentPos.x, currentPos.y);
+        if (c != nullptr && c->getType() == CreatureType_Enemy) {
             return;
         }
         

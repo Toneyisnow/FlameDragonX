@@ -10,7 +10,7 @@
 #include "BattleField.hpp"
 #include "ResolverHelper.hpp"
 
-MovePathPoint * MovePathPoint::create(Vec2 pos, MovePathPoint * previousPoint, int moved, int h)
+MovePathPoint * MovePathPoint::create(Vec2 pos, MovePathPoint * previousPoint, int moved, float h)
 {
     MovePathPoint * point = new MovePathPoint();
     
@@ -45,6 +45,8 @@ void MovePathResolver::calculate()
     Vec2 creaturePosition = _battleField->getObjectPosition(_creature);
     int totalDistance = _battleField->getPositionDistance(creaturePosition, _targetPosition);
     _zocPositions = ResolverHelper::calculateZocPositions(_battleField, _creature);
+    _visitedPositions = new PointMap<Ref *>();
+    
     
     Vector<MovePathPoint *> positionQueue;
     MovePathPoint * originPoint = MovePathPoint::create(creaturePosition, nullptr, 0, totalDistance);
@@ -69,7 +71,7 @@ void MovePathResolver::calculate()
             break;
         }
         
-        if (_zocPositions->containsKey(currentPoint->position)) {
+        if (currentPoint->position != creaturePosition && _zocPositions->containsKey(currentPoint->position)) {
             continue;
         }
         
@@ -78,30 +80,41 @@ void MovePathResolver::calculate()
         Vec2 deltaPoints[] = { Vec2(0, 1), Vec2(1, 0), Vec2(0, -1), Vec2(-1, 0) };
         for (Vec2 deltaPoint : deltaPoints) {
             Vec2 candidatePosition = Vec2(position.x + deltaPoint.x, position.y + deltaPoint.y);
+            
+            if (_visitedPositions->containsKey(candidatePosition)) {
+                continue;
+            }
+            
             int movePoint = ResolverHelper::calculateMovePoint(_battleField, _creature, candidatePosition);
             if (movePoint < 0) {
                 continue;
             }
             
             int movedPoint = currentPoint->movedPoint + movePoint;
-            int heuristicPoint = _battleField->getPositionDistance(candidatePosition, _targetPosition);
+            float heuristicPoint = ResolverHelper::calculateHeuristicPoint(candidatePosition, _targetPosition);
             MovePathPoint * newPoint = MovePathPoint::create(candidatePosition, currentPoint, movedPoint, heuristicPoint);
             
             this->enqueue(positionQueue, newPoint);
         }
     }
     
+    _visitedPositions->release();
+    
+    // Generate the Result
     _resultRoute = new RoutePoint();
     MovePathPoint * nextPoint = resultPoint;
     while (nextPoint->movedPoint > _creature->creatureData()->mv && nextPoint->previousPoint != nullptr) {
         nextPoint = nextPoint->previousPoint;
     }
+    
+    while (_battleField->getCreatureAt(nextPoint->position.x, nextPoint->position.y) != nullptr && nextPoint->previousPoint != nullptr){
+        nextPoint = nextPoint->previousPoint;
+    }
+    
     while (nextPoint->previousPoint != nullptr) {
         _resultRoute->insertPoint(nextPoint->position);
         nextPoint = nextPoint->previousPoint;
     }
-    
-    
     
 }
 
@@ -115,6 +128,7 @@ void MovePathResolver::enqueue(Vector<MovePathPoint *> &positionQueue, MovePathP
     }
     
     positionQueue.pushBack(point);
+    _visitedPositions->insert(point->position, this);
 }
 
 

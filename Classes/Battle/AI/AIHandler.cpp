@@ -12,7 +12,7 @@
 #include "Creature.hpp"
 
 #include "AIAggressiveDelegate.hpp"
-#include "AIIdleDelegate.hpp"
+#include "AIStandByDelegate.hpp"
 
 AIHandler::AIHandler(BattleScene * scene, CreatureType creatureType)
 {
@@ -46,8 +46,8 @@ void AIHandler::takeAction(AICreature * aiCreature)
     AIDelegate * delegate = nullptr;
     
     switch (aiCreature->getAIType()) {
-        case AIType_Idle:
-            delegate = new AIIdleDelegate(aiCreature, _battleScene);
+        case AIType_StandBy:
+            delegate = new AIStandByDelegate(aiCreature, _battleScene);
             break;
         case AIType_Aggressive:
             delegate = new AIAggressiveDelegate(aiCreature, _battleScene);

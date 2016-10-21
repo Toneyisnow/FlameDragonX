@@ -26,11 +26,12 @@ void AICreature::initWithDefinition(int identity, int creatureId)
     Creature::initWithDefinition(identity, creatureId);
     
     this->generateActionSpeed();
+    _isUnnoticeableByOthers = false;
 }
 
 void AICreature::wakeUpByAttack()
 {
-    if (_aiType == AIType_Idle) {
+    if (_aiType == AIType_StandBy) {
         _aiType = AIType_Aggressive;
     }
 }
@@ -55,4 +56,29 @@ void AICreature::generateActionSpeed()
 int AICreature::getActionSpeed()
 {
     return _actionSpeed;
+}
+
+bool AICreature::isAbleToAttack(Creature * another)
+{
+    if (another == nullptr) {
+        return false;
+    }
+    
+    AICreature * aiAnother = (AICreature *)another;
+    if (aiAnother != nullptr && aiAnother->isUnnoticeableByOthers()) {
+        return false;
+    }
+    
+    return (this->creatureData()->attackItemIndex >= 0
+            && this->creatureData()->calculatedAp() > another->creatureData()->calculatedDp());
+}
+
+bool AICreature::isUnnoticeableByOthers()
+{
+    return _isUnnoticeableByOthers;
+}
+
+void AICreature::setUnnoticeableByOthers(bool val)
+{
+    _isUnnoticeableByOthers = val;
 }

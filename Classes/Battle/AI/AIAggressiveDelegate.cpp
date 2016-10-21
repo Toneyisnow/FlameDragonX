@@ -30,6 +30,10 @@ void AIAggressiveDelegate::takeAction()
     
     // Take Move
     Creature * target = this->locateOffensiveTarget();
+    if (target == nullptr) {
+        _battleScene->waiveTurn(_creature);
+    }
+    
     Vec2 targetPosition = this->locateOffensiveTargetPosition(target);
     MovePathResolver * resolver = new MovePathResolver(_battleField, _creature, targetPosition);
     resolver->calculate();
@@ -50,6 +54,10 @@ Creature * AIAggressiveDelegate::locateOffensiveTarget()
     {
         for (Creature * c : *(_battleField->getFriendList()))
         {
+            if (!_creature->isAbleToAttack(c)) {
+                continue;
+            }
+            
             int distance = _battleField->getObjectDistance(_creature, c);
             if (distance < minDistance)
             {
@@ -59,6 +67,9 @@ Creature * AIAggressiveDelegate::locateOffensiveTarget()
         }
         for (Creature * c : *(_battleField->getNPCList()))
         {
+            if (!_creature->isAbleToAttack(c)) {
+                continue;
+            }
             int distance = _battleField->getObjectDistance(_creature, c);
             if (distance < minDistance)
             {
@@ -71,6 +82,9 @@ Creature * AIAggressiveDelegate::locateOffensiveTarget()
     {
         for (Creature * c : *(_battleField->getEnemyList()))
         {
+            if (!_creature->isAbleToAttack(c)) {
+                continue;
+            }
             int distance = _battleField->getObjectDistance(_creature, c);
             if (distance < minDistance)
             {
@@ -109,7 +123,8 @@ Vec2 AIAggressiveDelegate::locateOffensiveTargetPosition(Creature * target)
     for (FDPoint * point : resultPositions)
     {
         Vec2 pos = point->getValue();
-        if (_battleField->getCreatureAt(pos.x, pos.y) != nullptr) {
+        Creature * c = _battleField->getCreatureAt(pos.x, pos.y);
+        if (c != nullptr && c != _creature) {
             continue;
         }
         
@@ -139,9 +154,35 @@ Vec2 AIAggressiveDelegate::locateOffensiveTargetPosition(Creature * target)
 
 void AIAggressiveDelegate::takeAttackAction()
 {
+    FDRange * range = _creature->getAttackRange();
     
+    if (_creature->getType() == CreatureType_Enemy) {
+        for (Creature * c : *(_battleField->getFriendList())) {
+            int distance = _battleField->getObjectDistance(_creature, c);
+            if (range->containsValue(distance) && _creature->isAbleToAttack(c)) {
+                _battleScene->attackTo(_creature, c);
+                return;
+            }
+        }
+        for (Creature * c : *(_battleField->getNPCList())) {
+            int distance = _battleField->getObjectDistance(_creature, c);
+            if (range->containsValue(distance) && _creature->isAbleToAttack(c)) {
+                _battleScene->attackTo(_creature, c);
+                return;
+            }
+        }
+    }
+    else
+    {
+        for (Creature * c : *(_battleField->getEnemyList())) {
+            int distance = _battleField->getObjectDistance(_creature, c);
+            if (range->containsValue(distance) && _creature->isAbleToAttack(c)) {
+                _battleScene->attackTo(_creature, c);
+                return;
+            }
+        }
+    }
     
-    
-    
+    // If there is no target found
     _battleScene->waiveTurn(_creature);
 }

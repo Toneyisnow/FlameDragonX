@@ -35,22 +35,26 @@ void EventChapter1::loadEvents()
 
 void EventChapter1::test()
 {
-    _battleField->addCreature(Friend::create(1, 1), Vec2(8, 20));
-    _battleField->addCreature(Friend::create(2, 2), Vec2(6, 21));
-    _battleField->addCreature(Friend::create(3, 3), Vec2(9, 22));
-    _battleField->addCreature(Friend::create(4, 4), Vec2(12, 23));
-    _battleField->addCreature(Friend::create(6, 6), Vec2(10, 23));
+    Creature * f3 = Friend::create(2, 2);
+    f3->creatureData()->hpMax = 999;
+    f3->creatureData()->hpCurrent = 999;
+    
+    _battleField->addCreature(f3, Vec2(7, 23));
+    //_battleField->addCreature(Friend::create(2, 2), Vec2(6, 21));
+    //_battleField->addCreature(Friend::create(3, 3), Vec2(9, 22));
+    //_battleField->addCreature(Friend::create(4, 4), Vec2(12, 23));
+    //_battleField->addCreature(Friend::create(6, 6), Vec2(10, 23));
     
     Enemy * a = Enemy::create(11, 50101, 101);
     a->creatureData()->hpCurrent = 1;
-    _battleField->addCreature(a, Vec2(2, 22));
+    _battleField->addCreature(a, Vec2(4, 18));
     
-    _battleField->addCreature(Enemy::create(12, 50101, 101), Vec2(3, 22));
-    _battleField->addCreature(Enemy::create(13, 50101, 101), Vec2(4, 23));
+    _battleField->addCreature(Enemy::create(12, 50101, 101), Vec2(3, 19));
+    _battleField->addCreature(Enemy::create(13, 50101, 101), Vec2(4, 20));
     
     Enemy * d = Enemy::create(14, 50101, 101);
     d->creatureData()->hpCurrent = 1;
-    _battleField->addCreature(d, Vec2(5, 23));
+    _battleField->addCreature(d, Vec2(4, 15));
 }
 
 void EventChapter1::round1()

@@ -105,3 +105,11 @@ PointMap<Creature *> * ResolverHelper::calculateZocPositions(BattleField * battl
     
     return zocPositions;
 }
+
+float ResolverHelper::calculateHeuristicPoint(Vec2 current, Vec2 target)
+{
+    int deltaX = abs(current.x - target.x);
+    int deltaY = abs(current.y - target.y);
+    
+    return sqrtf(deltaX * deltaX + deltaY * deltaY);
+}

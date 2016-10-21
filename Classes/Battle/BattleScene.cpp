@@ -279,6 +279,7 @@ void BattleScene::postFightAction(Ref * counterObjectObj)
     
     
     // Get Talker Friend
+    _currentTalkerFriend = nullptr;
     Creature * target = targetList.at(0);
     if (creature->getType() == CreatureType_Friend && !creature->isDead()) {
         _currentTalkerFriend = creature;
