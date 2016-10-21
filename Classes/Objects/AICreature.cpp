@@ -64,7 +64,7 @@ bool AICreature::isAbleToAttack(Creature * another)
         return false;
     }
     
-    AICreature * aiAnother = (AICreature *)another;
+    AICreature * aiAnother = dynamic_cast<AICreature *>(another);
     if (aiAnother != nullptr && aiAnother->isUnnoticeableByOthers()) {
         return false;
     }

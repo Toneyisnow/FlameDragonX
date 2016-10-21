@@ -32,6 +32,7 @@ void AIAggressiveDelegate::takeAction()
     Creature * target = this->locateOffensiveTarget();
     if (target == nullptr) {
         _battleScene->waiveTurn(_creature);
+        return;
     }
     
     Vec2 targetPosition = this->locateOffensiveTargetPosition(target);

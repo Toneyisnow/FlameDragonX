@@ -47,7 +47,6 @@ void MovePathResolver::calculate()
     _zocPositions = ResolverHelper::calculateZocPositions(_battleField, _creature);
     _visitedPositions = new PointMap<Ref *>();
     
-    
     Vector<MovePathPoint *> positionQueue;
     MovePathPoint * originPoint = MovePathPoint::create(creaturePosition, nullptr, 0, totalDistance);
     positionQueue.pushBack(originPoint);
@@ -120,6 +119,8 @@ void MovePathResolver::calculate()
 
 void MovePathResolver::enqueue(Vector<MovePathPoint *> &positionQueue, MovePathPoint * point)
 {
+    _visitedPositions->insert(point->position, this);
+    
     for (int i = 0; i < positionQueue.size(); i++) {
         if (point->totalPoint <= positionQueue.at(i)->totalPoint) {
             positionQueue.insert(i, point);
@@ -128,7 +129,6 @@ void MovePathResolver::enqueue(Vector<MovePathPoint *> &positionQueue, MovePathP
     }
     
     positionQueue.pushBack(point);
-    _visitedPositions->insert(point->position, this);
 }
 
 
