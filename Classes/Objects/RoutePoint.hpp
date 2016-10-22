@@ -30,6 +30,8 @@ public:
     void insertPoint(Vec2 point);
     
     int getCount();
+    int getLength();
+    
     Vec2 pointAt(int index);
 };
 

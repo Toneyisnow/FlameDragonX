@@ -75,16 +75,7 @@ int ResolverHelper::calculateMovePoint(BattleField * battleField, Creature * cre
 PointMap<Creature *> * ResolverHelper::calculateZocPositions(BattleField * battleField, Creature * creature)
 {
     PointMap<Creature *> * zocPositions = new PointMap<Creature *>();
-    Vector<Creature *> targets;
-    
-    if (creature->getType() == CreatureType_Enemy) {
-        targets.pushBack(*(battleField->getFriendList()));
-        targets.pushBack(*(battleField->getNPCList()));
-    }
-    else
-    {
-        targets.pushBack(*(battleField->getEnemyList()));
-    }
+    Vector<Creature *> targets = battleField->getHostileCreatureList(creature->getType());
     
     for (int i = 0; i < targets.size(); i++) {
         Creature * target = targets.at(i);
@@ -112,4 +103,14 @@ float ResolverHelper::calculateHeuristicPoint(Vec2 current, Vec2 target)
     int deltaY = abs(current.y - target.y);
     
     return sqrtf(deltaX * deltaX + deltaY * deltaY);
+}
+
+bool ResolverHelper::isHostile(Creature * c1, Creature * c2)
+{
+    if (c1 == nullptr || c2 == nullptr) {
+        return false;
+    }
+    
+    return ((c1->getType() == CreatureType_Enemy && c2->getType() != CreatureType_Enemy)
+            || (c1->getType() != CreatureType_Enemy && c2->getType() == CreatureType_Enemy));
 }

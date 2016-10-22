@@ -102,7 +102,9 @@ void MovePathResolver::calculate()
     // Generate the Result
     _resultRoute = new RoutePoint();
     MovePathPoint * nextPoint = resultPoint;
+    _heuristicPosition = nextPoint->position;
     while (nextPoint->movedPoint > _creature->creatureData()->mv && nextPoint->previousPoint != nullptr) {
+        _heuristicPosition = nextPoint->position;
         nextPoint = nextPoint->previousPoint;
     }
     
@@ -131,8 +133,12 @@ void MovePathResolver::enqueue(Vector<MovePathPoint *> &positionQueue, MovePathP
     positionQueue.pushBack(point);
 }
 
-
 RoutePoint * MovePathResolver::getRoutePoint()
 {
     return _resultRoute;
+}
+
+Vec2 MovePathResolver::getHeuristicPosition()
+{
+    return _heuristicPosition;
 }

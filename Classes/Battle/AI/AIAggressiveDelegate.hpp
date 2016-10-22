@@ -17,9 +17,8 @@ class AIAggressiveDelegate : public AIDelegate
 {
 private:
     
-    Creature * locateOffensiveTarget();
-    Vec2 locateOffensiveTargetPosition(Creature * target);
-    
+    Vector<Creature *> locateCandidateTargets();
+    Vec2 locatePathTargetPosition(Creature * target);
     void takeAttackAction();
     
     

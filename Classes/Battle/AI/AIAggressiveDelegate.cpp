@@ -13,6 +13,7 @@
 #include "MovePathResolver.hpp"
 #include "RangeScopeResolver.hpp"
 #include "ResolverHelper.hpp"
+#include "MoveScopeResolver.hpp"
 
 AIAggressiveDelegate::AIAggressiveDelegate(AICreature * creature, BattleScene * scene)
 : AIDelegate(creature, scene)
@@ -22,168 +23,165 @@ AIAggressiveDelegate::AIAggressiveDelegate(AICreature * creature, BattleScene * 
 
 void AIAggressiveDelegate::takeAction()
 {
-    RoutePoint * route = new RoutePoint();
-    Vec2 position = _battleField->getObjectPosition(_creature);
-    route->appendPoint(Vec2(position.x, position.y + 1));
-    route->appendPoint(Vec2(position.x + 1, position.y + 1));
-    
-    
-    // Take Move
-    Creature * target = this->locateOffensiveTarget();
-    if (target == nullptr) {
+    // Locate Targets
+    Vector<Creature *> candidateTargets = this->locateCandidateTargets();
+    if (candidateTargets.size() == 0) {
         _battleScene->waiveTurn(_creature);
         return;
     }
     
-    Vec2 targetPosition = this->locateOffensiveTargetPosition(target);
-    MovePathResolver * resolver = new MovePathResolver(_battleField, _creature, targetPosition);
-    resolver->calculate();
+    Vec2 creaturePosition = _battleField->getObjectPosition(_creature);
+    MoveScopeResolver * scopeResolver = new MoveScopeResolver(_battleField, _creature);
+    scopeResolver->calculate();
+    Vector<FDPoint *> scopePositions = scopeResolver->getResults();
+    Vec2 reachAttackPosition = Vec2(0, 0);
+    FDRange * attackRange = _creature->getAttackRange();
+    int maxTargetDistance = 0;
+    int minCreatureDistance = _creature->creatureData()->mv;
     
-    CreatureMoveActivity * activity = CreatureMoveActivity::create(_battleField, _creature, resolver->getRoutePoint());
+    for (FDPoint * scopePosition : scopePositions) {
+        Vec2 pos = scopePosition->getValue();
+        
+        int creatureDistance = _battleField->getPositionDistance(pos, creaturePosition);
+        for (Creature * target : candidateTargets)
+        {
+            Vec2 targetPosition = _battleField->getObjectPosition(target);
+            int targetDistance = _battleField->getPositionDistance(pos, targetPosition);
+            
+            if (!attackRange->containsValue(targetDistance))
+            {
+                continue;
+            }
+            
+            if (targetDistance > maxTargetDistance || (targetDistance == maxTargetDistance && creatureDistance < minCreatureDistance))
+            {
+                reachAttackPosition = pos;
+                maxTargetDistance = targetDistance;
+                minCreatureDistance = creatureDistance;
+            }
+        }
+    }
+    log("ReachAttackPosition: %f, %f", reachAttackPosition.x, reachAttackPosition.y);
+    
+    Vec2 decidedPosition = Vec2(0, 0);
+    if (reachAttackPosition != Vec2(0, 0))
+    {
+        // Found a position could attack a target, go to that position
+        decidedPosition = reachAttackPosition;
+    }
+    else
+    {
+        // If could not reach attack, use the MovePathResolver to move
+        Vec2 heuristicPosition = this->locatePathTargetPosition(candidateTargets.at(0));
+        log("HeuristicPosition: %f, %f", heuristicPosition.x, heuristicPosition.y);
+        
+        int minToTarget = _battleField->getPositionDistance(heuristicPosition, creaturePosition);
+        int maxMoved = 0;
+        for (FDPoint * scopePosition : scopePositions) {
+            RoutePoint * route = scopeResolver->getRoutePoint(scopePosition->getValue());
+            int movedCount = route->getLength();
+            int targetDistance = _battleField->getPositionDistance(heuristicPosition, scopePosition->getValue());
+            if (targetDistance < minToTarget || (targetDistance == minToTarget && movedCount > maxMoved)) {
+                decidedPosition = scopePosition->getValue();
+                minToTarget = targetDistance;
+                maxMoved = movedCount;
+            }
+        }
+    }
+    log("decidedPosition: %f, %f", decidedPosition.x, decidedPosition.y);
+    
+    RoutePoint * route = scopeResolver->getRoutePoint(decidedPosition);
+    CreatureMoveActivity * activity = CreatureMoveActivity::create(_battleField, _creature, route);
     _battleScene->getActivityQueue()->appendActivity(activity);
-    resolver->release();
+    
+    scopeResolver->release();
     
     _battleScene->appendMethodToActivity(this, CALLBACK0_SELECTOR(AIAggressiveDelegate::takeAttackAction));
 }
 
-Creature * AIAggressiveDelegate::locateOffensiveTarget()
+Vector<Creature *> AIAggressiveDelegate::locateCandidateTargets()
 {
-    Creature * target = nullptr;
     int minDistance = _battleField->getFieldSize().width + _battleField->getFieldSize().height;
     
+    Vector<Creature *> targets;
     if (_creature->getType() == CreatureType_Enemy)
     {
-        for (Creature * c : *(_battleField->getFriendList()))
-        {
-            if (!_creature->isAbleToAttack(c)) {
-                continue;
-            }
-            
-            int distance = _battleField->getObjectDistance(_creature, c);
-            if (distance < minDistance)
-            {
-                target = c;
-                minDistance = distance;
-            }
-        }
-        for (Creature * c : *(_battleField->getNPCList()))
-        {
-            if (!_creature->isAbleToAttack(c)) {
-                continue;
-            }
-            int distance = _battleField->getObjectDistance(_creature, c);
-            if (distance < minDistance)
-            {
-                target = c;
-                minDistance = distance;
-            }
-        }
+        targets.pushBack(*(_battleField->getFriendList()));
+        targets.pushBack(*(_battleField->getNPCList()));
     }
     else
     {
-        for (Creature * c : *(_battleField->getEnemyList()))
+        targets.pushBack(*(_battleField->getEnemyList()));
+    }
+    
+    Vector<Creature *> candidateTargets;
+    Creature * candidateTargetOutOfRange = nullptr;
+    FDRange * attackRange = _creature->getAttackRange();
+    if (attackRange == nullptr) {
+        return candidateTargets;
+    }
+    
+    int reachedDistance = _creature->creatureData()->mv + attackRange->getMax();
+    for (Creature * c : targets)
+    {
+        if (!_creature->isAbleToAttack(c)) {
+            continue;
+        }
+        
+        int distance = _battleField->getObjectDistance(_creature, c);
+        if (distance <= reachedDistance) {
+            candidateTargets.pushBack(c);
+        }
+        else if (distance < minDistance)
         {
-            if (!_creature->isAbleToAttack(c)) {
-                continue;
-            }
-            int distance = _battleField->getObjectDistance(_creature, c);
-            if (distance < minDistance)
-            {
-                target = c;
-                minDistance = distance;
-            }
+            candidateTargetOutOfRange = c;
+            minDistance = distance;
         }
     }
     
-    return target;
+    if (candidateTargets.size() == 0 && candidateTargetOutOfRange != nullptr) {
+        candidateTargets.pushBack(candidateTargetOutOfRange);
+    }
+    
+    return candidateTargets;
 }
 
-Vec2 AIAggressiveDelegate::locateOffensiveTargetPosition(Creature * target)
+Vec2 AIAggressiveDelegate::locatePathTargetPosition(Creature * target)
 {
     Vec2 targetPosition = _battleField->getObjectPosition(target);
-    Vec2 creaturePosition = _battleField->getObjectPosition(_creature);
-    FDRange * attackRange = _creature->getAttackRange();
-    int creatureTargetDistance = _battleField->getObjectDistance(_creature, target);
+    MovePathResolver * resolver = new MovePathResolver(_battleField, _creature, targetPosition);
+    resolver->calculate();
+    Vec2 result = resolver->getHeuristicPosition();
+    resolver->release();
     
-    // If the target is far away, just use the target position as result
-    if (creatureTargetDistance > _creature->creatureData()->mv + attackRange->getMax()) {
-        return targetPosition;
-    }
-    
-    RangeScopeResolver * resolver = new RangeScopeResolver(_battleField, targetPosition, attackRange);
-    
-    Vector<FDPoint *> resultPositions = resolver->calculcate();
-    if (resultPositions.size() == 0)
-    {
-        return targetPosition;
-    }
-    
-    int maxTargetDistance = 0;
-    int minCreatureDistance = creatureTargetDistance + attackRange->getMax();
-    Vec2 resultPosition;
-    for (FDPoint * point : resultPositions)
-    {
-        Vec2 pos = point->getValue();
-        Creature * c = _battleField->getCreatureAt(pos.x, pos.y);
-        if (c != nullptr && c != _creature) {
-            continue;
-        }
-        
-        if (ResolverHelper::calculateMovePoint(_battleField, _creature, pos) < 0) {
-            continue;
-        }
-        
-        int targetDistance = _battleField->getPositionDistance(pos, targetPosition);
-        int creatureDistance = _battleField->getPositionDistance(pos, creaturePosition);
-        if (targetDistance > maxTargetDistance)
-        {
-            maxTargetDistance = targetDistance;
-            minCreatureDistance = creatureDistance;
-            resultPosition = pos;
-        }
-        else if (targetDistance == maxTargetDistance)
-        {
-            if (creatureDistance < minCreatureDistance) {
-                minCreatureDistance = creatureDistance;
-                resultPosition = pos;
-            }
-        }
-    }
-    
-    return resultPosition;
+    return result;
 }
 
 void AIAggressiveDelegate::takeAttackAction()
 {
     FDRange * range = _creature->getAttackRange();
     
-    if (_creature->getType() == CreatureType_Enemy) {
-        for (Creature * c : *(_battleField->getFriendList())) {
-            int distance = _battleField->getObjectDistance(_creature, c);
-            if (range->containsValue(distance) && _creature->isAbleToAttack(c)) {
-                _battleScene->attackTo(_creature, c);
-                return;
-            }
-        }
-        for (Creature * c : *(_battleField->getNPCList())) {
-            int distance = _battleField->getObjectDistance(_creature, c);
-            if (range->containsValue(distance) && _creature->isAbleToAttack(c)) {
-                _battleScene->attackTo(_creature, c);
-                return;
-            }
-        }
-    }
-    else
-    {
-        for (Creature * c : *(_battleField->getEnemyList())) {
-            int distance = _battleField->getObjectDistance(_creature, c);
-            if (range->containsValue(distance) && _creature->isAbleToAttack(c)) {
-                _battleScene->attackTo(_creature, c);
-                return;
+    Vector<Creature *> targets = _battleField->getHostileCreatureList(_creature->getType());
+    int maxDistance = 0;
+    Creature * target = nullptr;
+    for (Creature * c : targets) {
+        int distance = _battleField->getObjectDistance(_creature, c);
+        if (range->containsValue(distance) && _creature->isAbleToAttack(c)) {
+            
+            if (distance > maxDistance) {
+                maxDistance = distance;
+                target = c;
             }
         }
     }
     
-    // If there is no target found
-    _battleScene->waiveTurn(_creature);
+    if (target != nullptr)
+    {
+        _battleScene->attackTo(_creature, target);
+    }
+    else
+    {
+        // If there is no target found
+        _battleScene->waiveTurn(_creature);
+    }
 }

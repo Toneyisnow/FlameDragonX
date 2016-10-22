@@ -43,6 +43,7 @@ private:
     RoutePoint * _resultRoute;
     PointMap<Creature *> * _zocPositions;
     PointMap<Ref *> * _visitedPositions;
+    Vec2 _heuristicPosition;
     
     bool _hasReachedTarget;
     
@@ -57,6 +58,8 @@ public:
     void calculate();
     
     RoutePoint * getRoutePoint();
+    Vec2 getHeuristicPosition();
+    
 };
 
 #endif /* MovePathResolver_hpp */

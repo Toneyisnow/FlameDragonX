@@ -28,6 +28,8 @@ SimpleMoveActivity::~SimpleMoveActivity()
 void SimpleMoveActivity::initialize()
 {
     Vec2 original = _object->getSprite()->getPosition();
+    deltaX = 0;
+    deltaY = 0;
     
     if (original.x < _targetLocation.x) {
         // Moving right

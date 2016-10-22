@@ -136,6 +136,7 @@ public:
     Vector<Creature *> getCreaturesInRange(Vec2 position, int range, bool badGuy);
     Vector<Creature *> searchTargetInAttackRange(Creature * creature);
     Vector<Creature *> searchTargetInMagicRange(Creature * creature, int magicId);
+    Vector<Creature *> getHostileCreatureList(CreatureType type);
     
 };
 

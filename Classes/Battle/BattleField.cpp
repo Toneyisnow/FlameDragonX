@@ -843,3 +843,19 @@ Vector<Creature *> BattleField::getCreaturesInRange(Vec2 position, int range, bo
     
     return result;
 }
+
+Vector<Creature *> BattleField::getHostileCreatureList(CreatureType type)
+{
+    Vector<Creature *> creatureList;
+    if (type == CreatureType_Enemy) {
+        creatureList.pushBack(*(this->getFriendList()));
+        creatureList.pushBack(*(this->getNPCList()));
+    }
+    else
+    {
+        creatureList.pushBack(*(this->getEnemyList()));
+    }
+    
+    return creatureList;
+}
+

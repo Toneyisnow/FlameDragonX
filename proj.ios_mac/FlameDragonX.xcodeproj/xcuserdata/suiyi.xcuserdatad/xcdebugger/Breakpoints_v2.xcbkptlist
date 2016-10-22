@@ -56,13 +56,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/Battle/TouchHandler.cpp"
-            timestampString = "496187483.869543"
+            timestampString = "498820383.489576"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
             landmarkName = "TouchHandler::onTouchBegan(Touch* touch, Event* event)"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -384,27 +384,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/Algorithms/MoveScopeResolver.cpp"
-            timestampString = "498729536.015777"
+            timestampString = "498818401.335607"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
-            landmarkName = "MoveScopeResolver::calculate()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../Classes/Algorithms/MoveScopeResolver.cpp"
-            timestampString = "498729536.015777"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "103"
-            endingLineNumber = "103"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
             landmarkName = "MoveScopeResolver::walkDirection(MoveScopePoint * lastPoint, int directionX, int directionY)"
             landmarkType = "7">
          </BreakpointContent>
@@ -416,11 +400,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/Algorithms/MoveScopeResolver.cpp"
-            timestampString = "498729536.015777"
+            timestampString = "498818401.335607"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "106"
-            endingLineNumber = "106"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
             landmarkName = "MoveScopeResolver::walkDirection(MoveScopePoint * lastPoint, int directionX, int directionY)"
             landmarkType = "7">
          </BreakpointContent>
@@ -432,11 +416,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/Algorithms/MoveScopeResolver.cpp"
-            timestampString = "498729536.015777"
+            timestampString = "498818401.335607"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "104"
-            endingLineNumber = "104"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
             landmarkName = "MoveScopeResolver::walkDirection(MoveScopePoint * lastPoint, int directionX, int directionY)"
             landmarkType = "7">
          </BreakpointContent>
@@ -448,11 +432,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/Algorithms/MoveScopeResolver.cpp"
-            timestampString = "498729536.015777"
+            timestampString = "498818401.335607"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
             landmarkName = "MoveScopeResolver::calculate()"
             landmarkType = "7">
             <Locations>
@@ -496,11 +480,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/Algorithms/MoveScopeResolver.cpp"
-            timestampString = "498729536.015777"
+            timestampString = "498818401.335607"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
             landmarkName = "MoveScopeResolver::walkDirection(MoveScopePoint * lastPoint, int directionX, int directionY)"
             landmarkType = "7">
             <Locations>
@@ -544,11 +528,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/Algorithms/MoveScopeResolver.cpp"
-            timestampString = "498730083.919403"
+            timestampString = "498818401.335607"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "136"
-            endingLineNumber = "136"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
             landmarkName = "MoveScopeResolver::walkDirection(MoveScopePoint * lastPoint, int directionX, int directionY)"
             landmarkType = "7">
          </BreakpointContent>
@@ -672,11 +656,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/Activities/SimpleMoveActivity.cpp"
-            timestampString = "495184962.353794"
+            timestampString = "498819486.338748"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
             landmarkName = "SimpleMoveActivity::internalTick(int synchronizeTick)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1472,11 +1456,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/Battle/AI/AIAggressiveDelegate.cpp"
-            timestampString = "498727215.816308"
+            timestampString = "498818401.335607"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
             landmarkName = "AIAggressiveDelegate::takeAction()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1520,11 +1504,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/Battle/AI/AIAggressiveDelegate.cpp"
-            timestampString = "498727239.118764"
+            timestampString = "498818401.335607"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
             landmarkName = "AIAggressiveDelegate::takeAction()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1568,11 +1552,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/Algorithms/MovePathResolver.cpp"
-            timestampString = "498732892.157283"
+            timestampString = "498820553.614462"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "131"
-            endingLineNumber = "131"
+            startingLineNumber = "133"
+            endingLineNumber = "133"
             landmarkName = "MovePathResolver::enqueue(Vector&lt;MovePathPoint *&gt; &amp;positionQueue, MovePathPoint * point)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1590,6 +1574,38 @@
             startingLineNumber = "63"
             endingLineNumber = "63"
             landmarkName = "AICreature::isAbleToAttack(Creature * another)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../Classes/Battle/AI/AIAggressiveDelegate.cpp"
+            timestampString = "498820218.044242"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "AIAggressiveDelegate::takeAction()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../Classes/Battle/AI/AIAggressiveDelegate.cpp"
+            timestampString = "498820218.044242"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
+            landmarkName = "AIAggressiveDelegate::takeAction()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

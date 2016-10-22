@@ -76,6 +76,9 @@ void TouchHandler::test()
 bool TouchHandler::onTouchBegan(Touch* touch, Event* event)
 {
     _totalTouchCount ++;
+    if (_totalTouchCount > 2) {
+        _totalTouchCount = 2;
+    }
     /// log("onTouchBegan. %d", _totalTouchCount);
     
     if (_totalTouchCount == 1) {
@@ -145,6 +148,10 @@ void TouchHandler::onTouchEnded(Touch* touch, Event* event)
     }
     
     _totalTouchCount --;
+    
+    if (_totalTouchCount < 0) {
+        _totalTouchCount = 0;
+    }
 }
 
 void TouchHandler::onTouchMoved(Touch* touch, Event* event)

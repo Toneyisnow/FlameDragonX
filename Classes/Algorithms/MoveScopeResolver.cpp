@@ -47,22 +47,6 @@ void MoveScopeResolver::calculate()
     _zocPositions = ResolverHelper::calculateZocPositions(_field, _creature);
     _zocPositions->retain();
     
-    Vector<Creature *> * enemyList = _field->getEnemyList();
-    for (int i = 0; i < enemyList->size(); i++) {
-        Creature * enemy = enemyList->at(i);
-        
-        int distance = _field->getObjectDistance(_creature, enemy);
-        if (distance <= _creature->creatureData()->mv)
-        {
-            Vec2 enemyPosition = _field->getObjectPosition(enemy);
-            
-            _zocPositions->insert(Vec2(enemyPosition.x + 1, enemyPosition.y), enemy);
-            _zocPositions->insert(Vec2(enemyPosition.x - 1, enemyPosition.y), enemy);
-            _zocPositions->insert(Vec2(enemyPosition.x, enemyPosition.y + 1), enemy);
-            _zocPositions->insert(Vec2(enemyPosition.x, enemyPosition.y - 1), enemy);
-        }
-    }
-    
     // Start Point
     Vec2 startPoint = _field->getObjectPosition(_creature);
     _movePoints->pushBack(MoveScopePoint::create(startPoint, _creature->creatureData()->mv));
@@ -120,7 +104,7 @@ void MoveScopeResolver::walkDirection(MoveScopePoint * lastPoint, int directionX
         
         // If it is Enemy
         Creature * c = _field->getCreatureAt(currentPos.x, currentPos.y);
-        if (c != nullptr && c->getType() == CreatureType_Enemy) {
+        if (c != nullptr && ResolverHelper::isHostile(c, _creature)) {
             return;
         }
         
@@ -164,10 +148,16 @@ RoutePoint * MoveScopeResolver::getRoutePoint(Vec2 point)
     route->insertPoint(point);
     
     FDPoint * nextPoint = _scopeResults->at(point);
-    while (nextPoint != nullptr && nextPoint->getValue() != _originPosition)
+    //while (nextPoint != nullptr && nextPoint->getValue() != _originPosition)
+    while (nextPoint != nullptr)
     {
         Vec2 position = nextPoint->getValue();
         route->insertPoint(position);
+        
+        if (position == _originPosition) {
+            break;
+        }
+        
         nextPoint = _scopeResults->at(position);
     }
     
