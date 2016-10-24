@@ -12,7 +12,7 @@
 AICreature::AICreature(CreatureType type)
 : Creature(type)
 {
-    _aiType = AIType_Aggressive;
+    _aiType = AIType_Active;
 }
 
 AICreature::AICreature(CreatureType type, AIType aiType)
@@ -32,7 +32,7 @@ void AICreature::initWithDefinition(int identity, int creatureId)
 void AICreature::wakeUpByAttack()
 {
     if (_aiType == AIType_StandBy) {
-        _aiType = AIType_Aggressive;
+        _aiType = AIType_Active;
     }
 }
 
@@ -81,4 +81,20 @@ bool AICreature::isUnnoticeableByOthers()
 void AICreature::setUnnoticeableByOthers(bool val)
 {
     _isUnnoticeableByOthers = val;
+}
+
+void AICreature::startTurn()
+{
+    Creature::startTurn();
+    _isPendingAction = false;
+}
+
+void AICreature::pendingAction()
+{
+    _isPendingAction = true;
+}
+
+bool AICreature::isPendingAction()
+{
+    return _isPendingAction;
 }

@@ -137,6 +137,7 @@ public:
     Vector<Creature *> searchTargetInAttackRange(Creature * creature);
     Vector<Creature *> searchTargetInMagicRange(Creature * creature, int magicId);
     Vector<Creature *> getHostileCreatureList(CreatureType type);
+    Vector<Creature *> getAmicableCreatureList(CreatureType type);
     
 };
 

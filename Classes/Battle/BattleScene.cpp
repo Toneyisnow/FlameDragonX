@@ -209,12 +209,12 @@ void BattleScene::attackTo(Creature * creature, Creature * target)
     scene->release();
 }
 
-void BattleScene::magicTo(Creature * creature, int magicIndex, Vector<Creature *> creatureList)
+void BattleScene::magicTo(Creature * creature, int magicId, Vector<Creature *> creatureList)
 {
     log("Magic from %d.", creature->getId());
     
     // Calculations on the Attack result
-    MagicDefinition * magic = creature->creatureData()->getMagic(magicIndex);
+    MagicDefinition * magic = DataStore::getInstance()->getMagicDefinition(magicId);
     creature->creatureData()->mpCurrent -= magic->mpCost();
     
     MagicResult * result = GameFormula::dealWithMagic(_battleField, creature, creatureList, magic->getDefinitionId());
@@ -227,6 +227,25 @@ void BattleScene::magicTo(Creature * creature, int magicIndex, Vector<Creature *
     
     info->release();
     scene->release();
+}
+
+void BattleScene::magicTo(Creature * creature, int magicId, Vec2 position)
+{
+    MagicDefinition * magic = DataStore::getInstance()->getMagicDefinition(magicId);
+    bool forBadGuys;
+    
+    if (creature->getType() == CreatureType_Enemy) {
+        forBadGuys = (magic->getType() == MagicType_Recover || magic->getType() == MagicType_Defensive);
+    } else {
+        forBadGuys = (magic->getType() == MagicType_Attack|| magic->getType() == MagicType_Offensive);
+    }
+    
+    Vector<Creature *> targetList = _battleField->getCreaturesInRange(position, magic->effectCoverage(), forBadGuys);
+    if (targetList.size() == 0) {
+        throw new exception();
+    }
+    
+    this->magicTo(creature, magicId, targetList);
 }
 
 void BattleScene::postFightAction(Ref * counterObjectObj)
@@ -463,10 +482,6 @@ void BattleScene::startTurn()
     }
     
     log("Starting turn for: %d, %d", _turnNumber, _currentTurnType);
-    
-    
-    
-    
     
     // Turn Events
     _eventHandler->notifyTurnEvents();

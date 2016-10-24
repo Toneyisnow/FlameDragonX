@@ -92,7 +92,7 @@ void SelectMagicTargetState::handleClickAt(Vec2 position)
         
         if (targetList.size() > 0)
         {
-            _battleScene->magicTo(creature, magicIndex, targetList);
+            _battleScene->magicTo(creature, magic->getDefinitionId(), targetList);
             _nextState = IdleState::create(_battleScene);
             return;
         }

@@ -24,6 +24,7 @@ private:
     BattleScene * _battleScene;
     BattleField * _battleField;
     
+    bool isDefensiveCreature(Creature * creature);
 
 public:
     

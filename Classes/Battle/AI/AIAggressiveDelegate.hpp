@@ -10,16 +10,13 @@
 #define AIAggressiveDelegate_hpp
 
 #include "cocos2d.h"
-#include "AIDelegate.hpp"
+#include "AIActiveDelegate.hpp"
 #include "AICreature.hpp"
 
-class AIAggressiveDelegate : public AIDelegate
+class AIAggressiveDelegate : public AIActiveDelegate
 {
 private:
     
-    Vector<Creature *> locateCandidateTargets();
-    Vec2 locatePathTargetPosition(Creature * target);
-    void takeAttackAction();
     
     
 public:

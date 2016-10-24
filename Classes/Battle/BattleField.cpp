@@ -859,3 +859,17 @@ Vector<Creature *> BattleField::getHostileCreatureList(CreatureType type)
     return creatureList;
 }
 
+Vector<Creature *> BattleField::getAmicableCreatureList(CreatureType type)
+{
+    Vector<Creature *> creatureList;
+    if (type != CreatureType_Enemy) {
+        creatureList.pushBack(*(this->getFriendList()));
+        creatureList.pushBack(*(this->getNPCList()));
+    }
+    else
+    {
+        creatureList.pushBack(*(this->getEnemyList()));
+    }
+    
+    return creatureList;
+}

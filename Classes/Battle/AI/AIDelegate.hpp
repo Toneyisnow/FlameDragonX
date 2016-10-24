@@ -28,6 +28,13 @@ public:
     
     virtual void takeAction();
     
+    void takeWaiveAction();
+    
+    bool needRecover(Creature * creature);
+    bool canRecover(Creature * creature);
+    int getRecoverItemIndex(Creature * creature);
+    
+    Creature * locateNearestFriend();
     
 };
 

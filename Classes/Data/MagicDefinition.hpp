@@ -68,9 +68,11 @@ public:
     bool isCross();
     
     void takeOffensiveEffect(Creature * target);
-    void takeDeffensiveEffect(Creature * target);
+    void takeDefensiveEffect(Creature * target);
     
     int baseExperience();
+    
+    bool isDefensiveUsefulByCreature(Creature * target);
 };
 
 #endif /* MagicDefinition_hpp */

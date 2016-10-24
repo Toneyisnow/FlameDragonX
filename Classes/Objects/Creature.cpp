@@ -86,6 +86,11 @@ CreatureType Creature::getType()
     return _creatureType;
 }
 
+void Creature::changeCreatureType(CreatureType type)
+{
+    _creatureType = type;
+}
+
 void Creature::setDirection(Direction direction)
 {
     if (_direction == direction)

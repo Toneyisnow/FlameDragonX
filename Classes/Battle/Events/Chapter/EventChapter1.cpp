@@ -344,6 +344,8 @@ void EventChapter1::hanuoDie()
         
         _battleField->getNPCList()->pushBack(hawate);
         _battleField->getFriendList()->eraseObject(hawate);
+        
+        hawate->changeCreatureType(CreatureType_Npc);
     }
 }
 

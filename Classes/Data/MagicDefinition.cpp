@@ -129,7 +129,7 @@ void MagicDefinition::takeOffensiveEffect(Creature * target)
     }
 }
 
-void MagicDefinition::takeDeffensiveEffect(Creature * target)
+void MagicDefinition::takeDefensiveEffect(Creature * target)
 {
     if (target == nullptr) {
         return;
@@ -165,6 +165,34 @@ void MagicDefinition::takeDeffensiveEffect(Creature * target)
         default:
             break;
     }
+}
+
+bool MagicDefinition::isDefensiveUsefulByCreature(Creature * target)
+{
+    if (target == nullptr) {
+        return false;
+    }
+    
+    if (_definitionId / 100 == 2) {
+        return (target->creatureData()->hpCurrent < target->creatureData()->hpMax);
+    }
+    
+    switch (_definitionId) {
+        case 401:
+            return (target->creatureData()->statusEnhanceAp == 0);
+        case 402:
+            return (target->creatureData()->statusEnhanceDp == 0);
+        case 403:
+            return (target->creatureData()->statusEnhanceDx == 0);
+        case 404:
+            return (target->creatureData()->statusPoisoned > 0);
+        case 405:
+            return (target->creatureData()->statusFrozen > 0);
+        default:
+            break;
+    }
+    
+    return false;
 }
 
 int MagicDefinition::baseExperience()

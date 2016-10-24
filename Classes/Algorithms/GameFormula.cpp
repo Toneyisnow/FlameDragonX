@@ -195,7 +195,7 @@ CounterResult * GameFormula::singleMagic(BattleField * field, Creature * subject
                 magic->takeOffensiveEffect(target);
                 break;
             case MagicType_Defensive:
-                magic->takeDeffensiveEffect(target);
+                magic->takeDefensiveEffect(target);
                 break;
                 
             default:

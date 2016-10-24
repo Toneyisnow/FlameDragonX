@@ -37,6 +37,10 @@
 		3C4FA5B01DB5FC3700AA9DF1 /* AIStandByDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C4FA5AE1DB5FC3700AA9DF1 /* AIStandByDelegate.cpp */; };
 		3C4FA5B31DB8932A00AA9DF1 /* MovePathResolver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C4FA5B11DB8932A00AA9DF1 /* MovePathResolver.cpp */; };
 		3C4FA5B61DB8A99600AA9DF1 /* ResolverHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C4FA5B41DB8A99600AA9DF1 /* ResolverHelper.cpp */; };
+		3C4FA5B91DBCA2B100AA9DF1 /* AIDefensiveDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C4FA5B71DBCA2B100AA9DF1 /* AIDefensiveDelegate.cpp */; };
+		3C4FA5BC1DBCA66D00AA9DF1 /* AIMagicAggressiveDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C4FA5BA1DBCA66D00AA9DF1 /* AIMagicAggressiveDelegate.cpp */; };
+		3C4FA5BF1DBCA68D00AA9DF1 /* AIMagicDefensiveDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C4FA5BD1DBCA68D00AA9DF1 /* AIMagicDefensiveDelegate.cpp */; };
+		3C4FA5C21DBCA6AE00AA9DF1 /* AIActiveDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C4FA5C01DBCA6AE00AA9DF1 /* AIActiveDelegate.cpp */; };
 		3C8D68181D78EA2F00CC3616 /* CombinedActivity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C8D68161D78EA2F00CC3616 /* CombinedActivity.cpp */; };
 		3C8D681B1D78EAAE00CC3616 /* FieldActivity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C8D68191D78EAAE00CC3616 /* FieldActivity.cpp */; };
 		3C8D681E1D78EB3B00CC3616 /* GlobalActivity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C8D681C1D78EB3B00CC3616 /* GlobalActivity.cpp */; };
@@ -314,6 +318,14 @@
 		3C4FA5B21DB8932A00AA9DF1 /* MovePathResolver.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = MovePathResolver.hpp; path = Algorithms/MovePathResolver.hpp; sourceTree = "<group>"; };
 		3C4FA5B41DB8A99600AA9DF1 /* ResolverHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ResolverHelper.cpp; path = Algorithms/ResolverHelper.cpp; sourceTree = "<group>"; };
 		3C4FA5B51DB8A99600AA9DF1 /* ResolverHelper.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ResolverHelper.hpp; path = Algorithms/ResolverHelper.hpp; sourceTree = "<group>"; };
+		3C4FA5B71DBCA2B100AA9DF1 /* AIDefensiveDelegate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AIDefensiveDelegate.cpp; path = Battle/AI/AIDefensiveDelegate.cpp; sourceTree = "<group>"; };
+		3C4FA5B81DBCA2B100AA9DF1 /* AIDefensiveDelegate.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = AIDefensiveDelegate.hpp; path = Battle/AI/AIDefensiveDelegate.hpp; sourceTree = "<group>"; };
+		3C4FA5BA1DBCA66D00AA9DF1 /* AIMagicAggressiveDelegate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AIMagicAggressiveDelegate.cpp; path = Battle/AI/AIMagicAggressiveDelegate.cpp; sourceTree = "<group>"; };
+		3C4FA5BB1DBCA66D00AA9DF1 /* AIMagicAggressiveDelegate.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = AIMagicAggressiveDelegate.hpp; path = Battle/AI/AIMagicAggressiveDelegate.hpp; sourceTree = "<group>"; };
+		3C4FA5BD1DBCA68D00AA9DF1 /* AIMagicDefensiveDelegate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AIMagicDefensiveDelegate.cpp; path = Battle/AI/AIMagicDefensiveDelegate.cpp; sourceTree = "<group>"; };
+		3C4FA5BE1DBCA68D00AA9DF1 /* AIMagicDefensiveDelegate.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = AIMagicDefensiveDelegate.hpp; path = Battle/AI/AIMagicDefensiveDelegate.hpp; sourceTree = "<group>"; };
+		3C4FA5C01DBCA6AE00AA9DF1 /* AIActiveDelegate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AIActiveDelegate.cpp; path = Battle/AI/AIActiveDelegate.cpp; sourceTree = "<group>"; };
+		3C4FA5C11DBCA6AE00AA9DF1 /* AIActiveDelegate.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = AIActiveDelegate.hpp; path = Battle/AI/AIActiveDelegate.hpp; sourceTree = "<group>"; };
 		3C8D68161D78EA2F00CC3616 /* CombinedActivity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CombinedActivity.cpp; path = Activities/CombinedActivity.cpp; sourceTree = "<group>"; };
 		3C8D68171D78EA2F00CC3616 /* CombinedActivity.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CombinedActivity.hpp; path = Activities/CombinedActivity.hpp; sourceTree = "<group>"; };
 		3C8D68191D78EAAE00CC3616 /* FieldActivity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FieldActivity.cpp; path = Activities/FieldActivity.cpp; sourceTree = "<group>"; };
@@ -782,8 +794,16 @@
 				3C4FA5A61DB4C4DA00AA9DF1 /* AIDelegate.hpp */,
 				3C4FA5A81DB4C4EA00AA9DF1 /* AIHandler.cpp */,
 				3C4FA5A91DB4C4EA00AA9DF1 /* AIHandler.hpp */,
+				3C4FA5C01DBCA6AE00AA9DF1 /* AIActiveDelegate.cpp */,
+				3C4FA5C11DBCA6AE00AA9DF1 /* AIActiveDelegate.hpp */,
 				3C4FA5AB1DB4C60000AA9DF1 /* AIAggressiveDelegate.cpp */,
 				3C4FA5AC1DB4C60000AA9DF1 /* AIAggressiveDelegate.hpp */,
+				3C4FA5B71DBCA2B100AA9DF1 /* AIDefensiveDelegate.cpp */,
+				3C4FA5B81DBCA2B100AA9DF1 /* AIDefensiveDelegate.hpp */,
+				3C4FA5BA1DBCA66D00AA9DF1 /* AIMagicAggressiveDelegate.cpp */,
+				3C4FA5BB1DBCA66D00AA9DF1 /* AIMagicAggressiveDelegate.hpp */,
+				3C4FA5BD1DBCA68D00AA9DF1 /* AIMagicDefensiveDelegate.cpp */,
+				3C4FA5BE1DBCA68D00AA9DF1 /* AIMagicDefensiveDelegate.hpp */,
 				3C4FA5AE1DB5FC3700AA9DF1 /* AIStandByDelegate.cpp */,
 				3C4FA5AF1DB5FC3700AA9DF1 /* AIStandByDelegate.hpp */,
 			);
@@ -1438,6 +1458,7 @@
 			files = (
 				3CB109A71D74F46C002C4121 /* MoneyItemDefinition.cpp in Sources */,
 				3C8D68411D7A095E00CC3616 /* EventChapterCommon.cpp in Sources */,
+				3C4FA5C21DBCA6AE00AA9DF1 /* AIActiveDelegate.cpp in Sources */,
 				3C8D684A1D7A3FA800CC3616 /* CallbackMethod.cpp in Sources */,
 				3CE4398A1D9109C40043676E /* ShowMessageActivity.cpp in Sources */,
 				3CE63BAB1D8BCF2200C2C76B /* SelectableBox.cpp in Sources */,
@@ -1454,6 +1475,7 @@
 				3CE63B9E1D8A7E8100C2C76B /* RecordMenuState.cpp in Sources */,
 				3CE439871D91029A0043676E /* ConversationMessage.cpp in Sources */,
 				3CE63B241D7D40D000C2C76B /* SystemMenuState.cpp in Sources */,
+				3C4FA5B91DBCA2B100AA9DF1 /* AIDefensiveDelegate.cpp in Sources */,
 				3CD12F191D6CE7F200CDF793 /* CreatureRecord.cpp in Sources */,
 				3CB109751D6E6FD6002C4121 /* Friend.cpp in Sources */,
 				3CB109651D6D0D06002C4121 /* TouchHandler.cpp in Sources */,
@@ -1505,6 +1527,7 @@
 				3CD12F071D6BC86B00CDF793 /* FDScreen.cpp in Sources */,
 				3C8D68441D7A09C200CC3616 /* EventMethod.cpp in Sources */,
 				3CD12F161D6CE77800CDF793 /* ChapterRecord.cpp in Sources */,
+				3C4FA5BC1DBCA66D00AA9DF1 /* AIMagicAggressiveDelegate.cpp in Sources */,
 				3CE439A91D9507840043676E /* TransfersDefinition.cpp in Sources */,
 				3CA3182C1D760E260042B56A /* DefendItemDefinition.cpp in Sources */,
 				3C8D68351D79F52500CC3616 /* EventHandler.cpp in Sources */,
@@ -1534,6 +1557,7 @@
 				3CB109791D6F6489002C4121 /* FDFrame.cpp in Sources */,
 				3C8D68181D78EA2F00CC3616 /* CombinedActivity.cpp in Sources */,
 				3CE439A61D9503CF0043676E /* TransferDefinition.cpp in Sources */,
+				3C4FA5BF1DBCA68D00AA9DF1 /* AIMagicDefensiveDelegate.cpp in Sources */,
 				3C4FA5AA1DB4C4EA00AA9DF1 /* AIHandler.cpp in Sources */,
 				3C18834E1D6BA1490059056E /* TitleLayer.cpp in Sources */,
 				3C4FA58D1DAF57B300AA9DF1 /* FightFrame.cpp in Sources */,

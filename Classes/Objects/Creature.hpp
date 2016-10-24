@@ -65,12 +65,13 @@ public:
     
     
     CreatureType getType();
+    void changeCreatureType(CreatureType type);
     
     void setDirection(Direction direction);
     void setFocus(bool isFocus);
     
     void endTurn();
-    void startTurn();
+    virtual void startTurn();
     
     bool knowMagic();
     bool canFireMagic();
