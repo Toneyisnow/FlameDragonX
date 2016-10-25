@@ -677,7 +677,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "551"
             endingLineNumber = "551"
-            landmarkName = "BattleScene::takeAIAction(int creatureId)"
+            landmarkName = "BattleScene::takeAIMove()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

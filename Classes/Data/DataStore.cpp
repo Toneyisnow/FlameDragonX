@@ -382,3 +382,9 @@ int DataStore::generateLevelUpMagicKey(int creatureId, int creatureLevel)
 {
     return creatureId * 100 + creatureLevel;
 }
+
+int DataStore::getMaxFriendCount(int chapterId)
+{
+    return (chapterId <= 26) ? 16 : 20;
+}
+

@@ -70,7 +70,7 @@ public:
     OccupationDefinition * getOccupationDefinition(int occupationId);
     TransfersDefinition * getTransfersDefinition(int creatureId);
     FightAnimationDefinition * getFightAnimationDefinition(int animationid, FightAnimationType type);
-    
+    int getMaxFriendCount(int chapterId);
     
 };
 #endif /* DataStore_hpp */

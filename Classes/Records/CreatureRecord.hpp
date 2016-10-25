@@ -19,9 +19,6 @@ class CreatureRecord : public cocos2d::Ref
 {
 private:
     
-    int creatureId;
-    int definitionId;
-    int creatureType;
     
     CreatureData * _data;
     
@@ -31,6 +28,9 @@ public:
     
     //// static CreatureBattleRecord * createByChapterRecord(CreatureChapterRecord * record);
     
+    int creatureId;
+    int definitionId;
+    int creatureType;
     
 };
 

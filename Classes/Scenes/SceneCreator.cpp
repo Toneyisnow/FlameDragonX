@@ -11,6 +11,9 @@
 #include "SceneCreator.h"
 #include "TitleLayer.hpp"
 #include "GameOverLayer.hpp"
+#include "DataStore.hpp"
+#include "VillageNormalLayer.hpp"
+#include "VillageVacuumLayer.hpp"
 
 USING_NS_CC;
 
@@ -29,7 +32,6 @@ Scene* SceneCreator::createTitleScene()
     return scene;
 }
 
-
 Scene* SceneCreator::createGameOverScene()
 {
     // 'scene' is an autorelease object
@@ -45,5 +47,29 @@ Scene* SceneCreator::createGameOverScene()
     return scene;
 }
 
+Scene* SceneCreator::createVillageScene(ChapterRecord * chapterRecord)
+{
+    auto scene = Scene::create();
+    VillageLayer * layer = nullptr;
+    ShopDefinition * shop = DataStore::getInstance()->getShopDefinition(chapterRecord->getChapterId(), ShopType_Amor);
+    if (shop != nullptr)
+    {
+        layer = VillageNormalLayer::create();
+    }
+    else
+    {
+        layer = VillageVacuumLayer::create();
+    }
+    
+    layer->loadWithRecord(chapterRecord);
+    scene->addChild(layer);
+    
+    return scene;
+}
 
-
+Scene* SceneCreator::createPickFriendScene(ChapterRecord * chapterRecord)
+{
+    auto scene = Scene::create();
+    
+    return scene;
+}

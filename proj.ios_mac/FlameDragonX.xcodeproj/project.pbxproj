@@ -41,6 +41,11 @@
 		3C4FA5BC1DBCA66D00AA9DF1 /* AIMagicAggressiveDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C4FA5BA1DBCA66D00AA9DF1 /* AIMagicAggressiveDelegate.cpp */; };
 		3C4FA5BF1DBCA68D00AA9DF1 /* AIMagicDefensiveDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C4FA5BD1DBCA68D00AA9DF1 /* AIMagicDefensiveDelegate.cpp */; };
 		3C4FA5C21DBCA6AE00AA9DF1 /* AIActiveDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C4FA5C01DBCA6AE00AA9DF1 /* AIActiveDelegate.cpp */; };
+		3C4FA5C61DBF367200AA9DF1 /* VillageLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C4FA5C41DBF367200AA9DF1 /* VillageLayer.cpp */; };
+		3C4FA5CA1DBF368700AA9DF1 /* VillageNormalLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C4FA5C81DBF368700AA9DF1 /* VillageNormalLayer.cpp */; };
+		3C4FA5CD1DBF36BA00AA9DF1 /* VillageVacuumLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C4FA5CB1DBF36BA00AA9DF1 /* VillageVacuumLayer.cpp */; };
+		3C4FA5CF1DBF401E00AA9DF1 /* Village in Resources */ = {isa = PBXBuildFile; fileRef = 3C4FA5CE1DBF401E00AA9DF1 /* Village */; };
+		3C4FA5D21DBF46BA00AA9DF1 /* VillageLabel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C4FA5D01DBF46BA00AA9DF1 /* VillageLabel.cpp */; };
 		3C8D68181D78EA2F00CC3616 /* CombinedActivity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C8D68161D78EA2F00CC3616 /* CombinedActivity.cpp */; };
 		3C8D681B1D78EAAE00CC3616 /* FieldActivity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C8D68191D78EAAE00CC3616 /* FieldActivity.cpp */; };
 		3C8D681E1D78EB3B00CC3616 /* GlobalActivity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C8D681C1D78EB3B00CC3616 /* GlobalActivity.cpp */; };
@@ -275,7 +280,7 @@
 		1D6058910D05DD3D006BFB54 /* FlameDragonX-mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FlameDragonX-mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		294D0D631D0D56D500F7F5D4 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/CoreText.framework; sourceTree = DEVELOPER_DIR; };
-		3C1883491D6BA0810059056E /* SceneCreator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SceneCreator.h; path = Scenes/SceneCreator.h; sourceTree = "<group>"; };
+		3C1883491D6BA0810059056E /* SceneCreator.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = SceneCreator.hpp; path = Scenes/SceneCreator.hpp; sourceTree = "<group>"; };
 		3C18834A1D6BA0970059056E /* SceneCreator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SceneCreator.cpp; path = Scenes/SceneCreator.cpp; sourceTree = "<group>"; };
 		3C18834C1D6BA1490059056E /* TitleLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TitleLayer.cpp; path = Scenes/TitleLayer.cpp; sourceTree = "<group>"; };
 		3C18834D1D6BA1490059056E /* TitleLayer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = TitleLayer.hpp; path = Scenes/TitleLayer.hpp; sourceTree = "<group>"; };
@@ -326,6 +331,15 @@
 		3C4FA5BE1DBCA68D00AA9DF1 /* AIMagicDefensiveDelegate.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = AIMagicDefensiveDelegate.hpp; path = Battle/AI/AIMagicDefensiveDelegate.hpp; sourceTree = "<group>"; };
 		3C4FA5C01DBCA6AE00AA9DF1 /* AIActiveDelegate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AIActiveDelegate.cpp; path = Battle/AI/AIActiveDelegate.cpp; sourceTree = "<group>"; };
 		3C4FA5C11DBCA6AE00AA9DF1 /* AIActiveDelegate.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = AIActiveDelegate.hpp; path = Battle/AI/AIActiveDelegate.hpp; sourceTree = "<group>"; };
+		3C4FA5C41DBF367200AA9DF1 /* VillageLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = VillageLayer.cpp; path = Scenes/VillageLayer.cpp; sourceTree = "<group>"; };
+		3C4FA5C51DBF367200AA9DF1 /* VillageLayer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = VillageLayer.hpp; path = Scenes/VillageLayer.hpp; sourceTree = "<group>"; };
+		3C4FA5C81DBF368700AA9DF1 /* VillageNormalLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = VillageNormalLayer.cpp; path = Scenes/VillageNormalLayer.cpp; sourceTree = "<group>"; };
+		3C4FA5C91DBF368700AA9DF1 /* VillageNormalLayer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = VillageNormalLayer.hpp; path = Scenes/VillageNormalLayer.hpp; sourceTree = "<group>"; };
+		3C4FA5CB1DBF36BA00AA9DF1 /* VillageVacuumLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = VillageVacuumLayer.cpp; path = Scenes/VillageVacuumLayer.cpp; sourceTree = "<group>"; };
+		3C4FA5CC1DBF36BA00AA9DF1 /* VillageVacuumLayer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = VillageVacuumLayer.hpp; path = Scenes/VillageVacuumLayer.hpp; sourceTree = "<group>"; };
+		3C4FA5CE1DBF401E00AA9DF1 /* Village */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Village; sourceTree = "<group>"; };
+		3C4FA5D01DBF46BA00AA9DF1 /* VillageLabel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = VillageLabel.cpp; path = Messages/VillageLabel.cpp; sourceTree = "<group>"; };
+		3C4FA5D11DBF46BA00AA9DF1 /* VillageLabel.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = VillageLabel.hpp; path = Messages/VillageLabel.hpp; sourceTree = "<group>"; };
 		3C8D68161D78EA2F00CC3616 /* CombinedActivity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CombinedActivity.cpp; path = Activities/CombinedActivity.cpp; sourceTree = "<group>"; };
 		3C8D68171D78EA2F00CC3616 /* CombinedActivity.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CombinedActivity.hpp; path = Activities/CombinedActivity.hpp; sourceTree = "<group>"; };
 		3C8D68191D78EAAE00CC3616 /* FieldActivity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FieldActivity.cpp; path = Activities/FieldActivity.cpp; sourceTree = "<group>"; };
@@ -751,13 +765,19 @@
 			isa = PBXGroup;
 			children = (
 				3C18834A1D6BA0970059056E /* SceneCreator.cpp */,
-				3C1883491D6BA0810059056E /* SceneCreator.h */,
+				3C1883491D6BA0810059056E /* SceneCreator.hpp */,
 				3C18834C1D6BA1490059056E /* TitleLayer.cpp */,
 				3C18834D1D6BA1490059056E /* TitleLayer.hpp */,
 				3CD12F051D6BC86B00CDF793 /* FDScreen.cpp */,
 				3CD12F061D6BC86B00CDF793 /* FDScreen.hpp */,
 				3C4FA5781DA781C700AA9DF1 /* GameOverLayer.cpp */,
 				3C4FA5791DA781C700AA9DF1 /* GameOverLayer.hpp */,
+				3C4FA5C41DBF367200AA9DF1 /* VillageLayer.cpp */,
+				3C4FA5C51DBF367200AA9DF1 /* VillageLayer.hpp */,
+				3C4FA5C81DBF368700AA9DF1 /* VillageNormalLayer.cpp */,
+				3C4FA5C91DBF368700AA9DF1 /* VillageNormalLayer.hpp */,
+				3C4FA5CB1DBF36BA00AA9DF1 /* VillageVacuumLayer.cpp */,
+				3C4FA5CC1DBF36BA00AA9DF1 /* VillageVacuumLayer.hpp */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
@@ -1183,6 +1203,8 @@
 				3CE63BAA1D8BCF2200C2C76B /* SelectableBox.hpp */,
 				3CE439911D9332360043676E /* CreatureInfoMessage.cpp */,
 				3CE439921D9332360043676E /* CreatureInfoMessage.hpp */,
+				3C4FA5D01DBF46BA00AA9DF1 /* VillageLabel.cpp */,
+				3C4FA5D11DBF46BA00AA9DF1 /* VillageLabel.hpp */,
 			);
 			name = Messages;
 			sourceTree = "<group>";
@@ -1203,6 +1225,7 @@
 				521A8EA819F11F5000D177D7 /* fonts */,
 				3CE63BA21D8BADD500C2C76B /* Strings */,
 				3C4FA57B1DAB705200AA9DF1 /* Tais */,
+				3C4FA5CE1DBF401E00AA9DF1 /* Village */,
 				3EACC98E19EE6D4300EB3C5E /* res */,
 				46880B7619C43A67006E1F66 /* CloseNormal.png */,
 				46880B7719C43A67006E1F66 /* CloseSelected.png */,
@@ -1395,6 +1418,7 @@
 				3CB1096B1D6E5E66002C4121 /* Icons in Resources */,
 				5087E78117EB970100C73F5D /* Icon-120.png in Resources */,
 				5087E78617EB970100C73F5D /* Icon-76.png in Resources */,
+				3C4FA5CF1DBF401E00AA9DF1 /* Village in Resources */,
 				3C8D68291D78FB8000CC3616 /* Others in Resources */,
 				3CE63B391D7F40FB00C2C76B /* Menu in Resources */,
 				3C4FA57C1DAB705200AA9DF1 /* Tais in Resources */,
@@ -1521,6 +1545,7 @@
 				3CE63B8D1D87DEE100C2C76B /* DetailBar.cpp in Sources */,
 				3CE63B711D853F3300C2C76B /* GameFormula.cpp in Sources */,
 				3C4FA57A1DA781C700AA9DF1 /* GameOverLayer.cpp in Sources */,
+				3C4FA5CD1DBF36BA00AA9DF1 /* VillageVacuumLayer.cpp in Sources */,
 				3C8D68631D7D30A000CC3616 /* StateSession.cpp in Sources */,
 				3C8D685D1D7C0D9500CC3616 /* StateDispatcher.cpp in Sources */,
 				3CE63B741D87D6BC00C2C76B /* MessageLayer.cpp in Sources */,
@@ -1528,6 +1553,7 @@
 				3C8D68441D7A09C200CC3616 /* EventMethod.cpp in Sources */,
 				3CD12F161D6CE77800CDF793 /* ChapterRecord.cpp in Sources */,
 				3C4FA5BC1DBCA66D00AA9DF1 /* AIMagicAggressiveDelegate.cpp in Sources */,
+				3C4FA5D21DBF46BA00AA9DF1 /* VillageLabel.cpp in Sources */,
 				3CE439A91D9507840043676E /* TransfersDefinition.cpp in Sources */,
 				3CA3182C1D760E260042B56A /* DefendItemDefinition.cpp in Sources */,
 				3C8D68351D79F52500CC3616 /* EventHandler.cpp in Sources */,
@@ -1586,6 +1612,7 @@
 				3CE63B6B1D8536C000C2C76B /* MagicResult.cpp in Sources */,
 				3CE63B4B1D83EFC700C2C76B /* RangeScopeResolver.cpp in Sources */,
 				3CE439781D8FC87F0043676E /* CreatureDeadCondition.cpp in Sources */,
+				3C4FA5C61DBF367200AA9DF1 /* VillageLayer.cpp in Sources */,
 				3C4FA5821DAB769600AA9DF1 /* FightFrameDefinition.cpp in Sources */,
 				3CB1098C1D74CE92002C4121 /* SimpleMoveActivity.cpp in Sources */,
 				3C8D68561D7BF5F500CC3616 /* Cursor.cpp in Sources */,
@@ -1593,6 +1620,7 @@
 				3CE63B371D7F33D900C2C76B /* MenuCursor.cpp in Sources */,
 				3CE4398D1D9118D50043676E /* FDRandom.cpp in Sources */,
 				3CE63B781D87DC5E00C2C76B /* Message.cpp in Sources */,
+				3C4FA5CA1DBF368700AA9DF1 /* VillageNormalLayer.cpp in Sources */,
 				3CE63B651D85364200C2C76B /* CounterResult.cpp in Sources */,
 				3CE439AC1DA4C89F0043676E /* SelectItemTargetState.cpp in Sources */,
 				3CE63B271D7D59D400C2C76B /* CommonHelper.cpp in Sources */,

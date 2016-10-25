@@ -56,6 +56,8 @@ private:
 public:
     
     BattleScene(ChapterRecord * chapterRecord);
+    BattleScene(ChapterRecord * chapterRecord, Vector<FDNumber *> &selectedFriends);
+    
     BattleScene(BattleRecord * battleRecord);
     ~BattleScene();
     

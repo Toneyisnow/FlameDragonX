@@ -18,11 +18,11 @@
 class TitleLayer : public cocos2d::Layer
 {
 public:
-    virtual bool init();
     
     FDScreen * _screen;
     
     // implement the "static create()" method manually
+    virtual bool init();
     CREATE_FUNC(TitleLayer);
     
     void onStartGame();
