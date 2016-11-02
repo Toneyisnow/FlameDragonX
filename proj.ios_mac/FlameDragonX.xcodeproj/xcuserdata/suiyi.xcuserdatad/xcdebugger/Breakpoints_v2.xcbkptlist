@@ -16,7 +16,7 @@
             startingLineNumber = "37"
             endingLineNumber = "37"
             landmarkName = "FDScreen::FDScreen(Layer* layer, int width, int height, bool keepSameScale)"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -32,7 +32,7 @@
             startingLineNumber = "112"
             endingLineNumber = "112"
             landmarkName = "FDScreen::addChild(Node * node, int x, int y, int displayWidth, int displayHeight, int zOrder)"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -720,11 +720,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/Scenes/TitleLayer.cpp"
-            timestampString = "496219505.002975"
+            timestampString = "499759469.717071"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
             landmarkName = "TitleLayer::init()"
             landmarkType = "7">
          </BreakpointContent>
@@ -944,11 +944,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/Scenes/TitleLayer.cpp"
-            timestampString = "496219505.002975"
+            timestampString = "499759469.717071"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
             landmarkName = "TitleLayer::init()"
             landmarkType = "7">
          </BreakpointContent>

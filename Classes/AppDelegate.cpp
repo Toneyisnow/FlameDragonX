@@ -1,6 +1,6 @@
 #include "AppDelegate.h"
 #include "HelloWorldScene.h"
-#include "SceneCreator.h"
+#include "SceneCreator.hpp"
 #include "Constants.hpp"
 #include "DataStore.hpp"
 #include "LocalizedStrings.hpp"

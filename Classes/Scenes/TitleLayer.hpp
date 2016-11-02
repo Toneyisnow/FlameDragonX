@@ -29,7 +29,6 @@ public:
     void onLoadGame();
     void onContinueGame();
     
-    
 };
 
 

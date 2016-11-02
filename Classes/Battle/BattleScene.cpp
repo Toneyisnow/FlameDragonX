@@ -25,7 +25,7 @@
 #include "LocalizedStrings.hpp"
 #include "DurationActivity.hpp"
 #include "CompositeBox.hpp"
-#include "SceneCreator.h"
+#include "SceneCreator.hpp"
 #include "ShowMessageActivity.hpp"
 #include "ConfirmMessage.hpp"
 #include "BatchActivity.hpp"

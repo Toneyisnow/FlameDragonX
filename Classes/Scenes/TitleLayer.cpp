@@ -10,7 +10,8 @@
 #include "ui/CocosGUI.h"
 #include "BattleRecord.hpp"
 #include "BattleScene.hpp"
-
+#include "ScaledSprite.hpp"
+#include "TouchableLabel.hpp"
 
 USING_NS_CC;
 
@@ -113,7 +114,6 @@ bool TitleLayer::init()
     buttonContinue->setEnabled(false);
     _screen->addToVisible(buttonContinue, Vec2(380, locationY), 1.5f, 10);
     
-    
     return true;
 }
 
@@ -141,4 +141,3 @@ void TitleLayer::onContinueGame()
 {
     log("onContinueGame");
 }
-

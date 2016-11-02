@@ -8,7 +8,7 @@
 
 #include <stdio.h>
 
-#include "SceneCreator.h"
+#include "SceneCreator.hpp"
 #include "TitleLayer.hpp"
 #include "GameOverLayer.hpp"
 #include "DataStore.hpp"
