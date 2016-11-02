@@ -33,6 +33,9 @@ protected:
     
     bool _isBlocking;
     
+    void addChildToLayer(Node * node);
+    void removeChildFromLayer(Node * node);
+    
 public:
     
     Message();

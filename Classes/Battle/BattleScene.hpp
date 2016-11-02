@@ -53,6 +53,8 @@ private:
     void confirmItemFullExchange(int result);
     void confirmItemFullExchangeWithItem(int result);
     
+    ChapterRecord * generateChapterRecord();
+    
 public:
     
     BattleScene(ChapterRecord * chapterRecord);

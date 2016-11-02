@@ -34,6 +34,11 @@
 
 USING_NS_CC;
 
+BattleScene::BattleScene(ChapterRecord * chapterRecord, Vector<FDNumber *> &selectedFriends)
+{
+    
+}
+
 BattleScene::BattleScene(ChapterRecord* record)
 {
     // DataStore::getInstance()->loadData();
@@ -689,6 +694,10 @@ void BattleScene::gameWin()
     log("Game Win.");
     
     // Switch to VillageScene
+    ChapterRecord * chapterRecord = ChapterRecord::createSample();
+    Scene * villageScene = SceneCreator::createVillageScene(chapterRecord);
+    
+    Director::getInstance()->pushScene(TransitionFade::create(1.0f, villageScene));
 }
 
 void BattleScene::gameOver()
@@ -707,6 +716,10 @@ void BattleScene::gameCleared()
     // Stop Background Music
 }
 
+ChapterRecord * BattleScene::generateChapterRecord()
+{
+    return new ChapterRecord(1);
+}
 
 void BattleScene::testCallMethod(std::function<void(int)> callback)
 {

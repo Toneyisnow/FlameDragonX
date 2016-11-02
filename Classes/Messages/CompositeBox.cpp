@@ -37,10 +37,10 @@ CompositeBox::~CompositeBox()
 void CompositeBox::initDialog()
 {
     _datoBar = new DatoBar(_creature->getDefinition()->animationId);
-    this->addComponent(_datoBar->getSprite(), Vec2(1.0f, 0.0f), _datoPosition0);
+    this->addComponent(_datoBar->getSprite(), Vec2(1.0f, 0.0f), (_messageLayer != nullptr) ? _datoPosition0 : _datoPosition1);
     
     _detailBar = new DetailBar(_creature);
-    this->addComponent(_detailBar->getSprite(), Vec2(0.0f, 0.0f), _detailPosition0);
+    this->addComponent(_detailBar->getSprite(), Vec2(0.0f, 0.0f), (_messageLayer != nullptr) ? _detailPosition0 : _detailPosition1);
     
     if (_type == MessageBoxType_Item) {
         _mainBox = new ItemBox(_creature, _operatingType);
@@ -50,14 +50,14 @@ void CompositeBox::initDialog()
         _mainBox = new MagicBox(_creature, _operatingType);
     }
     
-    this->addComponent(_mainBox->getSprite(), Vec2(0.5f, 1.0f), _mainPosition0);
+    this->addComponent(_mainBox->getSprite(), Vec2(0.5f, 1.0f), (_messageLayer != nullptr) ? _mainPosition0 : _mainPosition1);
 }
 
 void CompositeBox::removeDialog()
 {
-    _messageLayer->removeChild(_datoBar->getSprite());
-    _messageLayer->removeChild(_detailBar->getSprite());
-    _messageLayer->removeChild(_mainBox->getSprite());
+    this->removeChildFromLayer(_datoBar->getSprite());
+    this->removeChildFromLayer(_detailBar->getSprite());
+    this->removeChildFromLayer(_mainBox->getSprite());
     
     _datoBar->release();
     _detailBar->release();
@@ -69,7 +69,8 @@ void CompositeBox::addComponent(ScaledSprite * component, Vec2 anchorPoint, Vec2
     component->setAnchorPoint(anchorPoint);
     component->setPosition(position);
     component->setScale(DEFAULT_MESSAGEBOX_SCALE);
-    _messageLayer->addChild(component);
+    
+    this->addChildToLayer(component);
 }
 
 FDActivity * CompositeBox::onEnterActivity()

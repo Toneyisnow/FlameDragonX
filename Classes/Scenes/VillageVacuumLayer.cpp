@@ -13,3 +13,8 @@ bool VillageVacuumLayer::init()
     
     return true;
 }
+
+void VillageVacuumLayer::loadWithRecord(ChapterRecord * record)
+{
+    
+}

@@ -17,7 +17,7 @@ class BattleRecord : public cocos2d::Ref
 {
 private:
     
-    int charpterId;
+    int chapterId;
     int money;
     
 public:

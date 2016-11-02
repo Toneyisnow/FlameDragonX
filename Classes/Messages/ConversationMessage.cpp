@@ -35,7 +35,8 @@ void ConversationMessage::buildBaseDialog(Vec2 screenPosition)
     _messageBox->setPosition(screenPosition);
     _messageBox->setAnchorPoint(Vec2(0.5f, 0));
     _messageBox->setScale(DEFAULT_MESSAGEBOX_SCALE);
-    _messageLayer->addChild(_messageBox);
+    
+    this->addChildToLayer(_messageBox);
     
     int creatureDatoId = (_creature != nullptr ? _creature->getDefinition()->animationId : 0);
     Sprite * dato = Sprite::create(StringUtils::format("Dato/Dato-%03d-1.png", creatureDatoId));
@@ -51,7 +52,7 @@ void ConversationMessage::buildBaseDialog(Vec2 screenPosition)
 
 void ConversationMessage::removeDialog()
 {
-    _messageLayer->removeChild(_messageBox);
+    this->removeChildFromLayer(_messageBox);
 }
 
 FDActivity * ConversationMessage::onEnterActivity()

@@ -15,7 +15,9 @@ ChapterRecord::ChapterRecord(int chapterId)
 
 ChapterRecord * ChapterRecord::createSample()
 {
-    ChapterRecord * record = new ChapterRecord(1);
+    ChapterRecord * record = new ChapterRecord(2);
+    record->setMoney(500);
+    record->getFriendRecordList().pushBack(new CreatureRecord());
     
     return record;
 }

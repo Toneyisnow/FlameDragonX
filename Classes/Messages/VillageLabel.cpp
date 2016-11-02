@@ -7,3 +7,8 @@
 //
 
 #include "VillageLabel.hpp"
+
+void VillageLabel::setPositionIndex(int positionIndex)
+{
+    
+}

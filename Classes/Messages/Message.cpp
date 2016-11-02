@@ -70,24 +70,53 @@ void Message::handleClick(Vec2 location)
     this->closeDialog();
 }
 
-
 void Message::closeDialog()
 {
     FDActivity * activity = onExitActivity();
-    if (activity != nullptr)
+    if (activity != nullptr && _messageLayer != nullptr)
     {
         _messageLayer->getActivityQueue()->appendActivity(activity);
     }
 
-    CallbackMethod * method1 = CallbackMethod::create(_messageLayer, CALLBACK0_SELECTOR(MessageLayer::removeMessage));
-    CallbackActivity * callback1 = CallbackActivity::create(method1);
-    _messageLayer->getActivityQueue()->appendActivity(callback1);
+    if (_messageLayer != nullptr)
+    {
+        CallbackMethod * method1 = CallbackMethod::create(_messageLayer, CALLBACK0_SELECTOR(MessageLayer::removeMessage));
+        CallbackActivity * callback1 = CallbackActivity::create(method1);
+        _messageLayer->getActivityQueue()->appendActivity(callback1);
     
-    if (_callbackTarget != nullptr) {
-        CallbackMethod * method2 = CallbackMethod::create(_callbackTarget, _callbackResultMethod, _returnValue);
-        CallbackActivity * callback2 = CallbackActivity::create(method2);
-        _messageLayer->getActivityQueue()->appendActivity(callback2);
+        if (_callbackTarget != nullptr) {
+            CallbackMethod * method2 = CallbackMethod::create(_callbackTarget, _callbackResultMethod, _returnValue);
+            CallbackActivity * callback2 = CallbackActivity::create(method2);
+            _messageLayer->getActivityQueue()->appendActivity(callback2);
+        }
     }
+    else if (_layer != nullptr)
+    {
+        this->removeDialog();
+        CallbackMethod * method2 = CallbackMethod::create(_callbackTarget, _callbackResultMethod, _returnValue);
+        method2->execute();
+    }
+}
+
+void Message::addChildToLayer(Node * node)
+{
+    if (_messageLayer != nullptr) {
+        _messageLayer->addChild(node);
+    }
+    else if (_layer != nullptr) {
+        _layer->addChild(node);
+    }
+}
+
+void Message::removeChildFromLayer(Node * node)
+{
+    if (_messageLayer != nullptr) {
+        _messageLayer->removeChild(node);
+    }
+    else if (_layer != nullptr) {
+        _layer->removeChild(node);
+    }
+    
 }
 
 FDActivity * Message::onEnterActivity()

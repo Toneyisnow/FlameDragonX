@@ -49,12 +49,12 @@ void EventChapter1::test()
     a->creatureData()->hpCurrent = 1;
     _battleField->addCreature(a, Vec2(4, 18));
     
-    _battleField->addCreature(Enemy::create(12, 50101, 101), Vec2(3, 19));
-    _battleField->addCreature(Enemy::create(13, 50101, 101), Vec2(4, 20));
+    //_battleField->addCreature(Enemy::create(12, 50101, 101), Vec2(3, 19));
+    //_battleField->addCreature(Enemy::create(13, 50101, 101), Vec2(4, 20));
     
-    Enemy * d = Enemy::create(14, 50101, 101);
-    d->creatureData()->hpCurrent = 1;
-    _battleField->addCreature(d, Vec2(4, 15));
+    //Enemy * d = Enemy::create(14, 50101, 101);
+    //d->creatureData()->hpCurrent = 1;
+    //_battleField->addCreature(d, Vec2(4, 15));
 }
 
 void EventChapter1::round1()
