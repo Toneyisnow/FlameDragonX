@@ -53,7 +53,8 @@ FDScreen::FDScreen(Layer* layer, int width, int height, bool keepSameScale)
 void FDScreen::addToWindow(Node * node, Vec2 position, float scale, int zOrder)
 {
     node->setPosition(position);
-    node->setScale(Constants::DEFAULT_SPRITE_SCALE * _scaleFactor * scale);
+    node->setScale(_scaleFactor * scale);
+    // node->setScale(Constants::DEFAULT_SPRITE_SCALE * _scaleFactor * scale);
     
     _layer->addChild(node, zOrder);
 }

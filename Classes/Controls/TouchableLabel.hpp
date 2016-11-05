@@ -31,7 +31,7 @@ class TouchableLabel : public Label
 {
 private:
     
-    Node * _callbackObject;
+    Ref * _callbackObject;
     SEL_CALLBACK1 _callbackMethod;
     
 public:
@@ -43,7 +43,7 @@ public:
     TouchableLabel(enum TextHAlignment hAlignment /* = TextHAlignment::LEFT */,
           enum TextVAlignment vAlignment /* = TextVAlignment::TOP */);
     
-    void setCallback(Node * obj, SEL_CALLBACK1 callback);
+    void setCallback(Ref * obj, SEL_CALLBACK1 callback);
     
     bool onLabelTouchBegin(Touch* touch, Event* event);
     void onLabelTouched(Touch* touch, Event* event);

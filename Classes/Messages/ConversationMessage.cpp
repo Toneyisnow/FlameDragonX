@@ -34,7 +34,7 @@ void ConversationMessage::buildBaseDialog(Vec2 screenPosition)
     _messageBox = ScaledSprite::create("Others/MessageBox.png");
     _messageBox->setPosition(screenPosition);
     _messageBox->setAnchorPoint(Vec2(0.5f, 0));
-    _messageBox->setScale(DEFAULT_MESSAGEBOX_SCALE);
+    _messageBox->setScale(Constants::DEFAULT_MESSAGEBOX_SCALE);
     
     this->addChildToLayer(_messageBox);
     

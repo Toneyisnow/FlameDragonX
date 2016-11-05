@@ -49,3 +49,12 @@ Vector<CreatureRecord *> ChapterRecord::getFriendRecordList()
 {
     return _friendRecordList;
 }
+
+CreatureRecord * ChapterRecord::getCreatureCarriesItem(int itemId)
+{
+    for (CreatureRecord * creature : _friendRecordList) {
+        // Find the item
+    }
+    
+    return nullptr;
+}

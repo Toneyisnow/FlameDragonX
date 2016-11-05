@@ -47,7 +47,8 @@ public:
     static const int LEVEL_COUNT = 30;
     static const int UNIT_ICON_SIZE = 24;
     
-    static const int DEFAULT_SPRITE_SCALE = 1.5f;
+    constexpr static const float DEFAULT_SPRITE_SCALE = 1.5f;
+    constexpr static const float DEFAULT_MESSAGEBOX_SCALE = 1.35f;
     
 };
 

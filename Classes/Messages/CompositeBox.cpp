@@ -68,7 +68,7 @@ void CompositeBox::addComponent(ScaledSprite * component, Vec2 anchorPoint, Vec2
 {
     component->setAnchorPoint(anchorPoint);
     component->setPosition(position);
-    component->setScale(DEFAULT_MESSAGEBOX_SCALE);
+    component->setScale(Constants::DEFAULT_MESSAGEBOX_SCALE);
     
     this->addChildToLayer(component);
 }

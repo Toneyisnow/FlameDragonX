@@ -23,6 +23,11 @@ std::string ItemDefinition::getName()
     return _name;
 }
 
+std::string ItemDefinition::getAttributeString()
+{
+    return "+AP 00";
+}
+
 int ItemDefinition::getPrice()
 {
     return _price;

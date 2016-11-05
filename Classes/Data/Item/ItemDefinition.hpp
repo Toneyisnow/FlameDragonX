@@ -45,6 +45,8 @@ public:
     
     std::string getName();
     
+    std::string getAttributeString();
+    
     int getPrice();
     int getSellPrice();
     

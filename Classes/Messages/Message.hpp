@@ -19,8 +19,6 @@ class Message : public cocos2d::Ref
 {
 protected:
     
-    const float DEFAULT_MESSAGEBOX_SCALE = 1.35f;
-    
     int _returnValue;
     
     Ref* _callbackTarget;

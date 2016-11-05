@@ -12,6 +12,8 @@
 #include "AnimationLibrary.hpp"
 #include "ShopDefinition.hpp"
 #include "LocalizedStrings.hpp"
+#include "SceneCreator.hpp"
+
 
 bool VillageNormalLayer::init()
 {
@@ -166,7 +168,8 @@ void VillageNormalLayer::enterShop()
     }
     
     // Enter Shop Scene
-    
+    Scene * scene = SceneCreator::createShoppingScene(_chapterRecord, type);
+    Director::getInstance()->pushScene(TransitionFade::create(1.0f, scene));
 }
 
 void VillageNormalLayer::promptExit()
@@ -189,8 +192,8 @@ void VillageNormalLayer::confirmExit(int returnValue)
 
 bool VillageNormalLayer::clickedOnPosition(Vec2 clickedPos, Vec2 position)
 {
-    return (clickedPos.x > position.x - 40 && clickedPos.x < position.x + 40 &&
-            clickedPos.y > position.y - 40 && clickedPos.y < position.y + 40 );
+    return (clickedPos.x > position.x - 20 && clickedPos.x < position.x + 20 &&
+            clickedPos.y > position.y - 20 && clickedPos.y < position.y + 20 );
 }
 
 void VillageNormalLayer::setCursorPositionIndex(int positionIndex)

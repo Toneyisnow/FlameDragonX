@@ -39,6 +39,8 @@ public:
     
     Vector<CreatureRecord *> getFriendRecordList();
     
+    CreatureRecord * getCreatureCarriesItem(int itemId);
+    
 };
 
 #endif /* ChapterRecord_hpp */

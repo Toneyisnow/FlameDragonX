@@ -12,6 +12,8 @@
 #include "cocos2d.h"
 #include "TitleLayer.hpp"
 #include "ChapterRecord.hpp"
+#include "ShopDefinition.hpp"
+
 
 USING_NS_CC;
 
@@ -22,6 +24,9 @@ public:
     static Scene* createGameOverScene();
     static Scene* createVillageScene(ChapterRecord * chapterRecord);
     static Scene* createPickFriendScene(ChapterRecord * chapterRecord);
+    static Scene* createLoadingScene();
+    static Scene* createShoppingScene(ChapterRecord * chapterRecord, ShopType type);
+    
 };
 
 #endif /* TitleScene_h */

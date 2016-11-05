@@ -37,7 +37,7 @@ TouchableLabel::TouchableLabel(enum TextHAlignment hAlignment /* = TextHAlignmen
 
 }
 
-void TouchableLabel::setCallback(Node * obj, SEL_CALLBACK1 callback)
+void TouchableLabel::setCallback(Ref * obj, SEL_CALLBACK1 callback)
 {
     _callbackObject = obj;
     _callbackMethod = callback;

@@ -12,6 +12,7 @@
 #include "BattleScene.hpp"
 #include "ScaledSprite.hpp"
 #include "TouchableLabel.hpp"
+#include "SceneCreator.hpp"
 
 USING_NS_CC;
 
@@ -135,6 +136,10 @@ void TitleLayer::onStartGame()
 void TitleLayer::onLoadGame()
 {
     log("onLoadGame");
+    
+    Scene * scene = SceneCreator::createLoadingScene();
+    Director::getInstance()->pushScene(TransitionFade::create(1.0f, scene));
+    
 }
 
 void TitleLayer::onContinueGame()

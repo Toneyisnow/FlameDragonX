@@ -25,7 +25,7 @@ public:
 
     void setScaledPosition(Vec2 position);
     
-    void setScale(float scale) override;
+    virtual void setScale(float scale) override;
     
     void addChild(Node * child, Vec2 position);
     void addLabel(Label * label, Vec2 position);
