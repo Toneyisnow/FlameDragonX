@@ -28,12 +28,13 @@ public:
     void onBuy() override;
     void onBuy_Selected(int index);
     void onBuy_Confirmed(int index);
+    void onBuy_NotEnoughMoney(int index);
     
     void onBuyAmor_SelectedTarget(int index);
-    void onBuyAmor_Done(int index);
-    void doBuyItem(bool equip);
+    void onBuyItem_SelectedTarget(int index);
+    void onBuyAmor_ConfirmedEquip(int index);
     
-    void onBuyItem_Done(int index);
+    void doBuyItem(bool equip);
     
 };
 

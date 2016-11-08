@@ -34,6 +34,7 @@ public:
     
     int dp();
     int ev();
+    int itemCategory();
     
 };
 #endif /* DefendItemDefinition_hpp */

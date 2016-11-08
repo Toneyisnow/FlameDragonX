@@ -9,15 +9,19 @@
 #ifndef ShoppingMessageDialog_hpp
 #define ShoppingMessageDialog_hpp
 
-#include "ShoppingDialog.hpp"
+#include "ShoppingActiveDialog.hpp"
 
-class ShoppingMessageDialog : public ShoppingDialog
+class ShoppingMessageDialog : public ShoppingActiveDialog
 {
 private:
+    
+    std::string _message;
     
     
 public:
     
+    ShoppingMessageDialog(std::string message);
+    virtual void showDialog(ShoppingLayer * layer) override;
     
 };
 

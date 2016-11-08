@@ -9,9 +9,9 @@
 #ifndef ShoppingPagedDialog_hpp
 #define ShoppingPagedDialog_hpp
 
-#include "ShoppingDialog.hpp"
+#include "ShoppingActiveDialog.hpp"
 
-class ShoppingPagedDialog : public ShoppingDialog
+class ShoppingPagedDialog : public ShoppingActiveDialog
 {
 protected:
     

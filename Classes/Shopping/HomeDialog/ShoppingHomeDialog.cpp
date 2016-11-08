@@ -8,6 +8,16 @@
 
 #include "ShoppingHomeDialog.hpp"
 #include "ShoppingLayer.hpp"
+#include "ShoppingShowFriendsDialog.hpp"
+#include "CreatureData.hpp"
+#include "ShoppingShowItemsDialog.hpp"
+#include "ShoppingMessageDialog.hpp"
+#include "ShoppingConfirmDialog.hpp"
+
+#include "LocalizedStrings.hpp"
+#include "DataStore.hpp"
+
+using namespace std;
 
 void ShoppingHomeDialog::showDialog(ShoppingLayer * layer)
 {
@@ -26,12 +36,6 @@ void ShoppingHomeDialog::showDialog(ShoppingLayer * layer)
     
     _message = nullptr;
     initMessage();
-}
-
-void ShoppingHomeDialog::showActiveDialog(ShoppingDialog * dialog)
-{
-    dialog->showDialog(_layer);
-    _layer->setActiveDialog(dialog);
 }
 
 void ShoppingHomeDialog::generateButtons()
@@ -132,6 +136,10 @@ void ShoppingHomeDialog::onBuy(){
 
 void ShoppingHomeDialog::onSell(){
     
+    ShoppingShowFriendsDialog * dialog = new ShoppingShowFriendsDialog(_chapterRecord->getFriendRecordList(), _lastPageIndex);
+    dialog->setCallback(this, CALLBACK1_SELECTOR(ShoppingHomeDialog::onSell_SelectedFriend));
+    dialog->showDialog(_layer);
+    dialog->release();
 }
 
 void ShoppingHomeDialog::onGive(){
@@ -167,20 +175,110 @@ void ShoppingHomeDialog::onTransfer(){
 }
 
 
-void ShoppingHomeDialog::onSell_SelectedFriend(int friendIndex){
+void ShoppingHomeDialog::onSell_SelectedFriend(int index){
+    
+    if (index == -1)
+    {
+        return;
+    }
+    
+    if (index < 0) {
+        _lastPageIndex = (index == -2) ? _lastPageIndex - 1 : ((index == -3) ? _lastPageIndex + 1 : 0);
+        ShoppingShowFriendsDialog * dialog = new ShoppingShowFriendsDialog(_chapterRecord->getFriendRecordList(), _lastPageIndex);
+        dialog->setCallback(this, CALLBACK1_SELECTOR(ShoppingHomeDialog::onSell_SelectedFriend));
+        dialog->showDialog(_layer);
+        dialog->release();
+        return;
+    }
+    
+    _lastSelectedCreatureIndex = index;
+    
+    CreatureRecord * record = _chapterRecord->getFriendRecordList().at(index);
+    
+    if (record->creatureData()->isItemEmpty()) {
+        
+        // Error Message: There is no item
+        ShoppingMessageDialog * message = new ShoppingMessageDialog(LocalizedStrings::getInstance()->getConfirmString(64).c_str());
+        message->setCallback(this, CALLBACK1_SELECTOR(ShoppingHomeDialog::onSell_Reset));
+        message->showDialog(_layer);
+        message->release();
+        return;
+    }
+    else
+    {
+        Vector<FDNumber *> itemList = *(record->creatureData()->itemList);
+    
+        _lastPageIndex = 0;
+        ShoppingShowItemsDialog * itemDialog = new ShoppingShowItemsDialog(itemList, 0, false);
+        itemDialog->setCallback(this, CALLBACK1_SELECTOR(ShoppingHomeDialog::onSell_SelectedItem));
+        itemDialog->showDialog(_layer);
+        itemDialog->release();
+    }
+}
+
+void ShoppingHomeDialog::onSell_SelectedItem(int index){
+    
+    if (index == -1)
+    {
+        return;
+    }
+    
+    if (index < 0) {
+        
+        Vector<FDNumber *> itemList = *(_chapterRecord->getFriendRecordList().at(_lastSelectedCreatureIndex)->creatureData()->itemList);
+        
+        _lastPageIndex = (index == -2) ? _lastPageIndex - 1 : ((index == -3) ? _lastPageIndex + 1 : 0);
+        ShoppingShowItemsDialog * itemDialog = new ShoppingShowItemsDialog(itemList, _lastPageIndex, false);
+        itemDialog->setCallback(this, CALLBACK1_SELECTOR(ShoppingHomeDialog::onSell_SelectedItem));
+        itemDialog->showDialog(_layer);
+        itemDialog->release();
+        return;
+    }
+    
+    _lastSelectedItemIndex = index;
+    
+    CreatureRecord * record = _chapterRecord->getFriendRecordList().at(_lastSelectedCreatureIndex);
+    int itemId = record->creatureData()->itemList->at(index)->getValue();
+    ItemDefinition * item = DataStore::getInstance()->getItemDefinition(itemId);
+    
+    std::string message = StringUtils::format(LocalizedStrings::getInstance()->getMessageString(55).c_str(), item->getName().c_str(), item->getPrice());
+    
+    // Confirm Message
+    ShoppingConfirmDialog * confirm = new ShoppingConfirmDialog(message);
+    confirm->setCallback(this, CALLBACK1_SELECTOR(ShoppingHomeDialog::onSell_Confirm));
+    confirm->showDialog(_layer);
+    confirm->release();
+    return;
     
 }
 
-void ShoppingHomeDialog::onSell_SelectedItem(int itemIndex){
-    
+void ShoppingHomeDialog::onSell_Reset(int index)
+{
+    this->onSell();
 }
 
-void ShoppingHomeDialog::onSell_Confirm(int index){
+void ShoppingHomeDialog::onSell_Confirm(int index) {
     
+    if (index != 1)
+    {
+        // Cancel
+        this->onSell_SelectedFriend(_lastSelectedCreatureIndex);
+        return;
+    }
+    
+    this->doSell();
 }
 
-void ShoppingHomeDialog::doSell(){
+void ShoppingHomeDialog::doSell() {
     
+    CreatureRecord * record = _chapterRecord->getFriendRecordList().at(_lastSelectedCreatureIndex);
+    int itemId = record->creatureData()->itemList->at(_lastSelectedItemIndex)->getValue();
+    ItemDefinition * item = DataStore::getInstance()->getItemDefinition(itemId);
+    
+    _chapterRecord->setMoney(_chapterRecord->getMoney() + item->getSellPrice());
+    record->creatureData()->removeItem(_lastSelectedItemIndex);
+    
+    _layer->updateMoneyBar();
 }
 
 void ShoppingHomeDialog::onGive_Start(int index){

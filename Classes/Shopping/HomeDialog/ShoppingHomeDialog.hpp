@@ -18,6 +18,7 @@ class ShoppingHomeDialog : public ShoppingDialog
 protected:
     
     int _lastSelectedItemIndex;
+    int _lastSelectedItemId;
     int _lastSelectedCreatureIndex;
     int _lastPageIndex;
     
@@ -30,8 +31,6 @@ public:
     /// ShoppingHomeDialog(ChapterRecord * record);
     
     virtual void showDialog(ShoppingLayer * layer) override;
-    void showActiveDialog(ShoppingDialog * dialog);
-    
     
     virtual void initMessage();
     virtual void updateMessage();
@@ -63,6 +62,7 @@ public:
     
     void onSell_SelectedFriend(int friendIndex);
     void onSell_SelectedItem(int itemIndex);
+    void onSell_Reset(int index);
     void onSell_Confirm(int index);
     void doSell();
     

@@ -9,9 +9,9 @@
 #ifndef ShoppingConfirmDialog_hpp
 #define ShoppingConfirmDialog_hpp
 
-#include "ShoppingDialog.hpp"
+#include "ShoppingActiveDialog.hpp"
 
-class ShoppingConfirmDialog : public ShoppingDialog
+class ShoppingConfirmDialog : public ShoppingActiveDialog
 {
 private:
     

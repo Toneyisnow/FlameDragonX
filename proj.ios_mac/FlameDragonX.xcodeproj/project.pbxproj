@@ -82,15 +82,15 @@
 		3C9C49351DCDB18900702B32 /* ShoppingItemDialog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C9C492B1DCDB18900702B32 /* ShoppingItemDialog.cpp */; };
 		3C9C49361DCDB18900702B32 /* ShoppingSecretDialog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C9C492D1DCDB18900702B32 /* ShoppingSecretDialog.cpp */; };
 		3C9C49371DCDB18900702B32 /* ShoppingShopDialog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C9C492F1DCDB18900702B32 /* ShoppingShopDialog.cpp */; };
-		3C9C493B1DCDB1C300702B32 /* ShoppingPagedDialog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C9C49391DCDB1C300702B32 /* ShoppingPagedDialog.cpp */; };
-		3C9C49411DCDB25D00702B32 /* ShoppingMessageDialog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C9C493F1DCDB25D00702B32 /* ShoppingMessageDialog.cpp */; };
-		3C9C49441DCDB2A400702B32 /* ShoppingConfirmDialog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C9C49421DCDB2A400702B32 /* ShoppingConfirmDialog.cpp */; };
-		3C9C49471DCDB2D300702B32 /* ShoppingSelectAmorTargetDialog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C9C49451DCDB2D300702B32 /* ShoppingSelectAmorTargetDialog.cpp */; };
-		3C9C494A1DCDB2EC00702B32 /* ShoppingShowFriendsDialog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C9C49481DCDB2EC00702B32 /* ShoppingShowFriendsDialog.cpp */; };
-		3C9C494D1DCDB33600702B32 /* ShoppingShowItemsDialog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C9C494B1DCDB33600702B32 /* ShoppingShowItemsDialog.cpp */; };
-		3C9C49531DCDB3AB00702B32 /* ShoppingRecordDialog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C9C49511DCDB3AB00702B32 /* ShoppingRecordDialog.cpp */; };
-		3C9C49561DCDB3C300702B32 /* ShoppingShowDeadFriendsDialog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C9C49541DCDB3C300702B32 /* ShoppingShowDeadFriendsDialog.cpp */; };
-		3C9C49591DCDB3DA00702B32 /* ShoppingShowTransferDialog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C9C49571DCDB3DA00702B32 /* ShoppingShowTransferDialog.cpp */; };
+		3C9C49611DCEEC8C00702B32 /* ShoppingConfirmDialog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C9C495B1DCEEC8C00702B32 /* ShoppingConfirmDialog.cpp */; };
+		3C9C49621DCEEC8C00702B32 /* ShoppingMessageDialog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C9C495D1DCEEC8C00702B32 /* ShoppingMessageDialog.cpp */; };
+		3C9C49631DCEEC8C00702B32 /* ShoppingRecordDialog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C9C495F1DCEEC8C00702B32 /* ShoppingRecordDialog.cpp */; };
+		3C9C49701DCEEC9B00702B32 /* ShoppingPagedDialog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C9C49641DCEEC9B00702B32 /* ShoppingPagedDialog.cpp */; };
+		3C9C49711DCEEC9B00702B32 /* ShoppingSelectAmorTargetDialog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C9C49661DCEEC9B00702B32 /* ShoppingSelectAmorTargetDialog.cpp */; };
+		3C9C49731DCEEC9B00702B32 /* ShoppingShowFriendsDialog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C9C496A1DCEEC9B00702B32 /* ShoppingShowFriendsDialog.cpp */; };
+		3C9C49741DCEEC9B00702B32 /* ShoppingShowItemsDialog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C9C496C1DCEEC9B00702B32 /* ShoppingShowItemsDialog.cpp */; };
+		3C9C49751DCEEC9B00702B32 /* ShoppingShowTransferDialog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C9C496E1DCEEC9B00702B32 /* ShoppingShowTransferDialog.cpp */; };
+		3C9C49781DCEECB500702B32 /* ShoppingActiveDialog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C9C49761DCEECB500702B32 /* ShoppingActiveDialog.cpp */; };
 		3CA318261D760AD00042B56A /* CreatureData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CA318241D760AD00042B56A /* CreatureData.cpp */; };
 		3CA318291D760C6D0042B56A /* AICreature.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CA318271D760C6D0042B56A /* AICreature.cpp */; };
 		3CA3182C1D760E260042B56A /* DefendItemDefinition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CA3182A1D760E260042B56A /* DefendItemDefinition.cpp */; };
@@ -432,24 +432,24 @@
 		3C9C492E1DCDB18900702B32 /* ShoppingSecretDialog.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ShoppingSecretDialog.hpp; path = Shopping/HomeDialog/ShoppingSecretDialog.hpp; sourceTree = "<group>"; };
 		3C9C492F1DCDB18900702B32 /* ShoppingShopDialog.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ShoppingShopDialog.cpp; path = Shopping/HomeDialog/ShoppingShopDialog.cpp; sourceTree = "<group>"; };
 		3C9C49301DCDB18900702B32 /* ShoppingShopDialog.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ShoppingShopDialog.hpp; path = Shopping/HomeDialog/ShoppingShopDialog.hpp; sourceTree = "<group>"; };
-		3C9C49391DCDB1C300702B32 /* ShoppingPagedDialog.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ShoppingPagedDialog.cpp; path = Shopping/PagedDialog/ShoppingPagedDialog.cpp; sourceTree = "<group>"; };
-		3C9C493A1DCDB1C300702B32 /* ShoppingPagedDialog.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ShoppingPagedDialog.hpp; path = Shopping/PagedDialog/ShoppingPagedDialog.hpp; sourceTree = "<group>"; };
-		3C9C493F1DCDB25D00702B32 /* ShoppingMessageDialog.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ShoppingMessageDialog.cpp; path = Shopping/ShoppingMessageDialog.cpp; sourceTree = "<group>"; };
-		3C9C49401DCDB25D00702B32 /* ShoppingMessageDialog.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ShoppingMessageDialog.hpp; path = Shopping/ShoppingMessageDialog.hpp; sourceTree = "<group>"; };
-		3C9C49421DCDB2A400702B32 /* ShoppingConfirmDialog.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ShoppingConfirmDialog.cpp; path = Shopping/ShoppingConfirmDialog.cpp; sourceTree = "<group>"; };
-		3C9C49431DCDB2A400702B32 /* ShoppingConfirmDialog.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ShoppingConfirmDialog.hpp; path = Shopping/ShoppingConfirmDialog.hpp; sourceTree = "<group>"; };
-		3C9C49451DCDB2D300702B32 /* ShoppingSelectAmorTargetDialog.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ShoppingSelectAmorTargetDialog.cpp; path = Shopping/PagedDialog/ShoppingSelectAmorTargetDialog.cpp; sourceTree = "<group>"; };
-		3C9C49461DCDB2D300702B32 /* ShoppingSelectAmorTargetDialog.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ShoppingSelectAmorTargetDialog.hpp; path = Shopping/PagedDialog/ShoppingSelectAmorTargetDialog.hpp; sourceTree = "<group>"; };
-		3C9C49481DCDB2EC00702B32 /* ShoppingShowFriendsDialog.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ShoppingShowFriendsDialog.cpp; path = Shopping/PagedDialog/ShoppingShowFriendsDialog.cpp; sourceTree = "<group>"; };
-		3C9C49491DCDB2EC00702B32 /* ShoppingShowFriendsDialog.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ShoppingShowFriendsDialog.hpp; path = Shopping/PagedDialog/ShoppingShowFriendsDialog.hpp; sourceTree = "<group>"; };
-		3C9C494B1DCDB33600702B32 /* ShoppingShowItemsDialog.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ShoppingShowItemsDialog.cpp; path = Shopping/PagedDialog/ShoppingShowItemsDialog.cpp; sourceTree = "<group>"; };
-		3C9C494C1DCDB33600702B32 /* ShoppingShowItemsDialog.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ShoppingShowItemsDialog.hpp; path = Shopping/PagedDialog/ShoppingShowItemsDialog.hpp; sourceTree = "<group>"; };
-		3C9C49511DCDB3AB00702B32 /* ShoppingRecordDialog.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ShoppingRecordDialog.cpp; path = Shopping/ShoppingRecordDialog.cpp; sourceTree = "<group>"; };
-		3C9C49521DCDB3AB00702B32 /* ShoppingRecordDialog.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ShoppingRecordDialog.hpp; path = Shopping/ShoppingRecordDialog.hpp; sourceTree = "<group>"; };
-		3C9C49541DCDB3C300702B32 /* ShoppingShowDeadFriendsDialog.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ShoppingShowDeadFriendsDialog.cpp; path = Shopping/PagedDialog/ShoppingShowDeadFriendsDialog.cpp; sourceTree = "<group>"; };
-		3C9C49551DCDB3C300702B32 /* ShoppingShowDeadFriendsDialog.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ShoppingShowDeadFriendsDialog.hpp; path = Shopping/PagedDialog/ShoppingShowDeadFriendsDialog.hpp; sourceTree = "<group>"; };
-		3C9C49571DCDB3DA00702B32 /* ShoppingShowTransferDialog.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ShoppingShowTransferDialog.cpp; path = Shopping/PagedDialog/ShoppingShowTransferDialog.cpp; sourceTree = "<group>"; };
-		3C9C49581DCDB3DA00702B32 /* ShoppingShowTransferDialog.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ShoppingShowTransferDialog.hpp; path = Shopping/PagedDialog/ShoppingShowTransferDialog.hpp; sourceTree = "<group>"; };
+		3C9C495B1DCEEC8C00702B32 /* ShoppingConfirmDialog.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ShoppingConfirmDialog.cpp; path = Shopping/ActiveDialog/ShoppingConfirmDialog.cpp; sourceTree = "<group>"; };
+		3C9C495C1DCEEC8C00702B32 /* ShoppingConfirmDialog.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ShoppingConfirmDialog.hpp; path = Shopping/ActiveDialog/ShoppingConfirmDialog.hpp; sourceTree = "<group>"; };
+		3C9C495D1DCEEC8C00702B32 /* ShoppingMessageDialog.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ShoppingMessageDialog.cpp; path = Shopping/ActiveDialog/ShoppingMessageDialog.cpp; sourceTree = "<group>"; };
+		3C9C495E1DCEEC8C00702B32 /* ShoppingMessageDialog.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ShoppingMessageDialog.hpp; path = Shopping/ActiveDialog/ShoppingMessageDialog.hpp; sourceTree = "<group>"; };
+		3C9C495F1DCEEC8C00702B32 /* ShoppingRecordDialog.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ShoppingRecordDialog.cpp; path = Shopping/ActiveDialog/ShoppingRecordDialog.cpp; sourceTree = "<group>"; };
+		3C9C49601DCEEC8C00702B32 /* ShoppingRecordDialog.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ShoppingRecordDialog.hpp; path = Shopping/ActiveDialog/ShoppingRecordDialog.hpp; sourceTree = "<group>"; };
+		3C9C49641DCEEC9B00702B32 /* ShoppingPagedDialog.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ShoppingPagedDialog.cpp; path = Shopping/ActiveDialog/PagedDialog/ShoppingPagedDialog.cpp; sourceTree = "<group>"; };
+		3C9C49651DCEEC9B00702B32 /* ShoppingPagedDialog.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ShoppingPagedDialog.hpp; path = Shopping/ActiveDialog/PagedDialog/ShoppingPagedDialog.hpp; sourceTree = "<group>"; };
+		3C9C49661DCEEC9B00702B32 /* ShoppingSelectAmorTargetDialog.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ShoppingSelectAmorTargetDialog.cpp; path = Shopping/ActiveDialog/PagedDialog/ShoppingSelectAmorTargetDialog.cpp; sourceTree = "<group>"; };
+		3C9C49671DCEEC9B00702B32 /* ShoppingSelectAmorTargetDialog.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ShoppingSelectAmorTargetDialog.hpp; path = Shopping/ActiveDialog/PagedDialog/ShoppingSelectAmorTargetDialog.hpp; sourceTree = "<group>"; };
+		3C9C496A1DCEEC9B00702B32 /* ShoppingShowFriendsDialog.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ShoppingShowFriendsDialog.cpp; path = Shopping/ActiveDialog/PagedDialog/ShoppingShowFriendsDialog.cpp; sourceTree = "<group>"; };
+		3C9C496B1DCEEC9B00702B32 /* ShoppingShowFriendsDialog.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ShoppingShowFriendsDialog.hpp; path = Shopping/ActiveDialog/PagedDialog/ShoppingShowFriendsDialog.hpp; sourceTree = "<group>"; };
+		3C9C496C1DCEEC9B00702B32 /* ShoppingShowItemsDialog.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ShoppingShowItemsDialog.cpp; path = Shopping/ActiveDialog/PagedDialog/ShoppingShowItemsDialog.cpp; sourceTree = "<group>"; };
+		3C9C496D1DCEEC9B00702B32 /* ShoppingShowItemsDialog.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ShoppingShowItemsDialog.hpp; path = Shopping/ActiveDialog/PagedDialog/ShoppingShowItemsDialog.hpp; sourceTree = "<group>"; };
+		3C9C496E1DCEEC9B00702B32 /* ShoppingShowTransferDialog.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ShoppingShowTransferDialog.cpp; path = Shopping/ActiveDialog/PagedDialog/ShoppingShowTransferDialog.cpp; sourceTree = "<group>"; };
+		3C9C496F1DCEEC9B00702B32 /* ShoppingShowTransferDialog.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ShoppingShowTransferDialog.hpp; path = Shopping/ActiveDialog/PagedDialog/ShoppingShowTransferDialog.hpp; sourceTree = "<group>"; };
+		3C9C49761DCEECB500702B32 /* ShoppingActiveDialog.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ShoppingActiveDialog.cpp; path = Shopping/ActiveDialog/ShoppingActiveDialog.cpp; sourceTree = "<group>"; };
+		3C9C49771DCEECB500702B32 /* ShoppingActiveDialog.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ShoppingActiveDialog.hpp; path = Shopping/ActiveDialog/ShoppingActiveDialog.hpp; sourceTree = "<group>"; };
 		3CA318241D760AD00042B56A /* CreatureData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CreatureData.cpp; path = Objects/CreatureData.cpp; sourceTree = "<group>"; };
 		3CA318251D760AD00042B56A /* CreatureData.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CreatureData.hpp; path = Objects/CreatureData.hpp; sourceTree = "<group>"; };
 		3CA318271D760C6D0042B56A /* AICreature.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AICreature.cpp; path = Objects/AICreature.cpp; sourceTree = "<group>"; };
@@ -989,15 +989,9 @@
 			isa = PBXGroup;
 			children = (
 				3C9C49221DCDB17900702B32 /* HomeDialog */,
-				3C9C49381DCDB19F00702B32 /* PagedDialog */,
+				3C9C49381DCDB19F00702B32 /* ActiveDialog */,
 				3C9C490A1DCC624D00702B32 /* ShoppingDialog.cpp */,
 				3C9C490B1DCC624D00702B32 /* ShoppingDialog.hpp */,
-				3C9C493F1DCDB25D00702B32 /* ShoppingMessageDialog.cpp */,
-				3C9C49401DCDB25D00702B32 /* ShoppingMessageDialog.hpp */,
-				3C9C49421DCDB2A400702B32 /* ShoppingConfirmDialog.cpp */,
-				3C9C49431DCDB2A400702B32 /* ShoppingConfirmDialog.hpp */,
-				3C9C49511DCDB3AB00702B32 /* ShoppingRecordDialog.cpp */,
-				3C9C49521DCDB3AB00702B32 /* ShoppingRecordDialog.hpp */,
 			);
 			name = Shopping;
 			sourceTree = "<group>";
@@ -1023,21 +1017,35 @@
 			name = HomeDialog;
 			sourceTree = "<group>";
 		};
-		3C9C49381DCDB19F00702B32 /* PagedDialog */ = {
+		3C9C49381DCDB19F00702B32 /* ActiveDialog */ = {
 			isa = PBXGroup;
 			children = (
-				3C9C49391DCDB1C300702B32 /* ShoppingPagedDialog.cpp */,
-				3C9C493A1DCDB1C300702B32 /* ShoppingPagedDialog.hpp */,
-				3C9C49451DCDB2D300702B32 /* ShoppingSelectAmorTargetDialog.cpp */,
-				3C9C49461DCDB2D300702B32 /* ShoppingSelectAmorTargetDialog.hpp */,
-				3C9C49481DCDB2EC00702B32 /* ShoppingShowFriendsDialog.cpp */,
-				3C9C49491DCDB2EC00702B32 /* ShoppingShowFriendsDialog.hpp */,
-				3C9C494B1DCDB33600702B32 /* ShoppingShowItemsDialog.cpp */,
-				3C9C494C1DCDB33600702B32 /* ShoppingShowItemsDialog.hpp */,
-				3C9C49541DCDB3C300702B32 /* ShoppingShowDeadFriendsDialog.cpp */,
-				3C9C49551DCDB3C300702B32 /* ShoppingShowDeadFriendsDialog.hpp */,
-				3C9C49571DCDB3DA00702B32 /* ShoppingShowTransferDialog.cpp */,
-				3C9C49581DCDB3DA00702B32 /* ShoppingShowTransferDialog.hpp */,
+				3C9C49761DCEECB500702B32 /* ShoppingActiveDialog.cpp */,
+				3C9C49771DCEECB500702B32 /* ShoppingActiveDialog.hpp */,
+				3C9C495B1DCEEC8C00702B32 /* ShoppingConfirmDialog.cpp */,
+				3C9C495C1DCEEC8C00702B32 /* ShoppingConfirmDialog.hpp */,
+				3C9C495D1DCEEC8C00702B32 /* ShoppingMessageDialog.cpp */,
+				3C9C495E1DCEEC8C00702B32 /* ShoppingMessageDialog.hpp */,
+				3C9C495F1DCEEC8C00702B32 /* ShoppingRecordDialog.cpp */,
+				3C9C49601DCEEC8C00702B32 /* ShoppingRecordDialog.hpp */,
+				3C9C495A1DCEEC7B00702B32 /* PagedDialog */,
+			);
+			name = ActiveDialog;
+			sourceTree = "<group>";
+		};
+		3C9C495A1DCEEC7B00702B32 /* PagedDialog */ = {
+			isa = PBXGroup;
+			children = (
+				3C9C49641DCEEC9B00702B32 /* ShoppingPagedDialog.cpp */,
+				3C9C49651DCEEC9B00702B32 /* ShoppingPagedDialog.hpp */,
+				3C9C49661DCEEC9B00702B32 /* ShoppingSelectAmorTargetDialog.cpp */,
+				3C9C49671DCEEC9B00702B32 /* ShoppingSelectAmorTargetDialog.hpp */,
+				3C9C496A1DCEEC9B00702B32 /* ShoppingShowFriendsDialog.cpp */,
+				3C9C496B1DCEEC9B00702B32 /* ShoppingShowFriendsDialog.hpp */,
+				3C9C496C1DCEEC9B00702B32 /* ShoppingShowItemsDialog.cpp */,
+				3C9C496D1DCEEC9B00702B32 /* ShoppingShowItemsDialog.hpp */,
+				3C9C496E1DCEEC9B00702B32 /* ShoppingShowTransferDialog.cpp */,
+				3C9C496F1DCEEC9B00702B32 /* ShoppingShowTransferDialog.hpp */,
 			);
 			name = PagedDialog;
 			sourceTree = "<group>";
@@ -1625,6 +1633,7 @@
 				3C9C49011DCC5AA800702B32 /* LoadingLayer.cpp in Sources */,
 				3CE4399D1D94FD470043676E /* LevelUpMagicDefinition.cpp in Sources */,
 				3CE439721D8FC5E50043676E /* Npc.cpp in Sources */,
+				3C9C49621DCEEC8C00702B32 /* ShoppingMessageDialog.cpp in Sources */,
 				3C4FA5A31DB4954100AA9DF1 /* AnimateActivity.cpp in Sources */,
 				3CD12F1C1D6D033800CDF793 /* BattleRecord.cpp in Sources */,
 				3C4FA5A01DB4943000AA9DF1 /* MoveByActivity.cpp in Sources */,
@@ -1635,19 +1644,18 @@
 				3CD12F191D6CE7F200CDF793 /* CreatureRecord.cpp in Sources */,
 				3CB109751D6E6FD6002C4121 /* Friend.cpp in Sources */,
 				3CB109651D6D0D06002C4121 /* TouchHandler.cpp in Sources */,
-				3C9C494D1DCDB33600702B32 /* ShoppingShowItemsDialog.cpp in Sources */,
 				3CE439811D8FCC3A0043676E /* ArrivePositionCondition.cpp in Sources */,
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				3CE63B1D1D7D337100C2C76B /* IdleState.cpp in Sources */,
 				3CE63B211D7D3C4B00C2C76B /* ShowMoveScopeState.cpp in Sources */,
 				3CE63B901D87DF3A00C2C76B /* ItemBox.cpp in Sources */,
+				3C9C49631DCEEC8C00702B32 /* ShoppingRecordDialog.cpp in Sources */,
 				3CE63B4F1D83F43900C2C76B /* SelectAttackTargetState.cpp in Sources */,
 				3C8D68601D7D304700CC3616 /* ActionState.cpp in Sources */,
 				3CA3182F1D7613630042B56A /* FDRange.cpp in Sources */,
 				3CE63B3C1D7F8F6200C2C76B /* PointMap.cpp in Sources */,
 				3CE63B5C1D852DB200C2C76B /* CounterScene.cpp in Sources */,
 				3C4FA5761DA620EC00AA9DF1 /* ExchangeItemTargetState.cpp in Sources */,
-				3C9C494A1DCDB2EC00702B32 /* ShoppingShowFriendsDialog.cpp in Sources */,
 				3CE63B621D85308600C2C76B /* MagicScene.cpp in Sources */,
 				46880B8A19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */,
 				3C4FA5AD1DB4C60000AA9DF1 /* AIAggressiveDelegate.cpp in Sources */,
@@ -1660,17 +1668,18 @@
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				3C8D68321D79F4E600CC3616 /* EventCondition.cpp in Sources */,
 				3CB109821D6F74BC002C4121 /* CreatureDefinition.cpp in Sources */,
+				3C9C49751DCEEC9B00702B32 /* ShoppingShowTransferDialog.cpp in Sources */,
 				3CB109971D74F33C002C4121 /* MagicDefinition.cpp in Sources */,
 				3CE63B421D81C9DE00C2C76B /* RemoveObjectActivity.cpp in Sources */,
 				3CE63B461D827C2C00C2C76B /* TextureComposer.cpp in Sources */,
 				3CB1099E1D74F3FE002C4121 /* UsableItemDefinition.cpp in Sources */,
 				3CE63B591D852C0D00C2C76B /* CounterInfo.cpp in Sources */,
+				3C9C49741DCEEC9B00702B32 /* ShoppingShowItemsDialog.cpp in Sources */,
 				3CB109AD1D74FC5E002C4121 /* DataStore.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				3C8D683B1D79F56E00CC3616 /* EventLoaderFactory.cpp in Sources */,
 				3CE63B311D7E7E4300C2C76B /* MoveScopeResolver.cpp in Sources */,
 				3CE4396C1D8D263C0043676E /* Enemy.cpp in Sources */,
-				3C9C493B1DCDB1C300702B32 /* ShoppingPagedDialog.cpp in Sources */,
 				3CE63B6E1D853C5200C2C76B /* CounterObject.cpp in Sources */,
 				3CB109891D74CCAB002C4121 /* FDActivity.cpp in Sources */,
 				3CB109A11D74F41E002C4121 /* AttackItemDefinition.cpp in Sources */,
@@ -1682,6 +1691,7 @@
 				3CE63B8D1D87DEE100C2C76B /* DetailBar.cpp in Sources */,
 				3CE63B711D853F3300C2C76B /* GameFormula.cpp in Sources */,
 				3C4FA57A1DA781C700AA9DF1 /* GameOverLayer.cpp in Sources */,
+				3C9C49611DCEEC8C00702B32 /* ShoppingConfirmDialog.cpp in Sources */,
 				3C4FA5CD1DBF36BA00AA9DF1 /* VillageVacuumLayer.cpp in Sources */,
 				3C8D68631D7D30A000CC3616 /* StateSession.cpp in Sources */,
 				3C8D685D1D7C0D9500CC3616 /* StateDispatcher.cpp in Sources */,
@@ -1700,7 +1710,6 @@
 				3CD12F2A1D6D065800CDF793 /* BattleScene.cpp in Sources */,
 				3CB1097C1D6F6635002C4121 /* SlideAnimation.cpp in Sources */,
 				3C4FA57F1DAB768600AA9DF1 /* FightAnimationDefinition.cpp in Sources */,
-				3C9C49591DCDB3DA00702B32 /* ShoppingShowTransferDialog.cpp in Sources */,
 				3C9C49311DCDB18900702B32 /* ShoppingAmorDialog.cpp in Sources */,
 				3CE439A01D94FF8B0043676E /* ShopDefinition.cpp in Sources */,
 				3CE439931D9332360043676E /* CreatureInfoMessage.cpp in Sources */,
@@ -1719,6 +1728,7 @@
 				3CE63B681D85366200C2C76B /* FightResult.cpp in Sources */,
 				3C4FA5B31DB8932A00AA9DF1 /* MovePathResolver.cpp in Sources */,
 				3CE63B2D1D7D5DF900C2C76B /* TransparencyFrame.cpp in Sources */,
+				3C9C49781DCEECB500702B32 /* ShoppingActiveDialog.cpp in Sources */,
 				3C9C490C1DCC624D00702B32 /* ShoppingDialog.cpp in Sources */,
 				3CE439A31D9501710043676E /* OccupationDefinition.cpp in Sources */,
 				3CB109791D6F6489002C4121 /* FDFrame.cpp in Sources */,
@@ -1734,15 +1744,15 @@
 				3C9C49051DCC5BE100702B32 /* ShoppingLayer.cpp in Sources */,
 				3CE63B2A1D7D5DDD00C2C76B /* OffsetFrame.cpp in Sources */,
 				3CE439751D8FC7AB0043676E /* CreatureDyingCondition.cpp in Sources */,
-				3C9C49441DCDB2A400702B32 /* ShoppingConfirmDialog.cpp in Sources */,
 				3CB109851D6F7626002C4121 /* AnimationLibrary.cpp in Sources */,
 				3CB109AA1D74F816002C4121 /* CreatureChapterRecord.cpp in Sources */,
 				3CE63B341D7E9BEA00C2C76B /* FDPoint.cpp in Sources */,
 				3CE4397E1D8FCBB20043676E /* AnyTurnCondition.cpp in Sources */,
 				3C4FA5851DAB826300AA9DF1 /* FightAnimation.cpp in Sources */,
+				3C9C49731DCEEC9B00702B32 /* ShoppingShowFriendsDialog.cpp in Sources */,
 				3CE439651D8D02F60043676E /* SpriteMoveActivity.cpp in Sources */,
+				3C9C49701DCEEC9B00702B32 /* ShoppingPagedDialog.cpp in Sources */,
 				3CE63B961D8A664400C2C76B /* SelectMagicTargetState.cpp in Sources */,
-				3C9C49531DCDB3AB00702B32 /* ShoppingRecordDialog.cpp in Sources */,
 				3C9C49331DCDB18900702B32 /* ShoppingChurchDialog.cpp in Sources */,
 				3C8D68241D78F24300CC3616 /* CreatureMoveActivity.cpp in Sources */,
 				3CE63B841D87DE9D00C2C76B /* CompositeBox.cpp in Sources */,
@@ -1774,15 +1784,13 @@
 				3CE63B7E1D87DD1800C2C76B /* ConfirmMessage.cpp in Sources */,
 				3C18834B1D6BA0970059056E /* SceneCreator.cpp in Sources */,
 				3CB109691D6E0BD1002C4121 /* Ground.cpp in Sources */,
-				3C9C49561DCDB3C300702B32 /* ShoppingShowDeadFriendsDialog.cpp in Sources */,
 				3CA318261D760AD00042B56A /* CreatureData.cpp in Sources */,
 				3CE439691D8D12790043676E /* TurnCondition.cpp in Sources */,
+				3C9C49711DCEEC9B00702B32 /* ShoppingSelectAmorTargetDialog.cpp in Sources */,
 				3CD92DB81DC9BC66009345B7 /* TouchableLabel.cpp in Sources */,
-				3C9C49471DCDB2D300702B32 /* ShoppingSelectAmorTargetDialog.cpp in Sources */,
 				3CD12F021D6BB26500CDF793 /* ResourceManager.cpp in Sources */,
 				3CE439841D8FCD030043676E /* ArrivePositionTurnCondition.cpp in Sources */,
 				3CE63B871D87DEBB00C2C76B /* DatoBar.cpp in Sources */,
-				3C9C49411DCDB25D00702B32 /* ShoppingMessageDialog.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

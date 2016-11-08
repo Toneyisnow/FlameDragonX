@@ -40,6 +40,7 @@ public:
     void loadChapterStrings(int chapterId);
     
     std::string getCreatureName(int creatureId);
+    std::string getItemName(int itemId);
     
     std::string getConfirmString(int confirmId);
     std::string getMessageString(int messageId);

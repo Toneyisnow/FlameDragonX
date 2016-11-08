@@ -62,7 +62,7 @@ ShoppingLayer::ShoppingLayer(ChapterRecord * chapterRecord, ShopType type)
 void ShoppingLayer::setActiveDialog(ShoppingDialog * dialog)
 {
     if (_activeDialog != nullptr) {
-        _activeDialog->release();
+        _activeDialog->autorelease();
         _activeDialog = nullptr;
     }
     
@@ -98,4 +98,9 @@ bool ShoppingLayer::onClicked(Touch* touch, Event* event)
     }
     
     return true;
+}
+
+void ShoppingLayer::updateMoneyBar()
+{
+    
 }

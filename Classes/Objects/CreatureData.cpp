@@ -162,6 +162,52 @@ int CreatureData::calculatedEv()
     return total;
 }
 
+int CreatureData::calculatedApWithItem(int itemId)
+{
+    ItemDefinition * item = DataStore::getInstance()->getItemDefinition(itemId);
+    if (item->isAttackItem()) {
+        return ap + ((AttackItemDefinition *)item)->ap();
+    }
+    return calculatedAp();
+}
+
+int CreatureData::calculatedDpWithItem(int itemId)
+{
+    ItemDefinition * item = DataStore::getInstance()->getItemDefinition(itemId);
+    if (item->isAttackItem()) {
+        
+        return calculatedDp() + ((AttackItemDefinition *)item)->dp();
+    }
+    else if (item->isDefendItem())
+    {
+        return dp + ((DefendItemDefinition *)item)->dp();
+    }
+    
+    return calculatedDp();
+}
+int CreatureData::calculatedHitWithItem(int itemId)
+{
+    ItemDefinition * item = DataStore::getInstance()->getItemDefinition(itemId);
+    if (item->isAttackItem()) {
+        return hit + ((AttackItemDefinition *)item)->hit();
+    }
+    return calculatedHit();
+}
+
+int CreatureData::calculatedEvWithItem(int itemId)
+{
+    ItemDefinition * item = DataStore::getInstance()->getItemDefinition(itemId);
+    if (item->isAttackItem()) {
+        
+        return calculatedEv() + ((AttackItemDefinition *)item)->ev();
+    }
+    else if (item->isDefendItem())
+    {
+        return dx + ((DefendItemDefinition *)item)->ev();
+    }
+    
+    return calculatedEv();
+}
 
 bool CreatureData::isItemFull()
 {

@@ -45,6 +45,7 @@ public:
     FDRange * attackRange();
     
     int getPoisonRate();
+    int itemCategory();
     
 };
 

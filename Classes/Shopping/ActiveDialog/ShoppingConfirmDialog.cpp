@@ -16,10 +16,12 @@ ShoppingConfirmDialog::ShoppingConfirmDialog(std::string message)
 
 void ShoppingConfirmDialog::showDialog(ShoppingLayer * layer)
 {
-    ShoppingDialog::showDialog(layer);
+    ShoppingActiveDialog::showDialog(layer);
     
     // Add message
-    
+    Label * message = Label::createWithTTF(_message.c_str(), "fonts/mini_black.ttf", DEFAULT_FONT_SIZE);
+    message->setAnchorPoint(Vec2(0, 0.5f));
+    _baseSprite->addLabel(message, MESSAGE_POSITION);
     
     // Add Yes and No Buttons
     TouchableSprite * yesButton = TouchableSprite::create("Others/ConfirmButtonYes.png");

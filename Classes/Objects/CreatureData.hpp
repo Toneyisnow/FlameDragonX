@@ -54,8 +54,11 @@ public:
     int calculatedHit();
     int calculatedEv();
     
-    
-    
+    int calculatedApWithItem(int itemId);
+    int calculatedDpWithItem(int itemId);
+    int calculatedHitWithItem(int itemId);
+    int calculatedEvWithItem(int itemId);
+
     
     AttackItemDefinition * getAttackItem();
     DefendItemDefinition * getDefendItem();

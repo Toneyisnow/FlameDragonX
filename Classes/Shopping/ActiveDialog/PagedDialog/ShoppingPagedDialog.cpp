@@ -17,7 +17,7 @@ ShoppingPagedDialog::ShoppingPagedDialog(int index)
 
 void ShoppingPagedDialog::showDialog(ShoppingLayer * layer)
 {
-    ShoppingDialog::showDialog(layer);
+    ShoppingActiveDialog::showDialog(layer);
     
     // Add the two buttons here
     
@@ -55,10 +55,12 @@ int ShoppingPagedDialog::getTotalCount()
 
 void ShoppingPagedDialog::clickedDown()
 {
-    
+    _returnValue = -3;
+    this->closeDialog();
 }
 
 void ShoppingPagedDialog::clickedUp()
 {
-    
+    _returnValue = -2;
+    this->closeDialog();
 }

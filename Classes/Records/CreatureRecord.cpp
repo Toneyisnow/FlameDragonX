@@ -7,3 +7,8 @@
 //
 
 #include "CreatureRecord.hpp"
+
+CreatureData * CreatureRecord::creatureData()
+{
+    return _data;
+}

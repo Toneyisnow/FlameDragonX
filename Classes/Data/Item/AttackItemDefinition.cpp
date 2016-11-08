@@ -7,6 +7,7 @@
 //
 
 #include "AttackItemDefinition.hpp"
+#include "LocalizedStrings.hpp"
 
 AttackItemDefinition * AttackItemDefinition::readFromFile(TextFileReader * reader)
 {
@@ -26,7 +27,7 @@ void AttackItemDefinition::initFromFile(TextFileReader * reader)
 {
     _definitionId = reader->readInt();
     
-    /////_name = ;
+    _name = LocalizedStrings::getInstance()->getItemName(_definitionId);
     
     _itemCategory = reader->readInt();
     _price = reader->readInt();
@@ -70,6 +71,11 @@ int AttackItemDefinition::ev()
 int AttackItemDefinition::dp()
 {
     return _dp;
+}
+
+int AttackItemDefinition::itemCategory()
+{
+    return _itemCategory;
 }
 
 int AttackItemDefinition::getPoisonRate()

@@ -32,6 +32,7 @@ public:
     int definitionId;
     int creatureType;
     
+    CreatureData * creatureData();
 };
 
 #endif /* CreatureRecord_hpp */

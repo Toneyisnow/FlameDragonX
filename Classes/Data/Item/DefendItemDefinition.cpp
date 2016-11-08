@@ -7,6 +7,7 @@
 //
 
 #include "DefendItemDefinition.hpp"
+#include "LocalizedStrings.hpp"
 
 DefendItemDefinition * DefendItemDefinition::readFromFile(TextFileReader * reader)
 {
@@ -20,6 +21,8 @@ DefendItemDefinition * DefendItemDefinition::readFromFile(TextFileReader * reade
 void DefendItemDefinition::initFromFile(TextFileReader * reader)
 {
     _definitionId = reader->readInt();
+    _name = LocalizedStrings::getInstance()->getItemName(_definitionId);
+    
     _itemCategory = reader->readInt();
     
     _price = reader->readInt();
@@ -38,4 +41,9 @@ int DefendItemDefinition::dp()
 int DefendItemDefinition::ev()
 {
     return _ev;
+}
+
+int DefendItemDefinition::itemCategory()
+{
+    return _itemCategory;
 }

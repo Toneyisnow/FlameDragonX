@@ -8,6 +8,9 @@
 
 #include "CreatureDefinition.hpp"
 #include "LocalizedStrings.hpp"
+#include "DataStore.hpp"
+#include "AttackItemDefinition.hpp"
+#include "DefendItemDefinition.hpp"
 
 CreatureDefinition * CreatureDefinition::readFromFile(TextFileReader * reader)
 {
@@ -164,4 +167,14 @@ int CreatureDefinition::getMaximumLevel()
     }
     
     return 40;
+}
+
+bool CreatureDefinition::canEquip(int itemId)
+{
+    ItemDefinition * item = DataStore::getInstance()->getItemDefinition(itemId);
+    
+    OccupationDefinition * occu = DataStore::getInstance()->getOccupationDefinition(occupation);
+    
+    return (item->isAttackItem() && occu->canUseAttackItem(((AttackItemDefinition *)item)->itemCategory()))
+            || (item->isDefendItem() && occu->canUseDefendItem(((DefendItemDefinition *)item)->itemCategory()));
 }

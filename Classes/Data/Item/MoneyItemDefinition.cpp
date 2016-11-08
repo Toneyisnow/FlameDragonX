@@ -7,6 +7,7 @@
 //
 
 #include "MoneyItemDefinition.hpp"
+#include "LocalizedStrings.hpp"
 
 MoneyItemDefinition * MoneyItemDefinition::readFromFile(TextFileReader * reader)
 {
@@ -21,7 +22,7 @@ void MoneyItemDefinition::initFromFile(TextFileReader * reader)
 {
     _definitionId = reader->readInt();
     
-    //// _name = ;
+    _name = LocalizedStrings::getInstance()->getItemName(_definitionId);
     
     _quantity = reader->readInt();
     

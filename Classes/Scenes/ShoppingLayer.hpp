@@ -35,6 +35,9 @@ public:
     ChapterRecord * getRecord();
     
     void setActiveDialog(ShoppingDialog * dialog);
+    
+    void updateMoneyBar();
+    
 };
 
 #endif /* ShoppingLayer_hpp */

@@ -38,6 +38,8 @@ void LocalizedStrings::loadBasicStrings()
 
     _creatureNames = Dictionary::createWithContentsOfFile("Strings/zh-cn/Creature.strings");
     _creatureNames->retain();
+    _itemNames = Dictionary::createWithContentsOfFile("Strings/zh-cn/Item.strings");
+    _itemNames->retain();
     
     _messages = Dictionary::createWithContentsOfFile("Strings/zh-cn/Message.strings");
     _messages->retain();
@@ -60,6 +62,15 @@ std::string LocalizedStrings::getCreatureName(int creatureId)
 {
     std::string key = StringUtils::format("%03d", creatureId);
     String* str = (String*)_creatureNames->objectForKey(key.c_str());
+    std::string result(str->getCString());
+    
+    return result;
+}
+
+std::string LocalizedStrings::getItemName(int itemId)
+{
+    std::string key = StringUtils::format("%03d", itemId);
+    String* str = (String*)_itemNames->objectForKey(key.c_str());
     std::string result(str->getCString());
     
     return result;

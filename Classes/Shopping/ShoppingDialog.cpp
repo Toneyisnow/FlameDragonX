@@ -30,14 +30,14 @@ void ShoppingDialog::showDialog(ShoppingLayer * layer)
 
 void ShoppingDialog::closeDialog()
 {
+    _layer->removeChild(_baseSprite);
+    _layer->setActiveDialog(nullptr);
+    
     if (_callbackNode != nullptr)
     {
         CallbackMethod * method = CallbackMethod::create(_callbackNode, _callbackMethod, _returnValue);
         method->execute();
     }
-    
-    _layer->removeChild(_baseSprite);
-    _layer->setActiveDialog(nullptr);
 }
 
 void ShoppingDialog::setCallback(Ref* node, SEL_CALLBACK1 method)

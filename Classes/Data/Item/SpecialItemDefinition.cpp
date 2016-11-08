@@ -7,6 +7,7 @@
 //
 
 #include "SpecialItemDefinition.hpp"
+#include "LocalizedStrings.hpp"
 
 SpecialItemDefinition * SpecialItemDefinition::readFromFile(TextFileReader * reader)
 {
@@ -20,6 +21,7 @@ SpecialItemDefinition * SpecialItemDefinition::readFromFile(TextFileReader * rea
 void SpecialItemDefinition::initFromFile(TextFileReader * reader)
 {
     _definitionId = reader->readInt();
+    _name = LocalizedStrings::getInstance()->getItemName(_definitionId);
     
     _price = reader->readInt();
     _sellprice = reader->readInt();

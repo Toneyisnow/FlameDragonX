@@ -7,6 +7,7 @@
 //
 
 #include "UsableItemDefinition.hpp"
+#include "LocalizedStrings.hpp"
 
 UsableItemDefinition * UsableItemDefinition::readFromFile(TextFileReader * reader)
 {
@@ -23,6 +24,7 @@ void UsableItemDefinition::initFromFile(TextFileReader * reader)
     this->_definitionId = reader->readInt();
     
     /// this->name
+    this->_name = LocalizedStrings::getInstance()->getItemName(_definitionId);
     
     this->_price = reader->readInt();
     this->_sellprice = reader->readInt();
