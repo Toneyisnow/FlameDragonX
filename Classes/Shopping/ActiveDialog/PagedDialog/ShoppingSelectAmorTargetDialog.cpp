@@ -19,6 +19,7 @@ ShoppingSelectAmorTargetDialog::ShoppingSelectAmorTargetDialog(Vector<CreatureRe
 {
     _allCreatureRecords = creatureRecords;
     _itemId = itemId;
+    _selectedCreatures.clear();
     
     int index = 0;
     for (CreatureRecord * creature : creatureRecords) {
@@ -35,7 +36,7 @@ void ShoppingSelectAmorTargetDialog::showDialog(ShoppingLayer * layer)
 {
     ShoppingPagedDialog::showDialog(layer);
 
-    int startX = 15;
+    int startX = 10;
     int startY = 58;
     int intervalY = 26;
     
@@ -47,7 +48,7 @@ void ShoppingSelectAmorTargetDialog::showDialog(ShoppingLayer * layer)
         CreatureDefinition * def = DataStore::getInstance()->getCreatureDefinition(record->definitionId);
     
         // Icon
-        TouchableSprite * iconSprite = TouchableSprite::create(StringUtils::format("Icons/Icon-%03d-02.png", def->animationId));
+        TouchableSprite * iconSprite = TouchableSprite::create(StringUtils::format("Icons/%03d/Icon-%03d-02.png", def->animationId, def->animationId));
         iconSprite->setTag(creatureIndex);
         iconSprite->setCallback(this, CALLBACK1_SELECTOR(ShoppingSelectAmorTargetDialog::onClicked));
         iconSprite->setAnchorPoint(Vec2(0, 0));
@@ -58,27 +59,27 @@ void ShoppingSelectAmorTargetDialog::showDialog(ShoppingLayer * layer)
         nameLabel->setTag(creatureIndex);
         nameLabel->setCallback(this, CALLBACK1_SELECTOR(ShoppingSelectAmorTargetDialog::onClicked));
         nameLabel->setAnchorPoint(Vec2(0, 0));
-        _baseSprite->addLabel(nameLabel, Vec2(startX + 25, startY - intervalY * i));
+        _baseSprite->addLabel(nameLabel, Vec2(startX + 30, startY - intervalY * i));
         
         // AP
         std::string ap = StringUtils::format("AP %03d -> %03d", record->creatureData()->calculatedAp(), record->creatureData()->calculatedApWithItem(_itemId));
-        Label * apLabel = Label::createWithTTF(ap.c_str(), "fonts/mini_black.ttf", 9);
-        _baseSprite->addLabel(apLabel, Vec2(startX + 80, startY - intervalY * i + 10));
+        Label * apLabel = Label::createWithTTF(ap.c_str(), "fonts/mini_black.ttf", 8);
+        _baseSprite->addLabel(apLabel, Vec2(startX + 130, startY - intervalY * i + 10));
         
         // DP
         std::string dp = StringUtils::format("DP %03d -> %03d", record->creatureData()->calculatedDp(), record->creatureData()->calculatedDpWithItem(_itemId));
-        Label * dpLabel = Label::createWithTTF(dp.c_str(), "fonts/mini_black.ttf", 9);
-        _baseSprite->addLabel(dpLabel, Vec2(startX + 80, startY - intervalY * i));
+        Label * dpLabel = Label::createWithTTF(dp.c_str(), "fonts/mini_black.ttf", 8);
+        _baseSprite->addLabel(dpLabel, Vec2(startX + 130, startY - intervalY * i));
         
         // HIT
         std::string hit = StringUtils::format("HIT %03d -> %03d", record->creatureData()->calculatedHit(), record->creatureData()->calculatedHitWithItem(_itemId));
-        Label * hitLabel = Label::createWithTTF(hit.c_str(), "fonts/mini_black.ttf", 9);
-        _baseSprite->addLabel(hitLabel, Vec2(startX + 150, startY - intervalY * i + 10));
+        Label * hitLabel = Label::createWithTTF(hit.c_str(), "fonts/mini_black.ttf", 8);
+        _baseSprite->addLabel(hitLabel, Vec2(startX + 220, startY - intervalY * i + 10));
         
         // EV
         std::string ev = StringUtils::format("EV %03d -> %03d", record->creatureData()->calculatedEv(), record->creatureData()->calculatedEvWithItem(_itemId));
-        Label * evLabel = Label::createWithTTF(ev.c_str(), "fonts/mini_black.ttf", 9);
-        _baseSprite->addLabel(evLabel, Vec2(startX + 150, startY - intervalY * i));
+        Label * evLabel = Label::createWithTTF(ev.c_str(), "fonts/mini_black.ttf", 8);
+        _baseSprite->addLabel(evLabel, Vec2(startX + 220, startY - intervalY * i));
     }
 
 }

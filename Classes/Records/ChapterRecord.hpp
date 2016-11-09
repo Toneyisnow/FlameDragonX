@@ -28,6 +28,7 @@ public:
     ChapterRecord(int chapterId);
     
     static ChapterRecord * createSample();
+    static CreatureRecord * createSampleCreatureRecord(int definitionId);
     
     static ChapterRecord * newGame();
     
@@ -37,7 +38,8 @@ public:
     void setMoney(int money);
     int getMoney();
     
-    Vector<CreatureRecord *> getFriendRecordList();
+    void addCreatureRecord(CreatureRecord * record);
+    Vector<CreatureRecord *> &getFriendRecordList();
     
     CreatureRecord * getCreatureCarriesItem(int itemId);
     

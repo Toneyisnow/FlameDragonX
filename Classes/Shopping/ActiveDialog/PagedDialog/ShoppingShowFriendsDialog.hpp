@@ -20,8 +20,8 @@ private:
     
 public:
     
-    ShoppingShowFriendsDialog(Vector<CreatureRecord *> allCreatureRecords, int pageIndex);
-    ShoppingShowFriendsDialog(Vector<CreatureRecord *> allCreatureRecords, bool showDeadOnly, int pageIndex);
+    ShoppingShowFriendsDialog(Vector<CreatureRecord *> &allCreatureRecords, int pageIndex);
+    ShoppingShowFriendsDialog(Vector<CreatureRecord *> &allCreatureRecords, bool showDeadOnly, int pageIndex);
     
     void onClicked(int index);
     

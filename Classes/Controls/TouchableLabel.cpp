@@ -67,7 +67,7 @@ void TouchableLabel::onLabelTouched(Touch* touch, Event* event)
 {
     int tag = event->getCurrentTarget()->getTag();
     
-    if (_callbackObject != nullptr) {
+    if (_callbackObject != nullptr && _callbackMethod != nullptr) {
         CallbackMethod * method = CallbackMethod::create(_callbackObject, _callbackMethod, tag);
         method->execute();
     }

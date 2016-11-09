@@ -71,7 +71,7 @@ void TouchableSprite::onSpriteTouched(Touch* touch, Event* event)
         CallbackMethod * method = CallbackMethod::create(_callbackObject, _callbackMethod0);
         method->execute();
     }
-    if (_callbackObject != nullptr && _callbackMethod1 != nullptr) {
+    if (_callbackObject != nullptr && _callbackMethod1 != nullptr && tag != -1) {
         CallbackMethod * method = CallbackMethod::create(_callbackObject, _callbackMethod1, tag);
         method->execute();
     }

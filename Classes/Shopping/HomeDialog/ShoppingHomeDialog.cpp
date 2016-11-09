@@ -26,7 +26,7 @@ void ShoppingHomeDialog::showDialog(ShoppingLayer * layer)
     // Show the buttons
     this->generateButtons();
     
-    int posX = _baseSprite->getContentSize().width - 60;
+    int posX = _baseSprite->getContentSize().width;
     int posY = 20;
     
     for (TouchableSprite * button : _buttons) {
@@ -198,7 +198,7 @@ void ShoppingHomeDialog::onSell_SelectedFriend(int index){
     if (record->creatureData()->isItemEmpty()) {
         
         // Error Message: There is no item
-        ShoppingMessageDialog * message = new ShoppingMessageDialog(LocalizedStrings::getInstance()->getConfirmString(64).c_str());
+        ShoppingMessageDialog * message = new ShoppingMessageDialog(LocalizedStrings::getInstance()->getMessageString(64).c_str());
         message->setCallback(this, CALLBACK1_SELECTOR(ShoppingHomeDialog::onSell_Reset));
         message->showDialog(_layer);
         message->release();
@@ -241,7 +241,7 @@ void ShoppingHomeDialog::onSell_SelectedItem(int index){
     int itemId = record->creatureData()->itemList->at(index)->getValue();
     ItemDefinition * item = DataStore::getInstance()->getItemDefinition(itemId);
     
-    std::string message = StringUtils::format(LocalizedStrings::getInstance()->getMessageString(55).c_str(), item->getName().c_str(), item->getPrice());
+    std::string message = StringUtils::format(LocalizedStrings::getInstance()->getConfirmString(55).c_str(), item->getName().c_str(), item->getPrice());
     
     // Confirm Message
     ShoppingConfirmDialog * confirm = new ShoppingConfirmDialog(message);

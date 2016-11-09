@@ -15,6 +15,8 @@
 
 USING_NS_CC;
 
+class Creature;
+
 class CreatureRecord : public cocos2d::Ref
 {
 private:
@@ -27,6 +29,9 @@ private:
 public:
     
     //// static CreatureBattleRecord * createByChapterRecord(CreatureChapterRecord * record);
+    
+    CreatureRecord(Creature * creature);
+    ~CreatureRecord();
     
     int creatureId;
     int definitionId;

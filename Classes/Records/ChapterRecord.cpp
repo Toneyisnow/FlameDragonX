@@ -7,6 +7,7 @@
 //
 
 #include "ChapterRecord.hpp"
+#include "Creature.hpp"
 
 ChapterRecord::ChapterRecord(int chapterId)
 {
@@ -17,7 +18,10 @@ ChapterRecord * ChapterRecord::createSample()
 {
     ChapterRecord * record = new ChapterRecord(2);
     record->setMoney(500);
-    record->getFriendRecordList().pushBack(new CreatureRecord());
+    
+    for (int i = 1; i < 11; i++) {
+        record->addCreatureRecord(createSampleCreatureRecord(i));
+    }
     
     return record;
 }
@@ -29,7 +33,17 @@ ChapterRecord * ChapterRecord::newGame()
     return record;
 }
 
-
+CreatureRecord * ChapterRecord::createSampleCreatureRecord(int definitionId)
+{
+    Creature * c = new Creature(CreatureType_Friend);
+    c->initWithDefinition(definitionId, definitionId);
+    
+    CreatureRecord * record = new CreatureRecord(c);
+    c->autorelease();
+    record->autorelease();
+    return record;
+}
+                                                 
 int ChapterRecord::getChapterId()
 {
     return _chapterId;
@@ -45,7 +59,12 @@ int ChapterRecord::getMoney()
     return _money;
 }
 
-Vector<CreatureRecord *> ChapterRecord::getFriendRecordList()
+void ChapterRecord::addCreatureRecord(CreatureRecord * record)
+{
+    _friendRecordList.pushBack(record);
+}
+
+Vector<CreatureRecord *> &ChapterRecord::getFriendRecordList()
 {
     return _friendRecordList;
 }

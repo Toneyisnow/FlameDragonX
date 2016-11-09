@@ -188,7 +188,7 @@ void ShoppingShopDialog::onBuyAmor_SelectedTarget(int index)
     {
         // Confirm Message
         ShoppingConfirmDialog * confirm = new ShoppingConfirmDialog(LocalizedStrings::getInstance()->getConfirmString(56).c_str());
-        confirm->setCallback(this, CALLBACK1_SELECTOR(ShoppingShopDialog::onBuy_Confirmed));
+        confirm->setCallback(this, CALLBACK1_SELECTOR(ShoppingShopDialog::onBuyAmor_ConfirmedEquip));
         confirm->showDialog(_layer);
         confirm->release();
         return;
@@ -225,7 +225,7 @@ void ShoppingShopDialog::onBuyItem_SelectedTarget(int index)
     if (creature->creatureData()->isItemFull())
     {
         // Error Message: Item full
-        std::string errorString = StringUtils::format(LocalizedStrings::getInstance()->getConfirmString(62).c_str(), creatureDef->name.c_str());
+        std::string errorString = StringUtils::format(LocalizedStrings::getInstance()->getMessageString(62).c_str(), creatureDef->name.c_str());
         ShoppingMessageDialog * message = new ShoppingMessageDialog(errorString);
         message->showDialog(_layer);
         message->release();

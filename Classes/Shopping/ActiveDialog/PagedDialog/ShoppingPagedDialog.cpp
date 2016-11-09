@@ -25,18 +25,16 @@ void ShoppingPagedDialog::showDialog(ShoppingLayer * layer)
     {
         // Show the UP button
         TouchableSprite * upButton = TouchableSprite::create("Others/Arrow_up.png");
-        upButton->setScale(Constants::DEFAULT_MESSAGEBOX_SCALE);
         upButton->setCallback(this, CALLBACK0_SELECTOR(ShoppingPagedDialog::clickedUp));
-        _baseSprite->addChild(upButton, Vec2(283, 10));
+        _baseSprite->addChild(upButton, Vec2(290, 67));
     }
     
     if (this->getTotalCount() > (_pageIndex + 1) * getMaxPerPage())
     {
         // Show the DOWN button
         TouchableSprite * downButton = TouchableSprite::create("Others/Arrow_down.png");
-        downButton->setScale(Constants::DEFAULT_MESSAGEBOX_SCALE);
         downButton->setCallback(this, CALLBACK0_SELECTOR(ShoppingPagedDialog::clickedDown));
-        _baseSprite->addChild(downButton, Vec2(283, 10));
+        _baseSprite->addChild(downButton, Vec2(290, 10));
     }
     
     
