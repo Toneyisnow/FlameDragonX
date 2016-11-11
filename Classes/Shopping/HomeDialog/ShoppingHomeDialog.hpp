@@ -73,8 +73,13 @@ public:
     void onGive_SelectedWhom(int whomIndex);
     void doGive(int creatureIndex);
     
+    void onEquip_SelectedFriend(int index);
+    void onEquip_SelectedItem(int index);
+    void doEquip();
+    
     void onInfo_ShowItems(int index);
     void onInfo_ShowMagics(int index);
+    void onInfo_Close(int index);
 };
 
 #endif /* ShoppingHomeDialog_hpp */

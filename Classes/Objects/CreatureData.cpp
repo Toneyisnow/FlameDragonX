@@ -253,6 +253,27 @@ void CreatureData::addItem(int itemId)
     itemList->pushBack(FDNumber::numberWithInt(itemId));
 }
 
+bool CreatureData::hasItem(int itemId)
+{
+    for (FDNumber * val : *itemList) {
+        if (val->getValue() == itemId) {
+            return true;
+        }
+    }
+    
+    return false;
+}
+
+void CreatureData::removeItemWithId(int itemId)
+{
+    for (int i = 0 ; i < itemList->size(); i++) {
+        if (itemList->at(i)->getValue() == itemId) {
+            removeItem(i);
+            return;
+        }
+    }
+}
+
 void CreatureData::clearStatusPoisoned()
 {
     statusPoisoned = 0;

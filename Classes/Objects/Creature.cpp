@@ -11,6 +11,7 @@
 #include "CreatureDefinition.hpp"
 #include "AnimationLibrary.hpp"
 #include "DataStore.hpp"
+#include "CreatureRecord.hpp"
 
 Creature::Creature(CreatureType type)
 : BattleObject(BattleObject_Creature)
@@ -21,6 +22,18 @@ Creature::Creature(CreatureType type)
     // this->initialize();
     
     initialize("Others/Empty.png");
+}
+
+Creature::Creature(CreatureRecord * record)
+: Creature(CreatureType_Friend)
+{
+    this->_identifier = record->creatureId;
+    _definition = DataStore::getInstance()->getCreatureDefinition(record->definitionId);
+    
+    _data = record->creatureData();
+    _data->retain();
+    
+    startTurn();
 }
 
 Creature::~Creature()

@@ -21,6 +21,11 @@ int FDRandom::valueFromRange(int min, int max)
     return ran;
 }
 
+int FDRandom::valueFromRange(FDRange * range)
+{
+    return valueFromRange(range->getMin(), range->getMax());
+}
+
 bool FDRandom::hitWithRate(int rate)
 {
     int random = rand() % 100;

@@ -41,6 +41,7 @@ public:
     
     std::string getCreatureName(int creatureId);
     std::string getItemName(int itemId);
+    std::string getOccupationName(int occupationId);
     
     std::string getConfirmString(int confirmId);
     std::string getMessageString(int messageId);

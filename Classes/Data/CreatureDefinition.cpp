@@ -169,6 +169,11 @@ int CreatureDefinition::getMaximumLevel()
     return 40;
 }
 
+std::string CreatureDefinition::getOccupationName()
+{
+    return LocalizedStrings::getInstance()->getOccupationName(occupation);
+}
+
 bool CreatureDefinition::canEquip(int itemId)
 {
     ItemDefinition * item = DataStore::getInstance()->getItemDefinition(itemId);

@@ -368,6 +368,21 @@ TransfersDefinition * DataStore::getTransfersDefinition(int creatureId)
     return this->_transfersDefinitionDictionary->at(creatureId);
 }
 
+TransferDefinition * DataStore::getTransferDefinition(int transferId)
+{
+    int creatureDefId = transferId % 100;
+    TransfersDefinition * transfers = getTransfersDefinition(creatureDefId);
+    
+    for (int i = 0; i < transfers->totalCount(); i++) {
+        TransferDefinition * transfer = transfers->getTransfer(i);
+        if (transfer->transferId() == transferId) {
+            return transfer;
+        }
+    }
+    
+    return nullptr;
+}
+
 FightAnimationDefinition * DataStore::getFightAnimationDefinition(int animationId, FightAnimationType type)
 {
     return this->_fightAnimationDefinitionDictionary->at(animationId * 10 + type);

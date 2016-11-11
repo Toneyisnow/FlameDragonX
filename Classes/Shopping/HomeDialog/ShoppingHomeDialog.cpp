@@ -16,6 +16,7 @@
 
 #include "LocalizedStrings.hpp"
 #include "DataStore.hpp"
+#include "CompositeBox.hpp"
 
 using namespace std;
 
@@ -136,6 +137,8 @@ void ShoppingHomeDialog::onBuy(){
 
 void ShoppingHomeDialog::onSell(){
     
+    this->updateMessage();
+    
     ShoppingShowFriendsDialog * dialog = new ShoppingShowFriendsDialog(_chapterRecord->getFriendRecordList(), _lastPageIndex);
     dialog->setCallback(this, CALLBACK1_SELECTOR(ShoppingHomeDialog::onSell_SelectedFriend));
     dialog->showDialog(_layer);
@@ -144,10 +147,24 @@ void ShoppingHomeDialog::onSell(){
 
 void ShoppingHomeDialog::onGive(){
     
+    log("onGive.");
+    this->updateMessage();
+    
+    std::string message = LocalizedStrings::getInstance()->getMessageString(58);
+    ShoppingMessageDialog * messageDialog = new ShoppingMessageDialog(message);
+    messageDialog->setCallback(this, CALLBACK1_SELECTOR(ShoppingHomeDialog::onGive_Start));
+    messageDialog->showDialog(_layer);
+    messageDialog->release();
 }
 
 void ShoppingHomeDialog::onInfo(){
     
+    this->updateMessage();
+    
+    ShoppingShowFriendsDialog * dialog = new ShoppingShowFriendsDialog(_chapterRecord->getFriendRecordList(), _lastPageIndex);
+    dialog->setCallback(this, CALLBACK1_SELECTOR(ShoppingHomeDialog::onInfo_ShowItems));
+    dialog->showDialog(_layer);
+    dialog->release();
 }
 
 void ShoppingHomeDialog::onSaveGame(){
@@ -164,6 +181,11 @@ void ShoppingHomeDialog::onExitGame(){
 
 void ShoppingHomeDialog::onEquip(){
     
+    _lastPageIndex = 0;
+    ShoppingShowFriendsDialog * dialog = new ShoppingShowFriendsDialog(_chapterRecord->getFriendRecordList(), _lastPageIndex);
+    dialog->setCallback(this, CALLBACK1_SELECTOR(ShoppingHomeDialog::onEquip_SelectedFriend));
+    dialog->showDialog(_layer);
+    dialog->release();
 }
 
 void ShoppingHomeDialog::onRevive(){
@@ -283,33 +305,232 @@ void ShoppingHomeDialog::doSell() {
 
 void ShoppingHomeDialog::onGive_Start(int index){
     
+    _lastPageIndex = 0;
+    ShoppingShowFriendsDialog * dialog = new ShoppingShowFriendsDialog(_chapterRecord->getFriendRecordList(), _lastPageIndex);
+    dialog->setCallback(this, CALLBACK1_SELECTOR(ShoppingHomeDialog::onGive_SelectedWhose));
+    dialog->showDialog(_layer);
+    dialog->release();
 }
 
-void ShoppingHomeDialog::onGive_SelectedWhose(int whoseIndex){
+void ShoppingHomeDialog::onGive_SelectedWhose(int index){
     
+    if (index == -1) {
+        return;
+    }
+    
+    if (index < 0) {
+        _lastPageIndex = (index == -2) ? _lastPageIndex - 1 : ((index == -3) ? _lastPageIndex + 1 : 0);
+        ShoppingShowFriendsDialog * dialog = new ShoppingShowFriendsDialog(_chapterRecord->getFriendRecordList(), _lastPageIndex);
+        dialog->setCallback(this, CALLBACK1_SELECTOR(ShoppingHomeDialog::onGive_SelectedWhose));
+        dialog->showDialog(_layer);
+        dialog->release();
+        return;
+    }
+    
+    _lastSelectedCreatureIndex = index;
+    CreatureRecord * creature = _chapterRecord->getFriendRecordList().at(index);
+    
+    if (creature->creatureData()->isItemEmpty()) {
+        
+        // Error Message: There is no item
+        ShoppingMessageDialog * message = new ShoppingMessageDialog(LocalizedStrings::getInstance()->getMessageString(64).c_str());
+        message->setCallback(this, CALLBACK1_SELECTOR(ShoppingHomeDialog::onGive_Start));
+        message->showDialog(_layer);
+        message->release();
+        return;
+    }
+    
+    _lastPageIndex = 0;
+    ShoppingShowItemsDialog * itemDialog = new ShoppingShowItemsDialog(*(creature->creatureData()->itemList), 0, false);
+    itemDialog->setCallback(this, CALLBACK1_SELECTOR(ShoppingHomeDialog::onGive_SelectedItem));
+    itemDialog->showDialog(_layer);
+    itemDialog->release();
 }
 
-void ShoppingHomeDialog::onGive_SelectedItem(int itemIndex){
+void ShoppingHomeDialog::onGive_SelectedItem(int index){
     
+    if (index == -1) {
+        return;
+    }
+    
+    if (index < 0) {
+        _lastPageIndex = (index == -2) ? _lastPageIndex - 1 : ((index == -3) ? _lastPageIndex + 1 : 0);
+        CreatureRecord * creature = _chapterRecord->getFriendRecordList().at(_lastSelectedCreatureIndex);
+        ShoppingShowItemsDialog * itemDialog = new ShoppingShowItemsDialog(*(creature->creatureData()->itemList), 0, false);
+        itemDialog->setCallback(this, CALLBACK1_SELECTOR(ShoppingHomeDialog::onGive_SelectedItem));
+        itemDialog->showDialog(_layer);
+        itemDialog->release();
+        return;
+    }
+    
+    _lastSelectedItemIndex = index;
+    
+    std::string message = LocalizedStrings::getInstance()->getMessageString(59);
+    ShoppingMessageDialog * messageDialog = new ShoppingMessageDialog(message);
+    messageDialog->setCallback(this, CALLBACK1_SELECTOR(ShoppingHomeDialog::onGive_Whom));
+    messageDialog->showDialog(_layer);
+    messageDialog->release();
 }
 
 void ShoppingHomeDialog::onGive_Whom(int index){
     
+    _lastPageIndex = 0;
+    ShoppingShowFriendsDialog * dialog = new ShoppingShowFriendsDialog(_chapterRecord->getFriendRecordList(), _lastPageIndex);
+    dialog->setCallback(this, CALLBACK1_SELECTOR(ShoppingHomeDialog::onGive_SelectedWhom));
+    dialog->showDialog(_layer);
+    dialog->release();
 }
 
-void ShoppingHomeDialog::onGive_SelectedWhom(int whomIndex){
+void ShoppingHomeDialog::onGive_SelectedWhom(int index){
     
+    if (index == -1) {
+        return;
+    }
+    
+    if (index < 0) {
+        _lastPageIndex = (index == -2) ? _lastPageIndex - 1 : ((index == -3) ? _lastPageIndex + 1 : 0);
+        ShoppingShowFriendsDialog * dialog = new ShoppingShowFriendsDialog(_chapterRecord->getFriendRecordList(), _lastPageIndex);
+        dialog->setCallback(this, CALLBACK1_SELECTOR(ShoppingHomeDialog::onGive_SelectedWhom));
+        dialog->showDialog(_layer);
+        dialog->release();
+        return;
+    }
+    
+    CreatureRecord * toCreature = _chapterRecord->getFriendRecordList().at(index);
+    if (index != _lastSelectedCreatureIndex && toCreature->creatureData()->isItemFull()) {
+        std::string message = LocalizedStrings::getInstance()->getMessageString(62);
+        ShoppingMessageDialog * messageDialog = new ShoppingMessageDialog(message);
+        messageDialog->setCallback(this, CALLBACK1_SELECTOR(ShoppingHomeDialog::onGive_Whom));
+        messageDialog->showDialog(_layer);
+        messageDialog->release();
+        return;
+    }
+    
+    this->doGive(index);
+    
+    this->onGive();
 }
 
 void ShoppingHomeDialog::doGive(int creatureIndex){
     
+    CreatureRecord * fromCreature = _chapterRecord->getFriendRecordList().at(_lastSelectedCreatureIndex);
+    CreatureRecord * toCreature = _chapterRecord->getFriendRecordList().at(creatureIndex);
+    
+    int itemId = fromCreature->creatureData()->getItem(_lastSelectedItemIndex)->getDefinitionId();
+    
+    fromCreature->creatureData()->removeItem(_lastSelectedItemIndex);
+    toCreature->creatureData()->addItem(itemId);
 }
 
+
+void ShoppingHomeDialog::onEquip_SelectedFriend(int index){
+    
+    if (index == -1) {
+        return;
+    }
+    
+    if (index < 0) {
+        _lastPageIndex = (index == -2) ? _lastPageIndex - 1 : ((index == -3) ? _lastPageIndex + 1 : 0);
+        ShoppingShowFriendsDialog * dialog = new ShoppingShowFriendsDialog(_chapterRecord->getFriendRecordList(), _lastPageIndex);
+        dialog->setCallback(this, CALLBACK1_SELECTOR(ShoppingHomeDialog::onEquip_SelectedFriend));
+        dialog->showDialog(_layer);
+        dialog->release();
+        return;
+    }
+    
+    _lastSelectedCreatureIndex = index;
+    
+    CreatureRecord * record = _chapterRecord->getFriendRecordList().at(index);
+    Creature * creature = new Creature(record);
+    CompositeBox * box = new CompositeBox(creature, MessageBoxType_Item, MessageBoxOperatingType_Equip);
+    box->setReturnFunction(this, CALLBACK1_SELECTOR(ShoppingHomeDialog::onEquip_SelectedItem));
+    box->showDialog(_layer);
+    
+    box->release();
+    creature->release();
+}
+
+void ShoppingHomeDialog::onEquip_SelectedItem(int index)
+{
+    if (index == -1)
+    {
+        ShoppingShowFriendsDialog * dialog = new ShoppingShowFriendsDialog(_chapterRecord->getFriendRecordList(), _lastPageIndex);
+        dialog->setCallback(this, CALLBACK1_SELECTOR(ShoppingHomeDialog::onEquip_SelectedFriend));
+        dialog->showDialog(_layer);
+        dialog->release();
+        return;
+    }
+    
+    _lastSelectedItemIndex = index;
+    
+    this->doEquip();
+    
+    this->onEquip_SelectedFriend(_lastSelectedCreatureIndex);
+}
+
+void ShoppingHomeDialog::doEquip(){
+    
+    CreatureRecord * creature = _chapterRecord->getFriendRecordList().at(_lastSelectedCreatureIndex);
+    ItemDefinition * item = creature->creatureData()->getItem(_lastSelectedItemIndex);
+    CreatureDefinition * creatureDef = DataStore::getInstance()->getCreatureDefinition(creature->definitionId);
+    
+    if (!creatureDef->canEquip(item->getDefinitionId())) {
+        return;
+    }
+    
+    if (item->isAttackItem()) {
+        creature->creatureData()->attackItemIndex = _lastSelectedItemIndex;
+    } else if (item->isDefendItem()) {
+        creature->creatureData()->defendItemIndex = _lastSelectedItemIndex;
+    }
+}
 
 void ShoppingHomeDialog::onInfo_ShowItems(int index){
     
+    if (index == -1) {
+        return;
+    }
+    
+    if (index < 0) {
+        _lastPageIndex = (index == -2) ? _lastPageIndex - 1 : ((index == -3) ? _lastPageIndex + 1 : 0);
+        ShoppingShowFriendsDialog * dialog = new ShoppingShowFriendsDialog(_chapterRecord->getFriendRecordList(), _lastPageIndex);
+        dialog->setCallback(this, CALLBACK1_SELECTOR(ShoppingHomeDialog::onInfo_ShowItems));
+        dialog->showDialog(_layer);
+        dialog->release();
+        return;
+    }
+    
+    _lastSelectedCreatureIndex = index;
+    CreatureRecord * record = _chapterRecord->getFriendRecordList().at(index);
+    Creature * creature = new Creature(record);
+    CompositeBox * box = new CompositeBox(creature, MessageBoxType_Item, MessageBoxOperatingType_ShowOnly);
+    
+    if (creature->knowMagic()) {
+        box->setReturnFunction(this, CALLBACK1_SELECTOR(ShoppingHomeDialog::onInfo_ShowMagics));
+    } else {
+        box->setReturnFunction(this, CALLBACK1_SELECTOR(ShoppingHomeDialog::onInfo_Close));
+    }
+    
+    box->showDialog(_layer);
+    
+    box->release();
+    creature->release();
 }
 
 void ShoppingHomeDialog::onInfo_ShowMagics(int index){
+    
+    CreatureRecord * record = _chapterRecord->getFriendRecordList().at(_lastSelectedCreatureIndex);
+    Creature * creature = new Creature(record);
+    CompositeBox * box = new CompositeBox(creature, MessageBoxType_Item, MessageBoxOperatingType_ShowOnly);
+    
+    box->setReturnFunction(this, CALLBACK1_SELECTOR(ShoppingHomeDialog::onInfo_Close));
+    
+    box->showDialog(_layer);
+    
+    box->release();
+    creature->release();
+}
+
+void ShoppingHomeDialog::onInfo_Close(int index){
     
 }

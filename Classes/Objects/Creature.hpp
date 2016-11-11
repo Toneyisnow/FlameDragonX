@@ -15,6 +15,8 @@
 #include "CreatureData.hpp"
 #include "FDRange.hpp"
 
+class CreatureRecord;
+
 typedef enum CreatureType
 {
     CreatureType_Friend,
@@ -52,6 +54,7 @@ protected:
 public:
     
     Creature(CreatureType type);
+    Creature(CreatureRecord * record);
     
     ~Creature();
     

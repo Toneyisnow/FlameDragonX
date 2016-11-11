@@ -37,6 +37,8 @@ public:
     int initialAP, initialDP, initialDX, initialMV, initialEX;
     int initialHP, initialMP;
     
+    std::string getOccupationName();
+    
     Vector<FDNumber *> * initialItemList;
     Vector<FDNumber *> * initialMagicList;
     

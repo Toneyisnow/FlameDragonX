@@ -24,6 +24,17 @@ public:
     
     void generateButtons() override;
     
+    virtual void onRevive() override;
+    void onRevive_SelectedFriend(int index);
+    void onRevive_Confirmed(int index);
+    void doRevive();
+    
+    virtual void onTransfer() override;
+    void onTransfer_SelectedFriend(int index);
+    void onTransfer_Confirm(int index);
+    void doTransfer();
+    
+    
 };
 
 #endif /* ShoppingChurchDialog_hpp */

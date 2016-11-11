@@ -275,6 +275,24 @@ int GameFormula::commonCriticalAttackRate()
     return 5;
 }
 
+int GameFormula::getDefaultTransferFee()
+{
+    return 300;
+}
+
+int GameFormula::getMoneyNeededForRevive(CreatureRecord * record)
+{
+    if (record == nullptr) {
+        return 0;
+    }
+    
+    Creature * creature = new Creature(record);
+    int money = 100 * GameFormula::getCalculatedLevel(creature);
+    creature->release();
+    
+    return money;
+}
+
 int GameFormula::getCalculatedLevel(Creature * creature)
 {
     int occupation = creature->getDefinition()->occupation;

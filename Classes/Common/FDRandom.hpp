@@ -10,12 +10,14 @@
 #define FDRandom_hpp
 
 #include "cocos2d.h"
+#include "FDRange.hpp"
 
 class FDRandom : public cocos2d::Ref
 {
 public:
     
     static int valueFromRange(int min, int max);
+    static int valueFromRange(FDRange * range);
     static bool hitWithRate(int rate);
     
 };

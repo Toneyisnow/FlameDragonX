@@ -67,10 +67,10 @@ public:
     
     bool isItemFull();
     bool isItemEmpty();
-    
+    void removeItemWithId(int itemId);
     void removeItem(int itemIndex);
     void addItem(int itemId);
-    
+    bool hasItem(int itemId);
 };
 
 #endif /* CreatureData_hpp */

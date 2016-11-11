@@ -69,6 +69,7 @@ public:
     ShopDefinition * getShopDefinition(int chapterId, ShopType shopType);
     OccupationDefinition * getOccupationDefinition(int occupationId);
     TransfersDefinition * getTransfersDefinition(int creatureId);
+    TransferDefinition * getTransferDefinition(int transferId);
     FightAnimationDefinition * getFightAnimationDefinition(int animationid, FightAnimationType type);
     int getMaxFriendCount(int chapterId);
     
