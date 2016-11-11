@@ -51,6 +51,7 @@ ShoppingLayer::ShoppingLayer(ChapterRecord * chapterRecord, ShopType type)
     
     _homeDialog->showDialog(this);
     _activeDialog = nullptr;
+    _activeMessage = nullptr;
     
     //Adding Listener
     auto touchListener = EventListenerTouchOneByOne::create();
@@ -72,6 +73,21 @@ void ShoppingLayer::setActiveDialog(ShoppingDialog * dialog)
     }
 }
 
+void ShoppingLayer::setActiveMessage(Message * message)
+{
+    if (_activeMessage != nullptr)
+    {
+        _activeMessage->autorelease();
+        _activeMessage = nullptr;
+    }
+    
+    if (message != nullptr)
+    {
+        _activeMessage = message;
+        _activeMessage->retain();
+    }
+}
+
 ChapterRecord * ShoppingLayer::getRecord()
 {
     return _chapterRecord;
@@ -80,6 +96,11 @@ ChapterRecord * ShoppingLayer::getRecord()
 bool ShoppingLayer::onClicked(Touch* touch, Event* event)
 {
     log("Clicked on ShoppingLayer.");
+    
+    if (_activeMessage != nullptr) {
+        _activeMessage->handleClick(touch->getLocation());
+        return true;
+    }
     
     Size screenSize = Constants::getScreenSize();
     if (touch->getLocation().y > screenSize.height / 2)

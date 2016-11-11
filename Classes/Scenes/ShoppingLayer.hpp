@@ -13,6 +13,7 @@
 #include "ChapterRecord.hpp"
 #include "ShopDefinition.hpp"
 #include "ShoppingHomeDialog.hpp"
+#include "Message.hpp"
 
 USING_NS_CC;
 
@@ -23,6 +24,7 @@ private:
     ShopType _shopType;
     ShoppingHomeDialog * _homeDialog;
     ShoppingDialog * _activeDialog;
+    Message * _activeMessage;
     
     ChapterRecord * _chapterRecord;
     
@@ -35,6 +37,7 @@ public:
     ChapterRecord * getRecord();
     
     void setActiveDialog(ShoppingDialog * dialog);
+    void setActiveMessage(Message * message);
     
     void updateMoneyBar();
     

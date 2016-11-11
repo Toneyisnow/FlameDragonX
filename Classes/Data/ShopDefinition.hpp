@@ -18,8 +18,8 @@ typedef enum ShopType
     ShopType_Amor = 1,
     ShopType_Item = 2,
     ShopType_Secret = 3,
-    ShopType_Church = 4,
-    ShopType_Bar = 5
+    ShopType_Bar = 4,
+    ShopType_Church = 5
 } ShopType;
 
 class ShopDefinition : public cocos2d::Ref

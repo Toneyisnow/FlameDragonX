@@ -444,6 +444,7 @@ void ShoppingHomeDialog::onEquip_SelectedFriend(int index){
     Creature * creature = new Creature(record);
     CompositeBox * box = new CompositeBox(creature, MessageBoxType_Item, MessageBoxOperatingType_Equip);
     box->setReturnFunction(this, CALLBACK1_SELECTOR(ShoppingHomeDialog::onEquip_SelectedItem));
+    _layer->setActiveMessage(box);
     box->showDialog(_layer);
     
     box->release();
@@ -452,6 +453,8 @@ void ShoppingHomeDialog::onEquip_SelectedFriend(int index){
 
 void ShoppingHomeDialog::onEquip_SelectedItem(int index)
 {
+    _layer->setActiveMessage(nullptr);
+    
     if (index == -1)
     {
         ShoppingShowFriendsDialog * dialog = new ShoppingShowFriendsDialog(_chapterRecord->getFriendRecordList(), _lastPageIndex);
@@ -510,7 +513,7 @@ void ShoppingHomeDialog::onInfo_ShowItems(int index){
     } else {
         box->setReturnFunction(this, CALLBACK1_SELECTOR(ShoppingHomeDialog::onInfo_Close));
     }
-    
+    _layer->setActiveMessage(box);
     box->showDialog(_layer);
     
     box->release();
@@ -524,7 +527,7 @@ void ShoppingHomeDialog::onInfo_ShowMagics(int index){
     CompositeBox * box = new CompositeBox(creature, MessageBoxType_Item, MessageBoxOperatingType_ShowOnly);
     
     box->setReturnFunction(this, CALLBACK1_SELECTOR(ShoppingHomeDialog::onInfo_Close));
-    
+    _layer->setActiveMessage(box);
     box->showDialog(_layer);
     
     box->release();
@@ -533,4 +536,5 @@ void ShoppingHomeDialog::onInfo_ShowMagics(int index){
 
 void ShoppingHomeDialog::onInfo_Close(int index){
     
+    _layer->setActiveMessage(nullptr);
 }

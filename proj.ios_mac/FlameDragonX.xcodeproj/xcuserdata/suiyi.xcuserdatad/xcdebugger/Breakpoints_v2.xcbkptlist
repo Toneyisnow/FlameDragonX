@@ -1692,11 +1692,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/Scenes/ShoppingLayer.cpp"
-            timestampString = "500101154.901491"
+            timestampString = "500550820.211653"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
             landmarkName = "ShoppingLayer::onClicked(Touch* touch, Event* event)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1708,11 +1708,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/Scenes/ShoppingLayer.cpp"
-            timestampString = "500101331.177899"
+            timestampString = "500550820.211653"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
             landmarkName = "ShoppingLayer::setActiveDialog(ShoppingDialog * dialog)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1724,11 +1724,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/Scenes/ShoppingLayer.cpp"
-            timestampString = "500101332.64795"
+            timestampString = "500550820.211653"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
             landmarkName = "ShoppingLayer::setActiveDialog(ShoppingDialog * dialog)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1826,6 +1826,22 @@
             startingLineNumber = "176"
             endingLineNumber = "176"
             landmarkName = "ShoppingChurchDialog::onTransfer_SelectedFriend(int index)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../Classes/Scenes/VillageNormalLayer.cpp"
+            timestampString = "500551062.90768"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "149"
+            endingLineNumber = "149"
+            landmarkName = "VillageNormalLayer::enterShop()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
