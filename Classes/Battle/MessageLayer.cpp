@@ -88,7 +88,6 @@ void MessageLayer::removeMessage()
     if (_activeMessage != nullptr)
     {
         _activeMessage->removeDialog();
-    
         _activeMessage->release();
         _activeMessage = nullptr;
     }

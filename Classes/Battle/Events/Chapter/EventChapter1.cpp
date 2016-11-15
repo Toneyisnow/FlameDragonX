@@ -18,7 +18,7 @@
 
 void EventChapter1::loadEvents()
 {
-    this->loadTurnEvent(1, CreatureType_Friend, CALLBACK0_SELECTOR(EventChapter1::test));
+    this->loadTurnEvent(1, CreatureType_Friend, CALLBACK0_SELECTOR(EventChapter1::round1));
     
     this->loadTurnEvent(3, CreatureType_Friend, CALLBACK0_SELECTOR(EventChapter1::round3));
     this->loadTurnEvent(4, CreatureType_Friend, CALLBACK0_SELECTOR(EventChapter1::round4));

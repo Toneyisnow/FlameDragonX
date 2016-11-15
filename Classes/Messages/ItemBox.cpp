@@ -15,7 +15,6 @@ ItemBox::ItemBox(Creature * creature, MessageBoxOperatingType type, Ref* caller,
 : SelectableBox(creature, type, caller, method)
 {
     
-    /*
     Vector<FDNumber *> itemList = *(creature->creatureData()->itemList);
     for (int i = 0; i < itemList.size(); i++) {
         
@@ -55,7 +54,7 @@ ItemBox::ItemBox(Creature * creature, MessageBoxOperatingType type, Ref* caller,
         TouchableLabel * attribute = TouchableLabel::createWithTTF(item->getAttributeString(), "fonts/mini_black.ttf", 12);
         attribute->setAnchorPoint(Vec2(0, 0));
         _baseSprite->addLabel(attribute, Vec2(locationX + 80, locationY));
-    }*/
+    }
     
     
 }

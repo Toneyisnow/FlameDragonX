@@ -33,6 +33,8 @@ MagicBox::MagicBox(Creature * creature, MessageBoxOperatingType type, Ref* calle
         std::string mpCost = StringUtils::format("-MP %02d", magic->mpCost());
         TouchableLabel * attribute = TouchableLabel::createWithTTF(mpCost, "fonts/mini_black.ttf", 12);
         attribute->setAnchorPoint(Vec2(0, 0));
+        attribute->setTag(i);
+        attribute->setCallback(caller, method);
         _baseSprite->addLabel(attribute, Vec2(locationX + 50, locationY));
     }
     

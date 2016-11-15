@@ -38,7 +38,6 @@ CompositeBox::~CompositeBox()
     _datoBar->release();
     _detailBar->release();
     _mainBox->release();
-    
 }
 
 void CompositeBox::initDialog()
@@ -65,10 +64,6 @@ void CompositeBox::removeDialog()
     this->removeChildFromLayer(_datoBar->getSprite());
     this->removeChildFromLayer(_detailBar->getSprite());
     this->removeChildFromLayer(_mainBox->getSprite());
-    
-    _datoBar->release();
-    _detailBar->release();
-    _mainBox->release();
 }
 
 void CompositeBox::addComponent(ScaledSprite * component, Vec2 anchorPoint, Vec2 position)
