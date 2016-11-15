@@ -78,6 +78,7 @@ void Message::closeDialog()
         _messageLayer->getActivityQueue()->appendActivity(activity);
     }
 
+    // Handle Callbacks
     if (_messageLayer != nullptr)
     {
         CallbackMethod * method1 = CallbackMethod::create(_messageLayer, CALLBACK0_SELECTOR(MessageLayer::removeMessage));
@@ -95,6 +96,10 @@ void Message::closeDialog()
         this->removeDialog();
         CallbackMethod * method2 = CallbackMethod::create(_callbackTarget, _callbackResultMethod, _returnValue);
         method2->execute();
+        
+        /*
+         
+         */
     }
 }
 
@@ -132,4 +137,10 @@ FDActivity * Message::onExitActivity()
 bool Message::isBlocking()
 {
     return _isBlocking;
+}
+
+void Message::handleReturnValue(int value)
+{
+    _returnValue = value;
+    this->closeDialog();
 }

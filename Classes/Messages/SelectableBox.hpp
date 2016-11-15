@@ -21,6 +21,7 @@ typedef enum MessageBoxOperatingType
 #include "cocos2d.h"
 #include "Creature.hpp"
 #include "ScaledSprite.hpp"
+#include "CallbackMethod.hpp"
 
 USING_NS_CC;
 
@@ -34,6 +35,9 @@ protected:
     
     ScaledSprite * _baseSprite;
     
+    Ref * _caller;
+    SEL_CALLBACK1 _callerMethod;
+    
     float _initialX;
     float _initialY;
     float _spacingX;
@@ -43,11 +47,11 @@ protected:
     
 public:
     
-    SelectableBox();
+    SelectableBox(Creature * creature, MessageBoxOperatingType type, Ref* caller, SEL_CALLBACK1 method);
     
     ScaledSprite * getSprite();
     
-    void drawObject(int index);
+    // virtual void drawObjects();
     int handleClick(Vec2 location);
     
 };

@@ -536,5 +536,5 @@ void ShoppingHomeDialog::onInfo_ShowMagics(int index){
 
 void ShoppingHomeDialog::onInfo_Close(int index){
     
-    _layer->setActiveMessage(nullptr);
+    ///_layer->setActiveMessage(nullptr);
 }

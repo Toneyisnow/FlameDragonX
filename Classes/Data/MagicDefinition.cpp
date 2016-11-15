@@ -8,6 +8,7 @@
 
 #include "MagicDefinition.hpp"
 #include "GameFormula.hpp"
+#include "LocalizedStrings.hpp"
 
 MagicDefinition * MagicDefinition::readFromFile(TextFileReader * reader)
 {
@@ -24,6 +25,7 @@ void MagicDefinition::initFromFile(TextFileReader * reader)
     this->_definitionId = reader->readInt();
     
     /// this->name
+    this->_name = LocalizedStrings::getInstance()->getMagicName(_definitionId);
     
     this->_type = (MagicType)reader->readInt();
     this->_quantityRange = reader->readRange();
@@ -64,6 +66,11 @@ int MagicDefinition::effectCoverage()
 int MagicDefinition::hittingRate()
 {
     return _hittingRate;
+}
+
+std::string MagicDefinition::getName()
+{
+    return _name;
 }
 
 int MagicDefinition::mpCost()

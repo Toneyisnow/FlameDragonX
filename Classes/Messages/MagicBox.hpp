@@ -20,7 +20,7 @@ private:
     
 public:
     
-    MagicBox(Creature * creature, MessageBoxOperatingType type);
+    MagicBox(Creature * creature, MessageBoxOperatingType type, Ref* caller, SEL_CALLBACK1 method);
     
     
 };

@@ -16,6 +16,8 @@
 CompositeBox::CompositeBox(Creature * creature, MessageBoxType type, MessageBoxOperatingType oType)
 {
     this->_creature = creature;
+    this->_creature->retain();
+    
     this->_type = type;
     this->_operatingType = oType;
     
@@ -31,6 +33,11 @@ CompositeBox::CompositeBox(Creature * creature, MessageBoxType type, MessageBoxO
 
 CompositeBox::~CompositeBox()
 {
+    _creature->release();
+    
+    _datoBar->release();
+    _detailBar->release();
+    _mainBox->release();
     
 }
 
@@ -43,11 +50,11 @@ void CompositeBox::initDialog()
     this->addComponent(_detailBar->getSprite(), Vec2(0.0f, 0.0f), (_messageLayer != nullptr) ? _detailPosition0 : _detailPosition1);
     
     if (_type == MessageBoxType_Item) {
-        _mainBox = new ItemBox(_creature, _operatingType);
+        _mainBox = new ItemBox(_creature, _operatingType, this, CALLBACK1_SELECTOR(Message::handleReturnValue));
     }
     else
     {
-        _mainBox = new MagicBox(_creature, _operatingType);
+        _mainBox = new MagicBox(_creature, _operatingType, this, CALLBACK1_SELECTOR(Message::handleReturnValue));
     }
     
     this->addComponent(_mainBox->getSprite(), Vec2(0.5f, 1.0f), (_messageLayer != nullptr) ? _mainPosition0 : _mainPosition1);
@@ -113,12 +120,15 @@ FDActivity * CompositeBox::onExitActivity()
 
 void CompositeBox::handleClick(Vec2 location)
 {
-    if (location.y > 160) {
+    Size screenSize = Constants::getScreenSize();
+    if (location.y > screenSize.height / 2)
+    {
         _returnValue = -1;
         this->closeDialog();
         return;
     }
     
+    /*
     Vec2 mainBoxLocation = _mainBox->getSprite()->getPosition();
     float convertedX = (location.x - mainBoxLocation.x) / _mainBox->getSprite()->getScale() + _mainBox->getSprite()->getContentSize().width / 2;
     float convertedY = (location.y - mainBoxLocation.y) / _mainBox->getSprite()->getScale() + _mainBox->getSprite()->getContentSize().height;
@@ -128,5 +138,6 @@ void CompositeBox::handleClick(Vec2 location)
         _returnValue = result;
         this->closeDialog();
     }
-    
+    */
 }
+

@@ -18,7 +18,7 @@ private:
     
 public:
     
-    ItemBox(Creature * creature, MessageBoxOperatingType type);
+    ItemBox(Creature * creature, MessageBoxOperatingType type, Ref* caller, SEL_CALLBACK1 method);
     
 };
 

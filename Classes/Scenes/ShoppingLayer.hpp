@@ -25,6 +25,7 @@ private:
     ShoppingHomeDialog * _homeDialog;
     ShoppingDialog * _activeDialog;
     Message * _activeMessage;
+    Message * _oldActiveMessage;
     
     ChapterRecord * _chapterRecord;
     

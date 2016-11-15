@@ -57,6 +57,9 @@ public:
     FDActivity * onExitActivity() override;
     
     void handleClick(Vec2 location) override;
+    /// void handleReturnValue(int value) override;
+    
+    
 };
 
 #endif /* MessageBox_hpp */

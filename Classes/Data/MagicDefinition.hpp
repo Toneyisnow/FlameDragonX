@@ -50,6 +50,8 @@ public:
     static MagicDefinition * readFromFile(TextFileReader * reader);
     void initFromFile(TextFileReader * reader);
     
+    std::string getName();
+    
     int effectScope();
     int effectCoverage();
     int hittingRate();

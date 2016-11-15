@@ -50,6 +50,7 @@ public:
     virtual FDActivity * onExitActivity();
     
     virtual void handleClick(Vec2 location);
+    virtual void handleReturnValue(int value);
     
     bool isBlocking();
 };

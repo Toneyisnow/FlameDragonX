@@ -52,6 +52,7 @@ ShoppingLayer::ShoppingLayer(ChapterRecord * chapterRecord, ShopType type)
     _homeDialog->showDialog(this);
     _activeDialog = nullptr;
     _activeMessage = nullptr;
+    _oldActiveMessage = nullptr;
     
     //Adding Listener
     auto touchListener = EventListenerTouchOneByOne::create();
@@ -75,9 +76,18 @@ void ShoppingLayer::setActiveDialog(ShoppingDialog * dialog)
 
 void ShoppingLayer::setActiveMessage(Message * message)
 {
+    if (_oldActiveMessage != nullptr) {
+        
+        // Bug: Due to a Memory issue, here we just leave the old message not released.
+        // If we release them, it will cause "Invalid pointer dequeued from free list" error
+        // _oldActiveMessage->release();
+        _oldActiveMessage = nullptr;
+    }
+    
     if (_activeMessage != nullptr)
     {
-        _activeMessage->autorelease();
+        _oldActiveMessage = _activeMessage;
+        // _activeMessage->autorelease();
         _activeMessage = nullptr;
     }
     
