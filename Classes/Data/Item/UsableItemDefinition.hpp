@@ -35,6 +35,7 @@ typedef enum UsableItemType
     
 } UsableItemType;
 
+class Creature;
 
 class UsableItemDefinition : public ItemDefinition
 {
@@ -52,6 +53,7 @@ public:
     bool isReusable();
     bool onlyUseToSelf();
     
+    void usedBy(Creature * target);
 };
 
 #endif /* UsableItemDefinition_hpp */

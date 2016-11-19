@@ -53,8 +53,6 @@ void SelectItemTargetState::onEnterState()
     ItemDefinition * item = creature->creatureData()->getItem(itemIndex);
     UsableItemDefinition * usableItem = (UsableItemDefinition *)item;
     
-    usableItem = (UsableItemDefinition *)DataStore::getInstance()->getItemDefinition(111);
-    
     int max = (usableItem->onlyUseToSelf() ? 0 : 1);
     RangeScopeResolver * resolver = new RangeScopeResolver(_battleField, position, FDRange::rangeWithValues(0, max));
     

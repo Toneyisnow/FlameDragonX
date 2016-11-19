@@ -384,3 +384,9 @@ void GameFormula::actionedByFrozen(Creature * target)
     target->creatureData()->statusFrozen = roundCount;
 }
 
+void GameFormula::waiveTurnRecover(Creature * target)
+{
+    int hpRecover = FDRandom::valueFromRange(target->creatureData()->hpMax * 0.15f, target->creatureData()->hpMax * 0.25f);
+    target->creatureData()->updateHp(hpRecover);
+}
+

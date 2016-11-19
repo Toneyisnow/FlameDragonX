@@ -55,7 +55,9 @@ void CreatureInfoMessage::initDialog()
     setHp(_creature->creatureData()->hpCurrent);
     
     // MP
-    if (_creature->creatureData()->mpMax > 0 && _creature->creatureData()->mpCurrent > 0)
+    // Fix bug: remove the hpCurrent > 0 condition
+    // if (_creature->creatureData()->mpMax > 0 && _creature->creatureData()->mpCurrent > 0)
+    if (_creature->creatureData()->mpMax > 0)
     {
         _mpBar = Sprite::create(StringUtils::format("Others/CreatureInfoBarMp.png"));
         _mpBar->setAnchorPoint(Vec2(0, 0.5f));

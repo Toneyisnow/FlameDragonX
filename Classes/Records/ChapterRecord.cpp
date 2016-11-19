@@ -38,7 +38,7 @@ CreatureRecord * ChapterRecord::createSampleCreatureRecord(int definitionId)
     Creature * c = new Creature(CreatureType_Friend);
     c->initWithDefinition(definitionId, definitionId);
     
-    CreatureRecord * record = new CreatureRecord(c);
+    CreatureRecord * record = new CreatureRecord(c, false);
     c->autorelease();
     record->autorelease();
     return record;
@@ -61,7 +61,12 @@ int ChapterRecord::getMoney()
 
 void ChapterRecord::addCreatureRecord(CreatureRecord * record)
 {
-    _friendRecordList.pushBack(record);
+    int index = (int)_friendRecordList.size() - 1;
+    while (index >= 0 && _friendRecordList.at(index)->creatureId > record->creatureId) {
+        index --;
+    }
+    
+    _friendRecordList.insert(index + 1, record);
 }
 
 Vector<CreatureRecord *> &ChapterRecord::getFriendRecordList()
@@ -73,6 +78,10 @@ CreatureRecord * ChapterRecord::getCreatureCarriesItem(int itemId)
 {
     for (CreatureRecord * creature : _friendRecordList) {
         // Find the item
+        if (creature->creatureData()->hasItem(itemId))
+        {
+            return creature;
+        }
     }
     
     return nullptr;

@@ -289,3 +289,17 @@ void CreatureData::clearStatusProhibited()
     statusProhibited = 0;
 }
 
+void CreatureData::updateHp(int quantity)
+{
+    hpCurrent += quantity;
+    hpCurrent = MIN(hpCurrent, hpMax);
+    hpCurrent = MAX(hpCurrent, 0);
+}
+
+void CreatureData::updateMp(int quantity)
+{
+    mpCurrent += quantity;
+    mpCurrent = MIN(mpCurrent, mpMax);
+    mpCurrent = MAX(mpCurrent, 0);
+}
+

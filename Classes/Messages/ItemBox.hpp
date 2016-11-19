@@ -11,10 +11,13 @@
 
 #include "cocos2d.h"
 #include "SelectableBox.hpp"
+#include "ItemDefinition.hpp"
 
 class ItemBox : public SelectableBox
 {
 private:
+    
+    bool isSelectable(ItemDefinition * item);
     
 public:
     

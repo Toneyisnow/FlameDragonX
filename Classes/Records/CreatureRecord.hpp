@@ -30,7 +30,7 @@ public:
     
     //// static CreatureBattleRecord * createByChapterRecord(CreatureChapterRecord * record);
     
-    CreatureRecord(Creature * creature);
+    CreatureRecord(Creature * creature, bool cleanUpStatus);  // If cleanUpStatus is true, it will reset all status
     ~CreatureRecord();
     
     int creatureId;

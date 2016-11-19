@@ -49,3 +49,8 @@ bool ItemDefinition::isDefendItem()
 {
     return (_definitionId / 100 == 3);
 }
+
+bool ItemDefinition::isUsableItem()
+{
+    return (_definitionId / 100 == 1);
+}

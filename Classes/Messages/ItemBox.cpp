@@ -40,14 +40,19 @@ ItemBox::ItemBox(Creature * creature, MessageBoxOperatingType type, Ref* caller,
         TouchableSprite * iconSprite = TouchableSprite::create(iconFileName);
         iconSprite->setAnchorPoint(Vec2(0, 0));
         iconSprite->setTag(i);
-        iconSprite->setCallback(caller , method);
+        
+        if (this->isSelectable(item)) {
+            iconSprite->setCallback(caller , method);
+        }
         _baseSprite->addChild(iconSprite, Vec2(locationX - 20, locationY));
         
         // Name
         TouchableLabel * nameLabel = TouchableLabel::createWithTTF(item->getName(), "fonts/mini_black.ttf", 14);
         nameLabel->setAnchorPoint(Vec2(0, 0));
         nameLabel->setTag(i);
-        nameLabel->setCallback(caller, method);
+        if (this->isSelectable(item)) {
+            nameLabel->setCallback(caller, method);
+        }
         _baseSprite->addLabel(nameLabel, Vec2(locationX + 10, locationY));
         
         // Attribute
@@ -59,3 +64,19 @@ ItemBox::ItemBox(Creature * creature, MessageBoxOperatingType type, Ref* caller,
     
 }
 
+bool ItemBox::isSelectable(ItemDefinition * item)
+{
+    switch (_operatingType) {
+        case MessageBoxOperatingType_ShowOnly:
+            return false;
+        case MessageBoxOperatingType_Select:
+            return true;
+        case MessageBoxOperatingType_Equip:
+            return item->isAttackItem() || item->isDefendItem();
+        case MessageBoxOperatingType_Use:
+            return item->isUsableItem();
+            
+        default:
+            return false;
+    }
+}

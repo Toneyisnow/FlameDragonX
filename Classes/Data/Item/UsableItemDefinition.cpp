@@ -8,6 +8,7 @@
 
 #include "UsableItemDefinition.hpp"
 #include "LocalizedStrings.hpp"
+#include "Creature.hpp"
 
 UsableItemDefinition * UsableItemDefinition::readFromFile(TextFileReader * reader)
 {
@@ -38,6 +39,62 @@ void UsableItemDefinition::initFromFile(TextFileReader * reader)
 bool UsableItemDefinition::isReusable()
 {
     return this->_isReusable;
+}
+
+void UsableItemDefinition::usedBy(Creature * target)
+{
+    if (target == nullptr) {
+        return;
+    }
+    
+    switch (_useType) {
+        case UsableItemType_Ap:
+            target->creatureData()->ap += _quantity;
+            break;
+        case UsableItemType_Dp:
+            target->creatureData()->dp += _quantity;
+            break;
+        case UsableItemType_Dx:
+            target->creatureData()->dx += _quantity;
+            break;
+        case UsableItemType_Hp:
+            target->creatureData()->updateHp(_quantity);
+            break;
+        case UsableItemType_Mp:
+            target->creatureData()->updateMp(_quantity);
+            break;
+        case UsableItemType_Mv:
+            target->creatureData()->mv += _quantity;
+            break;
+        case UsableItemType_MaxHp:
+            target->creatureData()->hpMax += _quantity;
+            break;
+        case UsableItemType_MaxMp:
+            target->creatureData()->mpMax += _quantity;
+            break;
+        case UsableItemType_EyeIce:
+            
+            break;
+        case UsableItemType_EyeDark:
+            
+            break;
+        case UsableItemType_EyeFire:
+            
+            break;
+        case UsableItemType_EyeStar:
+            
+            break;
+        case UsableItemType_AntiFreeze:
+            target->creatureData()->clearStatusFrozen();
+            break;
+        case UsableItemType_AntiPoison:
+            target->creatureData()->clearStatusPoisoned();
+            break;
+            
+            
+        default:
+            break;
+    }
 }
 
 bool UsableItemDefinition::onlyUseToSelf()

@@ -13,6 +13,7 @@
 #include "Constants.hpp"
 #include "DataStore.hpp"
 #include "MoneyItemDefinition.hpp"
+#include "UsableItemDefinition.hpp"
 #include "CreatureMoveActivity.hpp"
 #include "CallbackActivity.hpp"
 #include "TalkActivity.hpp"
@@ -385,7 +386,13 @@ void BattleScene::postFightAction(Ref * counterObjectObj)
 void BattleScene::useItem(Creature * creature, int itemIndex, Creature * target)
 {
     // Caculates the effect
+    ItemDefinition * item = creature->creatureData()->getItem(itemIndex);
+    UsableItemDefinition * usableItem = (UsableItemDefinition *)item;
+    usableItem->usedBy(target);
     
+    if (!usableItem->isReusable()) {
+        creature->creatureData()->removeItem(itemIndex);
+    }
     
     // Use Animation
     
@@ -399,8 +406,14 @@ void BattleScene::useItem(Creature * creature, int itemIndex, Creature * target)
 
 void BattleScene::waiveTurn(Creature * creature)
 {
-    // Recovery Animation
-    
+    if (!creature->hasMoved()) {
+        
+        // Recover
+        GameFormula::waiveTurnRecover(creature);
+        
+        // Recovery Animation
+        
+    }
     
     
     // Triggered Events. e.g Position events
@@ -693,11 +706,33 @@ void BattleScene::gameWin()
 {
     log("Game Win.");
     
+    ChapterRecord * record = new ChapterRecord(_chapterId + 1);
+    record->setMoney(_totalMoney);
+    
+    for (Creature * deadCreature : *(_battleField->getDeadCreatureList()))
+    {
+        if (deadCreature->getType() == CreatureType_Friend)
+        {
+            CreatureRecord * creatureRecord = new CreatureRecord(deadCreature, true);
+            record->addCreatureRecord(creatureRecord);
+            creatureRecord->release();
+        }
+    }
+    
+    for (Creature * creature : *(_battleField->getFriendList()))
+    {
+        CreatureRecord * creatureRecord = new CreatureRecord(creature, true);
+        record->addCreatureRecord(creatureRecord);
+        creatureRecord->release();
+    }
+    
     // Switch to VillageScene
-    ChapterRecord * chapterRecord = ChapterRecord::createSample();
-    Scene * villageScene = SceneCreator::createVillageScene(chapterRecord);
+    // ChapterRecord * chapterRecord = ChapterRecord::createSample();
+    Scene * villageScene = SceneCreator::createVillageScene(record);
     
     Director::getInstance()->pushScene(TransitionFade::create(1.0f, villageScene));
+    
+    record->release();
 }
 
 void BattleScene::gameOver()

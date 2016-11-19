@@ -27,7 +27,7 @@ bool GameOverLayer::init()
     
     Sprite* mainSprite = ScaledSprite::create("Others/GameOver.png");
     mainSprite->setPosition(screen.width / 2, screen.height / 2);
-    mainSprite->setScale(scaleFactor * 1.5f);
+    mainSprite->setScale(scaleFactor);
     this->addChild(mainSprite);
     
     this->scheduleOnce(schedule_selector(GameOverLayer::closeScene), 3.0f);

@@ -47,6 +47,8 @@ public:
     static void actionedByProhibited(Creature * target);
     static void actionedByFrozen(Creature * target);
     
+    static void waiveTurnRecover(Creature * target);
+    
     static int getDefaultTransferFee();
     static int getMoneyNeededForRevive(CreatureRecord * record);
     

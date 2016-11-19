@@ -65,6 +65,9 @@ public:
     ItemDefinition * getItem(int itemIndex);
     MagicDefinition * getMagic(int magicIndex);
     
+    void updateHp(int quantity);
+    void updateMp(int quantity);
+    
     bool isItemFull();
     bool isItemEmpty();
     void removeItemWithId(int itemId);

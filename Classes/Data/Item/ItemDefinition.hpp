@@ -53,6 +53,7 @@ public:
     bool isMoney();
     bool isAttackItem();
     bool isDefendItem();
+    bool isUsableItem();
 };
 
 #endif /* ItemDefinition_hpp */

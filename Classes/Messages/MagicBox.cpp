@@ -26,7 +26,11 @@ MagicBox::MagicBox(Creature * creature, MessageBoxOperatingType type, Ref* calle
         TouchableLabel * nameLabel = TouchableLabel::createWithTTF(magic->getName(), "fonts/mini_black.ttf", 14);
         nameLabel->setAnchorPoint(Vec2(0, 0));
         nameLabel->setTag(i);
-        nameLabel->setCallback(caller, method);
+        
+        if (_operatingType == MessageBoxOperatingType_Select) {
+            nameLabel->setCallback(caller, method);
+        }
+        
         _baseSprite->addLabel(nameLabel, Vec2(locationX, locationY));
         
         // Attribute
@@ -34,7 +38,10 @@ MagicBox::MagicBox(Creature * creature, MessageBoxOperatingType type, Ref* calle
         TouchableLabel * attribute = TouchableLabel::createWithTTF(mpCost, "fonts/mini_black.ttf", 12);
         attribute->setAnchorPoint(Vec2(0, 0));
         attribute->setTag(i);
-        attribute->setCallback(caller, method);
+        
+        if (_operatingType == MessageBoxOperatingType_Select) {
+            attribute->setCallback(caller, method);
+        }
         _baseSprite->addLabel(attribute, Vec2(locationX + 50, locationY));
     }
     
