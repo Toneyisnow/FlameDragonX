@@ -37,3 +37,5 @@ Enemy * Enemy::create(int creatureId, int definitionId, int dropItemId)
     enemy->autorelease();
     return enemy;
 }
+
+

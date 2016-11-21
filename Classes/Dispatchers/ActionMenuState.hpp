@@ -36,8 +36,10 @@ public:
     void moveCursorToMagicTarget();
     
     void checkTreatureAndWaiveTurn();
-    void confirmPickTreasure();
-    
+    void confirmPickTreasure(int confirmed);
+    void confirmExchangeTreasure(int confirmed);
+    void confirmItemToPutBack(int index);
+    void waiveTurn();
     
     
 };

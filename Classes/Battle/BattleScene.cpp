@@ -404,6 +404,56 @@ void BattleScene::useItem(Creature * creature, int itemIndex, Creature * target)
     this->appendMethodToActivity(CALLBACK2_SELECTOR(BattleScene::creatureEndTurn), creature);
 }
 
+void BattleScene::pickupTreasure(Creature * creature)
+{
+    Vec2 position = _battleField->getObjectPosition(creature);
+    Treasure * treasure = _battleField->getTreasureAt(position);
+    
+    if (treasure == nullptr || treasure->hasOpened()) {
+        return;
+    }
+    
+    treasure->setOpened(true);
+    
+    ItemDefinition * item = DataStore::getInstance()->getItemDefinition(treasure->itemId());;
+    if (item->isMoney() && creature->getType() == CreatureType_Friend)
+    {
+        _totalMoney += ((MoneyItemDefinition *)item)->quantity();
+    }
+    else
+    {
+        if (!creature->creatureData()->isItemFull()) {
+            creature->creatureData()->addItem(item->getDefinitionId());
+            
+            if (creature->getType() == CreatureType_Enemy) {
+                ((Enemy *) creature)->dropItemId = item->getDefinitionId();
+            }
+        }
+    }
+}
+
+void BattleScene::exchangeTreasure(Creature * creature, int itemIndex)
+{
+    Vec2 position = _battleField->getObjectPosition(creature);
+    Treasure * treasure = _battleField->getTreasureAt(position);
+    
+    if (treasure == nullptr || treasure->hasOpened()) {
+        return;
+    }
+    
+    ItemDefinition * item = DataStore::getInstance()->getItemDefinition(treasure->itemId());;
+    if (item->isMoney())
+    {
+        return;
+    }
+    
+    ItemDefinition * exchangeItem = creature->creatureData()->getItem(itemIndex);
+    creature->creatureData()->removeItem(itemIndex);
+    creature->creatureData()->addItem(treasure->itemId());
+    treasure->changeItem(exchangeItem->getDefinitionId());
+    
+}
+
 void BattleScene::waiveTurn(Creature * creature)
 {
     if (!creature->hasMoved()) {

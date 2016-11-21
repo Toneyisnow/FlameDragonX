@@ -175,6 +175,17 @@ void AnimationLibrary::loadFightAnimation(int animationId, FightAnimationType ty
     animation->release();
 }
 
+void AnimationLibrary::loadMagicAnimation(int magicId, MagicAnimationType type)
+{
+    std::string key = StringUtils::format("Magic-%d-%d", magicId, type);
+    
+    MagicAnimationDefinition * definition = DataStore::getInstance()->getMagicAnimationDefinition(magicId, type);
+    FightAnimation * animation = new FightAnimation(definition);
+    
+    _slideAnimationDictionary->insert(key, animation);
+    animation->release();
+}
+
 
 ///////////////////////////////////////////////////////
 
@@ -247,9 +258,15 @@ FightAnimation * AnimationLibrary::getFightAnimation(int animationId, FightAnima
     return (FightAnimation *)_slideAnimationDictionary->at(key);
 }
 
-FightAnimation * AnimationLibrary::getMagicAnimation(int magicId, bool isBad)
+FightAnimation * AnimationLibrary::getMagicAnimation(int magicId, MagicAnimationType type)
 {
-    return getFightAnimation(3, FightAnimationType_Attack);
+    std::string key = StringUtils::format("Magic-%d-%d", magicId, type);
+    if (_slideAnimationDictionary->at(key) == nullptr)
+    {
+        this->loadMagicAnimation(magicId, type);
+    }
+    
+    return (FightAnimation *)_slideAnimationDictionary->at(key);
 }
 
 std::string AnimationLibrary::filenameForBattleFieldAnimation(int creatureAniId, int index)

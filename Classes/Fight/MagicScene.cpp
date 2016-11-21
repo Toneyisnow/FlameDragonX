@@ -37,7 +37,7 @@ MagicScene::MagicScene(CounterInfo * info, MagicResult * result)
     _firstTargetIdleAnimation = AnimationLibrary::getInstance()->getFightAnimation(_targetList.at(0)->getDefinition()->animationId, FightAnimationType_Idle);
     _lastTargetIdleAnimation = AnimationLibrary::getInstance()->getFightAnimation(_targetList.at(_targetList.size()-1)->getDefinition()->animationId, FightAnimationType_Idle);
     
-    _magicAnimation = AnimationLibrary::getInstance()->getMagicAnimation(_magic->getDefinitionId(), (_subject->getType() == CreatureType_Enemy));
+    _magicAnimation = AnimationLibrary::getInstance()->getMagicAnimation(_magic->getDefinitionId(), (_subject->getType() == CreatureType_Enemy) ? MagicAnimationType_Bad : MagicAnimationType_Good);
     
     _showingMagic = false;
     _switchingTarget = false;
@@ -84,6 +84,7 @@ void MagicScene::start()
     _lastTargetAnimate = new CombinedActivity();
     _magicAnimate =  new AnimateActivity(_magicSprite);
     _magicAnimate->setAnimation(_magicAnimation);
+    _magicAnimate->setCallback(this, CALLBACK2_SELECTOR(MagicScene::onMagicHit));
     _switchingAnimate = new CombinedActivity();
     
     // Creature Bar
@@ -97,6 +98,7 @@ void MagicScene::start()
     _targetInfo->showDialog(_layer);
     _targetInfo->setZOrder((_targetList.at(0)->getType() == CreatureType_Enemy) ? ZORDER_ENEMYBAR : ZORDER_FRIENDBAR);
     _targetInfo->setPosition(this->getBarLocation(_targetList.at(0)));
+    _targetInfo->setHp(_magicResult->getCounterResult(0)->hpBefore);
     
     // Switching Animate
     MoveByActivity * a1 = MoveByActivity::create(_targetSprite, Vec2(-240, 0), 20);
@@ -227,5 +229,20 @@ void MagicScene::tickSwitching()
             CounterResult * counterResult = _magicResult->getCounterResult(_currentTargetIndex);
             _targetInfo->setHp(counterResult->hpBefore);
         }
+    }
+}
+
+void MagicScene::onMagicHit(Ref * frameObj)
+{
+    // Update the HP Value according to the magic
+    
+    FightFrame * frame = (FightFrame *)frameObj;
+    FightFrameDefinition * frameDefinition = frame->getDefinition();
+    if (frameDefinition->isHitting()) {
+        
+        CounterResult * counterResult = _magicResult->getCounterResult(_currentTargetIndex);
+        int hpValue = counterResult->hpBefore - (counterResult->hpBefore - counterResult->hpAfter) * frameDefinition->hittingRate();
+        
+        _targetInfo->setHp(hpValue);
     }
 }

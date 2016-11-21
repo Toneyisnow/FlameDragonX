@@ -65,7 +65,8 @@ public:
     void start() override;
     
     void onTriggerMagic(Ref * frameObj);
-    
+    void onMagicHit(Ref * frameObj);
+
     void tickMagic();
     void tickSwitching();
 };

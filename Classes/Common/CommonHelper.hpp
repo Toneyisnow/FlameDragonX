@@ -19,6 +19,8 @@ public:
     
     static bool IsSamePosition(Vec2 pos1, Vec2 pos2);
     
+    static std::string IntegerToStringWithMaxValue(int value, int digits);
+    
 };
 
 #endif /* CommonHelper_hpp */

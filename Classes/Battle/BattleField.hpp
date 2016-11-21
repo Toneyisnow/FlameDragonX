@@ -16,6 +16,7 @@
 #include "Cursor.hpp"
 #include "StateDispatcher.hpp"
 #include "MenuCursor.hpp"
+#include "Treasure.hpp"
 
 class BattleScene;
 
@@ -118,6 +119,8 @@ public:
     void moveCursorTo(Vec2 position);
     Vec2 getCursorPosition();
     void setCursorObjectTo(Ref * position);
+    
+    Treasure * getTreasureAt(Vec2 position);
     
     bool isInteractiveBusy();
     

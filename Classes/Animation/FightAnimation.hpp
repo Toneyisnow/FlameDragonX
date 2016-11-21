@@ -12,6 +12,7 @@
 #include "cocos2d.h"
 #include "SlideAnimation.hpp"
 #include "FightAnimationDefinition.hpp"
+#include "MagicAnimationDefinition.hpp"
 
 class CounterScene;
 
@@ -19,11 +20,14 @@ class FightAnimation : public SlideAnimation
 {
 private:
 
-    FightAnimationDefinition * _definition;
+    //// FightAnimationDefinition * _definition;
+    Vector<FightFrameDefinition *> _frameDefinitionList;
+    
     
 public:
   
     FightAnimation(FightAnimationDefinition * def);
+    FightAnimation(MagicAnimationDefinition * def);
     
     bool isRemoteAttack();
     

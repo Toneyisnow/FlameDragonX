@@ -13,13 +13,30 @@
 FightAnimation::FightAnimation(FightAnimationDefinition * def)
 : SlideAnimation(Constants::TickPerFrame_FightAnimation, false, false)
 {
-    _definition = def;
+    //// _definition = def;
+    _frameDefinitionList = def->frameList();
     
-    for(int frameIndex = 0; frameIndex < _definition->frameList().size(); frameIndex ++)
+    for(int frameIndex = 0; frameIndex < _frameDefinitionList.size(); frameIndex ++)
     {
         std::string filename = StringUtils::format("Fights/%03d/Fight-%03d-%d-%02d.png", def->animationId(), def->animationId(), def->type(), frameIndex + 1);
         
-        FightFrame * frame = new FightFrame(filename, _definition->frameList().at(frameIndex));
+        FightFrame * frame = new FightFrame(filename, _frameDefinitionList.at(frameIndex));
+        appendFrame(frame);
+        frame->release();
+    }
+}
+
+FightAnimation::FightAnimation(MagicAnimationDefinition * def)
+: SlideAnimation(Constants::TickPerFrame_FightAnimation, false, false)
+{
+    //// _definition = def;
+    _frameDefinitionList = def->frameList();
+    
+    for(int frameIndex = 0; frameIndex < _frameDefinitionList.size(); frameIndex ++)
+    {
+        std::string filename = StringUtils::format("Magic/%03d/Magic-%03d-%02d.png", def->magicAnimationId(), def->magicAnimationId(), frameIndex + 1);
+        
+        FightFrame * frame = new FightFrame(filename, _frameDefinitionList.at(frameIndex));
         appendFrame(frame);
         frame->release();
     }
@@ -27,7 +44,7 @@ FightAnimation::FightAnimation(FightAnimationDefinition * def)
 
 bool FightAnimation::isRemoteAttack()
 {
-    for (FightFrameDefinition * frameDef : _definition->frameList()) {
+    for (FightFrameDefinition * frameDef : _frameDefinitionList) {
         if (frameDef->isRemote()) {
             return true;
         }

@@ -90,6 +90,8 @@ public:
     void waiveAllTurn();
     void takeAIMove();
     void takeAIAction(int creatureId);
+    void pickupTreasure(Creature * creature);
+    void exchangeTreasure(Creature * creature, int itemIndex);
     
     void showItemStatus(Ref * creature);
     void showMagicStatus(Ref * creature);

@@ -34,7 +34,7 @@ CounterScene::CounterScene(CounterInfo * info)
     std::string taiImageFile = StringUtils::format("Tais/Tai-%02d.png", info->getBackgroundImageId());
     _taiSprite = ScaledSprite::create(taiImageFile);
     _taiSprite->setScale(1.3f);
-    _taiSprite->setPosition(Vec2(winSize.width * 0.68f, winSize.height / 2 - 115));
+    _taiSprite->setPosition(Vec2(winSize.width * 0.72f, winSize.height / 2 - 115));
     _layer->addChild(_taiSprite, ZORDER_TAI);
     
 }

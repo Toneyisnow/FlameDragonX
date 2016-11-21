@@ -90,8 +90,12 @@ void CreatureInfoMessage::removeDialog()
 
 void CreatureInfoMessage::setHp(int hpValue)
 {
+    if (hpValue < 0) {
+        hpValue = 0;
+    }
+    
     // HP Bar
-    if (hpValue <= 0) {
+    if (hpValue == 0) {
         _hpBar->setOpacity(0);
     }
     else {

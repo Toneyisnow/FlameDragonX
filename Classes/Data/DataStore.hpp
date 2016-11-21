@@ -21,6 +21,7 @@
 #include "OccupationDefinition.hpp"
 #include "TransfersDefinition.hpp"
 #include "FightAnimationDefinition.hpp"
+#include "MagicAnimationDefinition.hpp"
 
 USING_NS_CC;
 
@@ -39,6 +40,7 @@ private:
     Map<int, OccupationDefinition *> * _occupationDefinitionDictionary;
     Map<int, TransfersDefinition *> * _transfersDefinitionDictionary;
     Map<int, FightAnimationDefinition *> * _fightAnimationDefinitionDictionary;
+    Map<int, MagicAnimationDefinition *> * _magicAnimationDefinitionDictionary;
     
     static int generateShopKey(int chapterId, ShopType shopType);
     static int generateLevelUpMagicKey(int creatureId, int creatureLevel);
@@ -60,6 +62,7 @@ public:
     void loadOccupationDefinition();
     void loadTransfersDefinition();
     void loadFightAnimationDefinition();
+    void loadMagicAnimationDefinition();
     
     CreatureDefinition * getCreatureDefinition(int creatureId);
     ItemDefinition * getItemDefinition(int itemId);
@@ -71,6 +74,7 @@ public:
     TransfersDefinition * getTransfersDefinition(int creatureId);
     TransferDefinition * getTransferDefinition(int transferId);
     FightAnimationDefinition * getFightAnimationDefinition(int animationid, FightAnimationType type);
+    MagicAnimationDefinition * getMagicAnimationDefinition(int magicId, MagicAnimationType type);
     int getMaxFriendCount(int chapterId);
     
 };

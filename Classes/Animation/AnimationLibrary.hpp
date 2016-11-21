@@ -13,6 +13,7 @@
 #include "SlideAnimation.hpp"
 #include "FightAnimationDefinition.hpp"
 #include "FightAnimation.hpp"
+#include "MagicAnimationDefinition.hpp"
 
 USING_NS_CC;
 
@@ -36,6 +37,7 @@ private:
     void loadMenuAnimation(int menuItemId);
     
     void loadFightAnimation(int animationId, FightAnimationType type);
+    void loadMagicAnimation(int magicId, MagicAnimationType type);
     
 public:
     
@@ -60,7 +62,7 @@ public:
     
     // Fight Animations
     FightAnimation * getFightAnimation(int animationId, FightAnimationType type);
-    FightAnimation * getMagicAnimation(int magicId, bool isBad);
+    FightAnimation * getMagicAnimation(int magicId, MagicAnimationType type);
     
     
 };

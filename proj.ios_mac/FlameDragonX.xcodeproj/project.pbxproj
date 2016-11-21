@@ -95,6 +95,9 @@
 		3CA318291D760C6D0042B56A /* AICreature.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CA318271D760C6D0042B56A /* AICreature.cpp */; };
 		3CA3182C1D760E260042B56A /* DefendItemDefinition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CA3182A1D760E260042B56A /* DefendItemDefinition.cpp */; };
 		3CA3182F1D7613630042B56A /* FDRange.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CA3182D1D7613630042B56A /* FDRange.cpp */; };
+		3CAA72D51DE1A13E00C98BCB /* Magic in Resources */ = {isa = PBXBuildFile; fileRef = 3CAA72D41DE1A13E00C98BCB /* Magic */; };
+		3CAA72D81DE1A35F00C98BCB /* MagicAnimationDefinition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CAA72D61DE1A35F00C98BCB /* MagicAnimationDefinition.cpp */; };
+		3CAA72DB1DE2C96500C98BCB /* Treasure.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CAA72D91DE2C96500C98BCB /* Treasure.cpp */; };
 		3CB109651D6D0D06002C4121 /* TouchHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CB109631D6D0D06002C4121 /* TouchHandler.cpp */; };
 		3CB109691D6E0BD1002C4121 /* Ground.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CB109671D6E0BD1002C4121 /* Ground.cpp */; };
 		3CB1096B1D6E5E66002C4121 /* Icons in Resources */ = {isa = PBXBuildFile; fileRef = 3CB1096A1D6E5E66002C4121 /* Icons */; };
@@ -458,6 +461,11 @@
 		3CA3182B1D760E260042B56A /* DefendItemDefinition.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = DefendItemDefinition.hpp; path = Data/Item/DefendItemDefinition.hpp; sourceTree = "<group>"; };
 		3CA3182D1D7613630042B56A /* FDRange.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FDRange.cpp; path = Common/FDRange.cpp; sourceTree = "<group>"; };
 		3CA3182E1D7613630042B56A /* FDRange.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = FDRange.hpp; path = Common/FDRange.hpp; sourceTree = "<group>"; };
+		3CAA72D41DE1A13E00C98BCB /* Magic */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Magic; sourceTree = "<group>"; };
+		3CAA72D61DE1A35F00C98BCB /* MagicAnimationDefinition.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MagicAnimationDefinition.cpp; path = Data/MagicAnimationDefinition.cpp; sourceTree = "<group>"; };
+		3CAA72D71DE1A35F00C98BCB /* MagicAnimationDefinition.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = MagicAnimationDefinition.hpp; path = Data/MagicAnimationDefinition.hpp; sourceTree = "<group>"; };
+		3CAA72D91DE2C96500C98BCB /* Treasure.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Treasure.cpp; path = Objects/Treasure.cpp; sourceTree = "<group>"; };
+		3CAA72DA1DE2C96500C98BCB /* Treasure.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Treasure.hpp; path = Objects/Treasure.hpp; sourceTree = "<group>"; };
 		3CB109631D6D0D06002C4121 /* TouchHandler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TouchHandler.cpp; path = Battle/TouchHandler.cpp; sourceTree = "<group>"; };
 		3CB109641D6D0D06002C4121 /* TouchHandler.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = TouchHandler.hpp; path = Battle/TouchHandler.hpp; sourceTree = "<group>"; };
 		3CB109671D6E0BD1002C4121 /* Ground.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Ground.cpp; path = Battle/Ground.cpp; sourceTree = "<group>"; };
@@ -1075,6 +1083,8 @@
 				3CE4396B1D8D263C0043676E /* Enemy.hpp */,
 				3CE439701D8FC5E50043676E /* Npc.cpp */,
 				3CE439711D8FC5E50043676E /* Npc.hpp */,
+				3CAA72D91DE2C96500C98BCB /* Treasure.cpp */,
+				3CAA72DA1DE2C96500C98BCB /* Treasure.hpp */,
 			);
 			name = Objects;
 			sourceTree = "<group>";
@@ -1249,6 +1259,8 @@
 				3C4FA57E1DAB768600AA9DF1 /* FightAnimationDefinition.hpp */,
 				3C4FA5801DAB769600AA9DF1 /* FightFrameDefinition.cpp */,
 				3C4FA5811DAB769600AA9DF1 /* FightFrameDefinition.hpp */,
+				3CAA72D61DE1A35F00C98BCB /* MagicAnimationDefinition.cpp */,
+				3CAA72D71DE1A35F00C98BCB /* MagicAnimationDefinition.hpp */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -1356,6 +1368,7 @@
 				3CE63BA71D8BC3FC00C2C76B /* Dato */,
 				3C4FA5861DACADF100AA9DF1 /* Fights */,
 				3CD12F2B1D6D073F00CDF793 /* Maps */,
+				3CAA72D41DE1A13E00C98BCB /* Magic */,
 				3CE63B381D7F40FB00C2C76B /* Menu */,
 				3C1883621D6BB0C10059056E /* Title */,
 				521A8EA819F11F5000D177D7 /* fonts */,
@@ -1580,6 +1593,7 @@
 				5087E78217EB970100C73F5D /* Icon-144.png in Resources */,
 				3CD12EFB1D6BB11600CDF793 /* Title_Start_0.png in Resources */,
 				3C4FA5871DACADF100AA9DF1 /* Fights in Resources */,
+				3CAA72D51DE1A13E00C98BCB /* Magic in Resources */,
 				3CE63BA81D8BC3FC00C2C76B /* Dato in Resources */,
 				3EACC98F19EE6D4300EB3C5E /* res in Resources */,
 				3CE63BA31D8BADD500C2C76B /* Strings in Resources */,
@@ -1725,6 +1739,7 @@
 				3C4FA5931DB3697900AA9DF1 /* CombinedAnimate.cpp in Sources */,
 				3C8D68501D7AA90A00CC3616 /* CreatureDeadActivity.cpp in Sources */,
 				3CB1096F1D6E6B8F002C4121 /* BattleObject.cpp in Sources */,
+				3CAA72D81DE1A35F00C98BCB /* MagicAnimationDefinition.cpp in Sources */,
 				3CE63B681D85366200C2C76B /* FightResult.cpp in Sources */,
 				3C4FA5B31DB8932A00AA9DF1 /* MovePathResolver.cpp in Sources */,
 				3CE63B2D1D7D5DF900C2C76B /* TransparencyFrame.cpp in Sources */,
@@ -1784,6 +1799,7 @@
 				3CE63B7E1D87DD1800C2C76B /* ConfirmMessage.cpp in Sources */,
 				3C18834B1D6BA0970059056E /* SceneCreator.cpp in Sources */,
 				3CB109691D6E0BD1002C4121 /* Ground.cpp in Sources */,
+				3CAA72DB1DE2C96500C98BCB /* Treasure.cpp in Sources */,
 				3CA318261D760AD00042B56A /* CreatureData.cpp in Sources */,
 				3CE439691D8D12790043676E /* TurnCondition.cpp in Sources */,
 				3C9C49711DCEEC9B00702B32 /* ShoppingSelectAmorTargetDialog.cpp in Sources */,

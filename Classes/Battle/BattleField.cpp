@@ -73,20 +73,6 @@ BattleField::~BattleField()
 
 void BattleField::initWithChapter(int chapterId)
 {
-    // Init Metrix
-    this->initData(chapterId);
-    
-    std::string filename = StringUtil::format("Maps/Chapter-%02d.png", chapterId);
-    _groundImage = Sprite::create(filename);
-    _groundImage->setAnchorPoint(Vec2(0, 0));
-    
-    if (_hasCoverImage)
-    {
-        Sprite * coverImage = Sprite::create(StringUtil::format("Maps/Chapter-%02d-Cover.png", chapterId));
-        coverImage->setAnchorPoint(Vec2(0, 0));
-        _groundImage->addChild(coverImage, BattleObjectOrder_Cover);
-    }
-    
     auto size = Director::getInstance()->getWinSize();
     auto sizein = Director::getInstance()->getWinSizeInPixels();
     float contentScale = Director::getInstance()->getContentScaleFactor();
@@ -94,12 +80,15 @@ void BattleField::initWithChapter(int chapterId)
     DEFAULT_DISPLAY_SCALE = 1.5f * contentScale;
     MIN_DISPLAY_SCALE = 0.6f * contentScale;
     MAX_DISPLAY_SCALE = 3.0f * contentScale;
-    this->setDisplayScale(DEFAULT_DISPLAY_SCALE);
     
     _displayBlockSize = (float)BLOCK_SIZE / contentScale;
     
+    std::string filename = StringUtil::format("Maps/Chapter-%02d.png", chapterId);
+    _groundImage = Sprite::create(filename);
+    _groundImage->setAnchorPoint(Vec2(0, 0));
     this->addChild(_groundImage, 1);
     
+    this->setDisplayScale(DEFAULT_DISPLAY_SCALE);
     
     // Init Objects
     this->_battleObjectList = new Vector<BattleObject *>();
@@ -109,6 +98,17 @@ void BattleField::initWithChapter(int chapterId)
     this->_enemyList = new Vector<Creature *>();
     this->_npcList = new Vector<Creature *>();
     this->_deadCreatureList = new Vector<Creature *>();
+    
+
+    // Init Metrix
+    this->initData(chapterId);
+    
+    if (_hasCoverImage)
+    {
+        Sprite * coverImage = Sprite::create(StringUtil::format("Maps/Chapter-%02d-Cover.png", chapterId));
+        coverImage->setAnchorPoint(Vec2(0, 0));
+        _groundImage->addChild(coverImage, BattleObjectOrder_Cover);
+    }
     
     this->_cursor = new Cursor();
     addObject(_cursor, Vec2(0, 0));
@@ -241,8 +241,10 @@ void BattleField::initData(int chapterId)
         int type = reader->readInt();
         int itemId = reader->readInt();
         
+        Treasure * treasure = new Treasure(itemId, type);
+        this->addObject(treasure, Vec2(x, y));
+        treasure->release();
     }
-    
     
     reader->release();
 }
@@ -487,6 +489,11 @@ void BattleField::removeObject(BattleObject * obj)
     
     _groundImage->removeChild(obj->getSprite(), false);
     
+}
+
+Treasure * BattleField::getTreasureAt(Vec2 position)
+{
+    return (Treasure *)this->getObjectByPosition(BattleObject_Treasure, position);
 }
 
 void BattleField::takeTick(int synchronizedTick)

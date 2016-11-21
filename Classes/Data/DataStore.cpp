@@ -16,6 +16,7 @@
 #include "SpecialItemDefinition.hpp"
 #include "MoneyItemDefinition.hpp"
 #include "MagicDefinition.hpp"
+#include "MagicAnimationDefinition.hpp"
 
 DataStore * DataStore::_instance = nullptr;
 
@@ -62,6 +63,11 @@ DataStore::~DataStore()
     
     this->_fightAnimationDefinitionDictionary->clear();
     delete this->_fightAnimationDefinitionDictionary;
+    
+    this->_magicAnimationDefinitionDictionary->clear();
+    delete this->_magicAnimationDefinitionDictionary;
+    
+    
 }
 
 void DataStore::loadData()
@@ -75,6 +81,7 @@ void DataStore::loadData()
     this->loadOccupationDefinition();
     this->loadTransfersDefinition();
     this->loadFightAnimationDefinition();
+    this->loadMagicAnimationDefinition();
     
 }
 
@@ -324,6 +331,31 @@ void DataStore::loadFightAnimationDefinition()
     log("Loaded the FightAnimation Definition.");
 }
 
+void DataStore::loadMagicAnimationDefinition()
+{
+    log("Loading the Magic FightAnimation Definition.");
+    
+    _magicAnimationDefinitionDictionary = new Map<int, MagicAnimationDefinition *>();
+    TextFileReader * reader = new TextFileReader("Data/MagicAnimation.dat");
+    
+    int magicId = reader->readInt();
+    while (magicId > 0) {
+        
+        MagicAnimationType type = (MagicAnimationType) reader->readInt();
+        
+        // Animation
+        MagicAnimationDefinition * animation = new MagicAnimationDefinition(magicId, type);
+        animation->readFromFile(reader);
+        _magicAnimationDefinitionDictionary->insert(animation->magicAnimationId(), animation);
+        animation->release();
+        
+        magicId = reader->readInt();
+    }
+    
+    reader->release();
+    log("Loaded the Magic FightAnimation Definition.");
+}
+
 
 ///////////////////////////////////////////
 
@@ -386,6 +418,11 @@ TransferDefinition * DataStore::getTransferDefinition(int transferId)
 FightAnimationDefinition * DataStore::getFightAnimationDefinition(int animationId, FightAnimationType type)
 {
     return this->_fightAnimationDefinitionDictionary->at(animationId * 10 + type);
+}
+
+MagicAnimationDefinition * DataStore::getMagicAnimationDefinition(int magicId, MagicAnimationType type)
+{
+    return this->_magicAnimationDefinitionDictionary->at(magicId * 10 + type);
 }
 
 int DataStore::generateShopKey(int chapterId, ShopType shopType)
