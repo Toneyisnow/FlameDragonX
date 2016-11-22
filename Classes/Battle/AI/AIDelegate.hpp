@@ -36,6 +36,7 @@ public:
     
     Creature * locateNearestFriend();
     
+    void setCreatureMoved(Vec2 position);
 };
 
 #endif /* AIDelegate_hpp */

@@ -69,6 +69,7 @@ void AIMagicDefensiveDelegate::takePendingAction()
         Vec2 friendPosition = _battleField->getObjectPosition(nearestFriend);
         Vec2 decidedPosition = this->findReachMovePosition(scopeResolver, friendPosition);
         
+        this->setCreatureMoved(decidedPosition);
         RoutePoint * route = scopeResolver->getRoutePoint(decidedPosition);
         CreatureMoveActivity * activity = CreatureMoveActivity::create(_battleField, _creature, route);
         _battleScene->getActivityQueue()->appendActivity(activity);

@@ -49,6 +49,7 @@ void AIDefensiveDelegate::takeAction()
             }
             
             // Make the move
+            this->setCreatureMoved(candidatePosition);
             RoutePoint * route = scopeResolver->getRoutePoint(candidatePosition);
             CreatureMoveActivity * activity = CreatureMoveActivity::create(_battleField, _creature, route);
             _battleScene->getActivityQueue()->appendActivity(activity);

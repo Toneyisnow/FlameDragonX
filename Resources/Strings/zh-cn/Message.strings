@@ -24,8 +24,8 @@
 	
     <key>Message-01</key><string>好的。#就结束本回合的行动吧！</string>
     <key>Message-02</key><string>是吗？那么就不要了。</string>
-    <key>Message-03</key><string>打开宝箱，发现%@！</string>
-    <key>Message-04</key><string>发掘宝藏，发现%@！</string>
+    <key>Message-03</key><string>打开宝箱，发现%s！</string>
+    <key>Message-04</key><string>发掘宝藏，发现%s！</string>
     <key>Message-05</key><string>获得经验值%d点！</string>
     <key>Message-06</key><string>得到%s，将%s放了回去！</string>
     <key>Message-07</key><string>那么就放回去吧！</string>

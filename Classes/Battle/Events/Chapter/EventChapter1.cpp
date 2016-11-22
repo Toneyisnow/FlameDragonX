@@ -40,12 +40,12 @@ void EventChapter1::test()
     Creature * f3 = Friend::create(2, 2);
     f3->creatureData()->hpMax = 999;
     f3->creatureData()->hpCurrent = 999;
-    f3->creatureData()->addItem(101);
-    f3->creatureData()->addItem(101);
-    f3->creatureData()->addItem(101);
-    f3->creatureData()->addItem(101);
-    f3->creatureData()->addItem(101);
-    f3->creatureData()->addItem(101);
+    f3->creatureData()->addItem(104);
+    f3->creatureData()->addItem(104);
+    f3->creatureData()->addItem(104);
+    f3->creatureData()->addItem(104);
+    f3->creatureData()->addItem(104);
+    f3->creatureData()->addItem(104);
     
     _battleField->addCreature(f3, Vec2(7, 14));
     //_battleField->addCreature(Friend::create(2, 2), Vec2(6, 21));

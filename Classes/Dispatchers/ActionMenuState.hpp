@@ -12,6 +12,7 @@
 #include "cocos2d.h"
 #include "ActionState.hpp"
 #include "Creature.hpp"
+#include "Treasure.hpp"
 
 class ActionMenuState : public ActionState
 {
@@ -19,6 +20,7 @@ private:
     
     Creature * _creature;
     MagicDefinition * _selectedMagic;
+    Treasure * _treasure;
     
 public:
     

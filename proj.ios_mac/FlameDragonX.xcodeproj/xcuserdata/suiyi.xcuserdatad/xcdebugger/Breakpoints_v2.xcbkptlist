@@ -576,11 +576,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/Dispatchers/ActionMenuState.cpp"
-            timestampString = "501407648.786554"
+            timestampString = "501494038.938386"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "185"
-            endingLineNumber = "185"
+            startingLineNumber = "187"
+            endingLineNumber = "187"
             landmarkName = "ActionMenuState::confirmPickTreasure(int confirmed)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1568,11 +1568,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/Battle/AI/AIAggressiveDelegate.cpp"
-            timestampString = "498820218.044242"
+            timestampString = "501495233.466418"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66">
+            startingLineNumber = "67"
+            endingLineNumber = "67">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1582,11 +1582,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/Battle/AI/AIAggressiveDelegate.cpp"
-            timestampString = "498820218.044242"
+            timestampString = "501495233.466418"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "93"
-            endingLineNumber = "93">
+            startingLineNumber = "94"
+            endingLineNumber = "94">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2008,15 +2008,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/Dispatchers/ActionMenuState.cpp"
-            timestampString = "501407451.962626"
+            timestampString = "501492889.474048"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "163"
-            endingLineNumber = "163"
+            startingLineNumber = "162"
+            endingLineNumber = "162"
             landmarkName = "ActionMenuState::checkTreatureAndWaiveTurn()"
             landmarkType = "7">
          </BreakpointContent>
@@ -2024,16 +2024,48 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/Dispatchers/ActionMenuState.cpp"
-            timestampString = "501407648.786554"
+            timestampString = "501494038.938386"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "193"
-            endingLineNumber = "193"
+            startingLineNumber = "200"
+            endingLineNumber = "200"
             landmarkName = "ActionMenuState::confirmPickTreasure(int confirmed)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../Classes/Dispatchers/ActionMenuState.cpp"
+            timestampString = "501494038.938386"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "230"
+            endingLineNumber = "230"
+            landmarkName = "ActionMenuState::confirmExchangeTreasure(int confirmed)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../Classes/Activities/CreatureMoveActivity.cpp"
+            timestampString = "501494725.44608"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "CreatureMoveActivity::create(BattleField * field, Creature * creature, RoutePoint * route)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

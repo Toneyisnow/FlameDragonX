@@ -38,7 +38,7 @@ void ActionMenuState::onEnterState()
     log("Show action menu");
     
     _creature = _battleField->getCreatureById(_session->selectedCreatureId());
-    //// _creature->setMoved(!_session->creaturePositionAfterMove.equals(_session->creaturePositionBeforeMove));
+    _creature->setMoved(_session->creaturePositionAfterMove != _session->creaturePositionBeforeMove);
     
     _battleField->showCreatureMenuAt(1, _session->creaturePositionAfterMove, _creature);
     
@@ -101,7 +101,6 @@ void ActionMenuState::handleClickAt(Vec2 position)
             // Sleep
             _battleField->closeMenu(true);
             checkTreatureAndWaiveTurn();
-            _nextState = IdleState::create(_battleScene);
             return;
         default:
             break;
@@ -165,10 +164,13 @@ void ActionMenuState::checkTreatureAndWaiveTurn()
     
     if (treasure == nullptr || treasure->hasOpened()) {
         _battleField->getBattleScene()->waiveTurn(_creature);
+        _nextState = IdleState::create(_battleScene);
+        
         return;
     }
     
-    int confirmStringId = (treasure->boxType() == 3) ? 3 : 2;
+    _treasure = treasure;
+    int confirmStringId = (_treasure->boxType() == 3) ? 3 : 2;
     
     ConfirmMessage * confirm = new ConfirmMessage(_creature, LocalizedStrings::getInstance()->getConfirmString(confirmStringId));
     confirm->setReturnFunction(this, CALLBACK1_SELECTOR(ActionMenuState::confirmPickTreasure));
@@ -187,19 +189,19 @@ void ActionMenuState::confirmPickTreasure(int confirmed)
         SpeakMessage * message = new SpeakMessage(_creature, LocalizedStrings::getInstance()->getMessageString(2));
         ShowMessageActivity * activity = ShowMessageActivity::create(_battleScene, message);
         _battleScene->getActivityQueue()->appendActivity(activity);
+        message->release();
+        
+        _battleScene->appendMethodToActivity(this, CALLBACK0_SELECTOR(ActionMenuState::waiveTurn));
+        _nextState = IdleState::create(_battleScene);
+        _battleField->notifyStateDispatcher();
+        
         return;
     }
     
-    Vec2 position = _battleField->getObjectPosition(_creature);
-    Treasure * treasure = _battleField->getTreasureAt(position);
-    if (treasure == nullptr) {
-        return;
-    }
-    
-    ItemDefinition * item = DataStore::getInstance()->getItemDefinition(treasure->itemId());
+    ItemDefinition * item = DataStore::getInstance()->getItemDefinition(_treasure->itemId());
     
     // Show the Treasure name
-    int messageId = (treasure->boxType() == 3) ? 4 : 3;
+    int messageId = (_treasure->boxType() == 3) ? 4 : 3;
     std::string messageString = StringUtils::format(LocalizedStrings::getInstance()->getMessageString(messageId).c_str(), item->getName().c_str());
     SpeakMessage * message = new SpeakMessage(_creature, messageString);
     ShowMessageActivity * activity = ShowMessageActivity::create(_battleScene, message);
@@ -217,6 +219,9 @@ void ActionMenuState::confirmPickTreasure(int confirmed)
     {
         _battleScene->pickupTreasure(_creature);
         _battleScene->appendMethodToActivity(this, CALLBACK0_SELECTOR(ActionMenuState::waiveTurn));
+        _nextState = IdleState::create(_battleScene);
+        _battleField->notifyStateDispatcher();
+        
     }
 }
 
@@ -227,22 +232,32 @@ void ActionMenuState::confirmExchangeTreasure(int confirmed)
         CompositeBox * box = new CompositeBox(_creature, MessageBoxType_Item, MessageBoxOperatingType_Select);
         box->setReturnFunction(this, CALLBACK1_SELECTOR(ActionMenuState::confirmItemToPutBack));
         _battleScene->showMessage(box);
-        
+        box->release();
     }
     else {
         // Put it back
         SpeakMessage * message = new SpeakMessage(_creature, LocalizedStrings::getInstance()->getMessageString(2));
         ShowMessageActivity * activity = ShowMessageActivity::create(_battleScene, message);
         _battleScene->getActivityQueue()->appendActivity(activity);
+        message->release();
         
         _battleScene->appendMethodToActivity(this, CALLBACK0_SELECTOR(ActionMenuState::waiveTurn));
+        _nextState = IdleState::create(_battleScene);
+        _battleField->notifyStateDispatcher();
     }
-    
 }
 
 void ActionMenuState::confirmItemToPutBack(int index)
 {
     if (index >= 0) {
+        
+        ItemDefinition * treasureItem = DataStore::getInstance()->getItemDefinition(_treasure->itemId());
+        ItemDefinition * exchangeItem = _creature->creatureData()->getItem(index);
+        std::string exchangeItemString = StringUtils::format(LocalizedStrings::getInstance()->getMessageString(6).c_str(), treasureItem->getName().c_str(), exchangeItem->getName().c_str());
+        SpeakMessage * message = new SpeakMessage(_creature, exchangeItemString);
+        ShowMessageActivity * activity = ShowMessageActivity::create(_battleScene, message);
+        _battleScene->getActivityQueue()->appendActivity(activity);
+        message->release();
         
         _battleScene->exchangeTreasure(_creature, index);
     }
@@ -251,9 +266,12 @@ void ActionMenuState::confirmItemToPutBack(int index)
         SpeakMessage * message = new SpeakMessage(_creature, LocalizedStrings::getInstance()->getMessageString(2));
         ShowMessageActivity * activity = ShowMessageActivity::create(_battleScene, message);
         _battleScene->getActivityQueue()->appendActivity(activity);
+        message->release();
     }
     
     _battleScene->appendMethodToActivity(this, CALLBACK0_SELECTOR(ActionMenuState::waiveTurn));
+    _nextState = IdleState::create(_battleScene);
+    _battleField->notifyStateDispatcher();
 }
 
 void ActionMenuState::waiveTurn()

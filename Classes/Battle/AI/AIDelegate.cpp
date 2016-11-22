@@ -64,3 +64,10 @@ void AIDelegate::takeWaiveAction()
     _battleScene->waiveTurn(_creature);
 }
 
+
+void AIDelegate::setCreatureMoved(Vec2 position)
+{
+    Vec2 originPosition = _battleField->getObjectPosition(_creature);
+    _creature->setMoved(originPosition != position);
+}
+

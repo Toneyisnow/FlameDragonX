@@ -51,6 +51,7 @@ void AIAggressiveDelegate::takeAction()
     }
     log("decidedPosition: %f, %f", decidedPosition.x, decidedPosition.y);
     
+    this->setCreatureMoved(decidedPosition);
     RoutePoint * route = scopeResolver->getRoutePoint(decidedPosition);
     CreatureMoveActivity * activity = CreatureMoveActivity::create(_battleField, _creature, route);
     _battleScene->getActivityQueue()->appendActivity(activity);
