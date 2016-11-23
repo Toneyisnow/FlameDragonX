@@ -60,6 +60,8 @@ int Creature::getId()
 void Creature::initWithDefinition(int identity, int creatureId)
 {
     this->_identifier = identity;
+    this->_creatureId = creatureId;
+    
     _definition = DataStore::getInstance()->getCreatureDefinition(creatureId);
     
     _data = new CreatureData();

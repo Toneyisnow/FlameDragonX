@@ -1072,12 +1072,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/Objects/Creature.cpp"
-            timestampString = "498466904.780182"
+            timestampString = "501579985.134463"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "155"
-            endingLineNumber = "155"
-            landmarkName = "Creature::knowMagic()"
+            startingLineNumber = "157"
+            endingLineNumber = "157"
+            landmarkName = "Creature::startTurn()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1832,7 +1832,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/Scenes/ShoppingLayer.cpp"
@@ -1864,7 +1864,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/Messages/Message.cpp"
@@ -2066,6 +2066,38 @@
             startingLineNumber = "21"
             endingLineNumber = "21"
             landmarkName = "CreatureMoveActivity::create(BattleField * field, Creature * creature, RoutePoint * route)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../Classes/Battle/Events/Chapter/EventChapter1.cpp"
+            timestampString = "501580041.809847"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "EventChapter1::test()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../Classes/Shopping/HomeDialog/ShoppingHomeDialog.cpp"
+            timestampString = "501580683.144772"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "456"
+            endingLineNumber = "456"
+            landmarkName = "ShoppingHomeDialog::onEquip_SelectedItem(int index)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

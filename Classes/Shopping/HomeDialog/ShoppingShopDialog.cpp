@@ -123,7 +123,7 @@ void ShoppingShopDialog::onBuy_Confirmed(int index)
     if (_chapterRecord->getMoney() < item->getPrice()) {
         
         // Error Message: Not enough money
-        ShoppingMessageDialog * message = new ShoppingMessageDialog(LocalizedStrings::getInstance()->getConfirmString(63).c_str());
+        ShoppingMessageDialog * message = new ShoppingMessageDialog(LocalizedStrings::getInstance()->getMessageString(63).c_str());
         message->setCallback(this, CALLBACK1_SELECTOR(ShoppingShopDialog::onBuy_NotEnoughMoney));
         message->showDialog(_layer);
         message->release();

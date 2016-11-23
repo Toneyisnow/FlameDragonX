@@ -19,6 +19,7 @@
 void EventChapter1::loadEvents()
 {
     this->loadTurnEvent(1, CreatureType_Friend, CALLBACK0_SELECTOR(EventChapter1::test));
+    this->loadTeamEvent(CreatureType_Enemy, CALLBACK0_SELECTOR(EventChapter1::enemyClear));
     
     /*
     this->loadTurnEvent(3, CreatureType_Friend, CALLBACK0_SELECTOR(EventChapter1::round3));
